@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spec and Task Review"
+  short_description: "Audit Dubbed specs and issues against actual evidence"
+  default_prompt: "Use $spec-task-review to audit this Dubbed specification and its linked GitHub issue."
