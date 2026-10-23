@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-23T03:16:20.301Z",
+  "register": {
+    "path": "_docs/frontend-implementation-contract.md",
+    "sha256": "5420074c3b9deb75baced0b8a627ae44e281ef526006b69706740f8b9f58eb36"
+  },
+  "links": [
+    {
+      "file": "_docs/frontend-flows/00-shared-contract.md",
+      "anchor": null,
+      "pass": true,
+      "sha256": "285144a2c4c601a51adb22f089e97f0a8c2e568783cda41c28c2b20ad65d9767"
+    },
+    {
+      "file": "_docs/frontend-flows/00-shared-contract.md",
+      "anchor": "owner-answer--account-session-expiry-destination-2026-10-23",
+      "pass": true,
+      "sha256": "285144a2c4c601a51adb22f089e97f0a8c2e568783cda41c28c2b20ad65d9767"
+    },
+    {
+      "file": "_docs/frontend-flows/02-sign-in.md",
+      "anchor": null,
+      "pass": true,
+      "sha256": "3e7190ca9be13137199e99259521d69679b941c9f920d6d41517e0c3efcf3b4e"
+    },
+    {
+      "file": "_docs/frontend-flows/15-account.md",
+      "anchor": null,
+      "pass": true,
+      "sha256": "19a81d590bf60c0e91cc1625b93f9bfa0c4cf9bc7bfbca3ee2d4f50fb6abb7d5"
+    },
+    {
+      "file": "_docs/frontend-flows/00-shared-contract.md",
+      "anchor": "owner-answer--account-session-expiry-destination-2026-10-23",
+      "pass": true,
+      "sha256": "285144a2c4c601a51adb22f089e97f0a8c2e568783cda41c28c2b20ad65d9767"
+    },
+    {
+      "file": "_docs/frontend-flows/01-landing.md",
+      "anchor": "13-open-resolved-and-withdrawn-decisions",
+      "pass": true,
+      "sha256": "e373be42feeee142a530c5580aa47bb9c13a958c183c63cabfe6935a12c520cb"
+    },
+    {
+      "file": "_docs/frontend-flows/02-sign-in.md",
+      "anchor": "15-confirmed-answers-and-remaining-gaps",
+      "pass": true,
+      "sha256": "3e7190ca9be13137199e99259521d69679b941c9f920d6d41517e0c3efcf3b4e"
+    },
+    {
+      "file": "_docs/frontend-flows/03-registration.md",
+      "anchor": "14-owner-decisions-and-open-questions",
+      "pass": true,
+      "sha256": "8b107e02d505a77ed44513b36e1c02fe30146d652cd01abc0d1c21df4fbefcf8"
+    },
+    {
+      "file": "_docs/frontend-flows/04-password-reset.md",
+      "anchor": "11-open-decisions-and-dependencies",
+      "pass": true,
+      "sha256": "4d084f07dfe8c13905b96337cca63d50a46cffeec8d6ac76fff21f602afbb17a"
+    },
+    {
+      "file": "_docs/frontend-flows/05-account-linking.md",
+      "anchor": "15-resolved-decisions-and-remaining-technical-gates",
+      "pass": true,
+      "sha256": "8faaa84e4489ef5b7589662bb5870e84f22cf56406b009b5393d8480d85a9d3d"
+    },
+    {
+      "file": "_docs/frontend-flows/06-new-dub.md",
+      "anchor": "15-open-decisions-and-evidence-gaps",
+      "pass": true,
+      "sha256": "a3dbd43daf0d50e81762f1289daa286bb02d6b5e4030762cca981674bfd233df"
+    },
+    {
+      "file": "_docs/frontend-flows/07-processing.md",
+      "anchor": "152-blocked-acceptance-criteria",
+      "pass": true,
+      "sha256": "77bd982a0be1c57d256870ed6f8a9df9b0a740b49096fabceef7b4a936432766"
+    },
+    {
+      "file": "_docs/frontend-flows/07-processing.md",
+      "anchor": "18-open-decisions-and-evidence-gaps",
+      "pass": true,
+      "sha256": "77bd982a0be1c57d256870ed6f8a9df9b0a740b49096fabceef7b4a936432766"
+    },
+    {
+      "file": "_docs/frontend-flows/09-record.md",
+      "anchor": "15-open-decisions",
+      "pass": true,
+      "sha256": "4e126a3633ad084a8cafab499a384b05b8c7bd4de47d97475f89db635b68522a"
+    },
+    {
+      "file": "_docs/frontend-flows/10-result.md",
+      "anchor": "17-decision-register",
+      "pass": true,
+      "sha256": "366c18f1607443480131c84a333685c575f6a049e50e3f12f3ffd6c9ba50380f"
+    },
+    {
+      "file": "_docs/frontend-flows/11-projects.md",
+      "anchor": "122-open-contract-details-without-reopening-confirmed-behavior",
+      "pass": true,
+      "sha256": "03da639774127b83de9dbdb0784ac9893507a3775948b187e44d8e334aa48cb4"
+    },
+    {
+      "file": "_docs/frontend-flows/11-projects.md",
+      "anchor": "123-blocked-on-production-policyevidence",
+      "pass": true,
+      "sha256": "03da639774127b83de9dbdb0784ac9893507a3775948b187e44d8e334aa48cb4"
+    },
+    {
+      "file": "_docs/frontend-flows/11-projects.md",
+      "anchor": "15-open-decisions-and-evidence-gaps",
+      "pass": true,
+      "sha256": "03da639774127b83de9dbdb0784ac9893507a3775948b187e44d8e334aa48cb4"
+    },
+    {
+      "file": "_docs/frontend-flows/12-credits.md",
+      "anchor": "152-deferred-commercialproduct-decisions--open",
+      "pass": true,
+      "sha256": "5720a52662ccc17e297160909921a7b5a20c4fb148286cc09f343091d04eb9b7"
+    },
+    {
+      "file": "_docs/frontend-flows/12-credits.md",
+      "anchor": "153-accounting-display-and-technical-policy--open",
+      "pass": true,
+      "sha256": "5720a52662ccc17e297160909921a7b5a20c4fb148286cc09f343091d04eb9b7"
+    },
+    {
+      "file": "_docs/frontend-flows/12-credits.md",
+      "anchor": "154-technical-and-production-evidence",
+      "pass": true,
+      "sha256": "5720a52662ccc17e297160909921a7b5a20c4fb148286cc09f343091d04eb9b7"
+    },
+    {
+      "file": "_docs/frontend-flows/15-account.md",
+      "anchor": "17-open-decisions-and-blockers",
+      "pass": true,
+      "sha256": "19a81d590bf60c0e91cc1625b93f9bfa0c4cf9bc7bfbca3ee2d4f50fb6abb7d5"
+    },
+    {
+      "file": "_docs/frontend-flows/06-new-dub.md",
+      "anchor": "15-open-decisions-and-evidence-gaps",
+      "pass": true,
+      "sha256": "a3dbd43daf0d50e81762f1289daa286bb02d6b5e4030762cca981674bfd233df"
+    },
+    {
+      "file": "_docs/frontend-flows/07-processing.md",
+      "anchor": "resolved-decision-provenance",
+      "pass": true,
+      "sha256": "77bd982a0be1c57d256870ed6f8a9df9b0a740b49096fabceef7b4a936432766"
+    }
+  ],
+  "linkFailures": [],
+  "activeFlowRows": 12,
+  "invariants": [
+    {
+      "text": "0.001-second",
+      "pass": true
+    },
+    {
+      "text": "without a manual Stop",
+      "pass": true
+    },
+    {
+      "text": "Zero-turn reprocessing preserves",
+      "pass": true
+    },
+    {
+      "text": "requested destination wins",
+      "pass": true
+    },
+    {
+      "text": "generation displayed",
+      "pass": true
+    }
+  ],
+  "boundary": "Static document review only. Source references and runtime evidence are local dirty worktree, not production acceptance.",
+  "flowTableRows": 24,
+  "activeFlowGroups": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "11",
+    "12",
+    "15"
+  ]
+}
