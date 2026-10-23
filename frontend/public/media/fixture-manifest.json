@@ -1,0 +1,1462 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "speechGenerator": "Windows System.Speech.Synthesis.SpeechSynthesizer",
+    "voices": {
+      "zira": {
+        "name": "Microsoft Zira Desktop",
+        "culture": "en-US",
+        "gender": "Female"
+      },
+      "david": {
+        "name": "Microsoft David Desktop",
+        "culture": "en-US",
+        "gender": "Male"
+      }
+    },
+    "videoGenerator": "Local browser Canvas + MediaRecorder via Playwright Chromium; no network or external media source.",
+    "scope": "Synthetic fixture media only. These files are not recordings from an actual user, not arbitrary-upload processing, and not product-rendered outputs.",
+    "voicePackNote": "The speech text was generated locally from installed Windows voices. No real speaker was recorded; no ownership claim is made over Windows or voice-pack software."
+  },
+  "fixtureUrls": {
+    "source": "/media/source-dialogue.mp4",
+    "sourceAudio": "/media/source-dialogue-master.wav",
+    "recordingTakeA": "/media/recording-take-a.wav",
+    "recordingTakeB": "/media/recording-take-b.wav",
+    "resultGeneration1Audio": "/media/result-generation-001-master.wav",
+    "resultGeneration2Audio": "/media/result-generation-002-master.wav",
+    "resultGeneration1": "/media/result-generation-001.mp4",
+    "resultGeneration2": "/media/result-generation-002.mp4",
+    "validSilencePcm": "/media/valid-silence.wav",
+    "validSilence": "/media/valid-silence.mp4",
+    "usablePartial": "/media/usable-partial.mp4",
+    "noAudioTrack": "/media/no-audio-track.mp4",
+    "shortSource": "/media/short-source.mp4",
+    "noData": null
+  },
+  "assets": {
+    "source": {
+      "fileName": "source-dialogue.mp4",
+      "url": "/media/source-dialogue.mp4",
+      "contentType": "video/mp4;codecs=avc1.42001f,mp4a.40.2",
+      "container": "ISO Base Media MP4",
+      "bytes": 217356,
+      "sha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+      "canvasWidth": 640,
+      "canvasHeight": 360,
+      "requestedCaptureWindowMs": 8650,
+      "observedRecorderWindowMs": 8675,
+      "audioContextWarmupMs": 819,
+      "audioContextTimeAdvanceMs": 8680,
+      "recorderInputAudioTrackCount": 1,
+      "generatedTitleCard": "SYNTHETIC SOURCE",
+      "scenario": "synthetic-source-with-dialogue-and-background",
+      "referenceAudio": "/media/source-dialogue-master.wav",
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 23.80000001192093,
+          "durationSeconds": 8.6254,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 7709,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 412656,
+            "durationSeconds": 8.597,
+            "peak": 0.4608035981655121,
+            "rms": 0.02953958666276153,
+            "nonZeroSampleCount": 818304,
+            "audioAlignment": {
+              "referenceDurationSeconds": 8.650020833333333,
+              "comparedFrames": 412560,
+              "zeroLagCorrelation": -0.17010719078385828,
+              "bestCorrelation": 0.9991086081149675,
+              "bestLagFrames": 96,
+              "bestLagMs": 2
+            }
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 64,
+          "durationSeconds": 8.6254,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 7156,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 412363,
+            "durationSeconds": 8.590895833333333,
+            "peak": 0.4608036279678345,
+            "rms": 0.029541500285093565,
+            "nonZeroSampleCount": 817720,
+            "audioAlignment": {
+              "referenceDurationSeconds": 8.650041666666667,
+              "comparedFrames": 412363,
+              "zeroLagCorrelation": 0.0460816504578228,
+              "bestCorrelation": 0.2942508466273799,
+              "bestLagFrames": -87,
+              "bestLagMs": -1.8125
+            }
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 1153,
+          "durationSeconds": 6.7273666,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 5797,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "sourceAudio": {
+      "fileName": "source-dialogue-master.wav",
+      "url": "/media/source-dialogue-master.wav",
+      "contentType": "audio/wav",
+      "container": "RIFF/WAVE",
+      "codec": "PCM signed 16-bit little-endian",
+      "bytes": 762976,
+      "sha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+      "durationMs": 8650.022675736962,
+      "sampleRateHz": 22050,
+      "channels": 2,
+      "bitsPerSample": 16,
+      "frames": 190733,
+      "scenario": "synthetic-source-audio-master",
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 21,
+          "durationSeconds": 8.650023,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4586,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 415201,
+            "durationSeconds": 8.650020833333333,
+            "peak": 0.4686405658721924,
+            "rms": 0.02952117774805744,
+            "nonZeroSampleCount": 816070,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 9,
+          "durationSeconds": 8.650023,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4413,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 415202,
+            "durationSeconds": 8.650041666666667,
+            "peak": 0.46869415044784546,
+            "rms": 0.029520832054820176,
+            "nonZeroSampleCount": 816136,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 327,
+          "durationSeconds": 8.6500226,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4788,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "recordingTakeA": {
+      "fileName": "recording-take-a.wav",
+      "url": "/media/recording-take-a.wav",
+      "contentType": "audio/wav",
+      "container": "RIFF/WAVE",
+      "codec": "PCM signed 16-bit little-endian",
+      "bytes": 85346,
+      "sha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+      "durationMs": 1934.2857142857142,
+      "sampleRateHz": 22050,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "frames": 42651,
+      "scenario": "synthetic-recorded-take-fixture",
+      "generationId": "take-a",
+      "voice": "Microsoft Zira Desktop",
+      "expectedQuote": "A blue light is on.",
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 19.099999994039536,
+          "durationSeconds": 1.934286,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1235,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 1,
+            "sampleRateHz": 48000,
+            "frameCount": 92845,
+            "durationSeconds": 1.9342708333333334,
+            "peak": 0.709622859954834,
+            "rms": 0.09033465688471091,
+            "nonZeroSampleCount": 54536,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 10,
+          "durationSeconds": 1.934286,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1010,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 1,
+            "sampleRateHz": 48000,
+            "frameCount": 92846,
+            "durationSeconds": 1.9342916666666667,
+            "peak": 0.7096326351165771,
+            "rms": 0.09033407256711665,
+            "nonZeroSampleCount": 54609,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 199,
+          "durationSeconds": 1.9342857,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1219,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "recordingTakeB": {
+      "fileName": "recording-take-b.wav",
+      "url": "/media/recording-take-b.wav",
+      "contentType": "audio/wav",
+      "container": "RIFF/WAVE",
+      "codec": "PCM signed 16-bit little-endian",
+      "bytes": 86448,
+      "sha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+      "durationMs": 1959.2743764172335,
+      "sampleRateHz": 22050,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "frames": 43202,
+      "scenario": "synthetic-recorded-take-fixture",
+      "generationId": "take-b",
+      "voice": "Microsoft David Desktop",
+      "expectedQuote": "A blue light is on.",
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 15.800000011920929,
+          "durationSeconds": 1.959274,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1080,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 1,
+            "sampleRateHz": 48000,
+            "frameCount": 94045,
+            "durationSeconds": 1.9592708333333333,
+            "peak": 0.9520118832588196,
+            "rms": 0.08287530008370621,
+            "nonZeroSampleCount": 58521,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 14,
+          "durationSeconds": 1.959274,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1043,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 1,
+            "sampleRateHz": 48000,
+            "frameCount": 94046,
+            "durationSeconds": 1.9592916666666667,
+            "peak": 0.9520313739776611,
+            "rms": 0.08287536361528636,
+            "nonZeroSampleCount": 58661,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 203,
+          "durationSeconds": 1.9592743,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1377,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "resultGeneration1Audio": {
+      "fileName": "result-generation-001-master.wav",
+      "url": "/media/result-generation-001-master.wav",
+      "contentType": "audio/wav",
+      "container": "RIFF/WAVE",
+      "codec": "PCM signed 16-bit little-endian",
+      "bytes": 762976,
+      "sha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+      "durationMs": 8650.022675736962,
+      "sampleRateHz": 22050,
+      "channels": 2,
+      "bitsPerSample": 16,
+      "frames": 190733,
+      "scenario": "synthetic-generation-audio-master",
+      "generationId": "generation-001",
+      "voice": "Microsoft Zira Desktop",
+      "expectedQuote": "A blue light is on.",
+      "sourceWindowMs": 8650,
+      "selectedSectionId": "turn-a",
+      "selectedSectionPlacementStartMs": 1000,
+      "productRendered": false,
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 23.099999994039536,
+          "durationSeconds": 8.650023,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4447,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 415201,
+            "durationSeconds": 8.650020833333333,
+            "peak": 0.3275276720523834,
+            "rms": 0.022416104720505477,
+            "nonZeroSampleCount": 816070,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 12,
+          "durationSeconds": 8.650023,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4432,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 415202,
+            "durationSeconds": 8.650041666666667,
+            "peak": 0.3275284767150879,
+            "rms": 0.022415726692317017,
+            "nonZeroSampleCount": 816136,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 185,
+          "durationSeconds": 8.6500226,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4449,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "resultGeneration2Audio": {
+      "fileName": "result-generation-002-master.wav",
+      "url": "/media/result-generation-002-master.wav",
+      "contentType": "audio/wav",
+      "container": "RIFF/WAVE",
+      "codec": "PCM signed 16-bit little-endian",
+      "bytes": 762976,
+      "sha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+      "durationMs": 8650.022675736962,
+      "sampleRateHz": 22050,
+      "channels": 2,
+      "bitsPerSample": 16,
+      "frames": 190733,
+      "scenario": "synthetic-generation-audio-master",
+      "generationId": "generation-002",
+      "voice": "Microsoft David Desktop",
+      "expectedQuote": "A blue light is on.",
+      "sourceWindowMs": 8650,
+      "selectedSectionId": "turn-a",
+      "selectedSectionPlacementStartMs": 1000,
+      "productRendered": false,
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 24.599999994039536,
+          "durationSeconds": 8.650023,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4492,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 415201,
+            "durationSeconds": 8.650020833333333,
+            "peak": 0.4560800790786743,
+            "rms": 0.021745517710460058,
+            "nonZeroSampleCount": 816070,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 9,
+          "durationSeconds": 8.650023,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4439,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 415202,
+            "durationSeconds": 8.650041666666667,
+            "peak": 0.45608872175216675,
+            "rms": 0.021745187207724136,
+            "nonZeroSampleCount": 816136,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 183,
+          "durationSeconds": 8.6500226,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4531,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "resultGeneration1": {
+      "fileName": "result-generation-001.mp4",
+      "url": "/media/result-generation-001.mp4",
+      "contentType": "video/mp4;codecs=avc1.42001f,mp4a.40.2",
+      "container": "ISO Base Media MP4",
+      "bytes": 211221,
+      "sha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+      "canvasWidth": 640,
+      "canvasHeight": 360,
+      "requestedCaptureWindowMs": 8650,
+      "observedRecorderWindowMs": 8665,
+      "audioContextWarmupMs": 709,
+      "audioContextTimeAdvanceMs": 8672,
+      "recorderInputAudioTrackCount": 1,
+      "generatedTitleCard": "GENERATION 001",
+      "scenario": "synthetic-result-generation",
+      "generationId": "generation-001",
+      "voice": "Microsoft Zira Desktop",
+      "expectedQuote": "A blue light is on.",
+      "sourceAsset": "/media/source-dialogue.mp4",
+      "sourceWindowMs": 8650,
+      "selectedSectionId": "turn-a",
+      "selectedSectionPlacementStartMs": 1000,
+      "sharesSynthetic110HzBackground": true,
+      "productRendered": false,
+      "referenceAudio": "/media/result-generation-001-master.wav",
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 19.599999994039536,
+          "durationSeconds": 8.6157,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 6954,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 412656,
+            "durationSeconds": 8.597,
+            "peak": 0.32585781812667847,
+            "rms": 0.022446610026526405,
+            "nonZeroSampleCount": 818304,
+            "audioAlignment": {
+              "referenceDurationSeconds": 8.650020833333333,
+              "comparedFrames": 412272,
+              "zeroLagCorrelation": 0.447472114120396,
+              "bestCorrelation": 0.9997681389705816,
+              "bestLagFrames": 384,
+              "bestLagMs": 8
+            }
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 19,
+          "durationSeconds": 8.6157,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 7047,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 412363,
+            "durationSeconds": 8.590895833333333,
+            "peak": 0.32585781812667847,
+            "rms": 0.022448056459592167,
+            "nonZeroSampleCount": 817720,
+            "audioAlignment": {
+              "referenceDurationSeconds": 8.650041666666667,
+              "comparedFrames": 412026,
+              "zeroLagCorrelation": -0.294033496310772,
+              "bestCorrelation": 0.4034638236941346,
+              "bestLagFrames": 337,
+              "bestLagMs": 7.020833333333333
+            }
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 285,
+          "durationSeconds": 6.7157,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4733,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "resultGeneration2": {
+      "fileName": "result-generation-002.mp4",
+      "url": "/media/result-generation-002.mp4",
+      "contentType": "video/mp4;codecs=avc1.42001f,mp4a.40.2",
+      "container": "ISO Base Media MP4",
+      "bytes": 211724,
+      "sha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+      "canvasWidth": 640,
+      "canvasHeight": 360,
+      "requestedCaptureWindowMs": 8650,
+      "observedRecorderWindowMs": 8660,
+      "audioContextWarmupMs": 839,
+      "audioContextTimeAdvanceMs": 8661,
+      "recorderInputAudioTrackCount": 1,
+      "generatedTitleCard": "GENERATION 002",
+      "scenario": "synthetic-result-generation",
+      "generationId": "generation-002",
+      "voice": "Microsoft David Desktop",
+      "expectedQuote": "A blue light is on.",
+      "sourceAsset": "/media/source-dialogue.mp4",
+      "sourceWindowMs": 8650,
+      "selectedSectionId": "turn-a",
+      "selectedSectionPlacementStartMs": 1000,
+      "sharesSynthetic110HzBackground": true,
+      "productRendered": false,
+      "referenceAudio": "/media/result-generation-002-master.wav",
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 19.69999998807907,
+          "durationSeconds": 8.649867,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 6552,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 412656,
+            "durationSeconds": 8.597,
+            "peak": 0.45357614755630493,
+            "rms": 0.0217754023525297,
+            "nonZeroSampleCount": 818304,
+            "audioAlignment": {
+              "referenceDurationSeconds": 8.650020833333333,
+              "comparedFrames": 412656,
+              "zeroLagCorrelation": 0.9994301228856173,
+              "bestCorrelation": 0.9994301228856173,
+              "bestLagFrames": 0,
+              "bestLagMs": 0
+            }
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 11,
+          "durationSeconds": 8.595812,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "playback-timeout",
+          "playable": false,
+          "playbackElapsedMs": 47742,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 412363,
+            "durationSeconds": 8.590895833333333,
+            "peak": 0.45357614755630493,
+            "rms": 0.02177685894366247,
+            "nonZeroSampleCount": 817720,
+            "audioAlignment": {
+              "referenceDurationSeconds": 8.650041666666667,
+              "comparedFrames": 411627,
+              "zeroLagCorrelation": -0.1326832816380871,
+              "bestCorrelation": 0.33061837686361206,
+              "bestLagFrames": 736,
+              "bestLagMs": 15.333333333333334
+            }
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 128,
+          "durationSeconds": 6.7168666,
+          "videoWidth": 640,
+          "videoHeight": 360,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 4270,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "validSilencePcm": {
+      "fileName": "valid-silence.wav",
+      "url": "/media/valid-silence.wav",
+      "contentType": "audio/wav",
+      "container": "RIFF/WAVE",
+      "codec": "PCM signed 16-bit little-endian",
+      "bytes": 176444,
+      "sha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+      "durationMs": 2000,
+      "sampleRateHz": 22050,
+      "channels": 2,
+      "bitsPerSample": 16,
+      "frames": 44100,
+      "scenario": "valid-silence-zeroed-pcm-source",
+      "sourcePcmIsZeroed": true,
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 18.599999994039536,
+          "durationSeconds": 2,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1067,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 96000,
+            "durationSeconds": 2,
+            "peak": 0,
+            "rms": 0,
+            "nonZeroSampleCount": 0,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 9,
+          "durationSeconds": 2,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1047,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 96000,
+            "durationSeconds": 2,
+            "peak": 0,
+            "rms": 0,
+            "nonZeroSampleCount": 0,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "maybe",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 68,
+          "durationSeconds": 2,
+          "videoWidth": null,
+          "videoHeight": null,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 954,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "validSilence": {
+      "fileName": "valid-silence.mp4",
+      "url": "/media/valid-silence.mp4",
+      "contentType": "video/mp4;codecs=avc1.420015,mp4a.40.2",
+      "container": "ISO Base Media MP4",
+      "bytes": 35485,
+      "sha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+      "canvasWidth": 320,
+      "canvasHeight": 180,
+      "requestedCaptureWindowMs": 2000,
+      "observedRecorderWindowMs": 2020,
+      "audioContextWarmupMs": 268,
+      "audioContextTimeAdvanceMs": 2019,
+      "recorderInputAudioTrackCount": 1,
+      "generatedTitleCard": "RECORDED SILENCE",
+      "scenario": "valid-silence-with-audio-track",
+      "sourcePcmIsZeroed": true,
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 16.19999998807907,
+          "durationSeconds": 1.992233,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1289,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 93168,
+            "durationSeconds": 1.941,
+            "peak": 0,
+            "rms": 0,
+            "nonZeroSampleCount": 0,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 7,
+          "durationSeconds": 1.93977,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "playback-timeout",
+          "playable": false,
+          "playbackElapsedMs": 45024,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 93109,
+            "durationSeconds": 1.9397708333333334,
+            "peak": 0,
+            "rms": 0,
+            "nonZeroSampleCount": 0,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 117,
+          "durationSeconds": 1.993,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1049,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "usablePartial": {
+      "fileName": "usable-partial.mp4",
+      "url": "/media/usable-partial.mp4",
+      "contentType": "video/mp4;codecs=avc1.420015,mp4a.40.2",
+      "container": "ISO Base Media MP4",
+      "bytes": 55776,
+      "sha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+      "canvasWidth": 320,
+      "canvasHeight": 180,
+      "requestedCaptureWindowMs": 2800,
+      "observedRecorderWindowMs": 2812,
+      "audioContextWarmupMs": 269,
+      "audioContextTimeAdvanceMs": 2808,
+      "recorderInputAudioTrackCount": 1,
+      "generatedTitleCard": "SHORT PARTIAL TAKE",
+      "scenario": "simulated-usable-partial",
+      "simulated": true,
+      "sourceClip": "/media/source-dialogue-master.wav",
+      "clippedAtMs": 2800,
+      "representsRealInterruptionRecovery": false,
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 18.30000001192093,
+          "durationSeconds": 2.7989,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1549,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 132080,
+            "durationSeconds": 2.7516666666666665,
+            "peak": 0.47833240032196045,
+            "rms": 0.03736251887434987,
+            "nonZeroSampleCount": 263264,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 8,
+          "durationSeconds": 2.749916,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "playback-timeout",
+          "playable": false,
+          "playbackElapsedMs": 45044,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 131996,
+            "durationSeconds": 2.7499166666666666,
+            "peak": 0.4783324599266052,
+            "rms": 0.03736058514512459,
+            "nonZeroSampleCount": 263096,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 144,
+          "durationSeconds": 2.8,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 1498,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "noAudioTrack": {
+      "fileName": "no-audio-track.mp4",
+      "url": "/media/no-audio-track.mp4",
+      "contentType": "video/mp4;codecs=avc1.420015",
+      "container": "ISO Base Media MP4",
+      "bytes": 5847,
+      "sha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+      "canvasWidth": 320,
+      "canvasHeight": 180,
+      "requestedCaptureWindowMs": 1200,
+      "observedRecorderWindowMs": 1212,
+      "audioContextWarmupMs": 0,
+      "audioContextTimeAdvanceMs": null,
+      "recorderInputAudioTrackCount": 0,
+      "generatedTitleCard": "VIDEO ONLY",
+      "scenario": "video-without-audio-track",
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 18.19999998807907,
+          "durationSeconds": 1.194133,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 782,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 0,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "EncodingError: Unable to decode audio data"
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 12,
+          "durationSeconds": 0.6,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "playback-timeout",
+          "playable": false,
+          "playbackElapsedMs": 45060,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 0,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "EncodingError: The buffer passed to decodeAudioData contains an unknown content type."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 118,
+          "durationSeconds": 1.194,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 744,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "shortSource": {
+      "fileName": "short-source.mp4",
+      "url": "/media/short-source.mp4",
+      "contentType": "video/mp4;codecs=avc1.420015,mp4a.40.2",
+      "container": "ISO Base Media MP4",
+      "bytes": 13133,
+      "sha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+      "canvasWidth": 320,
+      "canvasHeight": 180,
+      "requestedCaptureWindowMs": 650,
+      "observedRecorderWindowMs": 661,
+      "audioContextWarmupMs": 271,
+      "audioContextTimeAdvanceMs": 672,
+      "recorderInputAudioTrackCount": 1,
+      "generatedTitleCard": "SHORT SOURCE",
+      "scenario": "audio-present-short-source-window",
+      "sourceClip": "/media/source-dialogue-master.wav",
+      "clippedAtMs": 650,
+      "containsDialogue": false,
+      "rejectionThresholdAssumed": false,
+      "browserMeasured": {
+        "Chromium": {
+          "browserVersion": "156.0.8078.4",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 23.900000005960464,
+          "durationSeconds": 0.646867,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 547,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 28656,
+            "durationSeconds": 0.597,
+            "peak": 0.025112932547926903,
+            "rms": 0.017486087556677563,
+            "nonZeroSampleCount": 56416,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "Firefox": {
+          "browserVersion": "157.0",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 26,
+          "durationSeconds": 0.596625,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "playback-timeout",
+          "playable": false,
+          "playbackElapsedMs": 45021,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": 1,
+          "offlineAudioDecode": {
+            "supported": true,
+            "decodedChannels": 2,
+            "sampleRateHz": 48000,
+            "frameCount": 28638,
+            "durationSeconds": 0.596625,
+            "peak": 0.025112934410572052,
+            "rms": 0.017486667416258962,
+            "nonZeroSampleCount": 56380,
+            "audioAlignment": null
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": true
+          }
+        },
+        "WebKit": {
+          "browserVersion": "27.2",
+          "metadataState": "loaded",
+          "metadataLatencyMs": 143,
+          "durationSeconds": 0.647,
+          "videoWidth": 320,
+          "videoHeight": 180,
+          "playbackState": "ended",
+          "playable": true,
+          "playbackElapsedMs": 424,
+          "playbackRate": 2,
+          "mediaMutedForSafety": true,
+          "decodedAudioTrackCount": null,
+          "offlineAudioDecode": {
+            "supported": false,
+            "reason": "OfflineAudioContext unavailable."
+          },
+          "capability": {
+            "canPlayType": "probably",
+            "captureStreamSupported": false
+          }
+        }
+      }
+    },
+    "noData": {
+      "scenario": "absent-data",
+      "status": "absent",
+      "asset": null,
+      "note": "No file and no URL by design; this distinguishes absent data from valid silence and short media."
+    }
+  },
+  "dialogueTimeline": {
+    "sampleRateHz": 22050,
+    "sourceFrameCount": 190733,
+    "sourceDurationMs": 8650.022675736962,
+    "sourceContentDurationMs": 8500,
+    "aacTailDurationMs": 150,
+    "note": "Offsets are exact generated sample placements in the PCM masters, not word-level recognition or product timing. Each source and generation master has a short silent tail for AAC encoder padding; MP4 sample alignment and decode duration are measured separately by the browser probe.",
+    "sections": [
+      {
+        "id": "turn-a",
+        "quote": "A blue light is on.",
+        "voice": "Microsoft Zira Desktop",
+        "startMs": 1000,
+        "startFrame": 22050,
+        "endFrameExclusive": 64701,
+        "endMs": 2934.285714285714
+      },
+      {
+        "id": "turn-b",
+        "quote": "I hear it clearly.",
+        "voice": "Microsoft David Desktop",
+        "startMs": 1500,
+        "startFrame": 33075,
+        "endFrameExclusive": 74953,
+        "endMs": 3399.229024943311
+      },
+      {
+        "id": "turn-c",
+        "quote": "We can begin now.",
+        "voice": "Microsoft Zira Desktop",
+        "startMs": 5000,
+        "startFrame": 110250,
+        "endFrameExclusive": 148049,
+        "endMs": 6714.240362811792
+      }
+    ],
+    "overlap": {
+      "startFrame": 33075,
+      "endFrameExclusive": 64701,
+      "startMs": 1500,
+      "endMs": 2934.285714285714
+    }
+  },
+  "browserEvidence": {
+    "path": "_docs/evidence/frontend-implementation-2026-10-23/media/browser-media-matrix.json",
+    "capturedAtUtc": "2026-10-23T01:18:02.032Z",
+    "revision": "2f70ac94d059585f9608df39efbc96be555c3f98",
+    "engines": [
+      {
+        "name": "Chromium",
+        "version": "156.0.8078.4"
+      },
+      {
+        "name": "Firefox",
+        "version": "157.0"
+      },
+      {
+        "name": "WebKit",
+        "version": "27.2"
+      }
+    ],
+    "limitations": "Browser metadata/playback/captureStream observations only; see the evidence matrix for the exact environment and unsupported behavior."
+  }
+}
