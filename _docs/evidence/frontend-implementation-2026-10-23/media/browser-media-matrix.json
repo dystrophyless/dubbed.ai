@@ -1,0 +1,1665 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-10-23T01:18:02.032Z",
+  "revision": "2f70ac94d059585f9608df39efbc96be555c3f98",
+  "worktreeStatusForOwnedPaths": "?? _docs/evidence/frontend-implementation-2026-10-23/media/\n?? frontend/public/media/\n?? frontend/src/media/\n?? frontend/tests/media/",
+  "environment": {
+    "osPlatform": "win32",
+    "osRelease": "10.0.26200",
+    "osVersion": "Windows 11 Pro",
+    "architecture": "x64",
+    "nodeVersion": "v22.23.1",
+    "playwrightPackageVersion": "1.64.1 (resolved frontend dev dependency; package lock not changed)",
+    "browserMode": "Playwright headless, cached local builds",
+    "inputDevice": "No physical media input device used; static fixture files served over loopback HTTP."
+  },
+  "fixtureProvenance": {
+    "speechGenerator": "Windows System.Speech.Synthesis.SpeechSynthesizer",
+    "voices": {
+      "zira": {
+        "name": "Microsoft Zira Desktop",
+        "culture": "en-US",
+        "gender": "Female"
+      },
+      "david": {
+        "name": "Microsoft David Desktop",
+        "culture": "en-US",
+        "gender": "Male"
+      }
+    },
+    "videoGenerator": "Local browser Canvas + MediaRecorder via Playwright Chromium; no network or external media source.",
+    "scope": "Synthetic fixture media only. These files are not recordings from an actual user, not arbitrary-upload processing, and not product-rendered outputs.",
+    "voicePackNote": "The speech text was generated locally from installed Windows voices. No real speaker was recorded; no ownership claim is made over Windows or voice-pack software."
+  },
+  "procedure": [
+    "Serve each manifest fixture from a temporary in-process loopback HTTP server with byte-range support.",
+    "For MP4 assets create an HTMLVideoElement; for WAV assets create an HTMLAudioElement.",
+    "Mute the media element and set volume to zero before playback; Chromium is additionally launched with --mute-audio. Firefox and WebKit use the standard muted-media output path.",
+    "Measure loadedmetadata latency, duration and dimensions, then start playback from an explicit page click and wait for the ended event at playbackRate 2.",
+    "Where HTMLMediaElement.captureStream exists, record decoded audio-track count. Independently run OfflineAudioContext.decodeAudioData on local fixture bytes and report sample facts when the engine can decode the container; this does not route audio to speakers.",
+    "Do not infer audible-vs-silence RMS from the intentionally muted media capture path. Offline sample RMS is descriptive only and is not a rejection threshold.",
+    "Record per-engine result, SHA-256, and limitations in this evidence artifact. Missing data remains an explicit null with no playback attempt."
+  ],
+  "engines": [
+    {
+      "name": "Chromium",
+      "version": "156.0.8078.4",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "staticCapabilityDeclarations": {
+        "mp4": "probably",
+        "webm": "probably",
+        "wav": "probably",
+        "mediaRecorder": true,
+        "mediaRecorderMp4": true,
+        "captureStream": true
+      },
+      "fixtures": [
+        {
+          "fixture": "source",
+          "scenario": "synthetic-source-with-dialogue-and-background",
+          "fileName": "source-dialogue.mp4",
+          "sha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 23.80000001192093
+            },
+            "durationSeconds": 8.6254,
+            "finalCurrentTimeSeconds": 8.6254,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 7709,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 412656,
+              "durationSeconds": 8.597,
+              "peak": 0.4608035981655121,
+              "rms": 0.02953958666276153,
+              "nonZeroSampleCount": 818304,
+              "audioAlignment": {
+                "referenceDurationSeconds": 8.650020833333333,
+                "comparedFrames": 412560,
+                "zeroLagCorrelation": -0.17010719078385828,
+                "bestCorrelation": 0.9991086081149675,
+                "bestLagFrames": 96,
+                "bestLagMs": 2
+              }
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "sourceAudio",
+          "scenario": "synthetic-source-audio-master",
+          "fileName": "source-dialogue-master.wav",
+          "sha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 21
+            },
+            "durationSeconds": 8.650023,
+            "finalCurrentTimeSeconds": 8.650023,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4586,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 415201,
+              "durationSeconds": 8.650020833333333,
+              "peak": 0.4686405658721924,
+              "rms": 0.02952117774805744,
+              "nonZeroSampleCount": 816070,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "recordingTakeA",
+          "scenario": "synthetic-recorded-take-fixture",
+          "fileName": "recording-take-a.wav",
+          "sha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 19.099999994039536
+            },
+            "durationSeconds": 1.934286,
+            "finalCurrentTimeSeconds": 1.934286,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 1235,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 1,
+              "sampleRateHz": 48000,
+              "frameCount": 92845,
+              "durationSeconds": 1.9342708333333334,
+              "peak": 0.709622859954834,
+              "rms": 0.09033465688471091,
+              "nonZeroSampleCount": 54536,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "recordingTakeB",
+          "scenario": "synthetic-recorded-take-fixture",
+          "fileName": "recording-take-b.wav",
+          "sha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 15.800000011920929
+            },
+            "durationSeconds": 1.959274,
+            "finalCurrentTimeSeconds": 1.959274,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 1080,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 1,
+              "sampleRateHz": 48000,
+              "frameCount": 94045,
+              "durationSeconds": 1.9592708333333333,
+              "peak": 0.9520118832588196,
+              "rms": 0.08287530008370621,
+              "nonZeroSampleCount": 58521,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration1Audio",
+          "scenario": "synthetic-generation-audio-master",
+          "fileName": "result-generation-001-master.wav",
+          "sha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 23.099999994039536
+            },
+            "durationSeconds": 8.650023,
+            "finalCurrentTimeSeconds": 8.650023,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4447,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 415201,
+              "durationSeconds": 8.650020833333333,
+              "peak": 0.3275276720523834,
+              "rms": 0.022416104720505477,
+              "nonZeroSampleCount": 816070,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration2Audio",
+          "scenario": "synthetic-generation-audio-master",
+          "fileName": "result-generation-002-master.wav",
+          "sha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 24.599999994039536
+            },
+            "durationSeconds": 8.650023,
+            "finalCurrentTimeSeconds": 8.650023,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4492,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 415201,
+              "durationSeconds": 8.650020833333333,
+              "peak": 0.4560800790786743,
+              "rms": 0.021745517710460058,
+              "nonZeroSampleCount": 816070,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration1",
+          "scenario": "synthetic-result-generation",
+          "fileName": "result-generation-001.mp4",
+          "sha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 19.599999994039536
+            },
+            "durationSeconds": 8.6157,
+            "finalCurrentTimeSeconds": 8.6157,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 6954,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 412656,
+              "durationSeconds": 8.597,
+              "peak": 0.32585781812667847,
+              "rms": 0.022446610026526405,
+              "nonZeroSampleCount": 818304,
+              "audioAlignment": {
+                "referenceDurationSeconds": 8.650020833333333,
+                "comparedFrames": 412272,
+                "zeroLagCorrelation": 0.447472114120396,
+                "bestCorrelation": 0.9997681389705816,
+                "bestLagFrames": 384,
+                "bestLagMs": 8
+              }
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration2",
+          "scenario": "synthetic-result-generation",
+          "fileName": "result-generation-002.mp4",
+          "sha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 19.69999998807907
+            },
+            "durationSeconds": 8.649867,
+            "finalCurrentTimeSeconds": 8.649867,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 6552,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 412656,
+              "durationSeconds": 8.597,
+              "peak": 0.45357614755630493,
+              "rms": 0.0217754023525297,
+              "nonZeroSampleCount": 818304,
+              "audioAlignment": {
+                "referenceDurationSeconds": 8.650020833333333,
+                "comparedFrames": 412656,
+                "zeroLagCorrelation": 0.9994301228856173,
+                "bestCorrelation": 0.9994301228856173,
+                "bestLagFrames": 0,
+                "bestLagMs": 0
+              }
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "validSilencePcm",
+          "scenario": "valid-silence-zeroed-pcm-source",
+          "fileName": "valid-silence.wav",
+          "sha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 18.599999994039536
+            },
+            "durationSeconds": 2,
+            "finalCurrentTimeSeconds": 2,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 1067,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 96000,
+              "durationSeconds": 2,
+              "peak": 0,
+              "rms": 0,
+              "nonZeroSampleCount": 0,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "validSilence",
+          "scenario": "valid-silence-with-audio-track",
+          "fileName": "valid-silence.mp4",
+          "sha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 16.19999998807907
+            },
+            "durationSeconds": 1.992233,
+            "finalCurrentTimeSeconds": 1.992233,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 1289,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 93168,
+              "durationSeconds": 1.941,
+              "peak": 0,
+              "rms": 0,
+              "nonZeroSampleCount": 0,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "usablePartial",
+          "scenario": "simulated-usable-partial",
+          "fileName": "usable-partial.mp4",
+          "sha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 18.30000001192093
+            },
+            "durationSeconds": 2.7989,
+            "finalCurrentTimeSeconds": 2.7989,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 1549,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 132080,
+              "durationSeconds": 2.7516666666666665,
+              "peak": 0.47833240032196045,
+              "rms": 0.03736251887434987,
+              "nonZeroSampleCount": 263264,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "noAudioTrack",
+          "scenario": "video-without-audio-track",
+          "fileName": "no-audio-track.mp4",
+          "sha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 0,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 18.19999998807907
+            },
+            "durationSeconds": 1.194133,
+            "finalCurrentTimeSeconds": 1.194133,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 782,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 0,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "EncodingError: Unable to decode audio data"
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "shortSource",
+          "scenario": "audio-present-short-source-window",
+          "fileName": "short-source.mp4",
+          "sha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 23.900000005960464
+            },
+            "durationSeconds": 0.646867,
+            "finalCurrentTimeSeconds": 0.646867,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 547,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 28656,
+              "durationSeconds": 0.597,
+              "peak": 0.025112932547926903,
+              "rms": 0.017486087556677563,
+              "nonZeroSampleCount": 56416,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "noData",
+          "scenario": "absent-data",
+          "fileName": null,
+          "sha256": null,
+          "expectedMediaKind": null,
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "state": "absent"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Firefox",
+      "version": "157.0",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+      "staticCapabilityDeclarations": {
+        "mp4": "probably",
+        "webm": "probably",
+        "wav": "probably",
+        "mediaRecorder": true,
+        "mediaRecorderMp4": false,
+        "captureStream": true
+      },
+      "fixtures": [
+        {
+          "fixture": "source",
+          "scenario": "synthetic-source-with-dialogue-and-background",
+          "fileName": "source-dialogue.mp4",
+          "sha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 64
+            },
+            "durationSeconds": 8.6254,
+            "finalCurrentTimeSeconds": 8.6254,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 7156,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 412363,
+              "durationSeconds": 8.590895833333333,
+              "peak": 0.4608036279678345,
+              "rms": 0.029541500285093565,
+              "nonZeroSampleCount": 817720,
+              "audioAlignment": {
+                "referenceDurationSeconds": 8.650041666666667,
+                "comparedFrames": 412363,
+                "zeroLagCorrelation": 0.0460816504578228,
+                "bestCorrelation": 0.2942508466273799,
+                "bestLagFrames": -87,
+                "bestLagMs": -1.8125
+              }
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "sourceAudio",
+          "scenario": "synthetic-source-audio-master",
+          "fileName": "source-dialogue-master.wav",
+          "sha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 9
+            },
+            "durationSeconds": 8.650023,
+            "finalCurrentTimeSeconds": 8.650023,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4413,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 415202,
+              "durationSeconds": 8.650041666666667,
+              "peak": 0.46869415044784546,
+              "rms": 0.029520832054820176,
+              "nonZeroSampleCount": 816136,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "recordingTakeA",
+          "scenario": "synthetic-recorded-take-fixture",
+          "fileName": "recording-take-a.wav",
+          "sha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 10
+            },
+            "durationSeconds": 1.934286,
+            "finalCurrentTimeSeconds": 1.934286,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 1010,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 1,
+              "sampleRateHz": 48000,
+              "frameCount": 92846,
+              "durationSeconds": 1.9342916666666667,
+              "peak": 0.7096326351165771,
+              "rms": 0.09033407256711665,
+              "nonZeroSampleCount": 54609,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "recordingTakeB",
+          "scenario": "synthetic-recorded-take-fixture",
+          "fileName": "recording-take-b.wav",
+          "sha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 14
+            },
+            "durationSeconds": 1.959274,
+            "finalCurrentTimeSeconds": 1.959274,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 1043,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 1,
+              "sampleRateHz": 48000,
+              "frameCount": 94046,
+              "durationSeconds": 1.9592916666666667,
+              "peak": 0.9520313739776611,
+              "rms": 0.08287536361528636,
+              "nonZeroSampleCount": 58661,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration1Audio",
+          "scenario": "synthetic-generation-audio-master",
+          "fileName": "result-generation-001-master.wav",
+          "sha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 12
+            },
+            "durationSeconds": 8.650023,
+            "finalCurrentTimeSeconds": 8.650023,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4432,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 415202,
+              "durationSeconds": 8.650041666666667,
+              "peak": 0.3275284767150879,
+              "rms": 0.022415726692317017,
+              "nonZeroSampleCount": 816136,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration2Audio",
+          "scenario": "synthetic-generation-audio-master",
+          "fileName": "result-generation-002-master.wav",
+          "sha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 9
+            },
+            "durationSeconds": 8.650023,
+            "finalCurrentTimeSeconds": 8.650023,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4439,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 415202,
+              "durationSeconds": 8.650041666666667,
+              "peak": 0.45608872175216675,
+              "rms": 0.021745187207724136,
+              "nonZeroSampleCount": 816136,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration1",
+          "scenario": "synthetic-result-generation",
+          "fileName": "result-generation-001.mp4",
+          "sha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 19
+            },
+            "durationSeconds": 8.6157,
+            "finalCurrentTimeSeconds": 8.6157,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 7047,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 412363,
+              "durationSeconds": 8.590895833333333,
+              "peak": 0.32585781812667847,
+              "rms": 0.022448056459592167,
+              "nonZeroSampleCount": 817720,
+              "audioAlignment": {
+                "referenceDurationSeconds": 8.650041666666667,
+                "comparedFrames": 412026,
+                "zeroLagCorrelation": -0.294033496310772,
+                "bestCorrelation": 0.4034638236941346,
+                "bestLagFrames": 337,
+                "bestLagMs": 7.020833333333333
+              }
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration2",
+          "scenario": "synthetic-result-generation",
+          "fileName": "result-generation-002.mp4",
+          "sha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 11
+            },
+            "durationSeconds": 8.595812,
+            "finalCurrentTimeSeconds": 8.595812,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 47742,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 412363,
+              "durationSeconds": 8.590895833333333,
+              "peak": 0.45357614755630493,
+              "rms": 0.02177685894366247,
+              "nonZeroSampleCount": 817720,
+              "audioAlignment": {
+                "referenceDurationSeconds": 8.650041666666667,
+                "comparedFrames": 411627,
+                "zeroLagCorrelation": -0.1326832816380871,
+                "bestCorrelation": 0.33061837686361206,
+                "bestLagFrames": 736,
+                "bestLagMs": 15.333333333333334
+              }
+            },
+            "playback": {
+              "state": "playback-timeout"
+            },
+            "playable": false
+          }
+        },
+        {
+          "fixture": "validSilencePcm",
+          "scenario": "valid-silence-zeroed-pcm-source",
+          "fileName": "valid-silence.wav",
+          "sha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 9
+            },
+            "durationSeconds": 2,
+            "finalCurrentTimeSeconds": 2,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 1047,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "maybe",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 96000,
+              "durationSeconds": 2,
+              "peak": 0,
+              "rms": 0,
+              "nonZeroSampleCount": 0,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "validSilence",
+          "scenario": "valid-silence-with-audio-track",
+          "fileName": "valid-silence.mp4",
+          "sha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 7
+            },
+            "durationSeconds": 1.93977,
+            "finalCurrentTimeSeconds": 1.93977,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 45024,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 93109,
+              "durationSeconds": 1.9397708333333334,
+              "peak": 0,
+              "rms": 0,
+              "nonZeroSampleCount": 0,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "playback-timeout"
+            },
+            "playable": false
+          }
+        },
+        {
+          "fixture": "usablePartial",
+          "scenario": "simulated-usable-partial",
+          "fileName": "usable-partial.mp4",
+          "sha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 8
+            },
+            "durationSeconds": 2.749916,
+            "finalCurrentTimeSeconds": 2.749916,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 45044,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 131996,
+              "durationSeconds": 2.7499166666666666,
+              "peak": 0.4783324599266052,
+              "rms": 0.03736058514512459,
+              "nonZeroSampleCount": 263096,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "playback-timeout"
+            },
+            "playable": false
+          }
+        },
+        {
+          "fixture": "noAudioTrack",
+          "scenario": "video-without-audio-track",
+          "fileName": "no-audio-track.mp4",
+          "sha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 0,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 12
+            },
+            "durationSeconds": 0.6,
+            "finalCurrentTimeSeconds": 0.6,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 45060,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 0,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "EncodingError: The buffer passed to decodeAudioData contains an unknown content type."
+            },
+            "playback": {
+              "state": "playback-timeout"
+            },
+            "playable": false
+          }
+        },
+        {
+          "fixture": "shortSource",
+          "scenario": "audio-present-short-source-window",
+          "fileName": "short-source.mp4",
+          "sha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 26
+            },
+            "durationSeconds": 0.596625,
+            "finalCurrentTimeSeconds": 0.596625,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 45021,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": true
+            },
+            "decodedAudioTrackCount": 1,
+            "offlineAudioDecode": {
+              "supported": true,
+              "decodedChannels": 2,
+              "sampleRateHz": 48000,
+              "frameCount": 28638,
+              "durationSeconds": 0.596625,
+              "peak": 0.025112934410572052,
+              "rms": 0.017486667416258962,
+              "nonZeroSampleCount": 56380,
+              "audioAlignment": null
+            },
+            "playback": {
+              "state": "playback-timeout"
+            },
+            "playable": false
+          }
+        },
+        {
+          "fixture": "noData",
+          "scenario": "absent-data",
+          "fileName": null,
+          "sha256": null,
+          "expectedMediaKind": null,
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "state": "absent"
+          }
+        }
+      ]
+    },
+    {
+      "name": "WebKit",
+      "version": "27.2",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+      "staticCapabilityDeclarations": {
+        "mp4": "probably",
+        "webm": "probably",
+        "wav": "probably",
+        "mediaRecorder": false,
+        "mediaRecorderMp4": false,
+        "captureStream": false
+      },
+      "fixtures": [
+        {
+          "fixture": "source",
+          "scenario": "synthetic-source-with-dialogue-and-background",
+          "fileName": "source-dialogue.mp4",
+          "sha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 1153
+            },
+            "durationSeconds": 6.7273666,
+            "finalCurrentTimeSeconds": 6.7273666,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 5797,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "sourceAudio",
+          "scenario": "synthetic-source-audio-master",
+          "fileName": "source-dialogue-master.wav",
+          "sha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 327
+            },
+            "durationSeconds": 8.6500226,
+            "finalCurrentTimeSeconds": 8.6500226,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4788,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "recordingTakeA",
+          "scenario": "synthetic-recorded-take-fixture",
+          "fileName": "recording-take-a.wav",
+          "sha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 199
+            },
+            "durationSeconds": 1.9342857,
+            "finalCurrentTimeSeconds": 1.9342857,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 1219,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "recordingTakeB",
+          "scenario": "synthetic-recorded-take-fixture",
+          "fileName": "recording-take-b.wav",
+          "sha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 203
+            },
+            "durationSeconds": 1.9592743,
+            "finalCurrentTimeSeconds": 1.9592743,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 1377,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration1Audio",
+          "scenario": "synthetic-generation-audio-master",
+          "fileName": "result-generation-001-master.wav",
+          "sha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 185
+            },
+            "durationSeconds": 8.6500226,
+            "finalCurrentTimeSeconds": 8.6500226,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4449,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration2Audio",
+          "scenario": "synthetic-generation-audio-master",
+          "fileName": "result-generation-002-master.wav",
+          "sha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 183
+            },
+            "durationSeconds": 8.6500226,
+            "finalCurrentTimeSeconds": 8.6500226,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 4531,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration1",
+          "scenario": "synthetic-result-generation",
+          "fileName": "result-generation-001.mp4",
+          "sha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 285
+            },
+            "durationSeconds": 6.7157,
+            "finalCurrentTimeSeconds": 6.7157,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 4733,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "resultGeneration2",
+          "scenario": "synthetic-result-generation",
+          "fileName": "result-generation-002.mp4",
+          "sha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 128
+            },
+            "durationSeconds": 6.7168666,
+            "finalCurrentTimeSeconds": 6.7168666,
+            "videoWidth": 640,
+            "videoHeight": 360,
+            "playbackElapsedMs": 4270,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "validSilencePcm",
+          "scenario": "valid-silence-zeroed-pcm-source",
+          "fileName": "valid-silence.wav",
+          "sha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+          "expectedMediaKind": "RIFF/WAVE",
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 68
+            },
+            "durationSeconds": 2,
+            "finalCurrentTimeSeconds": 2,
+            "videoWidth": null,
+            "videoHeight": null,
+            "playbackElapsedMs": 954,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "validSilence",
+          "scenario": "valid-silence-with-audio-track",
+          "fileName": "valid-silence.mp4",
+          "sha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 117
+            },
+            "durationSeconds": 1.993,
+            "finalCurrentTimeSeconds": 1.993,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 1049,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "usablePartial",
+          "scenario": "simulated-usable-partial",
+          "fileName": "usable-partial.mp4",
+          "sha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 144
+            },
+            "durationSeconds": 2.8,
+            "finalCurrentTimeSeconds": 2.8,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 1498,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "noAudioTrack",
+          "scenario": "video-without-audio-track",
+          "fileName": "no-audio-track.mp4",
+          "sha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 0,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 118
+            },
+            "durationSeconds": 1.194,
+            "finalCurrentTimeSeconds": 1.194,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 744,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "shortSource",
+          "scenario": "audio-present-short-source-window",
+          "fileName": "short-source.mp4",
+          "sha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+          "expectedMediaKind": "ISO Base Media MP4",
+          "recorderInputAudioTrackCount": 1,
+          "observation": {
+            "metadata": {
+              "state": "loaded",
+              "latencyMs": 143
+            },
+            "durationSeconds": 0.647,
+            "finalCurrentTimeSeconds": 0.647,
+            "videoWidth": 320,
+            "videoHeight": 180,
+            "playbackElapsedMs": 424,
+            "playbackRate": 2,
+            "mediaMutedForSafety": true,
+            "capability": {
+              "canPlayType": "probably",
+              "captureStreamSupported": false
+            },
+            "decodedAudioTrackCount": null,
+            "offlineAudioDecode": {
+              "supported": false,
+              "reason": "OfflineAudioContext unavailable."
+            },
+            "playback": {
+              "state": "ended"
+            },
+            "playable": true
+          }
+        },
+        {
+          "fixture": "noData",
+          "scenario": "absent-data",
+          "fileName": null,
+          "sha256": null,
+          "expectedMediaKind": null,
+          "recorderInputAudioTrackCount": null,
+          "observation": {
+            "state": "absent"
+          }
+        }
+      ]
+    }
+  ],
+  "evidenceLimits": [
+    "The exact engine build is recorded per run; these Playwright builds are not a support claim for every Chrome, Firefox, Safari, OS, or device version.",
+    "Playwright WebKit on this Windows host is not macOS Safari or iOS Safari.",
+    "Playback does not establish microphone permission, recording behavior, source-analysis or dialogue-detection thresholds, fixed-window capture, real interruption recovery, product rendering, download correctness, or backend storage/lease behavior.",
+    "OPEN-F06-T02/T03/T05 and OPEN-09-08 remain unproved wherever they require product or physical-device behavior; fixture playback only covers local media decoding."
+  ]
+}

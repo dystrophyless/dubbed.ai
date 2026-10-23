@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-10-23T16:44:24.275Z",
+  "revision": "2f70ac94d059585f9608df39efbc96be555c3f98",
+  "evidenceOnly": true,
+  "statusDefinitions": {
+    "supported": "Direct observation exists within the named fixture/browser/API boundary only.",
+    "unavailable": "The required API, device, permission evidence, or rights evidence is absent in this evidence set.",
+    "not-run": "No procedure was executed for the stated behavior."
+  },
+  "issueAcceptance": "not-assessed; evidence report only",
+  "environment": {
+    "browserMatrixCapturedAtUtc": "2026-10-23T01:18:02.032Z",
+    "os": "Windows 11 Pro 10.0.26200 x64",
+    "node": "v22.23.1",
+    "playwright": "1.64.1",
+    "mode": "Playwright headless, cached local builds",
+    "mediaInput": "No physical input device; fixture files via loopback HTTP",
+    "output": "Muted media elements/volume 0; Chromium launched with --mute-audio"
+  },
+  "issues": [
+    {
+      "issue": 64,
+      "title": "Establish the supported browser media capability and timing evidence",
+      "criteria": [
+        {
+          "id": "AC-01",
+          "status": "supported",
+          "evidence": "Versioned matrix records environment, fixture, operation, procedure, observations, limitations; noData and failures are explicit."
+        },
+        {
+          "id": "AC-02",
+          "status": "supported",
+          "evidence": "Direct playback, authoritative inspection, compatible-preview delivery and paid processing are distinct categories; only direct fixture playback was observed."
+        },
+        {
+          "id": "AC-03",
+          "status": "supported",
+          "evidence": "Synthetic native capture timing/final blobs are reported separately from unavailable readiness, phone/product behavior and not-run tolerances."
+        },
+        {
+          "id": "AC-04",
+          "status": "supported",
+          "evidence": "OPEN IDs, affected AC and next proof are mapped; production storage/lease/render evidence is explicitly absent."
+        }
+      ]
+    },
+    {
+      "issue": 72,
+      "title": "Supply permitted playable media with explicit timeline and generation annotations",
+      "criteria": [
+        {
+          "id": "AC-01",
+        "status": "supported",
+        "evidence": "Original text and locally generated fixture provenance, hashes, metadata and scenarios are documented; issue #72 permits original/generated assets. No ownership or redistribution claim is made for Windows/voice-pack software."
+        },
+        {
+          "id": "AC-02",
+          "status": "supported",
+        "evidence": "Sample timeline, distinct generation IDs/bytes, per-engine playback, generation-001 journey hash match, and a mocked-service failure/switch/retry plus unknown-operation reconciliation test are recorded; platform support and actual rendering remain limited."
+        },
+        {
+          "id": "AC-03",
+          "status": "supported",
+          "evidence": "Valid silence, simulated partial, absent data, video-only and short-source are distinct fixtures/conditions; no minimum duration is assumed."
+        },
+        {
+          "id": "AC-04",
+          "status": "supported",
+          "evidence": "Fixtures are local/backend-free; no Landing/Projects reference or public result URL was found."
+        }
+      ]
+    }
+  ],
+  "capabilityEvidence": [
+    {
+      "capability": "Direct playback: Chromium 156.0.8078.4",
+      "status": "supported",
+      "observation": "13/13 actual fixture files reached ended at playbackRate 2."
+    },
+    {
+      "capability": "Direct playback: Firefox 157.0",
+      "status": "unavailable",
+      "observation": "8/13 ended; five timed out: resultGeneration2, validSilence, usablePartial, noAudioTrack, shortSource. Metadata loaded for the five; several timed-out media still had decoded audio tracks/samples."
+    },
+    {
+      "capability": "Direct playback: Playwright WebKit 27.2 on Windows",
+      "status": "supported",
+      "observation": "13/13 actual fixture files reached ended. Not macOS Safari or iOS Safari; source duration measured 6.7274s vs 8.6254s in Chromium/Firefox."
+    },
+    {
+      "capability": "CaptureStream/audio-track count",
+      "status": "supported",
+      "observation": "Available in Chromium/Firefox; unavailable in WebKit. WebKit UA is not evidence of Safari."
+    },
+    {
+      "capability": "OfflineAudioContext decode",
+      "status": "supported",
+      "observation": "Available in Chromium/Firefox; unavailable in WebKit. Sample RMS is descriptive; muted playback does not establish audibility."
+    },
+    {
+      "capability": "MediaRecorder input/MP4 output API",
+      "status": "supported",
+      "observation": "Chromium declared MediaRecorder and MP4 output; Firefox MediaRecorder yes/MP4 no; WebKit MediaRecorder unavailable."
+    },
+    {
+      "capability": "MOV/WebM source input or other codec/container combinations",
+      "status": "not-run",
+      "observation": "Static source fixtures are MP4 and WAV only. Native WebM/Opus is recorder output, not source-ingestion evidence."
+    },
+    {
+      "capability": "Authoritative server source inspection/audio-track detection",
+      "status": "not-run",
+      "observation": "Browser element/captureStream observations only."
+    },
+    {
+      "capability": "Compatible preview conversion/delivery/recovery",
+      "status": "not-run",
+      "observation": "Actual browser conversion, delivery and recovery were not-run. Historical concurrent snapshot had 12 passed and 3 compatible-preview failures during fixture regeneration; a later isolated test suite passed, but that does not prove real conversion or delivery."
+    },
+    {
+      "capability": "Compatible-preview local service/UI test branches",
+      "status": "supported",
+      "observation": "The later isolated current suite passed 123/123, including four compatible-preview checks; this is local test evidence only, not a live conversion or production delivery."
+    },
+    {
+      "capability": "Paid processing, zero-dialogue decision/refund, actual custom rendering/export",
+      "status": "not-run",
+      "observation": "No production processing/render pipeline or billing evidence."
+    },
+    {
+      "capability": "Size/duration limits, preview leases/storage/retention",
+      "status": "not-run",
+      "observation": "No server/device/lease boundary test."
+    },
+    {
+      "capability": "Native fake-stream MediaRecorder capture/final blob",
+      "status": "supported",
+      "observation": "Automatic 1507ms wall/1500ms decoded; zero-gain stream 1010ms/480ms decoded; synthetic interruption 602ms/600ms decoded; all produced nonempty WebM/Opus with audio frames."
+    },
+    {
+      "capability": "Capture readiness, permission UI, physical microphone/device enumeration, phone/background behavior",
+      "status": "not-run",
+      "observation": "Native API probe does not exercise product preflight or physical devices."
+    },
+    {
+      "capability": "Original-volume independence and synchronized reference start",
+      "status": "not-run",
+      "observation": "No reference playback was used in the native capture probe."
+    },
+    {
+      "capability": "Fixed-window product auto-stop/no manual Stop and approved timing tolerance",
+      "status": "not-run",
+      "observation": "The native API probe is not a product fixed-window/tolerance measurement. A separate local UI journey observed declared fixed windows and no manual Stop; approved tolerance and physical-device behavior remain unproven."
+    },
+    {
+      "capability": "Local record UI fixed windows, no manual Stop, and progression to Result",
+      "status": "supported",
+      "observation": "A bounded muted Playwright journey observed three fixed-window lines, no Stop control, moving reference video, local mock capture/take progression and the synthetic generation-001 Result screen. It is not production capture or a custom render."
+    },
+    {
+      "capability": "ResultScreen frozen-generation retry and unknown-operation reconciliation",
+      "status": "supported",
+      "observation": "Focused local component tests cover failed generation-001 request, Watch new generation-002, retry generation-001 with a new ID after terminal failure, same-ID reconciliation before resubmit when outcome is unknown, and no delivery after unmount. Service calls are mocked."
+    },
+    {
+      "capability": "Product handling of silence/partial/noData/zero-data",
+      "status": "not-run",
+      "observation": "Fixture distinctions are verified; UI/service acceptance behavior is not."
+    }
+  ],
+  "fixtures": [
+    {
+      "key": "source",
+      "file": "source-dialogue.mp4",
+      "bytes": 217356,
+      "sha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+      "media": "MP4 AVC/AAC 640x360",
+      "scenario": "synthetic-source-with-dialogue-and-background",
+      "observedChromiumDurationSeconds": 8.6254
+    },
+    {
+      "key": "sourceAudio",
+      "file": "source-dialogue-master.wav",
+      "bytes": 762976,
+      "sha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+      "media": "PCM16 LE 22050Hz stereo, 190733 frames, 8650.0227ms",
+      "scenario": "synthetic-source-audio-master"
+    },
+    {
+      "key": "recordingTakeA",
+      "file": "recording-take-a.wav",
+      "bytes": 85346,
+      "sha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+      "media": "PCM16 LE 22050Hz mono, 42651 frames, 1934.2857ms",
+      "scenario": "synthetic-recorded-take-fixture; take-a; Zira; quote: A blue light is on."
+    },
+    {
+      "key": "recordingTakeB",
+      "file": "recording-take-b.wav",
+      "bytes": 86448,
+      "sha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+      "media": "PCM16 LE 22050Hz mono, 43202 frames, 1959.2744ms",
+      "scenario": "synthetic-recorded-take-fixture; take-b; David; quote: A blue light is on."
+    },
+    {
+      "key": "resultGeneration1Audio",
+      "file": "result-generation-001-master.wav",
+      "bytes": 762976,
+      "sha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+      "media": "PCM16 LE 22050Hz stereo, 190733 frames, 8650.0227ms",
+      "scenario": "synthetic-generation-audio-master; generation-001; Zira"
+    },
+    {
+      "key": "resultGeneration2Audio",
+      "file": "result-generation-002-master.wav",
+      "bytes": 762976,
+      "sha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+      "media": "PCM16 LE 22050Hz stereo, 190733 frames, 8650.0227ms",
+      "scenario": "synthetic-generation-audio-master; generation-002; David"
+    },
+    {
+      "key": "resultGeneration1",
+      "file": "result-generation-001.mp4",
+      "bytes": 211221,
+      "sha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+      "media": "MP4 AVC/AAC 640x360",
+      "scenario": "synthetic-result-generation; generation-001; not product-rendered"
+    },
+    {
+      "key": "resultGeneration2",
+      "file": "result-generation-002.mp4",
+      "bytes": 211724,
+      "sha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+      "media": "MP4 AVC/AAC 640x360",
+      "scenario": "synthetic-result-generation; generation-002; not product-rendered"
+    },
+    {
+      "key": "validSilencePcm",
+      "file": "valid-silence.wav",
+      "bytes": 176444,
+      "sha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+      "media": "PCM16 LE 22050Hz stereo, 44100 frames, 2000ms; all-zero samples",
+      "scenario": "valid-silence-zeroed-pcm-source"
+    },
+    {
+      "key": "validSilence",
+      "file": "valid-silence.mp4",
+      "bytes": 35485,
+      "sha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+      "media": "MP4 AVC/AAC 320x180",
+      "scenario": "valid-silence-with-audio-track; Chromium/Firefox track 1; Firefox OfflineAudioContext all-zero decode"
+    },
+    {
+      "key": "usablePartial",
+      "file": "usable-partial.mp4",
+      "bytes": 55776,
+      "sha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+      "media": "MP4 AVC/AAC 320x180, 2.8s",
+      "scenario": "simulated-usable-partial; source clipped at 2800ms; not real interruption recovery"
+    },
+    {
+      "key": "noAudioTrack",
+      "file": "no-audio-track.mp4",
+      "bytes": 5847,
+      "sha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+      "media": "MP4 AVC only 320x180; Chromium track count 0",
+      "scenario": "video-without-audio-track"
+    },
+    {
+      "key": "shortSource",
+      "file": "short-source.mp4",
+      "bytes": 13133,
+      "sha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+      "media": "MP4 AVC/AAC 320x180, 0.6469s; Chromium audio track 1",
+      "scenario": "audio-present-short-source-window; clipped at 650ms before dialogue; no rejection threshold assumed"
+    }
+  ],
+  "absentCondition": {
+    "key": "noData",
+    "status": "not-run",
+    "file": null,
+    "url": null,
+    "sha256": null,
+    "scenario": "absent-data; no playback attempt"
+  },
+  "provenance": {
+    "speechGenerator": "Windows System.Speech.Synthesis.SpeechSynthesizer",
+    "voices": [
+      "Microsoft Zira Desktop (en-US, female)",
+      "Microsoft David Desktop (en-US, male)"
+    ],
+    "videoGenerator": "Local browser Canvas + MediaRecorder via Playwright Chromium; no network/external media source.",
+    "actualUserRecording": false,
+    "arbitraryUploadProcessing": false,
+    "productRenderedOutput": false,
+    "rightsOrLicenseEvidence": "Issue #72 permits original/generated fixtures. The documented assets use original text, installed Windows voices and locally generated Canvas video; this is not a claim of ownership or redistribution rights for Windows or voice-pack software."
+  },
+  "timeline": {
+    "sampleRateHz": 22050,
+    "frames": 190733,
+    "sourceDurationMs": 8650.022675736962,
+    "contentDurationMs": 8500,
+    "silentAacPaddingMs": 150,
+    "note": "Sample placements, not speech recognition/product timing",
+    "turns": [
+      {
+        "id": "turn-a",
+        "quote": "A blue light is on.",
+        "voice": "Microsoft Zira Desktop",
+        "startMs": 1000,
+        "startFrame": 22050,
+        "endMs": 2934.285714285714,
+        "endFrameExclusive": 64701
+      },
+      {
+        "id": "turn-b",
+        "quote": "I hear it clearly.",
+        "voice": "Microsoft David Desktop",
+        "startMs": 1500,
+        "startFrame": 33075,
+        "endMs": 3399.229024943311,
+        "endFrameExclusive": 74953
+      },
+      {
+        "id": "turn-c",
+        "quote": "We can begin now.",
+        "voice": "Microsoft Zira Desktop",
+        "startMs": 5000,
+        "startFrame": 110250,
+        "endMs": 6714.240362811792,
+        "endFrameExclusive": 148049
+      }
+    ],
+    "overlapMs": [
+      1500,
+      2934.285714285714
+    ]
+  },
+  "nativeCapture": {
+    "evidenceFile": "media/orchestrator-native-capture.json",
+    "browser": "Chromium 156.0.8078.4",
+    "boundary": "Fake browser microphone or zero-gain WebAudio stream; no physical device/user speech; output muted.",
+    "automatic": {
+      "status": "supported",
+      "bytes": 16516,
+      "mime": "audio/webm;codecs=opus",
+      "wallMs": 1507,
+      "decodedMs": 1500,
+      "track": true,
+      "bytesPresent": true,
+      "framesPresent": true,
+      "interrupted": false,
+      "progressSamples": 30,
+      "progressLastMs": 1500
+    },
+    "silence": {
+      "status": "supported",
+      "bytes": 408,
+      "mime": "audio/webm;codecs=opus",
+      "wallMs": 1010,
+      "decodedMs": 480,
+      "track": true,
+      "bytesPresent": true,
+      "framesPresent": true,
+      "rmsMeasured": false
+    },
+    "interrupted": {
+      "status": "supported",
+      "bytes": 2026,
+      "mime": "audio/webm;codecs=opus",
+      "wallMs": 602,
+      "decodedMs": 600,
+      "track": true,
+      "bytesPresent": true,
+      "framesPresent": true,
+      "interrupted": true
+    },
+    "readinessAndPermission": "not-run",
+    "physicalPhoneAndBackground": "not-run",
+    "originalVolumeAndReferenceSync": "not-run",
+    "productFixedWindowAcceptance": "not-run",
+    "recoveryOfInterruptedMediaInProduct": "not-run"
+  },
+  "openGates": [
+    {
+      "id": "OPEN-F06-T02",
+      "source": "_docs/frontend-flows/06-new-dub.md §15",
+      "affected": [
+        "AC-F06-04",
+        "AC-F06-04A",
+        "issue #64 AC-04",
+        "issue #72 AC-02"
+      ],
+      "nextProof": "Exercise selection UI/serialization/quote identity using the 0.647s source and inclusive boundaries; prove alignment does not change the authorized 0.001s interval. Owner decision still required for source under 1.0s."
+    },
+    {
+      "id": "OPEN-F06-T03",
+      "source": "_docs/frontend-flows/06-new-dub.md §15",
+      "affected": [
+        "AC-F06-04B",
+        "issue #64 AC-02",
+        "issue #72 AC-02"
+      ],
+      "nextProof": "Approved target environments; authoritative server inspection, direct playback, compatible preview input/output and exact size/duration boundaries; separate no track, playback failure, silence and zero-dialogue policy."
+    },
+    {
+      "id": "OPEN-F06-T05",
+      "source": "_docs/frontend-flows/06-new-dub.md §15",
+      "affected": [
+        "AC-F06-04B",
+        "issue #64 AC-02",
+        "issue #64 AC-04"
+      ],
+      "nextProof": "Actual preview pending/error/retry, signed access expiry/refresh, offline/reload, durable draft resume and source identity/duration/orientation/timeline invariants."
+    },
+    {
+      "id": "OPEN-09-08",
+      "source": "_docs/frontend-flows/09-record.md §15 and decision register",
+      "affected": [
+        "F09-AC-14",
+        "F09-AC-15",
+        "issue #64 AC-03"
+      ],
+      "nextProof": "Local UI evidence covers declared windows/no manual Stop only. Still needed on supported desktop and physical phone: readiness/permission, synchronized reference/capture start, recoverable partials, device/BT loss, background/screen lock and media compatibility. Measure tolerance for owner review; do not invent rejection rules."
+    },
+    {
+      "id": "OPEN-10-08",
+      "source": "_docs/frontend-flows/10-result.md §17",
+      "affected": [
+        "AC-10-20",
+        "issue #64 AC-04"
+      ],
+      "nextProof": "Actual backend/worker/storage/CDN/backup and old media retention behavior after replacement/deletion."
+    },
+    {
+      "id": "TECH-10-10",
+      "source": "_docs/frontend-flows/10-result.md §17",
+      "affected": [
+        "AC-10-23",
+        "issue #64 AC-04",
+        "issue #72 AC-02"
+      ],
+      "nextProof": "Local ResultScreen tests now cover activation-time generation retention across Watch new and original-ID reconciliation for unknown outcomes. Still needed: durable backend operation identity/idempotency, generation fencing and real storage/lease/retention proof."
+    }
+  ],
+  "journeyEvidence": {
+    "files": [
+      "../record-to-download-browser-next-fix.json",
+      "../record-to-download-browser-final-revision.json"
+    ],
+    "observed": "Local muted Playwright journey presented three declared fixed-window lines, no manual Stop control and the moving source video, then reached Result. The downloaded generation-001 MP4 was 211221 bytes and hash-matched fixture af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2.",
+    "limits": "Local mock UI and synthetic capture only; does not establish production capture, physical-device behavior, custom rendering, backend storage/lease, or whole-product acceptance."
+  },
+  "integrityRecheck": {
+    "command": "PowerShell manifest-driven Get-FileHash -Algorithm SHA256 and Get-Item Length over frontend/public/media/<manifest fileName>; compare both with fixture-manifest.json.",
+    "checkedAtUtc": "2026-10-23T16:44:24.275Z",
+    "status": "supported",
+    "actualFileCount": 13,
+    "matchedCount": 13,
+    "mismatchCount": 0,
+    "absentNoDataIncluded": false,
+    "rows": [
+      [
+        "source-dialogue.mp4",
+        217356,
+        "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b"
+      ],
+      [
+        "source-dialogue-master.wav",
+        762976,
+        "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71"
+      ],
+      [
+        "recording-take-a.wav",
+        85346,
+        "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7"
+      ],
+      [
+        "recording-take-b.wav",
+        86448,
+        "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3"
+      ],
+      [
+        "result-generation-001-master.wav",
+        762976,
+        "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3"
+      ],
+      [
+        "result-generation-002-master.wav",
+        762976,
+        "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1"
+      ],
+      [
+        "result-generation-001.mp4",
+        211221,
+        "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2"
+      ],
+      [
+        "result-generation-002.mp4",
+        211724,
+        "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042"
+      ],
+      [
+        "valid-silence.wav",
+        176444,
+        "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff"
+      ],
+      [
+        "valid-silence.mp4",
+        35485,
+        "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06"
+      ],
+      [
+        "usable-partial.mp4",
+        55776,
+        "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857"
+      ],
+      [
+        "no-audio-track.mp4",
+        5847,
+        "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538"
+      ],
+      [
+        "short-source.mp4",
+        13133,
+        "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20"
+      ]
+    ]
+  },
+  "verification": {
+    "fixtureTest": {
+      "command": "node --test tests/media/fixtures.test.mjs",
+      "result": "passed 3/3 (recorded 2026-10-23 in orchestrator-checks.md)"
+    },
+    "serviceCheck": {
+      "command": "npm.cmd test -- tests/services --reporter=verbose",
+      "result": "historical concurrent fixture-regeneration snapshot: exit 1, 12 passed and 3 compatible-preview failures; superseded by the later isolated suite result below"
+    },
+    "laterIsolatedSuite": {
+      "result": "passed 123/123, including four compatible-preview checks, as recorded by the Orchestrator on 2026-10-23; local suite only, not live conversion/delivery"
+    },
+    "resultRetryRegression": {
+      "command": "npm.cmd test -- tests/result/ResultScreen.test.tsx --run --reporter=dot",
+      "result": "passed 6/6 on 2026-10-23; includes frozen-generation retry, same-ID unknown-operation reconciliation, and late-response-after-unmount fencing"
+    },
+    "sourceRevision": "2f70ac94d059585f9608df39efbc96be555c3",
+    "worktreeBoundary": "Evidence/fixtures were untracked at capture; other local changes are preserved. No staging/commit/push/issue mutation by this evidence task."
+  }
+}

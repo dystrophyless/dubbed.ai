@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-23T01:25:51.797Z",
+  "boundary": "Current regenerated synthetic fixture files; hashes establish byte identity only, not playback or alignment.",
+  "fileCount": 13,
+  "mismatches": 0,
+  "rows": [
+    {
+      "key": "source",
+      "file": "source-dialogue.mp4",
+      "bytes": 217356,
+      "sha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+      "match": true
+    },
+    {
+      "key": "sourceAudio",
+      "file": "source-dialogue-master.wav",
+      "bytes": 762976,
+      "sha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+      "match": true
+    },
+    {
+      "key": "recordingTakeA",
+      "file": "recording-take-a.wav",
+      "bytes": 85346,
+      "sha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+      "match": true
+    },
+    {
+      "key": "recordingTakeB",
+      "file": "recording-take-b.wav",
+      "bytes": 86448,
+      "sha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+      "match": true
+    },
+    {
+      "key": "resultGeneration1Audio",
+      "file": "result-generation-001-master.wav",
+      "bytes": 762976,
+      "sha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+      "match": true
+    },
+    {
+      "key": "resultGeneration2Audio",
+      "file": "result-generation-002-master.wav",
+      "bytes": 762976,
+      "sha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+      "match": true
+    },
+    {
+      "key": "resultGeneration1",
+      "file": "result-generation-001.mp4",
+      "bytes": 211221,
+      "sha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+      "match": true
+    },
+    {
+      "key": "resultGeneration2",
+      "file": "result-generation-002.mp4",
+      "bytes": 211724,
+      "sha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+      "match": true
+    },
+    {
+      "key": "validSilencePcm",
+      "file": "valid-silence.wav",
+      "bytes": 176444,
+      "sha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+      "match": true
+    },
+    {
+      "key": "validSilence",
+      "file": "valid-silence.mp4",
+      "bytes": 35485,
+      "sha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+      "match": true
+    },
+    {
+      "key": "usablePartial",
+      "file": "usable-partial.mp4",
+      "bytes": 55776,
+      "sha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+      "match": true
+    },
+    {
+      "key": "noAudioTrack",
+      "file": "no-audio-track.mp4",
+      "bytes": 5847,
+      "sha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+      "match": true
+    },
+    {
+      "key": "shortSource",
+      "file": "short-source.mp4",
+      "bytes": 13133,
+      "sha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+      "match": true
+    }
+  ]
+}

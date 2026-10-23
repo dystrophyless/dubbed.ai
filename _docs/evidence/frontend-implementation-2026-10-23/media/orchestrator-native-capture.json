@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-23T01:33:19.550Z",
+  "browser": "156.0.8078.4",
+  "boundary": "Actual Chromium MediaRecorder and OfflineAudioContext with synthetic fake microphone or zero-gain WebAudio stream; no physical microphone/user speech/device evidence. All speaker output muted; no media playback.",
+  "automatic": {
+    "status": "ok",
+    "candidateId": "automatic-browser-candidate",
+    "blob": {
+      "bytes": 16516,
+      "type": "audio/webm;codecs=opus"
+    },
+    "startedAt": 1792719196269,
+    "finishedAt": 1792719197776,
+    "interrupted": false,
+    "audioTrackPresent": true,
+    "hasRecordedBytes": true,
+    "audioFrames": "present",
+    "decodedDurationMs": 1500,
+    "durationMs": 1507
+  },
+  "silence": {
+    "status": "ok",
+    "candidateId": "silent-browser-candidate",
+    "blob": {
+      "bytes": 408,
+      "type": "audio/webm;codecs=opus"
+    },
+    "startedAt": 1792719197924,
+    "finishedAt": 1792719198934,
+    "interrupted": false,
+    "audioTrackPresent": true,
+    "hasRecordedBytes": true,
+    "audioFrames": "present",
+    "decodedDurationMs": 480,
+    "durationMs": 1010
+  },
+  "interrupted": {
+    "status": "ok",
+    "candidateId": "interrupted-browser-candidate",
+    "blob": {
+      "bytes": 2026,
+      "type": "audio/webm;codecs=opus"
+    },
+    "startedAt": 1792719198944,
+    "finishedAt": 1792719199546,
+    "interrupted": true,
+    "audioTrackPresent": true,
+    "hasRecordedBytes": true,
+    "audioFrames": "present",
+    "decodedDurationMs": 600,
+    "durationMs": 602
+  },
+  "progressSamples": 30,
+  "progressLast": 1500
+}
