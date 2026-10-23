@@ -1,0 +1,42 @@
+UTC start: 2026-10-23T21:43:53.8201249Z
+UTC end: 2026-10-23T21:44:05.7302310Z
+Working directory: C:\Users\roman\AppData\Local\Temp\dubbed-runtime-cleaninstall-2028a7faea094c9ca36a50a838559f93\frontend
+Freeze captured UTC: 10/23/2026 21:42:25
+Freeze source tree SHA-256: 4da1bd26e427d835cb727feba6d11de977a3dd449f96777a0efe3ecbbf1fcf00
+Frozen copy tree SHA-256 before build: 4da1bd26e427d835cb727feba6d11de977a3dd449f96777a0efe3ecbbf1fcf00
+Node: v22.23.1
+npm: 10.9.8
+Command: npm.cmd run build
+VITE_SERVICE_ADAPTER supplied explicitly as: mock
+Inherited VITE_* variables cleared for child: 0
+Backend/database services started by this command: none
+Production credentials supplied by this command: none
+Exit code: 0
+package-lock.json SHA-256 before: a3e01f276aca67381da961c88ab165758faa5c7cb97d8ab6a2e64e48ac00748f
+package-lock.json SHA-256 after: a3e01f276aca67381da961c88ab165758faa5c7cb97d8ab6a2e64e48ac00748f
+Lock unchanged: True
+Built dist/index.html exists: True
+--- build output ---
+
+> frontend@0.0.0 build
+> npm run typecheck && vite build --mode mock
+
+
+> frontend@0.0.0 typecheck
+> tsc -b --pretty false
+
+vite v8.3.5 building client environment for mock...
+transforming...
+✓ 2064 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.29 kB
+dist/assets/index-CIKSzZI_.css   54.07 kB │ gzip:   9.61 kB
+dist/assets/index-CXG_uSvo.js   886.64 kB │ gzip: 241.62 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 890ms

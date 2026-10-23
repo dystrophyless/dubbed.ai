@@ -1,0 +1,61 @@
+Temporary Playwright config files created only in the isolated temp frontend copy; the workspace source was not edited.
+mock config: runtime-mock.verify.config.mjs sha256=01abd77899dbc40c76228b248c4565d25d803440efc3a544b4eb6d0d4c140d22
+real config: runtime-real.verify.config.mjs sha256=044afaceef9be32a8df40e1ec3285edfb4ca5a646f549733b64f0d3102c7988e
+Both configs use Chromium with --mute-audio, --use-fake-device-for-media-stream, and --use-fake-ui-for-media-stream.
+Mock webServer uses explicit VITE_SERVICE_ADAPTER=mock and port 4287.
+Real-unavailable webServer uses Vite mock mode plus explicit VITE_SERVICE_ADAPTER=real and port 4288.
+Both webServer configs use reuseExistingServer=false; no unrelated port process is reused or terminated.
+Mock config selects only existing e2e/runtime-smoke.spec.ts.
+Real config selects only existing e2e-real/adapter-unavailable.spec.ts.
+
+--- runtime-mock.verify.config.mjs ---
+export default {
+  testDir: './e2e',
+  testMatch: 'runtime-smoke.spec.ts',
+  use: {
+    baseURL: 'http://127.0.0.1:4287',
+    browserName: 'chromium',
+    launchOptions: {
+      args: [
+        '--mute-audio',
+        '--use-fake-device-for-media-stream',
+        '--use-fake-ui-for-media-stream',
+      ],
+    },
+  },
+  reporter: [['line']],
+  workers: 1,
+  webServer: {
+    command: 'npm.cmd run dev -- --host 127.0.0.1 --port 4287 --strictPort',
+    url: 'http://127.0.0.1:4287',
+    reuseExistingServer: false,
+    env: { VITE_SERVICE_ADAPTER: 'mock' },
+    timeout: 120000,
+  },
+}
+
+--- runtime-real.verify.config.mjs ---
+export default {
+  testDir: './e2e-real',
+  testMatch: 'adapter-unavailable.spec.ts',
+  use: {
+    baseURL: 'http://127.0.0.1:4288',
+    browserName: 'chromium',
+    launchOptions: {
+      args: [
+        '--mute-audio',
+        '--use-fake-device-for-media-stream',
+        '--use-fake-ui-for-media-stream',
+      ],
+    },
+  },
+  reporter: [['line']],
+  workers: 1,
+  webServer: {
+    command: 'npm.cmd run dev -- --mode mock --host 127.0.0.1 --port 4288 --strictPort',
+    url: 'http://127.0.0.1:4288',
+    reuseExistingServer: false,
+    env: { VITE_SERVICE_ADAPTER: 'real' },
+    timeout: 120000,
+  },
+}

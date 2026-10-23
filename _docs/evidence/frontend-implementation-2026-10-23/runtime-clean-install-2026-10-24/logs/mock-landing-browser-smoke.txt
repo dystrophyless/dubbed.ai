@@ -1,0 +1,33 @@
+UTC start: 2026-10-23T21:45:26.2333972Z
+UTC end: 2026-10-23T21:45:34.7145390Z
+Working directory: C:\Users\roman\AppData\Local\Temp\dubbed-runtime-cleaninstall-2028a7faea094c9ca36a50a838559f93\frontend
+Source freeze captured UTC: 10/23/2026 21:42:25
+Source freeze tree SHA-256: 4da1bd26e427d835cb727feba6d11de977a3dd449f96777a0efe3ecbbf1fcf00
+Command: npm.cmd run test:e2e -- --config=runtime-mock.verify.config.mjs
+Selected existing test: e2e/runtime-smoke.spec.ts
+Scenario: landing heading visible, support mailto href correct, start CTA reaches registration heading and /register, no page/console errors, no off-origin requests.
+Playwright browser: Chromium
+Launch flags: --mute-audio --use-fake-device-for-media-stream --use-fake-ui-for-media-stream
+Inherited VITE_* variables cleared from test runner: 0
+Web server: Vite mock adapter on 127.0.0.1:4287, reuseExistingServer=false.
+No physical microphone is available to this test; Chromium is restricted to its fake-media flags.
+Backend/database services started by this command: none
+Production credentials supplied by this command: none
+Exit code: 0
+--- Playwright output ---
+
+> frontend@0.0.0 test:e2e
+> playwright test --config=runtime-mock.verify.config.mjs
+
+
+[WebServer] (node:18260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+
+(node:13232) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/1] e2e\runtime-smoke.spec.ts:3:1 › mock frontend renders the landing, follows start, and makes no external requests
+  1 passed (6.3s)

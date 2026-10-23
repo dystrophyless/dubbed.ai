@@ -1,0 +1,20 @@
+[
+  {
+    "path": "e2e/record-leave-dialog.spec.ts",
+    "change": "added",
+    "priorSha256": null,
+    "currentSha256": "2dc198dfd5c7ea71d04a71e9cbfe2f14e74e7ddfcf60c56fb5333429da4a2d52"
+  },
+  {
+    "path": "src/features/recording/RecordingScreen.css",
+    "change": "modified",
+    "priorSha256": "ec2454759bdc07d6157410bf70e7a80ca04ff2cdc63c435496c0a10dce281d0f",
+    "currentSha256": "5cfa95cfce00133ad3b76ddf88e2fdc4b67f4c3f1d2997be4a2a9dc31085d676"
+  },
+  {
+    "path": "tests/recording/RecordingScreen.test.tsx",
+    "change": "modified",
+    "priorSha256": "651c038427714033408d31a50e3fa8f512b5e9fa7074e43694fbf91504b98a16",
+    "currentSha256": "abf9ce1c301e3dcc3b45c96bbcccd21962cc4543259567ebdc6222bb2fde04fd"
+  }
+]

@@ -1,0 +1,15 @@
+Captured UTC: 2026-10-23T21:42:25.3720590Z
+Captured local: 2026-10-24T02:42:25.3789834+05:00
+Branch: main
+HEAD: 35d122949ad0e07a7e365bcbd4c1ec69202796c3
+Node: v22.23.1
+npm: 10.9.8
+Prior freeze hash: 19211e1908a31c38c4d72d058de7ab508d85248c1fc7f237c4a8ef160fb1f9cf
+Current source tree hash: 4da1bd26e427d835cb727feba6d11de977a3dd449f96777a0efe3ecbbf1fcf00
+Prior stale temp copy retained without checks: C:\Users\roman\AppData\Local\Temp\dubbed-runtime-cleaninstall-c3cf4fe18297440eb1e31005b98411d2\frontend
+New temp copy root: C:\Users\roman\AppData\Local\Temp\dubbed-runtime-cleaninstall-2028a7faea094c9ca36a50a838559f93\frontend
+Snapshot attempt: 1
+File count: 180
+Copy hash equals source hash: True
+Files changed since prior freeze: 3
+New Robocopy exit: 1

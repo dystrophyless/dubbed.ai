@@ -1,0 +1,6 @@
+2026-10-23T21:42Z: before npm ci, first temp freeze was rejected because live source had changed.
+The detected first-freeze hash change was 19211e1908a31c38c4d72d058de7ab508d85248c1fc7f237c4a8ef160fb1f9cf -> c01acbef05c14b1a13093b1360f177e4a4e223ff5b26fcabf7a556be304cbddc.
+No package installation or check was run on that first freeze; its temp copy is preserved unused.
+The second freeze/copy is internally hash matched: 4da1bd26e427d835cb727feba6d11de977a3dd449f96777a0efe3ecbbf1fcf00.
+Command not run on first freeze: npm.cmd ci --no-audit --no-fund
+

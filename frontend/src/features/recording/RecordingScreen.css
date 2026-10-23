@@ -1,0 +1,700 @@
+.recording-screen {
+  display: grid;
+  width: min(100%, 960px);
+  min-width: 0;
+  gap: 12px;
+  margin: 0 auto;
+  color: var(--text-primary);
+}
+
+.recording-screen__header,
+.recording-screen__line-header,
+.recording-screen__take-heading,
+.recording-screen__capture-status,
+.recording-screen__navigation,
+.recording-screen__controls,
+.recording-screen__completion,
+.recording-screen__leave-actions {
+  /* This derived dialog has three BTN actions and no direct Affect UI layout reference. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.recording-screen__header {
+  align-items: flex-start;
+  width: min(100%, 640px);
+  margin-inline: auto;
+}
+
+.recording-screen__heading {
+  display: grid;
+  gap: 6px;
+}
+
+.recording-screen__heading h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+}
+
+.recording-screen__project-context {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 2px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.recording-screen__project-context > span:not(:first-child)::before {
+  margin-right: 8px;
+  color: var(--text-muted);
+  content: '·';
+}
+
+.recording-screen__project-context > span[role='status'] {
+  color: var(--text-readable);
+}
+
+.recording-screen__heading p,
+.recording-screen__permission-note,
+.recording-screen__timing,
+.recording-screen__prototype-note,
+.recording-screen__take p,
+.recording-screen__completion p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.recording-screen__stage {
+  overflow: hidden;
+  width: min(100%, 640px, 71.1111vh, max(355.56px, calc(177.7778vh - 826.6667px)));
+  width: min(100%, 640px, 71.1111dvh, max(355.56px, calc(177.7778dvh - 826.6667px)));
+  margin-inline: auto;
+  background: #111;
+  aspect-ratio: 16 / 9;
+}
+
+.recording-screen__stage video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.recording-screen__video-placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.recording-screen__line-header {
+  align-items: flex-start;
+  width: min(100%, 640px);
+  margin-inline: auto;
+}
+
+.recording-screen__eyebrow,
+.recording-screen__count {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.recording-screen__dialogue {
+  max-width: 840px;
+  margin: 6px 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.recording-screen__timing {
+  color: var(--text-readable);
+}
+
+.recording-screen__volume {
+  display: flex;
+  width: min(100%, 640px);
+  align-items: center;
+  gap: 16px;
+  margin-inline: auto;
+  color: var(--text-readable);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.recording-screen__volume input {
+  width: min(100%, 240px);
+  accent-color: var(--primary);
+}
+
+.recording-screen__capture-status {
+  width: min(100%, 640px);
+  justify-content: flex-start;
+  min-height: 20px;
+  margin-inline: auto;
+  color: var(--text-readable);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.recording-screen__capture-status progress {
+  width: min(100%, 300px);
+  accent-color: var(--primary);
+}
+
+.recording-screen__meter {
+  width: min(100%, 640px);
+  height: 4px;
+  overflow: hidden;
+  margin-inline: auto;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.recording-screen__meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #0060e2;
+  transition: width 100ms linear;
+}
+
+.recording-screen__controls {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.recording-screen__take {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.recording-screen__take-heading {
+  align-items: baseline;
+}
+
+.recording-screen__take h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.recording-screen__take-heading span {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.recording-screen__take audio {
+  display: block;
+  width: min(100%, 620px);
+}
+
+.recording-screen__take p[role="alert"] {
+  color: var(--danger);
+}
+
+.recording-screen__navigation {
+  padding-top: 4px;
+}
+
+.recording-screen__completion {
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.recording-screen__completion p {
+  color: var(--text-readable);
+}
+
+.recording-screen__assembly-error {
+  display: grid;
+  gap: 12px;
+}
+
+.recording-screen__prototype-note {
+  padding-top: 12px;
+}
+
+.recording-screen__dialog-overlay {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.recording-screen__leave-dialog {
+  position: fixed;
+  z-index: 51;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: min(calc(100% - 64px), 400px);
+  max-height: calc(100dvh - 64px);
+  overflow-y: auto;
+  gap: 16px;
+  padding: 24px;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--essential-boundary);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 0.5px rgba(0, 0, 0, 0.08),
+    0 12px 28px -10px rgba(0, 0, 0, 0.16),
+    0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.recording-screen__leave-dialog h2,
+.recording-screen__leave-dialog p {
+  margin: 0;
+}
+
+.recording-screen__leave-dialog h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.recording-screen__leave-dialog p {
+  color: var(--text-readable);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.recording-screen__leave-actions {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recording-screen__leave-actions > .ui-button {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .recording-screen .ui-button {
+    min-height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .recording-screen {
+    gap: 12px;
+  }
+
+  .recording-screen__header,
+  .recording-screen__line-header,
+  .recording-screen__completion {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .recording-screen__heading h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .recording-screen__dialogue {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .recording-screen__stage {
+    width: 100%;
+  }
+
+  .recording-screen__volume {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .recording-screen__volume input {
+    width: 100%;
+    min-height: 48px;
+    margin-inline: 0;
+  }
+
+  .recording-screen__controls,
+  .recording-screen__navigation {
+    flex-wrap: wrap;
+  }
+
+  .recording-screen__navigation > .ui-button,
+  .recording-screen__completion > .ui-button,
+  .recording-screen__leave-actions > .ui-button {
+    flex: 1 1 100%;
+    min-height: 48px;
+  }
+
+  .recording-screen__leave-dialog {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: min(85dvh, calc(100dvh - env(safe-area-inset-top)));
+    padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+    transform: none;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .recording-screen__leave-actions > .ui-button {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.recording-transport__timeline {
+  display: grid;
+  width: min(100%, 640px);
+  margin-inline: auto;
+  min-width: 0;
+  gap: 4px;
+}
+
+.recording-transport__waveform-shell {
+  position: relative;
+  min-width: 0;
+  height: 48px;
+}
+
+.recording-transport__waveform {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(1px, 1fr);
+  align-items: center;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.recording-transport__bar {
+  display: block;
+  min-width: 1px;
+  border-radius: 2px;
+  background: var(--essential-boundary);
+}
+
+.recording-transport__bar[data-played] {
+  background: var(--focus);
+}
+
+.recording-transport__playhead {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--focus);
+  pointer-events: none;
+}
+
+.recording-transport__seek {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.recording-transport__seek::-webkit-slider-runnable-track {
+  height: 48px;
+  border: 0;
+  background: transparent;
+}
+
+.recording-transport__seek::-webkit-slider-thumb {
+  width: 1px;
+  height: 1px;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.recording-transport__seek::-moz-range-track {
+  height: 48px;
+  border: 0;
+  background: transparent;
+}
+
+.recording-transport__seek::-moz-range-thumb {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.recording-transport__seek:focus-visible {
+  opacity: 1;
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.recording-transport__seek:disabled {
+  cursor: not-allowed;
+}
+
+.recording-transport__waveform-note,
+.recording-transport__recording-note {
+  margin: 0;
+  color: var(--text-readable);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.recording-transport__controls {
+  display: grid;
+  width: min(100%, 640px);
+  margin-inline: auto;
+  min-width: 0;
+  gap: 8px;
+}
+
+.recording-transport__main-controls {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.recording-transport__mode {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  width: max-content;
+  max-width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 2px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.recording-transport__mode::before {
+  position: absolute;
+  z-index: 0;
+  inset: 2px auto 2px 2px;
+  width: calc(50% - 2px);
+  border-radius: 6px;
+  background: var(--surface);
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.06), 0 1px 1px -1px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  content: '';
+  pointer-events: none;
+  transform: translateX(0);
+  transition: transform 200ms cubic-bezier(0.25, 0.9, 0.3, 1), scale 120ms cubic-bezier(0.25, 0.9, 0.3, 1);
+}
+
+.recording-transport__mode[data-mode='recording']::before {
+  transform: translateX(100%);
+}
+
+.recording-transport__mode:active::before {
+  scale: 0.97;
+}
+
+.recording-transport__mode-option {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  min-width: 0;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-readable);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.recording-transport__mode-option[aria-pressed='true'] {
+  color: var(--text-primary);
+}
+
+.recording-transport__mode-option:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.recording-transport__mode-option:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .recording-transport__mode-option:not([aria-pressed='true']):not(:disabled):hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
+
+.recording-transport__play {
+  gap: 6px;
+}
+
+.recording-transport__play svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.recording-transport__position {
+  color: var(--text-readable);
+  font-size: 14px;
+  line-height: 20px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.recording-transport__actions {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.recording-transport__recording-note {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  html:has(.recording-screen) {
+    --recording-phone-panel-height: 240px;
+    scroll-padding-block-end: calc(var(--recording-phone-panel-height) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .recording-screen {
+    padding-bottom: calc(var(--recording-phone-panel-height) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .recording-transport__controls {
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    width: 100%;
+    max-height: min(var(--recording-phone-panel-height), calc(100dvh - 16px));
+    overflow-y: auto;
+    gap: 8px;
+    margin: 0;
+    padding: 8px 16px calc(8px + env(safe-area-inset-bottom, 0px));
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--surface);
+    overscroll-behavior: contain;
+  }
+
+  .recording-transport__main-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px auto;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .recording-transport__mode {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .recording-transport__mode-option {
+    padding-inline: 6px;
+    min-height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .recording-transport__play {
+    width: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .recording-transport__play-label {
+    display: none;
+  }
+
+  .recording-transport__position {
+    align-self: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .recording-transport__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .recording-transport__actions > .ui-button {
+    min-width: 0;
+    min-height: 48px;
+    padding-inline: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: normal;
+  }
+
+  .recording-transport__actions > .ui-button svg {
+    width: 16px;
+    height: 16px;
+    flex: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recording-transport__mode::before {
+    transition: none;
+  }
+}

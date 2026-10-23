@@ -1,0 +1,918 @@
+
+> frontend@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.5 D:/Program/python/Dubbed/frontend
+
+Not implemented: HTMLMediaElement's pause() method
+Not implemented: HTMLMediaElement's pause() method
+ ❯ tests/account-linking/AccountLinkingScreen.test.tsx (6 tests | 2 failed) 4420ms
+   ❯ AccountLinkingScreen (6)
+     × keeps the session-ended notice for a signed out current identity 1176ms
+     × keeps the session-ended notice for a expired session current identity 1147ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/account-linking/AccountLinkingScreen.test.tsx > AccountLinkingScreen > keeps the session-ended notice for a signed out current identity
+TestingLibraryElementError: Unable to find an element with the text: Your session ended. Sign in to continue.. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <main
+      class="account-linking-screen"
+    >
+      <button
+        class="account-linking-screen__back"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-arrow-left"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m12 19-7-7 7-7"
+          />
+          <path
+            d="M19 12H5"
+          />
+        </svg>
+        Account
+      </button>
+      <header
+        class="account-linking-screen__heading"
+      >
+        <p
+          class="account-linking-screen__eyebrow"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-link-2"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 17H7A5 5 0 0 1 7 7h2"
+            />
+            <path
+              d="M15 7h2a5 5 0 1 1 0 10h-2"
+            />
+            <line
+              x1="8"
+              x2="16"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+          Account and security
+        </p>
+        <h1>
+          Link a sign-in method
+        </h1>
+        <p>
+          Confirm both the current method and the method you want to add. The link is created only after both proofs are accepted.
+        </p>
+      </header>
+      <div
+        class="ui-notice ui-notice--neutral account-linking-screen__preview"
+        role="status"
+      >
+        This preview uses simulated account data. No real email or Google account is contacted.
+      </div>
+      <div
+        class="ui-notice ui-notice--warning"
+        role="alert"
+      >
+        <span>
+          The action result is not confirmed. Check status before retrying.
+        </span>
+        <button
+          class="ui-button ui-button--secondary ui-button--small"
+          data-size="small"
+          data-slot="button"
+          data-variant="secondary"
+          type="button"
+        >
+          Check status
+        </button>
+      </div>
+      <div
+        class="account-linking-screen__steps"
+      >
+        <section
+          aria-labelledby="account-link-current-title"
+          class="account-linking-screen__card"
+        >
+          <div
+            class="account-linking-screen__step-heading"
+          >
+            <span
+              class="account-linking-screen__step-number"
+            >
+              1
+            </span>
+            <div>
+              <h2
+                id="account-link-current-title"
+              >
+                Confirm your current method
+              </h2>
+              <p>
+                Email and password
+              </p>
+            </div>
+          </div>
+          <form
+            class="account-linking-screen__form"
+          >
+            <div
+              class="field"
+            >
+              <label
+                class="field__label"
+                for="_r_7_"
+              >
+                Current account password
+              </label>
+              <input
+                autocomplete="current-password"
+                class="ui-input"
+                disabled=""
+                id="_r_7_"
+                required=""
+                type="password"
+                value="wrong-password"
+              />
+            </div>
+            <button
+              class="ui-button ui-button--primary ui-button--medium"
+              data-size="medium"
+              data-slot="button"
+              data-variant="primary"
+              disabled=""
+              type="submit"
+            >
+              Confirm current method
+            </button>
+          </form>
+        </section>
+        <section
+          aria-labelledby="account-link-candidate-title"
+          class="account-linking-screen__card"
+        >
+          <div
+            class="account-linking-screen__step-heading"
+          >
+            <span
+              class="account-linking-screen__step-number"
+            >
+              2
+            </span>
+            <div>
+              <h2
+                id="account-link-candidate-title"
+              >
+                Confirm the method to add
+              </h2>
+              <p>
+                Google
+              </p>
+            </div>
+          </div>
+          <div
+            class="account-linking-screen__form"
+          >
+            <p>
+              Continue with Google to add this method
+            </p>
+            <button
+              class="ui-button ui-button--primary ui-button--medium"
+              data-size="medium"
+              data-slot="button"
+              data-variant="primary"
+              disabled=""
+              type="button"
+            >
+              Add Google
+            </button>
+          </div>
+        </section>
+        <div
+          class="account-linking-screen__footer-actions"
+        >
+          <button
+            class="ui-button ui-button--ghost ui-button--medium"
+            data-size="medium"
+            data-slot="button"
+            data-variant="ghost"
+            disabled=""
+            type="button"
+          >
+            Cancel request
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <main
+      class="account-linking-screen"
+    >
+      <button
+        class="account-linking-screen__back"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-arrow-left"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m12 19-7-7 7-7"
+          />
+          <path
+            d="M19 12H5"
+          />
+        </svg>
+        Account
+      </button>
+      <header
+        class="account-linking-screen__heading"
+      >
+        <p
+          class="account-linking-screen__eyebrow"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-link-2"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 17H7A5 5 0 0 1 7 7h2"
+            />
+            <path
+              d="M15 7h2a5 5 0 1 1 0 10h-2"
+            />
+            <line
+              x1="8"
+              x2="16"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+          Account and security
+        </p>
+        <h1>
+          Link a sign-in method
+        </h1>
+        <p>
+          Confirm both the current method and the method you want to add. The link is created only after both proofs are accepted.
+        </p>
+      </header>
+      <div
+        class="ui-notice ui-notice--neutral account-linking-screen__preview"
+        role="status"
+      >
+        This preview uses simulated account data. No real email or Google account is contacted.
+      </div>
+      <div
+        class="ui-notice ui-notice--warning"
+        role="alert"
+      >
+        <span>
+          The action result is not confirmed. Check status before retrying.
+        </span>
+        <button
+          class="ui-button ui-button--secondary ui-button--small"
+          data-size="small"
+          data-slot="button"
+          data-variant="secondary"
+          type="button"
+        >
+          Check status
+        </button>
+      </div>
+      <div
+        class="account-linking-screen__steps"
+      >
+        <section
+          aria-labelledby="account-link-current-title"
+          class="account-linking-screen__card"
+        >
+          <div
+            class="account-linking-screen__step-heading"
+          >
+            <span
+              class="account-linking-screen__step-number"
+            >
+              1
+            </span>
+            <div>
+              <h2
+                id="account-link-current-title"
+              >
+                Confirm your current method
+              </h2>
+              <p>
+                Email and password
+              </p>
+            </div>
+          </div>
+          <form
+            class="account-linking-screen__form"
+          >
+            <div
+              class="field"
+            >
+              <label
+                class="field__label"
+                for="_r_7_"
+              >
+                Current account password
+              </label>
+              <input
+                autocomplete="current-password"
+                class="ui-input"
+                disabled=""
+                id="_r_7_"
+                required=""
+                type="password"
+                value="wrong-password"
+              />
+            </div>
+            <button
+              class="ui-button ui-button--primary ui-button--medium"
+              data-size="medium"
+              data-slot="button"
+              data-variant="primary"
+              disabled=""
+              type="submit"
+            >
+              Confirm current method
+            </button>
+          </form>
+        </section>
+        <section
+          aria-labelledby="account-link-candidate-title"
+          class="account-linking-screen__card"
+        >
+          <div
+            class="account-linking-screen__step-heading"
+          >
+            <span
+              class="account-linking-screen__step-number"
+            >
+              2
+            </span>
+            <div>
+              <h2
+                id="account-link-candidate-title"
+              >
+                Confirm the method to add
+              </h2>
+              <p>
+                Google
+              </p>
+            </div>
+          </div>
+          <div
+            class="account-linking-screen__form"
+          >
+            <p>
+              Continue with Google to add this method
+            </p>
+            <button
+              class="ui-button ui-button--primary ui-button--medium"
+              data-size="medium"
+              data-slot="button"
+              data-variant="primary"
+              disabled=""
+              type="button"
+            >
+              Add Google
+            </button>
+          </div>
+        </section>
+        <div
+          class="account-linking-screen__footer-actions"
+        >
+          <button
+            class="ui-button ui-button--ghost ui-button--medium"
+            data-size="medium"
+            data-slot="button"
+            data-variant="ghost"
+            disabled=""
+            type="button"
+          >
+            Cancel request
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ tests/account-linking/AccountLinkingScreen.test.tsx:182:25
+    180|     fireEvent.click(screen.getByRole('button', { name: 'Confirm curren…
+    181|
+    182|     expect(await screen.findByText('Your session ended. Sign in to con…
+       |                         ^
+    183|     expect(password).toHaveValue('wrong-password')
+    184|     expect(password).not.toHaveAttribute('aria-invalid', 'true')
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/account-linking/AccountLinkingScreen.test.tsx > AccountLinkingScreen > keeps the session-ended notice for a expired session current identity
+TestingLibraryElementError: Unable to find an element with the text: Your session ended. Sign in to continue.. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <main
+      class="account-linking-screen"
+    >
+      <button
+        class="account-linking-screen__back"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-arrow-left"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m12 19-7-7 7-7"
+          />
+          <path
+            d="M19 12H5"
+          />
+        </svg>
+        Account
+      </button>
+      <header
+        class="account-linking-screen__heading"
+      >
+        <p
+          class="account-linking-screen__eyebrow"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-link-2"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 17H7A5 5 0 0 1 7 7h2"
+            />
+            <path
+              d="M15 7h2a5 5 0 1 1 0 10h-2"
+            />
+            <line
+              x1="8"
+              x2="16"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+          Account and security
+        </p>
+        <h1>
+          Link a sign-in method
+        </h1>
+        <p>
+          Confirm both the current method and the method you want to add. The link is created only after both proofs are accepted.
+        </p>
+      </header>
+      <div
+        class="ui-notice ui-notice--neutral account-linking-screen__preview"
+        role="status"
+      >
+        This preview uses simulated account data. No real email or Google account is contacted.
+      </div>
+      <div
+        class="ui-notice ui-notice--warning"
+        role="alert"
+      >
+        <span>
+          The action result is not confirmed. Check status before retrying.
+        </span>
+        <button
+          class="ui-button ui-button--secondary ui-button--small"
+          data-size="small"
+          data-slot="button"
+          data-variant="secondary"
+          type="button"
+        >
+          Check status
+        </button>
+      </div>
+      <div
+        class="account-linking-screen__steps"
+      >
+        <section
+          aria-labelledby="account-link-current-title"
+          class="account-linking-screen__card"
+        >
+          <div
+            class="account-linking-screen__step-heading"
+          >
+            <span
+              class="account-linking-screen__step-number"
+            >
+              1
+            </span>
+            <div>
+              <h2
+                id="account-link-current-title"
+              >
+                Confirm your current method
+              </h2>
+              <p>
+                Email and password
+              </p>
+            </div>
+          </div>
+          <form
+            class="account-linking-screen__form"
+          >
+            <div
+              class="field"
+            >
+              <label
+                class="field__label"
+                for="_r_8_"
+              >
+                Current account password
+              </label>
+              <input
+                autocomplete="current-password"
+                class="ui-input"
+                disabled=""
+                id="_r_8_"
+                required=""
+                type="password"
+                value="wrong-password"
+              />
+            </div>
+            <button
+              class="ui-button ui-button--primary ui-button--medium"
+              data-size="medium"
+              data-slot="button"
+              data-variant="primary"
+              disabled=""
+              type="submit"
+            >
+              Confirm current method
+            </button>
+          </form>
+        </section>
+        <section
+          aria-labelledby="account-link-candidate-title"
+          class="account-linking-screen__card"
+        >
+          <div
+            class="account-linking-screen__step-heading"
+          >
+            <span
+              class="account-linking-screen__step-number"
+            >
+              2
+            </span>
+            <div>
+              <h2
+                id="account-link-candidate-title"
+              >
+                Confirm the method to add
+              </h2>
+              <p>
+                Google
+              </p>
+            </div>
+          </div>
+          <div
+            class="account-linking-screen__form"
+          >
+            <p>
+              Continue with Google to add this method
+            </p>
+            <button
+              class="ui-button ui-button--primary ui-button--medium"
+              data-size="medium"
+              data-slot="button"
+              data-variant="primary"
+              disabled=""
+              type="button"
+            >
+              Add Google
+            </button>
+          </div>
+        </section>
+        <div
+          class="account-linking-screen__footer-actions"
+        >
+          <button
+            class="ui-button ui-button--ghost ui-button--medium"
+            data-size="medium"
+            data-slot="button"
+            data-variant="ghost"
+            disabled=""
+            type="button"
+          >
+            Cancel request
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <main
+      class="account-linking-screen"
+    >
+      <button
+        class="account-linking-screen__back"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-arrow-left"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m12 19-7-7 7-7"
+          />
+          <path
+            d="M19 12H5"
+          />
+        </svg>
+        Account
+      </button>
+      <header
+        class="account-linking-screen__heading"
+      >
+        <p
+          class="account-linking-screen__eyebrow"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-link-2"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 17H7A5 5 0 0 1 7 7h2"
+            />
+            <path
+              d="M15 7h2a5 5 0 1 1 0 10h-2"
+            />
+            <line
+              x1="8"
+              x2="16"
+              y1="12"
+              y2="12"
+            />
+          </svg>
+          Account and security
+        </p>
+        <h1>
+          Link a sign-in method
+        </h1>
+        <p>
+          Confirm both the current method and the method you want to add. The link is created only after both proofs are accepted.
+        </p>
+      </header>
+      <div
+        class="ui-notice ui-notice--neutral account-linking-screen__preview"
+        role="status"
+      >
+        This preview uses simulated account data. No real email or Google account is contacted.
+      </div>
+      <div
+        class="ui-notice ui-notice--warning"
+        role="alert"
+      >
+        <span>
+          The action result is not confirmed. Check status before retrying.
+        </span>
+        <button
+          class="ui-button ui-button--secondary ui-button--small"
+          data-size="small"
+          data-slot="button"
+          data-variant="secondary"
+          type="button"
+        >
+          Check status
+        </button>
+      </div>
+      <div
+        class="account-linking-screen__steps"
+      >
+        <section
+          aria-labelledby="account-link-current-title"
+          class="account-linking-screen__card"
+        >
+          <div
+            class="account-linking-screen__step-heading"
+          >
+            <span
+              class="account-linking-screen__step-number"
+            >
+              1
+            </span>
+            <div>
+              <h2
+                id="account-link-current-title"
+              >
+                Confirm your current method
+              </h2>
+              <p>
+                Email and password
+              </p>
+            </div>
+          </div>
+          <form
+            class="account-linking-screen__form"
+          >
+            <div
+              class="field"
+            >
+              <label
+                class="field__label"
+                for="_r_8_"
+              >
+                Current account password
+              </label>
+              <input
+                autocomplete="current-password"
+                class="ui-input"
+                disabled=""
+                id="_r_8_"
+                required=""
+                type="password"
+                value="wrong-password"
+              />
+            </div>
+            <button
+              class="ui-button ui-button--primary ui-button--medium"
+              data-size="medium"
+              data-slot="button"
+              data-variant="primary"
+              disabled=""
+              type="submit"
+            >
+              Confirm current method
+            </button>
+          </form>
+        </section>
+        <section
+          aria-labelledby="account-link-candidate-title"
+          class="account-linking-screen__card"
+        >
+          <div
+            class="account-linking-screen__step-heading"
+          >
+            <span
+              class="account-linking-screen__step-number"
+            >
+              2
+            </span>
+            <div>
+              <h2
+                id="account-link-candidate-title"
+              >
+                Confirm the method to add
+              </h2>
+              <p>
+                Google
+              </p>
+            </div>
+          </div>
+          <div
+            class="account-linking-screen__form"
+          >
+            <p>
+              Continue with Google to add this method
+            </p>
+            <button
+              class="ui-button ui-button--primary ui-button--medium"
+              data-size="medium"
+              data-slot="button"
+              data-variant="primary"
+              disabled=""
+              type="button"
+            >
+              Add Google
+            </button>
+          </div>
+        </section>
+        <div
+          class="account-linking-screen__footer-actions"
+        >
+          <button
+            class="ui-button ui-button--ghost ui-button--medium"
+            data-size="medium"
+            data-slot="button"
+            data-variant="ghost"
+            disabled=""
+            type="button"
+          >
+            Cancel request
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ tests/account-linking/AccountLinkingScreen.test.tsx:182:25
+    180|     fireEvent.click(screen.getByRole('button', { name: 'Confirm curren…
+    181|
+    182|     expect(await screen.findByText('Your session ended. Sign in to con…
+       |                         ^
+    183|     expect(password).toHaveValue('wrong-password')
+    184|     expect(password).not.toHaveAttribute('aria-invalid', 'true')
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 43 passed (44)
+      Tests  2 failed | 208 passed (210)
+   Start at  03:42:29
+   Duration  48.89s (environment 56%, tests 25%, setup 13%, import 5%, transform 1%)
+
+Environment  jsdom was created 44 times · 159.15s total, 56% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

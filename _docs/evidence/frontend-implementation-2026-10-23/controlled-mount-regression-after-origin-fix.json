@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-23T16:52:02.060Z",
+  "boundary": "Isolated temp main only, workspace unchanged; updated baseURL-aware smoke copied exactly from source. Three separate muted Chromium/Vite4282 lifecycle runs.",
+  "beforeSha256": "7b6bb2abf9d514141651085bbc99c80fa1b7dfbffb89d672156bdcc0ec328330",
+  "baseline": {
+    "exit": 0,
+    "output": "\nRunning 1 test using 1 worker\n\n  ok 1 e2e\\runtime-smoke.spec.ts:3:1 › mock frontend renders the landing, follows start, and makes no external requests (1.7s)\n\n  1 passed (9.2s)\n[WebServer] (node:28596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)\n(node:16236) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+  },
+  "mutatedSha256": "176bf967f3a3e755d7377e4f46d10510623922e2cc843e89c86ac6b0a9376bc2",
+  "regression": {
+    "exit": 1,
+    "output": "\nRunning 1 test using 1 worker\n\n  x  1 e2e\\runtime-smoke.spec.ts:3:1 › mock frontend renders the landing, follows start, and makes no external requests (5.4s)\n\n\n  1) e2e\\runtime-smoke.spec.ts:3:1 › mock frontend renders the landing, follows start, and makes no external requests \n\n    Error: expect(locator).toBeVisible() failed\n\n    Locator: getByRole('heading', { name: 'Dub your own scene' })\n    Expected: visible\n    Timeout: 5000ms\n    Error: element(s) not found\n\n    Call log:\n      - Expect \"toBeVisible\" getByRole('heading', { name: 'Dub your own scene' }) with timeout 5000ms\n      - waiting for getByRole('heading', { name: 'Dub your own scene' })\n\n\n      20 |   await page.goto('/')\n      21 |\n    > 22 |   await expect(page.getByRole('heading', { name: 'Dub your own scene' })).toBeVisible()\n         |                                                                           ^\n      23 |   await expect(page.getByRole('link', { name: /Contact support/ })).toHaveAttribute(\n      24 |     'href',\n      25 |     'mailto:dystrophyless@gmail.com',\n        at C:\\Users\\roman\\AppData\\Local\\Temp\\dubbed-frontend-verify-7f3a51c232dd4446aee91955e1fb6f5b\\e2e\\runtime-smoke.spec.ts:22:75\n\n    Error Context: test-results\\runtime-smoke-mock-fronten-47502--makes-no-external-requests\\error-context.md\n\n  1 failed\n    e2e\\runtime-smoke.spec.ts:3:1 › mock frontend renders the landing, follows start, and makes no external requests \n[WebServer] (node:18728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)\n(node:15312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n[WebServer] 21:52:18 [vite] (client) [Unhandled error] Error: CONTROLLED_MOUNT_REGRESSION\n[WebServer]  > src/main.tsx:1:7\n[WebServer]     1  |  throw new Error(\"CONTROLLED_MOUNT_REGRESSION\");\n[WebServer]        |         ^\n[WebServer]     2  |  \n[WebServer] \n"
+  },
+  "restoredSha256": "7b6bb2abf9d514141651085bbc99c80fa1b7dfbffb89d672156bdcc0ec328330",
+  "restored": {
+    "exit": 0,
+    "output": "\nRunning 1 test using 1 worker\n\n  ok 1 e2e\\runtime-smoke.spec.ts:3:1 › mock frontend renders the landing, follows start, and makes no external requests (934ms)\n\n  1 passed (5.8s)\n[WebServer] (node:19548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)\n(node:30064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+  },
+  "detected": true
+}

@@ -1,0 +1,104 @@
+.otp-field {
+  display: grid;
+  gap: 8px;
+}
+
+.otp-field__label {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.otp-control {
+  position: relative;
+  display: inline-flex;
+  width: max-content;
+  min-height: 48px;
+  align-items: center;
+  border-radius: 9px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.otp-control:focus-within {
+  outline-color: #0060E2;
+}
+
+.otp-control__cells {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.otp-control__cell {
+  position: relative;
+  display: inline-flex;
+  width: 40px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.447);
+  border-radius: 8px;
+  background: var(--surface);
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.otp-control__separator {
+  position: absolute;
+  right: -15px;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.otp-control__input {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 0.015;
+  caret-color: transparent;
+  cursor: text;
+}
+
+.otp-control__input:disabled {
+  cursor: default;
+}
+
+.otp-control--invalid .otp-control__cell {
+  border-color: #C1262C;
+  background: rgba(229, 72, 77, 0.08);
+  color: #C1262C;
+}
+
+.otp-control--verified .otp-control__cell {
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.otp-control__check {
+  position: absolute;
+  right: -28px;
+  width: 20px;
+  height: 20px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+@media (max-width: 420px) {
+  .otp-control__cells {
+    gap: 6px;
+  }
+
+  .otp-control__cell {
+    width: 36px;
+    height: 44px;
+    font-size: 22px;
+  }
+}

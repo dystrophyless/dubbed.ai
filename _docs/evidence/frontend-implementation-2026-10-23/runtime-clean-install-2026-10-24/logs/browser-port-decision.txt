@@ -1,0 +1,5 @@
+Mock landing test uses runtime-mock.verify.config.mjs on dedicated 4287.
+Real-unavailable test uses the existing npm script and playwright.real.config.ts unchanged on 4174.
+Reason: adapter-unavailable.spec.ts has a same-origin check hard-coded to http://127.0.0.1:4174; changing its port would falsely flag local app assets as external.
+reuseExistingServer=false: Playwright refuses to attach to an existing listener and only manages the server process it starts.
+Prepared but unused 4288 config hash: 044afaceef9be32a8df40e1ec3285edfb4ca5a646f549733b64f0d3102c7988e

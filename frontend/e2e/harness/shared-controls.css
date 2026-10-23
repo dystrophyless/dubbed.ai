@@ -1,0 +1,89 @@
+.shared-controls-page {
+  display: grid;
+  width: min(100% - 32px, 1040px);
+  gap: 16px;
+  margin: 24px auto 48px;
+}
+
+.shared-controls-page h1,
+.shared-controls-page h2,
+.shared-controls-page p {
+  margin: 0;
+}
+
+.shared-controls__header,
+.shared-controls__language,
+.shared-controls__button-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shared-controls__header {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shared-controls__header h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.shared-controls__language select {
+  min-height: 32px;
+  border: 1px solid var(--essential-boundary);
+  border-radius: 6px;
+  background: #fff;
+  padding: 0 10px;
+  color: var(--text-primary);
+}
+
+.shared-controls__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.shared-controls__section {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  gap: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.shared-controls__section h2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.shared-controls__button-row {
+  flex-wrap: wrap;
+}
+
+.shared-controls__spinner {
+  animation: shared-controls-spin 1s linear infinite;
+}
+
+@keyframes shared-controls-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 767px) {
+  .shared-controls__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .shared-controls__language select {
+    min-height: 48px;
+    padding: 0 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shared-controls__spinner {
+    animation: none;
+  }
+}

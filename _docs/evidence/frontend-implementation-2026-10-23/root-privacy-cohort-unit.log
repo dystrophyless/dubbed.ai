@@ -1,0 +1,307 @@
+
+> frontend@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.5 D:/Program/python/Dubbed/frontend
+
+Not implemented: HTMLMediaElement's pause() method
+Not implemented: HTMLMediaElement's pause() method
+Not implemented: HTMLMediaElement's pause() method
+Not implemented: HTMLMediaElement's pause() method
+ ❯ src/features/credits/CreditsScreen.test.tsx (2 tests | 2 failed) 2151ms
+   ❯ CreditsScreen (2)
+     × keeps a pending mock checkout out of the balance until the service verifies it 1124ms
+     × resolves an unknown simulated result before retrying the same operation id 1024ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/credits/CreditsScreen.test.tsx > CreditsScreen > keeps a pending mock checkout out of the balance until the service verifies it
+TestingLibraryElementError: Unable to find an element with the text: 100. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="credits-title"
+      class="credits-page"
+    >
+      <header
+        class="workspace-heading"
+      >
+        <h1
+          id="credits-title"
+        >
+          Credits
+        </h1>
+      </header>
+      <p
+        class="workspace-status"
+        role="status"
+      >
+        Loading credit data…
+      </p>
+      <section
+        aria-labelledby="credits-packs-title"
+        class="credits-section"
+      >
+        <h2
+          id="credits-packs-title"
+        >
+          Credit packs
+        </h2>
+        <ul
+          class="credits-pack-list"
+        />
+      </section>
+      <section
+        aria-labelledby="credits-history-title"
+        class="credits-section"
+      >
+        <h2
+          id="credits-history-title"
+        >
+          Credit history
+        </h2>
+      </section>
+    </section>
+  </div>
+</body>
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="credits-title"
+      class="credits-page"
+    >
+      <header
+        class="workspace-heading"
+      >
+        <h1
+          id="credits-title"
+        >
+          Credits
+        </h1>
+      </header>
+      <p
+        class="workspace-status"
+        role="status"
+      >
+        Loading credit data…
+      </p>
+      <section
+        aria-labelledby="credits-packs-title"
+        class="credits-section"
+      >
+        <h2
+          id="credits-packs-title"
+        >
+          Credit packs
+        </h2>
+        <ul
+          class="credits-pack-list"
+        />
+      </section>
+      <section
+        aria-labelledby="credits-history-title"
+        class="credits-section"
+      >
+        <h2
+          id="credits-history-title"
+        >
+          Credit history
+        </h2>
+      </section>
+    </section>
+  </div>
+</body>
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/features/credits/CreditsScreen.test.tsx:138:25
+    136|
+    137|     renderScreen(makeProps(services))
+    138|     expect(await screen.findByText('100')).toBeInTheDocument()
+       |                         ^
+    139|     expect(screen.getByText(/Configured mock amount: 0 MOCK units/)).t…
+    140|     expect(screen.getByText(/No payment is collected/)).toBeInTheDocum…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/features/credits/CreditsScreen.test.tsx > CreditsScreen > resolves an unknown simulated result before retrying the same operation id
+TestingLibraryElementError: Unable to find role="button" and name "Start mock checkout"
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="credits-title"
+      class="credits-page"
+    >
+      <header
+        class="workspace-heading"
+      >
+        <h1
+          id="credits-title"
+        >
+          Credits
+        </h1>
+      </header>
+      <p
+        class="workspace-status"
+        role="status"
+      >
+        Loading credit data…
+      </p>
+      <section
+        aria-labelledby="credits-packs-title"
+        class="credits-section"
+      >
+        <h2
+          id="credits-packs-title"
+        >
+          Credit packs
+        </h2>
+        <ul
+          class="credits-pack-list"
+        />
+      </section>
+      <section
+        aria-labelledby="credits-history-title"
+        class="credits-section"
+      >
+        <h2
+          id="credits-history-title"
+        >
+          Credit history
+        </h2>
+      </section>
+    </section>
+  </div>
+</body>
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <section
+      aria-labelledby="credits-title"
+      class="credits-page"
+    >
+      <header
+        class="workspace-heading"
+      >
+        <h1
+          id="credits-title"
+        >
+          Credits
+        </h1>
+      </header>
+      <p
+        class="workspace-status"
+        role="status"
+      >
+        Loading credit data…
+      </p>
+      <section
+        aria-labelledby="credits-packs-title"
+        class="credits-section"
+      >
+        <h2
+          id="credits-packs-title"
+        >
+          Credit packs
+        </h2>
+        <ul
+          class="credits-pack-list"
+        />
+      </section>
+      <section
+        aria-labelledby="credits-history-title"
+        class="credits-section"
+      >
+        <h2
+          id="credits-history-title"
+        >
+          Credit history
+        </h2>
+      </section>
+    </section>
+  </div>
+</body>
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/features/credits/CreditsScreen.test.tsx:168:35
+    166|
+    167|     renderScreen(makeProps(services))
+    168|     await user.click(await screen.findByRole('button', { name: 'Start …
+       |                                   ^
+    169|     await screen.findByText('Confirming payment')
+    170|     await user.click(screen.getByRole('button', { name: 'Simulate veri…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 2 unhandled errors during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯ Unhandled Rejection ⎯⎯⎯⎯⎯
+TypeError: services.credits.historyPage is not a function
+ ❯ src/features/credits/CreditsScreen.tsx:249:24
+    247|     const [balanceResult, historyResult, packResult] = await Promise.a…
+    248|       services.credits.snapshot(),
+    249|       services.credits.historyPage({}),
+       |                        ^
+    250|       services.credits.packs(),
+    251|     ])
+
+ Test Files  1 failed | 43 passed (44)
+      Tests  2 failed | 203 passed (205)
+     Errors  2 errors
+   Start at  03:34:35
+   Duration  39.66s (environment 56%, tests 24%, setup 13%, import 5%, transform 2%)
+
+Environment  jsdom was created 44 times · 133.38s total, 56% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+
+ ❯ src/features/credits/CreditsScreen.tsx:671:10
+ ❯ Object.react_stack_bottom_frame node_modules/react-dom/cjs/react-dom-client.development.js:28656:20
+ ❯ runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1048:13
+ ❯ commitHookEffectListMount node_modules/react-dom/cjs/react-dom-client.development.js:13748:29
+ ❯ commitHookPassiveMountEffects node_modules/react-dom/cjs/react-dom-client.development.js:13835:11
+ ❯ commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom-client.development.js:16906:13
+ ❯ recursivelyTraversePassiveMountEffects node_modules/react-dom/cjs/react-dom-client.development.js:16851:13
+ ❯ commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom-client.development.js:17183:11
+ ❯ recursivelyTraversePassiveMountEffects node_modules/react-dom/cjs/react-dom-client.development.js:16851:13
+
+This error originated in "src/features/credits/CreditsScreen.test.tsx" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+The last test to run before this error was "keeps a pending mock checkout out of the balance until the service verifies it". This means either:
+- the error was thrown while Vitest was running this test, or
+- the error was thrown after the test completed, and this was the most recent test at that point.
+
+⎯⎯⎯⎯ Unhandled Rejection ⎯⎯⎯⎯⎯
+TypeError: services.credits.historyPage is not a function
+ ❯ src/features/credits/CreditsScreen.tsx:249:24
+    247|     const [balanceResult, historyResult, packResult] = await Promise.a…
+    248|       services.credits.snapshot(),
+    249|       services.credits.historyPage({}),
+       |                        ^
+    250|       services.credits.packs(),
+    251|     ])
+ ❯ src/features/credits/CreditsScreen.tsx:671:10
+ ❯ Object.react_stack_bottom_frame node_modules/react-dom/cjs/react-dom-client.development.js:28656:20
+ ❯ runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1048:13
+ ❯ commitHookEffectListMount node_modules/react-dom/cjs/react-dom-client.development.js:13748:29
+ ❯ commitHookPassiveMountEffects node_modules/react-dom/cjs/react-dom-client.development.js:13835:11
+ ❯ commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom-client.development.js:16906:13
+ ❯ recursivelyTraversePassiveMountEffects node_modules/react-dom/cjs/react-dom-client.development.js:16851:13
+ ❯ commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom-client.development.js:17183:11
+ ❯ recursivelyTraversePassiveMountEffects node_modules/react-dom/cjs/react-dom-client.development.js:16851:13
+
+This error originated in "src/features/credits/CreditsScreen.test.tsx" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+The last test to run before this error was "resolves an unknown simulated result before retrying the same operation id". This means either:
+- the error was thrown while Vitest was running this test, or
+- the error was thrown after the test completed, and this was the most recent test at that point.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+

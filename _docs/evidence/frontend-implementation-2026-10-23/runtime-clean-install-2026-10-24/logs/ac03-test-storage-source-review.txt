@@ -1,0 +1,26 @@
+Issue #67 AC-03 direct source review, frozen snapshot only.
+Source freeze captured UTC: 10/23/2026 21:42:25
+Snapshot tree SHA-256: 4da1bd26e427d835cb727feba6d11de977a3dd449f96777a0efe3ecbbf1fcf00
+frontend/src/test/setup.ts SHA-256: 66efc86187b93dbe3c9551049ff665f96af9df2fb7f764ff63f80b24d82be3bb (matches manifest)
+Direct setup behavior: beforeEach resets history, clears local/session storage, and installs a fresh fake IndexedDB factory; afterEach runs Testing Library cleanup and clears local/session storage again.
+No user browser profile is opened or cleared by this setup.
+No mirror/reset test was added; this confirms the existing reset implementation directly.
+--- setup excerpt ---
+5: import { afterEach, beforeEach } from 'vitest'
+7: beforeEach(() => {
+9:   localStorage.clear()
+10:   sessionStorage.clear()
+13:     value: new IDBFactory(),
+17: afterEach(() => {
+18:   cleanup()
+19:   localStorage.clear()
+20:   sessionStorage.clear()
+
+frontend/src/services/index.ts SHA-256: 35dcc78e4ed4bc6459e7c969caa49d1b280c0b6b640cbbc69e77da300e7cb2c5 (matches manifest)
+Existing create-services options expose deterministic namespace/scenario/fake-IDB injection for tests.
+--- scenario injection excerpt ---
+15: export interface CreateServicesOptions {
+20:   scenario?: string
+21:   googleScenario?: MockGoogleScenario
+22:   indexedDB?: IDBFactory
+45: function createMockServiceContext(options: CreateServicesOptions): StoreContext {

@@ -1,0 +1,53 @@
+{
+  "capturedDate": "2026-10-24",
+  "repository": "dystrophyless/dubbed.ai",
+  "branch": "main",
+  "baseHead": "35d122949ad0e07a7e365bcbd4c1ec69202796c3",
+  "manifestSha256": "AF4A8F91B8356D7A87DC75CDE7B073FBF67F795888B0A61BDFEAD348AFCEB9EE",
+  "issueSnapshots": [
+    {
+      "issue_number": 67,
+      "title": "Start and test the frontend independently of backend services",
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/67",
+      "state": "open",
+      "updated_at": "2026-10-23T21:32:16Z",
+      "comment_count": 0,
+      "workflow_status": "in_progress — Owner-authorized mock-backed frontend implementation and verification are underway. Current work remains local/uncommitted; acceptance, delivery and closure are pending. Production-only prerequisites and named unresolved slices remain separate.",
+      "acceptance_criteria": "- [ ] AC-01: Documented clean local startup and production build succeed in explicit mock mode without starting backend/database services or supplying production credentials.\n- [ ] AC-02: Meaningful unit/component and browser smoke checks run from documented commands; a broken mount/behavior is demonstrably detected.\n- [ ] AC-03: Test storage and scenario control are isolated and reset reproducibly without touching unrelated user/browser data.\n- [ ] AC-04: An unavailable real adapter produces a clear configuration failure rather than silent mock fallback or production calls.",
+      "completion_record": "Not executed; no install, command PASS or runtime approval claimed."
+    },
+    {
+      "issue_number": 68,
+      "title": "Freeze and enforce one interchangeable frontend services boundary",
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/68",
+      "state": "open",
+      "updated_at": "2026-10-23T21:32:21Z",
+      "comment_count": 0,
+      "workflow_status": "in_progress — Owner-authorized mock-backed frontend implementation and verification are underway. Current work remains local/uncommitted; acceptance, delivery and closure are pending. Production-only prerequisites and named unresolved slices remain separate.",
+      "acceptance_criteria": "- [ ] AC-01: One consumer-facing API supports all active logical responsibilities and interchangeable adapter construction without UI/store transport branching.\n- [ ] AC-02: Public data/errors preserve ownership, selected-section and version/operation truth; unknown results are not success, invalid credentials or permission to duplicate a mutation.\n- [ ] AC-03: Architecture tests fail for a representative forbidden UI/store backend request or direct adapter import, while permitted browser media capability use works.\n- [ ] AC-04: Contract harness can verify mock and later real adapter semantics; unavailable real configuration fails clearly and never silently falls back.",
+      "completion_record": "Not executed; interfaces and module paths are future work."
+    },
+    {
+      "issue_number": 70,
+      "title": "Keep mock credits, reservations and entitlements coherent and exactly once",
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/70",
+      "state": "open",
+      "updated_at": "2026-10-23T21:32:40Z",
+      "comment_count": 0,
+      "workflow_status": "in_progress — Owner-authorized mock-backed frontend implementation and verification are underway. Current work remains local/uncommitted; acceptance, delivery and closure are pending. Production-only prerequisites and named unresolved slices remain separate.",
+      "acceptance_criteria": "- [ ] AC-01: Eligible grant, verified purchase fulfillment, capacity upgrade and each reservation/settlement/return are applied once under duplicate/reload/lost-response scenarios; ineligible returning identities receive no repeated grant.\n- [ ] AC-02: Concurrent quotes/processing/purchases observe coherent available/reserved/purchased-remainder/history/capacity revisions and cannot overspend through stale UI.\n- [ ] AC-03: Selected-duration ceil boundaries are correct; system preparation failure releases rather than charges, and synthetic cancellation outcome follows only its current explicitly confirmed quote.\n- [ ] AC-04: Pending purchase is never posted as success, reservations never masquerade as final charges and deleting a project/account never fabricates a refund.",
+      "completion_record": "Not executed; no financial or production verification claimed."
+    },
+    {
+      "issue_number": 73,
+      "title": "Persist and reconcile an isolated mock workspace through the shared facade",
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/73",
+      "state": "open",
+      "updated_at": "2026-10-23T21:32:51Z",
+      "comment_count": 0,
+      "workflow_status": "in_progress — Owner-authorized mock-backed frontend implementation and verification are underway. Current work remains local/uncommitted; acceptance, delivery and closure are pending. Production-only prerequisites and named unresolved slices remain separate.",
+      "acceptance_criteria": "- [ ] AC-01: Reload restores committed account/project/operation facts and associated fixture/media references; uncommitted bytes are not advertised as durable.\n- [ ] AC-02: Isolation and revision/operation reconciliation prevent cross-account leakage, duplicate effects, stale-event resurrection and contradictory observers.\n- [ ] AC-03: Reset/scenario selection is reproducible and confined to mock/test storage; arbitrary production backend/provider calls cannot occur.\n- [ ] AC-04: Failure/quota/partial-write scenarios preserve prior committed records and expose recoverable honest errors; mock limitations are visible in evidence.",
+      "completion_record": "Not executed; no recovery or cross-device claim is established."
+    }
+  ]
+}
