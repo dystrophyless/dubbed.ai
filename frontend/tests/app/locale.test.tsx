@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { LocaleProvider, useLocale } from '../../src/app/locale'
 import type { Locale } from '../../src/app/routes'
+import { t } from '../../src/i18n/messages'
 import { asRevision, ids, type AccountSnapshot, type Revision, type Services } from '../../src/services/contracts'
 
 function account(locale: Locale, revision = 1): AccountSnapshot {
@@ -202,7 +203,7 @@ describe('LocaleProvider preference precedence', () => {
     expect(screen.getByTestId('locale')).toHaveTextContent('ru')
     expect(document.documentElement.lang).toBe('ru')
     expect(window.localStorage.getItem('dubbed.locale')).toBe('ru')
-    expect(screen.getByTestId('preference-error')).not.toBeEmptyDOMElement()
+    expect(screen.getByTestId('preference-error')).toHaveTextContent(t('ru', 'accountPreferenceUnavailable'))
 
     await act(async () => {
       fireEvent.click(screen.getByRole('button', { name: 'Retry locale update' }))
@@ -222,5 +223,33 @@ describe('LocaleProvider preference precedence', () => {
     expect(mountedView.startPurchase).not.toHaveBeenCalled()
     expect(mountedView.reserve).not.toHaveBeenCalled()
     expect(mountedView.startMicrophoneTest).not.toHaveBeenCalled()
+  })
+
+  it('localizes failed preference feedback in the authoritative locale after rollback', async () => {
+    vi.stubGlobal('navigator', { language: 'en-US' })
+    const mountedView = mountedStatefully(account('en'))
+    mountedView.setLocale.mockRejectedValueOnce(new Error('temporary preference failure'))
+
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Switch locale' }))
+    })
+    await waitFor(() => expect(mountedView.setLocale).toHaveBeenCalledTimes(1))
+
+    const error = screen.getByTestId('preference-error')
+    expect(screen.getByTestId('locale')).toHaveTextContent('en')
+    expect(document.documentElement.lang).toBe('en')
+    expect(window.localStorage.getItem('dubbed.locale')).toBe('en')
+    expect(error).toHaveTextContent(t('en', 'accountPreferenceUnavailable'))
+    expect(error).not.toHaveTextContent(t('ru', 'accountPreferenceUnavailable'))
+
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Retry locale update' }))
+    })
+    await waitFor(() => expect(screen.getByTestId('locale')).toHaveTextContent('ru'))
+
+    expect(document.documentElement.lang).toBe('ru')
+    expect(window.localStorage.getItem('dubbed.locale')).toBe('ru')
+    expect(screen.getByTestId('preference-error')).toBeEmptyDOMElement()
+    expect(mountedView.setLocale).toHaveBeenCalledTimes(2)
   })
 })

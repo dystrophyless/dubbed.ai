@@ -1,0 +1,50 @@
+{
+  "test": "keyboard can play the local mic test and the input meter exposes numeric semantics",
+  "environment": {
+    "os": "win32",
+    "node": "v22.23.1",
+    "browser": "Chromium",
+    "browserVersion": "156.0.8078.4",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "serviceAdapter": "mock",
+    "media": "Chromium fake device and fake permission UI; browser audio muted; element muted and volume 0",
+    "physicalMicrophoneUsed": false
+  },
+  "meter": {
+    "role": "meter",
+    "name": "Microphone input level",
+    "min": 0,
+    "max": 100,
+    "value": 0,
+    "visibleMeaning": "This local meter reports signal level only. It does not judge speech or readiness."
+  },
+  "playback": {
+    "paused": false,
+    "currentTimeSeconds": 0.366267,
+    "durationSeconds": 1.2,
+    "muted": true,
+    "volume": 0,
+    "sourceProtocol": "blob:",
+    "focused": true
+  },
+  "lifecycle": {
+    "indexedDbWritesBeforeTest": 0,
+    "indexedDbWritesAfterExit": 0,
+    "objectUrlsCreated": [
+      "blob:http://127.0.0.1:4173/5d08e3aa-baa9-4064-8777-d982cc4c5d2e"
+    ],
+    "objectUrlsRevoked": [
+      "blob:http://127.0.0.1:4173/5d08e3aa-baa9-4064-8777-d982cc4c5d2e"
+    ],
+    "recorderStops": 1,
+    "trackStops": 1,
+    "returnedVisitHasAudioElement": false
+  },
+  "screenshot": {
+    "file": "microphone-listen-keyboard-en-1440.png",
+    "sha256": "e7e2cd8e20c01e194199b3bbefb819ed1415ae31169025d48f49113ffe6a1c11"
+  }
+}

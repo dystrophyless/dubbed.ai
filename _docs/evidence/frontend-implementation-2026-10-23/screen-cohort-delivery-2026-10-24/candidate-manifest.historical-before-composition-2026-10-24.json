@@ -1,0 +1,1718 @@
+{
+  "manifestVersion": 1,
+  "createdAtUtc": "2026-10-24T00:26:06Z",
+  "repository": "D:\\Program\\python\\Dubbed",
+  "branch": "main",
+  "baseCommit": "7845b84d171858628128d9e60e6d3d560f43055a",
+  "sourceFreeze": {
+    "before": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-freeze-before.json",
+    "after": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-freeze-after.json",
+    "sha256Both": "94B617AF9F2D8ED1548C52F6D02695C71AC57CEADFF891E9226CF1D85F68B3ED",
+    "frozenSourceFileCount": 197
+  },
+  "acceptance": {
+    "acceptedIssues": [
+      62,
+      65,
+      66,
+      69,
+      71,
+      74,
+      75,
+      78,
+      79,
+      80,
+      82
+    ],
+    "outsideClosure": [
+      63,
+      76,
+      77,
+      81
+    ],
+    "acceptanceRecord": "_docs/evidence/frontend-implementation-2026-10-23/screen-cohort-acceptance.md",
+    "evidenceMap": "_docs/evidence/frontend-implementation-2026-10-23/acceptance-evidence-map.md"
+  },
+  "deliveryControlFiles": [
+    "_docs/evidence/frontend-implementation-2026-10-23/screen-cohort-delivery-2026-10-24/candidate-manifest.json",
+    "_docs/evidence/frontend-implementation-2026-10-23/screen-cohort-delivery-2026-10-24/publisher-receipt.md"
+  ],
+  "payloadFileCount": 279,
+  "missingReferences": [],
+  "files": [
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/acceptance-evidence-map.md",
+      "bytes": 61103,
+      "sha256": "58C8E6EB8A9FD6D9E51204A4247333E0A55F1743934513551F93ED0D56024566",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/link-cancel-candidate-correction-en-desktop.png",
+      "bytes": 43691,
+      "sha256": "C5E02AD4FAA71C36C0D95D7730B65DEC6591380D43D8288A4171CB61409DE44E",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/link-candidate-pending-final-action-unavailable-en-desktop.png",
+      "bytes": 58022,
+      "sha256": "E8DC3DEA24C43A9070224E1B7584CD62818757D086F34D62B8EEFEB6CB4F9E6E",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/link-commit-conflict-en-desktop.png",
+      "bytes": 75520,
+      "sha256": "E5202095BE5A58281739E6C529B81274A497589F71D0382B3DC0366A9FB44462",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/link-commit-unknown-ru-phone.png",
+      "bytes": 52473,
+      "sha256": "0DD87DD0EA3096B84749C888469746EF842F0B61535DFE49985D31B321396D91",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/link-final-action-loading-en-desktop.png",
+      "bytes": 70043,
+      "sha256": "061578B9693F86492897B9D3EB4414AF301E3C30093EC0A4B04E6672B26250B5",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/link-invalid-current-proof-ru-phone.png",
+      "bytes": 46481,
+      "sha256": "3C98E921A653E29ED31781257D50C7F85981D6B9B193362B7630CC6374DE554F",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/README.md",
+      "bytes": 5676,
+      "sha256": "B34137AAA81B684ADDF73C52828FA00F3412FC243110E7C8F019267E7D22C8E5",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/registration-code-pending-en-desktop.png",
+      "bytes": 41773,
+      "sha256": "71DAF793D74C8051B9511B68EE88B9F98C4AC00DD4A078FC0CF0F3E692714EAB",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/registration-collision-en-desktop.png",
+      "bytes": 29360,
+      "sha256": "039FE74B7958A5A259F1B6282EA045FFBCE3E06A71ABE2A50B328956A7CBC846",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/registration-invalid-code-retained-en-desktop.png",
+      "bytes": 51840,
+      "sha256": "E82A3633758CF1AC06ED3C5A6C6240C280CC74EC6FF4D73521D0789498CF7F9D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/registration-submitting-en-desktop.png",
+      "bytes": 19664,
+      "sha256": "D9683DEE8E7C02A054753F5540AF3CF9A93C85199650501F87251AE5A08D4346",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/registration-unknown-verification-ru-phone.png",
+      "bytes": 47632,
+      "sha256": "5765D4EC3001059051F5010F6F8E92C4446F9299A848FD2CB250CE8E173ADEB4",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/reset-invalid-code-retained-en-desktop.png",
+      "bytes": 48147,
+      "sha256": "10D9D0940A894089183CBDE32C1D30D83AB432E2225C42EB0EB5B9473335BDEC",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/reset-password-submit-loading-en-desktop.png",
+      "bytes": 30114,
+      "sha256": "1FDB725A2F469BCB30C638842B74F3CCDD9B06CFF7514E6DEACF97803E7D7331",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/reset-request-neutral-code-pending-en-desktop.png",
+      "bytes": 37253,
+      "sha256": "84082B745FEC92A74108A79B53CDA7C3E33CA7A0F11D1847EE41D274C06F5733",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/reset-service-error-en-desktop.png",
+      "bytes": 28708,
+      "sha256": "B2E7236D9DED74BDC5EFC842F89BCC6842AA170856552A195B5CD4DFE8D99930",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/reset-unknown-verification-ru-phone.png",
+      "bytes": 20588,
+      "sha256": "02639F3336D9F9670A823DFFC0A2FED32ED51F7987C127D3136C526E1089FC3B",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/SHA256SUMS.historical-before-final-capture-2026-10-24.txt",
+      "bytes": 5477,
+      "sha256": "1B1B8256D20D692C590E997123104C40A6DCC53C9406550903D40BD1E845341D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/SHA256SUMS.txt",
+      "bytes": 5477,
+      "sha256": "2B5018369C2F84CD754A2BEE60896A3158505D643F2E289A3316F66ED94BCBAF",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-invalid-en-desktop.png",
+      "bytes": 36560,
+      "sha256": "8DA2D6AE5AF2B19456C4B3202C9503F9C1988541E6D739EB98C7A1F07C387B9B",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-locale-en-ru-en-document-language.png",
+      "bytes": 30767,
+      "sha256": "F088FA8C06F8F07274089CA20999A7E4575A5C0D5DAC855840DEAF6A98247BF6",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-password-visible-ru-phone.png",
+      "bytes": 30011,
+      "sha256": "F1BD6040744B4548E794D644179809DCA3051A7A79396043B9F9BC654A9F32FD",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-provider-conflict-en-desktop.png",
+      "bytes": 35952,
+      "sha256": "B6AA7D786044EC021E62A884B1F94A45F81A622BD9D45B08280D444B78F546D0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-responsive-390-en.png",
+      "bytes": 27008,
+      "sha256": "D3F87AF7E8C9734D61B2F837DBEF809F26DFF84E0BD54A9EFCDF86EA945AC4EE",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-responsive-767-en.png",
+      "bytes": 28377,
+      "sha256": "FC20295A413299EB4A6DBFC529EC91DD946CCFC26A13E8A94056E95A6782DA55",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-responsive-768-en.png",
+      "bytes": 27650,
+      "sha256": "4B31519394D4EB56BDE17964142BAD25A529C1CB1CAD2DF872135FB0DDB26D5F",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-service-error-en-desktop.png",
+      "bytes": 36810,
+      "sha256": "19E1703352727E9ECF594FAD0FA7E9DC60FD869D2692DFD12C66E9E3D85857E0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-session-unavailable-en-desktop.png",
+      "bytes": 41266,
+      "sha256": "E38BF7CE2D869C97F54F765F3332187439507CFC92FD12690EE103F0B029BCBA",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-submitting-en-desktop.png",
+      "bytes": 33871,
+      "sha256": "3392857690B9E6B2892254515241E2A5E2C13CE788C5663060F65D8AD5BAC044",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/final-lock-install-2026-10-24/install.log",
+      "bytes": 29,
+      "sha256": "0F89D968A7D667B897027C89BDA6EFF19CFE069BF07E7943AB9CABC72287E4F2",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/final-lock-install-2026-10-24/package-hashes.json",
+      "bytes": 384,
+      "sha256": "DA1BB2269276010A21732EE0C157DB4CA63DD1BC10057B55AFE650D4292F5104",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/final-lock-install-2026-10-24/receipt.md",
+      "bytes": 1186,
+      "sha256": "C68EB8BCB7F26D5CD10B06091EF83BD92AB5FAC6EDEE8EB03F58AFFE99D1346C",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/focused-run-2026-10-24/initial-test-collection-timeout.md",
+      "bytes": 1155,
+      "sha256": "D4B433370038E387C8517D6D37C1F2FF3365EA7DA65B2F2931D5AF3B6FFDF84B",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/focused-run-2026-10-24/manifest.md",
+      "bytes": 1015,
+      "sha256": "8DC27AD30D43B40E277AECFDB647A44EB145C0E404BDF9C5BBCB30444B45AB73",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/focused-run-2026-10-24/microphone-listen-keyboard-en-1440.png",
+      "bytes": 59477,
+      "sha256": "E7E2CD8E20C01E194199B3BBEFB819ED1415AE31169025D48F49113FFE6A1C11",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/focused-run-2026-10-24/microphone-listen-keyboard-proof.json",
+      "bytes": 1445,
+      "sha256": "9F4D60A75995F9B3F8E4B22AC28B0F739353A0390E38F213CF68CA475A05999D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/focused-run-2026-10-24/microphone-listen-keyboard-test.log",
+      "bytes": 647,
+      "sha256": "A1368A49FDD6FFCF356B7371728E1809377FF4769437B7E65F6F630EEB4C25C9",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/focused-run-2026-10-24/microphone-listen-keyboard.sha256",
+      "bytes": 105,
+      "sha256": "E6A342A3E9DB647CF57596871D93F35E850BC4895A2F38E361B7A82E3867E84B",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/icon-audit.md",
+      "bytes": 13729,
+      "sha256": "76ADDD727E2300848B3399847AAE9BDA47D008411542C7973A352146583BCE3E",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-en-1440.png",
+      "bytes": 59514,
+      "sha256": "D734AE01D104ED6AC862556B696D7E21C23191BBBCCA1EC4C16CC945A576117D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-proof.json",
+      "bytes": 1446,
+      "sha256": "7D1C355515E530E81C27BB55BB041FE2B47E3638CCB897387C848FBABCB7D8F0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-test.log",
+      "bytes": 647,
+      "sha256": "A1368A49FDD6FFCF356B7371728E1809377FF4769437B7E65F6F630EEB4C25C9",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard.sha256",
+      "bytes": 105,
+      "sha256": "3471C6BCA2FE75F82C5E3B856094D7B8F200621C4242228379F1A258EA70DE50",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/README.md",
+      "bytes": 4822,
+      "sha256": "A82CF53CEC5AD7A1C6963E42620FB67E4EA79DBDF59639434DD5B801B700941A",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/record-transport-pause-en-1440.png",
+      "bytes": 59434,
+      "sha256": "4F270E90F31ADA7FF3C6CF236D127BA2C139D69DCCC8F93BB996C424DD3B1058",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/record-transport-play-en-1440.png",
+      "bytes": 59499,
+      "sha256": "971008C3EDD1582D7F40B5D4B8903356F9E303876D2ABFE41D1BF29F9C178281",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/record-transport-svg-observations.json",
+      "bytes": 1586,
+      "sha256": "20CC176772BFBB4802732104416E2F8CC270BCFD9A416AC63323A7F851EA4089",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/recording-transport-focused-run-2026-10-24/manifest.md",
+      "bytes": 1457,
+      "sha256": "6E0D28EEB3829A67EB7B9458BF0168EAA84CAE9354A22B54B0B0738AFD3602A5",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/recording-transport-focused-run-2026-10-24/record-transport-pause-en-1440.png",
+      "bytes": 59476,
+      "sha256": "9DB2EAD8C99534060F3ABE2506500654BA371A657B6CC0ACD3E67722624306A3",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/recording-transport-focused-run-2026-10-24/record-transport-play-en-1440.png",
+      "bytes": 59537,
+      "sha256": "959257457821832510587EA9C244344C1A55E0908D6FAC824E6177C2D5DBE8E0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/recording-transport-focused-run-2026-10-24/record-transport-svg-observations.json",
+      "bytes": 1586,
+      "sha256": "20CC176772BFBB4802732104416E2F8CC270BCFD9A416AC63323A7F851EA4089",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/recording-transport-focused-run-2026-10-24/SHA256SUMS",
+      "bytes": 306,
+      "sha256": "061BF7EDB78A81B4E965EBE1C9F521301821545A6F81899933FF21125F0BEC4E",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/SHA256SUMS.md",
+      "bytes": 2123,
+      "sha256": "8AC17EC3F61AE2127ACDB1D314A3AF8C046BEE8D70C039F3D2F88C1072499CC1",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/next-cohort-acceptance-readiness.md",
+      "bytes": 14572,
+      "sha256": "F6E54452B3C718454C2A7320EFEF9E5E9120311A8E811EC822DA170D5E0B6C79",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-expired-quote-en-desktop.png",
+      "bytes": 54763,
+      "sha256": "84AAAB847E2C1ECE1BA7D09BEF17A2161E2E3C96B7C486AF5302B0509500F02B",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-expired-quote-en-phone.png",
+      "bytes": 40589,
+      "sha256": "85FA3E23D82276E19861B53D0A21C7D64BCEF91FDD6929A47E28CFBB989D44B8",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-expired-quote-ru-desktop.png",
+      "bytes": 55758,
+      "sha256": "46CDCBA7D7E6D66EF618809D5AD9DABBD239A336A36F81AA98D6AFDBEEA39431",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-expired-quote-ru-phone.png",
+      "bytes": 42129,
+      "sha256": "13588A2A1D8A5EF999BE1BCB4B29806887621C125D5A9F31C65BB3D71DA7FAA4",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-expired-warning-en-desktop.png",
+      "bytes": 50843,
+      "sha256": "A4B794DDC8309CDF1A20020C69E577A998C5F6DB20E3ADB0AA1DE417EE040CB8",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-expired-warning-en-phone.png",
+      "bytes": 37279,
+      "sha256": "4CA5FC3E6A1DF704D6FBEB9CFEA72DBA07E360F4EB870FA7266E9145527CD0E2",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-expired-warning-ru-desktop.png",
+      "bytes": 49976,
+      "sha256": "3539B86C2BFC86674226D19DC10659825714DB464DE547991C96B73F650EA423",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-expired-warning-ru-phone.png",
+      "bytes": 36865,
+      "sha256": "5E74926E1B5365BAD9C50E886E21D2E978968F0AE347A3727C40112391CE8570",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-failure-en-desktop.png",
+      "bytes": 58852,
+      "sha256": "E5204E6CAC9320BD82435EA49984B40A2F2AED7D42BEEEA3ADFB78781F62F127",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-failure-en-phone.png",
+      "bytes": 43460,
+      "sha256": "6AEDF30AEDBE656BEC737FCC3321C842C3F1FD75050825E79C5B1C0AC2CC77C6",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-failure-ru-desktop.png",
+      "bytes": 60539,
+      "sha256": "0A749A9D195A9031F5C548F80ACB151CF3EBC68454FE82CDC6AA5F9916096739",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-failure-ru-phone.png",
+      "bytes": 45955,
+      "sha256": "8D30D6F2DA374C07FF5E58FF43F48371501F622CB0C2EC0D374AC15AD7A4019E",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-pending-en-desktop.png",
+      "bytes": 54546,
+      "sha256": "A74FE5432883838A601A439B73900A6BE122C6678C0B12FDB06B10018F6AF113",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-pending-en-phone.png",
+      "bytes": 40386,
+      "sha256": "64C581F7FF131733481201ACACE9D8AB39108175F5A594B536C86DEB6F46ECC9",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-pending-ru-desktop.png",
+      "bytes": 55060,
+      "sha256": "A153292080CC51080E1FF274E33DF7D7306BD8EFDE5D7BA7C5ED9ED269F5679A",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-pending-ru-phone.png",
+      "bytes": 41755,
+      "sha256": "75F2E7C92998B499FAD39CF3D210282F305AC9CB6C069959AE8DA029EC1687A0",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-quote-en-atBreakpoint.png",
+      "bytes": 50778,
+      "sha256": "513712A3657190A5EF591E315085C1BAE2092FED09F64FBE7733FAB3A0121BC2",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-quote-en-belowBreakpoint.png",
+      "bytes": 51252,
+      "sha256": "136E4B6CCC5FDE6E91BCEF7EACD33809035CD84386F7B335FBA6C43131BDA0D1",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-quote-en-desktop.png",
+      "bytes": 55468,
+      "sha256": "62CD482D8D8B2669BFC18EAA46B61F03490B587AC33504E83CC8C2E3FE62DAAD",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-quote-en-phone.png",
+      "bytes": 41520,
+      "sha256": "F384EEFF1317B4476E1BEFA18ED66C34FD5F54441F095E453AB8853EF87629D0",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-quote-ru-atBreakpoint.png",
+      "bytes": 51597,
+      "sha256": "4464DE6AB5BCA027DFB59A96BB3E9E4B958EC79EE911E3C893311FE76AC5F21B",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-quote-ru-belowBreakpoint.png",
+      "bytes": 51722,
+      "sha256": "9A71F2BDD67E4601662E81289779E5260958D0DD925A0F5B48DB764B6B86274C",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-quote-ru-desktop.png",
+      "bytes": 56120,
+      "sha256": "96A449BCD3ACD8A403A2DA396955D0143B4809EC8742D688558A3BAAEF09A8C4",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-quote-ru-phone.png",
+      "bytes": 42975,
+      "sha256": "F93C846CB1BF1931A760631C061C6139337B535D89032315BBA4C94536759460",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-refreshed-quote-en-desktop.png",
+      "bytes": 55468,
+      "sha256": "62CD482D8D8B2669BFC18EAA46B61F03490B587AC33504E83CC8C2E3FE62DAAD",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-refreshed-quote-en-phone.png",
+      "bytes": 41602,
+      "sha256": "D7D8A78678C455D612EF044F24A8BA40C542558516B19FBE5E883FD52DADE2A7",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-refreshed-quote-ru-desktop.png",
+      "bytes": 56120,
+      "sha256": "96A449BCD3ACD8A403A2DA396955D0143B4809EC8742D688558A3BAAEF09A8C4",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-refreshed-quote-ru-phone.png",
+      "bytes": 43053,
+      "sha256": "0A47B53BC8606C8F6B3F008FBFD3C7A5218351594107755DE491AB4D7045157A",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-unknown-en-desktop.png",
+      "bytes": 62725,
+      "sha256": "7EB59CBECABE0EA7C2F5F91E721DFF75AF1139E9EACE1DDFBD7D391172E3A5E9",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-unknown-en-phone.png",
+      "bytes": 46069,
+      "sha256": "94356E27FB09D55BD0A88658DA6E396419A58358998B179398A630056BAC2145",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-unknown-ru-desktop.png",
+      "bytes": 62603,
+      "sha256": "1B8EEDF03BC5C02837EC4727814A38A7D77285E76617E07ED7690D09A985454A",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/cancellation-unknown-ru-phone.png",
+      "bytes": 46652,
+      "sha256": "9E47E354C740E01D02E1A94697DD09720F57EB909655BEBAAD90DAC0B042AFDA",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/keyboard-cancellation-failure-en-phone.png",
+      "bytes": 43460,
+      "sha256": "6AEDF30AEDBE656BEC737FCC3321C842C3F1FD75050825E79C5B1C0AC2CC77C6",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/keyboard-cancellation-failure-ru-phone.png",
+      "bytes": 45955,
+      "sha256": "8D30D6F2DA374C07FF5E58FF43F48371501F622CB0C2EC0D374AC15AD7A4019E",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/keyboard-dialog-focus-en-phone.png",
+      "bytes": 42222,
+      "sha256": "830A3C9D915EC536ED0EFBA63B10C4641CF01C4582C63C311FFC6BF4E7B7D0DB",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/keyboard-dialog-focus-ru-phone.png",
+      "bytes": 43738,
+      "sha256": "1941B2161F625C2F4F4971AFA7197F5E26440CB89E5BDA46BB6555D225809FEE",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/keyboard-focus-en-phone.png",
+      "bytes": 21954,
+      "sha256": "FA8E0F9058E8955D1CC07C9DF87915F46FA79FB19654790628869CBF46A441D0",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/keyboard-focus-ru-phone.png",
+      "bytes": 21155,
+      "sha256": "4EB16D79282EAAD54C73E50BEB99264D2F71A7BF4223AB1AC66C352888C98D16",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/queued-en-desktop.png",
+      "bytes": 24107,
+      "sha256": "7ABBCC2D2457289A1B935D35BD4961F76AC4A12A574BF3FD2CE66691581DFFB6",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/queued-en-phone.png",
+      "bytes": 20707,
+      "sha256": "C7E804FBFD1EABF55CAF28EA961A00B01E3CEE094BACA50D6AC6F184AFF638FE",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/queued-ru-desktop.png",
+      "bytes": 23323,
+      "sha256": "941B664AF064C1E226BF43E30EBB4FD54571297EA28AEEF9282275812E58562D",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/queued-ru-phone.png",
+      "bytes": 19974,
+      "sha256": "72F79565E9A2AD9FCE574415A1EA45DBB0A63FB9EADB15EC8ED5BE4D0549385B",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-no-retry-en-desktop.png",
+      "bytes": 48245,
+      "sha256": "B7F3B1689736F5274376F05C1B957BCC80CDB824F491B9FE5C4F7EB75989247A",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-no-retry-ru-phone.png",
+      "bytes": 36042,
+      "sha256": "4FEE0F0B1C553C4149D4868AE78AFFF1CA9D3174E1CF10D5AB85428DAEAA1EF9",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-reconcile-first-recovered-en-phone.png",
+      "bytes": 41602,
+      "sha256": "D7D8A78678C455D612EF044F24A8BA40C542558516B19FBE5E883FD52DADE2A7",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-reconcile-first-recovered-ru-desktop.png",
+      "bytes": 56120,
+      "sha256": "96A449BCD3ACD8A403A2DA396955D0143B4809EC8742D688558A3BAAEF09A8C4",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-reconcile-first-unresolved-en-phone.png",
+      "bytes": 35918,
+      "sha256": "8EE5F815BC062B4AEC2B362D38997AB1F08E969A04AB0EBB914CFE9756541154",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-reconcile-first-unresolved-ru-desktop.png",
+      "bytes": 47837,
+      "sha256": "502060234E59F16166F5C77733B4DAE4B0C9622BDC853CD1A58F45C5C903FD5D",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-same-operation-failure-en-desktop.png",
+      "bytes": 47930,
+      "sha256": "83453906F545E434D13677322BA49904405841670CAE13FA8E1449A8526444A8",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-same-operation-failure-ru-phone.png",
+      "bytes": 36043,
+      "sha256": "FCD2FD44350DC1A283A9FA293C7EA2E3F7B3829DE71536442C5A26823735A2B7",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-same-operation-recovered-en-desktop.png",
+      "bytes": 55468,
+      "sha256": "62CD482D8D8B2669BFC18EAA46B61F03490B587AC33504E83CC8C2E3FE62DAAD",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/quote-same-operation-recovered-ru-phone.png",
+      "bytes": 43053,
+      "sha256": "0A47B53BC8606C8F6B3F008FBFD3C7A5218351594107755DE491AB4D7045157A",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/retry-failure-en-desktop.png",
+      "bytes": 31768,
+      "sha256": "ED42C4111D74FDEC6D3214612749F0C70D91AB1521557AB246A61431BD1126AC",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/retry-failure-en-phone.png",
+      "bytes": 28184,
+      "sha256": "250AC4CBCB93746A00910EE71EE38A042F9AAB06EA5619083E51FB13DCC548C1",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/retry-failure-ru-desktop.png",
+      "bytes": 31801,
+      "sha256": "DD36DE7601BC7AB6FB158E0C52B0348EC00C0562B2E61AB1DD3E01191C476009",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/retry-failure-ru-phone.png",
+      "bytes": 27279,
+      "sha256": "FF5E513E4D9943B4B074BE06306A2E49AB18200FC6F2D5DF3949EA584AE73F0A",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-known-en-atBreakpoint.png",
+      "bytes": 23099,
+      "sha256": "D7E90AB846E5757BAEA5905B1915740CF685176394D61937A7A243CDA047CD54",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-known-en-belowBreakpoint.png",
+      "bytes": 24033,
+      "sha256": "E34A4D9A8E19C145AFB15CB4A367FDE383A5648F88F35BD47E8B0320AEA3CD4C",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-known-en-desktop.png",
+      "bytes": 25288,
+      "sha256": "E69ABC7BEFF823F533E92DE181F22AA6BD40372862057B1624A24CFECBC5A33E",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-known-en-phone.png",
+      "bytes": 21795,
+      "sha256": "1C8A2F3597895E88A71ABF77161EDCDEDE59228C854E5DBC97566F2CD03A855E",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-known-ru-atBreakpoint.png",
+      "bytes": 22370,
+      "sha256": "7054AB1C526E49A2D9E6521F685556846214C4E56AE8FFCAA8CF18EEE820E0E0",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-known-ru-belowBreakpoint.png",
+      "bytes": 23380,
+      "sha256": "DECC77E7310ED9C7173F6CCF4323ECF7344AA1163029EF3B578718BE6781E2A4",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-known-ru-desktop.png",
+      "bytes": 24477,
+      "sha256": "48EC5560957D3A671745DFCA82F42B5F961D299F22E1B2A206A505CA4C4D10C5",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-known-ru-phone.png",
+      "bytes": 21052,
+      "sha256": "056A86D6A1C886DDC86780A97FAD254530A6EC7BDB2870575BE59B8280D60CF5",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-unknown-en-desktop.png",
+      "bytes": 24547,
+      "sha256": "70C576677F7B598E6A0A3F96C80A8D6EED1790BA0A5CAB22F93E7E12B859ABF3",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-unknown-en-phone.png",
+      "bytes": 21143,
+      "sha256": "75AE4EF38F9583A33C9120B201E3748FC89F464A2883FDD5EF09062EEC88146E",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-unknown-ru-desktop.png",
+      "bytes": 23745,
+      "sha256": "D2F84BE36F0AB5DD34B1A33C523349C83E61C72E63F64CABE786C92A197896D7",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/running-unknown-ru-phone.png",
+      "bytes": 20371,
+      "sha256": "4BC1EF6ABA3745F49DAADBDE20231E6027E930BB92FE8E20F4145E5B1F2069FF",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/zero-turn-initial-en-desktop.png",
+      "bytes": 32179,
+      "sha256": "E469C3D16780E529DBA17880F5E01208AB1D532B99666FCC4AC70C57D8CD4AF9",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/zero-turn-initial-en-phone.png",
+      "bytes": 28440,
+      "sha256": "EAC2825A5498F964197B3082F4027E96A10C20B2D50F5756CD33AC34F27C41F4",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/zero-turn-initial-ru-desktop.png",
+      "bytes": 32431,
+      "sha256": "AA39D12A8E642DDB3B4586B1BD0C9DE6EE2AE924D4D5502D1AD8DB97812248BB",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/zero-turn-initial-ru-phone.png",
+      "bytes": 28937,
+      "sha256": "92FCCBB3185D32F4F9677485504431796B77803CE0F775D04FDBC5D8571E80B3",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/zero-turn-prior-en-desktop.png",
+      "bytes": 32965,
+      "sha256": "AD6FD72130B09E01CE12019A16CD231BC6919D363D936A93A1573747A1F5CD8C",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/zero-turn-prior-en-phone.png",
+      "bytes": 29457,
+      "sha256": "90672C92D16A501CA474A56C6664470DC6717F3DBFDB4D7FA74C5F91BBF1B4CD",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/zero-turn-prior-ru-desktop.png",
+      "bytes": 33763,
+      "sha256": "ABFAEA6AC47EB5FEFE48A3E99315D8E43ADEF369A521BF86AA71CD5554850DBB",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/after/zero-turn-prior-ru-phone.png",
+      "bytes": 30330,
+      "sha256": "47775189DE8044A6D0F64AD76CFED742D6F79C760EEA97E36C3DE74E40C4BBA4",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/baseline-overflow-detail/zero-turn-initial-ru-phone.png",
+      "bytes": 28923,
+      "sha256": "50793B8B17471153439D558C39D32D455908E1DD4D641FC68A979DD7812D3561",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/final-focus-probe/keyboard-cancellation-failure-en-phone.png",
+      "bytes": 43460,
+      "sha256": "6AEDF30AEDBE656BEC737FCC3321C842C3F1FD75050825E79C5B1C0AC2CC77C6",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/final-focus-probe/keyboard-cancellation-failure-ru-phone.png",
+      "bytes": 45955,
+      "sha256": "8D30D6F2DA374C07FF5E58FF43F48371501F622CB0C2EC0D374AC15AD7A4019E",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/final-focus-probe/keyboard-dialog-focus-en-phone.png",
+      "bytes": 42222,
+      "sha256": "830A3C9D915EC536ED0EFBA63B10C4641CF01C4582C63C311FFC6BF4E7B7D0DB",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/final-focus-probe/keyboard-dialog-focus-ru-phone.png",
+      "bytes": 43738,
+      "sha256": "1941B2161F625C2F4F4971AFA7197F5E26440CB89E5BDA46BB6555D225809FEE",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/final-focus-probe/keyboard-focus-en-phone.png",
+      "bytes": 21954,
+      "sha256": "FA8E0F9058E8955D1CC07C9DF87915F46FA79FB19654790628869CBF46A441D0",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/final-focus-probe/keyboard-focus-ru-phone.png",
+      "bytes": 21155,
+      "sha256": "4EB16D79282EAAD54C73E50BEB99264D2F71A7BF4223AB1AC66C352888C98D16",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-after.jsonl",
+      "bytes": 177886,
+      "sha256": "B0ADC45813B07C05699B8CBB5BBE78F5364BE661B32EA207EBC66C458529C1EF",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-baseline-overflow-detail.jsonl",
+      "bytes": 2704,
+      "sha256": "74CC7EACA92C876BF3D25261B7C44DF70AAF0AD111AA24A39435D06494E452BF",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-final-focus-probe.jsonl",
+      "bytes": 12761,
+      "sha256": "AB400D686CD221DCFBDA9F299A4A52B8EA013B8185EF21D33186DB19B894733F",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-icon-probe.jsonl",
+      "bytes": 2673,
+      "sha256": "01DF93AF521CFF00700CCB2AC21F9B0A2D06E813E543A89A6B50CD0243542C66",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/processing-ui/README.md",
+      "bytes": 10086,
+      "sha256": "11583508FB2B06E43330D65B399807CDE9F226A5D42E6FC15BB7EF179E499A17",
+      "category": "processing-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/README.md",
+      "bytes": 8250,
+      "sha256": "C80F43E7107B8984124481EB653EE272908CCED2765B2AE80E8D7DFE10423CEA",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-app-main-767-768-boundary.geometry.json",
+      "bytes": 232,
+      "sha256": "0A481EAC34E8F4D1D27F8EDF668CF2C1251E1678878E11C4CB43C744C4925EBF",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-progress-known-en-desktop.geometry.json",
+      "bytes": 440,
+      "sha256": "6A40C54AB954D1B45EF5062F391BFEC308C88E143A6BF06E43A6FEDD5516029A",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-progress-known-en-desktop.png",
+      "bytes": 14979,
+      "sha256": "08221ECDCE2F355F680CB0A3EC5D246AA7C80D863F9CC2727F647E8277CDA23C",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-progress-untrusted-ru-phone.png",
+      "bytes": 10455,
+      "sha256": "2B97B8167075222C62E612C8E20FE5567DA418E49BBE7134A126858E0E918E24",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-retry-submitting-ru-phone.geometry.json",
+      "bytes": 187,
+      "sha256": "F011F68CE6E26278300744C38585C7B5C5F5ECD9BA5856498989B61BA38CDA0C",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-retry-submitting-ru-phone.png",
+      "bytes": 14565,
+      "sha256": "718A33490D1D440BE48BB79E18282B76D9A5B4926A09B0FD6EF3CDB6797E4899",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-retry-unknown-ru-phone.png",
+      "bytes": 23115,
+      "sha256": "C55F1938B19D4C89F3D53012AA26906CD0C988807B28970889F14548A8D0233D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-expired-descriptor-ru-phone.png",
+      "bytes": 28967,
+      "sha256": "AF7515FB1681288DCF72590673E6F160FF3EB30FBAECC4E151996D73B0D6459F",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-expired-recovered-ru-phone.png",
+      "bytes": 28992,
+      "sha256": "813FC8B881B5D07F9522E5D8F51629596F5BCB7B5C13B2236F571F4C47F56B1E",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-network-error-en-desktop.png",
+      "bytes": 31768,
+      "sha256": "81BBAA49F0F4AE6A5AED131157D41A205391DC22938C2640885F532BD60857C4",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-network-recovered-en-desktop.png",
+      "bytes": 70858,
+      "sha256": "CCEFB8CA33BF0F52B6AE422D2B68CCA737954CC5B8A0885C88002620F7C38751",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/SHA256SUMS.historical-before-final-capture-2026-10-24.txt",
+      "bytes": 2699,
+      "sha256": "E526989B2D08DA25A37A44B748382FCF6AB189431727E821E94A68BD9062698C",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/result-state-ui/SHA256SUMS.txt",
+      "bytes": 2699,
+      "sha256": "D434B1A00ED3DF52105380DEC3E03385E826EFE1F9507F30570C623D674607B6",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-browser.log",
+      "bytes": 38710,
+      "sha256": "7989AA06ABFEDDC790066745F1C906B83E09DC46ADCE59BE146865D249C86197",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-freeze-after.json",
+      "bytes": 29657,
+      "sha256": "94B617AF9F2D8ED1548C52F6D02695C71AC57CEADFF891E9226CF1D85F68B3ED",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-freeze-before.json",
+      "bytes": 29657,
+      "sha256": "94B617AF9F2D8ED1548C52F6D02695C71AC57CEADFF891E9226CF1D85F68B3ED",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-isolated-build.log",
+      "bytes": 854,
+      "sha256": "770C5A8778633551464F8F2397971BB7B565242EC5A1868C011DB7173ABF02AF",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-lint.log",
+      "bytes": 24115,
+      "sha256": "DF4788633A0A18EBE31E20034764CA44E41BE2F6AB2393E35050845C5A3C06AD",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-media.log",
+      "bytes": 905,
+      "sha256": "FC727F8BC05687CD47D81786F4E20EDB3CE345E9EEA500A12D3EDCC28EF629C3",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-real-unavailable.log",
+      "bytes": 639,
+      "sha256": "C2E1B76EB5F859CCA087535C2E32DC54C163BA8BC27A56DF254A7449C991AC35",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-linkfix-unit.log",
+      "bytes": 675,
+      "sha256": "7193CBAE058A78295093BE9B264731D7F907615C61628A10BDA8A125CA04CB2D",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-screen-browser-after.log",
+      "bytes": 40984,
+      "sha256": "2E65047C7EEF4740308B62B56FD18AC3697A6DC3E94A700F63EE510680EB632C",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-screen-browser.log",
+      "bytes": 40722,
+      "sha256": "6004F1880AAF33EDBA1D19F33EC187C93E8E90EF365833DC731716CB3C1AC306",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-screen-initial-failure/workspace-account-startup-error-context.md",
+      "bytes": 7854,
+      "sha256": "7155A2785F665A7C72DAC29512F2E0B64BC9413AA1A94DA3BBBD2BF7014F37D2",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/root-final-screen-second-failure/identity-link-completion-error-context.md",
+      "bytes": 12613,
+      "sha256": "B9BB4719A558687FDCFB409DB9A7FE76AE3939D142298275594A8ECE81C0132B",
+      "category": "final-verification"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/screen-cohort-acceptance.md",
+      "bytes": 10718,
+      "sha256": "394C0A4B0870595995ECB01D489FF3E6CCEF2232330DEF93D5B7754C9D170D17",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/screen-cohort-delivery-2026-10-24/issue-guarded-update-baseline.json",
+      "bytes": 241713,
+      "sha256": "62646B85B409A1CF056420956285980F82A2D532292C1E5E0D8A5582E0DDD878",
+      "category": "publisher-baseline"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/playwright-shell-evidence-final.log",
+      "bytes": 534,
+      "sha256": "0BBF2453661F30C6B84EAC99437302E04682632D9082A407EEBABDF5FB5B82A6",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/playwright-shell-evidence-reviewed.log",
+      "bytes": 533,
+      "sha256": "57311DAF6DA64C09F200D14B212C58066D2F8C5F69C1FDE6A82C70323C85A786",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/playwright-shell-evidence.log",
+      "bytes": 2741,
+      "sha256": "D189FE656B44064D7A334CFBDB8BCEFBBF9AADE7BD667338F9A6A6607407BD52",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/first-run-failure/.last-run.json",
+      "bytes": 96,
+      "sha256": "0DB23BF0696B19AF3CA8C54A60CD6C359D78D90C27AB4D09771D319C6FD88E13",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/first-run-failure/playwright-shell-evidence.log",
+      "bytes": 2741,
+      "sha256": "D189FE656B44064D7A334CFBDB8BCEFBBF9AADE7BD667338F9A6A6607407BD52",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/first-run-failure/shell-evidence-captures-th-0fcbb-p-English-and-phone-Russian/error-context.md",
+      "bytes": 9883,
+      "sha256": "3CCD46A1F3DEED633B2244D6E5CFFE2997F64CE6855ED89C3C5D19BB6FE05E21",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/playwright-shell-evidence-reviewed.log",
+      "bytes": 533,
+      "sha256": "57311DAF6DA64C09F200D14B212C58066D2F8C5F69C1FDE6A82C70323C85A786",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/README.md",
+      "bytes": 4521,
+      "sha256": "891E27FDD2F46E4AFA730CDAD0957D1996CD3C545AD52157DDE4B8A20DB16600",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-authenticated-header-en-767.png",
+      "bytes": 22738,
+      "sha256": "BED68310CD04768815BCFBA44D8EC6A3ED89BDD2DFD1B9BE1965881D35708F3F",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-authenticated-header-en-768.png",
+      "bytes": 26189,
+      "sha256": "99D843DDA1F075287FCEFFDE4C836016AE6D924ED6BDDA5FD41AD7C2BC9E183E",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-forced-colors-keyboard-en-desktop.png",
+      "bytes": 30428,
+      "sha256": "8832F379229AA1CA0DCED98A28BE666064A73D1582D92F5969EA77757FA6D4B6",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-keyboard-focus-en-desktop.png",
+      "bytes": 32635,
+      "sha256": "288BEAB277815D44B9D2AA267FBE519E090AEBA6FD48BBD40F2FD25D8FE626DF",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-landing-en-767.png",
+      "bytes": 26112,
+      "sha256": "A09B509DDBA82B184EF8E0BCA52E9E6B8ECFACE9D8FB41A67E4FA3846DDE11B8",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-landing-en-768.png",
+      "bytes": 26410,
+      "sha256": "091BF5A82DC50E84E8CC3F0034F6F9019031F5325A85AC6C1B2BB32C062DBF95",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-landing-en-desktop.png",
+      "bytes": 29058,
+      "sha256": "C16D8DA6A299C7469968C0E22933FC0E3348DB71A7605AB5EF728C036FCC033B",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-landing-ru-phone.png",
+      "bytes": 25429,
+      "sha256": "7BB47DF37786529E453C7C72AB6E7F120B50E891C9F86E9AFF49454A3357E63C",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-mobile-menu-en-390.png",
+      "bytes": 19357,
+      "sha256": "D1F1712ED47B617E8E0078F855933205808C9C82B9D0B0F76F69F61A6B5B77A7",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-password-reset-code-ru-390.png",
+      "bytes": 37983,
+      "sha256": "EEAB6D6AF6482F22E51FE23A48A52EE9E4B46072ADB04B8D17AF7BA402A7F34D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-password-reset-code-ru-767.png",
+      "bytes": 41774,
+      "sha256": "7784281B6BCEE4077E6F9DFDD2928B9F0A72E1981E406C763BFE47C292CA15DF",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-password-reset-code-ru-768.png",
+      "bytes": 43934,
+      "sha256": "4CB63D34907AE61FAB5D720A0475883CFF8730A28E5F9F3377D80629C3E939C5",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-reduced-motion-ru-720.png",
+      "bytes": 27439,
+      "sha256": "1C6D73F30634CAC9602A29562731293434CEBBCD2A3047DA1D80488CF5487D70",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-sign-in-ru-390.png",
+      "bytes": 25503,
+      "sha256": "B1BE73782D6E9CD11D97AF0FBA2023853FB7A06DAD37711E074A6465499FA5B2",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-sign-in-ru-767.png",
+      "bytes": 27302,
+      "sha256": "F1BBE5F7110A5D9B55F7DD59D37935AD74FC48271332F6428DC3CC47B99F8283",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/screenshots/shell-sign-in-ru-768.png",
+      "bytes": 26554,
+      "sha256": "AD8DDCF1C1916857A0119DB9EBDF22D0643C81EDBC643A4177B7070F12DE0AD0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/SHA256SUMS.txt",
+      "bytes": 2532,
+      "sha256": "D26D72BE38F8F5B29941DE98FFC213852DD4153CB3F30D65D12E971BEAF50302",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/run-4298/shell-rendered-metrics.json",
+      "bytes": 41803,
+      "sha256": "6976EE220034A9CD68AE7D9E77E4E93011B5C641D3424CEE74CAFF501E5BA356",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-authenticated-header-en-767.png",
+      "bytes": 22738,
+      "sha256": "BED68310CD04768815BCFBA44D8EC6A3ED89BDD2DFD1B9BE1965881D35708F3F",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-authenticated-header-en-768.png",
+      "bytes": 26189,
+      "sha256": "99D843DDA1F075287FCEFFDE4C836016AE6D924ED6BDDA5FD41AD7C2BC9E183E",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-forced-colors-keyboard-en-desktop.png",
+      "bytes": 30428,
+      "sha256": "8832F379229AA1CA0DCED98A28BE666064A73D1582D92F5969EA77757FA6D4B6",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-keyboard-focus-en-desktop.png",
+      "bytes": 32635,
+      "sha256": "288BEAB277815D44B9D2AA267FBE519E090AEBA6FD48BBD40F2FD25D8FE626DF",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-landing-en-767.png",
+      "bytes": 26112,
+      "sha256": "A09B509DDBA82B184EF8E0BCA52E9E6B8ECFACE9D8FB41A67E4FA3846DDE11B8",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-landing-en-768.png",
+      "bytes": 26410,
+      "sha256": "091BF5A82DC50E84E8CC3F0034F6F9019031F5325A85AC6C1B2BB32C062DBF95",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-landing-en-desktop.png",
+      "bytes": 29058,
+      "sha256": "C16D8DA6A299C7469968C0E22933FC0E3348DB71A7605AB5EF728C036FCC033B",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-landing-ru-phone.png",
+      "bytes": 25429,
+      "sha256": "7BB47DF37786529E453C7C72AB6E7F120B50E891C9F86E9AFF49454A3357E63C",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-mobile-menu-en-390.png",
+      "bytes": 19357,
+      "sha256": "D1F1712ED47B617E8E0078F855933205808C9C82B9D0B0F76F69F61A6B5B77A7",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-password-reset-code-ru-390.png",
+      "bytes": 38383,
+      "sha256": "9E00D6FFC0303E5666E8F1009CB9CDE339DEBFE06DF4D1FB87666073BC68F537",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-password-reset-code-ru-767.png",
+      "bytes": 42053,
+      "sha256": "31EB9A9297FB4D3887635C386BD2F2AD0E40A91DCBCB070440A1D842412BBF8D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-password-reset-code-ru-768.png",
+      "bytes": 44322,
+      "sha256": "17847EB3AA6D3A5E9951DDE9D09ECC344F47DC2AF82707D52FA5E12CE70EA12C",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-reduced-motion-ru-720.png",
+      "bytes": 27439,
+      "sha256": "1C6D73F30634CAC9602A29562731293434CEBBCD2A3047DA1D80488CF5487D70",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-rendered-metrics.json",
+      "bytes": 41797,
+      "sha256": "37995DBAF100745259DA80C7F658BCA77F7C289294DA9A10D0C1AC0226622DA0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-sign-in-ru-390.png",
+      "bytes": 25503,
+      "sha256": "B1BE73782D6E9CD11D97AF0FBA2023853FB7A06DAD37711E074A6465499FA5B2",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-sign-in-ru-767.png",
+      "bytes": 27302,
+      "sha256": "F1BBE5F7110A5D9B55F7DD59D37935AD74FC48271332F6428DC3CC47B99F8283",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-sign-in-ru-768.png",
+      "bytes": 26554,
+      "sha256": "AD8DDCF1C1916857A0119DB9EBDF22D0643C81EDBC643A4177B7070F12DE0AD0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/account-delete-known-failure-en-desktop.png",
+      "bytes": 95125,
+      "sha256": "99B49DCE23F623912B01EC1DF1CCCBD479E7D1BAFB51BFCC5B475481DF222026",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/account-delete-soft-red-confirmation-en-desktop.png",
+      "bytes": 85605,
+      "sha256": "8CB46BA0A384CCB29FC2B7D12674307D577BA515B638FC30371509D0D6A71BA5",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/account-delete-unknown-ru-phone.png",
+      "bytes": 50632,
+      "sha256": "87E5DB8A181906F2CF134812CC3E656722D0596E974203CF44C940C429C94EF0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/account-invalid-password-en-desktop.png",
+      "bytes": 78801,
+      "sha256": "877194F4E94B89275D4C5D608B9965240433F9236A9F10D9FFBE840105259BC0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/account-locale-save-failure-en-desktop.png",
+      "bytes": 80950,
+      "sha256": "1B489CB1084C458636708C83A918B2094DCC2AA33C00540B4558F5CF7631D7CF",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/account-locale-save-pending-en-desktop.png",
+      "bytes": 76053,
+      "sha256": "0062D2F216CB4F4A5C34A0681A5163265CF0C65B41E97B8F5F94B8FAB53FE332",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-balance-unavailable-en-desktop.png",
+      "bytes": 41539,
+      "sha256": "1D1A63FB038D5A799804FE20701EBC6085558720837D0ADAB9731ECEF4DDFBA0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-history-older-failure-ru-phone.png",
+      "bytes": 45572,
+      "sha256": "CC44A88D9E945EE5DF61F1418E0DE17C76F940FB4FC6DEFB78C137E41C195444",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-history-show-more-loading-en-desktop.png",
+      "bytes": 44796,
+      "sha256": "4E233A88FCFD67EC9F4D49B4A2F2359E3A4BDE334BA4960345938F6548CB2352",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-packs-unavailable-ru-phone.png",
+      "bytes": 34260,
+      "sha256": "59531528E9F247F1F4BEBBA4CBA0147DA54E7FBE01EF24C59B912B394235F104",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-pending-checkout-posted-and-pending-history-en-desktop.png",
+      "bytes": 55250,
+      "sha256": "BE1A0BEADD4AB8C98C19C628B0A9F5486C29E7E133665204C83155BE99F1C636",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-unknown-checkout-ru-phone.png",
+      "bytes": 40686,
+      "sha256": "008325F83F09B7AD54E67D43953ABC6422FBA41D8BE1851D1ED1065A52BBF521",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/historical/account-delete-known-failure-en-desktop-mid-animation.png",
+      "bytes": 111626,
+      "sha256": "D7E7FBFA25E528ADD2BB2C84158FDFB25B9D0F6502E72F9A5F6A6F5D24FC95DA",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/historical/visual-checks-pre-animation-stabilization.json",
+      "bytes": 55159,
+      "sha256": "2FE35AE9AF289EF16DA2B7A554D81456A010FD7F72E79C3751D16C6ADFE11FB1",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-capacity-insufficient-balance-en-desktop.png",
+      "bytes": 116320,
+      "sha256": "36F877E0694A03377B96C920AB7115D153352320D1FC91AA6F7E3BD10F178C7C",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-compatible-preview-ready-en-desktop.png",
+      "bytes": 108866,
+      "sha256": "5A480265CCD33AFFBDA29B61CA1AFE6CE82B6A4D19623CA3266575E9326A9AF4",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-compatible-preview-retryable-error-en-desktop.png",
+      "bytes": 78221,
+      "sha256": "137917700DE879E9B51BA3E809AA5157D31B4CEF2A29EAD6669D79C4B732BBED",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-invalid-interval-ru-phone.png",
+      "bytes": 82827,
+      "sha256": "070AE04B58F67F09860CE074A3BFF5B860831E5656588C705A6ED727A9189C2D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-quote-service-failure-en-desktop.png",
+      "bytes": 103542,
+      "sha256": "39F3EC514DA1AB05B273E7047BEEC6BB35A2CE73B00ABFEA3541A5CAC6E431A8",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-range-phone-probe.json",
+      "bytes": 1264,
+      "sha256": "C881BE149DB378D82218112E27A9EB24C56B6D254295696CF87AE7ADD59E6818",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-replacement-failure-original-source-preserved-en-desktop.png",
+      "bytes": 113839,
+      "sha256": "AD96D35F83F4DEBA960CBBB9CF1D9B5699AFB0D22ACA033AA1BEDCD69B2FC90D",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-stale-quote-en-desktop.png",
+      "bytes": 104008,
+      "sha256": "713189774B465F703172BE42AA74934B8F1F8A08606E6723E65E30C7587F948A",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-upload-capacity-full-en-desktop.png",
+      "bytes": 34007,
+      "sha256": "8EC143479711C61E958BBAF409547C502D977AC24312D2A3F894F06D0EF21A44",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-upload-local-validation-error-en-desktop.png",
+      "bytes": 36228,
+      "sha256": "FEE0FB9B12E91B1509CA727BC9EADC40D49C91F85C71C194399DEBD5C2DD96FB",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-upload-pending-en-desktop.png",
+      "bytes": 44547,
+      "sha256": "C6961CC8EBB679729ADA73AACE3B225A63DBACE90AEB813DF538C99E74C60A2F",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-capacity-lifecycle-ru-767.png",
+      "bytes": 48780,
+      "sha256": "A5E287FAFA27116419B2A21378C737D61B72A0166DA542343578D2A0405C5D5B",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-capacity-lifecycle-ru-768.png",
+      "bytes": 51716,
+      "sha256": "242B163BD8727C553D51E95FE9248128A8D9064AABE8BD48F6AC9D457D80F1DF",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-delete-known-failure-en-desktop.png",
+      "bytes": 63317,
+      "sha256": "1DDC2282D1D3FC2B5336E81C1436D0F4CD3E6C5E5B49158742AD1AC84CCA1F14",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-delete-unknown-ru-phone.png",
+      "bytes": 45975,
+      "sha256": "6DC173A469DBF4BC999C358B712ECEDBBD711595373CD33BC774831D7F1A86EE",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-empty-en-767.png",
+      "bytes": 17514,
+      "sha256": "9BF8997305257E776189BCE5B3275538A05FA583D8AA05B3F2D1647957EF9BA1",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-list-failure-en-desktop.png",
+      "bytes": 21140,
+      "sha256": "C4F34C590D65339522FA2594660CEA93AA281FDEF98B9EBF34210EB35104E9FB",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-list-loading-en-desktop.png",
+      "bytes": 17953,
+      "sha256": "16C39D2BB7B025894B85A71E1638E9C0140F48DC5A8C11C9996842FE182E31F9",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-rename-save-error-en-desktop.png",
+      "bytes": 46772,
+      "sha256": "307A7374A52741412615F83A069EB06B4035ED9B7C243EC6944A3110D39FC124",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-rename-validation-en-desktop.png",
+      "bytes": 39479,
+      "sha256": "84C25DA35E3657CBE87B25FF25D4D8FC4E917C02BFBA0533E7488747873DFF59",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-row-menu-ru-767.png",
+      "bytes": 52538,
+      "sha256": "97DE80D7DD0350F9F0E08D6B306DF6FBC7FF02C4E5B1D50534E16F0A0E8FE28A",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/README.md",
+      "bytes": 9293,
+      "sha256": "B071E9F9CB98287B69E48BBFA1FE2DB7F5C800BCE1435CB58CC81EF4D8457FA0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/SHA256SUMS.historical-before-final-capture-2026-10-24.txt",
+      "bytes": 8419,
+      "sha256": "7E98F30901CD6E848962A614E854ECA78780526934D0D768F76FE3BC6028233F",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/SHA256SUMS.txt",
+      "bytes": 8419,
+      "sha256": "9CB52D6C3129B07F7B2348F914B636702144DD7CAC6D4DA33A1A283C7CEF5EC0",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/visual-checks.json",
+      "bytes": 55159,
+      "sha256": "2FE35AE9AF289EF16DA2B7A554D81456A010FD7F72E79C3751D16C6ADFE11FB1",
+      "category": "screen-evidence"
+    },
+    {
+      "path": "frontend/e2e/harness/result-delivery-state.html",
+      "bytes": 341,
+      "sha256": "56C12A2DE42C644AAF872FD50AB394EE29EABC72BAA866D927050336A2EEA24E",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/harness/result-delivery-state.tsx",
+      "bytes": 9122,
+      "sha256": "BEF47DF1A1EC61EFC1392F6581376205B0227B8375B13841F6565F98347BDDF5",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/harness/workspace-state-visual.html",
+      "bytes": 344,
+      "sha256": "C6E73F4DD301A68D228ADF6A10CF16C305B8A996FAF5FB8E4A9A68EF773B31EC",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/harness/workspace-state-visual.tsx",
+      "bytes": 15659,
+      "sha256": "D0158E637D583D05ACE1BA391204931F60EEAD799054EDB10605B565DC20EDBE",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/identity-account-journey.spec.ts",
+      "bytes": 12452,
+      "sha256": "07701DDB458D7E05FE966F5006E5B3411203D59B16AAC6E171A8898106674C2B",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/microphone-lifecycle.spec.ts",
+      "bytes": 17631,
+      "sha256": "27CB5773F9511EDEF7EC4D14E560AF02C883C4E7EFB44DE559B43166819B83B0",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/recording-viewport.spec.ts",
+      "bytes": 30245,
+      "sha256": "FA8F1DFA5A4F2B60AF5854FE6DCF7CBF11E7CE56F72ABEA999B192334125AAE8",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/result-delivery-state.spec.ts",
+      "bytes": 15577,
+      "sha256": "F28688434B9E37D10B59FFC88C33BEC30CDBCD62B1FB87C47ACEC4333D811BEF",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/shell-evidence.spec.ts",
+      "bytes": 17740,
+      "sha256": "28856E9C5415795D4F4CB537AA57071BCB972B7DEF912920EE039D0CD9757FAB",
+      "category": "source"
+    },
+    {
+      "path": "frontend/e2e/workspace-state-visual.spec.ts",
+      "bytes": 32511,
+      "sha256": "10F1EC73D0E6FED6F181D3C65313C2D3815735710A4D21D7D7C5C9BA1E5D2E26",
+      "category": "source"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 137099,
+      "sha256": "11DFB89CED5C2F80F56CAF47FEDA10AE7B453FAF23601D071FA5E29B5DA21971",
+      "category": "source"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 1576,
+      "sha256": "D39589829C70537883C578764AB988FDA41C507FDAC416F30C15F53E1913EFD1",
+      "category": "source"
+    },
+    {
+      "path": "frontend/playwright.result-state.config.ts",
+      "bytes": 758,
+      "sha256": "E6A3657EFED3A7389BE12722F0C55AF0FE1621403DB79CC7AEE05A41C9D52225",
+      "category": "source"
+    },
+    {
+      "path": "frontend/playwright.workspace-visual.config.ts",
+      "bytes": 764,
+      "sha256": "BE44BA92BC099FD65E6BC12AD56A867715F5CE068CE68983999519B26825FBA4",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/account-linking/AccountLinkingScreen.tsx",
+      "bytes": 50034,
+      "sha256": "E1499BD856669CD22AB49E9FF9AB3A145253EFD033ECFCF77DC7680DBB27AB84",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/account/AccountScreen.tsx",
+      "bytes": 37795,
+      "sha256": "3BD155C2F4DD4FA0233356B20B513F578005839F8944B84D01CB95C0803335E5",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/credits/CreditsScreen.css",
+      "bytes": 4145,
+      "sha256": "F5BB09B74168B2327EE33BB6B3F060F4C46ECDD075B087B75D6FF7A29694D436",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/credits/CreditsScreen.test.tsx",
+      "bytes": 10774,
+      "sha256": "DE6CBAC36CBB72E3058FE80225C42E6D3FD4F2FE99F0F30F80BA180BFD4C98C9",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/credits/CreditsScreen.tsx",
+      "bytes": 36675,
+      "sha256": "1007E078BBE470FA79D766ED91B0B82BE58C3BB15112491D8FFEA1CA4411675D",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/new-dub/NewDubScreen.css",
+      "bytes": 5771,
+      "sha256": "515AF9606B8F20B59710FE71D0E8D20B7C001131C251005DAF230DCA37922D08",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/projects/ProjectsScreen.css",
+      "bytes": 4650,
+      "sha256": "33CC2C8DD49F1F584F83513FA21A10D647216A775BAE8D2F7BA5CA3C606A3560",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/projects/ProjectsScreen.test.tsx",
+      "bytes": 12132,
+      "sha256": "EC3DA46CB8B48BEB6B71C45C4C2BC668DA1CCB385D5816837559AD40B501E733",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/projects/ProjectsScreen.tsx",
+      "bytes": 31067,
+      "sha256": "1DFA3F4AF83099AD457A38BC03BD044BF3AFB9EEEBBD1EEE5BA7B67446975E6F",
+      "category": "source"
+    },
+    {
+      "path": "frontend/src/features/result/ResultScreen.css",
+      "bytes": 3019,
+      "sha256": "711FB11382DB5B3CAFFA97961CCD79D90273B4C0C706E1A197E80DE5CD873AA8",
+      "category": "source"
+    },
+    {
+      "path": "frontend/tests/account-linking/AccountLinkingScreen.test.tsx",
+      "bytes": 14778,
+      "sha256": "6B1519083330E9B17A38D6C39E913C71EFF501052453E6FAB928F59E01D12951",
+      "category": "source"
+    },
+    {
+      "path": "frontend/tests/account/AccountScreen.test.tsx",
+      "bytes": 12122,
+      "sha256": "5B64ECD0688066092652CB0AC291145CA9C5766C72E52476ED90C66C8C935F72",
+      "category": "source"
+    }
+  ]
+}

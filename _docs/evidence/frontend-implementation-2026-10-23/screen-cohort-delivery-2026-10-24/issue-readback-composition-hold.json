@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-10-24",
+  "repository": "dystrophyless/dubbed.ai",
+  "authorization": "Root authorized this narrow workflow correction for issues #62 and #66 only while the visual-composition hold is active.",
+  "reason": "Composition verification was reopened after Root found double-applied 32px/16px gutters across Account and AccountLinking plus nested main landmarks.",
+  "preupdate_guard": {
+    "result": "Fresh live read before the updates confirmed each issue remained open, retained its existing title and frontend label, had zero comments, and contained the previously verified workflow/completion text and checked AC markers.",
+    "prior_acceptance_snapshot": "issue-readback-verified.json",
+    "prior_acceptance_body_baseline": {
+      "62": {
+        "chars": 23643,
+        "sha256": "07E3DB36EAC15873DD24CF772A391DFB720347035D0129E315ED21C8411ACD08"
+      },
+      "66": {
+        "chars": 21299,
+        "sha256": "1097AFC2CB3589B7F5B2B9B5F903EC784FD13D1A0F278277A3E9CEACD4AE4CE0"
+      }
+    },
+    "note": "The prior SHA values are the last recorded acceptance snapshot. The preupdate guard verified the live fields/text markers; this hold receipt does not claim a separately captured full-body preupdate SHA."
+  },
+  "updates": [
+    {
+      "issue_number": 62,
+      "workflow": "in_progress",
+      "state": "open",
+      "unchecked": [
+        "AC-07 shared gutters",
+        "AC-VIS-01"
+      ],
+      "other_criteria": "Preserved; checked functional criteria and prior checks are historical evidence for the pre-hold frozen boundary only."
+    },
+    {
+      "issue_number": 66,
+      "workflow": "in_progress",
+      "state": "open",
+      "unchecked": [
+        "AC-VIS-01"
+      ],
+      "other_criteria": "Preserved; checked functional criteria and prior checks are historical evidence for the pre-hold frozen boundary only."
+    }
+  ],
+  "postupdate_guard": [
+    {
+      "issue_number": 62,
+      "title": "Control account access and complete guarded sign-out or deletion",
+      "state": "open",
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "updated_at": "2026-10-24T00:43:32Z",
+      "workflow": "in_progress — Root reopened visual-composition verification on 2026-10-24 after finding double-applied 32px/16px gutters across Account and AccountLinking and nested main landmarks. The earlier mock-backed checks remain evidence for their recorded pre-hold frozen boundary only. AC-VIS-01 is unchecked pending the narrow correction and final re-verification; AC-07 (shared gutters) is also unchecked pending that verification. This issue remains open and is not currently accepted as complete.",
+      "body_length": 24448,
+      "checkboxes": [
+        "- [ ] AC-07: EN/RU, manual/browser/account locale precedence, current Clean/Light tokens, preserved Account section hierarchy, breakpoint/gutters/controls, keyboard/dialog focus/status/zoom/reduced motion and error placement meet the shared contract. Secrets/private identifiers/tokens/deletion internals remain out of public state, durable form state, logs, URLs and analytics. (F15-AC02/09/10/12.)",
+        "- [ ] AC-VIS-01: Applicable Clean/Light component appearance and states follow the current adoption/token contract with Mabry Pro and shadcn semantics. Cover locale-save pending/failure, method facts, invalid password, deletion cancel/error/unknown and soft-red destructive confirmation. Record the exact reference pair/state/value map and explicit derivative/contrast corrections; preserve every functional AC above. Missing required font/source/browser evidence blocks the affected visual claim."
+      ],
+      "comment_readback": "success"
+    },
+    {
+      "issue_number": 66,
+      "title": "Link sign-in methods to one account with explicit dual proof",
+      "state": "open",
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "updated_at": "2026-10-24T00:43:36Z",
+      "workflow": "in_progress — Root reopened visual-composition verification on 2026-10-24 after finding double-applied 32px/16px gutters across Account and AccountLinking and nested main landmarks. The earlier mock-backed checks remain evidence for their recorded pre-hold frozen boundary only. AC-VIS-01 is unchecked pending the narrow correction and final re-verification. This issue remains open and is not currently accepted as complete.",
+      "body_length": 21987,
+      "checkboxes": [
+        "- [x] AC-07: EN/RU, locale precedence, responsive authorized shell/auth-header choice, keyboard/focus/status, token geometry and restrained/reduced motion follow the shared contract with no private navigation leaked during proof. (F05-AC10/13/14.)",
+        "- [ ] AC-VIS-01: Applicable Clean/Light component appearance and states follow the current adoption/token contract with Mabry Pro and shadcn semantics. Cover proof incomplete/invalid, candidate pending, final-action disabled/loading, conflict, unknown and correction/cancel. Record the exact reference pair/state/value map and explicit derivative/contrast corrections; preserve every functional AC above. Missing required font/source/browser evidence blocks the affected visual claim."
+      ],
+      "comment_readback": "success"
+    }
+  ],
+  "boundary": "Only #62 and #66 were updated. Titles and labels are unchanged, both issues remain open, and no comments were added. No commit/push/closure occurred. This receipt is intentionally not staged during the hold."
+}

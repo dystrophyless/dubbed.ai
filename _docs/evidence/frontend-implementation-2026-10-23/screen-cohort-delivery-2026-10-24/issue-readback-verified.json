@@ -1,0 +1,418 @@
+{
+  "schema_version": 2,
+  "captured_at_utc": "2026-10-24T01:14:13.734Z",
+  "repository": "dystrophyless/dubbed.ai",
+  "verification": "Fresh guarded live read-back after the renewed update to #62 and #66. Both bodies match their prepared hashes; both remain open with the frontend label and zero comments. The other nine issue records are preserved from the prior fresh full-cohort read-back and remain verified/open; they were not rewritten in this renewal.",
+  "candidate_manifest_sha256": "F76018F133CE36FB369A87AF89DFEC870AC0AC8B92369A3DF9D9BFB893F89121",
+  "acceptance_record_sha256": "86488461C984DE490C1F457C8BDEEF51D403B52CBA7055BD62DF79434EDC878F",
+  "evidence_map_sha256": "00BF02470A6E31787461186C5938C3C7FC6E38F6C7E0F47FE1A0810DC12A753C",
+  "previous_full_cohort_readback_sha256": "F5A5E5C7FD6760B25B7F0318A4D034CD69ECA17073DE0AC60BAF37233A7DB223",
+  "previous_full_cohort_readback": {
+    "schema_version": 1,
+    "captured_at_utc": "2026-10-24T00:35:29.795Z",
+    "repository": "dystrophyless/dubbed.ai",
+    "verification": "Fresh GitHub read-back after updates. Exact body, title, labels and open state matched the prepared update; no issue was closed.",
+    "acceptance_record_sha256": "394C0A4B0870595995ECB01D489FF3E6CCEF2232330DEF93D5B7754C9D170D17",
+    "evidence_map_sha256": "58C8E6EB8A9FD6D9E51204A4247333E0A55F1743934513551F93ED0D56024566",
+    "issues": [
+      {
+        "issue_number": 62,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/62",
+        "title": "Control account access and complete guarded sign-out or deletion",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:34:35Z",
+        "body_chars": 23643,
+        "body_sha256": "07E3DB36EAC15873DD24CF772A391DFB720347035D0129E315ED21C8411ACD08",
+        "checked_ac_count": 9,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 65,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/65",
+        "title": "Reconcile a credit purchase and return to the preserved video safely",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:34:39Z",
+        "body_chars": 24107,
+        "body_sha256": "26D8D95BECF21A303D2F739D2CCA3FECC0AF2FCD6C04DF74D75A3DBC738E7C0A",
+        "checked_ac_count": 9,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 66,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/66",
+        "title": "Link sign-in methods to one account with explicit dual proof",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:34:42Z",
+        "body_chars": 21299,
+        "body_sha256": "1097AFC2CB3589B7F5B2B9B5F903EC784FD13D1A0F278277A3E9CEACD4AE4CE0",
+        "checked_ac_count": 9,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 69,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/69",
+        "title": "Check the current device microphone without creating a project take",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:34:46Z",
+        "body_chars": 18617,
+        "body_sha256": "9BF6A6AF5D0F14DCB7E2AF25BD1E1BA50BD0413E02B4EB8ADD35FE3A6A610224",
+        "checked_ac_count": 6,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 71,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/71",
+        "title": "Reset a password with purpose-bound proof and recover the correct session",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:34:49Z",
+        "body_chars": 21169,
+        "body_sha256": "2BAE3999AACBCA74759BA88AEC62EB39C36004F84052AC73162041EA0B0C7A26",
+        "checked_ac_count": 9,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 74,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/74",
+        "title": "Reconcile preparation progress, cancellation and safe reprocessing",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:34:52Z",
+        "body_chars": 21273,
+        "body_sha256": "A5075E3B70ECFEEC2CC30DACB20592DB0466DCBA11BBC09BAF569B99CEA1B81F",
+        "checked_ac_count": 8,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 75,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/75",
+        "title": "Resume and manage account-owned projects without losing lifecycle truth",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:34:56Z",
+        "body_chars": 17037,
+        "body_sha256": "B5C086B40A6B2EDB40AD37F3AC2AC3CEFA7B9FAF7EEB1A257B4DE8521C8A2F2B",
+        "checked_ac_count": 6,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 78,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/78",
+        "title": "Render the approved responsive shell, locale behavior and minimal landing",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:34:59Z",
+        "body_chars": 19254,
+        "body_sha256": "A0290F0779E8F76A4F7C04B4B4DC58CB44A95C7F82D52D0516A16F4F8E38F2E8",
+        "checked_ac_count": 6,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 79,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/79",
+        "title": "Present and download the exact authorized result generation safely",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:35:03Z",
+        "body_chars": 27937,
+        "body_sha256": "A03FEAF5ACC1037796D98E90FC528FF97E91E7BA82E6CD1F50F36A542EC44004",
+        "checked_ac_count": 9,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 80,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/80",
+        "title": "Sign in and restore a protected session without replaying work",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:35:06Z",
+        "body_chars": 21820,
+        "body_sha256": "FEB2E2D924FA1D286BB16E9BA82BB7B383CF7F535F4F9A86D9417DCE7394DD57",
+        "checked_ac_count": 8,
+        "unchecked_ac_count": 0,
+        "comments": []
+      },
+      {
+        "issue_number": 82,
+        "url": "https://github.com/dystrophyless/dubbed.ai/issues/82",
+        "title": "Complete verified registration without duplicating an account or grant",
+        "state": "open",
+        "state_reason": null,
+        "labels": [
+          "frontend"
+        ],
+        "assignees": [],
+        "milestone": null,
+        "updated_at": "2026-10-24T00:35:10Z",
+        "body_chars": 21609,
+        "body_sha256": "F76F26E8B9960959C965D64697521BAD024FDDA04AFEA6A2602E8D25DEDF9E3D",
+        "checked_ac_count": 9,
+        "unchecked_ac_count": 0,
+        "comments": []
+      }
+    ]
+  },
+  "issues": [
+    {
+      "issue_number": 65,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/65",
+      "title": "Reconcile a credit purchase and return to the preserved video safely",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:34:39Z",
+      "body_chars": 24107,
+      "body_sha256": "26D8D95BECF21A303D2F739D2CCA3FECC0AF2FCD6C04DF74D75A3DBC738E7C0A",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 69,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/69",
+      "title": "Check the current device microphone without creating a project take",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:34:46Z",
+      "body_chars": 18617,
+      "body_sha256": "9BF6A6AF5D0F14DCB7E2AF25BD1E1BA50BD0413E02B4EB8ADD35FE3A6A610224",
+      "checked_ac_count": 6,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 71,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/71",
+      "title": "Reset a password with purpose-bound proof and recover the correct session",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:34:49Z",
+      "body_chars": 21169,
+      "body_sha256": "2BAE3999AACBCA74759BA88AEC62EB39C36004F84052AC73162041EA0B0C7A26",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 74,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/74",
+      "title": "Reconcile preparation progress, cancellation and safe reprocessing",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:34:52Z",
+      "body_chars": 21273,
+      "body_sha256": "A5075E3B70ECFEEC2CC30DACB20592DB0466DCBA11BBC09BAF569B99CEA1B81F",
+      "checked_ac_count": 8,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 75,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/75",
+      "title": "Resume and manage account-owned projects without losing lifecycle truth",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:34:56Z",
+      "body_chars": 17037,
+      "body_sha256": "B5C086B40A6B2EDB40AD37F3AC2AC3CEFA7B9FAF7EEB1A257B4DE8521C8A2F2B",
+      "checked_ac_count": 6,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 78,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/78",
+      "title": "Render the approved responsive shell, locale behavior and minimal landing",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:34:59Z",
+      "body_chars": 19254,
+      "body_sha256": "A0290F0779E8F76A4F7C04B4B4DC58CB44A95C7F82D52D0516A16F4F8E38F2E8",
+      "checked_ac_count": 6,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 79,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/79",
+      "title": "Present and download the exact authorized result generation safely",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:35:03Z",
+      "body_chars": 27937,
+      "body_sha256": "A03FEAF5ACC1037796D98E90FC528FF97E91E7BA82E6CD1F50F36A542EC44004",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 80,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/80",
+      "title": "Sign in and restore a protected session without replaying work",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:35:06Z",
+      "body_chars": 21820,
+      "body_sha256": "FEB2E2D924FA1D286BB16E9BA82BB7B383CF7F535F4F9A86D9417DCE7394DD57",
+      "checked_ac_count": 8,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 82,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/82",
+      "title": "Complete verified registration without duplicating an account or grant",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T00:35:10Z",
+      "body_chars": 21609,
+      "body_sha256": "F76F26E8B9960959C965D64697521BAD024FDDA04AFEA6A2602E8D25DEDF9E3D",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 62,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/62",
+      "title": "Control account access and complete guarded sign-out or deletion",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T01:11:40Z",
+      "body_chars": 25521,
+      "body_sha256": "B0B98C717121A5B97520A26355BE6F4DBF5EAB099D0931BA3D2FE1FD0CC4F6BC",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "comments": []
+    },
+    {
+      "issue_number": 66,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/66",
+      "title": "Link sign-in methods to one account with explicit dual proof",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "assignees": [],
+      "milestone": null,
+      "updated_at": "2026-10-24T01:11:44Z",
+      "body_chars": 23322,
+      "body_sha256": "F5B062D515DC2E09D63BC2EB2F6BE909835C4B3AE51EF15A660B24F6BDEC3497",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "comments": []
+    }
+  ]
+}

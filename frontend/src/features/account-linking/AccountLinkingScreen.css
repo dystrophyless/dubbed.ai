@@ -1,5 +1,5 @@
 .account-linking-screen {
-  width: min(100% - 48px, 840px);
+  width: min(100%, 840px);
   margin: 0 auto;
   padding: 40px 0 72px;
   color: var(--text-primary);
@@ -232,7 +232,7 @@
 
 @media (max-width: 767px) {
   .account-linking-screen {
-    width: calc(100% - 32px);
+    width: 100%;
     padding: 24px 0 52px;
   }
 

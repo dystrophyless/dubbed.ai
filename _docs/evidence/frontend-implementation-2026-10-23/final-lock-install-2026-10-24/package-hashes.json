@@ -1,0 +1,12 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D39589829C70537883C578764AB988FDA41C507FDAC416F30C15F53E1913EFD1",
+    "Path": "D:\\Program\\python\\Dubbed\\frontend\\package.json"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "11DFB89CED5C2F80F56CAF47FEDA10AE7B453FAF23601D071FA5E29B5DA21971",
+    "Path": "D:\\Program\\python\\Dubbed\\frontend\\package-lock.json"
+  }
+]

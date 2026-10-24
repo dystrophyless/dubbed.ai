@@ -1,0 +1,17 @@
+c80f43e7107b8984124481eb653ee272908cced2765b2ae80e8d7dfe10423cea  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/README.md
+0a481eac34e8f4d1d27f8edf668cf2c1251e1678878e11c4cb43c744c4925ebf  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-app-main-767-768-boundary.geometry.json
+6a40c54ab954d1b45ef5062f391bfec308c88e143a6bf06e43a6fedd5516029a  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-progress-known-en-desktop.geometry.json
+08221ecdce2f355f680cb0a3ec5d246aa7c80d863f9cc2727f647e8277cda23c  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-progress-known-en-desktop.png
+2b97b8167075222c62e612c8e20fe5567da418e49bbe7134a126858e0e918e24  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-progress-untrusted-ru-phone.png
+f011f68ce6e26278300744c38585c7b5c5f5ecd9ba5856498989b61ba38cda0c  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-retry-submitting-ru-phone.geometry.json
+124288b93010ad33233664c5be05fa6bfd986b991d390ea462aab23423dc98eb  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-retry-submitting-ru-phone.png
+5c640483a35cabfd9d0b86470c54adf3c4a8670c5ca55fddaf1c475d80b8fc60  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-assembly-retry-unknown-ru-phone.png
+61d49a73bff1bd3ec6c106027e79d0aba1bed5f3a0ab1accaaa29a2f92cbff4b  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-expired-descriptor-ru-phone.png
+ec1642714c87f97f7e0b3fa7528cf57cc56a0183727f97061ec3709f31aedefd  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-expired-recovered-ru-phone.png
+89ccd159eaa776b4ecd33d2cc7f4a9cf90e2a71af8e2b9928983f219c8bfa769  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-network-error-en-desktop.png
+33977ff5eaad408733a4d9d1f93fddd0e189112dfb3f2d8c3f48be734ab3c9dd  _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-network-recovered-en-desktop.png
+56c12a2de42c644aaf872fd50ab394ee29eabc72baa866d927050336a2eea24e  frontend/e2e/harness/result-delivery-state.html
+bef47df1a1ec61efc1392f6581376205b0227b8375b13841f6565f98347bddf5  frontend/e2e/harness/result-delivery-state.tsx
+f28688434b9e37d10b59ffc88c33bec30cdbcd62b1fb87c47acec4333d811bef  frontend/e2e/result-delivery-state.spec.ts
+e6a3657efed3a7389be12722f0c55af0fe1621403db79cc7aee05a41c9d52225  frontend/playwright.result-state.config.ts
+711fb11382db5b3caffa97961ccd79d90273b4c0c706e1a197e80de5cd873aa8  frontend/src/features/result/ResultScreen.css

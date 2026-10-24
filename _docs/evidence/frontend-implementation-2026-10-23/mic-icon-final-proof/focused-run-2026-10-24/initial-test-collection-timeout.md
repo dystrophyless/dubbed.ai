@@ -1,0 +1,5 @@
+# Initial focused-run test-only timeout
+
+The first execution of `npm.cmd run test:e2e -- --grep "keyboard can play the local mic test"` failed after the keyboard Listen playback and lifecycle assertions had run, during final JSON collection. It had navigated to the clean microphone visit, where permission had not yet been requested and the meter was intentionally absent. The test then tried `getByRole('meter', { name: 'Microphone input level' }).getAttribute('role')` to rebuild the saved observation. Playwright timed out waiting for that locator.
+
+This was test evidence ordering, not a product defect: earlier assertions on the initial, explicitly permission-granted screen had already checked the meter role, localized name, numeric 0–100 range/value and visible non-color meaning. The test was corrected to snapshot those attributes before route exit. The subsequent focused run passed. The original Playwright error-context file had been removed by the later successful runner invocation before it could be archived; this note preserves the exact observed cause and correction without presenting a raw error-context file as retained evidence.

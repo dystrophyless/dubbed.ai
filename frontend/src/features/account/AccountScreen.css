@@ -1,5 +1,5 @@
 .account-screen {
-  width: min(100% - 64px, 1200px);
+  width: min(100%, 1200px);
   margin: 0 auto;
   padding: 48px 0 80px;
   color: var(--text-primary);
@@ -301,7 +301,7 @@
 
 @media (max-width: 767px) {
   .account-screen {
-    width: calc(100% - 32px);
+    width: 100%;
     padding: 32px 0 56px;
   }
 

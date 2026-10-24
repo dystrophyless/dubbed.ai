@@ -1,0 +1,19 @@
+
+> frontend@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.5 D:/Program/python/Dubbed/frontend
+
+Not implemented: HTMLMediaElement's pause() method
+Not implemented: HTMLMediaElement's pause() method
+
+ Test Files  44 passed (44)
+      Tests  217 passed (217)
+   Start at  05:51:33
+   Duration  42.29s (environment 55%, tests 25%, setup 12%, import 6%, transform 1%)
+
+Environment  jsdom was created 44 times · 139.17s total, 55% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

@@ -27,6 +27,9 @@ type Copy = {
   used: (used: number, total: number) => string
   packs: string
   noPacks: string
+  packsError: string
+  retryPacks: string
+  packsLoading: string
   mockOnly: string
   mockAmount: (amount: string) => string
   startMock: string
@@ -66,6 +69,9 @@ const copy: Record<'en' | 'ru', Copy> = {
     used: (used, total) => `${used} of ${total} projects used`,
     packs: 'Credit packs',
     noPacks: 'No purchase offers are configured here.',
+    packsError: 'Credit packs could not be loaded. Retry to check available offers.',
+    retryPacks: 'Retry packs',
+    packsLoading: 'Loading credit packs…',
     mockOnly: 'Local mock scenario only. No payment is collected and no payment provider is connected.',
     mockAmount: (amount) => `Configured mock amount: ${amount}. This is test currency, not a real price.`,
     startMock: 'Start mock checkout',
@@ -111,6 +117,9 @@ const copy: Record<'en' | 'ru', Copy> = {
     used: (used, total) => `Использовано проектов: ${used} из ${total}`,
     packs: 'Пакеты кредитов',
     noPacks: 'Предложения для покупки не настроены.',
+    packsError: 'Не удалось загрузить пакеты кредитов. Повторите попытку, чтобы проверить доступные предложения.',
+    retryPacks: 'Повторить загрузку пакетов',
+    packsLoading: 'Загружаем пакеты кредитов…',
     mockOnly: 'Только локальный сценарий имитации. Оплата не списывается, платёжный провайдер не подключён.',
     mockAmount: (amount) => `Условная сумма: ${amount}. Это тестовая валюта, а не реальная цена.`,
     startMock: 'Начать пробную покупку',
@@ -229,6 +238,8 @@ export function CreditsScreen({ identity, locale, services, navigate }: FeatureS
   const [historyPageLoading, setHistoryPageLoading] = useState(false)
   const [historyPageError, setHistoryPageError] = useState<ServiceProblemCode | 'generic' | null>(null)
   const [packs, setPacks] = useState<CreditPack[] | null>(null)
+  const [packLoading, setPackLoading] = useState(true)
+  const [packError, setPackError] = useState<ServiceProblemCode | 'generic' | null>(null)
   const [loading, setLoading] = useState(true)
   const [loadError, setLoadError] = useState<ServiceProblemCode | 'generic' | null>(null)
   const [intent, setIntent] = useState<StoredPurchaseIntent | null>(null)
@@ -251,6 +262,8 @@ export function CreditsScreen({ identity, locale, services, navigate }: FeatureS
     setLoadError(null)
     setHistoryPageLoading(false)
     setHistoryPageError(null)
+    setPackLoading(true)
+    setPackError(null)
     const [balanceResult, historyResult, packResult] = await Promise.all([
       services.credits.snapshot(),
       services.credits.historyPage({}),
@@ -272,13 +285,44 @@ export function CreditsScreen({ identity, locale, services, navigate }: FeatureS
       setHistoryCursor(null)
       setLoadError(problemCode(historyResult) ?? 'generic')
     }
-    if (packResult.status === 'ok') setPacks(packResult.data)
+    if (packResult.status === 'ok') {
+      setPacks(packResult.data)
+      setPackError(null)
+    }
     else {
       setPacks(null)
-      setLoadError(problemCode(packResult) ?? 'generic')
+      setPackError(problemCode(packResult) ?? 'generic')
     }
+    setPackLoading(false)
     setLoading(false)
   }, [account, services])
+
+  const retryPacks = useCallback(async () => {
+    if (!account || packLoading) return
+    const generation = historyRequestGeneration.current
+    const requestedAccountId = account.id
+    setPackLoading(true)
+    try {
+      const result = await services.credits.packs()
+      if (generation !== historyRequestGeneration.current || activeAccountId.current !== requestedAccountId) return
+      if (result.status === 'ok') {
+        setPacks(result.data)
+        setPackError(null)
+      } else {
+        setPacks(null)
+        setPackError(problemCode(result) ?? 'generic')
+      }
+    } catch {
+      if (generation === historyRequestGeneration.current && activeAccountId.current === requestedAccountId) {
+        setPacks(null)
+        setPackError('generic')
+      }
+    } finally {
+      if (generation === historyRequestGeneration.current && activeAccountId.current === requestedAccountId) {
+        setPackLoading(false)
+      }
+    }
+  }, [account, packLoading, services])
 
   const loadOlderHistory = useCallback(async () => {
     if (!account || !historyCursor || historyPageLoading) return
@@ -747,10 +791,19 @@ export function CreditsScreen({ identity, locale, services, navigate }: FeatureS
         </section>
       )}
 
-      <section className="credits-section" aria-labelledby="credits-packs-title">
+      <section className="credits-section" aria-labelledby="credits-packs-title" aria-busy={packLoading}>
         <h2 id="credits-packs-title">{text.packs}</h2>
+        {packError && (
+          <div className="credits-pack-error" aria-busy={packLoading}>
+            <Notice tone="error" role="alert">{text.packsError}</Notice>
+            <Button variant="secondary" onClick={() => void retryPacks()} busy={packLoading} aria-busy={packLoading}>
+              {packLoading ? text.packsLoading : text.retryPacks}
+            </Button>
+          </div>
+        )}
+        {packLoading && !loading && !packError && <p className="workspace-status" role="status">{text.packsLoading}</p>}
         {packs?.length === 0 && <p className="workspace-muted">{text.noPacks}</p>}
-        {packs === null && !loading && !loadError && <p className="workspace-muted">{text.noPacks}</p>}
+        {packs === null && !loading && !loadError && !packError && <p className="workspace-muted">{text.noPacks}</p>}
         <ul className="credits-pack-list">
           {packs?.map((pack) => (
             <li className="credits-pack" key={pack.id}>

@@ -282,6 +282,14 @@
     gap: 20px;
   }
 
+  .new-dub-text-button {
+    min-height: 48px;
+  }
+
+  .new-dub-range input[type='range'] {
+    height: 48px;
+  }
+
   .new-dub-heading h1 {
     font-size: 24px;
     line-height: 32px;

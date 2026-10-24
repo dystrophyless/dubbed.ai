@@ -1,3 +1,7 @@
+import { createHash } from 'node:crypto'
+import { mkdir, writeFile } from 'node:fs/promises'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { expect, test, type Page } from '@playwright/test'
 import {
   continueThroughRecordingEntryGate,
@@ -7,6 +11,11 @@ import {
   uploadKnownSourceThroughUi,
 } from './helpers/journey.js'
 import { newE2ECredentials } from './helpers/identity.js'
+
+const microphoneProofDirectory = resolve(
+  dirname(fileURLToPath(import.meta.url)),
+  '../../_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof',
+)
 
 interface MicrophoneLifecycleState {
   trackStops: number
@@ -234,6 +243,136 @@ test('a failed test can be retried, listened to locally, and its Blob is revoked
   await expect(page.getByRole('button', { name: 'Record test', exact: true })).toBeDisabled()
   await expect(page.locator('audio')).toHaveCount(0)
   await expect(page.getByText('Your browser has not been asked for microphone access yet.')).toBeVisible()
+})
+
+test('keyboard can play the local mic test and the input meter exposes numeric semantics', async ({ page, browser }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await mkdir(microphoneProofDirectory, { recursive: true })
+  await instrumentMicrophoneLifecycle(page)
+  await registerAndOpenMicrophone(page, 'microphone-keyboard-listen')
+  const writesBeforeTest = (await readLifecycle(page)).idbWrites
+
+  const meter = page.getByRole('meter', { name: 'Microphone input level' })
+  await expect(meter).toHaveAttribute('aria-valuemin', '0')
+  await expect(meter).toHaveAttribute('aria-valuemax', '100')
+  await expect(meter).toHaveAttribute('aria-valuenow', /^\d+$/)
+  await expect(page.getByText('This local meter reports signal level only. It does not judge speech or readiness.')).toBeVisible()
+  const meterValue = Number(await meter.getAttribute('aria-valuenow'))
+  expect(Number.isInteger(meterValue)).toBe(true)
+  expect(meterValue).toBeGreaterThanOrEqual(0)
+  expect(meterValue).toBeLessThanOrEqual(100)
+  const meterSemantics = await meter.evaluate((element) => ({
+    role: element.getAttribute('role'),
+    name: element.getAttribute('aria-label'),
+    min: Number(element.getAttribute('aria-valuemin')),
+    max: Number(element.getAttribute('aria-valuemax')),
+    value: Number(element.getAttribute('aria-valuenow')),
+    visibleMeaning: 'This local meter reports signal level only. It does not judge speech or readiness.',
+  }))
+
+  await page.getByRole('button', { name: 'Record test', exact: true }).click()
+  await expect(page.getByRole('button', { name: 'Stop', exact: true })).toBeVisible()
+  await page.waitForTimeout(1_200)
+  await page.getByRole('button', { name: 'Stop', exact: true }).click()
+
+  const localAudio = page.getByLabel('Local test recording')
+  await expect(localAudio).toBeVisible()
+  await expect.poll(() => localAudio.evaluate((element) => (element as HTMLAudioElement).currentSrc.startsWith('blob:'))).toBe(true)
+  await localAudio.evaluate((element) => {
+    const audio = element as HTMLAudioElement
+    audio.muted = true
+    audio.volume = 0
+  })
+
+  const recordTestButton = page.getByRole('button', { name: 'Record test', exact: true })
+  await recordTestButton.focus()
+  await page.keyboard.press('Tab')
+  await expect(localAudio).toBeFocused()
+  await expect.poll(() => localAudio.evaluate((element) => (element as HTMLAudioElement).paused)).toBe(true)
+  await page.keyboard.press('Space')
+  await expect.poll(() => localAudio.evaluate((element) => !(element as HTMLAudioElement).paused)).toBe(true)
+  await expect.poll(() => localAudio.evaluate((element) => (element as HTMLAudioElement).currentTime)).toBeGreaterThan(0.1)
+
+  const playback = await localAudio.evaluate((element) => {
+    const audio = element as HTMLAudioElement
+    return {
+      paused: audio.paused,
+      currentTimeSeconds: audio.currentTime,
+      durationSeconds: audio.duration,
+      muted: audio.muted,
+      volume: audio.volume,
+      sourceProtocol: new URL(audio.currentSrc).protocol,
+      focused: document.activeElement === audio,
+    }
+  })
+  expect(playback.paused).toBe(false)
+  expect(playback.currentTimeSeconds).toBeGreaterThan(0.1)
+  expect(playback.durationSeconds).toBeGreaterThan(0)
+  expect(playback.muted).toBe(true)
+  expect(playback.volume).toBe(0)
+  expect(playback.sourceProtocol).toBe('blob:')
+  expect(playback.focused).toBe(true)
+
+  const screenshotName = 'microphone-listen-keyboard-en-1440.png'
+  const screenshot = await page.screenshot({
+    path: resolve(microphoneProofDirectory, screenshotName),
+    fullPage: true,
+  })
+  const screenshotSha256 = createHash('sha256').update(screenshot).digest('hex')
+  await writeFile(
+    resolve(microphoneProofDirectory, 'microphone-listen-keyboard.sha256'),
+    `${screenshotSha256}  ${screenshotName}\n`,
+    'utf8',
+  )
+
+  expect((await readLifecycle(page)).idbWrites).toBe(writesBeforeTest)
+  await page.getByRole('button', { name: 'Continue to New Dub', exact: true }).click()
+  await expect(page.getByRole('heading', { name: 'New dub' })).toBeVisible()
+  const afterExit = await readLifecycle(page)
+  expect(afterExit.objectUrlsCreated).toHaveLength(1)
+  expect(afterExit.objectUrlsRevoked).toEqual(afterExit.objectUrlsCreated)
+  expect(afterExit.recorderStops).toBeGreaterThan(0)
+  expect(afterExit.trackStops).toBeGreaterThan(0)
+  expect(afterExit.idbWrites).toBe(writesBeforeTest)
+
+  await page.goto('/microphone?origin=new')
+  await expect(page.getByRole('heading', { name: 'Check your microphone' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Record test', exact: true })).toBeDisabled()
+  await expect(page.locator('audio')).toHaveCount(0)
+
+  await writeFile(
+    resolve(microphoneProofDirectory, 'microphone-listen-keyboard-proof.json'),
+    `${JSON.stringify(
+      {
+        test: 'keyboard can play the local mic test and the input meter exposes numeric semantics',
+        environment: {
+          os: process.platform,
+          node: process.version,
+          browser: 'Chromium',
+          browserVersion: browser.version(),
+          viewport: { width: 1440, height: 900 },
+          serviceAdapter: 'mock',
+          media: 'Chromium fake device and fake permission UI; browser audio muted; element muted and volume 0',
+          physicalMicrophoneUsed: false,
+        },
+        meter: meterSemantics,
+        playback,
+        lifecycle: {
+          indexedDbWritesBeforeTest: writesBeforeTest,
+          indexedDbWritesAfterExit: afterExit.idbWrites,
+          objectUrlsCreated: afterExit.objectUrlsCreated,
+          objectUrlsRevoked: afterExit.objectUrlsRevoked,
+          recorderStops: afterExit.recorderStops,
+          trackStops: afterExit.trackStops,
+          returnedVisitHasAudioElement: false,
+        },
+        screenshot: { file: screenshotName, sha256: screenshotSha256 },
+      },
+      null,
+      2,
+    )}\n`,
+    'utf8',
+  )
 })
 
 test('the visible Record microphone entry returns to the same project screen', async ({ page }) => {

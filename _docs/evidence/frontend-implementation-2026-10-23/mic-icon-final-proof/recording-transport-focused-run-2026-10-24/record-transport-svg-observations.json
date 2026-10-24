@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24",
+  "boundary": "Current RecordingScreen, mock app services, synthetic local recording; browser playback only.",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "states": {
+    "play": {
+      "accessibleName": "Play",
+      "enabled": true,
+      "focused": true,
+      "buttonColor": "rgba(0, 0, 0, 0.88)",
+      "icon": {
+        "viewBox": "0 0 24 24",
+        "fillAttribute": "none",
+        "strokeAttribute": "currentColor",
+        "strokeWidthAttribute": "1.1",
+        "lineCapAttribute": "round",
+        "lineJoinAttribute": "round",
+        "ariaHidden": "true",
+        "focusable": "false",
+        "computedFill": "none",
+        "computedStroke": "rgba(0, 0, 0, 0.88)",
+        "computedStrokeWidth": "1.1px",
+        "computedLineCap": "round",
+        "computedLineJoin": "round",
+        "width": 14,
+        "height": 14
+      }
+    },
+    "pause": {
+      "accessibleName": "Pause",
+      "enabled": true,
+      "focused": true,
+      "buttonColor": "rgba(0, 0, 0, 0.88)",
+      "icon": {
+        "viewBox": "0 0 24 24",
+        "fillAttribute": "none",
+        "strokeAttribute": "currentColor",
+        "strokeWidthAttribute": "1.1",
+        "lineCapAttribute": "round",
+        "lineJoinAttribute": "round",
+        "ariaHidden": "true",
+        "focusable": "false",
+        "computedFill": "none",
+        "computedStroke": "rgba(0, 0, 0, 0.88)",
+        "computedStrokeWidth": "1.1px",
+        "computedLineCap": "round",
+        "computedLineJoin": "round",
+        "width": 14,
+        "height": 14
+      }
+    }
+  }
+}

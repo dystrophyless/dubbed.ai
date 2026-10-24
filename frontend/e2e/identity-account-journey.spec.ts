@@ -1,3 +1,6 @@
+import { mkdirSync, writeFileSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { expect, test, type Page } from '@playwright/test'
 import { installBrowserDiagnostics } from './helpers/diagnostics.js'
 import {
@@ -5,6 +8,28 @@ import {
   startRegistrationFromLanding,
 } from './helpers/journey.js'
 import { newE2ECredentials } from './helpers/identity.js'
+
+const layoutEvidenceDirectory = resolve(dirname(fileURLToPath(import.meta.url)), '../..', '_docs/evidence/frontend-implementation-2026-10-23/account-shell-layout')
+type LayoutLocale = 'en' | 'ru'
+type LayoutMeasurement = {
+  screen: string
+  locale: LayoutLocale
+  viewportWidth: number
+  mainCount: number
+  appContentLeft: number
+  appContentWidth: number
+  appGutterLeft: number
+  appGutterRight: number
+  screenLeft: number
+  screenWidth: number
+  titleLeft: number
+  screenPaddingTop: number
+  screenPaddingBottom: number
+  documentWidth: number
+  mabryLoaded: boolean
+  screenshot: string | null
+}
+const layoutMeasurements: LayoutMeasurement[] = []
 
 async function withDiagnostics(
   page: Page,
@@ -36,6 +61,117 @@ async function signInThroughUi(page: Page, email: string, password: string): Pro
   await page.getByLabel('Email').fill(email)
   await page.getByLabel('Password', { exact: true }).fill(password)
   await page.getByRole('button', { name: 'Sign in', exact: true }).click()
+}
+
+async function assertScreenUsesAppContentGutter(
+  page: Page,
+  screenSelector: '.account-screen' | '.account-linking-screen',
+  locale: LayoutLocale,
+  heading: string,
+  maxWidth: number,
+): Promise<void> {
+  const widths = [390, 767, 768, 1440]
+
+  for (const width of widths) {
+    await page.setViewportSize({ width, height: 900 })
+    const main = page.getByRole('main')
+    await expect(main).toHaveCount(1)
+    await expect(main.getByRole('heading', { name: heading, exact: true })).toBeVisible()
+    await page.evaluate(() => document.fonts.ready)
+
+    const geometry = await page.locator(screenSelector).evaluate((screen) => {
+      const appMain = document.getElementById('main-content')
+      const title = screen.querySelector('h1')
+      if (!appMain || !title) throw new Error('The active app shell and screen title must be mounted.')
+      const appRect = appMain.getBoundingClientRect()
+      const appStyle = window.getComputedStyle(appMain)
+      const contentLeft = appRect.left + Number.parseFloat(appStyle.paddingLeft)
+      const contentRight = appRect.right - Number.parseFloat(appStyle.paddingRight)
+      const screenRect = screen.getBoundingClientRect()
+
+      return {
+        mainCount: document.querySelectorAll('main').length,
+        contentLeft,
+        contentWidth: contentRight - contentLeft,
+        appGutterLeft: Number.parseFloat(appStyle.paddingLeft),
+        appGutterRight: Number.parseFloat(appStyle.paddingRight),
+        screenLeft: screenRect.left,
+        screenWidth: screenRect.width,
+        titleLeft: title.getBoundingClientRect().left,
+        screenPaddingTop: Number.parseFloat(window.getComputedStyle(screen).paddingTop),
+        screenPaddingBottom: Number.parseFloat(window.getComputedStyle(screen).paddingBottom),
+        documentWidth: document.documentElement.scrollWidth,
+        mabryLoaded: document.fonts.check('16px "Mabry Pro"'),
+      }
+    })
+    const expectedWidth = Math.min(geometry.contentWidth, maxWidth)
+    const expectedLeft = geometry.contentLeft + (geometry.contentWidth - expectedWidth) / 2
+    const phone = width < 768
+    const expectedGutter = phone ? 16 : 32
+    const expectedVerticalPadding = screenSelector === '.account-screen'
+      ? (phone ? { top: 32, bottom: 56 } : { top: 48, bottom: 80 })
+      : (phone ? { top: 24, bottom: 52 } : { top: 40, bottom: 72 })
+
+    expect(geometry.mainCount).toBe(1)
+    expect(geometry.screenWidth).toBeCloseTo(expectedWidth, 0)
+    expect(geometry.screenLeft).toBeCloseTo(expectedLeft, 0)
+    expect(geometry.titleLeft).toBeCloseTo(expectedLeft, 0)
+    expect(geometry.appGutterLeft).toBe(expectedGutter)
+    expect(geometry.appGutterRight).toBe(expectedGutter)
+    expect(geometry.screenPaddingTop).toBe(expectedVerticalPadding.top)
+    expect(geometry.screenPaddingBottom).toBe(expectedVerticalPadding.bottom)
+    expect(geometry.documentWidth).toBeLessThanOrEqual(width)
+
+    const screenshot = width === 390 || width === 1440
+      ? `${screenSelector.slice(1)}-${locale}-${width}.png`
+      : null
+    if (screenshot) {
+      mkdirSync(layoutEvidenceDirectory, { recursive: true })
+      await page.evaluate(() => document.fonts.ready)
+      await page.screenshot({
+        path: resolve(layoutEvidenceDirectory, screenshot),
+        fullPage: true,
+        animations: 'disabled',
+      })
+    }
+    layoutMeasurements.push({
+      screen: screenSelector.slice(1),
+      locale,
+      viewportWidth: width,
+      mainCount: geometry.mainCount,
+      appContentLeft: geometry.contentLeft,
+      appContentWidth: geometry.contentWidth,
+      appGutterLeft: geometry.appGutterLeft,
+      appGutterRight: geometry.appGutterRight,
+      screenLeft: geometry.screenLeft,
+      screenWidth: geometry.screenWidth,
+      titleLeft: geometry.titleLeft,
+      screenPaddingTop: geometry.screenPaddingTop,
+      screenPaddingBottom: geometry.screenPaddingBottom,
+      documentWidth: geometry.documentWidth,
+      mabryLoaded: geometry.mabryLoaded,
+      screenshot,
+    })
+  }
+
+  await page.setViewportSize({ width: 1440, height: 900 })
+}
+
+function writeLayoutEvidence(): void {
+  mkdirSync(layoutEvidenceDirectory, { recursive: true })
+  writeFileSync(resolve(layoutEvidenceDirectory, 'account-app-layout.json'), `${JSON.stringify({
+    capturedAt: new Date().toISOString(),
+    command: 'npm.cmd run test:e2e -- e2e/identity-account-journey.spec.ts',
+    factBoundary: 'Actual App route geometry with deterministic local mock identity data; no live identity provider or account service.',
+    expected: {
+      appGutter: { desktop: 32, phone: 16 },
+      accountMaximumWidth: 1200,
+      accountLinkingMaximumWidth: 840,
+      mainLandmarks: 1,
+      viewportWidths: [390, 767, 768, 1440],
+    },
+    measurements: layoutMeasurements,
+  }, null, 2)}\n`)
 }
 
 test.describe('local mock identity and account journeys', () => {
@@ -90,13 +226,26 @@ test.describe('local mock identity and account journeys', () => {
     await withDiagnostics(page, baseURL, async () => {
       const credentials = await registerThroughUi(page, 'account-link')
       const newPassword = `${credentials.password}-account`
+      layoutMeasurements.length = 0
+
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Projects', exact: true }).click()
+      await expect(page.getByRole('heading', { name: 'No projects yet', exact: true })).toBeVisible()
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Credits', exact: true }).click()
+      const credits = page.getByRole('region', { name: 'Credits' })
+      const available = credits.getByText('Available', { exact: true }).locator('..').locator('strong')
+      await expect(available).toBeVisible()
+      const initialAvailable = Number(await available.innerText())
+      expect(initialAvailable).toBeGreaterThan(0)
+      await expect(page.getByText('Welcome credits', { exact: true })).toHaveCount(1)
 
       await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Account', exact: true }).click()
       await expect(page.getByRole('heading', { name: 'Account', exact: true })).toBeVisible()
+      await assertScreenUsesAppContentGutter(page, '.account-screen', 'en', 'Account', 1200)
 
       const main = page.getByRole('main')
       await main.getByRole('combobox', { name: 'Language' }).selectOption('ru')
       await expect(page.getByRole('heading', { name: 'Аккаунт', exact: true })).toBeVisible()
+      await assertScreenUsesAppContentGutter(page, '.account-screen', 'ru', 'Аккаунт', 1200)
       await page.getByRole('main').getByRole('combobox', { name: 'Язык' }).selectOption('en')
       await expect(page.getByRole('heading', { name: 'Account', exact: true })).toBeVisible()
 
@@ -114,7 +263,23 @@ test.describe('local mock identity and account journeys', () => {
 
       await page.getByRole('button', { name: 'Link method', exact: true }).click()
       await expect(page.getByRole('heading', { name: 'Link a sign-in method' })).toBeVisible()
+      await assertScreenUsesAppContentGutter(page, '.account-linking-screen', 'en', 'Link a sign-in method', 840)
       await expect(page.getByText('This preview uses simulated account data. No real email or Google account is contacted.', { exact: true })).toBeVisible()
+
+      await page.locator('.account-linking-screen__back').click()
+      await expect(page.getByRole('heading', { name: 'Account', exact: true })).toBeVisible()
+      await page.getByRole('main').getByRole('combobox', { name: 'Language' }).selectOption('ru')
+      await expect(page.getByRole('heading', { name: 'Аккаунт', exact: true })).toBeVisible()
+      await page.locator('.account-screen__method button').click()
+      await expect(page.getByRole('heading', { name: 'Подключить способ входа', exact: true })).toBeVisible()
+      await assertScreenUsesAppContentGutter(page, '.account-linking-screen', 'ru', 'Подключить способ входа', 840)
+      writeLayoutEvidence()
+      await page.locator('.account-linking-screen__back').click()
+      await expect(page.getByRole('heading', { name: 'Аккаунт', exact: true })).toBeVisible()
+      await page.getByRole('main').getByRole('combobox', { name: 'Язык' }).selectOption('en')
+      await expect(page.getByRole('heading', { name: 'Account', exact: true })).toBeVisible()
+      await page.getByRole('button', { name: 'Link method', exact: true }).click()
+      await expect(page.getByRole('heading', { name: 'Link a sign-in method' })).toBeVisible()
       await page.getByRole('button', { name: 'Add Google', exact: true }).click()
 
       await page.getByLabel('Current account password').fill(newPassword)
@@ -123,12 +288,29 @@ test.describe('local mock identity and account journeys', () => {
       await page.getByRole('button', { name: 'Add Google', exact: true }).click()
 
       await expect(page.getByRole('heading', { name: 'Review the link' })).toBeVisible()
+      const googleAddress = await page.locator('.account-linking-screen__review-methods .account-linking-screen__method')
+        .filter({ hasText: 'Google' })
+        .locator('small')
+        .innerText()
+      expect(googleAddress).toMatch(/^google\+.+@example\.invalid$/)
       await page.getByRole('button', { name: 'Link methods', exact: true }).click()
       await expect(page.getByText('Both sign-in methods are linked to this account.', { exact: true })).toBeVisible()
 
       await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Account', exact: true }).click()
       await expect(page.getByRole('heading', { name: 'Account', exact: true })).toBeVisible()
-      await expect(page.getByText('Linked', { exact: true })).toHaveCount(2)
+      const emailMethod = page.locator('.account-screen__method').filter({ hasText: 'Email and password' })
+      const googleMethod = page.locator('.account-screen__method').filter({ hasText: 'Google' })
+      await expect(emailMethod.locator('.account-screen__method-address')).toHaveText(credentials.email)
+      await expect(googleMethod.locator('.account-screen__method-address')).toHaveText(googleAddress)
+      await expect(emailMethod.getByText('Linked', { exact: true })).toBeVisible()
+      await expect(googleMethod.getByText('Linked', { exact: true })).toBeVisible()
+
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Credits', exact: true }).click()
+      await expect(page.getByRole('region', { name: 'Credits' }).getByText('Available', { exact: true }).locator('..').locator('strong'))
+        .toHaveText(String(initialAvailable))
+      await expect(page.getByText('Welcome credits', { exact: true })).toHaveCount(1)
+      await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Projects', exact: true }).click()
+      await expect(page.getByRole('heading', { name: 'No projects yet', exact: true })).toBeVisible()
 
       await signOutThroughUi(page)
       await signInThroughUi(page, credentials.email, newPassword)

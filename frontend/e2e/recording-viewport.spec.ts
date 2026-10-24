@@ -16,6 +16,70 @@ const evidenceDirectory = resolve(
   process.cwd(),
   '../_docs/evidence/frontend-implementation-2026-10-23/record-redesign',
 )
+const playbackIconEvidenceDirectory = resolve(
+  process.cwd(),
+  '../_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof',
+)
+
+async function capturePlaybackGlyph(page: Page, testInfo: TestInfo, name: 'Play' | 'Pause') {
+  const button = page.getByRole('button', { name, exact: true })
+  const observation = await button.evaluate((element) => {
+    const svg = element.querySelector('svg')
+    if (!svg) throw new Error('Recording transport button is missing its Lucide SVG')
+    const bounds = svg.getBoundingClientRect()
+    const svgStyle = window.getComputedStyle(svg)
+    const buttonStyle = window.getComputedStyle(element)
+    return {
+      accessibleName: element.getAttribute('aria-label') ?? element.textContent?.trim() ?? '',
+      enabled: !(element as HTMLButtonElement).disabled,
+      focused: document.activeElement === element,
+      buttonColor: buttonStyle.color,
+      icon: {
+        viewBox: svg.getAttribute('viewBox'),
+        fillAttribute: svg.getAttribute('fill'),
+        strokeAttribute: svg.getAttribute('stroke'),
+        strokeWidthAttribute: svg.getAttribute('stroke-width'),
+        lineCapAttribute: svg.getAttribute('stroke-linecap'),
+        lineJoinAttribute: svg.getAttribute('stroke-linejoin'),
+        ariaHidden: svg.getAttribute('aria-hidden'),
+        focusable: svg.getAttribute('focusable'),
+        computedFill: svgStyle.fill,
+        computedStroke: svgStyle.stroke,
+        computedStrokeWidth: svgStyle.strokeWidth,
+        computedLineCap: svgStyle.strokeLinecap,
+        computedLineJoin: svgStyle.strokeLinejoin,
+        width: Math.round(bounds.width * 100) / 100,
+        height: Math.round(bounds.height * 100) / 100,
+      },
+    }
+  })
+
+  expect(observation.accessibleName).toBe(name)
+  expect(observation.enabled).toBe(true)
+  expect(observation.focused).toBe(true)
+  expect(observation.icon.viewBox).toBe('0 0 24 24')
+  expect(observation.icon.fillAttribute).toBe('none')
+  expect(observation.icon.strokeAttribute).toBe('currentColor')
+  expect(observation.icon.strokeWidthAttribute).toBe('1.1')
+  expect(observation.icon.lineCapAttribute).toBe('round')
+  expect(observation.icon.lineJoinAttribute).toBe('round')
+  expect(observation.icon.ariaHidden).toBe('true')
+  expect(observation.icon.focusable).toBe('false')
+  expect(observation.icon.computedFill).toBe('none')
+  expect(observation.icon.computedStroke).toBe(observation.buttonColor)
+  expect(Number.parseFloat(observation.icon.computedStrokeWidth)).toBeCloseTo(1.1)
+  expect(observation.icon.computedLineCap).toBe('round')
+  expect(observation.icon.computedLineJoin).toBe('round')
+  expect(observation.icon.width).toBeGreaterThan(0)
+  expect(observation.icon.height).toBeGreaterThan(0)
+
+  const screenshotName = `record-transport-${name.toLowerCase()}-en-1440.png`
+  const body = await page.screenshot({ fullPage: false })
+  await mkdir(playbackIconEvidenceDirectory, { recursive: true })
+  await writeFile(resolve(playbackIconEvidenceDirectory, screenshotName), body)
+  await testInfo.attach(screenshotName, { body, contentType: 'image/png' })
+  return observation
+}
 
 async function saveScreenshot(page: Page, testInfo: TestInfo, name: string) {
   const body = await page.screenshot({ fullPage: false })
@@ -231,14 +295,28 @@ test('recording transport stays in normal desktop flow and clears the RU phone s
   }).toBe(true)
   const pausedRecordingSwitch = await readMediaState(page)
 
-  await playButton.click()
+  await playButton.focus()
+  await expect(playButton).toBeFocused()
+  const playGlyph = await capturePlaybackGlyph(page, testInfo, 'Play')
+  await page.keyboard.press('Space')
   await expect.poll(async () => {
     const media = await readMediaState(page)
     return !media.videoPaused
       && !media.audioPaused
       && Math.abs((media.videoTime - sourceWindowStart) - media.audioTime) < 0.15
   }).toBe(true)
+  await expect(pauseButton).toBeFocused()
+  const pauseGlyph = await capturePlaybackGlyph(page, testInfo, 'Pause')
   const alignedRecordingPlayback = await readMediaState(page)
+  await writeFile(
+    resolve(playbackIconEvidenceDirectory, 'record-transport-svg-observations.json'),
+    `${JSON.stringify({
+      date: '2026-10-24',
+      boundary: 'Current RecordingScreen, mock app services, synthetic local recording; browser playback only.',
+      viewport: { width: 1440, height: 900 },
+      states: { play: playGlyph, pause: pauseGlyph },
+    }, null, 2)}\n`,
+  )
   await sourceMode.click()
   await expect.poll(async () => {
     const media = await readMediaState(page)

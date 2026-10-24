@@ -287,6 +287,21 @@ export function AccountScreen(props: FeatureScreenProps) {
   const [deleteCode, setDeleteCode] = useState<ServiceError['code'] | null>(null)
   const [deleteStorageFailed, setDeleteStorageFailed] = useState(false)
   const deleteResolutionRef = useRef<string | null>(null)
+  const deleteTriggerRef = useRef<HTMLButtonElement | null>(null)
+  const skipDeleteFocusReturnRef = useRef(false)
+
+  const restoreDeleteFocus = useCallback(() => {
+    const trigger = deleteTriggerRef.current
+    const currentTrigger = document.getElementById('account-delete-trigger') as HTMLButtonElement | null
+    const recovery = document.querySelector<HTMLButtonElement>('.account-screen__delete-recovery-action')
+    const availableTrigger = trigger?.isConnected && !trigger.disabled ? trigger : currentTrigger
+    const target = availableTrigger?.isConnected && !availableTrigger.disabled
+      ? availableTrigger
+      : recovery?.isConnected && !recovery.disabled
+        ? recovery
+        : null
+    target?.focus()
+  }, [])
 
   const reload = useCallback(async () => {
     if (!accountId) {
@@ -440,6 +455,7 @@ export function AccountScreen(props: FeatureScreenProps) {
     setDeleteCode(null)
     const result = await resolvePendingAccountDelete(props.services, pending)
     if (result.state === 'completed') {
+      skipDeleteFocusReturnRef.current = true
       setDeleteStatus('idle')
       successfulDeleteRoute(props.navigate, props.refreshIdentity)
     } else if (result.state === 'not-started') {
@@ -505,6 +521,7 @@ export function AccountScreen(props: FeatureScreenProps) {
       })
       if (result.status === 'ok') {
         clearPendingAccountDelete(operationId)
+        skipDeleteFocusReturnRef.current = true
         setDeleteStatus('idle')
         setDeleteOpen(false)
         successfulDeleteRoute(props.navigate, props.refreshIdentity)
@@ -577,14 +594,14 @@ export function AccountScreen(props: FeatureScreenProps) {
   )
 
   if (!identityAccount) {
-    return <main className="account-screen"><Notice>{text.signedOut}</Notice></main>
+    return <div className="account-screen"><Notice>{text.signedOut}</Notice></div>
   }
 
-  if (loading) return <main className="account-screen"><p role="status">{text.loading}</p></main>
-  if (loadFailed || !snapshot) return <main className="account-screen"><Notice tone="error" role="alert">{text.loadFailed}</Notice></main>
+  if (loading) return <div className="account-screen"><p role="status">{text.loading}</p></div>
+  if (loadFailed || !snapshot) return <div className="account-screen"><Notice tone="error" role="alert">{text.loadFailed}</Notice></div>
 
   return (
-    <main className="account-screen">
+    <div className="account-screen">
       <div className="account-screen__heading">
         <div>
           <h1>{text.title}</h1>
@@ -599,13 +616,13 @@ export function AccountScreen(props: FeatureScreenProps) {
       {deleteStatus === 'unknown' && (
         <Notice tone="warning" role="alert">
           <span>{text.deleteUnknown}</span>
-          <Button variant="secondary" size="small" onClick={() => void resolveDeleteStatus()}>{text.checkDelete}</Button>
+              <Button className="account-screen__delete-recovery-action" variant="secondary" size="small" onClick={() => void resolveDeleteStatus()}>{text.checkDelete}</Button>
         </Notice>
       )}
       {deleteStatus === 'unresolved' && (
         <Notice tone="warning" role="alert">
           <span>{text.unknownAction}</span>
-          <Button variant="secondary" size="small" onClick={() => void resolveDeleteStatus()}>{text.checkDelete}</Button>
+              <Button className="account-screen__delete-recovery-action" variant="secondary" size="small" onClick={() => void resolveDeleteStatus()}>{text.checkDelete}</Button>
         </Notice>
       )}
 
@@ -718,7 +735,10 @@ export function AccountScreen(props: FeatureScreenProps) {
             <Notice>{text.deleteNotStarted}</Notice>
           )}
           {deleteStatus === 'error' && (deleteCode ? <ServiceNotice code={deleteCode} /> : <Notice tone="error" role="alert">{text.deleteFailed}</Notice>)}
-          <Button variant="destructive" onClick={beginDelete} disabled={!snapshot.deletionEligible || deleteStatus === 'unknown' || deleteStatus === 'unresolved' || deleteStatus === 'checking'}>
+          <Button id="account-delete-trigger" variant="destructive" onClick={(event) => {
+            deleteTriggerRef.current = event.currentTarget
+            beginDelete()
+          }} disabled={!snapshot.deletionEligible || deleteStatus === 'unknown' || deleteStatus === 'unresolved' || deleteStatus === 'checking'}>
             <Trash2 aria-hidden="true" />{text.delete}
           </Button>
         </div>
@@ -729,7 +749,19 @@ export function AccountScreen(props: FeatureScreenProps) {
       }}>
         <Dialog.Portal>
           <Dialog.Overlay className="account-screen__dialog-overlay" />
-          <Dialog.Content className="account-screen__dialog" aria-describedby="account-delete-description">
+          <Dialog.Content
+            className="account-screen__dialog"
+            aria-describedby="account-delete-description"
+            onCloseAutoFocus={(event) => {
+              if (skipDeleteFocusReturnRef.current) {
+                skipDeleteFocusReturnRef.current = false
+                event.preventDefault()
+                return
+              }
+              event.preventDefault()
+              restoreDeleteFocus()
+            }}
+          >
             <Dialog.Title className="account-screen__dialog-title">{text.deleteTitle}</Dialog.Title>
             <Dialog.Description id="account-delete-description" className="account-screen__dialog-description">
               {text.deleteBody}
@@ -767,7 +799,7 @@ export function AccountScreen(props: FeatureScreenProps) {
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
-    </main>
+    </div>
   )
 }
 

@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { LocaleProvider } from '../../src/app/locale'
 import { routes } from '../../src/app/routes'
@@ -194,5 +195,33 @@ describe('AccountScreen', () => {
     await waitFor(() => expect(harness.services.account.resolveDelete).toHaveBeenCalledOnce())
     await waitFor(() => expect(harness.navigate).toHaveBeenCalledWith(routes.landing('account-deleted'), { replace: true }))
     expect(window.sessionStorage.getItem('dubbed.pending-account-delete')).toBeNull()
+  })
+
+  it('returns focus to the delete opener after Escape and after a failed delete is dismissed', async () => {
+    const user = userEvent.setup()
+    const harness = makeHarness()
+    await screen.findByRole('heading', { name: 'Account' })
+    const opener = screen.getByRole('button', { name: 'Delete account' })
+
+    await user.click(opener)
+    const firstDialog = await screen.findByRole('dialog', { name: 'Delete this account?' })
+    await user.keyboard('{Escape}')
+    await waitFor(() => expect(opener).toHaveFocus())
+    expect(firstDialog).not.toBeInTheDocument()
+    expect(harness.services.account.delete).not.toHaveBeenCalled()
+
+    await user.click(opener)
+    const dialog = await screen.findByRole('dialog', { name: 'Delete this account?' })
+    await user.type(within(dialog).getByLabelText('Type DELETE to confirm'), 'DELETE')
+    vi.mocked(harness.services.account.delete).mockResolvedValueOnce({
+      status: 'error',
+      error: { code: 'adapter-unavailable', message: 'synthetic adapter rejection', retry: 'none' },
+    })
+    await user.click(within(dialog).getByRole('button', { name: 'Delete account' }))
+    expect(await within(dialog).findByRole('alert')).toBeInTheDocument()
+    expect(within(dialog).getByLabelText('Type DELETE to confirm')).toHaveValue('DELETE')
+    await user.click(within(dialog).getByRole('button', { name: 'Cancel' }))
+    await waitFor(() => expect(opener).toHaveFocus())
+    expect(harness.navigate).not.toHaveBeenCalled()
   })
 })

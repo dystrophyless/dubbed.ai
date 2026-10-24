@@ -1,0 +1,2117 @@
+[
+  {
+    "screenshot": "account-locale-save-pending-en-desktop.png",
+    "lang": "ru",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "select",
+        "text": "EnglishРусский",
+        "ariaLabel": null,
+        "id": "account-locale",
+        "className": "account-screen__select",
+        "width": 320,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Сохранить пароль",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 132.28125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Забыли пароль?",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 141.234375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Выйти",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 83.8125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Удалить аккаунт",
+        "ariaLabel": null,
+        "id": "account-delete-trigger",
+        "className": "ui-button ui-button--destructive ui-button--medium",
+        "width": 140.9375,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "account-locale-save-failure-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "select",
+        "text": "EnglishРусский",
+        "ariaLabel": null,
+        "id": "account-locale",
+        "className": "account-screen__select",
+        "width": 320,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Retry saving language",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 138.328125,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Save password",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 110.078125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Forgot password?",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 151.859375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Sign out",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 93.734375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Delete account",
+        "ariaLabel": null,
+        "id": "account-delete-trigger",
+        "className": "ui-button ui-button--destructive ui-button--medium",
+        "width": 134.9375,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "account-invalid-password-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "select",
+        "text": "EnglishРусский",
+        "ariaLabel": null,
+        "id": "account-locale",
+        "className": "account-screen__select",
+        "width": 320,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Save password",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 110.078125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Forgot password?",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 151.859375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Sign out",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 93.734375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Delete account",
+        "ariaLabel": null,
+        "id": "account-delete-trigger",
+        "className": "ui-button ui-button--destructive ui-button--medium",
+        "width": 134.9375,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "account-delete-soft-red-confirmation-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "select",
+        "text": "EnglishРусский",
+        "ariaLabel": null,
+        "id": "account-locale",
+        "className": "account-screen__select",
+        "width": 320,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Save password",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 110.078125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Forgot password?",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 151.859375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Sign out",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 93.734375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Delete account",
+        "ariaLabel": null,
+        "id": "account-delete-trigger",
+        "className": "ui-button ui-button--destructive ui-button--medium",
+        "width": 134.9375,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "account-delete-unknown-ru-phone.png",
+    "lang": "ru",
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Проверить удаление",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small account-screen__delete-recovery-action",
+        "width": 187.765625,
+        "height": 48
+      },
+      {
+        "tag": "select",
+        "text": "EnglishРусский",
+        "ariaLabel": null,
+        "id": "account-locale",
+        "className": "account-screen__select",
+        "width": 320,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 324,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 324,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Сохранить пароль",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 169.734375,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Забыли пароль?",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 175.65625,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Выйти",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 324,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "account-delete-known-failure-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "select",
+        "text": "EnglishРусский",
+        "ariaLabel": null,
+        "id": "account-locale",
+        "className": "account-screen__select",
+        "width": 320,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_9_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_a_",
+        "className": "ui-input",
+        "width": 340.765625,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Save password",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 110.078125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Forgot password?",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 151.859375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Sign out",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 93.734375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Delete account",
+        "ariaLabel": null,
+        "id": "account-delete-trigger",
+        "className": "ui-button ui-button--destructive ui-button--medium",
+        "width": 134.9375,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "credits-balance-unavailable-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Retry",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 78.0625,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Start mock checkout",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 148.203125,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "credits-packs-unavailable-ru-phone.png",
+    "lang": "ru",
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Открыть проекты",
+        "ariaLabel": null,
+        "id": null,
+        "className": "credits-text-button",
+        "width": 131.15625,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Повторить загрузку пакетов",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 240.765625,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "credits-pending-checkout-posted-and-pending-history-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Open projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "credits-text-button",
+        "width": 110.34375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "Keep pending",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 101.734375,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Simulate verified payment",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 173.296875,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Simulate cancellation",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 147.125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Simulate failure",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 113.40625,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "credits-unknown-checkout-ru-phone.png",
+    "lang": "ru",
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Открыть проекты",
+        "ariaLabel": null,
+        "id": null,
+        "className": "credits-text-button",
+        "width": 131.15625,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Начать пробную покупку",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 217.75,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Проверить статус оплаты",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 324,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "credits-history-show-more-loading-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Open projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "credits-text-button",
+        "width": 110.34375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "Start mock checkout",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 148.203125,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "credits-history-older-failure-ru-phone.png",
+    "lang": "ru",
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Открыть проекты",
+        "ariaLabel": null,
+        "id": null,
+        "className": "credits-text-button",
+        "width": 131.15625,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Начать пробную покупку",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 217.75,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Повторить загрузку",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--medium",
+        "width": 179.484375,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-empty-en-767.png",
+    "lang": "en",
+    "viewportWidth": 767,
+    "documentWidth": 767,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "New dub",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 120.03125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "New dub",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 98.03125,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-capacity-lifecycle-ru-767.png",
+    "lang": "ru",
+    "viewportWidth": 767,
+    "documentWidth": 767,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Новая озвучка",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 163.28125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Source video",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Source video",
+        "id": "radix-_r_6_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Processing draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Processing draft",
+        "id": "radix-_r_8_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Finished project",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Finished project",
+        "id": "radix-_r_a_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Needs attention",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Needs attention",
+        "id": "radix-_r_c_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Voice draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Voice draft",
+        "id": "radix-_r_e_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Finalizing result",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Finalizing result",
+        "id": "radix-_r_g_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-row-menu-ru-767.png",
+    "lang": "ru",
+    "viewportWidth": 767,
+    "documentWidth": 767,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Новая озвучка",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 163.28125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Source video",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Source video",
+        "id": "radix-_r_6_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Processing draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Processing draft",
+        "id": "radix-_r_8_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Finished project",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Finished project",
+        "id": "radix-_r_a_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Needs attention",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Needs attention",
+        "id": "radix-_r_c_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Voice draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Voice draft",
+        "id": "radix-_r_e_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Finalizing result",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Finalizing result",
+        "id": "radix-_r_g_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-capacity-lifecycle-ru-768.png",
+    "lang": "ru",
+    "viewportWidth": 768,
+    "documentWidth": 768,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Новая озвучка",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 131.171875,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Source video",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 87.4375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Source video",
+        "id": "radix-_r_6_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Processing draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 87.4375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Processing draft",
+        "id": "radix-_r_8_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Finished project",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 87.4375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Finished project",
+        "id": "radix-_r_a_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Needs attention",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 87.4375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Needs attention",
+        "id": "radix-_r_c_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Voice draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 87.4375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Voice draft",
+        "id": "radix-_r_e_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Finalizing result",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 87.4375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Finalizing result",
+        "id": "radix-_r_g_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-list-loading-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "New dub",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 96.03125,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-list-failure-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "New dub",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 96.03125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Retry",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 56.0625,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-rename-validation-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "New dub",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 96.03125,
+        "height": 28
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_a_",
+        "className": "ui-input ui-input--invalid",
+        "width": 480,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Rename project: Processing draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Continue",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 68.609375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Actions for Processing draft",
+        "id": "radix-_r_8_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-rename-save-error-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "New dub",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 96.03125,
+        "height": 28
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_a_",
+        "className": "ui-input ui-input--invalid",
+        "width": 480,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Rename project: Processing draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Continue",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 68.609375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Actions for Processing draft",
+        "id": "radix-_r_8_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-delete-unknown-ru-phone.png",
+    "lang": "ru",
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Новая озвучка",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 163.28125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Source video",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Source video",
+        "id": "radix-_r_6_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Переименовать проект: Processing draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "Продолжить",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 126.578125,
+        "height": 48
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Действия проекта: Processing draft",
+        "id": "radix-_r_8_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 48,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "projects-delete-known-failure-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "New dub",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 96.03125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Rename project: Source video",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Continue",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 68.609375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Actions for Source video",
+        "id": "radix-_r_6_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Rename project: Processing draft",
+        "id": null,
+        "className": "ui-button ui-button--ghost ui-button--icon",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "tag": "button",
+        "text": "Continue",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--small",
+        "width": 68.609375,
+        "height": 24
+      },
+      {
+        "tag": "button",
+        "text": "",
+        "ariaLabel": "Actions for Processing draft",
+        "id": "radix-_r_8_",
+        "className": "ui-button ui-button--ghost ui-button--icon project-row-menu__trigger",
+        "width": 32,
+        "height": 32
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-invalid-interval-ru-phone.png",
+    "lang": "ru",
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Управление проектами",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 175.796875,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Заменить видео",
+        "id": null,
+        "className": "new-dub-file-input",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "tag": "button",
+        "text": "Заменить видео",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 154,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Начало фрагмента",
+        "id": null,
+        "className": "",
+        "width": 358,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Конец фрагмента",
+        "id": null,
+        "className": "",
+        "width": 358,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 358,
+        "height": 48
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 358,
+        "height": 48
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-capacity-insufficient-balance-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Replace video",
+        "id": null,
+        "className": "new-dub-file-input",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "tag": "button",
+        "text": "Replace video",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 103.78125,
+        "height": 28
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection start",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection end",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Open credits",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 121.984375,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-quote-service-failure-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Replace video",
+        "id": null,
+        "className": "new-dub-file-input",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "tag": "button",
+        "text": "Replace video",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 103.78125,
+        "height": 28
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection start",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection end",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Get exact quote",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 960,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-stale-quote-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Replace video",
+        "id": null,
+        "className": "new-dub-file-input",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "tag": "button",
+        "text": "Replace video",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 103.78125,
+        "height": 28
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection start",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection end",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Refresh exact quote",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 960,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-compatible-preview-retryable-error-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Replace video",
+        "id": null,
+        "className": "new-dub-file-input",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "tag": "button",
+        "text": "Replace video",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 103.78125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Retry preview",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 105.734375,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-compatible-preview-ready-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Replace video",
+        "id": null,
+        "className": "new-dub-file-input",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "tag": "button",
+        "text": "Replace video",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 103.78125,
+        "height": 28
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection start",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection end",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Get exact quote",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 960,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-upload-capacity-full-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-upload-local-validation-error-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Choose video",
+        "id": null,
+        "className": "new-dub-file-input",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "tag": "button",
+        "text": "Choose another video",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 960,
+        "height": 28
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-upload-pending-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      }
+    ]
+  },
+  {
+    "screenshot": "newdub-replacement-failure-original-source-preserved-en-desktop.png",
+    "lang": "en",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "mabryLoaded": true,
+    "controls": [
+      {
+        "tag": "button",
+        "text": "Manage projects",
+        "ariaLabel": null,
+        "id": null,
+        "className": "new-dub-text-button",
+        "width": 134.515625,
+        "height": 32
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Replace video",
+        "id": null,
+        "className": "new-dub-file-input",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "tag": "button",
+        "text": "Replace video",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--secondary ui-button--medium",
+        "width": 103.78125,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Replace video",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 103.78125,
+        "height": 28
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection start",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": "Selection end",
+        "id": null,
+        "className": "",
+        "width": 960,
+        "height": 24
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_3_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "input",
+        "text": "",
+        "ariaLabel": null,
+        "id": "_r_4_",
+        "className": "ui-input",
+        "width": 252,
+        "height": 40
+      },
+      {
+        "tag": "button",
+        "text": "Get exact quote",
+        "ariaLabel": null,
+        "id": null,
+        "className": "ui-button ui-button--primary ui-button--medium",
+        "width": 960,
+        "height": 28
+      }
+    ]
+  }
+]

@@ -9,7 +9,7 @@ test('captures the mounted landing shell in desktop English and phone Russian', 
 
   const evidenceDirectory = resolve(
     dirname(fileURLToPath(import.meta.url)),
-    '../../_docs/evidence/frontend-implementation-2026-10-23',
+    '../../_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof',
   )
   mkdirSync(evidenceDirectory, { recursive: true })
   const measurements: Record<string, unknown> = {}
@@ -54,7 +54,10 @@ test('captures the mounted landing shell in desktop English and phone Russian', 
   const readAuthMetrics = () => page.evaluate(() => {
     const controlElements = Array.from(document.querySelectorAll<HTMLElement>(
       '.auth-screen button, .auth-screen a, .auth-screen input, .locale-control select',
-    ))
+    )).filter((element) => {
+      const rect = element.getBoundingClientRect()
+      return rect.width > 0 && rect.height > 0
+    })
     const describe = (element: HTMLElement) => {
       const rect = element.getBoundingClientRect()
       const range = document.createRange()
@@ -102,7 +105,9 @@ test('captures the mounted landing shell in desktop English and phone Russian', 
     'mailto:dystrophyless@gmail.com',
   )
   await page.evaluate(() => document.fonts.ready.then(() => true))
-  measurements.desktop1440 = await readMetrics()
+  const desktopMetrics = await readMetrics()
+  measurements.desktop1440 = desktopMetrics
+  expect(desktopMetrics.viewport.scrollWidth).toBeLessThanOrEqual(1440)
   expect((measurements.desktop1440 as { supportLink: { color: string } }).supportLink.color)
     .toBe('rgb(0, 96, 226)')
   await page.screenshot({
@@ -159,10 +164,14 @@ test('captures the mounted landing shell in desktop English and phone Russian', 
     const style = getComputedStyle(element)
     return { backgroundColor: style.backgroundColor, transform: style.transform }
   })
+  await page.evaluate(() => (document.activeElement as HTMLElement | null)?.blur())
+  await page.mouse.move(0, 0)
 
   for (const width of [768, 767]) {
     await page.setViewportSize({ width, height: 900 })
-    measurements[`width${width}`] = await readMetrics()
+    const widthMetrics = await readMetrics()
+    measurements[`width${width}`] = widthMetrics
+    expect(widthMetrics.viewport.scrollWidth, `Landing page overflows at ${width}px`).toBeLessThanOrEqual(width)
     await page.screenshot({
       path: resolve(evidenceDirectory, `shell-landing-en-${width}.png`),
       fullPage: true,
@@ -175,14 +184,18 @@ test('captures the mounted landing shell in desktop English and phone Russian', 
   await page.mouse.move(0, 0)
   await expect(page.getByRole('heading', { name: 'Озвучьте свою сцену' })).toBeVisible()
   await page.evaluate(() => document.fonts.ready.then(() => true))
-  measurements.phone390Russian = await readMetrics()
+  const phoneMetrics = await readMetrics()
+  measurements.phone390Russian = phoneMetrics
+  expect(phoneMetrics.viewport.scrollWidth, 'Russian landing page overflows at 390px').toBeLessThanOrEqual(390)
   await page.screenshot({
     path: resolve(evidenceDirectory, 'shell-landing-ru-phone.png'),
     fullPage: true,
   })
 
   await page.setViewportSize({ width: 720, height: 900 })
-  measurements.zoom200PercentEffectiveViewport = await readMetrics()
+  const effectiveZoomMetrics = await readMetrics()
+  measurements.zoom200PercentEffectiveViewport = effectiveZoomMetrics
+  expect(effectiveZoomMetrics.viewport.scrollWidth).toBeLessThanOrEqual(720)
   await page.emulateMedia({ reducedMotion: 'reduce' })
   const reducedMotionMatches = await page.evaluate(() => matchMedia('(prefers-reduced-motion: reduce)').matches)
   expect(reducedMotionMatches).toBe(true)
@@ -229,6 +242,34 @@ test('captures the mounted landing shell in desktop English and phone Russian', 
   await registrationCode.fill(visibleMockCode)
   await expect(page).toHaveURL(/\/new$/)
 
+  for (const width of [768, 767]) {
+    await page.setViewportSize({ width, height: 900 })
+    const desktopNavigation = page.getByRole('navigation', { name: 'Main navigation' })
+    const mobileMenuTrigger = page.getByRole('button', { name: 'Open navigation' })
+    const isDesktopWidth = width >= 768
+    if (isDesktopWidth) {
+      await expect(desktopNavigation).toBeVisible()
+      await expect(mobileMenuTrigger).toBeHidden()
+    } else {
+      await expect(desktopNavigation).toBeHidden()
+      await expect(mobileMenuTrigger).toBeVisible()
+      const targetHeight = await mobileMenuTrigger.evaluate((button) => button.getBoundingClientRect().height)
+      expect(targetHeight).toBeGreaterThanOrEqual(48)
+    }
+    const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth)
+    expect(scrollWidth, `Signed-in shell overflows at ${width}px`).toBeLessThanOrEqual(width)
+    measurements[`signedInHeader${width}`] = {
+      viewportWidth: width,
+      scrollWidth,
+      desktopNavigationVisible: isDesktopWidth,
+      mobileMenuVisible: !isDesktopWidth,
+    }
+    await page.screenshot({
+      path: resolve(evidenceDirectory, `shell-authenticated-header-en-${width}.png`),
+      fullPage: true,
+    })
+  }
+
   await page.setViewportSize({ width: 390, height: 844 })
   const mobileMenuTrigger = page.getByRole('button', { name: 'Open navigation' })
   await expect(mobileMenuTrigger).toBeVisible()
@@ -239,11 +280,12 @@ test('captures the mounted landing shell in desktop English and phone Russian', 
   const mobileMenu = page.getByRole('dialog')
   await expect(mobileMenu).toBeVisible()
   await expect(mobileMenu.locator('.sheet-close')).toBeFocused()
+  await expect(mobileMenu.locator('.mobile-nav__locale select')).toBeVisible()
   const mobileMenuMetrics = await mobileMenu.evaluate((dialog) => {
     const rect = dialog.getBoundingClientRect()
     const nav = dialog.querySelector<HTMLElement>('.mobile-nav')
     if (!nav) throw new Error('The signed-in mobile navigation is missing.')
-    const links = [...nav.querySelectorAll<HTMLElement>('a, button')]
+    const links = [...nav.querySelectorAll<HTMLElement>('a, button, select')]
     return {
       viewport: { width: innerWidth, scrollWidth: document.documentElement.scrollWidth },
       dialog: { x: rect.x, y: rect.y, width: rect.width, height: rect.height },

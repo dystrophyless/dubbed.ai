@@ -1,0 +1,63 @@
+[WebServer] (node:27304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:21200) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 e2e\shell-evidence.spec.ts:7:1 › captures the mounted landing shell in desktop English and phone Russian (4.4s)
+
+
+  1) e2e\shell-evidence.spec.ts:7:1 › captures the mounted landing shell in desktop English and phone Russian 
+
+    Error: Phone controls below 48px: [{"tag":"select","label":"Язык","rect":{"x":0,"y":0,"width":0,"height":0},"client":{"width":0,"height":0},"scroll":{"width":0,"height":0},"overflow":{"x":"clip","y":"clip"},"fontFamily":"\"Mabry Pro\", sans-serif","fontSize":"12px","lineHeight":"16px","whiteSpace":"pre","textFits":true}]
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 29
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "client": Object {
+    +       "height": 0,
+    +       "width": 0,
+    +     },
+    +     "fontFamily": "\"Mabry Pro\", sans-serif",
+    +     "fontSize": "12px",
+    +     "label": "Язык",
+    +     "lineHeight": "16px",
+    +     "overflow": Object {
+    +       "x": "clip",
+    +       "y": "clip",
+    +     },
+    +     "rect": Object {
+    +       "height": 0,
+    +       "width": 0,
+    +       "x": 0,
+    +       "y": 0,
+    +     },
+    +     "scroll": Object {
+    +       "height": 0,
+    +       "width": 0,
+    +     },
+    +     "tag": "select",
+    +     "textFits": true,
+    +     "whiteSpace": "pre",
+    +   },
+    + ]
+
+      373 |     if (width < 768) {
+      374 |       const undersizedControls = reset.controls.filter((control) => control.rect.height < 48)
+    > 375 |       expect(undersizedControls, `Phone controls below 48px: ${JSON.stringify(undersizedControls)}`).toEqual([])
+          |                                                                                                      ^
+      376 |     }
+      377 |     await page.screenshot({
+      378 |       path: resolve(evidenceDirectory, `shell-password-reset-code-ru-${width}.png`),
+        at D:\Program\python\Dubbed\frontend\e2e\shell-evidence.spec.ts:375:102
+
+    Error Context: ..\_docs\evidence\frontend-implementation-2026-10-23\shell-final-proof\test-results\shell-evidence-captures-th-0fcbb-p-English-and-phone-Russian\error-context.md
+
+  1 failed
+    e2e\shell-evidence.spec.ts:7:1 › captures the mounted landing shell in desktop English and phone Russian 

@@ -45,15 +45,17 @@ function makeHarness(currentMethod: 'google' | 'email-password' = 'google') {
   const session = { id: 'session-one', accountId: account.id, expiresAt: Date.now() + 60_000, revision: 2 } as unknown as Session
   const intent = makeIntent(account)
   const start = vi.fn().mockResolvedValue(ok(intent))
+  const accountLoad = vi.fn().mockResolvedValue(ok(account))
+  const commit = vi.fn().mockResolvedValue(ok({ state: 'completed' as const, account, methods: account.methods }))
   const currentIdentity = vi.fn(async () => ok({ account, session }) as Awaited<ReturnType<Services['identity']['current']>>)
   const proveCurrent = vi.fn(async () => ok({ proofId: 'current-proof' as OperationId, method: currentMethod, expiresAt: Date.now() + 60_000, note: 'synthetic-mock-scenario' as const }) as Awaited<ReturnType<Services['accountLinking']['proveCurrent']>>)
   const services = {
-    account: { load: vi.fn().mockResolvedValue(ok(account)) },
+    account: { load: accountLoad },
     accountLinking: {
       start,
       proveCurrent,
       proveCandidate: vi.fn().mockResolvedValue(ok({ proofId: 'candidate-proof' as OperationId, candidate: { method: 'email-password' as const, address: 'new@example.test' }, expiresAt: Date.now() + 60_000, note: 'synthetic-mock-scenario' as const })),
-      commit: vi.fn().mockResolvedValue(ok({ state: 'completed' as const, account, methods: [...account.methods, { kind: 'email-password' as const, address: 'new@example.test', verified: true, linkedAt: 2 }] })),
+      commit,
       resolve: vi.fn(),
       cancel: vi.fn(),
       resendCandidate: vi.fn(),
@@ -64,18 +66,47 @@ function makeHarness(currentMethod: 'google' | 'email-password' = 'google') {
     },
     operations: { resolve: vi.fn() },
   } as unknown as Services
+  const onAccountUpdated = vi.fn()
+  const refreshIdentity = vi.fn().mockResolvedValue({ status: 'signed-in', account, session })
   const props = {
     route: routes.accountLinking(), locale: 'en', identity: { status: 'signed-in', account, session },
     signInIntent: { kind: 'new-dub' }, services, navigate: vi.fn().mockResolvedValue(true),
-    refreshIdentity: vi.fn().mockResolvedValue({ status: 'signed-in', account, session }),
+    onAccountUpdated,
+    refreshIdentity,
     registerRouteExitGuard: vi.fn(),
   } as unknown as FeatureScreenProps
   render(
-    <LocaleProvider account={account} services={services} onAccountUpdated={vi.fn()}>
+    <LocaleProvider account={account} services={services} onAccountUpdated={onAccountUpdated}>
       <AccountLinkingScreen {...props} />
     </LocaleProvider>,
   )
-  return { account, session, intent, services, start, currentIdentity, proveCurrent }
+  return { account, session, intent, services, start, accountLoad, commit, onAccountUpdated, refreshIdentity, currentIdentity, proveCurrent }
+}
+
+async function prepareEmailLinkForCommit(harness: ReturnType<typeof makeHarness>) {
+  await screen.findByRole('heading', { name: 'Link a sign-in method' })
+  fireEvent.change(screen.getByLabelText('New email address'), { target: { value: 'new@example.test' } })
+  fireEvent.change(screen.getByLabelText('Password for this method'), { target: { value: 'candidate-pass' } })
+  fireEvent.click(screen.getByRole('button', { name: 'Continue' }))
+  await waitFor(() => expect(harness.start).toHaveBeenCalledOnce())
+  expect(screen.getByText(/Simulated preview code: 482913/)).toBeInTheDocument()
+  expect(screen.queryByRole('button', { name: 'Link methods' })).not.toBeInTheDocument()
+  expect(window.sessionStorage.getItem('dubbed.pending-account-link')).not.toContain('candidate-pass')
+
+  fireEvent.click(screen.getByRole('button', { name: 'Continue with Google to confirm the current method' }))
+  await waitFor(() => expect(harness.proveCurrent).toHaveBeenCalledOnce())
+  expect(harness.commit).not.toHaveBeenCalled()
+  fireEvent.change(screen.getByLabelText('Verification code'), { target: { value: '482913' } })
+  fireEvent.click(screen.getByRole('button', { name: 'Confirm email method' }))
+  await waitFor(() => expect(harness.services.accountLinking.proveCandidate).toHaveBeenCalledWith(expect.objectContaining({
+    intentId: harness.intent.id, code: '482913', operationId: expect.any(String),
+  })))
+  expect(harness.commit).not.toHaveBeenCalled()
+}
+
+async function commitPreparedEmailLink(harness: ReturnType<typeof makeHarness>) {
+  fireEvent.click(await screen.findByRole('button', { name: 'Link methods' }))
+  await waitFor(() => expect(harness.commit).toHaveBeenCalledOnce())
 }
 
 beforeEach(() => {
@@ -87,36 +118,61 @@ afterEach(() => vi.restoreAllMocks())
 describe('AccountLinkingScreen', () => {
   it('requires current and candidate proof before explicit commit', async () => {
     const harness = makeHarness()
-    await screen.findByRole('heading', { name: 'Link a sign-in method' })
-
-    fireEvent.change(screen.getByLabelText('New email address'), { target: { value: 'new@example.test' } })
-    fireEvent.change(screen.getByLabelText('Password for this method'), { target: { value: 'candidate-pass' } })
-    fireEvent.click(screen.getByRole('button', { name: 'Continue' }))
-    await waitFor(() => expect(harness.services.accountLinking.start).toHaveBeenCalledOnce())
-    expect(screen.getByText(/Simulated preview code: 482913/)).toBeInTheDocument()
-    expect(screen.queryByRole('button', { name: 'Link methods' })).not.toBeInTheDocument()
-    expect(window.sessionStorage.getItem('dubbed.pending-account-link')).not.toContain('candidate-pass')
-
-    fireEvent.click(screen.getByRole('button', { name: 'Continue with Google to confirm the current method' }))
-    await waitFor(() => expect(harness.services.accountLinking.proveCurrent).toHaveBeenCalledOnce())
-    expect(harness.services.accountLinking.commit).not.toHaveBeenCalled()
-    fireEvent.change(screen.getByLabelText('Verification code'), { target: { value: '482913' } })
-    fireEvent.click(screen.getByRole('button', { name: 'Confirm email method' }))
-
-    await waitFor(() => expect(harness.services.accountLinking.proveCandidate).toHaveBeenCalledWith(expect.objectContaining({
-      intentId: harness.intent.id, code: '482913', operationId: expect.any(String),
-    })))
-    expect(harness.services.accountLinking.commit).not.toHaveBeenCalled()
-    fireEvent.click(await screen.findByRole('button', { name: 'Link methods' }))
-    await waitFor(() => expect(harness.services.accountLinking.commit).toHaveBeenCalledOnce())
+    const committedAccount = {
+      ...harness.account,
+      revision: 6 as Revision,
+      methods: [...harness.account.methods, { kind: 'email-password' as const, address: 'new@example.test', verified: true, linkedAt: 2 }],
+    }
+    harness.accountLoad.mockResolvedValue(ok(committedAccount))
+    harness.commit.mockResolvedValue(ok({ state: 'completed', account: committedAccount, methods: committedAccount.methods }))
+    await prepareEmailLinkForCommit(harness)
+    await commitPreparedEmailLink(harness)
     expect(harness.services.accountLinking.commit).toHaveBeenCalledWith(expect.objectContaining({
       intentId: harness.intent.id,
       currentProofId: 'current-proof',
       candidateProofId: 'candidate-proof',
       expectedAccountRevision: harness.account.revision,
     }))
-    expect(await screen.findByText(/Both sign-in methods are linked/)).toBeInTheDocument()
+    expect(await screen.findByText('Both sign-in methods are linked to this account.')).toBeInTheDocument()
+    expect(harness.accountLoad).toHaveBeenCalled()
+    expect(harness.onAccountUpdated).toHaveBeenCalledWith(committedAccount)
+    expect(harness.refreshIdentity).not.toHaveBeenCalled()
+    expect(screen.getByRole('button', { name: 'Return to Account' })).toBeInTheDocument()
   })
+
+  const postCommitSnapshotLossCases = [
+    {
+      name: 'unauthenticated',
+      load: (_account: AccountSettingsSnapshot) => ({
+        status: 'error' as const,
+        error: { code: 'unauthenticated' as const, message: 'The session is no longer available.', retry: 'none' as const },
+      }),
+    },
+    {
+      name: 'deleted',
+      load: (account: AccountSettingsSnapshot) => ok({ ...account, revision: 6 as Revision, deleted: true }),
+    },
+    {
+      name: 'mismatched',
+      load: (account: AccountSettingsSnapshot) => ok({ ...account, id: 'account-two' as AccountSettingsSnapshot['id'], revision: 6 as Revision }),
+    },
+  ] as const
+
+  for (const scenario of postCommitSnapshotLossCases) {
+    it(`revalidates identity after a committed link and a ${scenario.name} account snapshot`, async () => {
+      const harness = makeHarness()
+      harness.accountLoad.mockResolvedValue(
+        scenario.load(harness.account) as Awaited<ReturnType<Services['account']['load']>>,
+      )
+
+      await prepareEmailLinkForCommit(harness)
+      await commitPreparedEmailLink(harness)
+
+      expect(await screen.findByText('Both sign-in methods are linked to this account.')).toBeInTheDocument()
+      expect(harness.refreshIdentity).toHaveBeenCalledOnce()
+      expect(harness.onAccountUpdated).not.toHaveBeenCalled()
+    })
+  }
 
   it('does not render a simulated code when the service omits the fixture descriptor', async () => {
     const harness = makeHarness()

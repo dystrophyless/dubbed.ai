@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { LocaleProvider } from '../../app/locale'
@@ -235,12 +235,55 @@ describe('ProjectsScreen', () => {
     }
 
     renderScreen(makeProps(services))
-    await user.click(await screen.findByRole('button', { name: 'Delete project: Project to delete' }))
+    const row = (await screen.findByRole('heading', { name: 'Project to delete' })).closest('.project-row') as HTMLElement
+    await user.click(within(row).getByRole('button', { name: 'Actions for Project to delete' }))
+    await user.click(await screen.findByRole('menuitem', { name: 'Delete project' }))
     expect(await screen.findByText(/Source: 42 bytes/)).toBeInTheDocument()
     await user.click(screen.getByRole('button', { name: /^Delete project$/ }))
     await user.click(await screen.findByRole('button', { name: 'Check deletion status' }))
 
     expect(deleteProject).toHaveBeenCalledTimes(2)
     expect(deleteProject.mock.calls[0][0].operationId).toBe(deleteProject.mock.calls[1][0].operationId)
+  })
+
+  it('limits the row menu to deletion and restores focus after dismiss and confirmation cancel', async () => {
+    const user = userEvent.setup()
+    const project = makeProject('project-menu-focus', 'Menu focus draft')
+    const services = {
+      projects: {
+        list: vi.fn().mockResolvedValue(ok({ projects: [project], capacity: { used: 1, total: 6 } })),
+        deletionImpact: vi.fn().mockResolvedValue(ok({
+          projectId: project.id,
+          title: project.title,
+          sourceBytes: 42,
+          acceptedTakeCount: 0,
+          draftCount: 0,
+          resultCount: 0,
+        })),
+        delete: vi.fn(),
+      },
+    }
+
+    renderScreen(makeProps(services))
+    const row = (await screen.findByRole('heading', { name: 'Menu focus draft' })).closest('.project-row') as HTMLElement
+    const trigger = within(row).getByRole('button', { name: 'Actions for Menu focus draft' })
+
+    await user.click(trigger)
+    const menu = await screen.findByRole('menu')
+    expect(within(menu).getAllByRole('menuitem')).toHaveLength(1)
+    expect(within(menu).getByRole('menuitem', { name: 'Delete project' })).toBeInTheDocument()
+    await user.keyboard('{Escape}')
+    await waitFor(() => expect(trigger).toHaveFocus())
+    expect(services.projects.deletionImpact).not.toHaveBeenCalled()
+
+    await user.keyboard('{ArrowDown}')
+    const deleteItem = await screen.findByRole('menuitem', { name: 'Delete project' })
+    expect(deleteItem).toHaveFocus()
+    await user.keyboard('{Enter}')
+    const dialog = await screen.findByRole('dialog', { name: 'Delete this project?' })
+    expect(services.projects.deletionImpact).toHaveBeenCalledWith(project.id)
+    await user.click(within(dialog).getByRole('button', { name: 'Cancel' }))
+    await waitFor(() => expect(trigger).toHaveFocus())
+    expect(services.projects.delete).not.toHaveBeenCalled()
   })
 })

@@ -299,19 +299,42 @@ export function AccountLinkingScreen(props: FeatureScreenProps) {
     setCandidatePassword('')
     setCandidateCode('')
     clearPendingAccountLink(undefined, nextIntent?.id)
-    const result = await props.services.account.load()
-    if (result.status === 'ok' && result.data.id === accountId) {
+    const result = await props.services.account.load().catch(() => null)
+    if (!result) {
+      setAccountRefreshFailed(true)
+      return
+    }
+    const candidateMethod = nextIntent?.candidate.method
+    const hasCommittedCandidate = !candidateMethod || (result.status === 'ok' && result.data.methods.some((method) => method.kind === candidateMethod && method.verified))
+    if (
+      result.status === 'ok' &&
+      result.data.id === accountId &&
+      !result.data.deleted &&
+      (!nextIntent || result.data.revision > nextIntent.expectedAccountRevision) &&
+      hasCommittedCandidate
+    ) {
       setSnapshot(result.data)
       setAccountRefreshFailed(false)
+      try {
+        if (props.onAccountUpdated) props.onAccountUpdated(result.data)
+        else await props.refreshIdentity()
+      } catch {
+        setAccountRefreshFailed(true)
+      }
     } else {
       setAccountRefreshFailed(true)
+      const identityNeedsRevalidation = result.status === 'ok'
+        ? result.data.id !== accountId || result.data.deleted
+        : result.status === 'error' && ['unauthenticated', 'expired', 'not-found'].includes(result.error.code)
+      if (identityNeedsRevalidation) {
+        try {
+          await props.refreshIdentity()
+        } catch {
+          // Keep the committed acknowledgement visible while identity revalidation is unavailable.
+        }
+      }
     }
-    try {
-      await props.refreshIdentity()
-    } catch {
-      setAccountRefreshFailed(true)
-    }
-  }, [accountId, props.refreshIdentity, props.services])
+  }, [accountId, props.onAccountUpdated, props.refreshIdentity, props.services])
 
   const persistIntent = useCallback((next: LinkIntentSnapshot) => {
     setIntent(next)
@@ -870,12 +893,12 @@ export function AccountLinkingScreen(props: FeatureScreenProps) {
   const readyToCommit = Boolean(intent && currentProofId && candidateProofId && status !== 'unknown' && (!busy || pendingAction === 'commit'))
   const candidateCodeDescriptor = intent?.candidateScenarioCode
 
-  if (!accountIdentity) return <main className="account-linking-screen"><Notice>{text.signedOut}</Notice></main>
-  if (loading) return <main className="account-linking-screen"><p role="status">{text.loading}</p></main>
-  if (loadFailed || !snapshot) return <main className="account-linking-screen"><Notice tone="error" role="alert">{text.loadFailed}</Notice></main>
+  if (!accountIdentity) return <div className="account-linking-screen"><Notice>{text.signedOut}</Notice></div>
+  if (loading) return <div className="account-linking-screen"><p role="status">{text.loading}</p></div>
+  if (loadFailed || !snapshot) return <div className="account-linking-screen"><Notice tone="error" role="alert">{text.loadFailed}</Notice></div>
 
   return (
-    <main className="account-linking-screen">
+    <div className="account-linking-screen">
       <button className="account-linking-screen__back" type="button" onClick={() => void goBack()}>
         <ArrowLeft aria-hidden="true" />{text.back}
       </button>
@@ -1053,7 +1076,7 @@ export function AccountLinkingScreen(props: FeatureScreenProps) {
           )}
         </div>
       )}
-    </main>
+    </div>
   )
 }
 

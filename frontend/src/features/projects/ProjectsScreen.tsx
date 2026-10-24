@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
-import { ArrowUpRight, Pencil, Trash2 } from 'lucide-react'
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
+import { ArrowUpRight, MoreHorizontal, Pencil, Trash2 } from 'lucide-react'
 import type { FeatureScreenProps } from '../../app/screen-contract'
 import { routes } from '../../app/routes'
-import { Button } from '../../components/ui/button'
+import { Button, buttonVariants } from '../../components/ui/button'
 import { TextField } from '../../components/ui/input'
 import { Notice, ServiceNotice } from '../../components/ui/notice'
 import type {
@@ -39,6 +40,7 @@ type Copy = {
   checkSave: string
   checkOpen: string
   delete: string
+  actions: (title: string) => string
   deleteTitle: string
   deleteDescription: string
   deleteImpact: (sourceBytes: number, accepted: number, drafts: number, results: number) => string
@@ -79,6 +81,7 @@ const copy: Record<'en' | 'ru', Copy> = {
     checkSave: 'Check save status',
     checkOpen: 'Check open status',
     delete: 'Delete project',
+    actions: (title) => `Actions for ${title}`,
     deleteTitle: 'Delete this project?',
     deleteDescription: 'This removes the project from this account. It does not create a refund or confirm physical erasure.',
     deleteImpact: (sourceBytes, accepted, drafts, results) => `Source: ${sourceBytes.toLocaleString('en')} bytes. Accepted takes: ${accepted}. Saved drafts: ${drafts}. Results: ${results}.`,
@@ -117,6 +120,7 @@ const copy: Record<'en' | 'ru', Copy> = {
     checkSave: 'Проверить сохранение',
     checkOpen: 'Проверить открытие',
     delete: 'Удалить проект',
+    actions: (title) => `Действия проекта: ${title}`,
     deleteTitle: 'Удалить этот проект?',
     deleteDescription: 'Проект будет удалён из аккаунта. Это не означает возврат средств или подтверждённое физическое удаление данных.',
     deleteImpact: (sourceBytes, accepted, drafts, results) => `Источник: ${sourceBytes.toLocaleString('ru')} байт. Принятые записи: ${accepted}. Черновики: ${drafts}. Результаты: ${results}.`,
@@ -201,6 +205,9 @@ export function ProjectsScreen({ identity, locale, services, navigate, registerR
   const [renameAttempt, setRenameAttempt] = useState<RenameAttempt | null>(null)
   const [deletedNotice, setDeletedNotice] = useState(false)
   const ignoreBlur = useRef<{ kind: 'enter' | 'escape'; projectId: ProjectId; value?: string } | null>(null)
+  const deleteMenuTriggersRef = useRef(new Map<ProjectId, HTMLButtonElement>())
+  const deleteTriggerRef = useRef<HTMLButtonElement | null>(null)
+  const skipDeleteFocusReturnRef = useRef(false)
 
   const loadProjects = useCallback(async () => {
     if (!account) return false
@@ -405,6 +412,7 @@ export function ProjectsScreen({ identity, locale, services, navigate, registerR
   }, [continueAttempt, continueBusy, recordContinue, services.projects])
 
   const openDelete = useCallback(async (project: OwnedProject) => {
+    deleteTriggerRef.current = deleteMenuTriggersRef.current.get(project.id) ?? null
     setDeleteProject(project)
     setDeleteImpact(null)
     setDeleteImpactLoading(true)
@@ -416,6 +424,7 @@ export function ProjectsScreen({ identity, locale, services, navigate, registerR
   }, [services.projects])
 
   const removeProject = useCallback((projectId: ProjectId) => {
+    skipDeleteFocusReturnRef.current = true
     setProjects((current) => current?.filter((project) => project.id !== projectId) ?? null)
     setDeleteProject(null)
     setDeleteImpact(null)
@@ -626,13 +635,30 @@ export function ProjectsScreen({ identity, locale, services, navigate, registerR
                   >
                     {continueBusy === project.id ? (locale === 'ru' ? 'Открываем…' : 'Opening…') : text.continue}
                   </Button>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    aria-label={`${text.delete}: ${project.title}`}
-                    onClick={() => void openDelete(project)}
-                    disabled={continueBusy !== null || continueAttempt !== null || deleteBusy || renameBusy || renameUnknown || isEditing}
-                  ><Trash2 aria-hidden="true" strokeWidth={1.1} /></Button>
+                  <DropdownMenu.Root>
+                    <DropdownMenu.Trigger
+                      type="button"
+                      ref={(element) => {
+                        if (element) deleteMenuTriggersRef.current.set(project.id, element)
+                        else deleteMenuTriggersRef.current.delete(project.id)
+                      }}
+                      data-slot="button"
+                      data-variant="ghost"
+                      data-size="icon"
+                      className={buttonVariants({ variant: 'ghost', size: 'icon', className: 'project-row-menu__trigger' })}
+                      aria-label={text.actions(project.title)}
+                      disabled={continueBusy !== null || continueAttempt !== null || deleteBusy || renameBusy || renameUnknown || isEditing}
+                    ><MoreHorizontal aria-hidden="true" strokeWidth={1.1} /></DropdownMenu.Trigger>
+                    <DropdownMenu.Portal>
+                      <DropdownMenu.Content className="project-row-menu__content" align="end" sideOffset={4}>
+                        <DropdownMenu.Item
+                          className="project-row-menu__item"
+                          disabled={continueBusy !== null || continueAttempt !== null || deleteBusy || renameBusy || renameUnknown || isEditing}
+                          onSelect={() => void openDelete(project)}
+                        ><Trash2 aria-hidden="true" strokeWidth={1.1} />{text.delete}</DropdownMenu.Item>
+                      </DropdownMenu.Content>
+                    </DropdownMenu.Portal>
+                  </DropdownMenu.Root>
                 </div>
               </li>
             )
@@ -648,7 +674,21 @@ export function ProjectsScreen({ identity, locale, services, navigate, registerR
       }}>
         <Dialog.Portal>
           <Dialog.Overlay className="project-dialog__overlay" />
-          <Dialog.Content className="project-dialog" aria-describedby="project-delete-description">
+          <Dialog.Content
+            className="project-dialog"
+            aria-describedby="project-delete-description"
+            onCloseAutoFocus={(event) => {
+              if (skipDeleteFocusReturnRef.current) {
+                skipDeleteFocusReturnRef.current = false
+                event.preventDefault()
+                return
+              }
+              const trigger = deleteTriggerRef.current
+              if (!trigger?.isConnected || trigger.disabled) return
+              event.preventDefault()
+              trigger.focus()
+            }}
+          >
             <Dialog.Title className="project-dialog__title">{text.deleteTitle}</Dialog.Title>
             <Dialog.Description id="project-delete-description" className="project-dialog__description">
               {text.deleteDescription}

@@ -93,6 +93,14 @@
   font-size: 14px;
 }
 
+.credits-pack-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
 .credits-section {
   margin-top: 32px;
 }
@@ -211,6 +219,15 @@
 
   .credits-balance__numbers {
     gap: 32px;
+  }
+
+  .credits-capacity .credits-text-button {
+    min-height: 48px;
+  }
+
+  .credits-pack-error {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .credits-pack {

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-10-24T01:11:22.591Z",
+  "repository": "dystrophyless/dubbed.ai",
+  "authorization": "Root publication GO permits updating only #62 and #66 to verified/open after renewed acceptance. Guarded live read confirms open state, existing frontend label, zero comments, exact title and composition-hold body. The prepared change replaces the Workflow section and current verification tail, checks the previously held AC markers, and preserves the remainder.",
+  "candidate_manifest_sha256": "F76018F133CE36FB369A87AF89DFEC870AC0AC8B92369A3DF9D9BFB893F89121",
+  "issues": [
+    {
+      "issue_number": 62,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/62",
+      "title": "Control account access and complete guarded sign-out or deletion",
+      "state": "open",
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "prior_updated_at": "2026-10-24T00:43:32Z",
+      "prior_body_chars": 24448,
+      "prior_body_sha256": "07B54E2F8C89E4CBDB41A7F4BE752A53C02F8E111C4D405387191E397B38C35E",
+      "prior_unchecked_ac_count": 2,
+      "prepared_body_chars": 25521,
+      "prepared_body_sha256": "B0B98C717121A5B97520A26355BE6F4DBF5EAB099D0931BA3D2FE1FD0CC4F6BC",
+      "prepared_checked_ac_count": 9,
+      "prepared_unchecked_ac_count": 0
+    },
+    {
+      "issue_number": 66,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/66",
+      "title": "Link sign-in methods to one account with explicit dual proof",
+      "state": "open",
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "prior_updated_at": "2026-10-24T00:43:36Z",
+      "prior_body_chars": 21987,
+      "prior_body_sha256": "4B27AC5BBC3240255EF8D86A676AD4F15CDDBF25260EF041302F664C799FDFC1",
+      "prior_unchecked_ac_count": 1,
+      "prepared_body_chars": 23322,
+      "prepared_body_sha256": "F5B062D515DC2E09D63BC2EB2F6BE909835C4B3AE51EF15A660B24F6BDEC3497",
+      "prepared_checked_ac_count": 9,
+      "prepared_unchecked_ac_count": 0
+    }
+  ]
+}

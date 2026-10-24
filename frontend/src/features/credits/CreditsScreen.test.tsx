@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { LocaleProvider } from '../../app/locale'
@@ -241,5 +241,50 @@ describe('CreditsScreen', () => {
     expect(screen.queryByText('Pending purchase')).not.toBeInTheDocument()
     expect(screen.getByText('Verified purchase')).toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Show more' })).not.toBeInTheDocument()
+  })
+
+  it('keeps the balance and history visible when packs fail and retries only the pack region', async () => {
+    const user = userEvent.setup()
+    const { services } = makeServices()
+    let resolveRetry!: (result: Awaited<ReturnType<typeof services.credits.packs>>) => void
+    const pendingRetry = new Promise<Awaited<ReturnType<typeof services.credits.packs>>>((resolve) => {
+      resolveRetry = resolve
+    })
+    vi.mocked(services.credits.packs)
+      .mockResolvedValueOnce({ status: 'error', error: { code: 'adapter-unavailable' } } as never)
+      .mockReturnValueOnce(pendingRetry)
+      .mockResolvedValueOnce(ok([pack]))
+
+    renderScreen(makeProps(services))
+
+    const packs = await screen.findByRole('region', { name: 'Credit packs' })
+    expect(within(packs).getByRole('alert')).toHaveTextContent('Credit packs could not be loaded')
+    expect(within(packs).getByRole('button', { name: 'Retry packs' })).toBeEnabled()
+    expect(document.querySelector('.workspace-error')).toBeNull()
+    expect(screen.getByText('100')).toBeInTheDocument()
+    expect(screen.getByText('No credit activity yet.')).toBeInTheDocument()
+
+    const retry = within(packs).getByRole('button', { name: 'Retry packs' })
+    await user.click(retry)
+    const loading = within(packs).getByRole('button', { name: 'Loading credit packs…' })
+    expect(loading).toBe(retry)
+    expect(loading).toHaveAttribute('aria-disabled', 'true')
+    expect(loading).toHaveFocus()
+    expect(within(packs).getByRole('alert')).toBeInTheDocument()
+
+    resolveRetry({
+      status: 'error',
+      error: { code: 'adapter-unavailable', message: 'Synthetic retry failure.', retry: 'none' },
+    })
+    const retryAgain = await within(packs).findByRole('button', { name: 'Retry packs' })
+    await waitFor(() => expect(retryAgain).toHaveFocus())
+    expect(retryAgain).toBeEnabled()
+    await user.click(retryAgain)
+
+    expect(await within(packs).findByText('20 credits')).toBeInTheDocument()
+    expect(within(packs).queryByRole('alert')).not.toBeInTheDocument()
+    expect(services.credits.packs).toHaveBeenCalledTimes(3)
+    expect(services.credits.snapshot).toHaveBeenCalledTimes(1)
+    expect(services.credits.historyPage).toHaveBeenCalledTimes(1)
   })
 })

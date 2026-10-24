@@ -123,6 +123,49 @@
   gap: 8px;
 }
 
+.project-row-menu__content {
+  z-index: 70;
+  min-width: 176px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: var(--surface, #fff);
+  padding: 4px;
+  color: var(--text-primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.project-row-menu__item {
+  display: flex;
+  min-height: 32px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  padding: 0 8px;
+  color: var(--danger, #c1262c);
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.project-row-menu__item svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+
+.project-row-menu__item[data-highlighted] {
+  background: var(--danger-wash, rgba(193, 38, 44, 0.08));
+}
+
+.project-row-menu__item[data-disabled] {
+  cursor: not-allowed;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .project-rename {
   max-width: 480px;
 }
@@ -215,6 +258,16 @@
   .project-row__actions {
     width: 100%;
     justify-content: flex-end;
+  }
+
+  button.ui-button--icon.project-row-menu__trigger {
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+  }
+
+  .project-row-menu__item {
+    min-height: 48px;
   }
 
   .project-dialog {

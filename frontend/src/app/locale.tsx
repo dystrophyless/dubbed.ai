@@ -58,7 +58,7 @@ export function LocaleProvider({ account, services, onAccountUpdated, children }
   const [storedLocale] = useState<Locale | null>(() => readLocalePreference())
   const [userLocale, setUserLocale] = useState<Locale>(() => storedLocale ?? browserDefault())
   const [manualChoice, setManualChoice] = useState(storedLocale !== null)
-  const [preferenceError, setPreferenceError] = useState<string | null>(null)
+  const [preferenceFailed, setPreferenceFailed] = useState(false)
   const [pendingLocale, setPendingLocale] = useState<Locale | null>(null)
   const attemptedAccountWrite = useRef<string | null>(null)
   const locale = manualChoice ? userLocale : account?.locale ?? userLocale
@@ -85,7 +85,7 @@ export function LocaleProvider({ account, services, onAccountUpdated, children }
           operationId: newOperationId(),
         })
         if (result.status === 'ok') {
-          setPreferenceError(null)
+          setPreferenceFailed(false)
           setPendingLocale(null)
           setUserLocale(next)
           setManualChoice(true)
@@ -104,7 +104,7 @@ export function LocaleProvider({ account, services, onAccountUpdated, children }
           } catch {
             // The visible locale still follows the authoritative account snapshot.
           }
-          setPreferenceError(t(next, 'accountPreferenceUnavailable'))
+          setPreferenceFailed(true)
         }
       } catch {
         setPendingLocale(next)
@@ -115,7 +115,7 @@ export function LocaleProvider({ account, services, onAccountUpdated, children }
         } catch {
           // The visible locale still follows the authoritative account snapshot.
         }
-        setPreferenceError(t(next, 'accountPreferenceUnavailable'))
+        setPreferenceFailed(true)
       }
     },
     [onAccountUpdated, services],
@@ -133,7 +133,7 @@ export function LocaleProvider({ account, services, onAccountUpdated, children }
     setUserLocale(next)
     setManualChoice(true)
     setPendingLocale(account && account.locale !== next ? next : null)
-    setPreferenceError(null)
+    setPreferenceFailed(false)
     try {
       window.localStorage.setItem(preferenceKey, next)
     } catch {
@@ -149,8 +149,14 @@ export function LocaleProvider({ account, services, onAccountUpdated, children }
   }, [account, pendingLocale, persistLocale])
 
   const value = useMemo<LocaleValue>(
-    () => ({ locale, setLocale, retryLocalePreference, text: (key) => t(locale, key), preferenceError }),
-    [locale, preferenceError, retryLocalePreference, setLocale],
+    () => ({
+      locale,
+      setLocale,
+      retryLocalePreference,
+      text: (key) => t(locale, key),
+      preferenceError: preferenceFailed ? t(locale, 'accountPreferenceUnavailable') : null,
+    }),
+    [locale, preferenceFailed, retryLocalePreference, setLocale],
   )
 
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>

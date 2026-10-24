@@ -1,0 +1,28 @@
+{
+  "capturedAt": "2026-10-24",
+  "provenance": {
+    "browserTest": "frontend/e2e/workspace-state-visual.spec.ts",
+    "screenshotMetrics": "visual-checks.json",
+    "command": "npm.cmd run test:e2e -- --config=playwright.workspace-visual.config.ts",
+    "result": "PASS 17/17"
+  },
+  "harness": "actual App NewDub route with typed synthetic services",
+  "locale": "ru",
+  "viewport": { "width": 390, "height": 844 },
+  "scenario": "newdub-invalid-interval",
+  "rangeInputs": [
+    { "ariaLabel": "Начало фрагмента", "widthPx": 358, "heightPx": 48 },
+    { "ariaLabel": "Конец фрагмента", "widthPx": 358, "heightPx": 48 }
+  ],
+  "spacing": {
+    "gapPx": 14,
+    "assertion": "The second range top minus the first range bottom equals 14px."
+  },
+  "touchEnabledChromium": {
+    "startTap": "Start value changed; End remained unchanged.",
+    "endTap": "End value changed; Start remained unchanged.",
+    "intervalBoundsMs": [1000, 120000]
+  },
+  "keyboardIndependence": "ArrowRight on Start increments Start by one unit; End remains unchanged.",
+  "limits": "Playwright Locator.tap() in a touch-enabled Chromium context exercises browser touch/pointer behavior. It does not emulate a physical touchscreen or assistive technology."
+}
