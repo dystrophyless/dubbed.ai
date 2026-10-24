@@ -1,0 +1,66 @@
+{
+  "captured_at_utc": "2026-10-24 20:17:36 UTC",
+  "repository": "dystrophyless/dubbed.ai",
+  "purpose": "Guarded pre-update issue/body/comment baseline before setting the three accepted mock-scope issues to verified/open.",
+  "expected_delivery": {
+    "manifest_sha256": "21A56B47B40A19CC5878B5BCD72D15F14429EFF5DAD2AC522AA9065441DC2675",
+    "payload_paths": 41,
+    "declared_delivery_controls": 5,
+    "planned_stage_paths": 46,
+    "source_freeze_sha256": "372E957FAFA6DA284EA88657F4FC0BE138F2E5498B8C6C44C0E2191EC7ADE781"
+  },
+  "preconditions": {
+    "issue_state": "open",
+    "workflow_status": "in_progress",
+    "label": "frontend",
+    "comments": 0,
+    "acceptance_checkboxes_checked": 0
+  },
+  "issues": [
+    {
+      "issue": 77,
+      "title": "Record and durably accept a turn without losing protected media or navigation intent",
+      "state": "open",
+      "updated_at": "2026-10-24T19:20:47Z",
+      "labels": [
+        "frontend"
+      ],
+      "reported_comment_count": 0,
+      "comment_count": 0,
+      "body_sha256": "E479D7D4DA490934424DAE4D374EAE2894CA188CE57EF748AF28A6945F4C6E26",
+      "ac_checkbox_count": 10,
+      "ac_checked_count": 0,
+      "comments": []
+    },
+    {
+      "issue": 81,
+      "title": "Authorize processing from a validated source and exact selected-section quote",
+      "state": "open",
+      "updated_at": "2026-10-24T19:20:21Z",
+      "labels": [
+        "frontend"
+      ],
+      "reported_comment_count": 0,
+      "comment_count": 0,
+      "body_sha256": "6D1895E34491B1AB4795C545FE850599C005720F86C395920EFFA51519908E68",
+      "ac_checkbox_count": 8,
+      "ac_checked_count": 0,
+      "comments": []
+    },
+    {
+      "issue": 63,
+      "title": "Prove the complete frontend journey with no backend and honest media evidence",
+      "state": "open",
+      "updated_at": "2026-10-24T19:20:07Z",
+      "labels": [
+        "frontend"
+      ],
+      "reported_comment_count": 0,
+      "comment_count": 0,
+      "body_sha256": "A27E13CDE19FF63771FEBC843CC314385CD8302525840BE0CAF15445D7C91FF4",
+      "ac_checkbox_count": 10,
+      "ac_checked_count": 0,
+      "comments": []
+    }
+  ]
+}

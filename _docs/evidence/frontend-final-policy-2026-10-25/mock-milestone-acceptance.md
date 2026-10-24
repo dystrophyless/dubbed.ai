@@ -1,0 +1,50 @@
+# Remaining mock frontend acceptance — 2026-10-25
+
+## Decision and authority
+
+Root records delegated rule-based acceptance of the current mock-backed scope of #77, #81 and #63. The owner's full-cycle implementation request authorizes verification, recorded acceptance, exact in-scope commit, successful push with remote verification, then closure. The later direct answer recorded in [the owner decision receipt](owner-decision-receipt.md) selects one recording tab per project and rejection of source files shorter than1.000s, and explicitly defers #76 outside this mock milestone. #76 must remain open as future real-adapter work; it is neither implemented nor cancelled.
+
+This is acceptance of a backend-free frontend and its measured mock/Chromium envelope. It is not physical-microphone, live-provider, real rendering, real cross-device durability, production security/retention/billing, hosting or deployment acceptance. All product implementation and publishing use Luna Max subagents. Root directly inspected the code delta, raw checks, scope boundaries and actual current rendered evidence; the narrow contract had an independent review with two corrected stale clauses, recorded in [contract-review.md](contract-review.md).
+
+At this decision the baseline remains main `0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2`, the index is empty and these three issues are still open/in_progress. Acceptance precedes delivery; no closure is authorized until the exact reviewed delivery is committed, pushed and independently verified. Eighteen earlier issue closures are unchanged. Successful delivery/closure of these three completes the owner's current21-issue mock milestone, with #76 explicitly retained for the future.
+
+## Exact source boundary
+
+[root-final-freeze-before.json](root-final-freeze-before.json) and [root-final-freeze-after.json](root-final-freeze-after.json) enumerate198 frontend source/test/configuration/media files and are byte-identical: SHA-256 `372E957FAFA6DA284EA88657F4FC0BE138F2E5498B8C6C44C0E2191EC7ADE781`. There was zero source drift during the final browser gate. The tracked implementation-contract summary has only three current policy hunks and SHA-256 `9223198A75B855BA60B7E364C5189DF9FE6EEC57AAD420DD2E9B490FA011DC76`.
+
+The full unit run and isolated production build used [root-pre-capture-freeze.json](root-pre-capture-freeze.json), SHA-256 `7985597676C0ADAE90C447E922F74C7F53817FB4888D1FB2570DFAB70D5F31FE`. The only later change was a test-only screenshot capture after already asserted held-elsewhere UI conditions in full-journey.spec.ts; [root-capture-followup.json](root-capture-followup.json) records that one-file delta. Every product and unit-test byte was unchanged. The updated test was then independently typechecked and exercised by the full browser gate. No unit or production-build result is attributed to untested product changes.
+
+The isolated build used the existing clean-install environment whose npm ci is recorded in [the prior install receipt](../frontend-implementation-2026-10-23/final-lock-install-2026-10-24/receipt.md), after copying the exact current frontend inventory. The dependency manifest and lock remain unchanged: package SHA `D39589829C70537883C578764AB988FDA41C507FDAC416F30C15F53E1913EFD1`, lock SHA `11DFB89CED5C2F80F56CAF47FEDA10AE7B453FAF23601D071FA5E29B5DA21971`. No dependency was added for these changes.
+
+## Executed checks
+
+Environment: Windows, Node22.23.1, npm10.9.8; the existing frozen Vite/Playwright/Chromium installation. Commands below ran locally with mock services, browser audio muted and fake media devices/permission UI; no physical microphone or external provider was used.
+
+| Check | Observed result | Raw evidence |
+|---|---|---|
+| npm.cmd run test | 44 files,222 tests passed in65.49s | [unit](root-final-unit.log) |
+| npm.cmd run build in isolated clean-install source copy | typecheck and mock production build passed;947.46kB JS/55.71kB CSS | [build](root-final-isolated-build.log) |
+| npm.cmd run typecheck after the screenshot-only test follow-up | passed | [final typecheck](root-final-typecheck.log) |
+| npm.cmd run lint on final source | exit0, warnings remain | [lint](root-final-lint.log) |
+| Full default browser test directory; CAPTURE_SHELL_EVIDENCE=1, isolated port4284, workers1 | 118 passed in5.0m; no retries, skips or failures | [browser](root-final-browser.log) |
+| npm.cmd run test:media | 3 passed,0 failed | [media corpus](root-final-media.log) |
+| npm.cmd run test:e2e:real | 1 passed in7.8s; honest unavailable mode, no external-service requests | [real unavailable](root-final-real-unavailable.log) |
+| git diff --check for frontend and tracked contract summary | exit0 | Root executed before acceptance; normal LF/CRLF notices only |
+
+The browser invocation was `npm.cmd run test:e2e -- --config=C:\Users\roman\AppData\Local\Temp\dubbed-frontend-verify-7f3a51c232dd4446aee91955e1fb6f5b\root-media.config.ts --workers=1 --reporter=line`, with CAPTURE_SHELL_EVIDENCE=1. The temporary config imports the repository default, retains its mock/fake-device flags, and sets absolute test/output paths and the frontend server cwd. Two jsdom pause notices, the Vite chunk-size advisory and lint warnings are retained; these are not represented as warning-free checks.
+
+## Verified changes and integration
+
+- #81: both UI and public mock-upload boundary reject established durations below1000ms; exact999/1000ms component/service facts prove the threshold. The unchanged admitted playable short-source.mp4 fixture supplies genuine native0.646867s metadata/audio evidence in the browser. Rejection creates no project/source/quote/preparation/reservation/ledger/capacity effect. A rejected replacement preserves project/title provenance/source bytes/selection/quote/credits/history/slot; a successful replacement invalidates the old quote. The related pre-validation quote-clearing defect was fixed. See [short-source proof](short-source/verification.md), [initial rejection](short-source/new-dub-short-source-error-en.png) and [preserved replacement](short-source/new-dub-short-replacement-preserved-en.png).
+- #77: a runtime recording actor is shared by facades in one realm and differs across tabs; durable authentication client/session and its fixed lifetime are unchanged. Atomic grant checks and mutation fingerprints fence acquire/renew/release/persist/accept/leave, including another actor's operation-ID replay. The native same-browser-context two-page journey proves read-only loser controls, owner capture/acceptance, explicit release and later reacquisition. Legacy grants fail closed until existing expiry without destroying drafts. A real Save-and-leave defect was also fixed: an already persisted candidate is reused instead of inserted again under its unique candidateId. The ordinary visible guard now exits, preserves an unaccepted non-final draft and restores it after reload. The test polls actual stored expiry against real browser time before explicit reacquisition; the45s mock constant is unchanged. See [recording proof](recording-tab/verification.md) and [honest pre-fix failure notes](recording-tab/historical-failures.md).
+- #63: the full backend-free suite composes the existing identity/session/account/grant, upload/quote/ledger/preparation, fake-device capture/draft/acceptance/assembly/result-generation/download, projects/purchase-return and deletion scenarios. The two previously partial mock slices are now exercised under the settled owner decisions. The [criterion map](remaining-criteria-map.md) records the required mock criteria and explicit real-only limits; no real-adapter proof is substituted by unavailable mode or fake media.
+
+Root opened the actual held-elsewhere screenshot, both short-source states, current RU phone Record and current desktop candidate Record. The five current native viewport captures were copied byte-for-byte from the passing regenerated local Record evidence into this dated folder; no image edits occurred. Relevant self-contained captures are [held elsewhere](recording-tab/held-elsewhere-en.png), [desktop](recording-tab/recording-en-1440x900.png), [short desktop](recording-tab/recording-en-1440x700.png), [RU phone](recording-tab/recording-ru-390x844.png), [capture](recording-tab/recording-en-capturing-1440x900.png) and [candidate](recording-tab/recording-en-candidate-1440x900.png). The existing Clean/Light, Mabry and Lucide1.1 authority is unchanged; source/token review and rendered browser proof remain distinct.
+
+The short-source worker's interim typecheck errors came from concurrently unfinished recording-test helpers, not a frozen product failure; the final typecheck and full gate above supersede that phase observation. The recording worker's transient Playwright failure files were cleaned by later runs; its historical note preserves the observed unique-index error and test-setup reload failure without pretending those removed files are attached.
+
+## Delivery boundary
+
+Deliver only the reviewed frontend delta, the tracked summary's three current decision hunks, a bounded CHANGELOG accepted-history entry and selected dated proof/control artifacts. The clean tracked CHANGELOG still claimed that no product changes were accepted; replacing that stale statement with this recorded mock acceptance is in scope. Shared/Flow06/Flow09 were synchronized locally but remain pre-existing untracked authority; do not import their entire corpus, unrelated dirty docs/skills or old regenerated screenshot folders. The self-contained decision receipt and live issue contracts record the approved new behavior and source hashes. No broad reset/clean, PR, merge, deployment, paid provider or real backend is authorized.
+
+Publisher must present an exact current hash whitelist for Root review before staging. After that review, stage only current accepted bytes, record verification/acceptance and commit/push the in-scope result. Root then verifies remote SHA, parent, exact changed paths and committed blob identities before issuing a separate closure decision for #77/#81/#63. #76 remains open as the owner's deferred follow-up.

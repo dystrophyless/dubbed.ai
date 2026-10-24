@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { openWorkspaceDatabase, requestResult, runTransaction } from '../../src/services/indexeddb'
 import { createServiceTestHarness, expectOk, fileWithBytes, operationId, sourceFacts } from './test-support'
 
 async function signIn(harness: ReturnType<typeof createServiceTestHarness>, email: string) {
@@ -15,7 +16,82 @@ async function signIn(harness: ReturnType<typeof createServiceTestHarness>, emai
   }))
 }
 
+async function uploadStoreCounts(harness: ReturnType<typeof createServiceTestHarness>) {
+  const database = await openWorkspaceDatabase(harness.factory, `dubbed.mock.v1.${harness.namespace}`)
+  try {
+    return await runTransaction(database, ['projects', 'sources', 'quotes', 'preparations', 'reservations', 'ledger'], 'readonly', async (transaction) => {
+      const [projects, sources, quotes, preparations, reservations, ledger] = await Promise.all([
+        requestResult(transaction.objectStore('projects').count()),
+        requestResult(transaction.objectStore('sources').count()),
+        requestResult(transaction.objectStore('quotes').count()),
+        requestResult(transaction.objectStore('preparations').count()),
+        requestResult(transaction.objectStore('reservations').count()),
+        requestResult(transaction.objectStore('ledger').count()),
+      ])
+      return { projects, sources, quotes, preparations, reservations, ledger }
+    })
+  } finally {
+    database.close()
+  }
+}
+
 describe('project title and source replacement service boundaries', () => {
+  it('rejects sources below 1000 ms, admits 1000 ms, and preserves the draft on a short replacement', async () => {
+    const harness = createServiceTestHarness()
+    await signIn(harness, 'upload-duration@example.test')
+    const storageBeforeShortUpload = await uploadStoreCounts(harness)
+    const creditsBeforeShortUpload = expectOk(await harness.services.credits.snapshot())
+    const historyBeforeShortUpload = expectOk(await harness.services.credits.history())
+
+    const shortInitial = await harness.services.uploads.commitInitial({
+      file: fileWithBytes('short-source.mp4', [1, 2, 3]),
+      facts: { ...sourceFacts(), durationMs: 999 },
+      operationId: operationId('upload-999ms-source'),
+    })
+    expect(shortInitial).toMatchObject({ status: 'error', error: { code: 'media-invalid' } })
+    expect(expectOk(await harness.services.projects.list()).capacity.used).toBe(0)
+    expect(await uploadStoreCounts(harness)).toEqual(storageBeforeShortUpload)
+    expect(expectOk(await harness.services.credits.snapshot())).toEqual(creditsBeforeShortUpload)
+    expect(expectOk(await harness.services.credits.history())).toEqual(historyBeforeShortUpload)
+
+    const uploaded = expectOk(await harness.services.uploads.commitInitial({
+      file: fileWithBytes('one-second-source.mp4', [4, 5, 6]),
+      facts: { ...sourceFacts(), durationMs: 1_000 },
+      operationId: operationId('upload-1000ms-source'),
+    }))
+    expect(uploaded.project).toMatchObject({
+      sourceDurationMs: 1_000,
+      selection: { startMs: 0, endMs: 1_000 },
+    })
+
+    const quoteInput = {
+      projectId: uploaded.project.id,
+      expectedProjectRevision: uploaded.project.revision,
+      expectedActivePreparationRevision: uploaded.project.preparationRevision,
+      operationId: operationId('quote-before-short-replacement'),
+    }
+    const quoteBeforeReplacement = expectOk(await harness.services.preparation.quote(quoteInput))
+    expect(quoteBeforeReplacement).toMatchObject({ durationMs: 1_000, credits: 1 })
+    const creditsBeforeReplacement = expectOk(await harness.services.credits.snapshot())
+    const historyBeforeReplacement = expectOk(await harness.services.credits.history())
+    const storageBeforeReplacement = await uploadStoreCounts(harness)
+    const shortReplacement = await harness.services.uploads.replaceSource({
+      projectId: uploaded.project.id,
+      file: fileWithBytes('short-replacement.mp4', [7, 8, 9]),
+      facts: { ...sourceFacts(), durationMs: 999 },
+      expectedProjectRevision: uploaded.project.revision,
+      operationId: operationId('replace-with-999ms-source'),
+    })
+    expect(shortReplacement).toMatchObject({ status: 'error', error: { code: 'media-invalid' } })
+    expect(expectOk(await harness.services.projects.open(uploaded.project.id))).toEqual(uploaded.project)
+    expect(expectOk(await harness.services.projects.list()).capacity.used).toBe(1)
+    expect(expectOk(await harness.services.credits.snapshot())).toEqual(creditsBeforeReplacement)
+    expect(expectOk(await harness.services.credits.history())).toEqual(historyBeforeReplacement)
+    expect(await uploadStoreCounts(harness)).toEqual(storageBeforeReplacement)
+    expect(expectOk(await harness.services.preparation.quote(quoteInput))).toEqual(quoteBeforeReplacement)
+    expect([...new Uint8Array(await expectOk(await harness.services.uploads.getSource(uploaded.project.id)).blob.arrayBuffer())]).toEqual([4, 5, 6])
+  })
+
   it('returns ServiceResult for invalid upload and rename titles at the visible-grapheme boundary', async () => {
     const harness = createServiceTestHarness()
     await signIn(harness, 'project-title@example.test')

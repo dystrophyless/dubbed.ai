@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import type { RecordingCandidate, TurnId } from '../../src/services/contracts'
 import { ids } from '../../src/services/contracts'
+import { openWorkspaceDatabase, runTransaction } from '../../src/services/indexeddb'
+import { readRecord, writeRecord, type StoredGrant } from '../../src/services/mock-store'
+import { createServices } from '../../src/services'
 import { blobWithBytes, createServiceTestHarness, expectOk, fileWithBytes, operationId, sourceFacts } from './test-support'
 
 async function prepareProject(harness: ReturnType<typeof createServiceTestHarness>, email: string) {
@@ -384,6 +387,152 @@ describe('persistent recording and result services', () => {
     expect(expectOk(await harness.services.recording.loadContext(projectId))).toMatchObject({ acceptedTakeCount: 0 })
   })
 
+  it('shares a tab actor across service facades and explicitly reacquires released or expired grants without losing drafts', async () => {
+    const harness = createServiceTestHarness()
+    const projectId = await prepareProject(harness, 'recording-actor-lifecycle@example.test')
+    const sameTabServices = createServices({
+      adapter: 'mock',
+      namespace: harness.namespace,
+      clientId: harness.clientId,
+      clock: { now: harness.now },
+      indexedDB: harness.factory,
+      scenario: 'service-tests',
+    })
+    const initial = expectOk(await harness.services.recording.loadContext(projectId))
+    const turn = initial.turns[0]
+    const firstGrant = expectOk(await harness.services.recording.acquireAccess({
+      projectId,
+      expectedProjectRevision: initial.project.revision,
+      operationId: operationId('actor-lifecycle-first-acquire'),
+    }))
+
+    const sameTabRenewal = expectOk(await sameTabServices.recording.acquireAccess({
+      projectId,
+      expectedProjectRevision: initial.project.revision,
+      operationId: operationId('actor-lifecycle-same-tab-acquire'),
+    }))
+    expect(sameTabRenewal).toMatchObject({
+      grantId: firstGrant.grantId,
+      fenceToken: firstGrant.fenceToken,
+      revision: Number(firstGrant.revision) + 1,
+    })
+    expect(await harness.services.recording.renewAccess({
+      projectId,
+      grantId: firstGrant.grantId,
+      expectedGrantRevision: firstGrant.revision,
+      expectedProjectRevision: initial.project.revision,
+      operationId: operationId('actor-lifecycle-stale-revision'),
+    })).toMatchObject({ status: 'conflict', code: 'revision-conflict' })
+
+    const saved = expectOk(await harness.services.recording.persistDraft({
+      projectId,
+      turnId: turn.id,
+      candidate: candidateFor(projectId, turn, 'actor-lifecycle-draft'),
+      blob: recordingBlob(),
+      grantId: sameTabRenewal.grantId,
+      expectedGrantRevision: sameTabRenewal.revision,
+      expectedProjectRevision: initial.project.revision,
+      operationId: operationId('actor-lifecycle-save-draft'),
+    }))
+    const beforeRelease = expectOk(await harness.services.recording.loadContext(projectId))
+    expectOk(await sameTabServices.recording.releaseAccess({
+      projectId,
+      grantId: sameTabRenewal.grantId,
+      expectedGrantRevision: sameTabRenewal.revision,
+      expectedProjectRevision: beforeRelease.project.revision,
+      operationId: operationId('actor-lifecycle-release'),
+    }))
+
+    const afterRelease = expectOk(await harness.services.recording.loadContext(projectId))
+    const reacquiredAfterRelease = expectOk(await harness.services.recording.acquireAccess({
+      projectId,
+      expectedProjectRevision: afterRelease.project.revision,
+      operationId: operationId('actor-lifecycle-reacquire-release'),
+    }))
+    expect(reacquiredAfterRelease.grantId).not.toBe(firstGrant.grantId)
+    expect(reacquiredAfterRelease.fenceToken).toBeGreaterThan(firstGrant.fenceToken)
+    expect(expectOk(await harness.services.recording.restoreDraft({ projectId, turnId: turn.id }))?.candidate.id)
+      .toBe(saved.candidate.id)
+
+    harness.advance(45_001)
+    const afterExpiry = expectOk(await harness.services.recording.loadContext(projectId))
+    expect(await sameTabServices.recording.renewAccess({
+      projectId,
+      grantId: reacquiredAfterRelease.grantId,
+      expectedGrantRevision: reacquiredAfterRelease.revision,
+      expectedProjectRevision: afterExpiry.project.revision,
+      operationId: operationId('actor-lifecycle-expired-renew'),
+    })).toMatchObject({ status: 'error', error: { code: 'lease-held' } })
+
+    const reacquiredAfterExpiry = expectOk(await sameTabServices.recording.acquireAccess({
+      projectId,
+      expectedProjectRevision: afterExpiry.project.revision,
+      operationId: operationId('actor-lifecycle-reacquire-expired'),
+    }))
+    expect(reacquiredAfterExpiry.grantId).not.toBe(reacquiredAfterRelease.grantId)
+    expect(reacquiredAfterExpiry.fenceToken).toBeGreaterThan(reacquiredAfterRelease.fenceToken)
+    expect(expectOk(await harness.services.recording.restoreDraft({ projectId, turnId: turn.id }))?.candidate.id)
+      .toBe(saved.candidate.id)
+  })
+
+  it('fails closed for a live legacy grant without a tab actor and reacquires after expiry with its draft intact', async () => {
+    const harness = createServiceTestHarness()
+    const projectId = await prepareProject(harness, 'legacy-recording-grant@example.test')
+    const initial = expectOk(await harness.services.recording.loadContext(projectId))
+    const turn = initial.turns[0]
+    const grant = expectOk(await harness.services.recording.acquireAccess({
+      projectId,
+      expectedProjectRevision: initial.project.revision,
+      operationId: operationId('legacy-recording-grant-acquire'),
+    }))
+    const saved = expectOk(await harness.services.recording.persistDraft({
+      projectId,
+      turnId: turn.id,
+      candidate: candidateFor(projectId, turn, 'legacy-recording-draft'),
+      blob: recordingBlob(),
+      grantId: grant.grantId,
+      expectedGrantRevision: grant.revision,
+      expectedProjectRevision: initial.project.revision,
+      operationId: operationId('legacy-recording-grant-draft'),
+    }))
+
+    const database = await openWorkspaceDatabase(harness.factory, `dubbed.mock.v1.${harness.namespace}`)
+    await runTransaction(database, ['recordingGrants'], 'readwrite', async (transaction) => {
+      const stored = await readRecord<StoredGrant>(transaction, 'recordingGrants', grant.grantId)
+      if (!stored) throw new Error('The acquired grant should exist before simulating legacy storage.')
+      const legacy = { ...stored } as Omit<StoredGrant, 'recordingActorId'> & { recordingActorId?: string }
+      delete legacy.recordingActorId
+      await writeRecord(transaction, 'recordingGrants', legacy as StoredGrant)
+    })
+    database.close()
+
+    const beforeExpiry = expectOk(await harness.services.recording.loadContext(projectId))
+    expect(await harness.services.recording.renewAccess({
+      projectId,
+      grantId: grant.grantId,
+      expectedGrantRevision: grant.revision,
+      expectedProjectRevision: beforeExpiry.project.revision,
+      operationId: operationId('legacy-recording-grant-renew'),
+    })).toMatchObject({ status: 'error', error: { code: 'lease-held' } })
+    expect(await harness.services.recording.acquireAccess({
+      projectId,
+      expectedProjectRevision: beforeExpiry.project.revision,
+      operationId: operationId('legacy-recording-grant-blocked-acquire'),
+    })).toMatchObject({ status: 'error', error: { code: 'lease-held' } })
+
+    harness.advance(45_001)
+    const afterExpiry = expectOk(await harness.services.recording.loadContext(projectId))
+    const reacquired = expectOk(await harness.services.recording.acquireAccess({
+      projectId,
+      expectedProjectRevision: afterExpiry.project.revision,
+      operationId: operationId('legacy-recording-grant-reacquire'),
+    }))
+    expect(reacquired.grantId).not.toBe(grant.grantId)
+    expect(reacquired.fenceToken).toBeGreaterThan(grant.fenceToken)
+    expect(expectOk(await harness.services.recording.restoreDraft({ projectId, turnId: turn.id }))?.candidate.id)
+      .toBe(saved.candidate.id)
+  })
+
   it('accepts the final initial take on explicit Save and leave before releasing the recording grant', async () => {
     const harness = createServiceTestHarness()
     const projectId = await prepareProject(harness, 'final-leave@example.test')
@@ -439,6 +588,56 @@ describe('persistent recording and result services', () => {
       },
     })
     expect(expectOk(await harness.services.recording.loadContext(projectId)).missingAcceptedCount).toBe(0)
+  })
+
+  it('releases recording with an existing recoverable draft without duplicating its unique candidate identity', async () => {
+    const harness = createServiceTestHarness()
+    const projectId = await prepareProject(harness, 'save-existing-draft-and-leave@example.test')
+    const initial = expectOk(await harness.services.recording.loadContext(projectId))
+    const turn = initial.turns[0]
+    const grant = expectOk(await harness.services.recording.acquireAccess({
+      projectId,
+      expectedProjectRevision: initial.project.revision,
+      operationId: operationId('save-existing-draft-acquire'),
+    }))
+    const candidate = candidateFor(projectId, turn, 'save-existing-draft')
+    const blob = recordingBlob()
+    const saved = expectOk(await harness.services.recording.persistDraft({
+      projectId,
+      turnId: turn.id,
+      candidate,
+      blob,
+      grantId: grant.grantId,
+      expectedGrantRevision: grant.revision,
+      expectedProjectRevision: initial.project.revision,
+      operationId: operationId('save-existing-draft-persist'),
+    }))
+    const beforeLeave = expectOk(await harness.services.recording.loadContext(projectId))
+    const resolution = expectOk(await harness.services.recording.resolveLeave({
+      projectId,
+      turnId: turn.id,
+      action: 'save-and-leave',
+      candidate: saved.candidate,
+      blob,
+      draftId: saved.candidate.draftId,
+      grantId: grant.grantId,
+      expectedGrantRevision: grant.revision,
+      expectedProjectRevision: beforeLeave.project.revision,
+      operationId: operationId('save-existing-draft-leave'),
+    }))
+
+    expect(resolution).toMatchObject({
+      action: 'save-and-leave',
+      disposition: 'draft-saved',
+      draftId: saved.candidate.draftId,
+      draftDiscarded: false,
+      grantReleased: true,
+    })
+    const restored = expectOk(await harness.services.recording.restoreDraft({ projectId, turnId: turn.id }))
+    expect(restored).not.toBeNull()
+    expect(restored!.candidate.id).toBe(saved.candidate.id)
+    expect(restored!.blob.size).toBe(blob.size)
+    expect(expectOk(await harness.services.recording.loadContext(projectId))).toMatchObject({ acceptedTakeCount: 0 })
   })
 
   it('separates draft persistence from acceptance, authorizes the complete snapshot once, and pins result generations', async () => {

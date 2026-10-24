@@ -45,7 +45,7 @@ type LocalProblem =
   | 'audio-missing'
   | 'audio-unknown'
   | 'metadata'
-  | 'short-unresolved'
+  | 'too-short'
   | 'too-long'
   | 'dimensions'
 
@@ -190,7 +190,7 @@ const copy = {
       'audio-missing': 'No audio in this video — choose another file.',
       'audio-unknown': 'Audio-track presence could not be established from the available local evidence. This file was not saved.',
       metadata: 'Video duration could not be established from browser metadata or the supported local container evidence.',
-      'short-unresolved': 'This source is shorter than 1 second. Its acceptance policy is unresolved, so this draft was not created.',
+      'too-short': 'This video is shorter than 1 second. Choose a video at least 1 second long.',
       'too-long': 'This video is over the 10-minute limit.',
       dimensions: 'Video dimensions could not be established. This file was not saved.',
     } satisfies Record<LocalProblem, string>,
@@ -284,7 +284,7 @@ const copy = {
       'audio-missing': 'В этом видео нет аудио — выберите другой файл.',
       'audio-unknown': 'По доступным локальным данным нельзя подтвердить наличие аудиодорожки. Файл не сохранён.',
       metadata: 'Не удалось определить длительность видео по данным браузера или поддерживаемого контейнера.',
-      'short-unresolved': 'Источник короче 1 секунды. Правило приёма ещё не решено, черновик не создан.',
+      'too-short': 'Это видео короче 1 секунды. Выберите видео длительностью не менее 1 секунды.',
       'too-long': 'Видео длиннее лимита 10 минут.',
       dimensions: 'Не удалось определить размеры видео. Файл не сохранён.',
     } satisfies Record<LocalProblem, string>,
@@ -386,7 +386,7 @@ function validateLocalSource(file: File, probe: LocalSourceProbe): { facts?: Upl
   if (probe.hasAudio !== true) return { problem: 'audio-unknown' }
   if (probe.durationMs === null || !Number.isFinite(probe.durationMs)) return { problem: 'metadata' }
   const durationMs = Math.floor(probe.durationMs)
-  if (durationMs < minimumSelectionMs) return { problem: 'short-unresolved' }
+  if (durationMs < minimumSelectionMs) return { problem: 'too-short' }
   if (durationMs > maximumDurationMs) return { problem: 'too-long' }
 
   const knownFixture = probe.fixtureKey === 'source'
@@ -631,7 +631,6 @@ export function NewDubScreen({
     setLocalProblem(null)
     setActionError(null)
     setLocalNotice(null)
-    setQuote(null)
     try {
       const probe = await probeLocalSource(file)
       const validation = validateLocalSource(file, probe)
@@ -648,6 +647,7 @@ export function NewDubScreen({
   const applyUploadedProject = useCallback(async (uploaded: { project: OwnedProject; source: SourceFacts }) => {
     if (account && !saveActiveProject(account.id, uploaded.project.id)) setStorageFailed(true)
     clearCommand()
+    setQuote(null)
     setCandidate(null)
     setLocalProblem(null)
     setBusy('loading')

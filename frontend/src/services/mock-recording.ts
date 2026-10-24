@@ -182,7 +182,8 @@ async function requireGrant(
     throw serviceError('lease-held', 'Recording access changed. Reacquire it before continuing.', 'reconcile-first')
   }
   if (grant.state !== 'held-by-session' || grant.expiresAt <= nowMs(context.clock)
-    || grant.sessionId !== loaded.active.session.id || grant.clientId !== context.clientId) {
+    || grant.sessionId !== loaded.active.session.id || grant.clientId !== context.clientId
+    || grant.recordingActorId !== context.recordingActorId) {
     throw serviceError('lease-held', 'This tab no longer holds recording access.', 'reconcile-first')
   }
   if (grant.revision !== expectedGrantRevision) {
@@ -530,7 +531,11 @@ export function createMockRecording(context: StoreContext): RecordingService {
     },
 
     acquireAccess: async (input) => {
-      const requestHash = await fingerprint({ projectId: input.projectId, expectedProjectRevision: input.expectedProjectRevision })
+      const requestHash = await fingerprint({
+        projectId: input.projectId,
+        expectedProjectRevision: input.expectedProjectRevision,
+        recordingActorId: context.recordingActorId,
+      })
       return mutate(context, {
         operationId: input.operationId,
         kind: 'recording.acquire-access',
@@ -548,10 +553,14 @@ export function createMockRecording(context: StoreContext): RecordingService {
           const grants = await recordsByIndex<StoredGrant>(transaction, 'recordingGrants', 'projectId', loaded.project.id)
           const live = grants.filter((grant) => grant.accountId === loaded.active.account.id
             && grant.state === 'held-by-session' && grant.expiresAt > now)
-          const other = live.find((grant) => grant.clientId !== context.clientId || grant.sessionId !== loaded.active.session.id)
+          const other = live.find((grant) => grant.clientId !== context.clientId
+            || grant.sessionId !== loaded.active.session.id
+            || grant.recordingActorId !== context.recordingActorId)
           if (other) throw serviceError('lease-held', 'Recording is active in another tab. Reopen this project after that recording ends.', 'reconcile-first')
 
-          const own = live.find((grant) => grant.clientId === context.clientId && grant.sessionId === loaded.active.session.id)
+          const own = live.find((grant) => grant.clientId === context.clientId
+            && grant.sessionId === loaded.active.session.id
+            && grant.recordingActorId === context.recordingActorId)
           if (own) {
             const renewed = { ...own, expiresAt: now + MOCK_RECORDING_LEASE_MS, revision: nextRevision(own.revision) }
             await writeRecord(transaction, 'recordingGrants', renewed)
@@ -573,6 +582,7 @@ export function createMockRecording(context: StoreContext): RecordingService {
             expiresAt: now + MOCK_RECORDING_LEASE_MS,
             revision: asRevision(0),
             clientId: context.clientId,
+            recordingActorId: context.recordingActorId,
             createdAt: now,
           }
           await writeRecord(transaction, 'recordingGrants', grant)
@@ -587,6 +597,7 @@ export function createMockRecording(context: StoreContext): RecordingService {
         grantId: input.grantId,
         expectedGrantRevision: input.expectedGrantRevision,
         expectedProjectRevision: input.expectedProjectRevision,
+        recordingActorId: context.recordingActorId,
       })
       return mutate(context, {
         operationId: input.operationId,
@@ -602,7 +613,8 @@ export function createMockRecording(context: StoreContext): RecordingService {
           }
           const grant = await readRecord<StoredGrant>(transaction, 'recordingGrants', input.grantId)
           if (!grant || grant.accountId !== loaded.active.account.id || grant.projectId !== loaded.project.id
-            || grant.clientId !== context.clientId || grant.sessionId !== loaded.active.session.id) {
+            || grant.clientId !== context.clientId || grant.sessionId !== loaded.active.session.id
+            || grant.recordingActorId !== context.recordingActorId) {
             throw serviceError('lease-held', 'This tab no longer holds recording access.', 'reconcile-first')
           }
           if (grant.state !== 'held-by-session' || grant.expiresAt <= nowMs(context.clock)) {
@@ -623,7 +635,13 @@ export function createMockRecording(context: StoreContext): RecordingService {
     },
 
     releaseAccess: async (input) => {
-      const requestHash = await fingerprint({ projectId: input.projectId, grantId: input.grantId, expectedGrantRevision: input.expectedGrantRevision, expectedProjectRevision: input.expectedProjectRevision })
+      const requestHash = await fingerprint({
+        projectId: input.projectId,
+        grantId: input.grantId,
+        expectedGrantRevision: input.expectedGrantRevision,
+        expectedProjectRevision: input.expectedProjectRevision,
+        recordingActorId: context.recordingActorId,
+      })
       return mutate(context, {
         operationId: input.operationId,
         kind: 'recording.release-access',
@@ -634,7 +652,8 @@ export function createMockRecording(context: StoreContext): RecordingService {
           const project = await requireProject<import('./contracts').OwnedProject>(transaction, ids.account(accountId), input.projectId)
           if (project.revision !== input.expectedProjectRevision) throw revisionConflict('Project changed before recording access was released.', project.revision)
           const grant = await readRecord<StoredGrant>(transaction, 'recordingGrants', input.grantId)
-          if (!grant || grant.accountId !== accountId || grant.projectId !== project.id || grant.clientId !== context.clientId) {
+          if (!grant || grant.accountId !== accountId || grant.projectId !== project.id
+            || grant.clientId !== context.clientId || grant.recordingActorId !== context.recordingActorId) {
             throw serviceError('lease-held', 'Recording access changed before it could be released.', 'reconcile-first')
           }
           if (grant.revision !== input.expectedGrantRevision) {
@@ -686,6 +705,7 @@ export function createMockRecording(context: StoreContext): RecordingService {
         grantId: input.grantId,
         expectedGrantRevision: input.expectedGrantRevision,
         expectedProjectRevision: input.expectedProjectRevision,
+        recordingActorId: context.recordingActorId,
       })
       return mutate(context, {
         operationId: input.operationId,
@@ -718,6 +738,7 @@ export function createMockRecording(context: StoreContext): RecordingService {
         expectedGrantRevision: input.expectedGrantRevision,
         expectedProjectRevision: input.expectedProjectRevision,
         expectedTakeRevision: input.expectedTakeRevision,
+        recordingActorId: context.recordingActorId,
       })
       return mutate(context, {
         operationId: input.operationId,
@@ -795,6 +816,7 @@ export function createMockRecording(context: StoreContext): RecordingService {
         grantId: input.grantId,
         expectedGrantRevision: input.expectedGrantRevision,
         expectedProjectRevision: input.expectedProjectRevision,
+        recordingActorId: context.recordingActorId,
       })
       return mutate<LeaveResolution>(context, {
         operationId: input.operationId,
@@ -869,12 +891,12 @@ export function createMockRecording(context: StoreContext): RecordingService {
                 disposition = 'take-accepted'
                 acceptedTakeId = accepted.takeId
                 initialAssemblyAuthorizationId = accepted.initialAssemblyAuthorizationId
+            } else if (persistedDraftId) {
+              draftId = persistedDraftId
+              disposition = 'draft-saved'
               } else if (input.blob) {
                 const saved = await persistDraftInTransaction(transaction, context, loaded, turn, candidate, input.blob, contentHash, input.operationId)
                 draftId = saved.candidate.draftId
-                disposition = 'draft-saved'
-              } else if (persistedDraftId) {
-                draftId = persistedDraftId
                 disposition = 'draft-saved'
               }
             } else if (persistedDraftId) {

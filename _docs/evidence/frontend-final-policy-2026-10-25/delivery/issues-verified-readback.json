@@ -1,0 +1,81 @@
+{
+  "captured_at_utc": "2026-10-24 20:20:02 UTC",
+  "repository": "dystrophyless/dubbed.ai",
+  "purpose": "Fresh issue/comment readback after the authorized mock-scope verification update and before commit/push. These are still open pending delivery publication and a separate closure decision.",
+  "verification": {
+    "root_acceptance": "_docs/evidence/frontend-final-policy-2026-10-25/mock-milestone-acceptance.md",
+    "manifest_sha256": "21A56B47B40A19CC5878B5BCD72D15F14429EFF5DAD2AC522AA9065441DC2675",
+    "expected_state": "open",
+    "expected_workflow": "verified",
+    "expected_labels": [
+      "frontend"
+    ],
+    "expected_comments": 0,
+    "all_original_criteria_checked": true
+  },
+  "issues": [
+    {
+      "issue_number": 77,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/77",
+      "title": "Record and durably accept a turn without losing protected media or navigation intent",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "comment_count": 0,
+      "workflow_status": "verified — Root's delegated rule-based acceptance on 2026-10-25 covers this issue's backend-free mock/Chromium scope. All original AC-01–AC-09 and AC-VIS-01 are verified within that scope. This issue remains open pending the exact accepted delivery commit, successful push and remote SHA/path verification; a separate closure decision is required.",
+      "checkboxes": {
+        "checked": 10,
+        "total": 10
+      },
+      "body_sha256": "DE238B292BEE43C44017978CF517AC0E0E967D3E2C4923CD65C27AB4D0A9E064",
+      "required_state_ok": true,
+      "acceptance_complete": true,
+      "delivery_commit_pending": true,
+      "separate_closure_required": true
+    },
+    {
+      "issue_number": 81,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/81",
+      "title": "Authorize processing from a validated source and exact selected-section quote",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "comment_count": 0,
+      "workflow_status": "verified — Root's delegated rule-based acceptance on 2026-10-25 covers this issue's validated-source and selected-section behavior in the backend-free mock/Chromium scope. All original AC-01–AC-07 and AC-VIS-01 are verified within that scope. This issue remains open pending the exact accepted delivery commit, successful push and remote SHA/path verification; a separate closure decision is required.",
+      "checkboxes": {
+        "checked": 8,
+        "total": 8
+      },
+      "body_sha256": "458FEFF5E4803E339753878428D4A6DC71CB5D86095508D3F757397B1979DB64",
+      "required_state_ok": true,
+      "acceptance_complete": true,
+      "delivery_commit_pending": true,
+      "separate_closure_required": true
+    },
+    {
+      "issue_number": 63,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/63",
+      "title": "Prove the complete frontend journey with no backend and honest media evidence",
+      "state": "open",
+      "state_reason": null,
+      "labels": [
+        "frontend"
+      ],
+      "comment_count": 0,
+      "workflow_status": "verified — Root's delegated acceptance on 2026-10-25 covers this full backend-free integration gate in the frozen mock/Chromium envelope. All original AC-01–AC-09 and AC-ICON-01 are verified within that scope. This issue remains open pending the exact accepted delivery commit, successful push and remote SHA/path verification; a separate closure decision is required.",
+      "checkboxes": {
+        "checked": 10,
+        "total": 10
+      },
+      "body_sha256": "BB46D63866A1E564286217D200F0FE4886087B04298DB8E1A7FCCB908F6A1644",
+      "required_state_ok": true,
+      "acceptance_complete": true,
+      "delivery_commit_pending": true,
+      "separate_closure_required": true
+    }
+  ]
+}

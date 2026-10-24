@@ -1,0 +1,330 @@
+{
+  "schema": "dubbed.publisher-hash-whitelist.v1",
+  "prepared_on": "2026-10-25",
+  "status": "Root review whitelist; not staged or committed",
+  "baseline_revision": "0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2",
+  "payload_path_count": 41,
+  "category_counts": {
+    "frontend_delta": 11,
+    "tracked_documentation": 2,
+    "selected_dated_evidence": 28
+  },
+  "planned_stage_path_count": 46,
+  "delivery_control_files": [
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/delivery/final-hash-manifest.json",
+      "status": "created control; self-hash excluded"
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/delivery/publisher-receipt.md",
+      "status": "created control; not in payload hash list"
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/delivery/precommit-receipt.md",
+      "status": "generate only after Root publication GO"
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/delivery/issues-preverify.json",
+      "status": "generate only after Root publication GO"
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/delivery/issues-verified-readback.json",
+      "status": "generate only after Root publication GO"
+    }
+  ],
+  "acceptance": {
+    "path": "_docs/evidence/frontend-final-policy-2026-10-25/mock-milestone-acceptance.md",
+    "sha256": "566D93A575AFBDB2B6E7329BAEB3DAAC7E43E6BCD14D7AAC5A8BC9389949FE9B",
+    "accepted_scope": "backend-free frontend mock/Chromium milestone for #77, #81, #63"
+  },
+  "final_source_freeze": {
+    "source_test_config_media_files": 198,
+    "aggregate_sha256": "372E957FAFA6DA284EA88657F4FC0BE138F2E5498B8C6C44C0E2191EC7ADE781",
+    "before_path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-freeze-before.json",
+    "after_path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-freeze-after.json",
+    "before_and_after_identical": true
+  },
+  "pre_capture_unit_build_freeze_sha256": "7985597676C0ADAE90C447E922F74C7F53817FB4888D1FB2570DFAB70D5F31FE",
+  "capture_followup_path": "_docs/evidence/frontend-final-policy-2026-10-25/root-capture-followup.json",
+  "live_issue_baseline_path": "_docs/evidence/frontend-final-policy-2026-10-25/delivery/live-issue-baseline-2026-10-25.md",
+  "live_issue_baselines": [
+    {
+      "issue": 77,
+      "state": "open",
+      "workflow": "in_progress",
+      "ac_checked": "0/10",
+      "comments": 0,
+      "body_sha256": "E479D7D4DA490934424DAE4D374EAE2894CA188CE57EF748AF28A6945F4C6E26"
+    },
+    {
+      "issue": 81,
+      "state": "open",
+      "workflow": "in_progress",
+      "ac_checked": "0/8",
+      "comments": 0,
+      "body_sha256": "6D1895E34491B1AB4795C545FE850599C005720F86C395920EFFA51519908E68"
+    },
+    {
+      "issue": 63,
+      "state": "open",
+      "workflow": "in_progress",
+      "ac_checked": "0/10",
+      "comments": 0,
+      "body_sha256": "A27E13CDE19FF63771FEBC843CC314385CD8302525840BE0CAF15445D7C91FF4"
+    }
+  ],
+  "exclusions": [
+    "The three pre-existing untracked local authorities: _docs/frontend-flows/00-shared-contract.md, _docs/frontend-flows/06-new-dub.md, _docs/frontend-flows/09-record.md",
+    "All other untracked active-flow corpus, unrelated dirty documents and skills, and old regenerated proof folders",
+    "delivery/candidate-inventory-draft.md, retained only as a pre-freeze preparation snapshot and superseded by this whitelist",
+    "Post-push/closure receipts remain untracked separately"
+  ],
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "category": "tracked_documentation",
+      "sha256": "9F87E01CA1D8EED8DD0355760F9F4C0843BE5A8268CD8DC3F60E00D21B4912DE",
+      "bytes": 683
+    },
+    {
+      "path": "_docs/frontend-implementation-contract.md",
+      "category": "tracked_documentation",
+      "sha256": "9223198A75B855BA60B7E364C5189DF9FE6EEC57AAD420DD2E9B490FA011DC76",
+      "bytes": 34085
+    },
+    {
+      "path": "frontend/e2e/full-journey.spec.ts",
+      "category": "frontend_delta",
+      "sha256": "45DBD55E33EA2450097A772C94DE6577823F860F1D772A38321DB3A6EA5B34AA",
+      "bytes": 18842
+    },
+    {
+      "path": "frontend/e2e/new-dub-upload-boundary.spec.ts",
+      "category": "frontend_delta",
+      "sha256": "0519975B29867A0ABEB44B5F27694B91FB43BC38437E0F198AAED37E56A72F28",
+      "bytes": 4403
+    },
+    {
+      "path": "frontend/e2e/recording-viewport.spec.ts",
+      "category": "frontend_delta",
+      "sha256": "842CDD25A52AC2779855BBBE79A3947E77389C44AF551D8A10E3A05FBF3C34E8",
+      "bytes": 30344
+    },
+    {
+      "path": "frontend/src/features/new-dub/NewDubScreen.test.tsx",
+      "category": "frontend_delta",
+      "sha256": "C5597724DA355FDF425A80235C4CD5647181C7CA51DCDB9904DE2AFAA03B2B79",
+      "bytes": 6207
+    },
+    {
+      "path": "frontend/src/features/new-dub/NewDubScreen.tsx",
+      "category": "frontend_delta",
+      "sha256": "2AB0B9CD33DF154575A32D1432FB6DCB03E21F1C79E0B40A6A610E69DCB10F3A",
+      "bytes": 76822
+    },
+    {
+      "path": "frontend/src/services/index.ts",
+      "category": "frontend_delta",
+      "sha256": "46181A4106203EB271CFFDF9044A775F3BAEBAD4F8B8E277F2C7F583FCC2DD8D",
+      "bytes": 4032
+    },
+    {
+      "path": "frontend/src/services/mock-projects.ts",
+      "category": "frontend_delta",
+      "sha256": "92642B33418A5702D95779AAD01F37E913E49A0AABBCC652EC0BA9BAE60D3848",
+      "bytes": 20295
+    },
+    {
+      "path": "frontend/src/services/mock-recording.ts",
+      "category": "frontend_delta",
+      "sha256": "3836CC84ADD7E96F8A5F8DF84A64237242E1035A0056BD9D5A2329BFD6748A1E",
+      "bytes": 46341
+    },
+    {
+      "path": "frontend/src/services/mock-store.ts",
+      "category": "frontend_delta",
+      "sha256": "41C22A1A18703307A4EC3B42BC8488F6AA699E64B2EAADC25A7F6933521A0549",
+      "bytes": 16856
+    },
+    {
+      "path": "frontend/tests/services/project-title-and-replacement.test.ts",
+      "category": "frontend_delta",
+      "sha256": "AAEC5A090FDEA82EAC13E7196145C9E93E2D9EB2FCB2BFAD314E3A7D1E99DF36",
+      "bytes": 15483
+    },
+    {
+      "path": "frontend/tests/services/recording-results.test.ts",
+      "category": "frontend_delta",
+      "sha256": "0798D63032AC28877490038BAE152CD93D8475D6D3D3FF814976F8A7CC5E7D40",
+      "bytes": 33902
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/contract-review.md",
+      "category": "selected_dated_evidence",
+      "sha256": "C4ECA8D974ABCAF701A729FDAE9E16FFAAACC1D3EFB0E0B6647692C8E5298013",
+      "bytes": 3418
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/mock-milestone-acceptance.md",
+      "category": "selected_dated_evidence",
+      "sha256": "566D93A575AFBDB2B6E7329BAEB3DAAC7E43E6BCD14D7AAC5A8BC9389949FE9B",
+      "bytes": 10130
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/owner-decision-receipt.md",
+      "category": "selected_dated_evidence",
+      "sha256": "5077DAC5FDE44BD9ADE64B2AC17ABB8AE1E066851C9162417EAF294353AC949A",
+      "bytes": 7921
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/remaining-criteria-map.md",
+      "category": "selected_dated_evidence",
+      "sha256": "19645DAB3B9DDCFE9F4B6FB7EEF1A2C5447D97396CF07C09F1B43B431FD13530",
+      "bytes": 14073
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-capture-followup.json",
+      "category": "selected_dated_evidence",
+      "sha256": "B7DC6999318AA03144CA4D419CC2A38D14F953A2757AEF16A4E2908847B8F095",
+      "bytes": 395
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-browser.log",
+      "category": "selected_dated_evidence",
+      "sha256": "B714B561CDDE007D206AC55AC6874E70A70E255B7339D6DDAFAC248128F36B19",
+      "bytes": 38845
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-freeze-after.json",
+      "category": "selected_dated_evidence",
+      "sha256": "372E957FAFA6DA284EA88657F4FC0BE138F2E5498B8C6C44C0E2191EC7ADE781",
+      "bytes": 29811
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-freeze-before.json",
+      "category": "selected_dated_evidence",
+      "sha256": "372E957FAFA6DA284EA88657F4FC0BE138F2E5498B8C6C44C0E2191EC7ADE781",
+      "bytes": 29811
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-isolated-build.log",
+      "category": "selected_dated_evidence",
+      "sha256": "41FEF8AA353AA5BF10C0389D20BB85841ED9A9F47050663EFC03527D5A7ECCA1",
+      "bytes": 855
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-lint.log",
+      "category": "selected_dated_evidence",
+      "sha256": "8E6DAD74EB653C0DC056B2EC00020164182B0A54C160099147992BFDA96B2100",
+      "bytes": 24115
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-media.log",
+      "category": "selected_dated_evidence",
+      "sha256": "A2EC6C9876E32495AA727636FF875BF2DEF7B946BC76A1A05997D10B9092E087",
+      "bytes": 905
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-real-unavailable.log",
+      "category": "selected_dated_evidence",
+      "sha256": "C74550A9E5DE71122B27FB5363E88FF8C4D897739FEFF9EFE1B6A567591E0149",
+      "bytes": 638
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-typecheck.log",
+      "category": "selected_dated_evidence",
+      "sha256": "658447796155F557B2F72C60B0F2B7E20A01A2D03029D58031E000AABFC4342E",
+      "bytes": 57
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-final-unit.log",
+      "category": "selected_dated_evidence",
+      "sha256": "33CBB53E157541D40D1C42BAA5717034798E52546D5DD63FE9FDDAC404DABA12",
+      "bytes": 675
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-pre-capture-freeze.json",
+      "category": "selected_dated_evidence",
+      "sha256": "7985597676C0ADAE90C447E922F74C7F53817FB4888D1FB2570DFAB70D5F31FE",
+      "bytes": 29811
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/root-source-before.json",
+      "category": "selected_dated_evidence",
+      "sha256": "9E24557F663F1E74568AAC8F47053E2A11DEAB06DB4D880DDA8D26B4EC4F8310",
+      "bytes": 29657
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/short-source/new-dub-short-source-error-en.png",
+      "category": "selected_dated_evidence",
+      "sha256": "C0DBCBC0ED24E56624020DEF0B140F5B1EE20C190BEDF3C0966559A43C419234",
+      "bytes": 35651
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/short-source/new-dub-short-replacement-preserved-en.png",
+      "category": "selected_dated_evidence",
+      "sha256": "5D3C7FC8E57554AB4B216651AB56F51DD950C53A834EDB2EE16B59EE3933F487",
+      "bytes": 116163
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/short-source/verification.md",
+      "category": "selected_dated_evidence",
+      "sha256": "6FB70DC5E2AE1CB722541AA6718DEAF450F10B3AA4D8083BB691226206A5C71B",
+      "bytes": 3590
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/recording-tab/held-elsewhere-en.png",
+      "category": "selected_dated_evidence",
+      "sha256": "7CD64AE1DE87C20FC65F1AE3601468B1506A3752B569FFAACAC2A93BABEA2954",
+      "bytes": 67126
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/recording-tab/historical-failures.md",
+      "category": "selected_dated_evidence",
+      "sha256": "68210398D0E9292BC5964F9ACB762756F7250426521BF05927E6D8A9493E474C",
+      "bytes": 2541
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/recording-tab/recording-en-1440x700.png",
+      "category": "selected_dated_evidence",
+      "sha256": "1DF73D0791B95DD33C35F57C84D57C40B2A6B60C87413AB1A24671DEC46BD4C8",
+      "bytes": 48358
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/recording-tab/recording-en-1440x900.png",
+      "category": "selected_dated_evidence",
+      "sha256": "F71F38C25B5A0B786C60C9E0247DC367846B99E70AA4D128409DAA0D5517BA8E",
+      "bytes": 60661
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/recording-tab/recording-en-candidate-1440x900.png",
+      "category": "selected_dated_evidence",
+      "sha256": "995F709641217A454F3670B7D56E7DE05ABD8D988D01BFDD07B118B37D2C064C",
+      "bytes": 58721
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/recording-tab/recording-en-capturing-1440x900.png",
+      "category": "selected_dated_evidence",
+      "sha256": "D536A9F4186BEE36DBA3B37F866593DA0FFFBDD4438B4B837C2EAD9B7B73834E",
+      "bytes": 62594
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/recording-tab/recording-ru-390x844.png",
+      "category": "selected_dated_evidence",
+      "sha256": "20037CF466F0FA9FCB4390C9108A6F2C631291C61E3EEE757CE266FAC2822636",
+      "bytes": 44131
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/recording-tab/verification.md",
+      "category": "selected_dated_evidence",
+      "sha256": "F360E4305BEF45B7DCD41FEB010C931C1B7A2348E5571FE8CAE5829B5306DF95",
+      "bytes": 5947
+    },
+    {
+      "path": "_docs/evidence/frontend-final-policy-2026-10-25/delivery/live-issue-baseline-2026-10-25.md",
+      "category": "selected_dated_evidence",
+      "sha256": "FEDD41635E4359E2C829C8EC171B751EFBE61EEAFA9AEFE3F61F31AA1B67D6A8",
+      "bytes": 1550
+    }
+  ]
+}

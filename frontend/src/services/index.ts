@@ -41,6 +41,15 @@ export class MockWorkspaceUnavailableError extends Error {
 }
 
 const systemClock: ServiceClock = { now: () => Date.now() }
+const recordingActorIds = new Map<string, string>()
+
+function resolveRecordingActorId(namespace: string): string {
+  const existing = recordingActorIds.get(namespace)
+  if (existing) return existing
+  const created = crypto.randomUUID()
+  recordingActorIds.set(namespace, created)
+  return created
+}
 
 function createMockServiceContext(options: CreateServicesOptions): StoreContext {
   const factory = options.indexedDB ?? globalThis.indexedDB
@@ -53,6 +62,7 @@ function createMockServiceContext(options: CreateServicesOptions): StoreContext 
     factory,
     dbName,
     clientId,
+    recordingActorId: resolveRecordingActorId(namespace),
     clock: options.clock ?? systemClock,
     scenario: options.scenario ?? 'default',
     googleScenario: options.googleScenario ?? 'default',

@@ -231,6 +231,7 @@ export interface StoredTake {
 export interface StoredGrant extends RecordingAccess {
   id: OperationId
   clientId: string
+  recordingActorId: string
   createdAt: number
 }
 
@@ -342,6 +343,7 @@ export interface StoreContext {
   factory: IDBFactory
   dbName: string
   clientId: string
+  recordingActorId: string
   clock: ServiceClock
   scenario: string
   googleScenario: MockGoogleScenario

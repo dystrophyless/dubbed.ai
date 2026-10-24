@@ -1,0 +1,10 @@
+{
+  "reason": "Authorized test-only screenshot capture for already-asserted held-elsewhere Record UI; product/unit sources unchanged",
+  "changes": [
+    {
+      "path": "frontend/e2e/full-journey.spec.ts",
+      "before": "1F5B29CEEDA4B3E2635D458D0EA7856AC735410816011E65240F65AA591443FD",
+      "after": "45DBD55E33EA2450097A772C94DE6577823F860F1D772A38321DB3A6EA5B34AA"
+    }
+  ]
+}

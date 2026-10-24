@@ -46,7 +46,8 @@ function capacityOf(state: StoredCreditState): ProjectCapacity {
 
 function assertUpload(file: File, facts: InitialUploadFacts): void {
   if (!file || file.size <= 0) throw serviceError('media-invalid', 'Choose a nonempty video file.')
-  assertSafeInteger(facts.durationMs, 'Video duration', 1)
+  if (facts.durationMs < 1_000) throw serviceError('media-invalid', 'Choose a video at least 1 second long.')
+  assertSafeInteger(facts.durationMs, 'Video duration', 1_000)
   if (!facts.hasAudio) throw serviceError('media-invalid', 'The selected video has no audio track.')
   if (facts.width !== undefined) assertSafeInteger(facts.width, 'Video width', 1)
   if (facts.height !== undefined) assertSafeInteger(facts.height, 'Video height', 1)

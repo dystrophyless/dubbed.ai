@@ -68,10 +68,10 @@ function makeServices() {
   return services as unknown as Services
 }
 
-function renderScreen(services: Services) {
+function renderScreen(services: Services, locale: 'en' | 'ru' = 'en') {
   const props = {
     route: routes.newDub(),
-    locale: 'en',
+    locale,
     identity: {
       status: 'signed-in',
       account,
@@ -117,18 +117,42 @@ describe('NewDubScreen upload validation', () => {
     expect(services.uploads.commitInitial).not.toHaveBeenCalled()
   })
 
-  it('keeps the unresolved sub-second source rule explicit and does not occupy a project slot', async () => {
+  it.each([
+    {
+      locale: 'en' as const,
+      chooseVideo: 'Choose video',
+      validateAndSave: 'Validate and save draft',
+      tooShort: 'This video is shorter than 1 second. Choose a video at least 1 second long.',
+      localCheck: 'Local checks passed. The mock service still needs to accept and save this source.',
+    },
+    {
+      locale: 'ru' as const,
+      chooseVideo: 'Выбрать видео',
+      validateAndSave: 'Проверить и сохранить черновик',
+      tooShort: 'Это видео короче 1 секунды. Выберите видео длительностью не менее 1 секунды.',
+      localCheck: 'Локальные проверки пройдены. Сервис имитации ещё должен принять и сохранить этот источник.',
+    },
+  ])('rejects a 999 ms source with actionable $locale copy and accepts exactly 1000 ms', async ({ locale, chooseVideo, validateAndSave, tooShort, localCheck }) => {
     const user = userEvent.setup()
     const services = makeServices()
-    vi.mocked(probeLocalSource).mockResolvedValue(probe({ durationMs: 999 }))
+    vi.mocked(probeLocalSource)
+      .mockResolvedValueOnce(probe({ durationMs: 999 }))
+      .mockResolvedValueOnce(probe({ durationMs: 1_000 }))
 
-    renderScreen(services)
-    const input = await screen.findByLabelText('Choose video')
-    await waitFor(() => expect(screen.getByRole('button', { name: 'Choose video' })).toBeEnabled())
+    renderScreen(services, locale)
+    const input = await screen.findByLabelText(chooseVideo)
+    await waitFor(() => expect(screen.getByRole('button', { name: chooseVideo })).toBeEnabled())
     await user.upload(input, new File(['clip'], 'short.mp4', { type: 'video/mp4' }))
 
-    expect(await screen.findByText(/shorter than 1 second.*draft was not created/i)).toBeInTheDocument()
+    expect(await screen.findByRole('alert')).toHaveTextContent(tooShort)
     expect(services.uploads.commitInitial).not.toHaveBeenCalled()
     expect(services.credits.snapshot).toHaveBeenCalledTimes(1)
+
+    await user.upload(input, new File(['clip'], 'exactly-one-second.mp4', { type: 'video/mp4' }))
+
+    expect(await screen.findByRole('button', { name: validateAndSave })).toBeEnabled()
+    expect(screen.getByText(localCheck)).toBeInTheDocument()
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument()
+    expect(services.uploads.commitInitial).not.toHaveBeenCalled()
   })
 })
