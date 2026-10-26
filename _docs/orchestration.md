@@ -16,9 +16,11 @@ Honor the requested mode:
 
 This is an operating policy for the available agent tools, not a background daemon. Creating this document does not start product implementation, install an agent framework, or change account/model settings.
 
+For meaningful new frontend screens, redesigns, or connected journeys, follow the [frontend design-first workflow](frontend-design-workflow.md) before finalizing specifications/task contracts or starting production integration. That workflow permits a bounded isolated design prototype and requires its named owner checkpoints; it does not start design or implementation without a user request. The numbered specification-first path below remains the default for backend/non-frontend work and stable-composition fixes.
+
 ## Review boundary
 
-Independent reviewers review specifications, individual task drafts/issues, and task packages before execution. There is no mandatory separate implementation Reviewer. Executors supply raw checks; the Orchestrator directly verifies acceptance criteria, integration evidence, delivery conditions, revision/environment, and limitations. This rule applies consistently to the cycle and closure gates below.
+Independent reviewers review specifications, individual task drafts/issues, and task packages before execution. For backend/non-frontend work and localized frontend fixes with stable approved composition, there is no mandatory separate implementation Reviewer. Meaningful frontend work uses the bounded independent UX, contract, and post-integration reviews in the [design-first workflow](frontend-design-workflow.md). Executors supply raw checks; the Orchestrator directly verifies acceptance criteria, integration evidence, delivery conditions, revision/environment, and limitations. Neither agent review nor verification replaces an explicit owner design decision.
 
 ## Roles, models, and reasoning effort
 
@@ -31,6 +33,8 @@ Independent reviewers review specifications, individual task drafts/issues, and 
 | Publisher | **`gpt-6-luna`** | `low`, selected per assignment | Exact issue publication, links, status/evidence updates, and authorized closure |
 
 The main chat's model is selected by the user/app; the Orchestrator cannot assume it has changed its own model. Preserve an explicitly selected main-chat model. Apply the table explicitly to child-agent dispatches. Do not add a Scout, Architect, or extra writer unless a concrete assignment requires it; research belongs to the Planner/Executor assignment that needs it.
+
+Meaningful frontend work has the specific allocation in the [design-first workflow](frontend-design-workflow.md): one persistent GPT-6.1 Sol High design lead, a separate GPT-6.1 Sol High reviewer, and GPT-6 Luna at max for production integration. This is the owner's standing frontend implementation choice; it does not change the model selected for Root or the defaults for other work. The mechanical Publisher remains GPT-6 Luna at low and is used only for authorized external lifecycle transfers.
 
 Before dispatch, check the live tool's model/effort allowlist. The configured names are exact model IDs, not family aliases. Never silently substitute a model when it is unavailable. In particular, Executor and Publisher stay on `gpt-6-luna`; if unavailable, report that narrow blocker and request a user choice. A stronger Reviewer must not secretly take over implementation to bypass this constraint.
 
@@ -47,7 +51,7 @@ The Orchestrator selects the lowest supported effort sufficient for the assignme
 | Executor `medium` | Ordinary feature slice with established contracts and focused verification |
 | Executor `high` | Multiple coupled contracts, async/state transitions, migrations, auth, recurrence, or retry/idempotency behavior |
 | Executor `xhigh` | A bounded difficult defect, concurrency/recovery seam, or failed lower-effort attempt with a concrete diagnosis |
-| Executor `max` | Exceptional small, well-specified problem still unresolved after diagnosis; justify the extra cost |
+| Executor `max` | General path: an exceptional small, well-specified problem still unresolved after diagnosis. Meaningful frontend production integration uses the owner's standing Luna Max choice in the linked workflow. |
 | Planner/Reviewer `high` | Normal planning and independent review |
 | Planner/Reviewer `xhigh` | Cross-context contracts, security/data correctness, cancellation races, or a complex regression |
 
@@ -80,7 +84,7 @@ Reuse the same Executor for fixes to the same task when its configuration/contex
 
 The user has selected a full-cycle workflow. Within Dubbed, a full-cycle feature implementation request delegates in-scope planning, local implementation, GitHub issue creation/updates/evidence, and closure under the gates below. Record the exact user instruction and its scope in the run checkpoint/dispatch. This is standing authorization for that feature's issue lifecycle, not for unrelated issues or general account changes.
 
-Explicit per-run restrictions override the convention. A plan-only or review-only request does not grant publication. Commit, push, PR publication, merge, deployment, paid services, production mutations, and destructive data operations need their own user authorization; do not infer them from issue-publication permission.
+Explicit per-run restrictions override the convention. A plan-only or review-only request does not grant publication. The owner's standing instruction of 2026-10-23 authorizes and requires this order for completed issues: verification, recorded acceptance, commit of the in-scope changes, successful push with remote verification, then closure. Preserve unrelated dirty work. An explicit hold such as "do not commit; I need to review" prohibits commit, push, and issue closure until the owner explicitly lifts it. Continue authorized local work and checks, leaving the issue open. PR publication, merge, deployment, paid services, production mutations, and destructive data operations still need their own user authorization.
 
 Routine engineering decisions within the requested outcome can proceed autonomously. Do not require ceremonial approval after every draft, technical step, or check. Product ambiguity affecting observable behavior, money, privacy, compatibility, or retained data requires the missing decision; ask one focused question and continue independent work.
 
@@ -115,6 +119,8 @@ All workers must be told they are not alone in the codebase, must preserve other
 Children do not spawn grandchildren by default. Return a request for further decomposition to the Orchestrator, which owns the dispatch budget and write coordination.
 
 ## Development cycle
+
+The stages below describe the default backend/technical and stable-composition path. For meaningful frontend work, complete the [design-first workflow](frontend-design-workflow.md) first; its post-checkpoint contract synchronization then enters the relevant specification, task, and package-review stages below. It does not weaken issue authority, verification, acceptance, or delivery conditions.
 
 ### 0. Intake and checkpoint — Orchestrator
 
@@ -153,7 +159,7 @@ Use a stable marker such as `<!-- dubbed-task: SPEC-NNN/task_slug -->` in each i
 Publish in two passes:
 
 1. Create or reconcile issues, immediately recording each returned URL/number against its key. On ambiguous API success/timeouts, read back/reconcile before retrying; never blindly create again.
-2. Resolve dependencies to real issue references and read back each updated issue to compare its contract with the reviewed draft. Only after successful reconciliation, update the concise spec index, preserve the reviewed snapshot in Git history or an approved local evidence artifact, and replace that draft body with an issue-link stub. Do not commit solely to archive it without commit permission. Incomplete/conflicting tasks retain their full drafts and the publication receipt; do not stub them early.
+2. Resolve dependencies to real issue references and read back each updated issue to compare its contract with the reviewed draft. Only after successful reconciliation, update the concise spec index and replace that draft body with an issue-link stub. Keep one current task body in GitHub and one current issue-link stub locally; do not create a duplicate archive or commit solely to preserve a task version. Ordinary authorized commits record normal Git history. Incomplete/conflicting tasks retain their full drafts and the publication receipt until resolved; do not stub them early.
 
 The read-back comparison covers scope, AC, exclusions, dependencies, checks, and delivery conditions. Preserve user edits; semantic conflicts return to the Orchestrator/Planner. Publisher performs mechanical transfer and reconciliation, not product design. Do not write `Closes/Fixes/Resolves` automation that bypasses acceptance gates.
 
@@ -161,13 +167,15 @@ If GitHub is unavailable, retain full drafts and a marked incomplete receipt. Th
 
 ### 6. ACT: implement one ready task — Luna Executor
 
-The Orchestrator selects the next ready issue by verified dependencies, assigns ownership, and selects Luna effort. Executor reads the issue and relevant spec/code, then makes a short local implementation plan. The plan is not a detailed task appendix in the spec and does not require an extra approval when within the authorized contract.
+The Orchestrator selects the next ready issue by verified dependencies, assigns ownership, and selects Luna effort under the role policy. Meaningful frontend production integration uses Luna Max as stated in the design-first workflow. The executor reads the issue and relevant spec/code, then makes a short local implementation plan. The plan is not a detailed task appendix in the spec and does not require an extra approval when within the authorized contract.
 
 Implement the smallest complete result while preserving established architecture boundaries and required validation/reliability. Run meaningful checks appropriate to the AC and affected failure paths. Report exact changed files, checks, environment/revision, results, remaining limits, and findings. Do not publish, commit, push, merge, or deploy outside the dispatch permissions.
 
 ### 7. ACT: Orchestrator verification
 
-The Orchestrator reads the accepted issue/spec, actual artifacts and raw checks. Verify AC coverage, correctness, scope, affected contracts, relevant failure paths, revision/environment and remaining evidence limits. Return scoped findings to the Executor and recheck the corrected behavior directly. Do not dispatch a separate implementation Reviewer as a mandatory stage.
+The Orchestrator reads the accepted issue/spec, actual artifacts and raw checks. Verify AC coverage, correctness, scope, affected contracts, relevant failure paths, revision/environment and remaining evidence limits. Return scoped findings to the Executor and recheck the corrected behavior directly. Do not dispatch a separate implementation Reviewer as a mandatory stage for backend/non-frontend work or localized frontend fixes with stable approved composition. Meaningful frontend work follows the independent review stages in the design-first workflow.
+
+For frontend presentation, apply the [Affect UI workflow](frontend-flows/affect-ui-workflow.md). Before execution, the task owner reads the applicable Clean source and inspects its matching Light PNG through the [reference catalog](frontend-flows/affect-ui-clean-light-reference.md), then maps exact values/states to the approved tokens and shadcn semantics under the [adoption contract](frontend-flows/affect-ui-clean-light-adoption.md). Preserve Mabry Pro and all functional contracts. At verification, inspect actual final browser screenshots against those references and record loaded font, geometry, control states, functional motion and reduced-motion behavior; include EN/RU, phone and breakpoint coverage required by the issue. Reference gaps and necessary accessibility adaptations must be explicit. Build/test PASS, source hashes or a design-skill inspector do not alone prove visual fidelity. This evidence gate does not replace owner design checkpoints when the design-first workflow applies; for other frontend work, it adds no separate approval stage or permission request.
 
 Two unsuccessful correction/verification rounds trigger diagnosis, replanning or task splitting. A budget limit never waives a blocking finding or permits a silent model change.
 
@@ -175,9 +183,9 @@ Two unsuccessful correction/verification rounds trigger diagnosis, replanning or
 
 The Orchestrator checks actual artifacts and results, not only an agent's success message. Verification requires covered AC, appropriate passing checks, resolved blocking findings, and honest evidence limits. Publisher can transfer the authorized evidence and `verified` status.
 
-Close only when the Orchestrator verification/evidence gate and agreed delivery conditions are met, with explicit human acceptance or the previously recorded delegated rule-based acceptance. A merge/deployment condition keeps the issue open until that condition is actually met. An in-scope local implementation request can define local verification as delivery, but cannot silently erase a required merge/deployment condition.
+Close only when the Orchestrator verification/evidence gate and agreed delivery conditions are met, with explicit human acceptance or the previously recorded delegated rule-based acceptance. For completed work, the required sequence is: verify the result, record explicit human acceptance or delegated rule-based acceptance by the Orchestrator against the verified worktree/evidence, commit only the accepted in-scope changes, push successfully to the intended repository/branch, verify that the remote branch contains the delivery commit, then close. Acceptance must precede commit and push. Record its verified worktree/evidence boundary first, then link it to the delivery commit SHA; substantive changes after acceptance require renewed verification and acceptance. Keep workflow status `verified`/open until delivery is complete; the acceptance decision can be recorded before the final `accepted`/closed transition. Record the commit SHA and remote branch/push evidence. Commit/push failure or an explicit owner review/no-commit hold keeps the issue open; do not mark it accepted/closed or bypass the hold through automatic-closing references. Local verification alone is insufficient for closure. A required merge/deployment condition still keeps the issue open until met. Explicit cancellation remains a separate closure path and does not require an empty commit.
 
-The Orchestrator issues a closure manifest listing exact issue, revision/evidence, acceptance source, delivery-condition results, accepted residual risks, and target workflow status `accepted`. Publisher rechecks target identity/current state and records that acceptance before closing with matching workflow status. If the body/state updates only partially succeed, record the discrepancy and reconcile current state before retrying; do not report successful closure. Publisher never decides acceptance itself. A final integration-gate issue remains open until the entire feature is verified.
+The Orchestrator issues a closure manifest listing exact issue, commit SHA/evidence, successful push and remote-branch verification, acceptance source, delivery-condition results, accepted residual risks, absence of an active owner hold, and target workflow status `accepted`. Publisher rechecks target identity/current state and records that acceptance before closing with matching workflow status. If the body/state updates only partially succeed, record the discrepancy and reconcile current state before retrying; do not report successful closure. Publisher never decides acceptance itself. A final integration-gate issue remains open until the entire feature is verified.
 
 ### 9. Feature integration gate and completion
 
@@ -202,6 +210,7 @@ Do not restart the whole project plan for a local defect. Never resolve product 
 - Default: one product-writing Executor at a time. Run independent read-only reviews in parallel when useful.
 - Parallel writers require independent contracts, explicit non-overlapping ownership, and compatible test/data environments. Use isolated worktrees when necessary; integration into a shared checkout needs one owner and verification. Preserve dirty user work.
 - Respect the live runtime's slot limit, counting the main agent; do not hardcode more workers than available. Reserve capacity for review instead of filling all slots with speculative work.
+- For design-first frontend work, also keep at most Root plus three active agents and respect any lower live slot limit; use one design owner and do not add agents per pixel.
 - Wait for agent updates with native agent tools; send substantive progress updates to the user. Do not repeatedly poll unchanged state or dispatch duplicate work.
 - Each review round must have a reason and changed evidence/contract. After two unsuccessful rounds, diagnose/split/escalate the decision rather than looping indefinitely. Review budgets never convert an unresolved HIGH finding into PASS.
 - Use brief dispatches and primary artifact references. Batch related read-only grooming; avoid unnecessary roles and repeated broad scans. Record effort increases and their reason.
@@ -228,7 +237,7 @@ Publisher additionally returns the stable-key -> issue-URL map and read-back rec
 
 ```text
 Implement this Dubbed feature using the full orchestration workflow: <business outcome>.
-Respect the existing contracts and delivery conditions. Use GPT-6 Luna for Executors and Publishers; choose reasoning effort per assignment. Plan and review independently, publish the reviewed issues, implement, verify, and close eligible issues. Do not commit, push, merge, deploy, or purchase services unless separately authorized.
+For meaningful frontend work, follow the design-first workflow, use its GPT-6.1 Sol High design lead/reviewer and GPT-6 Luna Max production executor, and wait for the owner's explicit design checkpoints before contract synchronization and production integration. For other work, use the default role/effort policy. Use GPT-6 Luna Low Publisher only for authorized mechanical lifecycle transfers. Plan and review independently, publish only authorized reviewed issues, implement, verify and record acceptance. Only after acceptance, commit the accepted in-scope changes, then push successfully and verify remote delivery before closing completed issues. An explicit review/no-commit hold blocks commit, push and closure until lifted. Do not open PRs, merge, deploy, or purchase services unless separately authorized.
 ```
 
 For a small isolated fix, use one issue and the same Executor -> Orchestrator verification -> evidence/closure gates; omit duplicate BR/spec/decomposition work when the existing contract is sufficient.

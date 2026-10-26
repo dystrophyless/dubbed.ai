@@ -19,7 +19,7 @@ fix(tasks): prevent duplicate task creation
 test(reminders): cover restart recovery
 ```
 
-Group changes by coherent outcome. A docs-only commit is valid for process/documentation work. Commit/push authorization remains governed by the user's request, not this example.
+Group changes by coherent outcome. A docs-only commit is valid for process/documentation work. The owner's standing instruction authorizes and requires this sequence: verify the result, record human or delegated Orchestrator acceptance, commit the accepted in-scope task changes, push successfully and verify remote delivery, then close the completed issue. An explicit review/no-commit hold blocks commit, push and closure until lifted; see [orchestration](../../orchestration.md). Preserve unrelated dirty work.
 
 ## Changelog
 

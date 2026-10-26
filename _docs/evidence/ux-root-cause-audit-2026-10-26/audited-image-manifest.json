@@ -1,0 +1,247 @@
+[
+  {
+    "path": "_docs/evidence/affect-ui-clean-light/source/components/button/Clean/Light/01-initial.png",
+    "sha256": "11fdc40389e7a7c18bfa7be5f2afe7a08ce3486aa9cbe0199d3cec2d799881c6",
+    "bytes": 57111,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/affect-ui-clean-light/source/components/segmented-control/Clean/Light/01-initial.png",
+    "sha256": "c18abe36194101d203e0d9f1f90184d9800c2be543055515339f825a902ab93f",
+    "bytes": 39797,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-62/evidence/01-account-en-desktop.png",
+    "sha256": "9a5d457b7d587af86443edd956f6fa305ae48e26105cbc1b378d4df5629378fd",
+    "bytes": 51935,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-65/evidence/08-en-desktop-verified.png",
+    "sha256": "2691ac3056e21394c835f00d20764298ce5708b8c6fdde7f7aab1d673361f99d",
+    "bytes": 53304,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-66/evidence/en-desktop-final-review.png",
+    "sha256": "75af5b9fe16032db5702936f8d994ae35170b139f7db530b9278f9021bb206fb",
+    "bytes": 70991,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-67/evidence/storage-open-denied-en-desktop.png",
+    "sha256": "552a251cc6d7052bec5d5a01581e1b09c97966e647edc9773dc6036060a0b25b",
+    "bytes": 28664,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-69/evidence/ready-en-desktop.png",
+    "sha256": "ea14d0d23701f8bec7a59eae86f17e79bb90ec45d64ad6e1114954435dab7a3b",
+    "bytes": 54601,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-71/evidence/code-ru-phone.png",
+    "sha256": "b268ae929e88955d32ca117bf887bc78b52f76b32498d65e15925a1743f30f4a",
+    "bytes": 34117,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-74/evidence/known-en-desktop.png",
+    "sha256": "e69abc7beff823f533e92de181f22aa6bd40372862057b1624a24cfecbc5a33e",
+    "bytes": 25288,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-75/evidence/native-two-long-en-desktop.png",
+    "sha256": "10ce69056a282fef632e3885c4d5b9c6264096e780a78d383bc3c1ec62298954",
+    "bytes": 30525,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-77/evidence/01-en-desktop-ready.png",
+    "sha256": "614d1c8f22895d8246392ccc07139fa980e4814a0193531c726a5e91d7e5dd11",
+    "bytes": 59864,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-78/evidence/landing-en-desktop.png",
+    "sha256": "552a251cc6d7052bec5d5a01581e1b09c97966e647edc9773dc6036060a0b25b",
+    "bytes": 28664,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-79/evidence/ready-en-desktop.png",
+    "sha256": "c2c4406bb31462bdfbb2e88e44b4c19ca6128a918df77be1d11663312b992507",
+    "bytes": 64911,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-80/evidence/en-account-expiry-gate.png",
+    "sha256": "fa1908e609b04076d56b675ac5b6ee6f2dd36b3949e44fa110a62dc572ee9d8a",
+    "bytes": 12751,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-80/evidence/en-desktop-empty.png",
+    "sha256": "cb1ccf2a28903bdbf4cd96ffedead4bdd5ed302a3069486efb7f62517ff12284",
+    "bytes": 30130,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/04-real-quote-en-full.png",
+    "sha256": "9b99ba3ea36552047267d79ad4906cedc02a7d5618d2165a1341a2fce9aff4eb",
+    "bytes": 112710,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-82/evidence/07-code-en-short.png",
+    "sha256": "9a3dc1ea6fa6c0295e34441ec804ccdc6ecfc9a709d39b1f96d31b7f110d540a",
+    "bytes": 42929,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/ux-root-cause-audit-2026-10-26/inputs/owner-recording-1.png",
+    "sha256": "b53c7d93eeb2496294f1ef0a22ead8412de02eaa046a5ff73f1021b784897678",
+    "bytes": 62252,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/ux-root-cause-audit-2026-10-26/inputs/owner-recording-2.png",
+    "sha256": "f8034b0d5d6afda9eb830e3b367ce169513a3c4f10603da094d26ea7d6be39da",
+    "bytes": 61095,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/ux-root-cause-audit-2026-10-26/inputs/owner-recording-3.png",
+    "sha256": "8a690cef3b674de62a335c6db14c2e62430f5781cf99adaf93db0ec256421f80",
+    "bytes": 48208,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-62/screenshots/password-error-en-desktop-1440x900.png",
+    "sha256": "03f810310f4665dc989843d0dc477568b3cc049cf010952b638367ded7fabd7a",
+    "bytes": 76877,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-65/02-en-desktop-pending-history.png",
+    "sha256": "ba01653c44c9e6a4c4fb28a72d8c7e36529459cdcb4f9ac148da2cb98334a121",
+    "bytes": 74126,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-66/review-en-desktop-1440.png",
+    "sha256": "3b5cf6ccc338b5b737e4efc75899fbaadbb8554e9558478085046054fc2b0e6a",
+    "bytes": 70110,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-69/evidence/ready-en-short.png",
+    "sha256": "2101bc9c6e3c057cde10ebd40e1ffebd136651bce21995799144d553b74986ec",
+    "bytes": 40147,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-71/evidence/ru-phone390-code.png",
+    "sha256": "50c003dfe7c387298a9bdd62aebaa13e6c39f59267ae284c1fbb0d7bbc53e040",
+    "bytes": 32531,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-74/evidence/after/running-known-en-desktop.png",
+    "sha256": "2b8b7f81ed11ffc7898006fca2d9a5b1ece60ea4b7167a1b1b6d55971be8344e",
+    "bytes": 39048,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-75/screenshots/native-long-titles-ru-390.png",
+    "sha256": "6495a35243d7c0c7c1af047ccada783084b59634b4f8cf6ca5b08c0fc1c423e7",
+    "bytes": 28689,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-77/evidence/qa77-en-desktop-ready-1440x900.png",
+    "sha256": "4f22001f4863a86c00b175f4d9145f634f3f98759b9be49ceafe20275d739a80",
+    "bytes": 61055,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-77/evidence/qa77-ru-short-phone-in-flow-767x600.png",
+    "sha256": "0eb7b272645e9ecd82903e427081592ea9a4150ba64112f1eae959261467cb6d",
+    "bytes": 76625,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/evidence/landing-en-desktop.png",
+    "sha256": "094932c5d05e6f944bbcf5ae159a2f15623a84b834fc1ad32f0a2e8429c10984",
+    "bytes": 29261,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-79/evidence/descriptor-recovered-en-desktop.png",
+    "sha256": "26993d73fff2c5cac90d1a7d7d20882df54aa0eed8c495464928cef3fc95ebdc",
+    "bytes": 59121,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-80/evidence/en-desktop-account-expired.png",
+    "sha256": "91fb56f3afb7260f900fd5034d791f1cd2dd2b41501502a27551a0042a4e2c55",
+    "bytes": 13121,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-80/evidence/en-desktop-provider-conflict.png",
+    "sha256": "cdf97bea4a362f0e7a7eb5d9daf22a5650f743f084f69557d24422c85926fb8f",
+    "bytes": 48254,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-81/evidence/03-en-short-desktop-1440x700-current-quote.png",
+    "sha256": "d1d2f62d5396f722e443b72bed65ce325d241665513e63a46193222810ddac69",
+    "bytes": 78170,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  },
+  {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-82/evidence/after-code-step-short-en-US-desktop.png",
+    "sha256": "4687f4f7822db6fb8ac3f41d64daa6de455e5b708ab81abbdc567258c23bb94e",
+    "bytes": 34883,
+    "opened_with": "view_image",
+    "capture": "existing historical/correction evidence or owner attachment; no fresh capture by auditor"
+  }
+]

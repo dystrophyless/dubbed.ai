@@ -8,4 +8,4 @@ After authorized issue publication and read-back reconciliation, replace the pub
 
 ## Draft packages
 
-- [Dubbed MVP / frontend package](SPEC-001/README.md) — 35 individual unpublished task contracts, proposed dependency order, foundations and integration/acceptance gates. All remain drafts; implementation and issue publication are not authorized by decomposition.
+- [Dubbed MVP / frontend package](SPEC-001/README.md) — 35 canonical GitHub task issues, dependency order, foundations, and integration/acceptance gates. Local task files link to their published issues and pinned source contracts.

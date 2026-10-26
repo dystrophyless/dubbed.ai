@@ -55,4 +55,4 @@ State whether acceptance requires local verification, merge, hosted proof, produ
 
 ## Completion record
 
-Append implementation, review, verification, and acceptance comments using the evidence template. Set workflow status to verified after the agreed checks; close only after explicit acceptance and delivery conditions are met, or explicit cancellation.
+Append implementation, review, verification, and acceptance comments using the evidence template. Set workflow status to verified after the agreed checks. For completed work, first record explicit human or delegated Orchestrator acceptance against the verified worktree/evidence, then commit the accepted in-scope changes, then push successfully and verify remote delivery, then close once all delivery conditions are met. Link the recorded acceptance to the delivery commit SHA; keep status verified/open until delivery is complete. Record the commit SHA and remote branch/push evidence. An explicit owner review/no-commit hold blocks commit, push and closure until lifted; commit/push failure also keeps the issue open. Explicit cancellation remains a separate closure path.

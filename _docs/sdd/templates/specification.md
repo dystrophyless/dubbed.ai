@@ -4,7 +4,7 @@ Status: draft
 Created: YYYY-MM-DD
 Owner: decision owner
 Brief / BR / sources: actual requirement links; a separate BR is optional if the brief supplies the requirements
-Approval: not approved; record approver, date, and exact revision when approved
+Approval: not approved; when approved, record the owner, date, current artifact/version, decision scope, and link to the owner's reply
 
 ## Goal and increment
 

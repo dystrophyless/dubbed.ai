@@ -1,0 +1,660 @@
+[
+  {
+    "source_line": 14,
+    "timestamp": "2026-10-22T22:46:39.311Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const wanted = ALL_TOOLS.filter(x => /github|semble|serena.*initial/.test(x.name)); text(wanted);\n"
+  },
+  {
+    "source_line": 18,
+    "timestamp": "2026-10-22T22:46:48.141Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const r = await Promise.allSettled([\n tools.exec_command({cmd:\"Get-Content -LiteralPath '_docs/HANDOFF.md'; Get-Content -LiteralPath '_docs/sdd/README.md'; Get-Content -LiteralPath '_docs/orchestration.md'; Get-Content -LiteralPath '_docs/github-workflow.md'\",sandbox_permissions:\"require_escalated\",justification:\"Read the authorized project workflow documents.\",max_output_tokens:18000}),\n tools.exec_command({cmd:\"Get-Content -LiteralPath '.agents/skills/ponytail/SKILL.md'; Get-Content -LiteralPath '.agents/skills/spec-task-review/SKILL.md'; Get-Content -LiteralPath '.agents/skills/task-package-review-loop/SKILL.md'; Get-Content -LiteralPath '.agents/skills/design-taste-frontend/SKILL.md'; Get-Content -LiteralPath '.agents/skills/frontend-design/SKILL.md'\",sandbox_permissions:\"require_escalated\",justification:\"Read the requested project design and review skills.\",max_output_tokens:22000}),\n tools.exec_command({cmd:\"rg -n 'Dubbed|Affect|frontend' 'C:/Users/roman/.codex/memories/MEMORY.md'; Get-Content -LiteralPath 'AGENTS.md'; Get-Content -LiteralPath '_docs/frontend-flows/README.md'; Get-Content -LiteralPath '_docs/task-drafts/frontend-flows/README.md'; Get-ChildItem -LiteralPath '_docs/evidence/frontend-issue-publication-2026-10-23' -Name\",sandbox_permissions:\"require_escalated\",justification:\"Read the authorized task contracts and publication evidence inventory.\",max_output_tokens:10000})\n]); r.forEach((x,i)=>text({i,...x}));\n"
+  },
+  {
+    "source_line": 27,
+    "timestamp": "2026-10-22T22:47:00.715Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(ALL_TOOLS.filter(x=>/github_(get_issue|list_issue|get_comments|fetch)|mcp__semble__search/.test(x.name)));\ntext(await tools.exec_command({cmd:\"Get-Content -LiteralPath '_docs/sdd/guides/github-issues-workflow.md'; Get-Content -LiteralPath '.agents/skills/ponytail/SKILL.md'; Get-Content -LiteralPath '.agents/skills/spec-task-review/SKILL.md'; Get-Content -LiteralPath '.agents/skills/task-package-review-loop/SKILL.md'\",sandbox_permissions:\"require_escalated\",justification:\"Read the issue update contract and bounded review rules.\",max_output_tokens:15000}));\n"
+  },
+  {
+    "source_line": 34,
+    "timestamp": "2026-10-22T22:47:15.749Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const r=await Promise.allSettled([\n tools.mcp__codex_apps__github_fetch_issue({issue_number:78,repository_full_name:\"dystrophyless/dubbed.ai\"}),\n tools.mcp__codex_apps__github_fetch_issue_comments({issue_number:78,repo_full_name:\"dystrophyless/dubbed.ai\"}),\n tools.mcp__semble__search({query:\"frontend visual design typography motion shell component responsibilities and visual verification\",repo:\"D:/Program/python/Dubbed\",content:\"docs\",top_k:5}),\n tools.exec_command({cmd:\"Get-Content -LiteralPath '.agents/skills/frontend-design/SKILL.md'; Get-Content -LiteralPath '.agents/skills/design-taste-frontend/SKILL.md' -TotalCount 220; Get-Content -LiteralPath '_docs/evidence/frontend-issue-publication-2026-10-23/issue-manifest.json'; Get-Content -LiteralPath '_docs/evidence/frontend-issue-publication-2026-10-23/README.md'\",sandbox_permissions:\"require_escalated\",justification:\"Read the design skill contract and exact published task mapping.\",max_output_tokens:17000})\n]); r.forEach((v,i)=>{store(\"prep\"+i,v);text({i,...v});});\n"
+  },
+  {
+    "source_line": 42,
+    "timestamp": "2026-10-22T22:47:30.195Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const tasks=[]; for(let n=61;n<=82;n++){if(n!==78){tasks.push({n,kind:\"issue\",p:tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"})});tasks.push({n,kind:\"comments\",p:tools.mcp__codex_apps__github_fetch_issue_comments({issue_number:n,repo_full_name:\"dystrophyless/dubbed.ai\"})});}}\nconst results=await Promise.allSettled(tasks.map(t=>t.p));\nconst issues={\"78\":load(\"prep0\").value.structuredContent.issue}, comments={\"78\":load(\"prep1\").value.structuredContent.comments};\nresults.forEach((r,i)=>{const {n,kind}=tasks[i]; if(r.status===\"fulfilled\"&&!r.value.isError){const v=r.value.structuredContent; if(kind===\"issue\") issues[n]=v.issue;else comments[n]=v.comments;}else text({n,kind,error:r});});\nstore(\"liveIssues\",issues);store(\"liveComments\",comments);\ntext(Object.keys(issues).map(n=>({n,title:issues[n].title,status:issues[n].body.match(/## Workflow status\\n\\n([^\\n]+)/)?.[1],comments:comments[n]?.length,bodyLength:issues[n].body.length})));\n"
+  },
+  {
+    "source_line": 88,
+    "timestamp": "2026-10-22T22:47:38.890Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=908 sha256=ba472dd6eb272367771369f2e9a47a6a15ee34c896eab122b2e204bc5f889304]\"}"
+  },
+  {
+    "source_line": 93,
+    "timestamp": "2026-10-22T22:47:45.860Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "for(const [n,issue] of Object.entries(load(\"liveIssues\"))){\n const textBody=issue.body.split(\"## Local specification fingerprints\")[0];\n const lines=textBody.split(\"\\n\"); const terms=/Mabry|palette|token|typograph|radius|shadow|gradient|panel|motion|150ms|16\\/24|sidebar|visual|contrast|shadcn|geometry|Light|Clean/ig;\n const matches=lines.map((line,i)=>({line:i+1,text:line})).filter(x=>terms.test(x.text)); terms.lastIndex=0;\n text({n,matches:matches.slice(0,25)});\n}\ntext(await tools.exec_command({cmd:\"Get-Content -LiteralPath 'AGENTS.md'; Get-Content -LiteralPath '_docs/orchestration.md'; Get-Content -LiteralPath '.agents/skills/frontend-design/SKILL.md'; Get-Content -LiteralPath '.agents/skills/design-taste-frontend/SKILL.md' | Select-Object -First 95\",sandbox_permissions:\"require_escalated\",justification:\"Read exact workflow amendment anchors and reference-priority design rules.\",max_output_tokens:14000}));\n"
+  },
+  {
+    "source_line": 100,
+    "timestamp": "2026-10-22T22:47:55.623Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "for (const n of [61,63,67,68,70,72,73,75,76,78]){\nconst b=load(\"liveIssues\")[n].body.split(\"## Local specification fingerprints\")[0];text({n,body:b});\n}\n"
+  },
+  {
+    "source_line": 106,
+    "timestamp": "2026-10-22T22:48:04.711Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const issues=load(\"liveIssues\"),comments=load(\"liveComments\");\nconst files=[[\"remote-before.json\",JSON.stringify({capturedAt:\"2026-10-23\",repository:\"dystrophyless/dubbed.ai\",boundary:\"Read-only pre-migration live issue bodies and all latest discussions; not a local task backlog.\",issues:Object.values(issues),comments},null,2)]];\ntext(await tools.apply_patch(\"*** Begin Patch\\n\"+files.map(([p,c])=>\"*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/\"+p+\"\\n\"+c.split(\"\\n\").map(l=>\"+\"+l).join(\"\\n\")).join(\"\\n\")+\"\\n*** End Patch\"));\ntext(await tools.exec_command({cmd:\"Get-Content -LiteralPath 'AGENTS.md' | Select-Object -Last 35; Get-Content -LiteralPath '.agents/skills/design-taste-frontend/references/app-screens.md'; Get-Content -LiteralPath '_docs/frontend-flows/README.md' -TotalCount 65; Get-Content -LiteralPath '_docs/orchestration.md' | Select-Object -Skip 70 -First 130\",sandbox_permissions:\"require_escalated\",justification:\"Read exact frontend workflow gate insertion points and app-screen design guidance.\",max_output_tokens:13000}));\n"
+  },
+  {
+    "source_line": 114,
+    "timestamp": "2026-10-22T22:48:24.875Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root/affect_style_spec_migration\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=888 sha256=67a17a3aae46c6866d5341cb5855e7fab0bb22be94c16e84b4edb4f89eec63e0]\"}"
+  },
+  {
+    "source_line": 119,
+    "timestamp": "2026-10-22T22:48:30.820Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"Get-Content -LiteralPath '.agents/skills/design-taste-frontend/SKILL.md' | Select-Object -Skip 220 -First 170; Get-Content -LiteralPath '.agents/skills/design-taste-frontend/references/app-screens.md' | Select-Object -Skip 1090 -First 110; Get-Content -LiteralPath '_docs/frontend-flows/README.md' -TotalCount 14\",sandbox_permissions:\"require_escalated\",justification:\"Finish the design-skill workflow and visual review instructions.\",max_output_tokens:10000}));\nfor (const n of [62,65,66,69,71,74,77,79,80,81,82]){\n const b=load(\"liveIssues\")[n].body; const start=b.indexOf(\"## Scope\"),end=b.indexOf(\"## Dependencies and ownership\");text({n,contract:b.slice(start,end)});\n}\n"
+  },
+  {
+    "source_line": 128,
+    "timestamp": "2026-10-22T22:48:50.017Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: AGENTS.md\\n@@\\n ## Project review skills\\n+\\n+## Frontend visual authority\\n+\\n+- For frontend planning, implementation and review, follow the [Affect UI workflow](_docs/frontend-flows/affect-ui-workflow.md), [Clean/Light adoption contract](_docs/frontend-flows/affect-ui-clean-light-adoption.md), [reference catalog](_docs/frontend-flows/affect-ui-clean-light-reference.md) and current [tokens](_docs/frontend-flows/design-tokens.md). Read the applicable Clean Markdown and visually inspect its matching Light PNG before choosing or changing presentation.\\n+- The owner-selected Affect UI Clean/Light reference governs applicable component appearance and bounded functional motion; keep Mabry Pro and the product behavior/accessibility constraints. Generic design-skill direction draws, font/palette defaults and blanket bans must not override this reference. Classic/Dark examples and irrelevant marketing sections are outside the adopted scope.\\n+- Map reference components and states to shadcn semantics, record exact source values and justified source-gap/accessibility adaptations, and verify actual browser screenshots against the references before claiming visual fidelity. A source/token audit or green build alone does not establish rendered acceptance.\\n \\n - Do not invoke or follow any Superpowers skill in this project; the user explicitly replaced that workflow with Ponytail. The project disables the plugin in `.codex/config.toml`.\\n*** Update File: _docs/orchestration.md\\n@@\\n ### 7. ACT: Orchestrator verification\\n@@\\n The Orchestrator reads the accepted issue/spec, actual artifacts and raw checks. Verify AC coverage, correctness, scope, affected contracts, relevant failure paths, revision/environment and remaining evidence limits. Return scoped findings to the Executor and recheck the corrected behavior directly. Do not dispatch a separate implementation Reviewer as a mandatory stage.\\n+\\n+For frontend presentation, apply the [Affect UI workflow](frontend-flows/affect-ui-workflow.md). Before execution, the task owner reads the applicable Clean source and inspects its matching Light PNG through the [reference catalog](frontend-flows/affect-ui-clean-light-reference.md), then maps exact values/states to the approved tokens and shadcn semantics under the [adoption contract](frontend-flows/affect-ui-clean-light-adoption.md). Preserve Mabry Pro and all functional contracts. At verification, inspect actual final browser screenshots against those references and record loaded font, geometry, control states, functional motion and reduced-motion behavior; include EN/RU, phone and breakpoint coverage required by the issue. Reference gaps and necessary accessibility adaptations must be explicit. Build/test PASS, source hashes or a design-skill inspector do not alone prove visual fidelity. This is an evidence gate within existing verification, not a new approval stage or permission request.\\n*** End Patch\"));\n"
+  },
+  {
+    "source_line": 137,
+    "timestamp": "2026-10-22T22:49:48.170Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/frontend-flows/affect-ui-workflow.md\\n+# Affect UI frontend workflow\\n+\\n+Date: 2026-10-23, Asia/Qyzylorda. This workflow applies to frontend specification, published task-contract maintenance, implementation and verification. It adds concrete source and evidence requirements to the existing workflow; it does not authorize product implementation or create an approval ceremony.\\n+\\n+## Authority and entry points\\n+\\n+Use the [Clean/Light adoption contract](affect-ui-clean-light-adoption.md), [reference catalog](affect-ui-clean-light-reference.md), current [design tokens](design-tokens.md), [shared behavior](00-shared-contract.md) and applicable active flow specification. The local reference root is `D:\\\\Program\\\\frontend\\\\affect-ui\\\\affectui-free`. The catalog identifies exact Clean Markdown / Light PNG pairs and source fingerprints.\\n+\\n+The owner selected this visual language and explicitly retained Mabry Pro. Both project design skills remain useful for deliberate composition and critique, but their random direction draws, stock type/palette choices, mandatory marketing imagery/motion counts and generic style prohibitions cannot replace the owner reference. Read the app-screen guidance for working screens. Do not add features, sample content, pricing claims or whole marketing blocks merely because they occur in the library.\\n+\\n+The adoption contract resolves which earlier presentation clauses are superseded. It preserves product behavior, responsive navigation, light-only scope, meaningful accessibility, privacy and domain invariants. Historical publication hashes/reviews describe the pre-adoption snapshot; they are provenance, not competing current visual authority.\\n+\\n+## Before changing a screen\\n+\\n+1. Read the actual published issue and latest discussion, the relevant flow, current tokens, adoption contract and applicable catalog entries. Published issue bodies remain the live task contracts; issue-link stubs stay stubs.\\n+2. Open each applicable Clean Markdown and visually inspect its matching Light PNG. Record exact file paths and named component/state, not only a library name or broad visual impression. Reject Classic and Dark examples.\\n+3. Make a compact source-to-product map in the issue/evidence: source component/state; adopted fill, border, radius, shadow, typography, spacing and motion; destination shadcn semantic/control; required product states; and any documented adaptation or genuine gap. Use the token contract for numeric values rather than creating a second token list here.\\n+4. Preserve the screen's primary job and confirmed hierarchy. Reuse the shell/shared controls supplied by #78, while the feature issue owns its composition and domain states. Do not import sample fetch logic, OTP expiry/resend policy, billing rules, artificial progress or navigation from example code.\\n+\\n+The map is implementation evidence, not a new local task queue. Routine compatible engineering decisions proceed under existing authorization. A genuinely unresolved product decision blocks only its dependent slice and follows the existing issue/Orchestrator process.\\n+\\n+## Component and state adaptation\\n+\\n+Directly represented library components should preserve their adopted Clean/Light appearance and functional feedback. shadcn remains the accessible behavioral foundation: native semantics, focus management, keyboard operation, disabled/loading behavior, labels, announcements and dialog dismissal/focus return remain required. Copying a screenshot never waives them.\\n+\\n+The reference catalog distinguishes direct examples, embedded examples, derivatives and missing components. Inputs, password/code controls, dialogs, media controls and other gaps must use the adoption contract's named derivatives and shared shadcn behavior; do not claim a nonexistent Affect component. OTP visual cells remain one logical accessible value and retain the product's confirmed code/resend and verification rules.\\n+\\n+Keep exact Mabry Pro role/weight/size/line-height requirements from the current tokens. Missing licensed font assets, weights, fallback agreement or actual font loading remain explicit acceptance limits. Do not silently use a font included by the scaffold or reference examples.\\n+\\n+Approved Clean hairlines, bounded surface shadows and functional motion supersede prior blanket visual bans only as stated in the adoption contract. Source colors that do not meet the product's required text/control/focus contrast must use its explicit semantic correction; decorative low-contrast lines must not be presented as the only control boundary or focus signal. Record corrections as adaptations rather than source-exact claims.\\n+\\n+Use only adopted functional feedback: control interactions, disclosure/selection changes, progress state and supported spinner behavior. Follow the source-specific duration/easing and property limits in the token/adoption contract. Reduced motion makes the relevant transitions immediate and preserves visible status. No user command, capture clock, service result, navigation or announcement waits for an animation. No marketing loops, dedicated shimmer, text-reveal, parallax, decorative page entry or fabricated progress.\\n+\\n+## Task ownership and publication\\n+\\n+- #61 records technical/source availability and unresolved decision slices; it does not choose another visual direction.\\n+- #78 owns shared tokens, component mappings/derivatives, shell, common states and locale behavior. Each UI-owning issue composes its applicable components and states without creating a second shared control system.\\n+- #63 owns integrated browser/reference evidence across the active flows. Media fixtures, ledger, persistence, facade and adapter issues retain their existing responsibilities; visual adoption does not make them owners of screen redesign.\\n+\\n+When an already published contract changes, stage exact before/after body payloads and scoped changes in a dated evidence artifact, review the changed contract, then perform the authorized issue-body edit and read it back. Preserve status, dependencies, assignees, labels, nonvisual AC and historical evidence unless separately authorized. Snapshot old source fingerprints as historical, and record current adoption/source fingerprints separately. Do not change immutable publication archives or rewrite frozen reviews. Keep the task index concise and local published files as issue-link stubs.\\n+\\n+## Rendered verification\\n+\\n+For each changed UI, record the actual browser/OS/device, date, code/document/fixture revision or dirty boundary, font assets actually loaded, commands/steps, expected/actual result and artifact paths. Run the issue's existing behavioral checks and the bounded visual checks below.\\n+\\n+1. Capture and inspect final screenshots at desktop, 767/768px boundary and 390px phone in EN/RU, plus the issue's short viewport and 200% zoom cases. Compare the relevant components to their cataloged Light PNG and Clean values. Measure geometry after Mabry loads, including long localized labels, phone touch targets, control density, cards and media/safe-area clearance.\\n+2. Exercise default, hover, active/pressed, keyboard focus, disabled, loading, selected, invalid and service-error states that actually apply. Verify focus remains visible, errors preserve values and layout, dialogs return focus and essential meaning is not color-only. Test forced colors where the issue requires it.\\n+3. Inspect functional transitions and reduced motion in the actual browser. Record source duration/easing versus observed behavior and verify no animation gates work. Still images alone do not prove timing, interactivity, accessibility or media behavior.\\n+4. Fix visible mismatches and inspect the final screenshots again. Record justified contrast/semantic/source-gap adaptations and any unresolved font/copy/device limits. The design-skill inspector may assist, but it cannot reject an explicitly adopted source property merely because of a generic house rule; explain the scoped exception and verify the adopted contract.\\n+\\n+Report visual results separately from business logic, build/tests, actual browser media/device behavior and production services. A document migration, source hash, test PASS or screenshot capture without inspection does not establish visual fidelity. Mark missing required evidence `blocked` or `not run`; do not claim browser, font or product acceptance from this documentation assignment.\\n*** End Patch\"));\n"
+  },
+  {
+    "source_line": 142,
+    "timestamp": "2026-10-22T22:49:56.561Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"Get-Content -LiteralPath '_docs/frontend-flows/README.md' -TotalCount 10; Get-Content -LiteralPath 'AGENTS.md' | Select-Object -Skip 40 -First 35; Get-Content -LiteralPath '_docs/task-drafts/frontend-flows/README.md' -TotalCount 8\",sandbox_permissions:\"require_escalated\",justification:\"Read exact local index context before concise authority updates.\",max_output_tokens:3500}));\ntext(ALL_TOOLS.filter(x=>/node_repl.*js$/.test(x.name)).map(x=>({name:x.name,description:x.description.slice(0,900)})));\n"
+  },
+  {
+    "source_line": 147,
+    "timestamp": "2026-10-22T22:50:14.527Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: AGENTS.md\\n@@\\n-## Project review skills\\n-\\n ## Frontend visual authority\\n@@\\n - Map reference components and states to shadcn semantics, record exact source values and justified source-gap/accessibility adaptations, and verify actual browser screenshots against the references before claiming visual fidelity. A source/token audit or green build alone does not establish rendered acceptance.\\n+\\n+## Project review skills\\n*** Update File: _docs/frontend-flows/README.md\\n@@\\n Shared authority and confirmed decisions: [00-shared-contract.md](00-shared-contract.md).\\n+\\n+Current visual authority: [Affect UI Clean/Light adoption](affect-ui-clean-light-adoption.md), [exact source/Light reference catalog](affect-ui-clean-light-reference.md), [current tokens](design-tokens.md) and [mandatory source-to-browser workflow](affect-ui-workflow.md). The owner retained Mabry Pro. This later visual adoption supersedes only the presentation clauses it explicitly replaces; functional contracts and named product/evidence gates remain. Earlier token/review checkpoints below are historical snapshots, not competing visual authority.\\n*** Update File: _docs/task-drafts/frontend-flows/README.md\\n@@\\n Authority remains the [shared contract](../../frontend-flows/00-shared-contract.md), [approved tokens](../../frontend-flows/design-tokens.md), [twelve active flow specifications](../../frontend-flows/README.md) and [latest recording/result decisions](../../frontend-flows/decision-batch-2026-10-23.md). Source OPEN gates remain unchanged. The stopped scaffold and deleted SPEC-002 are not approved implementation baselines.\\n+\\n+The later [Affect UI Clean/Light adoption](../../frontend-flows/affect-ui-clean-light-adoption.md), [reference catalog](../../frontend-flows/affect-ui-clean-light-reference.md) and [frontend workflow](../../frontend-flows/affect-ui-workflow.md) govern applicable presentation while retaining Mabry Pro and behavior. The dated [migration evidence](../../evidence/affect-ui-adoption-2026-10-23/README.md) tracks exact proposed/applied issue-body changes; it is an audit artifact, not a local execution backlog. Published stubs, original source archives and frozen reviews remain historical records. GitHub remains authoritative for the current task contract and status.\\n*** End Patch\"));\n"
+  },
+  {
+    "source_line": 154,
+    "timestamp": "2026-10-22T22:50:24.956Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=888 sha256=10605810f5e67935320310094a2ecc47bbacd764eed60b008ad633eb074e37ce]\"}"
+  },
+  {
+    "source_line": 161,
+    "timestamp": "2026-10-22T22:50:31.411Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root/affect_clean_reference_analysis\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=588 sha256=bfe5f484827e9fb64cbc93c0b51f3aeeb6d2b0642e0c77c04c312ecccc3f176d]\"}"
+  },
+  {
+    "source_line": 166,
+    "timestamp": "2026-10-22T22:50:34.925Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "for (const n of [62,65,66,69,71]){\n const b=load(\"liveIssues\")[n].body; text({n,body:b.slice(b.indexOf(\"## Scope\"),b.indexOf(\"## Completion record\"))});\n}\n"
+  },
+  {
+    "source_line": 172,
+    "timestamp": "2026-10-22T22:50:44.086Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"Get-ChildItem -LiteralPath '_docs/frontend-flows' -Filter 'affect*' -Name; Get-Content -LiteralPath '_docs/frontend-flows/affect-ui-clean-light-reference.md' -TotalCount 160\",sandbox_permissions:\"require_escalated\",justification:\"Read the canonical source catalog if the reference analyst has produced it.\",max_output_tokens:7000}));\n"
+  },
+  {
+    "source_line": 179,
+    "timestamp": "2026-10-22T22:51:01.588Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/README.md\\n+# Affect UI Clean/Light adoption evidence\\n+\\n+Date: 2026-10-23, Asia/Qyzylorda. Repository: `dystrophyless/dubbed.ai`.\\n+\\n+This directory records a bounded documentation and published-task-contract migration. It is an audit artifact, not a second task backlog. GitHub issues #61–#82 remain the live execution contracts; published local task files remain issue-link stubs. Original source archives and frozen reviews under `../frontend-issue-publication-2026-10-23/` are immutable historical evidence.\\n+\\n+Authority: the [adoption contract](../../frontend-flows/affect-ui-clean-light-adoption.md), [reference catalog](../../frontend-flows/affect-ui-clean-light-reference.md), [current tokens](../../frontend-flows/design-tokens.md) and [frontend workflow](../../frontend-flows/affect-ui-workflow.md). The owner selected Affect UI Clean/Light and retained Mabry Pro. Functional behavior is preserved.\\n+\\n+## Remote migration state\\n+\\n+Preparation only: all 22 actual issue bodies and latest discussions were read before staging. `remote-before.json` preserves that read-only snapshot, including metadata and all comments (zero on each issue). At this snapshot the issues were open with `frontend`; workflow bodies contained 1 ready, 13 draft and 8 blocked. This is a dated observation, not a local status queue.\\n+\\n+No issue edit, comment, status/label/assignee/dependency mutation, new issue, reopening or closure is established by this preparation record. Exact staged payloads, hashes, review disposition and post-write read-back results will be recorded here before synchronization can be claimed.\\n+\\n+## Evidence boundary\\n+\\n+The workflow and task migration do not implement or install product code and establish no rendered visual, actual Mabry font, browser, microphone, accessibility, payment or production acceptance. No commit, push, PR, merge, deployment or paid-service action is included.\\n*** End Patch\"));\ntext(await tools.exec_command({cmd:\"Get-Content -LiteralPath '_docs/frontend-flows/affect-ui-clean-light-adoption.md' -TotalCount 180; git diff --check -- 'AGENTS.md' '_docs/orchestration.md' '_docs/frontend-flows/README.md' '_docs/task-drafts/frontend-flows/README.md'\",sandbox_permissions:\"require_escalated\",justification:\"Read the adoption draft and validate the bounded workflow diff.\",max_output_tokens:9000}));\n"
+  },
+  {
+    "source_line": 187,
+    "timestamp": "2026-10-22T22:51:18.183Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=972 sha256=6ceb1688e68cb1582bbb6c30ea9e58a7810df96e43f5090d63b69e0b902e0b4d]\"}"
+  },
+  {
+    "source_line": 194,
+    "timestamp": "2026-10-22T22:51:53.186Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const map={\n62:{role:\"Account UI\",scope:\"Compose flat Account sections with Clean Buttons, Dropdowns, Cards and Badges as applicable; use the named input/password and dialog/phone-sheet derivatives for locale, method, direct-password and destructive-confirmation states. Preserve section order, exact localized deletion token and guarded sign-out.\",states:\"locale-save pending/failure, method facts, invalid password, deletion cancel/error/unknown and soft-red destructive confirmation\"},\n65:{role:\"Credits UI\",scope:\"Compose available/reserved facts, service-configured one-time packs, purchase status and unified history using applicable Clean Cards, Buttons, Badges and Tables/Pagination references; use Dropdowns only where existing scope requires a selector. Do not import recurring pricing, recommended-pack claims, invented discounts or example history controls.\",states:\"partial/unavailable balance, unavailable packs, pending/unknown checkout, posted/pending history and Show more loading/failure\"},\n66:{role:\"Linking UI\",scope:\"Apply shared Clean Buttons, Badges and input/password/OTP/dialog derivatives to current-account proof, candidate proof and final explicit linking; reuse registration-owned code behavior and preserve the authorized/auth-header hierarchy.\",states:\"proof incomplete/invalid, candidate pending, final-action disabled/loading, conflict, unknown and correction/cancel\"},\n69:{role:\"Microphone-check UI\",scope:\"Apply Clean Buttons, Dropdowns and applicable Badges/Progress Bars visual treatments to actual input selection, optional microphone test and level/readiness status; media meter behavior is a named derivative, not a library media component.\",states:\"permission/input denial/loss, unavailable enumeration, selected input, live-level status, optional test Record/Stop/Listen and ready Continue\"},\n71:{role:\"Password-reset UI\",scope:\"Reuse shared Clean Buttons and input/password/OTP derivatives in the existing reset hierarchy; preserve two new-password fields, six logical code cells, neutral response and product code/resend policy.\",states:\"request/code pending, known invalid code retained/selected, unknown verification, resend unavailable, field/service error and password submit loading\"},\n74:{role:\"Processing UI\",scope:\"Use applicable Clean Progress Bars, Badges, Buttons and dialog derivatives for truthful preparation/reprocessing status and fresh cancellation consent. Adopt appearance and bounded functional transitions, never fake completion, sample timer progress or sample cancellation policy.\",states:\"queued/unknown/known progress, cancellation quote refresh, confirming/failed cancellation, retry, zero-turn recovery and preserved prior preparation\"},\n75:{role:\"Projects UI\",scope:\"Compose actual project rows with applicable Clean Tables, Cards, Dropdowns, Badges and Buttons references plus rename-input and deletion-dialog derivatives; preserve required row facts and approved responsive hierarchy, with no new filters/search/bulk actions.\",states:\"empty/capacity/loading/partial error, lifecycle/resume status, inline rename validation/save failure, row menu and deletion unknown/error\"},\n77:{role:\"Recording UI\",scope:\"Apply Clean Buttons, Badges, Progress Bars and shared dialog derivatives to the confirmed media-first recording layout. Waveform, media playback/capture, turn target and safe-area controls are explicit product derivatives; preserve target legibility, desktop normal-flow controls, phone pinned controls and exact guard choices.\",states:\"grant unavailable, capture, candidate review, saving/save failure, accepting/accepted/stale, end-with-gaps, background assembly handoff and guarded exit\"},\n78:{role:\"Shared shell and controls\",scope:\"Own the common Clean/Light source-to-shadcn mapping: Buttons, Dropdowns, Badges, Cards, Tables/Pagination, Progress Bars and applicable shared disclosure treatments, plus named input/password/OTP/dialog/phone-sheet/media derivatives. Supply only components consumed by approved screens; preserve top navigation/phone menu and minimal landing scope.\",states:\"default/hover/pressed/focus, disabled/loading, selected, invalid, service error, dialog lifecycle and reduced-motion equivalents\"},\n79:{role:\"Result UI\",scope:\"Apply Clean Buttons, Progress Bars, Badges and shared control derivatives to assembly, Previous version/New version ready/Watch new, playback recovery and Download MP4. The video player is a named derivative; preserve displayed versus authorized generation identity and existing player/control hierarchy.\",states:\"unknown/known assembly progress, previous playing/paused, new-ready, player delivery retry, download request error, assembly retry and paused Watch new\"},\n80:{role:\"Sign-in UI\",scope:\"Apply shared Clean Buttons and input/password derivatives to password and Google entry, session/return resolution and errors in the approved authentication hierarchy. Do not import sample social methods, demo account claims or library-auth domain behavior.\",states:\"empty/filled/invalid, password visibility, unavailable session, submitting/loading, provider return conflict and safe service error\"},\n81:{role:\"New dub UI\",scope:\"Compose source upload/preview/section/quote actions using applicable Clean Buttons, Cards, Badges and Progress Bars plus input/dialog/media/range derivatives. Preserve same-page source/selection/quote hierarchy and one explicit exact-cost Process action.\",states:\"transfer/validation/pending/error, compatible-preview retry, invalid/stale interval or quote, capacity/insufficient balance and replace-source preservation\"},\n82:{role:\"Registration UI and shared code interaction\",scope:\"Own the reusable accessible OTP visual derivative together with shared Clean Buttons and input/password treatments; retain one registration password field, same-screen verification, authoritative collision outcomes and product send/resend policy.\",states:\"registration submitting/error, six-cell paste/autofill, invalid code retained/selected, unknown verification, resend countdown/unavailable and collision\"}\n};store(\"uiMap\",map); text(Object.entries(map).map(([n,x])=>({n,role:x.role})));\n"
+  },
+  {
+    "source_line": 200,
+    "timestamp": "2026-10-22T22:52:01.681Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"Get-Content -LiteralPath '.agents/skills/design-taste-frontend/references/app-screens.md' | Select-Object -Skip 1190 -First 70; Get-Content -LiteralPath '.agents/skills/design-taste-frontend/SKILL.md' | Select-Object -Skip 390 -First 100; git status --short -- 'AGENTS.md' '_docs/orchestration.md' '_docs/frontend-flows' '_docs/task-drafts/frontend-flows' '_docs/evidence/affect-ui-adoption-2026-10-23'\",sandbox_permissions:\"require_escalated\",justification:\"Complete the bounded skill read and inspect only authorized documentation paths.\",max_output_tokens:6000}));\n"
+  },
+  {
+    "source_line": 207,
+    "timestamp": "2026-10-22T22:52:16.108Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=716 sha256=3fcc1fbed12c66f50aba539e032bf4d8d0ca88a67ad8dc7f2be6052dc9f236a3]\"}"
+  },
+  {
+    "source_line": 214,
+    "timestamp": "2026-10-22T22:52:21.083Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"Get-Content -LiteralPath '_docs/frontend-flows/affect-ui-clean-light-adoption.md' -TotalCount 6; Get-ChildItem -LiteralPath '_docs/frontend-flows' -Filter 'affect*' | Select-Object Name,Length\",sandbox_permissions:\"require_escalated\",justification:\"Check whether the canonical policy and reference catalog are ready for issue staging.\",max_output_tokens:600}));\n"
+  },
+  {
+    "source_line": 221,
+    "timestamp": "2026-10-22T22:52:54.012Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const issues=load(\"liveIssues\"),ui=load(\"uiMap\");const after={},edits=[];\nconst authority=`## Current visual authority — Affect UI Clean/Light (2026-10-23)\\n\\nThe owner now requires the local Affect UI Clean/Light visual language and explicitly retains Mabry Pro. Current local contracts: \\`_docs/frontend-flows/affect-ui-clean-light-adoption.md\\`, \\`affect-ui-clean-light-reference.md\\`, \\`design-tokens.md\\` and \\`affect-ui-workflow.md\\` in that directory, together with the active flow/shared behavior. Read each applicable Clean Markdown and inspect its matching Light PNG; map exact source component/state/values to shadcn semantics. The adoption contract explicitly supersedes the earlier appearance clauses it replaces, including old palette/radius/density/shadow/motion restrictions; functional behavior, layout/phone navigation, accessibility, privacy and named product/evidence gates remain. Do not import Classic/Dark, unrelated marketing blocks or example domain policies. Reference gaps and necessary contrast/focus adaptations must be named. Source files are local/uncommitted; no GitHub-hosted specification is asserted.\\n\\nOriginal Reviewed source, publication reconciliation and fingerprint table below remain historical provenance for the pre-adoption snapshot, not the current visual revision. This migration preserves workflow status, dependencies, nonvisual AC, ownership, labels and assignees and establishes no implementation or rendered acceptance.\\n`;\nfor(const [n,i] of Object.entries(issues)){let b=i.body;b=b.replace(\"## Increment and context\",authority+\"\\n## Increment and context\");if(ui[n]){\n b=b.replace(\"## Out of scope\",`- Visual composition: ${ui[n].scope}\\n\\n## Out of scope`);\n b=b.replace(\"## Verification plan\",`- [ ] AC-VIS-01: Applicable Clean/Light component appearance and states follow the current adoption/token contract with Mabry Pro and shadcn semantics. Cover ${ui[n].states}. Record the exact reference pair/state/value map and explicit derivative/contrast corrections; preserve every functional AC above. Missing required font/source/browser evidence blocks the affected visual claim.\\n\\n## Verification plan`);\n const visual=`Visual checks for AC-VIS-01: follow \\`_docs/frontend-flows/affect-ui-workflow.md\\`; inspect final actual-browser screenshots against the cataloged Light PNGs and Clean values at desktop, 767/768px and 390px in EN/RU, plus applicable zoom/short-viewport states. Verify loaded Mabry weights/metrics, source-mapped geometry, keyboard focus, disabled/loading/error/selected states, dialog behavior where applicable, bounded functional motion and immediate reduced-motion equivalents. Record environment/date/revision or dirty boundary, exact reference paths, expected/actual, screenshots and timing/interaction evidence. No build, token arithmetic, mock state or screenshot capture without inspection substitutes for visual proof.\\n\\n`;\n b=b.replace(\"## Delivery conditions\",visual+\"## Delivery conditions\");\n}\nif(n===\"61\"){\n b=b.replace(\"## Out of scope\",\"- Inventory the cataloged Clean/Light source/PNG and Mabry availability, the accepted source-to-shadcn mapping/derivative ownership in shell #78 and screen consumers, and any remaining source/contrast/rendered-evidence gaps. Record confirmed adoption without drawing a new style or reopening the owner's retained Mabry decision.\\n\\n## Out of scope\");\n}\nif(n===\"63\"){\n b=b.replace(\"- [ ] AC-08: Rendered desktop,767/768px,390px phone, EN/RU, keyboard,200% zoom, reduced motion and forced colors meet approved tokens/font/control/focus contracts. Missing target-device evidence is blocked/not run, never inferred from emulation.\",\"- [ ] AC-08: Rendered desktop,767/768px,390px phone, EN/RU, keyboard,200% zoom, reduced motion and forced colors meet the current Affect UI Clean/Light adoption/token contract with Mabry Pro. Inspect actual final browser screenshots against each UI owner's cataloged Clean Markdown/Light PNG component/state map; measure actual loaded fonts, geometry, phone targets, focus/contrast adaptations, bounded functional motion and reduced-motion behavior. Account for named source gaps and derivatives rather than inventing library components. Missing source/font/target-device evidence is blocked/not run, never inferred from emulation, source arithmetic or build PASS.\");\n}\nif(!ui[n]&&n!==\"61\"&&n!==\"63\") b=b.replace(authority,authority+\"\\nThis issue retains its existing technical/domain scope and does not own screen redesign or a new visual system. UI-owning tasks consume its facts through the shared boundary; shell #78 and browser gate #63 own their respective presentation and integrated reference evidence.\\n\");\nafter[n]=b;edits.push({issue:Number(n),role:ui[n]?.role??(n===\"61\"?\"Technical source/decision inventory\":n===\"63\"?\"Integrated visual/behavior verification\":\"Existing nonvisual technical/domain scope\"),stagedBodyChanged:b!==i.body});\n}\nstore(\"stagedBodies\",after);store(\"stagingRoles\",edits);text(edits);\n"
+  },
+  {
+    "source_line": 229,
+    "timestamp": "2026-10-22T22:53:17.844Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const after=load(\"stagedBodies\");\nconst old78=\"`frontend/src/App.tsx`, `App.css`, `index.css` and `main.tsx` are scaffold entry points, not approved styling. The inspected package includes Manrope; this does not supersede Mabry Pro Regular/Medium. Approved tokens specify 16/24 body, 14/20 captions, Medium16/24 buttons, Medium14/20 labels, 32/40 desktop and24/32 phone headings; 8px radius,40/48px controls,32/16px gutters,1200px working and400px auth maxima. Essential borders are neutral500, decorative dividers neutral200; media focus has opaque black backing. Preserve reduced motion and control transitions ≤150ms with no animation-gated work.\";\nconst new78=\"`frontend/src/App.tsx`, `App.css`, `index.css` and `main.tsx` are scaffold entry points, not approved styling. The inspected package includes Manrope; the owner explicitly retains Mabry Pro Regular/Medium. Current Clean/Light tokens adopt compact desktop buttons at 24/28/32px with source size-specific 12/16 or 13/20 Medium labels and phone 48px touch targets. Body/dialogue 16/24, captions 14/20, headings 32/40 desktop and 24/32 phone, shared gutters/maxima and navigation behavior remain as specified. Use component-specific source geometry, dark primary, white secondary, soft-red destructive, bounded hairlines/shadows and the cataloged functional motion; do not apply the superseded global 8px/40px/16/24-button/≤150ms/no-shadow rules. Focus/control boundaries use the explicit accessibility adaptations, and media focus keeps its opaque backing. All exact values, source gaps and reduced-motion equivalents come from the current adoption/token contract, with no animation-gated work.\";\nif(!after[78].includes(old78))throw Error(\"78 exact anchor absent\");\nafter[78]=after[78].replace(old78,new78).replace(\"Domain flows/handlers, redesigning approved tokens, landing media/demo, decorative panels/sidebar/gradients, public viewer/sharing, unapproved copy or font substitution presented as final acceptance.\",\"Domain flows/handlers, replacing the adopted Clean/Light direction, landing media/demo or unrelated marketing blocks, sidebar/unrelated navigation/gradients, public viewer/sharing, unapproved copy or font substitution presented as final acceptance. Applicable bounded Clean cards/surfaces/shadows are permitted by the adoption contract; this does not add new product sections.\");\nconst old81=\"Approved semantic tokens, Mabry Pro Regular/Medium, 768px breakpoint, 1200px maximum, 16/32px gutters, 48/40px controls, 8px radius, shared spacing/focus/error/motion/localization rules apply. Remaining geometry/font/copy choices are blockers, not permission to redesign.\";\nif(!after[81].includes(old81))throw Error(\"81 exact anchor absent\");\nafter[81]=after[81].replace(old81,\"Current Affect UI Clean/Light semantic/component tokens and Mabry Pro Regular/Medium apply: source-specific desktop density/radii/states and functional motion replace the old global 40px/8px/button-type/motion restrictions. Preserve the 768px breakpoint, shared 1200px working maximum, 16/32px gutters, phone 48px touch targets, source/quote hierarchy and accessible focus/error/localization behavior. Exact current values and explicit derivatives are in the adoption/token contract; remaining genuine source/font/copy/rendered-evidence gaps stay blocked for their affected acceptance.\");\nafter[64]=after[64].replace(\"Both design skills inform state honesty and operability; approved tokens and the media-first hierarchy remain fixed, with no style draw or redesign.\",\"Both design skills inform state honesty and operability; the current Affect UI Clean/Light adoption/token contract and preserved media-first hierarchy apply. This investigation does not choose another visual direction or own screen redesign.\");\nafter[62]=after[62].replace(\"tokens, flat settings hierarchy, breakpoint/gutters/controls\",\"current Clean/Light tokens, preserved Account section hierarchy, breakpoint/gutters/controls\");\nstore(\"stagedBodies\",after);text({changedExactStyleParagraphs:[78,81,64,62],count:Object.keys(after).length});\n"
+  },
+  {
+    "source_line": 235,
+    "timestamp": "2026-10-22T22:53:25.252Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=696 sha256=758c9db97f08974d40071c9f6110d3127c167d8ed98c1c4cf5c74a724341a26f]\"}"
+  },
+  {
+    "source_line": 240,
+    "timestamp": "2026-10-22T22:53:29.313Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"Get-Content -LiteralPath '_docs/frontend-flows/affect-ui-clean-light-adoption.md' -TotalCount 160\",sandbox_permissions:\"require_escalated\",justification:\"Read canonical adoption policy once available to check staged task wording.\",max_output_tokens:9000}));\n"
+  },
+  {
+    "source_line": 247,
+    "timestamp": "2026-10-22T22:53:42.451Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"Get-ChildItem -LiteralPath 'D:/Program/frontend/affect-ui/affectui-free' -Directory | Select-Object -ExpandProperty Name; Get-ChildItem -LiteralPath 'D:/Program/frontend/affect-ui/affectui-free/components' -Directory -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name\",sandbox_permissions:\"require_escalated\",justification:\"Read the reference library's exact component-family inventory to avoid invented mappings.\",max_output_tokens:3000}));\n"
+  },
+  {
+    "source_line": 254,
+    "timestamp": "2026-10-22T22:53:53.424Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=804 sha256=7cca2c94dfb951c3f90c55e211b093c2076392ac27ffaa266c8362de3703bd54]\"}"
+  },
+  {
+    "source_line": 259,
+    "timestamp": "2026-10-22T22:54:12.699Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const m=load(\"uiMap\");\nm[62].scope=\"Compose preserved Account sections with cataloged button, filter-menu/profile-menu framing and explicitly derived rows/status treatments; use named input/password and dialog/phone-sheet derivatives for locale, method, direct-password and destructive-confirmation states. Preserve section order, exact localized deletion token and guarded sign-out.\";\nm[65].scope=\"Compose available/reserved facts, configured one-time packs, purchase status and unified history with cataloged button and progress-tracker treatments plus explicitly derived cards, status labels and history rows. Preserve existing Show more behavior; the library supplies no standalone pricing/history/table component. Do not import recurring pricing, recommended-pack claims, invented discounts or example controls.\";\nm[66].scope=\"Apply cataloged button and otp-input presentation, source-framed status treatments and explicit input/password/dialog derivatives to current-account proof, candidate proof and final explicit linking. Reuse registration-owned code behavior and preserve the authorized/auth-header hierarchy.\";\nm[69].scope=\"Apply cataloged button, filter-menu and progress-tracker visual anatomy to actual input selection, optional microphone test and level/readiness status. The device selector and media meter are explicit derivatives, not library media components.\";\nm[71].scope=\"Reuse cataloged button and otp-input presentation with explicit input/password derivatives in the existing reset hierarchy; preserve two new-password fields, six logical code cells, neutral response and product code/resend policy.\";\nm[74].scope=\"Use cataloged progress-tracker/button and explicit status/dialog derivatives for truthful preparation/reprocessing status and fresh cancellation consent. Adopt appearance and bounded functional transitions, never fake completion, sample timer progress or sample cancellation policy.\";\nm[75].scope=\"Compose actual project rows with cataloged button/filter-menu/profile-menu framing and explicit row, status, rename-input and deletion-dialog derivatives. There is no standalone Affect table/project-card component; preserve required row facts and responsive hierarchy, with no new filters/search/bulk actions.\";\nm[77].scope=\"Apply cataloged button, segmented-control and progress-tracker presentation plus explicit status/dialog derivatives to the confirmed media-first recording layout. Waveform, media playback/capture, turn target and safe-area controls are product derivatives; preserve target legibility, desktop normal-flow controls, phone pinned controls and exact guard choices.\";\nm[78].scope=\"Own the common source-to-shadcn map for cataloged button, filter-menu, profile-menu, segmented-control, otp-input and progress-tracker anatomy. Name input/password/dialog/phone-sheet/media/row/status/surface derivatives and their exact source gaps; there is no standalone Affect input, dialog, table, card or media component. Supply only components consumed by approved screens and preserve top navigation/phone menu and minimal landing scope.\";\nm[79].scope=\"Apply cataloged button/progress-tracker and explicit status/shared-control derivatives to assembly, Previous version/New version ready/Watch new, playback recovery and Download MP4. The video player is a named derivative; preserve displayed versus authorized generation identity and existing player/control hierarchy.\";\nm[80].scope=\"Apply cataloged button presentation and explicit input/password derivatives to password and Google entry, session/return resolution and errors in the approved authentication hierarchy. Do not import sample social methods, demo-account claims or example domain behavior.\";\nm[81].scope=\"Compose source upload/preview/section/quote actions using cataloged button/progress-tracker/segmented-control anatomy where applicable plus explicit surface/status/input/dialog/media/range derivatives. Preserve the same-page source/selection/quote hierarchy and one deliberate exact-cost Process action.\";\nm[82].scope=\"Own the reusable accessible otp-input visual adaptation with cataloged button and explicit input/password derivatives; retain one registration password field, same-screen verification, authoritative collision outcomes and product send/resend policy.\";\nconst after=load(\"stagedBodies\"),old=load(\"uiMap\");for(const [n,x] of Object.entries(m)){after[n]=after[n].replace(old[n].scope,x.scope);}\nstore(\"uiMap\",m);store(\"stagedBodies\",after);text({scopedMapsCorrected:Object.keys(m).length});\n"
+  },
+  {
+    "source_line": 267,
+    "timestamp": "2026-10-22T22:54:18.973Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"Get-Content -LiteralPath '_docs/frontend-flows/affect-ui-clean-light-reference.md' -TotalCount 200; Get-Content -LiteralPath '_docs/frontend-flows/design-tokens.md' -TotalCount 180\",sandbox_permissions:\"require_escalated\",justification:\"Read the frozen source-family catalog and current token policy for exact task mappings.\",max_output_tokens:15000}));\ntext({sample:load(\"stagedBodies\")[78].match(/- Visual composition: [^\\n]+/)?.[0]});\n"
+  },
+  {
+    "source_line": 276,
+    "timestamp": "2026-10-22T22:54:45.967Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const m=load(\"uiMap\"),a=load(\"stagedBodies\");\nconst replaceScope=(n,s)=>{a[n]=a[n].replace(m[n].scope,s);m[n].scope=s;};\nreplaceScope(62,\"Compose preserved Account sections with cataloged BTN buttons and PRO menu/quiet-row anatomy plus explicitly derived status treatments; use named input/password, locale-selector and dialog/phone-sheet derivatives. Preserve section order, exact localized deletion token and guarded sign-out; source filter behavior adds no Account feature.\");\nreplaceScope(69,\"Apply cataloged BTN buttons and PGR progress/status anatomy with explicitly derived input selector and media meter to actual input selection, optional microphone test and level/readiness status. Neither the device selector nor meter is a direct library media component; no filter feature or simulated level threshold is imported.\");\nreplaceScope(78,\"Own the common source-to-shadcn map for cataloged BTN button, PRO profile-menu, SEG segmented-control, OTP otp-input, PGR progress-tracker, THK controlled status and NOT existing-notice anatomy. FIL filter-menu is eligible only for an already specified filter or explicitly named framing derivative; it adds no feature. Name input/password/dialog/phone-sheet/media/row/status/surface derivatives and exact source gaps; no standalone Affect input, dialog, table, card or media component exists. Supply only controls consumed by approved screens and preserve top navigation/phone menu and minimal landing scope.\");\nreplaceScope(79,\"Apply cataloged BTN buttons, PGR progress and THK controlled status with explicit shared-control/notice derivatives to assembly, Previous version/New version ready/Watch new, playback recovery and Download MP4. NOT is eligible only for an existing notice and must not hide required recovery/status. The video player is a named derivative; preserve displayed versus authorized generation identity and existing player/control hierarchy.\");\nstore(\"uiMap\",m);store(\"stagedBodies\",a);\ntext(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: _docs/frontend-flows/affect-ui-workflow.md\\n@@\\n-The reference catalog distinguishes direct examples, embedded examples, derivatives and missing components. Inputs, password/code controls, dialogs, media controls and other gaps must use the adoption contract's named derivatives and shared shadcn behavior; do not claim a nonexistent Affect component. OTP visual cells remain one logical accessible value and retain the product's confirmed code/resend and verification rules.\\n+The reference catalog distinguishes direct examples, embedded examples, derivatives and missing components. Direct families are BTN button, FIL filter-menu, PRO profile-menu, SEG segmented-control, PGR progress-tracker, NOT notification-stack, OTP otp-input and THK thinking-loader in their cataloged roles. Generic inputs/password fields, dialogs, file selection, timelines/waveforms/meters, players, payment forms and project/history rows use named derivatives and shared shadcn behavior; do not claim a nonexistent Affect Input, Dialog, Card, Table or Badge component. OTP is a direct visual reference whose accessible adaptation remains one logical value and retains the product's confirmed code/resend and verification rules. FIL/NOT do not introduce filters or a notification feed absent from the flow.\\n*** End Patch\"));\n"
+  },
+  {
+    "source_line": 283,
+    "timestamp": "2026-10-22T22:55:16.607Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const bodies=load(\"stagedBodies\");\nconst patches=Object.entries(bodies).map(([n,b])=>\"*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/\"+n+\".md\\n\"+b.split(\"\\n\").map(l=>\"+\"+l).join(\"\\n\")).join(\"\\n\");\ntext(await tools.apply_patch(\"*** Begin Patch\\n\"+patches+\"\\n*** End Patch\"));\ntext(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/task-contract-migration.md\\n+# Published frontend task-contract migration\\n+\\n+Status: staged for review; no remote issue mutation yet. Date: 2026-10-23, Asia/Qyzylorda.\\n+\\n+## Frozen boundary\\n+\\n+The owner requests strong Affect UI Clean/Light style/component/functional-motion adoption while retaining Mabry Pro. Only applicable presentation changes. Existing product behavior, nonvisual acceptance criteria, issue workflow status, dependencies, assignees, labels and ownership remain. No new issue, implementation, dependency installation, acceptance, closure, commit, push or deployment is included.\\n+\\n+`remote-before.json` preserves all 22 live issue bodies/metadata and latest discussion (zero comments each). `staged-issue-bodies/<number>.md` contains exact candidate replacement bodies, solely as a dated review/transfer payload. These files are not maintained as live task drafts; after transfer GitHub remains authoritative. Published task stubs, immutable source archives and frozen reviews are preserved.\\n+\\n+## Contract changes and ownership\\n+\\n+| Issues | Bounded update |\\n+|---|---|\\n+| All #61–#82 | Concise current visual-authority section and explicit historical status of original publication hashes/reviews; no lifecycle transition |\\n+| #61 | Source/Light PNG/Mabry availability and mapping/derivative ownership in bounded technical register; no new style selection |\\n+| #78 | Shared BTN/PRO/SEG/OTP/PGR/THK/NOT mappings, eligible FIL framing, named gaps/derivatives and source-to-shadcn semantics; replace exact old blue/global8px/40px/16\\\\u002f24-button/150ms/no-shadow restrictions with current canonical contract, preserved shell/layout and compact desktop/48px phone target decision |\\n+| #62/#65/#66/#69/#71/#74/#75/#77/#79/#80/#81/#82 | Per-screen applicable source families and derivative/state scope; AC-VIS-01 plus planned actual-browser/source-reference verification; functional AC preserved |\\n+| #63 | Expand existing AC-08 to integrated source/Light PNG comparison, actual Mabry/geometry/focus/contrast/motion and explicit gap evidence; no claim of execution |\\n+| #64/#67/#68/#70/#72/#73/#76 | Keep existing technical/domain scope; explicitly no screen-redesign ownership |\\n+\\n+Direct source names use the catalog IDs, not fictional Clean Card/Table/Badge/Input/Dialog components. Card/row/status/input/password/dialog/phone-sheet/media/timeline/meter presentation is explicitly adapted where no direct source exists. FIL does not introduce filters, NOT does not introduce a notification feed, source PGR checklists/timers do not own processing completion, and OTP sample defaults cannot replace retained product rules.\\n+\\n+Exact pre-existing appearance replacements are limited to #78's shared-style anchors/exclusions, #81's old global geometry paragraph, #64's fixed-style wording and #62's flat-settings phrase (preserving Account section hierarchy). Other prior presentation references consume the new current authority. The immutable original reviewed task bodies and hashes remain available separately.\\n+\\n+## Review and transfer gate\\n+\\n+Before transfer, freeze hashes of the current adoption/token/reference/shared/flow/workflow sources and every exact candidate body; inspect the changed contract and preserved nonvisual sections. Root must explicitly confirm reviewed final policy READY. Re-fetch all target bodies before writing and stop for any drift; do not overwrite a changed discussion/contract blindly. Each update sends only the new body. Read back all 22 exact bodies and preserved metadata, compare source and staged hashes, and record the result before claiming synchronization. Ambiguous writes require read-back reconciliation before retry.\\n+\\n+## Verification limits\\n+\\n+All new visual checks are planned. Documentation/source/contrast checks do not prove rendered Dubbed fidelity, actual font loading, browser/device/microphone behavior, accessibility, payments or product acceptance. Existing issue statuses and blocked production gates remain unchanged.\\n*** End Patch\"));\n"
+  },
+  {
+    "source_line": 293,
+    "timestamp": "2026-10-22T22:55:57.765Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: _docs/frontend-flows/affect-ui-workflow.md\\n@@\\n Use the [Clean/Light adoption contract](affect-ui-clean-light-adoption.md), [reference catalog](affect-ui-clean-light-reference.md), current [design tokens](design-tokens.md), [shared behavior](00-shared-contract.md) and applicable active flow specification. The local reference root is `D:\\\\Program\\\\frontend\\\\affect-ui\\\\affectui-free`. The catalog identifies exact Clean Markdown / Light PNG pairs and source fingerprints.\\n+\\n+If that external path is unavailable, use the catalog's byte-identical pinned [portable source/Light PNG evidence](../evidence/affect-ui-clean-light/README.md), verifying its manifest hashes. A changed external hash requires an explicit mapping/evidence update before claiming fidelity to the changed source; do not silently replace the selected snapshot or guess from memory.\\n@@\\n-1. Capture and inspect final screenshots at desktop, 767/768px boundary and 390px phone in EN/RU, plus the issue's short viewport and 200% zoom cases. Compare the relevant components to their cataloged Light PNG and Clean values. Measure geometry after Mabry loads, including long localized labels, phone touch targets, control density, cards and media/safe-area clearance.\\n+1. Capture and inspect final screenshots at desktop, 767/768px boundary and 390px phone in EN/RU, plus the issue's short viewport and 200% zoom cases. Compare applicable component crops/states to their cataloged Light PNG and Clean values, accounting for source preview scale/DPR and the approved Mabry substitution. The demo screenshot's canvas/frame/whitespace/content is not Dubbed page layout, and source Inter text widths are not Mabry acceptance targets. Measure actual CSS geometry after Mabry loads, including long localized labels, phone touch targets, control density, cards and media/safe-area clearance.\\n*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/task-contract-migration.md\\n@@\\n-| #78 | Shared BTN/PRO/SEG/OTP/PGR/THK/NOT mappings, eligible FIL framing, named gaps/derivatives and source-to-shadcn semantics; replace exact old blue/global8px/40px/16\\\\u002f24-button/150ms/no-shadow restrictions with current canonical contract, preserved shell/layout and compact desktop/48px phone target decision |\\n+| #78 | Shared BTN/PRO/SEG/OTP/PGR/THK/NOT mappings, eligible FIL framing, named gaps/derivatives and source-to-shadcn semantics; replace exact old blue/global8px/40px/16/24-button/150ms/no-shadow restrictions with current canonical contract, preserved shell/layout and compact desktop/48px phone target decision |\\n*** End Patch\"));\ntext(await tools.exec_command({cmd:\"git diff --check -- 'AGENTS.md' '_docs/orchestration.md'; Get-Content -LiteralPath '_docs/frontend-flows/design-tokens.md' | Select-String -Pattern 'Desktop control density|Accessible danger ink|docs-only migration' | ForEach-Object Line\",sandbox_permissions:\"require_escalated\",justification:\"Validate workflow changes and check whether final desktop/red token decisions are integrated.\",max_output_tokens:1000}));\n"
+  },
+  {
+    "source_line": 301,
+    "timestamp": "2026-10-22T22:56:17.007Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=908 sha256=3b6f838f3c0d6512fa75e1650c7567f2464b7b3bb14ba53900f561dcad4de869]\"}"
+  },
+  {
+    "source_line": 308,
+    "timestamp": "2026-10-22T22:56:41.775Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"@'\\nimport json, hashlib, pathlib, re\\nroot=pathlib.Path(r'D:/Program/python/Dubbed')\\ne=root/'_docs/evidence/affect-ui-adoption-2026-10-23'\\nsnap=json.loads((e/'remote-before.json').read_text(encoding='utf-8'))\\nrows=[]\\nfor issue in snap['issues']:\\n n=issue['issue_number']; before=issue['body']; p=e/'staged-issue-bodies'/f'{n}.md'; after=p.read_text(encoding='utf-8')\\n section=lambda b,h: re.search(r'^## '+re.escape(h)+r'\\\\n(.*?)(?=^## |\\\\Z)', b, re.M|re.S).group(1).strip()\\n assert section(before,'Workflow status')==section(after,'Workflow status'), n\\n assert section(before,'Dependencies and ownership')==section(after,'Dependencies and ownership'), n\\n assert section(before,'Local specification fingerprints')==section(after,'Local specification fingerprints'), n\\n oldac=re.findall(r'^- \\\\[ \\\\] AC-.*$',before,re.M)\\n newac=re.findall(r'^- \\\\[ \\\\] AC-.*$',after,re.M)\\n changed=[]\\n for ac in oldac:\\n  aid=ac.split(':',1)[0]\\n  candidate=next((x for x in newac if x.startswith(aid+':')),None)\\n  assert candidate is not None,(n,aid)\\n  if candidate!=ac: changed.append(aid)\\n assert changed==({62:['- [ ] AC-07'],63:['- [ ] AC-08']}.get(n,[])),(n,changed)\\n assert 'Current visual authority — Affect UI Clean/Light' in after,n\\n rows.append({'issue':n,'before_sha256':hashlib.sha256(before.encode()).hexdigest().upper(),'after_sha256':hashlib.sha256(p.read_bytes()).hexdigest().upper(),'before_updated_at':issue['updated_at'],'state':issue['state'],'labels':issue['labels'],'assignees':issue['assignees'],'workflow_status_preserved':True,'dependencies_ownership_preserved':True,'original_fingerprint_section_preserved':True,'changed_original_ac':changed,'staged_body':str(p.relative_to(root)).replace('\\\\\\\\','/')})\\nreport={'date':'2026-10-23','stage':'staged, not synchronized','checks':'22 target identities and body candidates; exact workflow/dependencies/ownership/fingerprints preserved; original AC unchanged except scoped presentation62/63; new visual AC is additive','results':rows}\\n(e/'staged-contract-check.json').write_text(json.dumps(report,indent=2)+'\\\\n',encoding='utf-8')\\nprint(json.dumps({'issues':len(rows),'checks':'PASS','source_fingerprints':'before historical only; final canonical freeze pending','report':str(e/'staged-contract-check.json')}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Validate and hash the 22 staged documentation payloads without changing GitHub.\",max_output_tokens:2000}));\n"
+  },
+  {
+    "source_line": 315,
+    "timestamp": "2026-10-22T22:56:52.084Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=632 sha256=724683dd8c031b15f4c6348f104debe488822be29271331c9b3bc2c767e02223]\"}"
+  },
+  {
+    "source_line": 322,
+    "timestamp": "2026-10-22T22:56:56.427Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 329,
+    "timestamp": "2026-10-22T22:58:16.490Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const a=load(\"stagedBodies\");text({sampleEnd78:JSON.stringify(a[78].slice(-20)),sampleLength78:a[78].length,manifest:load(\"stagingRoles\")?.length});\ntext(await tools.exec_command({cmd:\"@'\\nimport pathlib,json\\np=pathlib.Path(r'D:/Program/python/Dubbed/_docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/78.md')\\ns=p.read_text(encoding='utf-8')\\nprint(json.dumps({'end':s[-20:],'length':len(s),'lf_count':s.count(chr(10))}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Confirm staged payload serialization matches the exact issue-body content.\",max_output_tokens:500}));\n"
+  },
+  {
+    "source_line": 336,
+    "timestamp": "2026-10-22T22:58:28.698Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "store(\"exactStagedBodies\",Object.fromEntries(Object.entries(load(\"stagedBodies\")).map(([n,b])=>[n,b+\"\\n\"])));\ntext(await tools.exec_command({cmd:\"@'\\nimport pathlib,json\\np=pathlib.Path(r'D:/Program/python/Dubbed/_docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies')\\nprint(json.dumps({f.stem:len(f.read_text(encoding='utf-8')) for f in p.glob('*.md')}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Read payload lengths to confirm exact serialized issue updates.\",max_output_tokens:600}));\ntext(Object.fromEntries(Object.entries(load(\"exactStagedBodies\")).map(([n,b])=>[n,b.length])));\n"
+  },
+  {
+    "source_line": 343,
+    "timestamp": "2026-10-22T22:58:38.752Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=612 sha256=b948038ec90f67ce934dc282b135fa19d8fa4f8776d739f35764dee887276a6d]\"}"
+  },
+  {
+    "source_line": 350,
+    "timestamp": "2026-10-22T22:58:43.017Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 357,
+    "timestamp": "2026-10-22T22:59:55.409Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"@'\\nfrom pathlib import Path\\nimport re,json\\nroot=Path(r'D:/Program/python/Dubbed')\\nowned=['AGENTS.md','_docs/orchestration.md','_docs/frontend-flows/README.md','_docs/task-drafts/frontend-flows/README.md','_docs/frontend-flows/affect-ui-workflow.md','_docs/evidence/affect-ui-adoption-2026-10-23/README.md','_docs/evidence/affect-ui-adoption-2026-10-23/task-contract-migration.md']\\nmissing=[]\\nfor rel in owned:\\n p=root/rel;s=p.read_text(encoding='utf-8');assert '\\\\ufffd' not in s,rel;assert s.endswith('\\\\n'),rel\\n for target in re.findall(r'\\\\[[^\\\\]]*\\\\]\\\\(([^)]+)\\\\)',s):\\n  if re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:',target) or target.startswith('#'):continue\\n  t=target.split('#',1)[0]\\n  if t and not (p.parent/t).exists():missing.append({'file':rel,'target':t})\\nassert not missing,missing\\nprint(json.dumps({'owned_docs':len(owned),'relative_links_utf8_newlines':'PASS'}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Check relative links, UTF-8 readability and final newlines in the owned workflow/migration documents.\",max_output_tokens:1000}));\n"
+  },
+  {
+    "source_line": 364,
+    "timestamp": "2026-10-22T23:00:08.497Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 371,
+    "timestamp": "2026-10-22T23:01:13.761Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=460 sha256=86d554e63d14d9bf8a530607c20c4bba20a433ea1a211835cabbf819eefc366c]\"}"
+  },
+  {
+    "source_line": 378,
+    "timestamp": "2026-10-22T23:01:26.714Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 387,
+    "timestamp": "2026-10-22T23:02:12.723Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"@'\\nimport pathlib,hashlib,json\\nr=pathlib.Path(r'D:/Program/python/Dubbed')\\npaths=['_docs/frontend-flows/design-tokens.md','_docs/frontend-flows/affect-ui-clean-light-adoption.md','_docs/frontend-flows/00-shared-contract.md','_docs/frontend-flows/affect-ui-clean-light-reference.md','_docs/frontend-flows/affect-ui-workflow.md']\\nprint(json.dumps([{ 'path':p,'sha256':hashlib.sha256((r/p).read_bytes()).hexdigest().upper()}for p in paths]))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Read exact final current-authority fingerprints for staged issue bodies.\",max_output_tokens:1200}));\n"
+  },
+  {
+    "source_line": 394,
+    "timestamp": "2026-10-22T23:02:34.144Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const fp=[\n[\"_docs/frontend-flows/design-tokens.md\",\"F8E8F9B22216CC428008B89A1CCC5D49D563C7CC6254EB9F52547939DE452079\"],\n[\"_docs/frontend-flows/affect-ui-clean-light-adoption.md\",\"92CC6D78EDAF6B8CC5B0F2756F2F52111A47467F85D1FC47C078AC0D4CF1D1E0\"],\n[\"_docs/frontend-flows/00-shared-contract.md\",\"AAC87A791D0F3554913B260B96C07165C54016CEE782D91D3ACF5E6A707AE0D1\"],\n[\"_docs/frontend-flows/affect-ui-clean-light-reference.md\",\"C78170B3720B57F4803480686A9DD31969E7EEF34025098612207035E8347A6E\"],\n[\"_docs/frontend-flows/affect-ui-workflow.md\",\"C0791EF62F8CB86B6B01020FB397FCD929080A330F755BC079346F4D62A06841\"]];\nstore(\"authorityFingerprints\",fp);\nconst block=\"### Current adoption source fingerprints\\n\\nThese local uncommitted files freeze the current visual/shared authority for this migration. They are distinct from the preserved historical publication table below; full affected-source and issue-transfer hashes are recorded in local `_docs/evidence/affect-ui-adoption-2026-10-23/`.\\n\\n| Current local authority path | SHA-256 |\\n|---|---|\\n\"+fp.map(([p,h])=>`| \\`${p}\\` | \\`${h}\\` |`).join(\"\\n\")+\"\\n\\n\";\nconst old=load(\"exactStagedBodies\"),next={},patches=[];\nfor(const [n,b] of Object.entries(old)){const a=b.replace(\"## Increment and context\",block+\"## Increment and context\");next[n]=a;\n patches.push(\"*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/\"+n+\".md\\n@@\\n-## Increment and context\\n+\"+block.trimEnd().split(\"\\n\").join(\"\\n+\")+\"\\n+\\n+## Increment and context\");\n}\ntext(await tools.apply_patch(\"*** Begin Patch\\n\"+patches.join(\"\\n\")+\"\\n*** End Patch\"));\nstore(\"exactStagedBodies\",next);\ntext({stagedBodies:Object.keys(next).length,change:\"Current authority fingerprints only; no remote update\"});\n"
+  },
+  {
+    "source_line": 401,
+    "timestamp": "2026-10-22T23:02:57.328Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"@'\\nimport json, hashlib, pathlib, re\\nroot=pathlib.Path(r'D:/Program/python/Dubbed'); e=root/'_docs/evidence/affect-ui-adoption-2026-10-23'; snap=json.loads((e/'remote-before.json').read_text(encoding='utf-8'));rows=[]\\nfor issue in snap['issues']:\\n n=issue['issue_number'];before=issue['body'];p=e/'staged-issue-bodies'/f'{n}.md';after=p.read_text(encoding='utf-8')\\n section=lambda b,h: re.search(r'^## '+re.escape(h)+r'\\\\n(.*?)(?=^## |\\\\Z)',b,re.M|re.S).group(1).strip()\\n for heading in ['Workflow status','Dependencies and ownership','Local specification fingerprints']:assert section(before,heading)==section(after,heading),(n,heading)\\n oldac=re.findall(r'^- \\\\[ \\\\] AC-.*$',before,re.M);newac=re.findall(r'^- \\\\[ \\\\] AC-.*$',after,re.M);changed=[]\\n for ac in oldac:\\n  aid=ac.split(':',1)[0];candidate=next((x for x in newac if x.startswith(aid+':')),None);assert candidate is not None,(n,aid)\\n  if candidate!=ac:changed.append(aid)\\n assert changed==({62:['- [ ] AC-07'],63:['- [ ] AC-08']}.get(n,[])),(n,changed)\\n rows.append({'issue':n,'before_sha256':hashlib.sha256(before.encode()).hexdigest().upper(),'after_sha256':hashlib.sha256(p.read_bytes()).hexdigest().upper(),'before_updated_at':issue['updated_at'],'state':issue['state'],'labels':issue['labels'],'assignees':issue['assignees'],'workflow_status_preserved':True,'dependencies_ownership_preserved':True,'original_fingerprint_section_preserved':True,'changed_original_ac':changed,'staged_body':p.relative_to(root).as_posix()})\\n(e/'staged-contract-check.json').write_text(json.dumps({'date':'2026-10-23','stage':'staged, not synchronized','results':rows},indent=2)+'\\\\n',encoding='utf-8')\\npaths=set(re.findall(r'`(_docs/frontend-flows/[^`]+\\\\.md)`',snap['issues'][0]['body']))\\npaths.update(['_docs/frontend-flows/affect-ui-clean-light-adoption.md','_docs/frontend-flows/affect-ui-clean-light-reference.md','_docs/frontend-flows/affect-ui-workflow.md','AGENTS.md','_docs/orchestration.md','_docs/task-drafts/frontend-flows/README.md'])\\nmanifest=[{'path':p,'sha256':hashlib.sha256((root/p).read_bytes()).hexdigest().upper()}for p in sorted(paths) if (root/p).is_file()]\\n(e/'current-source-hashes.json').write_text(json.dumps({'date':'2026-10-23','boundary':'local uncommitted migration source snapshot, not product acceptance','files':manifest},indent=2)+'\\\\n',encoding='utf-8')\\nprint(json.dumps({'staged_contract_check':'PASS','issues':len(rows),'current_source_files':len(manifest),'state':'no remote mutation'}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Refresh exact staged issue hashes and freeze current source fingerprints for independent review.\",max_output_tokens:1000}));\n"
+  },
+  {
+    "source_line": 406,
+    "timestamp": "2026-10-22T23:03:10.169Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=716 sha256=63a3de2fe8cfd616c12f0fe382a46edaca661bddf0397da2a5ff1c12a4c083a8]\"}"
+  },
+  {
+    "source_line": 413,
+    "timestamp": "2026-10-22T23:03:17.155Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 422,
+    "timestamp": "2026-10-22T23:04:04.836Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: _docs/frontend-flows/affect-ui-workflow.md\\n@@\\n Keep exact Mabry Pro role/weight/size/line-height requirements from the current tokens. Missing licensed font assets, weights, fallback agreement or actual font loading remain explicit acceptance limits. Do not silently use a font included by the scaffold or reference examples.\\n+\\n+Compact source button heights 24/28/32px and Medium 12/16 or 13/20 labels apply to desktop only. Phone action buttons retain Mabry Pro Medium 16/24 and the 48px standard touch target; preserve the source state/shape treatment without shrinking phone labels to desktop density. OTP and other non-button controls keep their named component-specific geometry and accessibility adaptations.\\n*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/78.md\\n@@\\n-`frontend/src/App.tsx`, `App.css`, `index.css` and `main.tsx` are scaffold entry points, not approved styling. The inspected package includes Manrope; the owner explicitly retains Mabry Pro Regular/Medium. Current Clean/Light tokens adopt compact desktop buttons at 24/28/32px with source size-specific 12/16 or 13/20 Medium labels and phone 48px touch targets. Body/dialogue 16/24, captions 14/20, headings 32/40 desktop and 24/32 phone, shared gutters/maxima and navigation behavior remain as specified. Use component-specific source geometry, dark primary, white secondary, soft-red destructive, bounded hairlines/shadows and the cataloged functional motion; do not apply the superseded global 8px/40px/16/24-button/≤150ms/no-shadow rules. Focus/control boundaries use the explicit accessibility adaptations, and media focus keeps its opaque backing. All exact values, source gaps and reduced-motion equivalents come from the current adoption/token contract, with no animation-gated work.\\n+`frontend/src/App.tsx`, `App.css`, `index.css` and `main.tsx` are scaffold entry points, not approved styling. The inspected package includes Manrope; the owner explicitly retains Mabry Pro Regular/Medium. Current Clean/Light tokens adopt compact desktop buttons at 24/28/32px with source size-specific 12/16 or 13/20 Medium labels. Phone buttons retain Mabry Pro Medium16/24 labels and48px standard touch targets; compact source button type is desktop-only. Body/dialogue 16/24, captions 14/20, headings 32/40 desktop and 24/32 phone, shared gutters/maxima and navigation behavior remain as specified. Use component-specific source geometry, dark primary, white secondary, soft-red destructive, bounded hairlines/shadows and the cataloged functional motion; do not apply superseded global 8px/40px/desktop16/24-button/≤150ms/no-shadow rules. Focus/control boundaries use the explicit accessibility adaptations, and media focus keeps its opaque backing. All exact values, source gaps and reduced-motion equivalents come from the current adoption/token contract, with no animation-gated work.\\n*** End Patch\"));\nconst b=load(\"exactStagedBodies\");b[78]=b[78].replace(\"Current Clean/Light tokens adopt compact desktop buttons at 24/28/32px with source size-specific 12/16 or 13/20 Medium labels and phone 48px touch targets.\",\"Current Clean/Light tokens adopt compact desktop buttons at 24/28/32px with source size-specific 12/16 or 13/20 Medium labels. Phone buttons retain Mabry Pro Medium16/24 labels and48px standard touch targets; compact source button type is desktop-only.\").replace(\"superseded global 8px/40px/16/24-button/≤150ms/no-shadow rules\",\"superseded global 8px/40px/desktop16/24-button/≤150ms/no-shadow rules\");store(\"exactStagedBodies\",b);\ntext({phoneTypographyClarification:78,remoteChanges:0});\n"
+  },
+  {
+    "source_line": 429,
+    "timestamp": "2026-10-22T23:04:21.140Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/78.md\\n@@\\n-`frontend/src/App.tsx`, `App.css`, `index.css` and `main.tsx` are scaffold entry points, not approved styling. The inspected package includes Manrope; the owner explicitly retains Mabry Pro Regular/Medium. Current Clean/Light tokens adopt compact desktop buttons at 24/28/32px with source size-specific 12/16 or 13/20 Medium labels. Phone buttons retain Mabry Pro Medium16/24 labels and48px standard touch targets; compact source button type is desktop-only. Body/dialogue 16/24, captions 14/20, headings 32/40 desktop and 24/32 phone, shared gutters/maxima and navigation behavior remain as specified. Use component-specific source geometry, dark primary, white secondary, soft-red destructive, bounded hairlines/shadows and the cataloged functional motion; do not apply superseded global 8px/40px/desktop16/24-button/≤150ms/no-shadow rules. Focus/control boundaries use the explicit accessibility adaptations, and media focus keeps its opaque backing. All exact values, source gaps and reduced-motion equivalents come from the current adoption/token contract, with no animation-gated work.\\n+`frontend/src/App.tsx`, `App.css`, `index.css` and `main.tsx` are scaffold entry points, not approved styling. The inspected package includes Manrope; the owner explicitly retains Mabry Pro Regular/Medium. Current Clean/Light tokens adopt compact desktop buttons at 24/28/32px with source size-specific 12/16 or 13/20 Medium labels. Phone buttons retain Mabry Pro Medium 16/24 labels and 48px standard touch targets; compact source button type is desktop-only. Body/dialogue 16/24, captions 14/20, headings 32/40 desktop and 24/32 phone, shared gutters/maxima and navigation behavior remain as specified. Use component-specific source geometry, dark primary, white secondary, soft-red destructive, bounded hairlines/shadows and the cataloged functional motion; do not apply superseded global 8px/40px/desktop16/24-button/≤150ms/no-shadow rules. Focus/control boundaries use the explicit accessibility adaptations, and media focus keeps its opaque backing. All exact values, source gaps and reduced-motion equivalents come from the current adoption/token contract, with no animation-gated work.\\n*** End Patch\"));\nconst b=load(\"exactStagedBodies\");b[78]=b[78].replace(\"Mabry Pro Medium16/24 labels and48px\",\"Mabry Pro Medium 16/24 labels and 48px\");store(\"exactStagedBodies\",b);\n"
+  },
+  {
+    "source_line": 436,
+    "timestamp": "2026-10-22T23:04:37.394Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const b=load(\"exactStagedBodies\"),m=load(\"uiMap\");\nconst oldScope=m[78].scope,newScope=oldScope+\" Desktop button density is 24/28/32px with source size-specific 12/16 or 13/20 Medium labels; phone buttons retain Mabry Pro Medium 16/24 and 48px standard touch targets.\";\nconst oldAC=b[78].match(/^- \\[ \\] AC-VIS-01:.*$/m)?.[0],newAC=oldAC+\" Desktop compact type applies only on desktop; phone button labels are Mabry Pro Medium 16/24 with 48px standard touch targets.\";\nb[78]=b[78].replace(oldScope,newScope).replace(oldAC,newAC);m[78].scope=newScope;\ntext(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/78.md\\n@@\\n-- Visual composition: \"+oldScope+\"\\n+- Visual composition: \"+newScope+\"\\n@@\\n-\"+oldAC+\"\\n+\"+newAC+\"\\n*** End Patch\"));\nstore(\"exactStagedBodies\",b);store(\"uiMap\",m);\n"
+  },
+  {
+    "source_line": 441,
+    "timestamp": "2026-10-22T23:04:45.956Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=524 sha256=7ad0f5f595bf8d6bf84cdd984fe875df67fcbd5739b36a20d32e254360260397]\"}"
+  },
+  {
+    "source_line": 448,
+    "timestamp": "2026-10-22T23:04:52.599Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 457,
+    "timestamp": "2026-10-22T23:05:28.872Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: _docs/frontend-flows/affect-ui-workflow.md\\n@@\\n Keep exact Mabry Pro role/weight/size/line-height requirements from the current tokens. Missing licensed font assets, weights, fallback agreement or actual font loading remain explicit acceptance limits. Do not silently use a font included by the scaffold or reference examples.\\n+\\n+The source component CSS hardcodes Inter in component declarations. Adapt those mapped declarations as well as the global body family; a global Mabry setting alone can leave Inter/scaffold fallbacks in controls. Audit rendered component labels, actual/visually hidden inputs and native controls separately. Record loaded font resources and computed styles after fonts settle; no font asset availability or installation is established by this documentation.\\n*** End Patch\"));\nconst b=load(\"exactStagedBodies\");\nconst old=\"Verify loaded Mabry weights/metrics, source-mapped geometry\";\nconst next=\"Verify loaded Mabry weights/metrics and computed component/native/real-input fonts, including removal of source Inter declarations that would override a global Mabry family; inspect source-mapped geometry\";\nconst patches=[];for(const n of Object.keys(load(\"uiMap\"))){const oldLine=b[n].split(\"\\n\").find(l=>l.startsWith(\"Visual checks for AC-VIS-01:\"));const newLine=oldLine.replace(old,next);if(oldLine===newLine)throw Error(n);b[n]=b[n].replace(oldLine,newLine);patches.push(\"*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/\"+n+\".md\\n@@\\n-\"+oldLine+\"\\n+\"+newLine);}\ntext(await tools.apply_patch(\"*** Begin Patch\\n\"+patches.join(\"\\n\")+\"\\n*** End Patch\"));store(\"exactStagedBodies\",b);\n"
+  },
+  {
+    "source_line": 463,
+    "timestamp": "2026-10-22T23:05:43.794Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=504 sha256=d55a1740436f7db76d8479f09e99656b3bd7f1487a441706ddc140044f3c5b66]\"}"
+  },
+  {
+    "source_line": 470,
+    "timestamp": "2026-10-22T23:05:48.529Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 479,
+    "timestamp": "2026-10-22T23:06:30.692Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root/affect_style_spec_migration\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=568 sha256=d4264eabdcfe2ffc542223b9c2798b78fd6acc22d9cd6b026adb8ec1034c0dc3]\"}"
+  },
+  {
+    "source_line": 486,
+    "timestamp": "2026-10-22T23:06:36.398Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 495,
+    "timestamp": "2026-10-22T23:07:02.632Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const r=await tools.exec_command({cmd:\"@'\\nimport pathlib,hashlib,json\\nr=pathlib.Path(r'D:/Program/python/Dubbed');paths=['_docs/frontend-flows/design-tokens.md','_docs/frontend-flows/affect-ui-clean-light-adoption.md','_docs/frontend-flows/00-shared-contract.md','_docs/frontend-flows/affect-ui-clean-light-reference.md','_docs/frontend-flows/affect-ui-workflow.md']\\nprint(json.dumps([[p,hashlib.sha256((r/p).read_bytes()).hexdigest().upper()]for p in paths]))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Read the corrected frozen source hashes for final staged issue fingerprints.\",max_output_tokens:1300}); \nif(r.exit_code!==0)throw Error(r.output);const fp=JSON.parse(r.output.trim());store(\"newAuthorityFingerprints\",fp);text(fp);\n"
+  },
+  {
+    "source_line": 500,
+    "timestamp": "2026-10-22T23:07:17.382Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const before=load(\"authorityFingerprints\"),after=load(\"newAuthorityFingerprints\"),b=load(\"exactStagedBodies\"),patches=[];\nfor(const [n,body] of Object.entries(b)){let v=body;const changes=[];for(let i=0;i<before.length;i++){const[p,old]=before[i],[p2,ne]=after[i];if(p!==p2)throw Error(\"mismatchedsource\");if(old!==ne){const oldline=`| \\`${p}\\` | \\`${old}\\` |`,newline=`| \\`${p}\\` | \\`${ne}\\` |`;if(!v.includes(oldline))throw Error(n+\":\"+p);v=v.replace(oldline,newline);changes.push(\"@@\\n-\"+oldline+\"\\n+\"+newline);}} b[n]=v;patches.push(\"*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/\"+n+\".md\\n\"+changes.join(\"\\n\"));}\ntext(await tools.apply_patch(\"*** Begin Patch\\n\"+patches.join(\"\\n\")+\"\\n*** End Patch\"));\nstore(\"exactStagedBodies\",b);store(\"authorityFingerprints\",after);text({issuePayloads:22,change:\"Current authority hashes only; historical fingerprint tables untouched\"});\n"
+  },
+  {
+    "source_line": 507,
+    "timestamp": "2026-10-22T23:07:37.170Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"@'\\nimport pathlib,json,hashlib,re\\nr=pathlib.Path(r'D:/Program/python/Dubbed');e=r/'_docs/evidence/affect-ui-adoption-2026-10-23';s=json.loads((e/'remote-before.json').read_text(encoding='utf-8'));report=json.loads((e/'staged-contract-check.json').read_text(encoding='utf-8'));old={i['issue_number']:i for i in s['issues']}\\nfor row in report['results']:\\n n=row['issue'];p=e/'staged-issue-bodies'/f'{n}.md';text=p.read_text(encoding='utf-8');before=old[n]['body']\\n for h in ['Workflow status','Dependencies and ownership','Local specification fingerprints']:\\n  find=lambda b:re.search(r'^## '+re.escape(h)+r'\\\\n(.*?)(?=^## |\\\\Z)',b,re.M|re.S).group(1).strip()\\n  assert find(text)==find(before),(n,h)\\n table=text.split('### Current adoption source fingerprints',1)[1].split('## Increment and context',1)[0]\\n for path,sha in re.findall(r'\\\\| `([^`]+)` \\\\| `([A-F0-9]{64})` \\\\|',table):assert hashlib.sha256((r/path).read_bytes()).hexdigest().upper()==sha,(n,path)\\n row['after_sha256']=hashlib.sha256(p.read_bytes()).hexdigest().upper()\\nreport['stage']='final staged policy, awaiting reviewed remote READY';(e/'staged-contract-check.json').write_text(json.dumps(report,indent=2)+'\\\\n',encoding='utf-8')\\nm=json.loads((e/'current-source-hashes.json').read_text(encoding='utf-8'))\\nfor f in m['files']:f['sha256']=hashlib.sha256((r/f['path']).read_bytes()).hexdigest().upper()\\n(e/'current-source-hashes.json').write_text(json.dumps(m,indent=2)+'\\\\n',encoding='utf-8')\\nprint(json.dumps({'staged_current_authority_hashes':'PASS','preserved_status_dependencies_ownership_historical_fingerprints':'PASS','issue_count':len(report['results']),'remote_changes':0}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Validate corrected current-authority hashes in all 22 staged task bodies and preserve original metadata contracts.\",max_output_tokens:1200}));\n"
+  },
+  {
+    "source_line": 512,
+    "timestamp": "2026-10-22T23:07:49.375Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=716 sha256=aced1186146f91c2cf7e5df4866519247d4f0a523408e471cee002bbe3c3eb27]\"}"
+  },
+  {
+    "source_line": 519,
+    "timestamp": "2026-10-22T23:08:00.472Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 526,
+    "timestamp": "2026-10-22T23:09:19.412Z",
+    "type": "function_call",
+    "name": "wait_agent",
+    "arguments": "{\"timeout_ms\":60000}"
+  },
+  {
+    "source_line": 535,
+    "timestamp": "2026-10-22T23:09:59.357Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const r=await tools.mcp__codex_apps__github_fetch_issue({issue_number:61,repository_full_name:\"dystrophyless/dubbed.ai\"});store(\"preflight61\",r);text({issue:61,bodyMatchesBefore:r.structuredContent?.issue?.body===load(\"liveIssues\")[61].body,title:r.structuredContent?.issue?.title});\ntext(await tools.exec_command({cmd:\"@'\\nimport json,pathlib\\np=pathlib.Path(r'D:/Program/python/Dubbed/_docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies')\\nprint(json.dumps({f.stem:len(f.read_text(encoding='utf-8')) for f in p.glob('*.md')}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Confirm exact reviewed payload serialization before authorized issue-body transfer.\",max_output_tokens:700}));\ntext(Object.fromEntries(Object.entries(load(\"exactStagedBodies\")).map(([n,b])=>[n,b.length])));\n"
+  },
+  {
+    "source_line": 543,
+    "timestamp": "2026-10-22T23:10:15.092Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const r=await tools.exec_command({cmd:\"@'\\nimport json,pathlib\\np=pathlib.Path(r'D:/Program/python/Dubbed/_docs/evidence/affect-ui-adoption-2026-10-23/staged-issue-bodies/78.md')\\nprint(json.dumps(p.read_text(encoding='utf-8')))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Load the exact reviewed #78 body to eliminate a serialization mismatch before transfer.\",max_output_tokens:12000});\nif(r.exit_code!==0)throw Error(r.output);const actual=JSON.parse(r.output.trim()),b=load(\"exactStagedBodies\"),old=b[78];b[78]=actual;store(\"exactStagedBodies\",b);\nlet first=0;while(first<old.length&&old[first]===actual[first])first++;text({issue:78,exactFileLength:actual.length,oldMemoryLength:old.length,firstDifference:first,oldExcerpt:old.slice(first,first+130),reviewedExcerpt:actual.slice(first,first+130),action:\"Use exact reviewed file body; no remote mutation yet\"});\n"
+  },
+  {
+    "source_line": 550,
+    "timestamp": "2026-10-22T23:10:39.894Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const before=load(\"liveIssues\"),payloads=load(\"exactStagedBodies\"),done=load(\"remoteMigrationDone\")??{},errors=[];\nfor(const n of [61,62,63,64,65]){\n const checks=await Promise.allSettled([tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"}),tools.mcp__codex_apps__github_fetch_issue_comments({issue_number:n,repo_full_name:\"dystrophyless/dubbed.ai\"})]);\n if(checks.some(r=>r.status!==\"fulfilled\"||r.value.isError)){errors.push({n,stage:\"preflight\",checks});break;}\n const current=checks[0].value.structuredContent.issue,comments=checks[1].value.structuredContent.comments;\n if(current.body!==before[n].body||comments.length!==(load(\"liveComments\")[n]??[]).length){errors.push({n,stage:\"preflight-drift\",bodyEqual:current.body===before[n].body,comments:comments.length});break;}\n const write=await tools.mcp__codex_apps__github_update_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\",body:payloads[n]});\n const read=await tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"});\n if(read.isError||!read.structuredContent?.issue){errors.push({n,stage:\"readback\",writeError:write.isError,read});break;}\n const after=read.structuredContent.issue,ok=after.body===payloads[n]&&after.state===before[n].state&&JSON.stringify(after.labels)===JSON.stringify(before[n].labels)&&JSON.stringify(after.assignees)===JSON.stringify(before[n].assignees);\n done[n]={issue:after,preflight:current,comments,writeIsError:!!write.isError,exactBodyReadback:after.body===payloads[n],preservedMetadata:ok};\n store(\"remoteMigrationDone\",done);\n const record=JSON.stringify(done[n],null,2);await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/remote-checkpoints/\"+n+\".json\\n\"+record.split(\"\\n\").map(l=>\"+\"+l).join(\"\\n\")+\"\\n*** End Patch\");\n text({issue:n,readback:ok?\"PASS\":\"FAIL\",writeIsError:!!write.isError});\n if(!ok||write.isError){errors.push({n,stage:\"postwrite\",ok,writeError:!!write.isError});break;}\n}\nstore(\"remoteMigrationErrors\",errors);text({completed:Object.keys(done).length,errors});\n"
+  },
+  {
+    "source_line": 568,
+    "timestamp": "2026-10-22T23:11:15.934Z",
+    "type": "function_call",
+    "name": "wait",
+    "arguments": "{\"cell_id\":\"45\",\"yield_time_ms\":1000,\"max_tokens\":1000}"
+  },
+  {
+    "source_line": 576,
+    "timestamp": "2026-10-22T23:11:22.738Z",
+    "type": "function_call",
+    "name": "wait",
+    "arguments": "{\"cell_id\":\"45\",\"yield_time_ms\":1000,\"max_tokens\":1000}"
+  },
+  {
+    "source_line": 584,
+    "timestamp": "2026-10-22T23:11:27.302Z",
+    "type": "function_call",
+    "name": "wait",
+    "arguments": "{\"cell_id\":\"45\",\"yield_time_ms\":10000,\"max_tokens\":1500}"
+  },
+  {
+    "source_line": 598,
+    "timestamp": "2026-10-22T23:11:41.517Z",
+    "type": "function_call",
+    "name": "wait",
+    "arguments": "{\"cell_id\":\"45\",\"yield_time_ms\":10000,\"max_tokens\":1500}"
+  },
+  {
+    "source_line": 603,
+    "timestamp": "2026-10-22T23:11:49.192Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=632 sha256=0c6eb76ca240bf6be9586b37bb2563f1cda10ebee5eaebcbd191ef6d803ab426]\"}"
+  },
+  {
+    "source_line": 612,
+    "timestamp": "2026-10-22T23:12:04.747Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const before=load(\"liveIssues\"),payloads=load(\"exactStagedBodies\"),done=load(\"remoteMigrationDone\"),errors=load(\"remoteMigrationErrors\")??[];\nfor(const n of [66,67,68,69]){\n const c=await Promise.allSettled([tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"}),tools.mcp__codex_apps__github_fetch_issue_comments({issue_number:n,repo_full_name:\"dystrophyless/dubbed.ai\"})]);\n if(c.some(r=>r.status!==\"fulfilled\"||r.value.isError)){errors.push({n,stage:\"preflight-tool\"});break;}\n const current=c[0].value.structuredContent.issue,comments=c[1].value.structuredContent.comments;\n if(current.body!==before[n].body||comments.length!==0||current.state!==before[n].state||JSON.stringify(current.labels)!==JSON.stringify(before[n].labels)||JSON.stringify(current.assignees)!==JSON.stringify(before[n].assignees)){errors.push({n,stage:\"preflight-drift\"});break;}\n const w=await tools.mcp__codex_apps__github_update_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\",body:payloads[n]});\n const r=await tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"});\n if(r.isError||!r.structuredContent?.issue){errors.push({n,stage:\"readback\",writeError:!!w.isError});break;}\n const after=r.structuredContent.issue,ok=after.body===payloads[n]&&after.state===before[n].state&&JSON.stringify(after.labels)===JSON.stringify(before[n].labels)&&JSON.stringify(after.assignees)===JSON.stringify(before[n].assignees);\n done[n]={issue:after,preflight:current,comments,writeIsError:!!w.isError,exactBodyReadback:after.body===payloads[n],preservedMetadata:ok};store(\"remoteMigrationDone\",done);\n const record=JSON.stringify(done[n],null,2);await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/remote-checkpoints/\"+n+\".json\\n\"+record.split(\"\\n\").map(l=>\"+\"+l).join(\"\\n\")+\"\\n*** End Patch\");\n text({issue:n,readback:ok?\"PASS\":\"FAIL\"});if(!ok||w.isError){errors.push({n,stage:\"postwrite\",ok,writeError:!!w.isError});break;}\n}store(\"remoteMigrationErrors\",errors);text({completed:Object.keys(done).length,errors});\n"
+  },
+  {
+    "source_line": 635,
+    "timestamp": "2026-10-22T23:12:38.392Z",
+    "type": "function_call",
+    "name": "wait",
+    "arguments": "{\"cell_id\":\"46\",\"yield_time_ms\":10000,\"max_tokens\":1000}"
+  },
+  {
+    "source_line": 640,
+    "timestamp": "2026-10-22T23:12:44.860Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=460 sha256=cfe0cc95772c21f6dc354c2d1ca987a7832a8072d954bb62c281d4e752115521]\"}"
+  },
+  {
+    "source_line": 645,
+    "timestamp": "2026-10-22T23:12:57.446Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const before=load(\"liveIssues\"),payloads=load(\"exactStagedBodies\"),done=load(\"remoteMigrationDone\"),errors=load(\"remoteMigrationErrors\")??[];\nfor(const n of [70,71,72,73]){\n const c=await Promise.allSettled([tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"}),tools.mcp__codex_apps__github_fetch_issue_comments({issue_number:n,repo_full_name:\"dystrophyless/dubbed.ai\"})]);\n if(c.some(r=>r.status!==\"fulfilled\"||r.value.isError)){errors.push({n,stage:\"preflight-tool\"});break;}\n const current=c[0].value.structuredContent.issue,comments=c[1].value.structuredContent.comments;\n if(current.body!==before[n].body||comments.length!==0||current.state!==before[n].state||JSON.stringify(current.labels)!==JSON.stringify(before[n].labels)||JSON.stringify(current.assignees)!==JSON.stringify(before[n].assignees)){errors.push({n,stage:\"preflight-drift\"});break;}\n const w=await tools.mcp__codex_apps__github_update_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\",body:payloads[n]});\n const r=await tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"});\n if(r.isError||!r.structuredContent?.issue){errors.push({n,stage:\"readback\",writeError:!!w.isError});break;}\n const after=r.structuredContent.issue,ok=after.body===payloads[n]&&after.state===before[n].state&&JSON.stringify(after.labels)===JSON.stringify(before[n].labels)&&JSON.stringify(after.assignees)===JSON.stringify(before[n].assignees);\n done[n]={issue:after,preflight:current,comments,writeIsError:!!w.isError,exactBodyReadback:after.body===payloads[n],preservedMetadata:ok};store(\"remoteMigrationDone\",done);\n const record=JSON.stringify(done[n],null,2);await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/remote-checkpoints/\"+n+\".json\\n\"+record.split(\"\\n\").map(l=>\"+\"+l).join(\"\\n\")+\"\\n*** End Patch\");\n text({issue:n,readback:ok?\"PASS\":\"FAIL\"});if(!ok||w.isError){errors.push({n,stage:\"postwrite\",ok,writeError:!!w.isError});break;}\n}store(\"remoteMigrationErrors\",errors);text({completed:Object.keys(done).length,errors});\n"
+  },
+  {
+    "source_line": 670,
+    "timestamp": "2026-10-22T23:13:31.473Z",
+    "type": "function_call",
+    "name": "wait",
+    "arguments": "{\"cell_id\":\"47\",\"yield_time_ms\":10000,\"max_tokens\":1000}"
+  },
+  {
+    "source_line": 677,
+    "timestamp": "2026-10-22T23:13:38.588Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=440 sha256=863955917cfb42c126102f20199142b622bf91064573220c87b4106420890b0d]\"}"
+  },
+  {
+    "source_line": 682,
+    "timestamp": "2026-10-22T23:13:50.291Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const before=load(\"liveIssues\"),payloads=load(\"exactStagedBodies\"),done=load(\"remoteMigrationDone\"),errors=load(\"remoteMigrationErrors\")??[];\nfor(const n of [74,75,76,77]){\n const c=await Promise.allSettled([tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"}),tools.mcp__codex_apps__github_fetch_issue_comments({issue_number:n,repo_full_name:\"dystrophyless/dubbed.ai\"})]);\n if(c.some(r=>r.status!==\"fulfilled\"||r.value.isError)){errors.push({n,stage:\"preflight-tool\"});break;}\n const current=c[0].value.structuredContent.issue,comments=c[1].value.structuredContent.comments;\n if(current.body!==before[n].body||comments.length!==0||current.state!==before[n].state||JSON.stringify(current.labels)!==JSON.stringify(before[n].labels)||JSON.stringify(current.assignees)!==JSON.stringify(before[n].assignees)){errors.push({n,stage:\"preflight-drift\"});break;}\n const w=await tools.mcp__codex_apps__github_update_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\",body:payloads[n]});\n const r=await tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"});\n if(r.isError||!r.structuredContent?.issue){errors.push({n,stage:\"readback\",writeError:!!w.isError});break;}\n const after=r.structuredContent.issue,ok=after.body===payloads[n]&&after.state===before[n].state&&JSON.stringify(after.labels)===JSON.stringify(before[n].labels)&&JSON.stringify(after.assignees)===JSON.stringify(before[n].assignees);\n done[n]={issue:after,preflight:current,comments,writeIsError:!!w.isError,exactBodyReadback:after.body===payloads[n],preservedMetadata:ok};store(\"remoteMigrationDone\",done);\n const record=JSON.stringify(done[n],null,2);await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/remote-checkpoints/\"+n+\".json\\n\"+record.split(\"\\n\").map(l=>\"+\"+l).join(\"\\n\")+\"\\n*** End Patch\");\n text({issue:n,readback:ok?\"PASS\":\"FAIL\"});if(!ok||w.isError){errors.push({n,stage:\"postwrite\",ok,writeError:!!w.isError});break;}\n}store(\"remoteMigrationErrors\",errors);text({completed:Object.keys(done).length,errors});\n"
+  },
+  {
+    "source_line": 700,
+    "timestamp": "2026-10-22T23:14:24.295Z",
+    "type": "function_call",
+    "name": "wait",
+    "arguments": "{\"cell_id\":\"48\",\"yield_time_ms\":10000,\"max_tokens\":1000}"
+  },
+  {
+    "source_line": 710,
+    "timestamp": "2026-10-22T23:14:37.025Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=376 sha256=0a65c6d63c0728415b65bb14844c9dbd8e06d25a0b2d25c9ae2b6fc6ada5b8a4]\"}"
+  },
+  {
+    "source_line": 715,
+    "timestamp": "2026-10-22T23:14:48.800Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const before=load(\"liveIssues\"),payloads=load(\"exactStagedBodies\"),done=load(\"remoteMigrationDone\"),errors=load(\"remoteMigrationErrors\")??[];\nfor(const n of [78,79,80,81,82]){\n const c=await Promise.allSettled([tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"}),tools.mcp__codex_apps__github_fetch_issue_comments({issue_number:n,repo_full_name:\"dystrophyless/dubbed.ai\"})]);\n if(c.some(r=>r.status!==\"fulfilled\"||r.value.isError)){errors.push({n,stage:\"preflight-tool\"});break;}\n const current=c[0].value.structuredContent.issue,comments=c[1].value.structuredContent.comments;\n if(current.body!==before[n].body||comments.length!==0||current.state!==before[n].state||JSON.stringify(current.labels)!==JSON.stringify(before[n].labels)||JSON.stringify(current.assignees)!==JSON.stringify(before[n].assignees)){errors.push({n,stage:\"preflight-drift\"});break;}\n const w=await tools.mcp__codex_apps__github_update_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\",body:payloads[n]});\n const r=await tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"});\n if(r.isError||!r.structuredContent?.issue){errors.push({n,stage:\"readback\",writeError:!!w.isError});break;}\n const after=r.structuredContent.issue,ok=after.body===payloads[n]&&after.state===before[n].state&&JSON.stringify(after.labels)===JSON.stringify(before[n].labels)&&JSON.stringify(after.assignees)===JSON.stringify(before[n].assignees);\n done[n]={issue:after,preflight:current,comments,writeIsError:!!w.isError,exactBodyReadback:after.body===payloads[n],preservedMetadata:ok};store(\"remoteMigrationDone\",done);\n const record=JSON.stringify(done[n],null,2);await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/remote-checkpoints/\"+n+\".json\\n\"+record.split(\"\\n\").map(l=>\"+\"+l).join(\"\\n\")+\"\\n*** End Patch\");\n text({issue:n,readback:ok?\"PASS\":\"FAIL\"});if(!ok||w.isError){errors.push({n,stage:\"postwrite\",ok,writeError:!!w.isError});break;}\n}store(\"remoteMigrationErrors\",errors);text({completed:Object.keys(done).length,errors});\n"
+  },
+  {
+    "source_line": 738,
+    "timestamp": "2026-10-22T23:15:22.429Z",
+    "type": "function_call",
+    "name": "wait",
+    "arguments": "{\"cell_id\":\"49\",\"yield_time_ms\":10000,\"max_tokens\":1000}"
+  },
+  {
+    "source_line": 750,
+    "timestamp": "2026-10-22T23:15:37.835Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=484 sha256=c329d14f9cdd76c0e98d2b09379f68111d57d1e7e727cb88bb619020e8e053a1]\"}"
+  },
+  {
+    "source_line": 755,
+    "timestamp": "2026-10-22T23:15:48.831Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const tasks=[];for(let n=61;n<=82;n++){tasks.push({n,k:\"issue\",p:tools.mcp__codex_apps__github_fetch_issue({issue_number:n,repository_full_name:\"dystrophyless/dubbed.ai\"})});tasks.push({n,k:\"comments\",p:tools.mcp__codex_apps__github_fetch_issue_comments({issue_number:n,repo_full_name:\"dystrophyless/dubbed.ai\"})});}\nconst results=await Promise.allSettled(tasks.map(t=>t.p));const issues={},comments={},errors=[];\nresults.forEach((r,i)=>{const {n,k}=tasks[i];if(r.status!==\"fulfilled\"||r.value.isError){errors.push({n,k});return;}if(k===\"issue\")issues[n]=r.value.structuredContent.issue;else comments[n]=r.value.structuredContent.comments;});\nstore(\"remoteFinalIssues\",issues);store(\"remoteFinalComments\",comments);\nconst b=load(\"liveIssues\"),p=load(\"exactStagedBodies\");const checks=Object.entries(issues).map(([n,x])=>({issue:Number(n),bodyEqual:x.body===p[n],stateEqual:x.state===b[n].state,labelsEqual:JSON.stringify(x.labels)===JSON.stringify(b[n].labels),assigneesEqual:JSON.stringify(x.assignees)===JSON.stringify(b[n].assignees),comments:comments[n]?.length}));\nstore(\"remoteFinalChecks\",checks);\ntext({count:checks.length,allPass:checks.every(x=>x.bodyEqual&&x.stateEqual&&x.labelsEqual&&x.assigneesEqual&&x.comments===0),errors});\nconst record=JSON.stringify({capturedAt:\"2026-10-23\",repository:\"dystrophyless/dubbed.ai\",boundary:\"Fresh post-migration live issue and latest discussion snapshot; not a local task backlog.\",issues:Object.values(issues),comments,checks},null,2);\ntext(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/remote-after.json\\n\"+record.split(\"\\n\").map(l=>\"+\"+l).join(\"\\n\")+\"\\n*** End Patch\"));\n"
+  },
+  {
+    "source_line": 810,
+    "timestamp": "2026-10-22T23:16:42.661Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "const r=await Promise.allSettled([\n tools.mcp__semble__search({query:\"Affect UI Clean Light adoption independent review final verdict closed R01 R02 R03 R04\",repo:\"D:/Program/python/Dubbed\",content:\"docs\",top_k:3,max_snippet_lines:5}),\n tools.exec_command({cmd:\"@'\\nimport pathlib,json,hashlib,re\\nr=pathlib.Path(r'D:/Program/python/Dubbed');e=r/'_docs/evidence/affect-ui-adoption-2026-10-23';before=json.loads((e/'remote-before.json').read_text(encoding='utf-8'));after=json.loads((e/'remote-after.json').read_text(encoding='utf-8'));base={x['issue_number']:x for x in before['issues']};rows=[];source_matches=0\\nfor issue in after['issues']:\\n n=issue['issue_number'];old=base[n];body=issue['body'];expected=(e/'staged-issue-bodies'/f'{n}.md').read_text(encoding='utf-8');assert body==expected,n\\n for field in ['title','state','labels','assignees','milestone','state_reason']:assert issue[field]==old[field],(n,field)\\n for h in ['Workflow status','Dependencies and ownership','Local specification fingerprints']:\\n  section=lambda b:re.search(r'^## '+re.escape(h)+r'\\\\n(.*?)(?=^## |\\\\Z)',b,re.M|re.S).group(1).strip()\\n  assert section(body)==section(old['body']),(n,h)\\n oldac=re.findall(r'^- \\\\[ \\\\] AC-.*$',old['body'],re.M);newac=re.findall(r'^- \\\\[ \\\\] AC-.*$',body,re.M);changed=[]\\n for ac in oldac:\\n  aid=ac.split(':',1)[0];candidate=next((x for x in newac if x.startswith(aid+':')),None);assert candidate is not None,(n,aid)\\n  if candidate!=ac:changed.append(aid)\\n assert changed==({62:['- [ ] AC-07'],63:['- [ ] AC-08']}.get(n,[])),(n,changed)\\n assert after['comments'][str(n)]==before['comments'][str(n)]==[],n\\n table=body.split('### Current adoption source fingerprints',1)[1].split('## Increment and context',1)[0];pairs=re.findall(r'\\\\| `([^`]+)` \\\\| `([A-F0-9]{64})` \\\\|',table);assert len(pairs)==5,n\\n for path,sha in pairs:\\n  assert hashlib.sha256((r/path).read_bytes()).hexdigest().upper()==sha,(n,path);source_matches+=1\\n rows.append({'issue':n,'before_sha256':hashlib.sha256(old['body'].encode()).hexdigest().upper(),'after_sha256':hashlib.sha256(body.encode()).hexdigest().upper(),'expected_sha256':hashlib.sha256((e/'staged-issue-bodies'/f'{n}.md').read_bytes()).hexdigest().upper(),'exact_body':True,'original_workflow_dependencies_ownership_fingerprints_preserved':True,'metadata_preserved':True,'comments_unchanged':True,'changed_original_visual_ac':changed})\\nstubs=list((r/'_docs/task-drafts/frontend-flows').glob('*.md'));taskstubs=[p for p in stubs if p.stem not in ['README','independent-review-2026-10-23','package-review-2026-10-23']]\\nassert len(taskstubs)==22,len(taskstubs)\\nfor p in taskstubs:\\n text=p.read_text(encoding='utf-8');assert 'https://github.com/dystrophyless/dubbed.ai/issues/' in text,p;assert '## Acceptance criteria' not in text and '## Workflow status' not in text,p\\nstatus_counts={}\\nfor issue in after['issues']:\\n s=re.search(r'## Workflow status\\\\n\\\\n(\\\\w+)',issue['body']).group(1);status_counts[s]=status_counts.get(s,0)+1\\nreport={'date':'2026-10-23','verdict':'PASS — authorized style-contract synchronization only','issue_count':len(rows),'current_authority_hash_matches':source_matches,'workflow_status_snapshot':status_counts,'published_issue_stubs_preserved':22,'root_independent_final_readback':'PASS — root freshly fetched all22; exact reviewed body, open state and frontend label on every issue','reviewed_freeze':{'independent_review_sha256':'0DFCF5A9869439E6DCEC1FF0A3AF3AD2971B297B047256211508025F9CCF8842','canonical21_document_aggregate_sha256':'B6D2D00E5F2A80A25BD936960BA73676225CB339F9D35EA3E96D64578D607B26','body22_aggregate_sha256':'9F5B2C2E6C5729719CC82BBE80790C4C0A3D9AE53AA5FB89DBDF3C28D1CBA5CF'},'results':rows,'limits':'No product code, installation, browser/font/media/accessibility/payment/product acceptance; no new issue/closure/status/dependency/label/assignee changes; no Git mutation.'}\\n(e/'remote-verification.json').write_text(json.dumps(report,indent=2)+'\\\\n',encoding='utf-8');print(json.dumps({k:v for k,v in report.items()if k!='results'}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Verify all final live issue contracts, preserved metadata and 110 current-source fingerprints against the reviewed staged payloads.\",max_output_tokens:2200})\n]);r.forEach((x,i)=>text({i,...x}));\n"
+  },
+  {
+    "source_line": 820,
+    "timestamp": "2026-10-22T23:16:57.672Z",
+    "type": "function_call",
+    "name": "send_message",
+    "arguments": "{\"target\":\"/root\",\"message\":\"[OPAQUE_PAYLOAD_OMITTED length=760 sha256=3eef27238ff3d935b12a54d48a64a1f4a93605a4f66a2de1237938263c074d76]\"}"
+  },
+  {
+    "source_line": 830,
+    "timestamp": "2026-10-22T23:18:02.068Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: _docs/evidence/affect-ui-adoption-2026-10-23/migration-receipt.md\\n+# Affect UI style-contract migration receipt\\n+\\n+Completed: 2026-10-23, Asia/Qyzylorda. Repository: `dystrophyless/dubbed.ai`.\\n+\\n+The owner requested strong Affect UI Clean/Light adoption in frontend specifications, tasks and workflow, retained Mabry Pro, and selected compact desktop buttons with retained readable phone actions. All 22 existing [frontend issues #61–#82](https://github.com/dystrophyless/dubbed.ai/issues?q=is%3Aissue%20label%3Afrontend) now contain the reviewed current style authority and scoped visual requirements. The specifications and workflow remain local/uncommitted; remote issue edits do not publish those local files as GitHub blobs.\\n+\\n+## Review and exact transfer\\n+\\n+The [fresh independent review](independent-review.md) returned PASS after four findings were corrected and independently closed. Its frozen SHA-256 is `0DFCF5A9869439E6DCEC1FF0A3AF3AD2971B297B047256211508025F9CCF8842`. Root authorized the exact reviewed transfer after that closure. The reviewed 21-document aggregate is `B6D2D00E5F2A80A25BD936960BA73676225CB339F9D35EA3E96D64578D607B26`; the 22-body aggregate is `9F5B2C2E6C5729719CC82BBE80790C4C0A3D9AE53AA5FB89DBDF3C28D1CBA5CF`. Administrative completion edits to indices/HANDOFF are recorded separately and do not rewrite that reviewed freeze.\\n+\\n+One writer transferred bodies sequentially. Immediately before every write, the actual issue body matched the original [remote snapshot](remote-before.json), latest comments were read (zero on each issue), and metadata was reconciled. Each request changed only `body`, followed by an immediate exact read-back and saved [per-issue checkpoint](remote-checkpoints/61.json). There were no tool errors, ambiguous outcomes or drift requiring retries.\\n+\\n+## Executed checks\\n+\\n+The writer then fetched all 22 issues and their latest comments afresh. [Final raw read-back](remote-after.json) and [verification results](remote-verification.json) establish:\\n+\\n+- 22/22 live bodies exactly equal the reviewed [staged transfer payloads](staged-issue-bodies/61.md), with before/after/expected SHA-256 per issue.\\n+- 110/110 current authority fingerprints match the five local source files cited by each body.\\n+- Workflow status, dependencies, ownership, original historical fingerprint sections, title, open state, `frontend` label set, assignees, milestone and state reason are unchanged. The dated workflow snapshot remains 1 ready / 13 draft / 8 blocked; GitHub remains authoritative.\\n+- All original nonvisual AC are preserved. The original visual wording changed only in #62 AC-07 and #63 AC-08 as reviewed; UI owners additionally have AC-VIS-01. Pure technical/domain issues do not acquire screen-redesign ownership.\\n+- All 22 local published task files remain issue-link stubs. No new issue, comment, reopening, closure, status/dependency/label/assignee change or parallel local task backlog was created.\\n+\\n+Root independently fetched all 22 final issues and confirmed exact staged-body equality, open state and `frontend` on every issue. This independent remote check agrees with the writer's full reconciliation.\\n+\\n+## Source and history boundary\\n+\\n+The [current source hashes](current-source-hashes.json) preserve the reviewed local migration snapshot; [staged-contract checks](staged-contract-check.json) preserve the pre-transfer contract review boundary. The original publication archive, published-source hashes, historical reviews and old implementation evidence remain immutable. Earlier appearance/hash snapshots are explicitly historical in the updated issues.\\n+\\n+The current [adoption](../../frontend-flows/affect-ui-clean-light-adoption.md), [reference catalog](../../frontend-flows/affect-ui-clean-light-reference.md), [tokens](../../frontend-flows/design-tokens.md) and [frontend workflow](../../frontend-flows/affect-ui-workflow.md) require exact source/component/state mapping, explicit shadcn/accessibility derivatives and actual rendered comparison before visual-fidelity claims. Desktop compact button text is distinct from retained phone Mabry Pro Medium 16/24 on 48px targets. Source Inter declarations cannot silently override Mabry.\\n+\\n+No product code, dependency installation, commit, push, PR, merge, deployment or paid service was performed. No rendered Dubbed/font/browser/media/accessibility/payment or product acceptance is established. Existing product, policy, font-asset and real-service/evidence gates remain.\\n*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/README.md\\n@@\\n-Preparation only: all 22 actual issue bodies and latest discussions were read before staging. `remote-before.json` preserves that read-only snapshot, including metadata and all comments (zero on each issue). At this snapshot the issues were open with `frontend`; workflow bodies contained 1 ready, 13 draft and 8 blocked. This is a dated observation, not a local status queue.\\n+Completed: all 22 reviewed existing issue bodies were updated, individually read back, then freshly reconciled as a complete package. See the [migration receipt](migration-receipt.md), [independent review](independent-review.md), [final raw snapshot](remote-after.json) and [exact verification](remote-verification.json). Root independently confirmed all 22 exact final bodies, open state and frontend label.\\n@@\\n-No issue edit, comment, status/label/assignee/dependency mutation, new issue, reopening or closure is established by this preparation record. Exact staged payloads, hashes, review disposition and post-write read-back results will be recorded here before synchronization can be claimed.\\n+`remote-before.json` preserves the actual pre-migration bodies, metadata and latest discussion (zero comments each). `staged-issue-bodies/` contains frozen reviewed transfer payloads, not live local tasks. Each `remote-checkpoints/<number>.json` records guarded pre-write and immediate post-write state. The final 22 bodies match exactly, all 110 current-authority fingerprints match, and original status/dependencies/ownership/metadata remain unchanged. The dated workflow snapshot remains 1 ready / 13 draft / 8 blocked; this is an observation, not a local status queue. No new issue, comment, reopening or closure occurred.\\n*** Update File: _docs/evidence/affect-ui-adoption-2026-10-23/task-contract-migration.md\\n@@\\n-Status: staged for review; no remote issue mutation yet. Date: 2026-10-23, Asia/Qyzylorda.\\n+Status: reviewed and synchronized; [migration receipt](migration-receipt.md) and [final verification](remote-verification.json). Date: 2026-10-23, Asia/Qyzylorda. The staging/transfer gate below preserves the reviewed procedure and candidate boundary as history.\\n*** Update File: _docs/frontend-flows/README.md\\n@@\\n Current visual authority: [Affect UI Clean/Light adoption](affect-ui-clean-light-adoption.md), [exact source/Light reference catalog](affect-ui-clean-light-reference.md), [current tokens](design-tokens.md) and [mandatory source-to-browser workflow](affect-ui-workflow.md). The owner retained Mabry Pro. This later visual adoption supersedes only the presentation clauses it explicitly replaces; functional contracts and named product/evidence gates remain. Earlier token/review checkpoints below are historical snapshots, not competing visual authority.\\n+\\n+Completed 2026-10-23: all twelve active flow specs, shared presentation and workflow were migrated; [fresh independent review](../evidence/affect-ui-adoption-2026-10-23/independent-review.md) closed all four findings, and all 22 existing frontend issue bodies were updated and exactly read back. The [receipt](../evidence/affect-ui-adoption-2026-10-23/migration-receipt.md) separates the reviewed freeze from this administrative checkpoint. This is documentation/task-contract completion, not implementation or rendered acceptance.\\n*** Update File: _docs/task-drafts/frontend-flows/README.md\\n@@\\n The later [Affect UI Clean/Light adoption](../../frontend-flows/affect-ui-clean-light-adoption.md), [reference catalog](../../frontend-flows/affect-ui-clean-light-reference.md) and [frontend workflow](../../frontend-flows/affect-ui-workflow.md) govern applicable presentation while retaining Mabry Pro and behavior. The dated [migration evidence](../../evidence/affect-ui-adoption-2026-10-23/README.md) tracks exact proposed/applied issue-body changes; it is an audit artifact, not a local execution backlog. Published stubs, original source archives and frozen reviews remain historical records. GitHub remains authoritative for the current task contract and status.\\n+\\n+Style synchronization completed 2026-10-23: [fresh review](../../evidence/affect-ui-adoption-2026-10-23/independent-review.md) passed after four corrections; all 22 current issue bodies exactly match the reviewed transfer payloads. [Final receipt](../../evidence/affect-ui-adoption-2026-10-23/migration-receipt.md) records both writer and independent root read-back, 110 current-source fingerprint matches, unchanged workflow/dependencies/metadata and preserved issue-link stubs. No implementation or task acceptance is inferred.\\n*** Update File: _docs/HANDOFF.md\\n@@\\n This checkpoint supersedes earlier not-synchronized/publication-hold wording for these 22 tasks only. Named source OPEN decisions and real-service/browser/font/media/payment gates remain. No product implementation, dependency installation, acceptance, commit, push, PR, merge, deployment or paid-service use occurred in this publication assignment; source specs and documentation remain local/uncommitted.\\n+\\n+## Affect UI Clean/Light adoption completed — 2026-10-23, Asia/Qyzylorda\\n+\\n+The owner requested strong adoption of the local Affect UI Clean/Light component/style/functional-motion language and retained Mabry Pro. [Current tokens](frontend-flows/design-tokens.md), [adoption mapping](frontend-flows/affect-ui-clean-light-adoption.md), [exact source/Light PNG catalog](frontend-flows/affect-ui-clean-light-reference.md), all twelve active flow specs and the [frontend workflow](frontend-flows/affect-ui-workflow.md) now carry that contract. Desktop buttons use source compact density; phone buttons retain Mabry Pro Medium 16/24 with 48px targets. Shared layout, product behavior and existing OPEN gates remain.\\n+\\n+[Fresh independent review](evidence/affect-ui-adoption-2026-10-23/independent-review.md) closed all four findings. All 22 existing frontend issue bodies #61–#82 were updated through guarded sequential body-only writes, each read back immediately, then freshly reconciled as a complete package. [Migration receipt](evidence/affect-ui-adoption-2026-10-23/migration-receipt.md) records 22 exact body matches, 110 current-authority fingerprint matches, unchanged workflow/dependencies/ownership/labels/assignees/open state and independent root confirmation of all 22. Published local stubs, immutable publication archives and historical reviews remain preserved. This administrative completion checkpoint follows the reviewed frozen revision; it does not rewrite that review evidence.\\n+\\n+The migration is documentation/task-contract work only. No product code, installation, Git mutation, new issue, issue closure, deployment, paid service or rendered/font/browser/media/accessibility/payment/product acceptance occurred. The unapproved scaffold and unrelated dirty work are preserved. Future implementation must inspect applicable Clean source and Light PNGs, apply named source-gap/accessibility adaptations and verify actual browser renders with loaded Mabry, component states and reduced motion before claiming fidelity.\\n*** End Patch\"));\n"
+  },
+  {
+    "source_line": 839,
+    "timestamp": "2026-10-22T23:18:18.350Z",
+    "type": "custom_tool_call",
+    "name": "exec",
+    "arguments": "text(await tools.exec_command({cmd:\"@'\\nfrom pathlib import Path\\nimport hashlib,json\\nr=Path(r'D:/Program/python/Dubbed');e=r/'_docs/evidence/affect-ui-adoption-2026-10-23';paths=['_docs/HANDOFF.md','_docs/frontend-flows/README.md','_docs/task-drafts/frontend-flows/README.md','_docs/evidence/affect-ui-adoption-2026-10-23/migration-receipt.md']\\nrecord={'date':'2026-10-23','boundary':'Administrative post-publication checkpoint only; original independent review and reviewed aggregate remain frozen','files':[{'path':p,'sha256':hashlib.sha256((r/p).read_bytes()).hexdigest().upper()}for p in paths]}\\n(e/'administrative-checkpoint-hashes.json').write_text(json.dumps(record,indent=2)+'\\\\n',encoding='utf-8')\\nprint(json.dumps({'administrative_checkpoint_files':len(paths),'receipt':'_docs/evidence/affect-ui-adoption-2026-10-23/migration-receipt.md','remote_issues_updated':22}))\\n'@ | python -\",sandbox_permissions:\"require_escalated\",justification:\"Record post-publication administrative checkpoint hashes separately from the reviewed frozen contracts.\",max_output_tokens:500}));\n"
+  }
+]

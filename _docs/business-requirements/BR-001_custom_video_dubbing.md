@@ -1,5 +1,7 @@
 # BR-001: Turn a custom video into a self-performed dub
 
+> CURRENT FRONTEND SCOPE: the [frontend shared contract](../frontend-flows/00-shared-contract.md) and [flow specifications](../frontend-flows/README.md) govern the replacement frontend. Prepare/manual corrections/background audition and public-link sharing/viewing remain excluded. Landing must explain the product and may demonstrate it truthfully under its current flow specification. Recording keeps moving video visible and follows the current direct-action flow. Older conflicting wording below is superseded for this frontend assignment; no implementation or whole-document approval is inferred.
+
 Status: draft
 Revision: 0.2
 Created: 2026-10-20 (Asia/Qyzylorda)

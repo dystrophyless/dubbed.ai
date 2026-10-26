@@ -1,0 +1,498 @@
+[
+  {
+    "file": "affect_style_spec_migration.md",
+    "opaque_strings_replaced": 14
+  },
+  {
+    "file": "affect_style_spec_migration.tool-calls.json",
+    "opaque_strings_replaced": 14
+  },
+  {
+    "file": "affect_workflow_task_migration.md",
+    "opaque_strings_replaced": 23
+  },
+  {
+    "file": "affect_workflow_task_migration.tool-calls.json",
+    "opaque_strings_replaced": 23
+  },
+  {
+    "file": "final_policy_contract_review.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "final_policy_contract_review.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "fix_77.md",
+    "opaque_strings_replaced": 13
+  },
+  {
+    "file": "fix_77.tool-calls.json",
+    "opaque_strings_replaced": 13
+  },
+  {
+    "file": "fix_81.md",
+    "opaque_strings_replaced": 36
+  },
+  {
+    "file": "fix_81.tool-calls.json",
+    "opaque_strings_replaced": 36
+  },
+  {
+    "file": "fix_auth_review_findings.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "fix_auth_review_findings.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "fix_media_review_findings.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "fix_media_review_findings.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "independent_auth_rereview.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "independent_auth_rereview.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "independent_auth_spec_review.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "independent_auth_spec_review.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "independent_batch_review_61.md",
+    "opaque_strings_replaced": 10
+  },
+  {
+    "file": "independent_batch_review_61.tool-calls.json",
+    "opaque_strings_replaced": 10
+  },
+  {
+    "file": "independent_media_rereview.md",
+    "opaque_strings_replaced": 4
+  },
+  {
+    "file": "independent_media_rereview.tool-calls.json",
+    "opaque_strings_replaced": 4
+  },
+  {
+    "file": "independent_media_spec_review.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "independent_media_spec_review.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "independent_package_spec_review.md",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "independent_package_spec_review.tool-calls.json",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "record_result_batch_author_61.md",
+    "opaque_strings_replaced": 8
+  },
+  {
+    "file": "record_result_batch_author_61.tool-calls.json",
+    "opaque_strings_replaced": 8
+  },
+  {
+    "file": "review_affect_adoption.md",
+    "opaque_strings_replaced": 8
+  },
+  {
+    "file": "review_affect_adoption.tool-calls.json",
+    "opaque_strings_replaced": 8
+  },
+  {
+    "file": "review_frontend_task_dependencies.md",
+    "opaque_strings_replaced": 7
+  },
+  {
+    "file": "review_frontend_task_dependencies.tool-calls.json",
+    "opaque_strings_replaced": 7
+  },
+  {
+    "file": "review_frontend_task_package.md",
+    "opaque_strings_replaced": 7
+  },
+  {
+    "file": "review_frontend_task_package.tool-calls.json",
+    "opaque_strings_replaced": 7
+  },
+  {
+    "file": "root-01a16603-6a8a-7830-bda3-61e38a9f9fa3.md",
+    "opaque_strings_replaced": 737
+  },
+  {
+    "file": "root-01a16603-6a8a-7830-bda3-61e38a9f9fa3.tool-calls.json",
+    "opaque_strings_replaced": 737
+  },
+  {
+    "file": "root-01a17025-6544-7053-8633-782e9f4f8dc6.md",
+    "opaque_strings_replaced": 41
+  },
+  {
+    "file": "root-01a17025-6544-7053-8633-782e9f4f8dc6.tool-calls.json",
+    "opaque_strings_replaced": 41
+  },
+  {
+    "file": "root-01a1727e-1abc-7ad1-9658-0757881dd815.md",
+    "opaque_strings_replaced": 149
+  },
+  {
+    "file": "root-01a1727e-1abc-7ad1-9658-0757881dd815.tool-calls.json",
+    "opaque_strings_replaced": 149
+  },
+  {
+    "file": "spec_flow01_landing.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow01_landing.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow01_sync.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "spec_flow01_sync.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "spec_flow02_sign_in.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "spec_flow02_sign_in.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "spec_flow03_registration.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow03_registration.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow03_registration_resume.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "spec_flow03_registration_resume.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "spec_flow04_password_reset.md",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "spec_flow04_password_reset.tool-calls.json",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "spec_flow05_account_linking.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow05_account_linking.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow06_new_dub.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "spec_flow06_new_dub.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "spec_flow06_sync.md",
+    "opaque_strings_replaced": 13
+  },
+  {
+    "file": "spec_flow06_sync.tool-calls.json",
+    "opaque_strings_replaced": 13
+  },
+  {
+    "file": "spec_flow07_processing.md",
+    "opaque_strings_replaced": 4
+  },
+  {
+    "file": "spec_flow07_processing.tool-calls.json",
+    "opaque_strings_replaced": 4
+  },
+  {
+    "file": "spec_flow08_prepare.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "spec_flow08_prepare.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "spec_flow09_record.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "spec_flow09_record.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "spec_flow09_sync.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow09_sync.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow10_result.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "spec_flow10_result.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "spec_flow10_sync.md",
+    "opaque_strings_replaced": 21
+  },
+  {
+    "file": "spec_flow10_sync.tool-calls.json",
+    "opaque_strings_replaced": 21
+  },
+  {
+    "file": "spec_flow11_projects.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "spec_flow11_projects.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "spec_flow11_sync.md",
+    "opaque_strings_replaced": 8
+  },
+  {
+    "file": "spec_flow11_sync.tool-calls.json",
+    "opaque_strings_replaced": 8
+  },
+  {
+    "file": "spec_flow12_credits.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow12_credits.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow12_sync.md",
+    "opaque_strings_replaced": 17
+  },
+  {
+    "file": "spec_flow12_sync.tool-calls.json",
+    "opaque_strings_replaced": 17
+  },
+  {
+    "file": "spec_flow13_sharing.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow13_sharing.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow14_public_viewer.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow14_public_viewer.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "spec_flow15_account.md",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "spec_flow15_account.tool-calls.json",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "visual_qa_61.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_61.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_62.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_62.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_63.md",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "visual_qa_63.tool-calls.json",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "visual_qa_65.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_65.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_66.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_66.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_67.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "visual_qa_67.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "visual_qa_68.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_68.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_69.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_69.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_70.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_70.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_71.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_71.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_72.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "visual_qa_72.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "visual_qa_73.md",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "visual_qa_73.tool-calls.json",
+    "opaque_strings_replaced": 1
+  },
+  {
+    "file": "visual_qa_74.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_74.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_75.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_75.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_77.md",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "visual_qa_77.tool-calls.json",
+    "opaque_strings_replaced": 5
+  },
+  {
+    "file": "visual_qa_78.md",
+    "opaque_strings_replaced": 4
+  },
+  {
+    "file": "visual_qa_78.tool-calls.json",
+    "opaque_strings_replaced": 4
+  },
+  {
+    "file": "visual_qa_79.md",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_79.tool-calls.json",
+    "opaque_strings_replaced": 2
+  },
+  {
+    "file": "visual_qa_80.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_80.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_81.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_81.tool-calls.json",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_82.md",
+    "opaque_strings_replaced": 3
+  },
+  {
+    "file": "visual_qa_82.tool-calls.json",
+    "opaque_strings_replaced": 3
+  }
+]

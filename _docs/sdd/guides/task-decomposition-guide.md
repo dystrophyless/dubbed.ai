@@ -2,6 +2,8 @@
 
 Tasks in Dubbed are GitHub Issues. Use the [task issue template](../templates/task-issue.md) or the GitHub task form.
 
+For meaningful frontend screens, redesigns and connected journeys, follow the [design-first workflow](../../frontend-design-workflow.md) before finalizing task decomposition. After its owner checkpoints, each affected draft/issue should identify the approved artifact version, covered screens/states/viewports, and checkable scenarios. The prototype is not a task queue or production acceptance. Stable-composition fixes and backend work keep the normal lightweight/spec-first path.
+
 ## Drafts, specification index, and grooming
 
 Before publication, create one Markdown file per task at `_docs/task-drafts/<spec-id>/<task-slug>.md`, for example `_docs/task-drafts/SPEC-001/persist_confirmed_task.md`. The slug is a filename, not a separately allocated task ID. Refer to draft paths for dependencies until real issue references exist.

@@ -1,0 +1,186 @@
+{
+  "captured_on": "2026-10-23",
+  "source_root": "D:\\Program\\frontend\\affect-ui\\affectui-free",
+  "scope": "Clean variant Light PNGs only; raw Clean Markdown includes excluded dark/examples for byte-exact provenance, stored as .md.txt, never an implementation source of authority",
+  "files": [
+    {
+      "kind": "source-code-snapshot",
+      "source_relative_path": "components/button/Clean/button-clean.md",
+      "snapshot_relative_path": "source/components/button/Clean/button-clean.md.txt",
+      "sha256": "87e82cd57239270f22c106c40e77d005e310f7aa7a6eddbfca0019568b9bd5e6",
+      "bytes": 16191
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/button/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/button/Clean/Light/01-initial.png",
+      "sha256": "11fdc40389e7a7c18bfa7be5f2afe7a08ce3486aa9cbe0199d3cec2d799881c6",
+      "bytes": 57111
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/button/Clean/Light/03-loading.png",
+      "snapshot_relative_path": "source/components/button/Clean/Light/03-loading.png",
+      "sha256": "e19747332e2ca13bb86a4b9d22c3d372434c2a857eabd18775e3ad15b12c1d7a",
+      "bytes": 60588
+    },
+    {
+      "kind": "source-code-snapshot",
+      "source_relative_path": "components/filter-menu/Clean/filter-menu-clean.md",
+      "snapshot_relative_path": "source/components/filter-menu/Clean/filter-menu-clean.md.txt",
+      "sha256": "4282e9a4587ecd6934f5b7b6cd54af19129f33898e68c303b2af612034cae567",
+      "bytes": 26213
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/filter-menu/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/filter-menu/Clean/Light/01-initial.png",
+      "sha256": "de8d0bf04f1caf7621606ef11e6d294ba2649563d4e1e39793ae9b4a055eb4cb",
+      "bytes": 59041
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/filter-menu/Clean/Light/02-selected-filters.png",
+      "snapshot_relative_path": "source/components/filter-menu/Clean/Light/02-selected-filters.png",
+      "sha256": "ed294a103789c0220b3dfbd0e4b492a285a3e11268b675e73593f981c9a5acce",
+      "bytes": 61960
+    },
+    {
+      "kind": "source-code-snapshot",
+      "source_relative_path": "components/profile-menu/Clean/profile-menu-clean.md",
+      "snapshot_relative_path": "source/components/profile-menu/Clean/profile-menu-clean.md.txt",
+      "sha256": "0bc1d998cee1f008dd6ff3c480ed42bf352cb0d5071b306e39ed51bd85a1dbb2",
+      "bytes": 17218
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/profile-menu/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/profile-menu/Clean/Light/01-initial.png",
+      "sha256": "702033f1c5ef3afcbd8753ba487c6fc6bf1faa850c2967b9c97825a50482dfce",
+      "bytes": 53341
+    },
+    {
+      "kind": "source-code-snapshot",
+      "source_relative_path": "components/segmented-control/Clean/segmented-control-clean.md",
+      "snapshot_relative_path": "source/components/segmented-control/Clean/segmented-control-clean.md.txt",
+      "sha256": "181119830c0720d3fb22bd8379fae5b6c54d780d006cd767a1a4a03944d5e45a",
+      "bytes": 30817
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/segmented-control/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/segmented-control/Clean/Light/01-initial.png",
+      "sha256": "c18abe36194101d203e0d9f1f90184d9800c2be543055515339f825a902ab93f",
+      "bytes": 39797
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/segmented-control/Clean/Light/02-dashboard-changed.png",
+      "snapshot_relative_path": "source/components/segmented-control/Clean/Light/02-dashboard-changed.png",
+      "sha256": "e3e1c894517db3f59e55e33ae7d1e1d3d4901d6baf48219c639d2d736c63e712",
+      "bytes": 39844
+    },
+    {
+      "kind": "source-code-snapshot",
+      "source_relative_path": "components/progress-tracker/Clean/progress-tracker-clean.md",
+      "snapshot_relative_path": "source/components/progress-tracker/Clean/progress-tracker-clean.md.txt",
+      "sha256": "2feb6ad5d0cfea609d6da0abafda435bada310a98f23da6053baea83c58c3575",
+      "bytes": 16167
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/progress-tracker/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/progress-tracker/Clean/Light/01-initial.png",
+      "sha256": "1f9e751bfeb4821ca59f1b65323b6d387737e94bcef3b1626f992998102d9b3e",
+      "bytes": 46810
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/progress-tracker/Clean/Light/03-progress-updated.png",
+      "snapshot_relative_path": "source/components/progress-tracker/Clean/Light/03-progress-updated.png",
+      "sha256": "ad50cc320990fa82c44c49453a8d2bdec2bb6a67ed4333036e9a7958fd2c07ed",
+      "bytes": 46697
+    },
+    {
+      "kind": "source-code-snapshot",
+      "source_relative_path": "components/notification-stack/Clean/notification-stack-clean.md",
+      "snapshot_relative_path": "source/components/notification-stack/Clean/notification-stack-clean.md.txt",
+      "sha256": "c2c61d0819011a9d1a699d4c5692e38b9d5bcb8d6eab1595841317961e4ac4cc",
+      "bytes": 16797
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/notification-stack/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/notification-stack/Clean/Light/01-initial.png",
+      "sha256": "9b133935b2162a3833d8a0a1db5e8531f467257c08f1ae6c253cf310491d978b",
+      "bytes": 38482
+    },
+    {
+      "kind": "source-code-snapshot",
+      "source_relative_path": "components/otp-input/Clean/otp-input-clean.md",
+      "snapshot_relative_path": "source/components/otp-input/Clean/otp-input-clean.md.txt",
+      "sha256": "b5649e4a8b06738a9becbda399e8bc248af2cd5e1af0a8d97811a27965c6162c",
+      "bytes": 35395
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/otp-input/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/otp-input/Clean/Light/01-initial.png",
+      "sha256": "3f0f2bc0cdcdb7f93ed78684b4a4f83eba33f449fb53304bbdd3caa039f0c61f",
+      "bytes": 40481
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/otp-input/Clean/Light/03-invalid-code.png",
+      "snapshot_relative_path": "source/components/otp-input/Clean/Light/03-invalid-code.png",
+      "sha256": "6b10f59548a5633042a065503de217d47538e093dc28c7bcc1eccdbd7e87840b",
+      "bytes": 47206
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/otp-input/Clean/Light/04-verified.png",
+      "snapshot_relative_path": "source/components/otp-input/Clean/Light/04-verified.png",
+      "sha256": "528be33b56c64001b754b97e871811c09241f126c715ad57e7a74c826059190d",
+      "bytes": 34462
+    },
+    {
+      "kind": "source-code-snapshot",
+      "source_relative_path": "components/thinking-loader/Clean/thinking-loader-clean.md",
+      "snapshot_relative_path": "source/components/thinking-loader/Clean/thinking-loader-clean.md.txt",
+      "sha256": "3f555471cf29248f137ce42edf97e5c81e1283d49439b229554415d016210554",
+      "bytes": 15238
+    },
+    {
+      "kind": "visually-inspected-source-png",
+      "source_relative_path": "components/thinking-loader/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/thinking-loader/Clean/Light/01-initial.png",
+      "sha256": "ca821ebb39bd21689fc83c00411ce7de4564d9522709a8166725533f86485713",
+      "bytes": 20914
+    },
+    {
+      "kind": "composition-reference-png",
+      "source_relative_path": "components/decision-inbox/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/decision-inbox/Clean/Light/01-initial.png",
+      "sha256": "19e94dcbbe398192443d23709b76d467397173a6d9a4a0d128263fcfb9964d98",
+      "bytes": 62175,
+      "usage_scope": "reference-only"
+    },
+    {
+      "kind": "composition-reference-png",
+      "source_relative_path": "components/email-draft/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/email-draft/Clean/Light/01-initial.png",
+      "sha256": "b1df5aa805331c605705730f37aac522c237aef0432dae69a01ea20178ac3d27",
+      "bytes": 99587,
+      "usage_scope": "reference-only"
+    },
+    {
+      "kind": "composition-reference-png",
+      "source_relative_path": "components/comment-thread/Clean/Light/01-initial.png",
+      "snapshot_relative_path": "source/components/comment-thread/Clean/Light/01-initial.png",
+      "sha256": "8d35fd3ac1af1ee74a9f942ab466df3be879c49341a6cbeb3e35cf9b0a2828f0",
+      "bytes": 52447,
+      "usage_scope": "reference-only"
+    }
+  ],
+  "updated_on": "2026-10-27"
+}

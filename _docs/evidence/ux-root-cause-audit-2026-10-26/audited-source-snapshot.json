@@ -1,0 +1,162 @@
+[
+  {
+    "path": "frontend/src/app/routes.ts",
+    "sha256": "1d3f49ef1d6f6e451d5b3a5d2e3e73aab72197d5a83dfde994287cbd6e77532e",
+    "bytes": 8318
+  },
+  {
+    "path": "frontend/src/app/FeatureRoute.tsx",
+    "sha256": "6777df67aeedf87b6e34a513b54afe8821a58cd966d1f4546e0370bccaf6319b",
+    "bytes": 6134
+  },
+  {
+    "path": "frontend/src/features/recording/RecordingScreen.tsx",
+    "sha256": "dd0881496fc86ca14bb2b61c3f7947246d21d0c2f0f722555bdeca3f0c20c331",
+    "bytes": 99917
+  },
+  {
+    "path": "_docs/frontend-flows/00-shared-contract.md",
+    "sha256": "373732f7bb482e45da1202ab5e640329eaf85327f77b3d312a7c654cfd467143",
+    "bytes": 113090
+  },
+  {
+    "path": "_docs/frontend-flows/01-landing.md",
+    "sha256": "5d067a201a8df66787b2eb48cd20715d3153c802ce4203366af3a552b99c2ce1",
+    "bytes": 41978
+  },
+  {
+    "path": "_docs/frontend-flows/02-sign-in.md",
+    "sha256": "935ba56599502242b4dc438a9997872828839a2faad9105332952777483e79a9",
+    "bytes": 55519
+  },
+  {
+    "path": "_docs/frontend-flows/03-registration.md",
+    "sha256": "46ff52a3a68c4006b88945fe45a5553ff708aed68bd7f910d895ee7ebd2794a2",
+    "bytes": 63612
+  },
+  {
+    "path": "_docs/frontend-flows/04-password-reset.md",
+    "sha256": "472953a105e3205eec882bc9f61055af72f7f6157643ed75c606df41752a1ffc",
+    "bytes": 51589
+  },
+  {
+    "path": "_docs/frontend-flows/05-account-linking.md",
+    "sha256": "a599983e36d1fd44361184f53d2fe5a761fc44cd50bbab2a6a71146cd2b57c4e",
+    "bytes": 58279
+  },
+  {
+    "path": "_docs/frontend-flows/06-new-dub.md",
+    "sha256": "5879e82b12254e3bfbe4b8029cb98833e714891da9919d1a0778a245d1583ea7",
+    "bytes": 110644
+  },
+  {
+    "path": "_docs/frontend-flows/07-processing.md",
+    "sha256": "223a974385cd68f87f839df4ffa1ff3475215c26791d07b538146997e55c87ec",
+    "bytes": 82330
+  },
+  {
+    "path": "_docs/frontend-flows/08-prepare.md",
+    "sha256": "5e0c256fd6f97474dbfdeee3652d24817f22a6ebc9e73eb1fba50167a55041a5",
+    "bytes": 38210
+  },
+  {
+    "path": "_docs/frontend-flows/09-record.md",
+    "sha256": "c4d2403f904ca6e55bb7129d373489ed389bd4cf715fd578422cf2062bbbfb92",
+    "bytes": 133102
+  },
+  {
+    "path": "_docs/frontend-flows/10-result.md",
+    "sha256": "5651473ad43dae65e9fdf2efadf07385652ab74748340b21bbccc6b4b8eec182",
+    "bytes": 93098
+  },
+  {
+    "path": "_docs/frontend-flows/11-projects.md",
+    "sha256": "66ce4f333e9bfa014c449dab636c83f3a9301e25088ee0b5108d8d61babf2394",
+    "bytes": 111487
+  },
+  {
+    "path": "_docs/frontend-flows/12-credits.md",
+    "sha256": "2e1d6ab7a226ed5200c6af4a903c5e877652454f8999d67307f12ac37fd89fdc",
+    "bytes": 88566
+  },
+  {
+    "path": "_docs/frontend-flows/13-sharing.md",
+    "sha256": "f3e3c9c5ca187bdbdb1e5d8103123d2a74e748cb8fd86c1f954926cc8fcd515b",
+    "bytes": 40576
+  },
+  {
+    "path": "_docs/frontend-flows/14-public-viewer.md",
+    "sha256": "6c32db824301ca503a8874db242aba0e33f67c572956e637dc6d019e81290ed3",
+    "bytes": 24534
+  },
+  {
+    "path": "_docs/frontend-flows/15-account.md",
+    "sha256": "f7fc418aa50f515533cb34cd583fc3398fb2c47e6616f5ce7d22795afa78931d",
+    "bytes": 50772
+  },
+  {
+    "path": "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+    "sha256": "d556344dee4cea2e3b69076bf3e608d4f9a8a38f37244722144e7c7898200942",
+    "bytes": 11858
+  },
+  {
+    "path": "_docs/frontend-flows/affect-ui-clean-light-reference.md",
+    "sha256": "dc3936fec125e9b397f803ed8a1939b7231141e9bee3d72a82abffe62caece31",
+    "bytes": 29304
+  },
+  {
+    "path": "_docs/frontend-flows/affect-ui-workflow.md",
+    "sha256": "2be273b7d77201ba7b15ae9e75c3ca158a3293336773f37719c1f2d9a4570e6c",
+    "bytes": 11208
+  },
+  {
+    "path": "_docs/frontend-flows/batch-integration-static-check-2026-10-23.md",
+    "sha256": "bf18c31818f683eae6aa6dad6dcdacf1b727c9333cfa91d1599753a61bc69e84",
+    "bytes": 6863
+  },
+  {
+    "path": "_docs/frontend-flows/decision-batch-2026-10-23.md",
+    "sha256": "f7e0584df9c2a3ce84bf88cfc86e0b9989a11e0e6b1b073b4fa9ae26dbb5f11e",
+    "bytes": 6254
+  },
+  {
+    "path": "_docs/frontend-flows/design-token-contrast-draft.md",
+    "sha256": "82f2d7cc1fe05fe8d86257d4bb04d829a7e2d4ff67647db6329f7d5887181f07",
+    "bytes": 4496
+  },
+  {
+    "path": "_docs/frontend-flows/design-token-migration-check.md",
+    "sha256": "185c6316f24f8038fb11b89c869d7054da55ec3fc4f6e78543d7e036b48a639b",
+    "bytes": 2893
+  },
+  {
+    "path": "_docs/frontend-flows/design-tokens-draft.md",
+    "sha256": "7d27eeea2c28962182c124a658efaeffc38de899a4578b8e732892c297ca36e5",
+    "bytes": 17662
+  },
+  {
+    "path": "_docs/frontend-flows/design-tokens.md",
+    "sha256": "f605236a70543be84420914f1afab706fbc077834f04ed973341ec0f8e2b9c09",
+    "bytes": 23616
+  },
+  {
+    "path": "_docs/frontend-flows/independent-review-2026-10-22.md",
+    "sha256": "5be4f6c579d97b96fbbdaf234990511343c5b5ad1c470463ba7a4680ffd4cee9",
+    "bytes": 12107
+  },
+  {
+    "path": "_docs/frontend-flows/independent-review-2026-10-23.md",
+    "sha256": "08149793a149eb18b537800e69340c881cb04a836765f7382704802abeaafeec",
+    "bytes": 13268
+  },
+  {
+    "path": "_docs/frontend-flows/README.md",
+    "sha256": "946b24d895cc1147d679d4f74261df1469cff8f01f83fa4bcaca7c5c022702df",
+    "bytes": 14251
+  },
+  {
+    "path": "_docs/frontend-flows/review-correction-static-check.md",
+    "sha256": "15934ee3488a90015536cec28ebd64e45423d6ffd2b96f08a5e87932280d6999",
+    "bytes": 2035
+  }
+]

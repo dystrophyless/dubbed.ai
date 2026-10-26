@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Qyzylorda",
+  "environment": "Windows local workspace; Python static checks; shared dirty worktree",
+  "status": "PASS: artifact integrity and link checks only",
+  "narrative_files": [
+    {
+      "path": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\report.md",
+      "sha256": "7774d55f4a3529c51a4d93553a5a8e3a554d02771ae6d5a5c9e7a353cd846aeb",
+      "bytes": 27814
+    },
+    {
+      "path": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\page-evidence-matrix.md",
+      "sha256": "dcd234df56dfe616dfdafa9f59072d53245b3cfc28daca48d565d75f9d4a3cb1",
+      "bytes": 27200
+    },
+    {
+      "path": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\replacement-workflow.md",
+      "sha256": "e5be602b5bc62e1311e9d1508e88a5591a532497f3fbcc630bb4011ee9cb5d78",
+      "bytes": 13053
+    },
+    {
+      "path": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\evidence-inventory.md",
+      "sha256": "68b20cc6f48227147a1147f9a92dcdce9142c1425c2e8e6c67471f481c25f290",
+      "bytes": 11717
+    }
+  ],
+  "checks": {
+    "local_markdown_links_checked": 125,
+    "missing_links": 0,
+    "primary_page_sections": 13,
+    "audited_image_manifest_hashes_verified": 35,
+    "image_hash_mismatches": 0,
+    "owner_original_and_copy_hashes_verified": 3,
+    "owner_input_mismatches": 0,
+    "broken_dash_sequences_remaining": 0
+  },
+  "scope_limit": "This verifies local report links, image bytes and inventory structure. It does not validate UX conclusions, independently reopen all images, reproduce Replay, run the application, grant product acceptance, or publish anything. No product/spec/Git/GitHub mutations."
+}

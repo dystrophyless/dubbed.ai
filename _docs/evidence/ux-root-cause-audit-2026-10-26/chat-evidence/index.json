@@ -1,0 +1,1229 @@
+[
+  {
+    "agent": "/root/independent_batch_review_61",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T00-09-53-01a16505-0f02-7ef0-abac-2ab50422df1e.jsonl",
+    "session_id": "01a16505-0f02-7ef0-abac-2ab50422df1e",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_batch_review_61.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_batch_review_61.tool-calls.json",
+    "tool_counts": {
+      "exec": 27,
+      "send_message": 10,
+      "wait_agent": 9
+    },
+    "original_sha256": "1771c7ae28251db6df48c3befdf5b0242ca49a981fceb823163679cc9a099e4a",
+    "note": "",
+    "custom_tool_call_count": 27
+  },
+  {
+    "agent": "/root/review_frontend_task_package",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T00-59-19-01a16532-4d7e-7062-b952-6bf9ed9c6a1a.jsonl",
+    "session_id": "01a16532-4d7e-7062-b952-6bf9ed9c6a1a",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\review_frontend_task_package.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\review_frontend_task_package.tool-calls.json",
+    "tool_counts": {
+      "exec": 21,
+      "wait": 1,
+      "send_message": 7
+    },
+    "original_sha256": "9a2f14b3dcea9965d44608ce1224c6d08e6c2fad6991a968b4e41759cbbc5ac1",
+    "note": "",
+    "custom_tool_call_count": 21
+  },
+  {
+    "agent": "/root/review_frontend_task_dependencies",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T01-01-03-01a16533-e8d5-7fe1-a83c-a2a4c9b1fdeb.jsonl",
+    "session_id": "01a16533-e8d5-7fe1-a83c-a2a4c9b1fdeb",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\review_frontend_task_dependencies.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\review_frontend_task_dependencies.tool-calls.json",
+    "tool_counts": {
+      "exec": 20,
+      "send_message": 7
+    },
+    "original_sha256": "87ccd01118571b9f10291b99558eb97241a656a13736af05f8dd470603e5cf86",
+    "note": "",
+    "custom_tool_call_count": 20
+  },
+  {
+    "agent": "/root/review_affect_adoption",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T03-55-10-01a165d3-52f5-7fb3-bf66-3cf5a110e97f.jsonl",
+    "session_id": "01a165d3-52f5-7fb3-bf66-3cf5a110e97f",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\review_affect_adoption.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\review_affect_adoption.tool-calls.json",
+    "tool_counts": {
+      "exec": 28,
+      "send_message": 8,
+      "wait_agent": 4
+    },
+    "original_sha256": "208c86fec92073079d4ef7da3286089a216a4e22771b8f573f2983a547e28636",
+    "note": "",
+    "custom_tool_call_count": 28
+  },
+  {
+    "agent": "Root",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T04-47-42-01a16603-6a8a-7830-bda3-61e38a9f9fa3.jsonl",
+    "session_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "parent_thread_id": "",
+    "models_observed": [
+      "gpt-6.1-sol / medium"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\root-01a16603-6a8a-7830-bda3-61e38a9f9fa3.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\root-01a16603-6a8a-7830-bda3-61e38a9f9fa3.tool-calls.json",
+    "tool_counts": {
+      "exec": 1094,
+      "spawn_agent": 26,
+      "request_user_input_async": 11,
+      "send_message": 644,
+      "wait": 4,
+      "list_agents": 48,
+      "wait_agent": 204,
+      "js": 2,
+      "followup_task": 67,
+      "interrupt_agent": 3,
+      "sleep": 31
+    },
+    "original_sha256": "07d8bc647be69fb73a11ce35f4187116afd34862c0e152f880fa77501e48877b",
+    "note": "Root live log hash is a read-time snapshot",
+    "custom_tool_call_count": 1094
+  },
+  {
+    "agent": "/root/final_policy_contract_review",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T00-23-37-01a16f5e-5ac7-78c0-8876-14e01d8ac918.jsonl",
+    "session_id": "01a16f5e-5ac7-78c0-8876-14e01d8ac918",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\final_policy_contract_review.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\final_policy_contract_review.tool-calls.json",
+    "tool_counts": {
+      "exec": 7,
+      "send_message": 1
+    },
+    "original_sha256": "62c44f7f67cc97ca7723107387d02cab2700d41d99d628b388eea90f2ad2ebb9",
+    "note": "",
+    "custom_tool_call_count": 7
+  },
+  {
+    "agent": "Root",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T04-01-01-01a16603-6a8a-7830-bda3-61e38a9f9fa3_01a17025-6544-7053-8633-782e9f4f8dc6.jsonl",
+    "session_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "parent_thread_id": "",
+    "models_observed": [
+      "gpt-6.1-sol / medium"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\root-01a17025-6544-7053-8633-782e9f4f8dc6.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\root-01a17025-6544-7053-8633-782e9f4f8dc6.tool-calls.json",
+    "tool_counts": {
+      "exec": 41,
+      "list_agents": 3,
+      "spawn_agent": 22,
+      "send_message": 15,
+      "wait_agent": 86,
+      "followup_task": 4
+    },
+    "original_sha256": "428011098998853cbb5414538c167c2293e618ba9d1c6dae9e71ef6bf35e05f3",
+    "note": "Root live log hash is a read-time snapshot",
+    "custom_tool_call_count": 41
+  },
+  {
+    "agent": "/root/visual_qa_77",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T04-04-19-01a17028-692c-7f10-b615-87d06dceac3e.jsonl",
+    "session_id": "01a17028-692c-7f10-b615-87d06dceac3e",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_77.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_77.tool-calls.json",
+    "tool_counts": {
+      "exec": 31,
+      "send_message": 5
+    },
+    "original_sha256": "024f4c49fdfc09f67dff9f9588639f00c745900df8d68525742783150be1cde2",
+    "note": "",
+    "custom_tool_call_count": 31
+  },
+  {
+    "agent": "/root/visual_qa_78",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T04-04-24-01a17028-7c5c-7170-b1ed-f4985243b390.jsonl",
+    "session_id": "01a17028-7c5c-7170-b1ed-f4985243b390",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_78.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_78.tool-calls.json",
+    "tool_counts": {
+      "exec": 27,
+      "send_message": 4
+    },
+    "original_sha256": "16edc75159b322cf9a7c003ca9b8aa79e64e0eff0e9dccb8fc0b33728b380202",
+    "note": "",
+    "custom_tool_call_count": 27
+  },
+  {
+    "agent": "/root/visual_qa_81",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T04-04-29-01a17028-905d-7c43-95e2-a05d5eaebc16.jsonl",
+    "session_id": "01a17028-905d-7c43-95e2-a05d5eaebc16",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_81.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_81.tool-calls.json",
+    "tool_counts": {
+      "exec": 29,
+      "send_message": 3
+    },
+    "original_sha256": "2589c702bf7c29ebf0544d3a7983e04639ca3916efd614905d8efa3a4fee36d7",
+    "note": "",
+    "custom_tool_call_count": 29
+  },
+  {
+    "agent": "/root/visual_qa_63",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T04-12-17-01a1702f-b41e-7830-a7ce-5eb90469da04.jsonl",
+    "session_id": "01a1702f-b41e-7830-a7ce-5eb90469da04",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_63.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_63.tool-calls.json",
+    "tool_counts": {
+      "exec": 43,
+      "send_message": 5
+    },
+    "original_sha256": "d9a1fe211d30a57f92bfd65155c5070f173f1e7c4bd14b95dee7d949898412f4",
+    "note": "",
+    "custom_tool_call_count": 43
+  },
+  {
+    "agent": "/root/visual_qa_80",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T04-12-44-01a17030-2059-7293-b89d-068f786fcaa3.jsonl",
+    "session_id": "01a17030-2059-7293-b89d-068f786fcaa3",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_80.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_80.tool-calls.json",
+    "tool_counts": {
+      "exec": 31,
+      "send_message": 3
+    },
+    "original_sha256": "944edac6166e87c6488572d974db16359c5fd4142c07492e462345bc15fe60cb",
+    "note": "",
+    "custom_tool_call_count": 31
+  },
+  {
+    "agent": "/root/visual_qa_82",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T04-13-12-01a17030-8cee-76b0-8c14-90e1250d76e5.jsonl",
+    "session_id": "01a17030-8cee-76b0-8c14-90e1250d76e5",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_82.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_82.tool-calls.json",
+    "tool_counts": {
+      "exec": 29,
+      "send_message": 3
+    },
+    "original_sha256": "ce4fe272791d869d78b62c1c4f016fb605af4e54da78bff6a55484fb2ad3f30a",
+    "note": "",
+    "custom_tool_call_count": 29
+  },
+  {
+    "agent": "/root/visual_qa_62",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T04-20-55-01a17037-9ad1-7232-8f55-6b5f73d8b7ae.jsonl",
+    "session_id": "01a17037-9ad1-7232-8f55-6b5f73d8b7ae",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_62.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_62.tool-calls.json",
+    "tool_counts": {
+      "exec": 34,
+      "send_message": 3
+    },
+    "original_sha256": "d9c0dc7efb713b2fd16afd48998d2cc06bdca4a0f8752d2344dd610204789d2b",
+    "note": "",
+    "custom_tool_call_count": 34
+  },
+  {
+    "agent": "/root/visual_qa_69",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T12-48-57-01a17208-ba0b-7b03-a8e8-9c833502242e.jsonl",
+    "session_id": "01a17208-ba0b-7b03-a8e8-9c833502242e",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_69.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_69.tool-calls.json",
+    "tool_counts": {
+      "exec": 29,
+      "send_message": 2
+    },
+    "original_sha256": "18a90b439b14a850fb48d6ebed70553848bfdb14cb08c4564d2fd599289c7a8c",
+    "note": "",
+    "custom_tool_call_count": 29
+  },
+  {
+    "agent": "/root/visual_qa_79",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T12-50-48-01a1720a-6c41-7f01-a015-cacf9f300387.jsonl",
+    "session_id": "01a1720a-6c41-7f01-a015-cacf9f300387",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_79.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_79.tool-calls.json",
+    "tool_counts": {
+      "exec": 21,
+      "send_message": 2
+    },
+    "original_sha256": "419a9b53e3ea9cb95fb9362975a99cc68dd50ff5acb81d1fae914a41b72be7e8",
+    "note": "",
+    "custom_tool_call_count": 21
+  },
+  {
+    "agent": "/root/visual_qa_74",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-01-30-01a17214-380e-7862-b00f-d88a02f3a96a.jsonl",
+    "session_id": "01a17214-380e-7862-b00f-d88a02f3a96a",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_74.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_74.tool-calls.json",
+    "tool_counts": {
+      "exec": 26,
+      "send_message": 3
+    },
+    "original_sha256": "ceab230689529c8b11cefd610b7225cc5f6ca449b0a55effa1bffc0944aedee3",
+    "note": "",
+    "custom_tool_call_count": 26
+  },
+  {
+    "agent": "/root/visual_qa_75",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-02-51-01a17215-76e3-71d1-902a-44b679509ca6.jsonl",
+    "session_id": "01a17215-76e3-71d1-902a-44b679509ca6",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_75.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_75.tool-calls.json",
+    "tool_counts": {
+      "exec": 22,
+      "send_message": 2
+    },
+    "original_sha256": "8daaff8600a860b38833942c69ddfd14bdd7a1350dc166cbb966de91f0c23996",
+    "note": "",
+    "custom_tool_call_count": 22
+  },
+  {
+    "agent": "/root/visual_qa_65",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-03-08-01a17215-b818-7210-8d9d-ad3a62c0386d.jsonl",
+    "session_id": "01a17215-b818-7210-8d9d-ad3a62c0386d",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_65.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_65.tool-calls.json",
+    "tool_counts": {
+      "exec": 31,
+      "send_message": 3
+    },
+    "original_sha256": "8295e87053ceb0a30843fdabef51114289212e2c39d1eee6cc917f1b540dffa1",
+    "note": "",
+    "custom_tool_call_count": 31
+  },
+  {
+    "agent": "/root/visual_qa_71",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-12-51-01a1721e-9b71-7513-a48a-dac934ff9f04.jsonl",
+    "session_id": "01a1721e-9b71-7513-a48a-dac934ff9f04",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_71.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_71.tool-calls.json",
+    "tool_counts": {
+      "exec": 25,
+      "send_message": 2
+    },
+    "original_sha256": "96dd362a8c3dc769ca76101ea7a11ffaaa10aa7a829544236e3db514acde2fd0",
+    "note": "",
+    "custom_tool_call_count": 25
+  },
+  {
+    "agent": "/root/visual_qa_66",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-13-27-01a1721f-27e6-74d0-83f1-c60f23b9d1f1.jsonl",
+    "session_id": "01a1721f-27e6-74d0-83f1-c60f23b9d1f1",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_66.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_66.tool-calls.json",
+    "tool_counts": {
+      "exec": 29,
+      "send_message": 2
+    },
+    "original_sha256": "55018a5cb5364e28c32de3fbe1b964d13a5100d903b7008da3e4c4f3519bf672",
+    "note": "",
+    "custom_tool_call_count": 29
+  },
+  {
+    "agent": "/root/visual_qa_61",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-17-51-01a17223-2f66-73b1-b5f5-85d2cb5537e2.jsonl",
+    "session_id": "01a17223-2f66-73b1-b5f5-85d2cb5537e2",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_61.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_61.tool-calls.json",
+    "tool_counts": {
+      "exec": 15,
+      "send_message": 2
+    },
+    "original_sha256": "053e5919ff6377385116ff2df747a1e3d43fd5048e5af63c7832286d989c199f",
+    "note": "",
+    "custom_tool_call_count": 15
+  },
+  {
+    "agent": "/root/visual_qa_64",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-22-03-01a17227-0a06-7303-b57b-b485c9fec8d3.jsonl",
+    "session_id": "01a17227-0a06-7303-b57b-b485c9fec8d3",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_64.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_64.tool-calls.json",
+    "tool_counts": {
+      "exec": 19
+    },
+    "original_sha256": "45ddc9a2b2d3b078142a043bf76543022dd3a3c8719d650d50424cbad13d0fea",
+    "note": "",
+    "custom_tool_call_count": 19
+  },
+  {
+    "agent": "/root/visual_qa_67",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-25-01-01a17229-c121-72b3-bf5a-9ac2b5e2230e.jsonl",
+    "session_id": "01a17229-c121-72b3-bf5a-9ac2b5e2230e",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_67.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_67.tool-calls.json",
+    "tool_counts": {
+      "exec": 22,
+      "send_message": 1
+    },
+    "original_sha256": "e655366d2bacb5db13d07342e429463f5ea0a8444ec7e7b0fd9cad5b62aac986",
+    "note": "",
+    "custom_tool_call_count": 22
+  },
+  {
+    "agent": "/root/visual_qa_68",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-25-20-01a1722a-08bf-7433-85f6-d83caaaae100.jsonl",
+    "session_id": "01a1722a-08bf-7433-85f6-d83caaaae100",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_68.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_68.tool-calls.json",
+    "tool_counts": {
+      "exec": 22,
+      "send_message": 2
+    },
+    "original_sha256": "68671464fb820fba47e4f71f461887d1d59bebfaf128655bcb2013a107c17596",
+    "note": "",
+    "custom_tool_call_count": 22
+  },
+  {
+    "agent": "/root/visual_qa_70",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-28-04-01a1722c-8c42-7ab2-9512-50dd01ea0f86.jsonl",
+    "session_id": "01a1722c-8c42-7ab2-9512-50dd01ea0f86",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_70.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_70.tool-calls.json",
+    "tool_counts": {
+      "exec": 18,
+      "send_message": 2
+    },
+    "original_sha256": "e6af1a6cb86115557adee5a4830e0cb5101a8c8e67f9e1d7706596a7b2835f20",
+    "note": "",
+    "custom_tool_call_count": 18
+  },
+  {
+    "agent": "/root/visual_qa_72",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-33-13-01a17231-4373-73f2-b1d4-aec77e76bc7c.jsonl",
+    "session_id": "01a17231-4373-73f2-b1d4-aec77e76bc7c",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_72.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_72.tool-calls.json",
+    "tool_counts": {
+      "exec": 19,
+      "send_message": 1
+    },
+    "original_sha256": "e007641ddf2ee368af12fe6102866651f677c08045d02daa788fb119748e51a1",
+    "note": "",
+    "custom_tool_call_count": 19
+  },
+  {
+    "agent": "/root/visual_qa_73",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T13-33-54-01a17231-e28c-71c3-84db-4d3aece15da9.jsonl",
+    "session_id": "01a17231-e28c-71c3-84db-4d3aece15da9",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_73.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\visual_qa_73.tool-calls.json",
+    "tool_counts": {
+      "exec": 19,
+      "send_message": 1
+    },
+    "original_sha256": "4dbeab894f8cd5534b3a6dcaa29093ba070cb801f6af72ccccd0d283b433473a",
+    "note": "",
+    "custom_tool_call_count": 19
+  },
+  {
+    "agent": "Root",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T14-57-09-01a16603-6a8a-7830-bda3-61e38a9f9fa3_01a1727e-1abc-7ad1-9658-0757881dd815.jsonl",
+    "session_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "parent_thread_id": "",
+    "models_observed": [
+      "gpt-6.1-sol / medium"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\root-01a1727e-1abc-7ad1-9658-0757881dd815.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\root-01a1727e-1abc-7ad1-9658-0757881dd815.tool-calls.json",
+    "tool_counts": {
+      "exec": 221,
+      "spawn_agent": 23,
+      "send_message": 110,
+      "wait_agent": 61,
+      "followup_task": 19,
+      "list_agents": 2
+    },
+    "original_sha256": "f21e76d8a0c9fc00a4bdc226048058a996851cefb6b6557b5c4313e059766edd",
+    "note": "Root live log hash is a read-time snapshot",
+    "custom_tool_call_count": 221
+  },
+  {
+    "agent": "/root/fix_77",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T15-52-41-01a172b0-f3c0-7831-bd4f-6212ab1280d7.jsonl",
+    "session_id": "01a172b0-f3c0-7831-bd4f-6212ab1280d7",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6-luna / max"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_77.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_77.tool-calls.json",
+    "tool_counts": {
+      "exec": 164,
+      "send_message": 13,
+      "list_agents": 1,
+      "wait_agent": 3
+    },
+    "original_sha256": "649b7f72a7c456198f2a9557410826cc7a0bed0112dcef1f1554f5c412e9981f",
+    "note": "",
+    "custom_tool_call_count": 164
+  },
+  {
+    "agent": "/root/fix_81",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\25\\rollout-2026-10-25T16-08-41-01a172bf-97d8-76c0-bc05-d784f8af8cf7.jsonl",
+    "session_id": "01a172bf-97d8-76c0-bc05-d784f8af8cf7",
+    "parent_thread_id": "01a16603-6a8a-7830-bda3-61e38a9f9fa3",
+    "models_observed": [
+      "gpt-6-luna / max"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_81.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_81.tool-calls.json",
+    "tool_counts": {
+      "exec": 322,
+      "send_message": 37,
+      "list_agents": 1,
+      "js": 2,
+      "wait": 8
+    },
+    "original_sha256": "4930e0b4bed39709b2b034b6b25298c5ceaee40eeeb5e40bd334eb86555cb2bc",
+    "note": "",
+    "custom_tool_call_count": 322
+  },
+  {
+    "agent": "/root/rebuild_plan_review",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-17-58-01a15fe6-1bbb-7123-9b58-e6fc860b54e9.jsonl",
+    "session_id": "01a15fe6-1bbb-7123-9b58-e6fc860b54e9",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\rebuild_plan_review.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\rebuild_plan_review.tool-calls.json",
+    "tool_counts": {
+      "exec": 1
+    },
+    "original_sha256": "f032233d2b183a8026b673918afc8ea9608c41e513e84a98fc4640bc953753d5",
+    "custom_tool_call_count": 1
+  },
+  {
+    "agent": "/root/spec_flow06_new_dub",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-25-35-01a15fed-1360-7d82-9877-b141da8d0c05.jsonl",
+    "session_id": "01a15fed-1360-7d82-9877-b141da8d0c05",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow06_new_dub.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow06_new_dub.tool-calls.json",
+    "tool_counts": {
+      "exec": 29,
+      "send_message": 3
+    },
+    "original_sha256": "487a78f558837ce5b3283af8486519d1bb5fa0aba97739bd718c7f7e0c4d56dc",
+    "custom_tool_call_count": 29
+  },
+  {
+    "agent": "/root/spec_flow08_prepare",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-25-46-01a15fed-4134-73f3-a249-32244d1da280.jsonl",
+    "session_id": "01a15fed-4134-73f3-a249-32244d1da280",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow08_prepare.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow08_prepare.tool-calls.json",
+    "tool_counts": {
+      "exec": 15,
+      "send_message": 2
+    },
+    "original_sha256": "3dfb5f4492f12ab9e1d90f558177e53cd3cf3a921f5151892b70c3981104aee4",
+    "custom_tool_call_count": 15
+  },
+  {
+    "agent": "/root/spec_flow09_record",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-26-01-01a15fed-7b56-74c1-a170-6916666038d9.jsonl",
+    "session_id": "01a15fed-7b56-74c1-a170-6916666038d9",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow09_record.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow09_record.tool-calls.json",
+    "tool_counts": {
+      "exec": 16,
+      "send_message": 3
+    },
+    "original_sha256": "3de78bbdd9c09ad6b4cc5317b7e8d8f57b9028e55b97db5462cb2a23ba5f816a",
+    "custom_tool_call_count": 16
+  },
+  {
+    "agent": "/root/spec_flow07_processing",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-37-21-01a15ff7-db83-71a0-a62d-731b08addc19.jsonl",
+    "session_id": "01a15ff7-db83-71a0-a62d-731b08addc19",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow07_processing.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow07_processing.tool-calls.json",
+    "tool_counts": {
+      "send_message": 4,
+      "exec": 26
+    },
+    "original_sha256": "ebd622bd98a3fbc0ae12174d6365d13b8e66e3a6f2163c0703b9fed5f18e1897",
+    "custom_tool_call_count": 26
+  },
+  {
+    "agent": "/root/spec_flow10_result",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-37-33-01a15ff8-0aaa-78b2-be54-aa32c5cc460c.jsonl",
+    "session_id": "01a15ff8-0aaa-78b2-be54-aa32c5cc460c",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow10_result.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow10_result.tool-calls.json",
+    "tool_counts": {
+      "exec": 34,
+      "send_message": 3
+    },
+    "original_sha256": "89ef229241ee9ded9b743d520ce9c25b3e02cf79363600bdf09a9ec489bbafbd",
+    "custom_tool_call_count": 34
+  },
+  {
+    "agent": "/root/spec_flow11_projects",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-38-29-01a15ff8-e44b-7ac2-b4a2-a52916cebf52.jsonl",
+    "session_id": "01a15ff8-e44b-7ac2-b4a2-a52916cebf52",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow11_projects.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow11_projects.tool-calls.json",
+    "tool_counts": {
+      "exec": 27,
+      "send_message": 3
+    },
+    "original_sha256": "4990c2ebcfe2283fb001d9ff99fba849c24b21e95bb960188ac61d75d3632411",
+    "custom_tool_call_count": 27
+  },
+  {
+    "agent": "/root/spec_flow12_credits",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-49-14-01a16002-b9c4-7121-80af-0b3f6e3eb58d.jsonl",
+    "session_id": "01a16002-b9c4-7121-80af-0b3f6e3eb58d",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow12_credits.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow12_credits.tool-calls.json",
+    "tool_counts": {
+      "exec": 19,
+      "send_message": 1
+    },
+    "original_sha256": "7abbb18ac61d838275e742ce705de0395459e38e1e8ccdd91e1d5f5e0232e114",
+    "custom_tool_call_count": 19
+  },
+  {
+    "agent": "/root/spec_flow13_sharing",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-49-26-01a16002-e9ae-7271-ab58-ed91fc08ea88.jsonl",
+    "session_id": "01a16002-e9ae-7271-ab58-ed91fc08ea88",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow13_sharing.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow13_sharing.tool-calls.json",
+    "tool_counts": {
+      "exec": 10,
+      "send_message": 1
+    },
+    "original_sha256": "8de867bc18c63acb877c568de6712c307e8e94172ed79348348a0c25e2f4e90d",
+    "custom_tool_call_count": 10
+  },
+  {
+    "agent": "/root/spec_flow01_landing",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-53-31-01a16006-a74a-7703-ac23-714ac5e9242c.jsonl",
+    "session_id": "01a16006-a74a-7703-ac23-714ac5e9242c",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow01_landing.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow01_landing.tool-calls.json",
+    "tool_counts": {
+      "exec": 14,
+      "send_message": 1
+    },
+    "original_sha256": "95b58be0c6da7a7961230ff5bd7136d76558d5f14bd0d83057a6dd7414bbac84",
+    "custom_tool_call_count": 14
+  },
+  {
+    "agent": "/root/spec_flow02_sign_in",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-54-55-01a16007-efc6-7d03-b8f7-8ee16c7b50ba.jsonl",
+    "session_id": "01a16007-efc6-7d03-b8f7-8ee16c7b50ba",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow02_sign_in.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow02_sign_in.tool-calls.json",
+    "tool_counts": {
+      "send_message": 2,
+      "exec": 9
+    },
+    "original_sha256": "59a8b589dc8b024a079189721965dfbdd601f1f834dc4261f8455a8a3d42808a",
+    "custom_tool_call_count": 9
+  },
+  {
+    "agent": "/root/spec_flow03_registration",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T00-57-00-01a16009-d943-79d0-ac05-20ed3b27ecaf.jsonl",
+    "session_id": "01a16009-d943-79d0-ac05-20ed3b27ecaf",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow03_registration.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow03_registration.tool-calls.json",
+    "tool_counts": {
+      "send_message": 1,
+      "exec": 5
+    },
+    "original_sha256": "3392c5838fd859250d58ee58cc861c8f862c30d572eb5cf0b445952d8fbb760d",
+    "custom_tool_call_count": 5
+  },
+  {
+    "agent": "/root/spec_flow04_password_reset",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-07-28-01a16013-6b52-7011-aae0-9bc5d4e18a91.jsonl",
+    "session_id": "01a16013-6b52-7011-aae0-9bc5d4e18a91",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow04_password_reset.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow04_password_reset.tool-calls.json",
+    "tool_counts": {
+      "exec": 36,
+      "send_message": 5
+    },
+    "original_sha256": "2fc49f31d2ed402f488dd45667c606f8d95c231837ae2cffcc5c30c1a222c260",
+    "custom_tool_call_count": 36
+  },
+  {
+    "agent": "/root/spec_flow14_public_viewer",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-07-40-01a16013-9cc1-7e03-9063-0db27a29c9f1.jsonl",
+    "session_id": "01a16013-9cc1-7e03-9063-0db27a29c9f1",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow14_public_viewer.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow14_public_viewer.tool-calls.json",
+    "tool_counts": {
+      "exec": 16,
+      "send_message": 1
+    },
+    "original_sha256": "9aed9c06b2d1ceb30d702b9557d531ecf70f034722b6e35eed87d1502a79e41b",
+    "custom_tool_call_count": 16
+  },
+  {
+    "agent": "/root/spec_flow15_account",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-07-54-01a16013-d315-7cc0-b880-0636bebaad6d.jsonl",
+    "session_id": "01a16013-d315-7cc0-b880-0636bebaad6d",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow15_account.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow15_account.tool-calls.json",
+    "tool_counts": {
+      "send_message": 5,
+      "exec": 37
+    },
+    "original_sha256": "978b63f09e5ceb7048d762abe32cb2d314c6fa4748bbc98978a37981ac928a5f",
+    "custom_tool_call_count": 37
+  },
+  {
+    "agent": "/root/spec_flow05_account_linking",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-13-25-01a16018-ddd3-7232-affe-90f9f3005e27.jsonl",
+    "session_id": "01a16018-ddd3-7232-affe-90f9f3005e27",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow05_account_linking.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow05_account_linking.tool-calls.json",
+    "tool_counts": {
+      "exec": 44,
+      "send_message": 1,
+      "wait_agent": 1
+    },
+    "original_sha256": "02581e0f1c515ea2e4a49171fd4c5e9e673e8c7db8ce2f38d3704ebdc8aa55a9",
+    "custom_tool_call_count": 44
+  },
+  {
+    "agent": "/root/spec_flow02_sign_in_resume",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-14-51-01a1601a-2e99-7cf3-aed1-e798c11984dd.jsonl",
+    "session_id": "01a1601a-2e99-7cf3-aed1-e798c11984dd",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow02_sign_in_resume.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow02_sign_in_resume.tool-calls.json",
+    "tool_counts": {
+      "exec": 31
+    },
+    "original_sha256": "aed36dbd6cdc335d8556e6800803a85d364651248e26965a2e6ed637e21b3a1e",
+    "custom_tool_call_count": 31
+  },
+  {
+    "agent": "/root/spec_flow03_registration_resume",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-16-05-01a1601b-4eeb-7491-9c5a-bbae1dc8fbaf.jsonl",
+    "session_id": "01a1601b-4eeb-7491-9c5a-bbae1dc8fbaf",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow03_registration_resume.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow03_registration_resume.tool-calls.json",
+    "tool_counts": {
+      "exec": 56,
+      "send_message": 2
+    },
+    "original_sha256": "9a439e03f5d45854246b943f1af4b0941f9182595505917c3e68a0cc5da59118",
+    "custom_tool_call_count": 56
+  },
+  {
+    "agent": "/root/spec_flow06_sync",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-21-32-01a16020-4cb8-7701-9937-4e2a21c7bb65.jsonl",
+    "session_id": "01a16020-4cb8-7701-9937-4e2a21c7bb65",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow06_sync.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow06_sync.tool-calls.json",
+    "tool_counts": {
+      "exec": 187,
+      "send_message": 13
+    },
+    "original_sha256": "7aca22667595a2cd1c16cd566ab1b357cab49f7f692a055837f222ab2205d1f1",
+    "custom_tool_call_count": 187
+  },
+  {
+    "agent": "/root/spec_flow07_sync",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-21-45-01a16020-80a7-7960-8707-4b328c285be6.jsonl",
+    "session_id": "01a16020-80a7-7960-8707-4b328c285be6",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow07_sync.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow07_sync.tool-calls.json",
+    "tool_counts": {
+      "exec": 11
+    },
+    "original_sha256": "c0729ca06cbf8bad21bcce5b73e4e8293f03af9c01ec98a96fc11247b2f2e2f9",
+    "custom_tool_call_count": 11
+  },
+  {
+    "agent": "/root/spec_flow09_sync",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-26-06-01a16024-7b45-7030-a481-cb36b809b377.jsonl",
+    "session_id": "01a16024-7b45-7030-a481-cb36b809b377",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow09_sync.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow09_sync.tool-calls.json",
+    "tool_counts": {
+      "exec": 83,
+      "send_message": 1
+    },
+    "original_sha256": "f072d56a9b092987b0cdad1cee2fe416adf3945194580f0d04c202d5370702e0",
+    "custom_tool_call_count": 83
+  },
+  {
+    "agent": "/root/spec_flow10_sync",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-26-17-01a16024-a8a6-72e3-b28d-eade787392cc.jsonl",
+    "session_id": "01a16024-a8a6-72e3-b28d-eade787392cc",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow10_sync.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow10_sync.tool-calls.json",
+    "tool_counts": {
+      "exec": 224,
+      "send_message": 21,
+      "wait_agent": 2
+    },
+    "original_sha256": "05efbf27c78efbe576341c415a2bf5dec6c806498704f4eae6d67a50cfd28569",
+    "custom_tool_call_count": 224
+  },
+  {
+    "agent": "/root/spec_flow11_sync",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-27-35-01a16025-d7c7-7763-bc9a-1b3571a864ed.jsonl",
+    "session_id": "01a16025-d7c7-7763-bc9a-1b3571a864ed",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow11_sync.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow11_sync.tool-calls.json",
+    "tool_counts": {
+      "send_message": 8,
+      "exec": 64
+    },
+    "original_sha256": "a8963d378b792953e9243a1ebb27dc44ac2c098d20cbf55233864e7b738957b1",
+    "custom_tool_call_count": 64
+  },
+  {
+    "agent": "/root/spec_flow12_sync",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-32-01-01a16029-e850-79f0-99be-4778511ca180.jsonl",
+    "session_id": "01a16029-e850-79f0-99be-4778511ca180",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow12_sync.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow12_sync.tool-calls.json",
+    "tool_counts": {
+      "exec": 167,
+      "send_message": 17,
+      "wait": 1
+    },
+    "original_sha256": "e0b0638da876d555ffe8701f3f2572dce829c62a3aaec8d91d5820b14c4ee0df",
+    "custom_tool_call_count": 167
+  },
+  {
+    "agent": "/root/spec_flow13_sync",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-32-14-01a1602a-17e8-72c0-8f2a-686e5be4aef1.jsonl",
+    "session_id": "01a1602a-17e8-72c0-8f2a-686e5be4aef1",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow13_sync.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow13_sync.tool-calls.json",
+    "tool_counts": {
+      "exec": 14
+    },
+    "original_sha256": "3d674832b9565818118e06715fb86444382cd48e79814ea8c999796d7e08734b",
+    "custom_tool_call_count": 14
+  },
+  {
+    "agent": "/root/spec_flow01_sync",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T01-39-04-01a16030-59cf-74b1-baf8-bace8f5b3a6d.jsonl",
+    "session_id": "01a16030-59cf-74b1-baf8-bace8f5b3a6d",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow01_sync.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\spec_flow01_sync.tool-calls.json",
+    "tool_counts": {
+      "exec": 37,
+      "send_message": 2
+    },
+    "original_sha256": "342bacc2e9cca86d16428c60cd6f2d8a75146994f5f8a93ccd8e0424ccb61bc2",
+    "custom_tool_call_count": 37
+  },
+  {
+    "agent": "/root/independent_auth_spec_review",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T22-02-09-01a16490-1e8d-7523-81c3-21e7e043e65c.jsonl",
+    "session_id": "01a16490-1e8d-7523-81c3-21e7e043e65c",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_auth_spec_review.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_auth_spec_review.tool-calls.json",
+    "tool_counts": {
+      "exec": 30,
+      "send_message": 3
+    },
+    "original_sha256": "b9976611604b1ba776bc591ace33289b01e125258c44abcb0f8e67bc99bcff72",
+    "custom_tool_call_count": 30
+  },
+  {
+    "agent": "/root/independent_media_spec_review",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T22-02-23-01a16490-56f5-7930-bad4-f1ba1721be89.jsonl",
+    "session_id": "01a16490-56f5-7930-bad4-f1ba1721be89",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_media_spec_review.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_media_spec_review.tool-calls.json",
+    "tool_counts": {
+      "exec": 34,
+      "send_message": 3
+    },
+    "original_sha256": "e6e7118eeb9c9a8b6d2b5e16c1949e2ca5bb762cfcdd9133f1144c8c13f0f42a",
+    "custom_tool_call_count": 34
+  },
+  {
+    "agent": "/root/independent_package_spec_review",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T22-02-42-01a16490-9f9e-7fa3-9e8d-fed1100e0347.jsonl",
+    "session_id": "01a16490-9f9e-7fa3-9e8d-fed1100e0347",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_package_spec_review.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_package_spec_review.tool-calls.json",
+    "tool_counts": {
+      "exec": 22,
+      "send_message": 5
+    },
+    "original_sha256": "eee37e13183a5b982c11cd2412d089629ff3602b7ff19836e49b7f28e3bc0cf1",
+    "custom_tool_call_count": 22
+  },
+  {
+    "agent": "/root/fix_auth_review_findings",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T22-10-52-01a16498-1798-76a2-940b-32c1589f9898.jsonl",
+    "session_id": "01a16498-1798-76a2-940b-32c1589f9898",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_auth_review_findings.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_auth_review_findings.tool-calls.json",
+    "tool_counts": {
+      "exec": 111,
+      "send_message": 3
+    },
+    "original_sha256": "a3d9478d0b8f72beb0c2c178d487aad210a4f7e3ee3616b57cfff0073684852e",
+    "custom_tool_call_count": 111
+  },
+  {
+    "agent": "/root/fix_recovery_review_findings",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T22-11-03-01a16498-4690-7853-b215-a70d0b3f1d07.jsonl",
+    "session_id": "01a16498-4690-7853-b215-a70d0b3f1d07",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_recovery_review_findings.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_recovery_review_findings.tool-calls.json",
+    "tool_counts": {
+      "exec": 43
+    },
+    "original_sha256": "79b310ec5727e983b42a0389f5ab523c37603a19fe1f11c06bf02cd837d159ac",
+    "custom_tool_call_count": 43
+  },
+  {
+    "agent": "/root/fix_media_review_findings",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T22-11-47-01a16498-e680-7b21-afc9-6299e9c7f233.jsonl",
+    "session_id": "01a16498-e680-7b21-afc9-6299e9c7f233",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_media_review_findings.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\fix_media_review_findings.tool-calls.json",
+    "tool_counts": {
+      "exec": 75,
+      "send_message": 2
+    },
+    "original_sha256": "77fce562879067ffdd89c6334a2d0cf872a70d82568e21910458ce80db2d344f",
+    "custom_tool_call_count": 75
+  },
+  {
+    "agent": "/root/independent_media_rereview",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T22-55-17-01a164c0-c347-7211-a7f2-d71f0f5910f7.jsonl",
+    "session_id": "01a164c0-c347-7211-a7f2-d71f0f5910f7",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_media_rereview.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_media_rereview.tool-calls.json",
+    "tool_counts": {
+      "exec": 26,
+      "send_message": 4
+    },
+    "original_sha256": "f24b4cfa8ee2101b068183db89eccce4e581db26046040a9a90a333458e0eabc",
+    "custom_tool_call_count": 26
+  },
+  {
+    "agent": "/root/independent_auth_rereview",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T23-00-53-01a164c5-e5ce-74b2-965b-4e032a7775fe.jsonl",
+    "session_id": "01a164c5-e5ce-74b2-965b-4e032a7775fe",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_auth_rereview.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\independent_auth_rereview.tool-calls.json",
+    "tool_counts": {
+      "exec": 25,
+      "send_message": 2
+    },
+    "original_sha256": "5625498f129316c64c44ec00ecded7590a7daef56c54bc524a4cf1463c71df24",
+    "custom_tool_call_count": 25
+  },
+  {
+    "agent": "/root/record_result_batch_author",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T00-06-25-01a16501-e531-7fc3-b940-c632a9c0ee9a.jsonl",
+    "session_id": "01a16501-e531-7fc3-b940-c632a9c0ee9a",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-5.6-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\record_result_batch_author.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\record_result_batch_author.tool-calls.json",
+    "tool_counts": {
+      "exec": 14
+    },
+    "original_sha256": "ac7ae214feb97f78b17f80c071763c25b0443be9ee68de4b4c7023552d4b2992",
+    "custom_tool_call_count": 14
+  },
+  {
+    "agent": "/root/record_result_batch_author_61",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T00-08-49-01a16504-17ce-7da0-9a0a-323adf9c3774.jsonl",
+    "session_id": "01a16504-17ce-7da0-9a0a-323adf9c3774",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\record_result_batch_author_61.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\record_result_batch_author_61.tool-calls.json",
+    "tool_counts": {
+      "exec": 29,
+      "send_message": 8
+    },
+    "original_sha256": "10fa10af450bd111a22e1f828fbcf9326e40afe62eb93821f3355b6380d461ca",
+    "custom_tool_call_count": 29
+  },
+  {
+    "agent": "/root/affect_style_spec_migration",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T03-45-51-01a165ca-c030-7f41-8eff-fd77918b632c.jsonl",
+    "session_id": "01a165ca-c030-7f41-8eff-fd77918b632c",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\affect_style_spec_migration.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\affect_style_spec_migration.tool-calls.json",
+    "tool_counts": {
+      "exec": 40,
+      "send_message": 14
+    },
+    "original_sha256": "23bdf6253d6a51ba77a91f94addf543401245efad3a26dc363e0a65970f3c6e4",
+    "custom_tool_call_count": 40
+  },
+  {
+    "agent": "/root/affect_workflow_task_migration",
+    "original_log": "C:\\Users\\roman\\.codex\\sessions\\2026\\10\\23\\rollout-2026-10-23T03-46-32-01a165cb-6793-7d31-ba91-a2a7ee39c63a.jsonl",
+    "session_id": "01a165cb-6793-7d31-ba91-a2a7ee39c63a",
+    "parent_thread_id": "01a156cd-74b9-7f31-97ed-da200c4b91b2",
+    "models_observed": [
+      "gpt-6.1-sol / high"
+    ],
+    "transcript": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\affect_workflow_task_migration.md",
+    "tool_calls": "_docs\\evidence\\ux-root-cause-audit-2026-10-26\\chat-evidence\\affect_workflow_task_migration.tool-calls.json",
+    "tool_counts": {
+      "exec": 53,
+      "send_message": 23,
+      "wait_agent": 10,
+      "wait": 8
+    },
+    "original_sha256": "ba40559a10e86c5942261bdb1ad26bf1046d88a1bc1da4c07a9e55022ec85e35",
+    "custom_tool_call_count": 53
+  }
+]

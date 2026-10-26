@@ -4,11 +4,13 @@ Dubbed uses spec-driven development: versioned requirements and specifications d
 
 ## Workflow
 
-`Requirements (BR if needed) -> specification -> specification review -> individual task drafts -> task grooming -> package review -> GitHub issues -> implementation -> verification -> acceptance -> integration gate -> handoff`
+`Backend/technical path: requirements (BR if needed) -> specification/review -> task drafts/grooming -> package review -> GitHub issues -> implementation -> verification/acceptance -> integration gate -> handoff`
 
-For end-to-end implementation, follow the [development orchestration](../orchestration.md): the main agent coordinates clean-context Planner/Reviewer assignments and GPT-6 Luna Executors/Publishers. A feature request can run the complete authorized cycle without manual stage-by-stage dispatch.
+`Meaningful frontend path: user purpose/invariants -> brief + runnable low-fi -> independent UX review/revision -> owner checkpoint 1 -> high-fi/review/revision -> owner checkpoint 2 -> synchronize affected specification/tasks -> independent contract/package review -> production integration -> verification/acceptance -> integration gate -> handoff`
 
-Start with the [workflow and documentation conventions](guides/doc-conventions.md) and [GitHub Issues workflow](guides/github-issues-workflow.md).
+For end-to-end implementation, follow the [development orchestration](../orchestration.md). Backend/technical work uses its default Planner/Reviewer and GPT-6 Luna Executor/Publisher path. Meaningful frontend work first follows the [design-first workflow](../frontend-design-workflow.md), then synchronizes its final contracts and enters the review, issue, production integration, and delivery stages. A full-cycle request can run its authorized work without manual stage-by-stage dispatch; explicit owner design checkpoints still require the owner's reply.
+
+Start with the [workflow and documentation conventions](guides/doc-conventions.md) and [GitHub Issues workflow](guides/github-issues-workflow.md). For meaningful frontend design, read the [design-first workflow](../frontend-design-workflow.md) before final specification/task drafting.
 
 | Artifact | Where it belongs | Purpose |
 |---|---|---|
@@ -62,6 +64,6 @@ After publication, update the index and dependencies to real issue references, r
 
 ## Process size
 
-A small isolated fix can use one issue and a focused check. Cross-component product behavior needs a spec and package review. Migrations, authentication, scheduling, recurrence, external actions, and production changes need explicit failure behavior and evidence proportionate to their risk. A final gate proves integration when individual tasks cannot prove the complete contract.
+A small isolated fix can use one issue and a focused check. Cross-component product behavior needs a spec and package review. Meaningful frontend redesigns use the design-first checkpoints before final contract synchronization; stable-composition fixes and backend work retain the lighter/default path. Migrations, authentication, scheduling, recurrence, external actions, and production changes need explicit failure behavior and evidence proportionate to their risk. A final gate proves integration when individual tasks cannot prove the complete contract.
 
 Requirements, execution scope, acceptance, and external actions follow the user's instructions and the linked issue/specification.

@@ -52,7 +52,7 @@ _docs/
 
 If two locations disagree, identify the conflict and affected work. A summary must not silently override its source. Optional GitHub labels/Project fields mirror task workflow status; issue body remains the canonical record.
 
-A specification contains a concise task index (title, intended outcome, draft/issue link), not full task descriptions. Groom unpublished tasks in their individual files, published tasks in their issues, and change the spec only for shared requirement/contract findings. After publication, replace draft task bodies with issue-link stubs and preserve the reviewed revision in Git history when available. Do not retain a second editable task backlog or aggregate all task bodies into one document.
+A specification contains a concise task index (title, intended outcome, draft/issue link), not full task descriptions. Groom unpublished tasks in their individual files, published tasks in their issues, and change the spec only for shared requirement/contract findings. After publication, replace draft task bodies with issue-link stubs. Keep one current task body in GitHub and the current issue-link stub locally; do not keep duplicate task archives or decision logs. Ordinary authorized commits record normal Git history; do not commit solely to preserve a task version. Do not retain a second editable task backlog or aggregate all task bodies into one document.
 
 ## Statuses
 
@@ -64,8 +64,8 @@ Do not treat approval of a document as approval of an implementation result. Do 
 
 ## References and updates
 
-Use relative links between maintained local documents. In GitHub issues/PRs, link repository documents at a known revision for approvals and immutable evidence. Before a remote exists, record local paths and mark links as not published.
+Use relative links between maintained local documents. In GitHub issues/PRs, link the current repository document or source revision when it supports an active review or approval. Before a remote exists, record local paths and mark links as not published. Do not create immutable archives for routine document updates.
 
-Keep accepted decisions traceable to a user/owner approval and document revision. Record new requirements or material deviations before dependent implementation. Update affected specs/issues together; preserve review history.
+Record owner approval in the current requirement, specification or issue, including the approved artifact identity, scope and a link to the owner's reply. Record new requirements or material deviations before dependent implementation, and update affected specs/issues together. Keep review evidence only as long as the current task or acceptance needs it; do not maintain a separate ADR, decision journal or historical review archive.
 
 HANDOFF changes when entry points, connection, environment, or the latest checkpoint change. CHANGELOG receives accepted behavior changes and their issue/PR references. Neither must duplicate every task action.
