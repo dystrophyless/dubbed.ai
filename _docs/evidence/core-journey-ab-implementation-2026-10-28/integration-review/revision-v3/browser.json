@@ -1,0 +1,1061 @@
+{
+  "date": "2026-10-29T02:09:17.772Z",
+  "temp": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "tmp": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "checks": [
+    {
+      "name": "A-panel-alignment",
+      "value": {
+        "media": {
+          "x": 328,
+          "y": 96,
+          "width": 784,
+          "height": 441,
+          "top": 96,
+          "right": 1112,
+          "bottom": 537,
+          "left": 328
+        },
+        "panel": {
+          "x": 1136,
+          "y": 96,
+          "width": 272,
+          "height": 311,
+          "top": 96,
+          "right": 1408,
+          "bottom": 407,
+          "left": 1136
+        }
+      }
+    },
+    {
+      "name": "delayed-source-preparing",
+      "value": {
+        "starts": [],
+        "text": "Preparing recording…",
+        "paused": true
+      }
+    },
+    {
+      "name": "delayed-source-complete",
+      "value": {
+        "capture": {
+          "starts": [
+            {
+              "at": 2810,
+              "videoAtStart": 0,
+              "firstAdvanceAt": 2828.5999999996275
+            }
+          ],
+          "stops": [
+            {
+              "at": 7989.0999999996275,
+              "videoTime": 5.114807
+            }
+          ]
+        },
+        "stored": {
+          "project": {
+            "id": "sintel-prepared",
+            "accountId": "seeded-local-account",
+            "revision": 2,
+            "preparationRevision": "sintel-scene-v1",
+            "title": "Sintel · The Search",
+            "source": {
+              "url": "/media/scene.mp4",
+              "bytes": 886403,
+              "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+              "durationSeconds": 13.416667,
+              "width": 960,
+              "height": 408,
+              "rotationDegrees": 0,
+              "attribution": "Sintel · Blender Foundation",
+              "license": "CC BY 3.0"
+            },
+            "windows": [
+              {
+                "id": "sintel-turn-1",
+                "revision": 1,
+                "startMs": 0,
+                "endMs": 5100,
+                "text": {
+                  "en": "What brings you to the land of the gatekeepers?",
+                  "ru": "Что привело тебя в страну хранителей?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-2",
+                "revision": 1,
+                "startMs": 5100,
+                "endMs": 8500,
+                "text": {
+                  "en": "I’m searching for someone.",
+                  "ru": "Я ищу одного человека."
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-3",
+                "revision": 1,
+                "startMs": 8500,
+                "endMs": 13400,
+                "text": {
+                  "en": "Someone very dear? A kindred spirit?",
+                  "ru": "Кого-то очень близкого? Родственную душу?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              }
+            ],
+            "draftCandidateByTurn": {
+              "sintel-turn-1": "candidate:operation:ad4602a7-3ca7-4281-ad31-3347a3d6ad86"
+            },
+            "acceptedByTurn": {},
+            "acceptedProjectRevisionByTurn": {},
+            "acceptedOperationByTurn": {},
+            "acceptedHistory": [],
+            "tombstonedAt": null
+          },
+          "candidate": {
+            "id": "candidate:operation:ad4602a7-3ca7-4281-ad31-3347a3d6ad86",
+            "byteSize": 83372,
+            "sha256": "acee7ef6b8d97a1bfa4a4a6b89bf6f9e5848d82e6d48940c1738aafc4e639b8d",
+            "endReason": "fixed-window",
+            "probe": {
+              "mimeType": "audio/webm;codecs=opus",
+              "byteSize": 83372,
+              "durationSeconds": 5.16,
+              "decodedFrames": 247680,
+              "channelCount": 1,
+              "sampleRate": 48000,
+              "decodeStatus": "decoded",
+              "waveformPeaks": [
+                0.002,
+                0,
+                0,
+                0.012,
+                1.016,
+                0.026,
+                0.005,
+                0.001,
+                0,
+                0,
+                1.042,
+                0.022,
+                0.005,
+                0.001,
+                0,
+                0,
+                1.014,
+                0.038,
+                0.007,
+                0.001,
+                0,
+                0,
+                1.007,
+                0.1,
+                0.009,
+                0.002,
+                0,
+                0,
+                1.003,
+                0.999,
+                0.024,
+                0.005,
+                0.001,
+                0,
+                0,
+                1.001,
+                0.032,
+                0.006,
+                0.001,
+                0,
+                0,
+                0.999,
+                0.048,
+                0.008,
+                0.002,
+                0,
+                0,
+                1,
+                0.084,
+                0.012,
+                0.002,
+                0,
+                0,
+                0.998,
+                0.16,
+                0.016,
+                0.003,
+                0.001,
+                0,
+                0.995,
+                0.998,
+                0.022,
+                0.004,
+                0.001
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "usable-interruption",
+      "value": {
+        "media": {
+          "paused": true,
+          "time": 0.756661
+        },
+        "stored": {
+          "project": {
+            "id": "sintel-prepared",
+            "accountId": "seeded-local-account",
+            "revision": 3,
+            "preparationRevision": "sintel-scene-v1",
+            "title": "Sintel · The Search",
+            "source": {
+              "url": "/media/scene.mp4",
+              "bytes": 886403,
+              "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+              "durationSeconds": 13.416667,
+              "width": 960,
+              "height": 408,
+              "rotationDegrees": 0,
+              "attribution": "Sintel · Blender Foundation",
+              "license": "CC BY 3.0"
+            },
+            "windows": [
+              {
+                "id": "sintel-turn-1",
+                "revision": 1,
+                "startMs": 0,
+                "endMs": 5100,
+                "text": {
+                  "en": "What brings you to the land of the gatekeepers?",
+                  "ru": "Что привело тебя в страну хранителей?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-2",
+                "revision": 1,
+                "startMs": 5100,
+                "endMs": 8500,
+                "text": {
+                  "en": "I’m searching for someone.",
+                  "ru": "Я ищу одного человека."
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-3",
+                "revision": 1,
+                "startMs": 8500,
+                "endMs": 13400,
+                "text": {
+                  "en": "Someone very dear? A kindred spirit?",
+                  "ru": "Кого-то очень близкого? Родственную душу?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              }
+            ],
+            "draftCandidateByTurn": {
+              "sintel-turn-1": "candidate:operation:20dcb8d3-6456-499e-8afc-f5895b66ac86"
+            },
+            "acceptedByTurn": {},
+            "acceptedProjectRevisionByTurn": {},
+            "acceptedOperationByTurn": {},
+            "acceptedHistory": [],
+            "tombstonedAt": null
+          },
+          "candidate": {
+            "id": "candidate:operation:20dcb8d3-6456-499e-8afc-f5895b66ac86",
+            "byteSize": 4924,
+            "sha256": "dc01c08aa81b77b13764717a0dc2de4065912db62564702bddd94e8583926e00",
+            "endReason": "interrupted",
+            "probe": {
+              "mimeType": "audio/webm;codecs=opus",
+              "byteSize": 4924,
+              "durationSeconds": 0.78,
+              "decodedFrames": 37440,
+              "channelCount": 1,
+              "sampleRate": 48000,
+              "decodeStatus": "decoded",
+              "waveformPeaks": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1.015,
+                1.018,
+                0.972,
+                0.124,
+                0.066,
+                0.036,
+                0.03,
+                0.021,
+                0.017,
+                0.013,
+                0.011,
+                0.008,
+                0.006,
+                0.005,
+                0.004,
+                0.003,
+                0.002,
+                0.002,
+                0.001,
+                0.001,
+                0.001,
+                0.001
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "no-auto-resume",
+      "value": {
+        "starts": 2,
+        "paused": true
+      }
+    },
+    {
+      "name": "pending-interruption-preservation",
+      "value": {
+        "prior": "candidate:operation:20dcb8d3-6456-499e-8afc-f5895b66ac86",
+        "stored": {
+          "project": {
+            "id": "sintel-prepared",
+            "accountId": "seeded-local-account",
+            "revision": 3,
+            "preparationRevision": "sintel-scene-v1",
+            "title": "Sintel · The Search",
+            "source": {
+              "url": "/media/scene.mp4",
+              "bytes": 886403,
+              "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+              "durationSeconds": 13.416667,
+              "width": 960,
+              "height": 408,
+              "rotationDegrees": 0,
+              "attribution": "Sintel · Blender Foundation",
+              "license": "CC BY 3.0"
+            },
+            "windows": [
+              {
+                "id": "sintel-turn-1",
+                "revision": 1,
+                "startMs": 0,
+                "endMs": 5100,
+                "text": {
+                  "en": "What brings you to the land of the gatekeepers?",
+                  "ru": "Что привело тебя в страну хранителей?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-2",
+                "revision": 1,
+                "startMs": 5100,
+                "endMs": 8500,
+                "text": {
+                  "en": "I’m searching for someone.",
+                  "ru": "Я ищу одного человека."
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-3",
+                "revision": 1,
+                "startMs": 8500,
+                "endMs": 13400,
+                "text": {
+                  "en": "Someone very dear? A kindred spirit?",
+                  "ru": "Кого-то очень близкого? Родственную душу?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              }
+            ],
+            "draftCandidateByTurn": {
+              "sintel-turn-1": "candidate:operation:20dcb8d3-6456-499e-8afc-f5895b66ac86"
+            },
+            "acceptedByTurn": {},
+            "acceptedProjectRevisionByTurn": {},
+            "acceptedOperationByTurn": {},
+            "acceptedHistory": [],
+            "tombstonedAt": null
+          },
+          "candidate": {
+            "id": "candidate:operation:20dcb8d3-6456-499e-8afc-f5895b66ac86",
+            "byteSize": 4924,
+            "sha256": "dc01c08aa81b77b13764717a0dc2de4065912db62564702bddd94e8583926e00",
+            "endReason": "interrupted",
+            "probe": {
+              "mimeType": "audio/webm;codecs=opus",
+              "byteSize": 4924,
+              "durationSeconds": 0.78,
+              "decodedFrames": 37440,
+              "channelCount": 1,
+              "sampleRate": 48000,
+              "decodeStatus": "decoded",
+              "waveformPeaks": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1.015,
+                1.018,
+                0.972,
+                0.124,
+                0.066,
+                0.036,
+                0.03,
+                0.021,
+                0.017,
+                0.013,
+                0.011,
+                0.008,
+                0.006,
+                0.005,
+                0.004,
+                0.003,
+                0.002,
+                0.002,
+                0.001,
+                0.001,
+                0.001,
+                0.001
+              ]
+            }
+          }
+        },
+        "tracks": [
+          "ended",
+          "ended",
+          "ended"
+        ]
+      }
+    },
+    {
+      "name": "unusable-interruption-preservation",
+      "value": {
+        "prior": "candidate:operation:20dcb8d3-6456-499e-8afc-f5895b66ac86",
+        "stored": {
+          "project": {
+            "id": "sintel-prepared",
+            "accountId": "seeded-local-account",
+            "revision": 3,
+            "preparationRevision": "sintel-scene-v1",
+            "title": "Sintel · The Search",
+            "source": {
+              "url": "/media/scene.mp4",
+              "bytes": 886403,
+              "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+              "durationSeconds": 13.416667,
+              "width": 960,
+              "height": 408,
+              "rotationDegrees": 0,
+              "attribution": "Sintel · Blender Foundation",
+              "license": "CC BY 3.0"
+            },
+            "windows": [
+              {
+                "id": "sintel-turn-1",
+                "revision": 1,
+                "startMs": 0,
+                "endMs": 5100,
+                "text": {
+                  "en": "What brings you to the land of the gatekeepers?",
+                  "ru": "Что привело тебя в страну хранителей?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-2",
+                "revision": 1,
+                "startMs": 5100,
+                "endMs": 8500,
+                "text": {
+                  "en": "I’m searching for someone.",
+                  "ru": "Я ищу одного человека."
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-3",
+                "revision": 1,
+                "startMs": 8500,
+                "endMs": 13400,
+                "text": {
+                  "en": "Someone very dear? A kindred spirit?",
+                  "ru": "Кого-то очень близкого? Родственную душу?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              }
+            ],
+            "draftCandidateByTurn": {
+              "sintel-turn-1": "candidate:operation:20dcb8d3-6456-499e-8afc-f5895b66ac86"
+            },
+            "acceptedByTurn": {},
+            "acceptedProjectRevisionByTurn": {},
+            "acceptedOperationByTurn": {},
+            "acceptedHistory": [],
+            "tombstonedAt": null
+          },
+          "candidate": {
+            "id": "candidate:operation:20dcb8d3-6456-499e-8afc-f5895b66ac86",
+            "byteSize": 4924,
+            "sha256": "dc01c08aa81b77b13764717a0dc2de4065912db62564702bddd94e8583926e00",
+            "endReason": "interrupted",
+            "probe": {
+              "mimeType": "audio/webm;codecs=opus",
+              "byteSize": 4924,
+              "durationSeconds": 0.78,
+              "decodedFrames": 37440,
+              "channelCount": 1,
+              "sampleRate": 48000,
+              "decodeStatus": "decoded",
+              "waveformPeaks": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1.015,
+                1.018,
+                0.972,
+                0.124,
+                0.066,
+                0.036,
+                0.03,
+                0.021,
+                0.017,
+                0.013,
+                0.011,
+                0.008,
+                0.006,
+                0.005,
+                0.004,
+                0.003,
+                0.002,
+                0.002,
+                0.001,
+                0.001,
+                0.001,
+                0.001
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "native-clock-trace",
+      "value": {
+        "starts": [
+          {
+            "at": 2810,
+            "videoAtStart": 0,
+            "firstAdvanceAt": 2828.5999999996275
+          },
+          {
+            "at": 8592.700000001118,
+            "videoAtStart": 0,
+            "firstAdvanceAt": 8616.200000001118
+          },
+          {
+            "at": 9963.800000000745,
+            "videoAtStart": 0,
+            "firstAdvanceAt": 10057.099999999627
+          },
+          {
+            "at": 10651.800000000745,
+            "videoAtStart": 5.1,
+            "firstAdvanceAt": 10673.599999999627
+          },
+          {
+            "at": 14337.099999999627,
+            "videoAtStart": 8.5,
+            "firstAdvanceAt": 14357.800000000745
+          }
+        ],
+        "stops": [
+          {
+            "at": 7989.0999999996275,
+            "videoTime": 5.114807
+          },
+          {
+            "at": 9413.099999999627,
+            "videoTime": 0.756661
+          },
+          {
+            "at": 10480.099999999627,
+            "videoTime": 0.444191
+          },
+          {
+            "at": 14120,
+            "videoTime": 8.505661
+          },
+          {
+            "at": 19305.800000000745,
+            "videoTime": 13.411496
+          }
+        ]
+      }
+    },
+    {
+      "name": "source-directional-keys",
+      "value": [
+        {
+          "key": "ArrowRight",
+          "value": {
+            "selected": "My dub",
+            "active": "My dub"
+          }
+        },
+        {
+          "key": "Home",
+          "value": {
+            "selected": "Original",
+            "active": "Original"
+          }
+        },
+        {
+          "key": "End",
+          "value": {
+            "selected": "My dub",
+            "active": "My dub"
+          }
+        },
+        {
+          "key": "ArrowLeft",
+          "value": {
+            "selected": "My dub",
+            "active": "My dub"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ordinary-restart-cohorts",
+      "value": [
+        {
+          "source": "dub"
+        },
+        {
+          "source": "dub"
+        },
+        {
+          "source": "dub"
+        },
+        {
+          "source": "dub"
+        },
+        {
+          "source": "dub"
+        }
+      ]
+    },
+    {
+      "name": "native-play-cancel-race",
+      "value": {
+        "paused": true,
+        "playDisabled": false
+      }
+    },
+    {
+      "name": "B-result-resize-cycles",
+      "value": [
+        {
+          "vp": {
+            "width": 1440,
+            "height": 900
+          },
+          "value": {
+            "width": 1440,
+            "documentWidth": 1440,
+            "screen": {
+              "x": 260,
+              "y": 104,
+              "width": 920,
+              "height": 517.5,
+              "top": 104,
+              "right": 1180,
+              "bottom": 621.5,
+              "left": 260
+            },
+            "height": 900
+          }
+        },
+        {
+          "vp": {
+            "width": 390,
+            "height": 844
+          },
+          "value": {
+            "width": 390,
+            "documentWidth": 390,
+            "screen": {
+              "x": 16,
+              "y": 168,
+              "width": 358,
+              "height": 201.375,
+              "top": 168,
+              "right": 374,
+              "bottom": 369.375,
+              "left": 16
+            },
+            "height": 844
+          }
+        },
+        {
+          "vp": {
+            "width": 1280,
+            "height": 600
+          },
+          "value": {
+            "width": 1280,
+            "documentWidth": 1280,
+            "screen": {
+              "x": 359.109375,
+              "y": 80,
+              "width": 561.765625,
+              "height": 315.984375,
+              "top": 80,
+              "right": 920.875,
+              "bottom": 395.984375,
+              "left": 359.109375
+            },
+            "height": 600
+          }
+        },
+        {
+          "vp": {
+            "width": 1440,
+            "height": 900
+          },
+          "value": {
+            "width": 1440,
+            "documentWidth": 1440,
+            "screen": {
+              "x": 260,
+              "y": 104,
+              "width": 920,
+              "height": 517.5,
+              "top": 104,
+              "right": 1180,
+              "bottom": 621.5,
+              "left": 260
+            },
+            "height": 900
+          }
+        },
+        {
+          "vp": {
+            "width": 390,
+            "height": 844
+          },
+          "value": {
+            "width": 390,
+            "documentWidth": 390,
+            "screen": {
+              "x": 16,
+              "y": 168,
+              "width": 358,
+              "height": 201.375,
+              "top": 168,
+              "right": 374,
+              "bottom": 369.375,
+              "left": 16
+            },
+            "height": 844
+          }
+        },
+        {
+          "vp": {
+            "width": 1280,
+            "height": 600
+          },
+          "value": {
+            "width": 1280,
+            "documentWidth": 1280,
+            "screen": {
+              "x": 359.109375,
+              "y": 80,
+              "width": 561.765625,
+              "height": 315.984375,
+              "top": 80,
+              "right": 920.875,
+              "bottom": 395.984375,
+              "left": 359.109375
+            },
+            "height": 600
+          }
+        },
+        {
+          "vp": {
+            "width": 1440,
+            "height": 900
+          },
+          "value": {
+            "width": 1440,
+            "documentWidth": 1440,
+            "screen": {
+              "x": 260,
+              "y": 104,
+              "width": 920,
+              "height": 517.5,
+              "top": 104,
+              "right": 1180,
+              "bottom": 621.5,
+              "left": 260
+            },
+            "height": 900
+          }
+        },
+        {
+          "vp": {
+            "width": 390,
+            "height": 844
+          },
+          "value": {
+            "width": 390,
+            "documentWidth": 390,
+            "screen": {
+              "x": 16,
+              "y": 168,
+              "width": 358,
+              "height": 201.375,
+              "top": 168,
+              "right": 374,
+              "bottom": 369.375,
+              "left": 16
+            },
+            "height": 844
+          }
+        },
+        {
+          "vp": {
+            "width": 1280,
+            "height": 600
+          },
+          "value": {
+            "width": 1280,
+            "documentWidth": 1280,
+            "screen": {
+              "x": 359.109375,
+              "y": 80,
+              "width": 561.765625,
+              "height": 315.984375,
+              "top": 80,
+              "right": 920.875,
+              "bottom": 395.984375,
+              "left": 359.109375
+            },
+            "height": 600
+          }
+        },
+        {
+          "vp": {
+            "width": 1440,
+            "height": 900
+          },
+          "value": {
+            "width": 1440,
+            "documentWidth": 1440,
+            "screen": {
+              "x": 260,
+              "y": 104,
+              "width": 920,
+              "height": 517.5,
+              "top": 104,
+              "right": 1180,
+              "bottom": 621.5,
+              "left": 260
+            },
+            "height": 900
+          }
+        },
+        {
+          "vp": {
+            "width": 390,
+            "height": 844
+          },
+          "value": {
+            "width": 390,
+            "documentWidth": 390,
+            "screen": {
+              "x": 16,
+              "y": 168,
+              "width": 358,
+              "height": 201.375,
+              "top": 168,
+              "right": 374,
+              "bottom": 369.375,
+              "left": 16
+            },
+            "height": 844
+          }
+        },
+        {
+          "vp": {
+            "width": 1280,
+            "height": 600
+          },
+          "value": {
+            "width": 1280,
+            "documentWidth": 1280,
+            "screen": {
+              "x": 359.109375,
+              "y": 80,
+              "width": 561.765625,
+              "height": 315.984375,
+              "top": 80,
+              "right": 920.875,
+              "bottom": 395.984375,
+              "left": 359.109375
+            },
+            "height": 600
+          }
+        }
+      ]
+    },
+    {
+      "name": "tombstone-delivery",
+      "value": {
+        "downloads": 0,
+        "player": 0,
+        "boundary": 1
+      }
+    }
+  ],
+  "errors": []
+}

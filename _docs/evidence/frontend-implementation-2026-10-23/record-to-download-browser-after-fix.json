@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-23T02:36:24.432Z",
+  "boundary": "Isolated npm-build-passing snapshot after revision/lease/capture fixes. Native browser fake microphone only, speakers muted. Seeded synthetic account; result is a declared fixture, not the captured performance.",
+  "steps": [
+    {
+      "line": 1,
+      "during": {
+        "stopButtons": 0,
+        "video": {
+          "paused": false,
+          "currentTime": 0.922537,
+          "controls": false
+        }
+      },
+      "after": {
+        "text": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\n\nMicrophone access is requested only when you choose Record line.\n\nLine 1 of 3\n\nA blue light is on.\n\nCapture window: 0.75–3.18 s\n\nAccepted takes: 0 / 3\nOriginal video volume\nRecording status\nRecord line\nRecord again\nAccept take\nCurrent draft recording\nDraft saved. It has not been accepted as a take.\n\nRecorded audio frames were decoded. Listen, then accept this take when you are ready.\n\nPrevious line\nNext line\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.",
+        "media": [
+          {
+            "tag": "VIDEO",
+            "paused": true,
+            "currentTime": 3.148242
+          },
+          {
+            "tag": "AUDIO",
+            "paused": true,
+            "currentTime": 0
+          }
+        ]
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "recordHeader": "Dubbed\nNew dub\nProjects\nCredits\nAccount\nCredits\nLoading\nLanguage\nEN\nRU\nSign out",
+  "outcome": "failed",
+  "failure": "TimeoutError: locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Next line', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\" data-slot=\"button\" data-size=\"medium\" data-variant=\"secondary\" class=\"ui-button ui-button--secondary ui-button--medium\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    23 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+  "url": "http://127.0.0.1:4281/projects/34152af9-b309-47c8-9990-806dba117f3b/record",
+  "main": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\n\nMicrophone access is requested only when you choose Record line.\n\nLine 1 of 3\n\nA blue light is on.\n\nCapture window: 0.75–3.18 s\n\nAccepted takes: 0 / 3\nOriginal video volume\nRecording status\nRecord line\nRecord again\nAccept take\nCurrent draft recording\nDraft saved. It has not been accepted as a take.\n\nRecorded audio frames were decoded. Listen, then accept this take when you are ready.\n\nPrevious line\nNext line\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.",
+  "dialogs": []
+}

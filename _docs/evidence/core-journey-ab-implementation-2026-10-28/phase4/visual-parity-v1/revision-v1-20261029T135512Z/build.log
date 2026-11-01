@@ -1,0 +1,14 @@
+
+> dubbed-core-foundation@0.1.0 build
+> vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 1973 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.29 kB
+dist/assets/index-q8R4oxcH.css   27.32 kB │ gzip:   5.76 kB
+dist/assets/index-CBIg61cJ.js   382.66 kB │ gzip: 110.46 kB
+
+✓ built in 997ms

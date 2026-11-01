@@ -1,0 +1,13 @@
+
+> dubbed-core-foundation@0.1.0 test:browser
+> playwright test --config playwright.config.mjs --grep Layout [AB] records real browser fake input --output=C:/Users/roman/AppData/Local/Temp/Dubbed-root-final-20261029
+
+
+Running 2 tests using 1 worker
+
+(node:10564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\record-journey.spec.ts:664:3 › Layout A records real browser fake input, recovers the candidate, and completes the accepted snapshot (35.1s)
+  ok 2 e2e\record-journey.spec.ts:664:3 › Layout B records real browser fake input, recovers the candidate, and completes the accepted snapshot (28.6s)
+
+  2 passed (1.1m)

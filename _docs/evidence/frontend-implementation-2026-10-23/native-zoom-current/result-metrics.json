@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-23T18:45:41.507Z",
+  "boundary": "Current source ResultScreen through existing controlled fixture facade at Vite4283; native Chromium zoom2. English only. No real backend generation, physical capture, or actual download file save asserted.",
+  "states": [
+    {
+      "name": "result-normal-en",
+      "innerWidth": 711,
+      "outerWidth": 1440,
+      "bodyZoom": "1",
+      "overflow": false,
+      "heading": "Your result",
+      "video": [
+        {
+          "src": "/media/result-generation-001.mp4",
+          "muted": true,
+          "volume": 0,
+          "paused": true
+        }
+      ],
+      "text": "Your result\n\nControlled fixture project\n\nReturn to recording\nDisplayed generation: 1\nSynthetic fixture result; not rendered from accepted takes or a custom upload.\nDownload MP4",
+      "viewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 0,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      }
+    },
+    {
+      "name": "result-new-pending-en",
+      "innerWidth": 711,
+      "outerWidth": 1440,
+      "bodyZoom": "1",
+      "overflow": false,
+      "heading": "Your result",
+      "video": [
+        {
+          "src": "/media/result-generation-001.mp4",
+          "muted": true,
+          "volume": 0,
+          "paused": false
+        }
+      ],
+      "text": "Your result\n\nControlled fixture project\n\nReturn to recording\nPrevious version\nNew version ready\nWatch new\nDisplayed generation: 1\nSynthetic fixture result; not rendered from accepted takes or a custom upload.\nPreparing download…\nNew version ready",
+      "viewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 319,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      }
+    },
+    {
+      "name": "result-download-failure-en",
+      "innerWidth": 711,
+      "outerWidth": 1440,
+      "bodyZoom": "1",
+      "overflow": false,
+      "heading": "Your result",
+      "video": [
+        {
+          "src": "/media/result-generation-001.mp4",
+          "muted": true,
+          "volume": 0,
+          "paused": false
+        }
+      ],
+      "text": "Your result\n\nControlled fixture project\n\nReturn to recording\nPrevious version\nNew version ready\nWatch new\nDisplayed generation: 1\nSynthetic fixture result; not rendered from accepted takes or a custom upload.\nThe download request for version 1 failed. Retry will request that same version.\nRetry download version 1\nNew version ready",
+      "viewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 319,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      }
+    },
+    {
+      "name": "result-new-displayed-en",
+      "innerWidth": 711,
+      "outerWidth": 1440,
+      "bodyZoom": "1",
+      "overflow": false,
+      "heading": "Your result",
+      "video": [
+        {
+          "src": "/media/result-generation-002.mp4",
+          "muted": true,
+          "volume": 0,
+          "paused": true
+        }
+      ],
+      "text": "Your result\n\nControlled fixture project\n\nReturn to recording\nDisplayed generation: 2\nSynthetic fixture result; not rendered from accepted takes or a custom upload.\nThe download request for version 1 failed. Retry will request that same version.\nRetry download version 1\nDownload MP4",
+      "viewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 36,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      }
+    }
+  ],
+  "errors": [],
+  "journal": {
+    "downloadCalls": [
+      {
+        "projectId": "controlled-result-project",
+        "displayedGenerationId": "controlled-generation-001",
+        "operationId": "c18c91f6-4bce-4d3c-94c5-e3ed30223004"
+      }
+    ],
+    "assemblyCalls": 0,
+    "creditCalls": [],
+    "operationCalls": [],
+    "otherServiceCalls": []
+  },
+  "outcome": "passed"
+}

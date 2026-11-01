@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-10-28T19:15:28.142Z",
+  "browser": "156.0.8078.49",
+  "mode": "Chromium browser-supplied fake audio input",
+  "physicalMicrophone": false,
+  "verificationOnly": true,
+  "captured": {
+    "status": "saved",
+    "purpose": "verification-only",
+    "operationId": "84f9fdb6-5823-4a6d-8361-5926497191ed",
+    "sha256": "0f8f33a9d713f7f29df17828fef7f504a22a4572fb6ea33dbac29eddf7a82606",
+    "byteSize": 20380,
+    "mimeType": "audio/webm;codecs=opus",
+    "duration": 1.74,
+    "frames": 83520,
+    "elapsedMs": 1807
+  },
+  "captureTrace": {
+    "getUserMedia": 1,
+    "recorderStarts": 1,
+    "recorderStops": 1,
+    "trackStops": 1
+  },
+  "recoveredOperationId": "84f9fdb6-5823-4a6d-8361-5926497191ed",
+  "recoveredSha256": "0f8f33a9d713f7f29df17828fef7f504a22a4572fb6ea33dbac29eddf7a82606",
+  "recoveryTrace": {
+    "getUserMedia": 0,
+    "recorderStarts": 0,
+    "recorderStops": 0,
+    "trackStops": 0
+  }
+}

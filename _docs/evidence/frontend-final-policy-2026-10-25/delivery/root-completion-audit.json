@@ -1,0 +1,345 @@
+{
+  "clientDate": "2026-10-25",
+  "observedAtUtc": "2026-10-24 20:31:48 UTC",
+  "scope": "Owner-approved backend-free frontend/mock milestone: 21 current issues; #76 explicitly deferred outside current milestone and remains open.",
+  "deliveryCommit": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "parent": "0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2",
+  "remoteVerified": "refs/heads/main equals delivery commit; exact46 reviewed paths; Git-filtered working blob IDs all match; index empty and frontend clean.",
+  "checks": {
+    "unit": {
+      "files": 44,
+      "passed": 222
+    },
+    "browser": {
+      "passed": 118,
+      "retries": 0,
+      "skips": 0,
+      "minutes": 5
+    },
+    "typecheck": "passed",
+    "build": "passed; 947.46kB JS/55.71kB CSS",
+    "lint": "exit0 with warnings",
+    "mediaPassed": 3,
+    "realUnavailablePassed": 1
+  },
+  "sourceFreeze": {
+    "files": 198,
+    "sha256": "372E957FAFA6DA284EA88657F4FC0BE138F2E5498B8C6C44C0E2191EC7ADE781",
+    "drift": 0,
+    "unitBuildBoundary": "7985597676C0ADAE90C447E922F74C7F53817FB4888D1FB2570DFAB70D5F31FE; only documented test-only screenshot follow-up changed afterward"
+  },
+  "issues": [
+    {
+      "number": 61,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — the bounded report passed AC-01 through AC-04 under delegated Orchestrator acceptance, and its exact four-file delivery has been committed and verified on origin/main. This issue records document acceptance only.",
+      "updated_at": "2026-10-23T16:53:31Z",
+      "closed_at": "2026-10-23T16:53:31Z",
+      "criteriaChecked": 0,
+      "criteriaTotal": 4,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 62,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:21:06Z",
+      "closed_at": "2026-10-24T01:21:06Z",
+      "criteriaChecked": 9,
+      "criteriaTotal": 9,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 63,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root's delegated rule-based acceptance dated 2026-10-25 covers AC-01–AC-09 and AC-ICON-01 within the frozen backend-free mock/Chromium envelope. The accepted delivery is committed and verified on origin/main. Real backend, physical-device, production storage/billing and cross-device durability/lease claims remain outside this acceptance.",
+      "updated_at": "2026-10-24T20:28:33Z",
+      "closed_at": "2026-10-24T20:28:33Z",
+      "criteriaChecked": 10,
+      "criteriaTotal": 10,
+      "deliveryRecorded": true,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 64,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — bounded investigation evidence delivered; scoped commit pushed and verified on origin/main; closed as completed.",
+      "updated_at": "2026-10-23T17:14:46Z",
+      "closed_at": "2026-10-23T17:14:46Z",
+      "criteriaChecked": 4,
+      "criteriaTotal": 4,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 65,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:21:22Z",
+      "closed_at": "2026-10-24T01:21:22Z",
+      "criteriaChecked": 9,
+      "criteriaTotal": 9,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 66,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:21:33Z",
+      "closed_at": "2026-10-24T01:21:33Z",
+      "criteriaChecked": 9,
+      "criteriaTotal": 9,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 67,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — The bounded mock-backed increment passed its in-scope acceptance criteria, received delegated Orchestrator acceptance, and was delivered in commit 7845b84d171858628128d9e60e6d3d560f43055a on origin/main. The Orchestrator recorded the close-completed decision on 2026-10-24; this issue is closed as completed.",
+      "updated_at": "2026-10-23T23:18:30Z",
+      "closed_at": "2026-10-23T23:18:30Z",
+      "criteriaChecked": 4,
+      "criteriaTotal": 4,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 68,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — The bounded mock-backed increment passed its in-scope acceptance criteria, received delegated Orchestrator acceptance, and was delivered in commit 7845b84d171858628128d9e60e6d3d560f43055a on origin/main. The Orchestrator recorded the close-completed decision on 2026-10-24; this issue is closed as completed.",
+      "updated_at": "2026-10-23T23:18:34Z",
+      "closed_at": "2026-10-23T23:18:34Z",
+      "criteriaChecked": 4,
+      "criteriaTotal": 4,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 69,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:21:48Z",
+      "closed_at": "2026-10-24T01:21:48Z",
+      "criteriaChecked": 6,
+      "criteriaTotal": 6,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 70,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — The bounded mock-backed increment passed its in-scope acceptance criteria, received delegated Orchestrator acceptance, and was delivered in commit 7845b84d171858628128d9e60e6d3d560f43055a on origin/main. The Orchestrator recorded the close-completed decision on 2026-10-24; this issue is closed as completed.",
+      "updated_at": "2026-10-23T23:18:41Z",
+      "closed_at": "2026-10-23T23:18:41Z",
+      "criteriaChecked": 4,
+      "criteriaTotal": 4,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 71,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:21:59Z",
+      "closed_at": "2026-10-24T01:21:59Z",
+      "criteriaChecked": 9,
+      "criteriaTotal": 9,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 72,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "completed — Root delegated acceptance is recorded in `_docs/evidence/frontend-implementation-2026-10-23/issue-72-acceptance.md`. The exact 20-file manifest was committed as `35d122949ad0e07a7e365bcbd4c1ec69202796c3`, pushed normally to `origin/main`, and verified by remote readback.",
+      "updated_at": "2026-10-23T18:43:18Z",
+      "closed_at": "2026-10-23T18:43:18Z",
+      "criteriaChecked": 4,
+      "criteriaTotal": 4,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 73,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — The bounded mock-backed increment passed its in-scope acceptance criteria, received delegated Orchestrator acceptance, and was delivered in commit 7845b84d171858628128d9e60e6d3d560f43055a on origin/main. The Orchestrator recorded the close-completed decision on 2026-10-24; this issue is closed as completed.",
+      "updated_at": "2026-10-23T23:18:37Z",
+      "closed_at": "2026-10-23T23:18:37Z",
+      "criteriaChecked": 4,
+      "criteriaTotal": 4,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 74,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:22:09Z",
+      "closed_at": "2026-10-24T01:22:09Z",
+      "criteriaChecked": 8,
+      "criteriaTotal": 8,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 75,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:22:29Z",
+      "closed_at": "2026-10-24T01:22:29Z",
+      "criteriaChecked": 6,
+      "criteriaTotal": 6,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 76,
+      "state": "open",
+      "reason": null,
+      "workflow": "blocked — real backend/contracts/policy/media evidence are external prerequisites, not delivered by this frontend package.",
+      "updated_at": "2026-10-24T19:20:11Z",
+      "closed_at": null,
+      "criteriaChecked": 0,
+      "criteriaTotal": 4,
+      "deliveryRecorded": false,
+      "deferred": true,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 77,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root's delegated rule-based acceptance dated 2026-10-25 covers AC-01–AC-09 and AC-VIS-01 within the backend-free mock/Chromium envelope. AC-04 covers persisted-draft Save and leave/reload; AC-07 covers same-project recording-tab actor/grant fencing. The accepted delivery is committed and verified on origin/main. Physical-device, durable production-media and production cross-device lease claims remain outside this acceptance.",
+      "updated_at": "2026-10-24T20:28:10Z",
+      "closed_at": "2026-10-24T20:28:10Z",
+      "criteriaChecked": 10,
+      "criteriaTotal": 10,
+      "deliveryRecorded": true,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 78,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:22:39Z",
+      "closed_at": "2026-10-24T01:22:39Z",
+      "criteriaChecked": 6,
+      "criteriaTotal": 6,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 79,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:22:50Z",
+      "closed_at": "2026-10-24T01:22:50Z",
+      "criteriaChecked": 9,
+      "criteriaTotal": 9,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 80,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:23:49Z",
+      "closed_at": "2026-10-24T01:23:49Z",
+      "criteriaChecked": 8,
+      "criteriaTotal": 8,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 81,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root's delegated rule-based acceptance dated 2026-10-25 covers AC-01–AC-07 and AC-VIS-01 within the backend-free mock/Chromium envelope. AC-03 includes rejection below 1,000 ms and eligibility at exactly 1,000 ms. The accepted delivery is committed and verified on origin/main. Production upload, preview, storage, pricing and billing evidence remain outside this acceptance.",
+      "updated_at": "2026-10-24T20:28:14Z",
+      "closed_at": "2026-10-24T20:28:14Z",
+      "criteriaChecked": 8,
+      "criteriaTotal": 8,
+      "deliveryRecorded": true,
+      "labels": [
+        "frontend"
+      ]
+    },
+    {
+      "number": 82,
+      "state": "closed",
+      "reason": "completed",
+      "workflow": "accepted — Root recorded delegated acceptance on 2026-10-24 for this issue's bounded mock-backed frontend criteria. The cohort delivery is published in commit 0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2 (parent 7845b84d171858628128d9e60e6d3d560f43055a), pushed to origin/main, and independently verified by Root. This completion does not remove the production, policy, provider, security, retention, or integration gates preserved in the task contract.",
+      "updated_at": "2026-10-24T01:24:04Z",
+      "closed_at": "2026-10-24T01:24:04Z",
+      "criteriaChecked": 9,
+      "criteriaTotal": 9,
+      "deliveryRecorded": false,
+      "labels": [
+        "frontend"
+      ]
+    }
+  ],
+  "futureIssueDisposition": "blocked — real backend/contracts/policy/media evidence are external prerequisites, not delivered by this frontend package.\n\n- **Owner disposition (2026-10-25):** The owner defers this real-adapter integration to a future follow-up outside the current frontend mock-backed milestone. This issue remains open and blocked; it is neither cancelled nor completed. The current mock milestone excludes real-adapter/backend implementation and makes no promise of that delivery. Existing external prerequisites and separate authorization remain required before future real integration work.",
+  "limitations": "Mock services and fake microphone in measured Chromium; real adapter, providers, production rendering/security/storage/cross-device evidence remain future. Unrelated dirty docs/skills preserved; local active authorities synchronized but excluded from whole-corpus publication.",
+  "verdict": "Current owner-approved mock milestone achieved; do not describe #76 as implemented, cancelled or closed."
+}

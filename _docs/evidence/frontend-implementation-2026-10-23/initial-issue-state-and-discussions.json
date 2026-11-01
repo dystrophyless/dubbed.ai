@@ -1,0 +1,688 @@
+{
+  "capturedAt": "2026-10-23",
+  "source": "Individual issue and all-discussion GitHub connector reads",
+  "issues": [
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/61",
+      "title": "Record the bounded frontend technical contract and remaining decision gates",
+      "issue_number": 61,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:40:51Z",
+      "updated_at": "2026-10-22T23:10:49Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/61",
+      "display_title": "Record the bounded frontend technical contract and remaining decision gates",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/62",
+      "title": "Control account access and complete guarded sign-out or deletion",
+      "issue_number": 62,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:41:43Z",
+      "updated_at": "2026-10-22T23:11:01Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/62",
+      "display_title": "Control account access and complete guarded sign-out or deletion",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/63",
+      "title": "Prove the complete frontend journey with no backend and honest media evidence",
+      "issue_number": 63,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:41:52Z",
+      "updated_at": "2026-10-22T23:32:33Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/63",
+      "display_title": "Prove the complete frontend journey with no backend and honest media evidence",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/64",
+      "title": "Establish the supported browser media capability and timing evidence",
+      "issue_number": 64,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:42:00Z",
+      "updated_at": "2026-10-22T23:11:31Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/64",
+      "display_title": "Establish the supported browser media capability and timing evidence",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/65",
+      "title": "Reconcile a credit purchase and return to the preserved video safely",
+      "issue_number": 65,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:42:08Z",
+      "updated_at": "2026-10-22T23:11:40Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/65",
+      "display_title": "Reconcile a credit purchase and return to the preserved video safely",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/66",
+      "title": "Link sign-in methods to one account with explicit dual proof",
+      "issue_number": 66,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:42:17Z",
+      "updated_at": "2026-10-22T23:12:09Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/66",
+      "display_title": "Link sign-in methods to one account with explicit dual proof",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/67",
+      "title": "Start and test the frontend independently of backend services",
+      "issue_number": 67,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:42:36Z",
+      "updated_at": "2026-10-22T23:12:18Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/67",
+      "display_title": "Start and test the frontend independently of backend services",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/68",
+      "title": "Freeze and enforce one interchangeable frontend services boundary",
+      "issue_number": 68,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:42:44Z",
+      "updated_at": "2026-10-22T23:12:27Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/68",
+      "display_title": "Freeze and enforce one interchangeable frontend services boundary",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/69",
+      "title": "Check the current device microphone without creating a project take",
+      "issue_number": 69,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:42:52Z",
+      "updated_at": "2026-10-22T23:12:36Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/69",
+      "display_title": "Check the current device microphone without creating a project take",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/70",
+      "title": "Keep mock credits, reservations and entitlements coherent and exactly once",
+      "issue_number": 70,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:43:03Z",
+      "updated_at": "2026-10-22T23:13:03Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/70",
+      "display_title": "Keep mock credits, reservations and entitlements coherent and exactly once",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/71",
+      "title": "Reset a password with purpose-bound proof and recover the correct session",
+      "issue_number": 71,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:43:11Z",
+      "updated_at": "2026-10-22T23:13:12Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/71",
+      "display_title": "Reset a password with purpose-bound proof and recover the correct session",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/72",
+      "title": "Supply permitted playable media with explicit timeline and generation annotations",
+      "issue_number": 72,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:43:31Z",
+      "updated_at": "2026-10-22T23:13:21Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/72",
+      "display_title": "Supply permitted playable media with explicit timeline and generation annotations",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/73",
+      "title": "Persist and reconcile an isolated mock workspace through the shared facade",
+      "issue_number": 73,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:43:39Z",
+      "updated_at": "2026-10-22T23:13:30Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/73",
+      "display_title": "Persist and reconcile an isolated mock workspace through the shared facade",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/74",
+      "title": "Reconcile preparation progress, cancellation and safe reprocessing",
+      "issue_number": 74,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:43:48Z",
+      "updated_at": "2026-10-22T23:13:55Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/74",
+      "display_title": "Reconcile preparation progress, cancellation and safe reprocessing",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/75",
+      "title": "Resume and manage account-owned projects without losing lifecycle truth",
+      "issue_number": 75,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:43:56Z",
+      "updated_at": "2026-10-22T23:14:12Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/75",
+      "display_title": "Resume and manage account-owned projects without losing lifecycle truth",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/76",
+      "title": "Integrate the frozen frontend facade with real services after prerequisites are evidenced",
+      "issue_number": 76,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:44:04Z",
+      "updated_at": "2026-10-22T23:14:21Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/76",
+      "display_title": "Integrate the frozen frontend facade with real services after prerequisites are evidenced",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/77",
+      "title": "Record and durably accept a turn without losing protected media or navigation intent",
+      "issue_number": 77,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:44:24Z",
+      "updated_at": "2026-10-22T23:14:30Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/77",
+      "display_title": "Record and durably accept a turn without losing protected media or navigation intent",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/78",
+      "title": "Render the approved responsive shell, locale behavior and minimal landing",
+      "issue_number": 78,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:44:33Z",
+      "updated_at": "2026-10-22T23:32:27Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/78",
+      "display_title": "Render the approved responsive shell, locale behavior and minimal landing",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/79",
+      "title": "Present and download the exact authorized result generation safely",
+      "issue_number": 79,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:44:41Z",
+      "updated_at": "2026-10-22T23:15:02Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/79",
+      "display_title": "Present and download the exact authorized result generation safely",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/80",
+      "title": "Sign in and restore a protected session without replaying work",
+      "issue_number": 80,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:44:50Z",
+      "updated_at": "2026-10-22T23:15:11Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/80",
+      "display_title": "Sign in and restore a protected session without replaying work",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/81",
+      "title": "Authorize processing from a validated source and exact selected-section quote",
+      "issue_number": 81,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:44:59Z",
+      "updated_at": "2026-10-22T23:15:21Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/81",
+      "display_title": "Authorize processing from a validated source and exact selected-section quote",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    },
+    {
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/82",
+      "title": "Complete verified registration without duplicating an account or grant",
+      "issue_number": 82,
+      "state": "open",
+      "user": {
+        "login": "dystrophyless",
+        "name": "dystrophyless",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/211993896?v=4",
+        "id": 211993896
+      },
+      "assignees": null,
+      "labels": [
+        {
+          "name": "frontend",
+          "color": "ededed",
+          "description": null
+        }
+      ],
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-22T20:45:07Z",
+      "updated_at": "2026-10-22T23:15:29Z",
+      "closed_at": null,
+      "display_url": "https://github.com/dystrophyless/dubbed.ai/issues/82",
+      "display_title": "Complete verified registration without duplicating an account or grant",
+      "bodyMatchesInitialSnapshot": true,
+      "discussion": []
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ru-phone-start",
+    "path": "evidence/ru-phone-start.png",
+    "kind": "real mock; identity seeded via service"
+  },
+  {
+    "name": "ru-phone-after-continue",
+    "path": "evidence/ru-phone-after-continue.png",
+    "kind": "diagnostic after Continue"
+  },
+  {
+    "name": "ru-phone-dual-proof",
+    "path": "evidence/ru-phone-dual-proof.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "name": "ru-short-start",
+    "path": "evidence/ru-short-start.png",
+    "kind": "real mock; identity seeded via service"
+  },
+  {
+    "name": "ru-short-invalid-password",
+    "path": "evidence/ru-short-invalid-password.png",
+    "kind": "actual mock UI wrong password"
+  },
+  {
+    "name": "ru-short-final-review",
+    "path": "evidence/ru-short-final-review.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "name": "en-phone-start",
+    "path": "evidence/en-phone-start.png",
+    "kind": "real mock; identity seeded via service"
+  },
+  {
+    "name": "en-phone-invalid-password",
+    "path": "evidence/en-phone-invalid-password.png",
+    "kind": "actual mock UI wrong password"
+  },
+  {
+    "name": "en-phone-final-review",
+    "path": "evidence/en-phone-final-review.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "name": "en-desktop-link-review-loading",
+    "path": "evidence/en-desktop-link-review-loading.png",
+    "kind": "existing fault harness: link-review-loading"
+  },
+  {
+    "name": "en-desktop-link-commit-conflict",
+    "path": "evidence/en-desktop-link-commit-conflict.png",
+    "kind": "existing fault harness: link-commit-conflict"
+  },
+  {
+    "name": "en-desktop-link-commit-unknown",
+    "path": "evidence/en-desktop-link-commit-unknown.png",
+    "kind": "existing fault harness: link-commit-unknown"
+  }
+]

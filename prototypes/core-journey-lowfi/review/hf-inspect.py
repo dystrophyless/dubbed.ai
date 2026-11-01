@@ -1,0 +1,5 @@
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+out=Path(__file__).parent
+with sync_playwright() as p:
+ b=p.chromium.launch(channel='chrome',headless=True);c=b.new_context(viewport={'width':1400,'height':1100},device_scale_factor=1);page=c.new_page();page.goto('http://127.0.0.1:5178/calibration.html');page.evaluate('document.fonts.ready');page.screenshot(path=str(out/'hf-review-calibration-initial.png'),full_page=True);print('CALIBRATION',page.locator('body').inner_text());print('CAL BUTTONS',page.locator('button,input').evaluate_all('(es)=>es.map(e=>({id:e.id,text:e.innerText,type:e.type,cls:e.className,disabled:e.disabled}))'));page.goto('http://127.0.0.1:5178');page.wait_for_function('document.querySelector("#scene").readyState>=3');page.locator('.lab summary').click();print('LAB',page.locator('.lab').inner_text());print('INPUTS',page.locator('.lab input,.lab select').evaluate_all('(es)=>es.map(e=>({id:e.id,type:e.type,html:e.outerHTML}))'));page.locator('.lab summary').click();page.set_viewport_size({'width':1882,'height':902});page.screenshot(path=str(out/'hf-review-desktop-initial.png'));b.close()

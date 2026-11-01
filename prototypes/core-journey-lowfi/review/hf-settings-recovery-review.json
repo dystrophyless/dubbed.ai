@@ -1,0 +1,19 @@
+[
+  {
+    "check": "Blocked recapture protects exact candidate",
+    "feedback": "Микрофон недоступен. Существующий дубль не изменён. Восстановите доступ в настройках и вернитесь сюда.\n\nОткрыть настройки"
+  },
+  {
+    "check": "Settings recovery uses localized candidate exit guard",
+    "guard": "Сохранить этот дубль?\n\nСохранить этот дубль перед выходом из этой реплики?\n\nОстаться\nУйти без сохранения\nСохранить и уйти"
+  },
+  {
+    "check": "Save and leave accepts exact candidate before Settings boundary",
+    "boundary": "Настройки\n\nЭтот соседний экран не входит в прототип записи.\n\nПосле первого знакомства выбор микрофона и необязательные проверки доступны только в настройках.\n\nВернуться к сцене"
+  },
+  {
+    "check": "Boundary close focus",
+    "id": "",
+    "name": "Настройки"
+  }
+]

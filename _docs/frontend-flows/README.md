@@ -1,10 +1,10 @@
 # Frontend flow specification index
 
-The twelve active flow specifications define current intended behavior. This correction is specification-only: no product/prototype code, browser verification, Git delivery or issue mutation is included. New composition and selected assets await the applicable owner checkpoints in the [design-first workflow](../frontend-design-workflow.md); this is not implementation or product acceptance.
+The twelve active flow specifications define current intended behavior. This correction is specification-only: no product/prototype code, browser verification, Git delivery or issue mutation is included. The prepared-video/Record/Result slice has approved low-fi v5 and high-fi v3 checkpoints; its affected contracts now enter package review. Other composition/assets still await applicable [design-first workflow](../frontend-design-workflow.md) checkpoints. Artifact approval is not implementation or release acceptance.
 
 Use the [shared requirements](00-shared-contract.md), [implementation contract](../frontend-implementation-contract.md), [Affect UI adoption](affect-ui-clean-light-adoption.md), [Light reference catalog](affect-ui-clean-light-reference.md), [current tokens](design-tokens.md) and [source-to-browser workflow](affect-ui-workflow.md). Mabry Pro and the current component identity remain; component specimens do not decide page hierarchy. The [current UX audit and appendices](../evidence/ux-root-cause-audit-2026-10-26/report.md) supply supporting analysis.
 
-The [22 published frontend issues and dependencies](../task-drafts/frontend-flows/README.md) remain task authority, with #76 deferred for real-adapter prerequisites. Published issue bodies are unchanged by this pass and must align before integration. Local correction implementation remains separately unaccepted. Flows 08, 13 and 14 are excluded, preserving stable IDs for the twelve active flows.
+The [22 published frontend issues and dependencies](../task-drafts/frontend-flows/README.md) remain task authority, with #76 deferred for real-adapter prerequisites. Published issue bodies remain unchanged under the explicit GitHub hold. The current A/B package records exact stale alignment and the proposed local-only partial scope;independent review must establish local dispatch sufficiency without claiming full issue acceptance. Local correction implementation remains separately unaccepted. Flows 08, 13 and 14 are excluded, preserving stable IDs for the twelve active flows.
 
 | Flow | Specification |
 |---|---|
@@ -14,12 +14,17 @@ The [22 published frontend issues and dependencies](../task-drafts/frontend-flow
 | 04 | Password recovery and reset — [04-password-reset.md](04-password-reset.md) — draft, owner questions open |
 | 05 | Explicit linking of login methods — [05-account-linking.md](05-account-linking.md) — draft, owner questions open |
 | 06 | Upload, section selection and preparation quote — [06-new-dub.md](06-new-dub.md) — draft, owner questions open |
-| 07 | Preparation progress, cancellation and reprocessing — [07-processing.md](07-processing.md) — draft, owner questions open |
+| 07 | Initial preparation progress, cancellation and technical recovery — [07-processing.md](07-processing.md) — draft, owner questions open |
 | 08 | WITHDRAWN by owner: no Prepare stage, manual editing/addition or background audition. The shared contract defines the active scope. |
-| 09 | Reference playback, microphone capture, take review and acceptance — [09-record.md](09-record.md) — draft, owner questions open |
-| 10 | Result assembly, playback and download — [10-result.md](10-result.md) — draft, owner questions open |
+| 09 | Reference playback, microphone capture, take review and acceptance — [09-record.md](09-record.md) — approved core composition; remaining implementation/technical gates |
+| 10 | Result assembly, playback and download — [10-result.md](10-result.md) — approved core section; remaining generation/implementation gates |
 | 11 | Saved projects, resume, capacity and deletion — [11-projects.md](11-projects.md) — draft, owner questions open |
 | 12 | Credits, pack purchase, history and return — [12-credits.md](12-credits.md) — draft, owner questions open |
 | 13 | WITHDRAWN: no public-link sharing. |
 | 14 | WITHDRAWN: no anonymous result-viewing route. |
 | 15 | Account settings and deletion — [15-account.md](15-account.md) — draft, owner questions open |
+
+
+## Current local prepared-video increment - 2026-10-28
+
+The owner resumed development of both focused A/B candidates. Shared09/10/token§9 and [current package](../evidence/core-journey-ab-contract-sync-2026-10-28/package-review.md) define the bounded local implementation target and evidence gates. Frontend is currently absent. Scope starts with an explicitly seeded prepared project,real browser capture plus typed Services/backend-free mock,and shared Result comparison;it excludes full auth/upload/billing/Settings/Projects/backend rendering. Future50/50 persistent-user experiment and main completion metric are separate gated work:no live allocation/tracking/provider/deployment in this increment. GitHub/commit/push remain held.

@@ -1,0 +1,1327 @@
+{
+  "date": "2026-10-25T14:14:45.541Z",
+  "sourceBoundary": "shared local worktree; root-owned final build and replay are separate",
+  "browser": "local Chromium, muted by Playwright config; synthetic UI only, no media capture or external services",
+  "references": {
+    "buttonClean": "_docs/evidence/affect-ui-clean-light/source/components/button/Clean/button-clean.md.txt",
+    "otpClean": "_docs/evidence/affect-ui-clean-light/source/components/otp-input/Clean/otp-input-clean.md.txt",
+    "noticeClean": "_docs/evidence/affect-ui-clean-light/source/components/notification-stack/Clean/notification-stack-clean.md.txt"
+  },
+  "locales": [
+    "en",
+    "ru"
+  ],
+  "widths": [
+    1440,
+    390,
+    767,
+    768
+  ],
+  "measurements": [
+    {
+      "language": "en",
+      "mainLanguage": "en",
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontLoaded": true,
+      "mediumFontLoaded": true,
+      "buttonSizes": {
+        "small": {
+          "x": 341.71875,
+          "y": 131,
+          "width": 66.421875,
+          "height": 32
+        },
+        "medium": {
+          "x": 416.140625,
+          "y": 127,
+          "width": 107.546875,
+          "height": 40
+        },
+        "large": {
+          "x": 531.6875,
+          "y": 125,
+          "width": 139.734375,
+          "height": 44
+        },
+        "navigation": {
+          "x": 217,
+          "y": 179,
+          "width": 72.75,
+          "height": 36
+        },
+        "icon": {
+          "x": 297.75,
+          "y": 177,
+          "width": 40,
+          "height": 40
+        },
+        "iconGlyph": {
+          "x": 309.75,
+          "y": 189,
+          "width": 16,
+          "height": 16
+        },
+        "segmented": {
+          "x": 219,
+          "y": 231,
+          "width": 106.40625,
+          "height": 40
+        }
+      },
+      "buttonType": {
+        "small": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "medium": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "large": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "navigation": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "segmented": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      },
+      "hiddenSample": {
+        "x": 200,
+        "y": 24,
+        "width": 1,
+        "height": 1
+      },
+      "primary": {
+        "x": 217,
+        "y": 127,
+        "width": 116.71875,
+        "height": 40,
+        "background": "rgba(0, 0, 0, 0.88)"
+      },
+      "languageTarget": {
+        "x": 1175,
+        "y": 24,
+        "width": 65,
+        "height": 32
+      },
+      "emailTarget": {
+        "x": 745,
+        "y": 151,
+        "width": 478,
+        "height": 40
+      },
+      "otpTarget": {
+        "x": 217,
+        "y": 435,
+        "width": 478,
+        "height": 48
+      },
+      "otpCell": {
+        "x": 312,
+        "y": 437,
+        "width": 40,
+        "height": 44
+      },
+      "invalidEmail": {
+        "value": "wrong-address",
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-email-invalid-error"
+      },
+      "invalidOtp": {
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-otp-error"
+      },
+      "verifiedOtpDisabled": true,
+      "disabledButton": true,
+      "busyButton": {
+        "ariaBusy": "true",
+        "ariaDisabled": "true",
+        "disabled": false,
+        "opacity": "1"
+      },
+      "noticeRoles": [
+        {
+          "role": "alert",
+          "className": "field__error"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--success"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--warning"
+        },
+        {
+          "role": "alert",
+          "className": "ui-notice ui-notice--error shared-controls__error-notice"
+        }
+      ],
+      "clippedText": [],
+      "inputFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "boxShadow": "none",
+        "borderColor": "rgba(0, 0, 0, 0.447)"
+      },
+      "stateScreenshots": [
+        "controls-en-1440-overview.png",
+        "controls-en-1440-hover.png",
+        "controls-en-1440-pressed.png",
+        "controls-en-1440-focus.png",
+        "controls-en-1440-input-focus.png"
+      ]
+    },
+    {
+      "language": "en",
+      "mainLanguage": "en",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontLoaded": true,
+      "mediumFontLoaded": true,
+      "buttonSizes": {
+        "small": {
+          "x": 174.09375,
+          "y": 141,
+          "width": 84.765625,
+          "height": 48
+        },
+        "medium": {
+          "x": 33,
+          "y": 197,
+          "width": 122.625,
+          "height": 48
+        },
+        "large": {
+          "x": 163.625,
+          "y": 197,
+          "width": 139.734375,
+          "height": 48
+        },
+        "navigation": {
+          "x": 33,
+          "y": 253,
+          "width": 96.578125,
+          "height": 48
+        },
+        "icon": {
+          "x": 137.578125,
+          "y": 253,
+          "width": 48,
+          "height": 48
+        },
+        "iconGlyph": {
+          "x": 153.578125,
+          "y": 269,
+          "width": 16,
+          "height": 16
+        },
+        "segmented": {
+          "x": 35,
+          "y": 371,
+          "width": 118.75,
+          "height": 48
+        }
+      },
+      "buttonType": {
+        "small": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "medium": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "large": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "navigation": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "segmented": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      },
+      "hiddenSample": {
+        "x": 16,
+        "y": 24,
+        "width": 1,
+        "height": 1
+      },
+      "primary": {
+        "x": 33,
+        "y": 141,
+        "width": 133.09375,
+        "height": 48,
+        "background": "rgba(0, 0, 0, 0.88)"
+      },
+      "languageTarget": {
+        "x": 305,
+        "y": 24,
+        "width": 69,
+        "height": 48
+      },
+      "emailTarget": {
+        "x": 33,
+        "y": 533,
+        "width": 324,
+        "height": 48
+      },
+      "otpTarget": {
+        "x": 33,
+        "y": 833,
+        "width": 324,
+        "height": 48
+      },
+      "otpCell": {
+        "x": 51,
+        "y": 835,
+        "width": 40,
+        "height": 44
+      },
+      "invalidEmail": {
+        "value": "wrong-address",
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-email-invalid-error"
+      },
+      "invalidOtp": {
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-otp-error"
+      },
+      "verifiedOtpDisabled": true,
+      "disabledButton": true,
+      "busyButton": {
+        "ariaBusy": "true",
+        "ariaDisabled": "true",
+        "disabled": false,
+        "opacity": "1"
+      },
+      "noticeRoles": [
+        {
+          "role": "alert",
+          "className": "field__error"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--success"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--warning"
+        },
+        {
+          "role": "alert",
+          "className": "ui-notice ui-notice--error shared-controls__error-notice"
+        }
+      ],
+      "clippedText": [],
+      "inputFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "boxShadow": "none",
+        "borderColor": "rgba(0, 0, 0, 0.447)"
+      },
+      "stateScreenshots": [
+        "controls-en-390-overview.png",
+        "controls-en-390-hover.png",
+        "controls-en-390-pressed.png",
+        "controls-en-390-focus.png",
+        "controls-en-390-input-focus.png"
+      ]
+    },
+    {
+      "language": "en",
+      "mainLanguage": "en",
+      "viewportWidth": 767,
+      "documentWidth": 767,
+      "bodyWidth": 767,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontLoaded": true,
+      "mediumFontLoaded": true,
+      "buttonSizes": {
+        "small": {
+          "x": 174.09375,
+          "y": 141,
+          "width": 84.765625,
+          "height": 48
+        },
+        "medium": {
+          "x": 266.859375,
+          "y": 141,
+          "width": 122.625,
+          "height": 48
+        },
+        "large": {
+          "x": 397.484375,
+          "y": 141,
+          "width": 139.734375,
+          "height": 48
+        },
+        "navigation": {
+          "x": 545.21875,
+          "y": 141,
+          "width": 96.578125,
+          "height": 48
+        },
+        "icon": {
+          "x": 649.796875,
+          "y": 141,
+          "width": 48,
+          "height": 48
+        },
+        "iconGlyph": {
+          "x": 665.796875,
+          "y": 157,
+          "width": 16,
+          "height": 16
+        },
+        "segmented": {
+          "x": 35,
+          "y": 259,
+          "width": 118.75,
+          "height": 48
+        }
+      },
+      "buttonType": {
+        "small": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "medium": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "large": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "navigation": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "segmented": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      },
+      "hiddenSample": {
+        "x": 16,
+        "y": 24,
+        "width": 1,
+        "height": 1
+      },
+      "primary": {
+        "x": 33,
+        "y": 141,
+        "width": 133.09375,
+        "height": 48,
+        "background": "rgba(0, 0, 0, 0.88)"
+      },
+      "languageTarget": {
+        "x": 682,
+        "y": 24,
+        "width": 69,
+        "height": 48
+      },
+      "emailTarget": {
+        "x": 33,
+        "y": 421,
+        "width": 701,
+        "height": 48
+      },
+      "otpTarget": {
+        "x": 33,
+        "y": 721,
+        "width": 701,
+        "height": 48
+      },
+      "otpCell": {
+        "x": 239.5,
+        "y": 723,
+        "width": 40,
+        "height": 44
+      },
+      "invalidEmail": {
+        "value": "wrong-address",
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-email-invalid-error"
+      },
+      "invalidOtp": {
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-otp-error"
+      },
+      "verifiedOtpDisabled": true,
+      "disabledButton": true,
+      "busyButton": {
+        "ariaBusy": "true",
+        "ariaDisabled": "true",
+        "disabled": false,
+        "opacity": "1"
+      },
+      "noticeRoles": [
+        {
+          "role": "alert",
+          "className": "field__error"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--success"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--warning"
+        },
+        {
+          "role": "alert",
+          "className": "ui-notice ui-notice--error shared-controls__error-notice"
+        }
+      ],
+      "clippedText": [],
+      "inputFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "boxShadow": "none",
+        "borderColor": "rgba(0, 0, 0, 0.447)"
+      },
+      "stateScreenshots": [
+        "controls-en-767-overview.png",
+        "controls-en-767-hover.png",
+        "controls-en-767-pressed.png",
+        "controls-en-767-focus.png",
+        "controls-en-767-input-focus.png"
+      ]
+    },
+    {
+      "language": "en",
+      "mainLanguage": "en",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontLoaded": true,
+      "mediumFontLoaded": true,
+      "buttonSizes": {
+        "small": {
+          "x": 157.71875,
+          "y": 129,
+          "width": 66.421875,
+          "height": 32
+        },
+        "medium": {
+          "x": 232.140625,
+          "y": 125,
+          "width": 107.546875,
+          "height": 40
+        },
+        "large": {
+          "x": 33,
+          "y": 173,
+          "width": 139.734375,
+          "height": 44
+        },
+        "navigation": {
+          "x": 180.734375,
+          "y": 177,
+          "width": 72.75,
+          "height": 36
+        },
+        "icon": {
+          "x": 261.484375,
+          "y": 175,
+          "width": 40,
+          "height": 40
+        },
+        "iconGlyph": {
+          "x": 273.484375,
+          "y": 187,
+          "width": 16,
+          "height": 16
+        },
+        "segmented": {
+          "x": 35,
+          "y": 279,
+          "width": 106.40625,
+          "height": 40
+        }
+      },
+      "buttonType": {
+        "small": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "medium": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "large": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "navigation": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "segmented": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      },
+      "hiddenSample": {
+        "x": 16,
+        "y": 24,
+        "width": 1,
+        "height": 1
+      },
+      "primary": {
+        "x": 33,
+        "y": 125,
+        "width": 116.71875,
+        "height": 40,
+        "background": "rgba(0, 0, 0, 0.88)"
+      },
+      "languageTarget": {
+        "x": 687,
+        "y": 24,
+        "width": 65,
+        "height": 32
+      },
+      "emailTarget": {
+        "x": 409,
+        "y": 151,
+        "width": 326,
+        "height": 40
+      },
+      "otpTarget": {
+        "x": 33,
+        "y": 435,
+        "width": 326,
+        "height": 48
+      },
+      "otpCell": {
+        "x": 52,
+        "y": 437,
+        "width": 40,
+        "height": 44
+      },
+      "invalidEmail": {
+        "value": "wrong-address",
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-email-invalid-error"
+      },
+      "invalidOtp": {
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-otp-error"
+      },
+      "verifiedOtpDisabled": true,
+      "disabledButton": true,
+      "busyButton": {
+        "ariaBusy": "true",
+        "ariaDisabled": "true",
+        "disabled": false,
+        "opacity": "1"
+      },
+      "noticeRoles": [
+        {
+          "role": "alert",
+          "className": "field__error"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--success"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--warning"
+        },
+        {
+          "role": "alert",
+          "className": "ui-notice ui-notice--error shared-controls__error-notice"
+        }
+      ],
+      "clippedText": [],
+      "inputFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "boxShadow": "none",
+        "borderColor": "rgba(0, 0, 0, 0.447)"
+      },
+      "stateScreenshots": [
+        "controls-en-768-overview.png",
+        "controls-en-768-hover.png",
+        "controls-en-768-pressed.png",
+        "controls-en-768-focus.png",
+        "controls-en-768-input-focus.png"
+      ]
+    },
+    {
+      "language": "ru",
+      "mainLanguage": "ru",
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontLoaded": true,
+      "mediumFontLoaded": true,
+      "buttonSizes": {
+        "small": {
+          "x": 399,
+          "y": 129,
+          "width": 72.328125,
+          "height": 32
+        },
+        "medium": {
+          "x": 479.328125,
+          "y": 125,
+          "width": 102.515625,
+          "height": 40
+        },
+        "large": {
+          "x": 217,
+          "y": 173,
+          "width": 148,
+          "height": 44
+        },
+        "navigation": {
+          "x": 373,
+          "y": 177,
+          "width": 75.03125,
+          "height": 36
+        },
+        "icon": {
+          "x": 456.03125,
+          "y": 175,
+          "width": 40,
+          "height": 40
+        },
+        "iconGlyph": {
+          "x": 468.03125,
+          "y": 187,
+          "width": 16,
+          "height": 16
+        },
+        "segmented": {
+          "x": 219,
+          "y": 279,
+          "width": 96.046875,
+          "height": 40
+        }
+      },
+      "buttonType": {
+        "small": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "medium": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "large": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "navigation": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "segmented": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      },
+      "hiddenSample": {
+        "x": 200,
+        "y": 24,
+        "width": 1,
+        "height": 1
+      },
+      "primary": {
+        "x": 217,
+        "y": 125,
+        "width": 174,
+        "height": 40,
+        "background": "rgba(0, 0, 0, 0.88)"
+      },
+      "languageTarget": {
+        "x": 1175,
+        "y": 24,
+        "width": 65,
+        "height": 32
+      },
+      "emailTarget": {
+        "x": 745,
+        "y": 151,
+        "width": 478,
+        "height": 40
+      },
+      "otpTarget": {
+        "x": 217,
+        "y": 435,
+        "width": 478,
+        "height": 48
+      },
+      "otpCell": {
+        "x": 312,
+        "y": 437,
+        "width": 40,
+        "height": 44
+      },
+      "invalidEmail": {
+        "value": "wrong-address",
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-email-invalid-error"
+      },
+      "invalidOtp": {
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-otp-error"
+      },
+      "verifiedOtpDisabled": true,
+      "disabledButton": true,
+      "busyButton": {
+        "ariaBusy": "true",
+        "ariaDisabled": "true",
+        "disabled": false,
+        "opacity": "1"
+      },
+      "noticeRoles": [
+        {
+          "role": "alert",
+          "className": "field__error"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--success"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--warning"
+        },
+        {
+          "role": "alert",
+          "className": "ui-notice ui-notice--error shared-controls__error-notice"
+        }
+      ],
+      "clippedText": [],
+      "inputFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "boxShadow": "none",
+        "borderColor": "rgba(0, 0, 0, 0.447)"
+      },
+      "stateScreenshots": [
+        "controls-ru-1440-overview.png",
+        "controls-ru-1440-hover.png",
+        "controls-ru-1440-pressed.png",
+        "controls-ru-1440-focus.png",
+        "controls-ru-1440-input-focus.png"
+      ]
+    },
+    {
+      "language": "ru",
+      "mainLanguage": "ru",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontLoaded": true,
+      "mediumFontLoaded": true,
+      "buttonSizes": {
+        "small": {
+          "x": 239.5625,
+          "y": 181,
+          "width": 91.515625,
+          "height": 48
+        },
+        "medium": {
+          "x": 33,
+          "y": 237,
+          "width": 116.875,
+          "height": 48
+        },
+        "large": {
+          "x": 157.875,
+          "y": 237,
+          "width": 148,
+          "height": 48
+        },
+        "navigation": {
+          "x": 33,
+          "y": 293,
+          "width": 99.171875,
+          "height": 48
+        },
+        "icon": {
+          "x": 140.171875,
+          "y": 293,
+          "width": 48,
+          "height": 48
+        },
+        "iconGlyph": {
+          "x": 156.171875,
+          "y": 309,
+          "width": 16,
+          "height": 16
+        },
+        "segmented": {
+          "x": 35,
+          "y": 411,
+          "width": 106.90625,
+          "height": 48
+        }
+      },
+      "buttonType": {
+        "small": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "medium": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "large": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "navigation": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "segmented": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      },
+      "hiddenSample": {
+        "x": 16,
+        "y": 24,
+        "width": 1,
+        "height": 1
+      },
+      "primary": {
+        "x": 33,
+        "y": 181,
+        "width": 198.5625,
+        "height": 48,
+        "background": "rgba(0, 0, 0, 0.88)"
+      },
+      "languageTarget": {
+        "x": 60.953125,
+        "y": 64,
+        "width": 69,
+        "height": 48
+      },
+      "emailTarget": {
+        "x": 33,
+        "y": 573,
+        "width": 324,
+        "height": 48
+      },
+      "otpTarget": {
+        "x": 33,
+        "y": 873,
+        "width": 324,
+        "height": 48
+      },
+      "otpCell": {
+        "x": 51,
+        "y": 875,
+        "width": 40,
+        "height": 44
+      },
+      "invalidEmail": {
+        "value": "wrong-address",
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-email-invalid-error"
+      },
+      "invalidOtp": {
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-otp-error"
+      },
+      "verifiedOtpDisabled": true,
+      "disabledButton": true,
+      "busyButton": {
+        "ariaBusy": "true",
+        "ariaDisabled": "true",
+        "disabled": false,
+        "opacity": "1"
+      },
+      "noticeRoles": [
+        {
+          "role": "alert",
+          "className": "field__error"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--success"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--warning"
+        },
+        {
+          "role": "alert",
+          "className": "ui-notice ui-notice--error shared-controls__error-notice"
+        }
+      ],
+      "clippedText": [],
+      "inputFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "boxShadow": "none",
+        "borderColor": "rgba(0, 0, 0, 0.447)"
+      },
+      "stateScreenshots": [
+        "controls-ru-390-overview.png",
+        "controls-ru-390-hover.png",
+        "controls-ru-390-pressed.png",
+        "controls-ru-390-focus.png",
+        "controls-ru-390-input-focus.png"
+      ]
+    },
+    {
+      "language": "ru",
+      "mainLanguage": "ru",
+      "viewportWidth": 767,
+      "documentWidth": 767,
+      "bodyWidth": 767,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontLoaded": true,
+      "mediumFontLoaded": true,
+      "buttonSizes": {
+        "small": {
+          "x": 239.5625,
+          "y": 141,
+          "width": 91.515625,
+          "height": 48
+        },
+        "medium": {
+          "x": 339.078125,
+          "y": 141,
+          "width": 116.875,
+          "height": 48
+        },
+        "large": {
+          "x": 463.953125,
+          "y": 141,
+          "width": 148,
+          "height": 48
+        },
+        "navigation": {
+          "x": 619.953125,
+          "y": 141,
+          "width": 99.171875,
+          "height": 48
+        },
+        "icon": {
+          "x": 33,
+          "y": 197,
+          "width": 48,
+          "height": 48
+        },
+        "iconGlyph": {
+          "x": 49,
+          "y": 213,
+          "width": 16,
+          "height": 16
+        },
+        "segmented": {
+          "x": 35,
+          "y": 259,
+          "width": 106.90625,
+          "height": 48
+        }
+      },
+      "buttonType": {
+        "small": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "medium": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "large": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "navigation": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "segmented": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      },
+      "hiddenSample": {
+        "x": 16,
+        "y": 24,
+        "width": 1,
+        "height": 1
+      },
+      "primary": {
+        "x": 33,
+        "y": 141,
+        "width": 198.5625,
+        "height": 48,
+        "background": "rgba(0, 0, 0, 0.88)"
+      },
+      "languageTarget": {
+        "x": 682,
+        "y": 24,
+        "width": 69,
+        "height": 48
+      },
+      "emailTarget": {
+        "x": 33,
+        "y": 421,
+        "width": 701,
+        "height": 48
+      },
+      "otpTarget": {
+        "x": 33,
+        "y": 721,
+        "width": 701,
+        "height": 48
+      },
+      "otpCell": {
+        "x": 239.5,
+        "y": 723,
+        "width": 40,
+        "height": 44
+      },
+      "invalidEmail": {
+        "value": "wrong-address",
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-email-invalid-error"
+      },
+      "invalidOtp": {
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-otp-error"
+      },
+      "verifiedOtpDisabled": true,
+      "disabledButton": true,
+      "busyButton": {
+        "ariaBusy": "true",
+        "ariaDisabled": "true",
+        "disabled": false,
+        "opacity": "1"
+      },
+      "noticeRoles": [
+        {
+          "role": "alert",
+          "className": "field__error"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--success"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--warning"
+        },
+        {
+          "role": "alert",
+          "className": "ui-notice ui-notice--error shared-controls__error-notice"
+        }
+      ],
+      "clippedText": [],
+      "inputFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "boxShadow": "none",
+        "borderColor": "rgba(0, 0, 0, 0.447)"
+      },
+      "stateScreenshots": [
+        "controls-ru-767-overview.png",
+        "controls-ru-767-hover.png",
+        "controls-ru-767-pressed.png",
+        "controls-ru-767-focus.png",
+        "controls-ru-767-input-focus.png"
+      ]
+    },
+    {
+      "language": "ru",
+      "mainLanguage": "ru",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontLoaded": true,
+      "mediumFontLoaded": true,
+      "buttonSizes": {
+        "small": {
+          "x": 215,
+          "y": 129,
+          "width": 72.328125,
+          "height": 32
+        },
+        "medium": {
+          "x": 33,
+          "y": 175,
+          "width": 102.515625,
+          "height": 40
+        },
+        "large": {
+          "x": 143.515625,
+          "y": 173,
+          "width": 148,
+          "height": 44
+        },
+        "navigation": {
+          "x": 33,
+          "y": 227,
+          "width": 75.03125,
+          "height": 36
+        },
+        "icon": {
+          "x": 116.03125,
+          "y": 225,
+          "width": 40,
+          "height": 40
+        },
+        "iconGlyph": {
+          "x": 128.03125,
+          "y": 237,
+          "width": 16,
+          "height": 16
+        },
+        "segmented": {
+          "x": 35,
+          "y": 327,
+          "width": 96.046875,
+          "height": 40
+        }
+      },
+      "buttonType": {
+        "small": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "medium": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "large": {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        "navigation": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "segmented": {
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      },
+      "hiddenSample": {
+        "x": 16,
+        "y": 24,
+        "width": 1,
+        "height": 1
+      },
+      "primary": {
+        "x": 33,
+        "y": 125,
+        "width": 174,
+        "height": 40,
+        "background": "rgba(0, 0, 0, 0.88)"
+      },
+      "languageTarget": {
+        "x": 687,
+        "y": 24,
+        "width": 65,
+        "height": 32
+      },
+      "emailTarget": {
+        "x": 409,
+        "y": 151,
+        "width": 326,
+        "height": 40
+      },
+      "otpTarget": {
+        "x": 33,
+        "y": 483,
+        "width": 326,
+        "height": 48
+      },
+      "otpCell": {
+        "x": 52,
+        "y": 485,
+        "width": 40,
+        "height": 44
+      },
+      "invalidEmail": {
+        "value": "wrong-address",
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-email-invalid-error"
+      },
+      "invalidOtp": {
+        "ariaInvalid": "true",
+        "describedBy": "shared-controls-otp-error"
+      },
+      "verifiedOtpDisabled": true,
+      "disabledButton": true,
+      "busyButton": {
+        "ariaBusy": "true",
+        "ariaDisabled": "true",
+        "disabled": false,
+        "opacity": "1"
+      },
+      "noticeRoles": [
+        {
+          "role": "alert",
+          "className": "field__error"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--success"
+        },
+        {
+          "role": "status",
+          "className": "ui-notice ui-notice--warning"
+        },
+        {
+          "role": "alert",
+          "className": "ui-notice ui-notice--error shared-controls__error-notice"
+        }
+      ],
+      "clippedText": [],
+      "inputFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "boxShadow": "none",
+        "borderColor": "rgba(0, 0, 0, 0.447)"
+      },
+      "stateScreenshots": [
+        "controls-ru-768-overview.png",
+        "controls-ru-768-hover.png",
+        "controls-ru-768-pressed.png",
+        "controls-ru-768-focus.png",
+        "controls-ru-768-input-focus.png"
+      ]
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "body": "This service mode is not available\n\nThe real service adapter is not connected in this build. Set VITE_SERVICE_ADAPTER=mock to use the local mock.",
+    "externalRequests": []
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "height": 844,
+    "body": "Этот режим сервиса недоступен\n\nВ этой сборке не подключён реальный адаптер сервиса. Для локальной имитации задайте VITE_SERVICE_ADAPTER=mock.",
+    "externalRequests": []
+  }
+]

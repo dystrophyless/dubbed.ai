@@ -1,0 +1,15 @@
+{
+  "version": "core-journey-panel-highfi-v7",
+  "date": "2026-10-28",
+  "command": "npm.cmd run build",
+  "cwd": "D:\\Program\\python\\Dubbed\\prototypes\\core-journey-lowfi",
+  "result": "PASS",
+  "vite": "7.3.7",
+  "modules": 18,
+  "outputs": [
+    "dist/index.html",
+    "dist/assets/index-DIGPff7g.css",
+    "dist/assets/index-D9rgWlde.js"
+  ],
+  "limits": "Build proves bundling,not browser/product acceptance."
+}

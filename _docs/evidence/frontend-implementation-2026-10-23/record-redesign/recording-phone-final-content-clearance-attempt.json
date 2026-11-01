@@ -1,0 +1,24 @@
+{
+  "method": "scrollIntoView block:end auto; poll animation frames for global smooth scroll to settle",
+  "clearanceReached": true,
+  "content": {
+    "top": 569.38,
+    "bottom": 617.38
+  },
+  "panel": {
+    "top": 663,
+    "bottom": 844,
+    "height": 181,
+    "position": "fixed",
+    "viewportHeight": 844
+  },
+  "scrollY": 486,
+  "documentScrollHeight": 1391,
+  "documentMaximumScrollTop": 547,
+  "documentScrollBehavior": "smooth",
+  "sourceHashes": {
+    "recordingScreen": "52D4DB322E8A400026CC1B64AABEA137E30A78F6D8DEC6D934A00439F206F97A",
+    "recordingStyles": "5CFA95CFCE00133AD3B76DDF88E2FDC4B67F4C3F1D2997BE4A2A9DC31085D676",
+    "viewportSpec": "842CDD25A52AC2779855BBBE79A3947E77389C44AF551D8A10E3A05FBF3C34E8"
+  }
+}

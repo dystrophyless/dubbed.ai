@@ -1,0 +1,43 @@
+{
+  "result": "failed",
+  "failure": "Native Tab focus reached the reference-volume input, but synchronous onFocusCapture scrolling left the input partially covered by the fixed transport panel.",
+  "browser": "Playwright Chromium",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "captureActive": true,
+  "focusMethod": "Native Tab traversal after blurring the disabled capture trigger",
+  "volumeInput": {
+    "top": 653.38,
+    "bottom": 701.38,
+    "height": 48,
+    "width": 358,
+    "focusedByNativeTab": true,
+    "scrollY": 25,
+    "documentScrollTop": 25,
+    "appMainScrollTop": 0,
+    "documentScrollHeight": 1391,
+    "appMainScrollHeight": 1326,
+    "documentScrollPaddingBottom": "240px",
+    "bodyScrollPaddingBottom": "auto",
+    "appMainScrollPaddingBottom": "auto",
+    "scrollMarginBottom": "0px"
+  },
+  "panel": {
+    "top": 663,
+    "bottom": 844,
+    "height": 181,
+    "position": "fixed",
+    "viewportHeight": 844
+  },
+  "remainingOcclusionPx": 38.38,
+  "sourceHashes": {
+    "recordingScreenTsx": "7AB95FF78663A7577499F2EBF6DE8EF28C49D72FB6CE58811AF7A2EBB5304138",
+    "recordingScreenCss": "304348C6D2F2D65B933BC0D3F82147CF7807C46E982B4C4B21DB31DBBA5098D8",
+    "recordingViewportSpec": "D757FD8EF0725739F6688388D72EBB28E19551644F835FDBCEDADC465F7FC4E2"
+  },
+  "screenshot": "recording-phone-capturing-sync-handler-failure-390x844.png",
+  "test": "npm.cmd run test:e2e -- e2e/recording-viewport.spec.ts",
+  "testExitCode": 1
+}

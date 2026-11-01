@@ -1,0 +1,4 @@
+{
+  "outDir": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\core-journey-ab-implementation-2026-10-28\\phase4\\visual-parity-v1\\run-20261029T181523",
+  "count": 12
+}

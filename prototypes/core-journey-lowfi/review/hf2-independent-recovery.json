@@ -1,0 +1,1540 @@
+[
+  {
+    "check": "environment",
+    "observed": {
+      "browser": "156.0.8078.48",
+      "date": "2026-10-27",
+      "os": "Windows",
+      "zoom": "100%",
+      "dpr": 1,
+      "version": "core-journey-highfi-v2"
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-microphone",
+    "observed": {
+      "h": 902,
+      "w": 1882,
+      "scroll": 88,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 333,
+            "y": 97,
+            "width": 920,
+            "height": 517.5,
+            "top": 97,
+            "right": 1253,
+            "bottom": 614.5,
+            "left": 333
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 443,
+            "y": 659.5,
+            "width": 700,
+            "height": 34,
+            "top": 659.5,
+            "right": 1143,
+            "bottom": 693.5,
+            "left": 443
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 1293,
+            "y": 302,
+            "width": 240,
+            "height": 40,
+            "top": 302,
+            "right": 1533,
+            "bottom": 342,
+            "left": 1293
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 681,
+            "y": 808,
+            "width": 520,
+            "height": 78,
+            "top": 808,
+            "right": 1201,
+            "bottom": 886,
+            "left": 681
+          },
+          "text": "Microphone unavailable\n\nRecording didn’t start. Open Settings, then try Record again."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-microphone preserves approved media size",
+    "observed": {
+      "before": {
+        "x": 333,
+        "y": 185,
+        "width": 920,
+        "height": 517.5
+      },
+      "after": {
+        "x": 333,
+        "y": 97,
+        "width": 920,
+        "height": 517.5
+      }
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-microphone notice stable during audition",
+    "observed": {
+      "mutations": 0,
+      "message": "Microphone unavailable\n\nRecording didn’t start. Open Settings, then try Record again.",
+      "visibleErrorNotices": 1
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-microphone notice survives reload",
+    "observed": "Microphone unavailable\n\nRecording didn’t start. Open Settings, then try Record again."
+  },
+  {
+    "check": "hf2-review-1882x902-en-microphone-reloaded",
+    "observed": {
+      "h": 902,
+      "w": 1882,
+      "scroll": 88,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 333,
+            "y": 97,
+            "width": 920,
+            "height": 517.5,
+            "top": 97,
+            "right": 1253,
+            "bottom": 614.5,
+            "left": 333
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 443,
+            "y": 659.5,
+            "width": 700,
+            "height": 34,
+            "top": 659.5,
+            "right": 1143,
+            "bottom": 693.5,
+            "left": 443
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 1293,
+            "y": 302,
+            "width": 240,
+            "height": 40,
+            "top": 302,
+            "right": 1533,
+            "bottom": 342,
+            "left": 1293
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 681,
+            "y": 808,
+            "width": 520,
+            "height": 78,
+            "top": 808,
+            "right": 1201,
+            "bottom": 886,
+            "left": 681
+          },
+          "text": "Microphone unavailable\n\nRecording didn’t start. Open Settings, then try Record again."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-microphone-recovery-reachable",
+    "observed": {
+      "h": 902,
+      "w": 1882,
+      "scroll": 88,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 333,
+            "y": 97,
+            "width": 920,
+            "height": 517.5,
+            "top": 97,
+            "right": 1253,
+            "bottom": 614.5,
+            "left": 333
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 443,
+            "y": 659.5,
+            "width": 700,
+            "height": 34,
+            "top": 659.5,
+            "right": 1143,
+            "bottom": 693.5,
+            "left": 443
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 1293,
+            "y": 302,
+            "width": 240,
+            "height": 40,
+            "top": 302,
+            "right": 1533,
+            "bottom": 342,
+            "left": 1293
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 681,
+            "y": 808,
+            "width": 520,
+            "height": 78,
+            "top": 808,
+            "right": 1201,
+            "bottom": 886,
+            "left": 681
+          },
+          "text": "Microphone unavailable\n\nRecording didn’t start. Open Settings, then try Record again."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-microphone page errors",
+    "observed": []
+  },
+  {
+    "check": "hf2-review-1882x902-en-save",
+    "observed": {
+      "h": 902,
+      "w": 1882,
+      "scroll": 88,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 333,
+            "y": 97,
+            "width": 920,
+            "height": 517.5,
+            "top": 97,
+            "right": 1253,
+            "bottom": 614.5,
+            "left": 333
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 443,
+            "y": 659.5,
+            "width": 700,
+            "height": 34,
+            "top": 659.5,
+            "right": 1143,
+            "bottom": 693.5,
+            "left": 443
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 1418,
+            "y": 373,
+            "width": 115,
+            "height": 40,
+            "top": 373,
+            "right": 1533,
+            "bottom": 413,
+            "left": 1418
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 681,
+            "y": 808,
+            "width": 520,
+            "height": 78,
+            "top": 808,
+            "right": 1201,
+            "bottom": 886,
+            "left": 681
+          },
+          "text": "Couldn’t save your take\n\nYour take is kept in this browser."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-save preserves approved media size",
+    "observed": {
+      "before": {
+        "x": 333,
+        "y": 185,
+        "width": 920,
+        "height": 517.5
+      },
+      "after": {
+        "x": 333,
+        "y": 97,
+        "width": 920,
+        "height": 517.5
+      }
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-save notice stable during audition",
+    "observed": {
+      "mutations": 0,
+      "message": "Couldn’t save your take\n\nYour take is kept in this browser.",
+      "visibleErrorNotices": 1
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-save notice survives reload",
+    "observed": "Couldn’t save your take\n\nYour take is kept in this browser."
+  },
+  {
+    "check": "hf2-review-1882x902-en-save-reloaded",
+    "observed": {
+      "h": 902,
+      "w": 1882,
+      "scroll": 88,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 333,
+            "y": 97,
+            "width": 920,
+            "height": 517.5,
+            "top": 97,
+            "right": 1253,
+            "bottom": 614.5,
+            "left": 333
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 443,
+            "y": 659.5,
+            "width": 700,
+            "height": 34,
+            "top": 659.5,
+            "right": 1143,
+            "bottom": 693.5,
+            "left": 443
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 1418,
+            "y": 373,
+            "width": 115,
+            "height": 40,
+            "top": 373,
+            "right": 1533,
+            "bottom": 413,
+            "left": 1418
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 681,
+            "y": 808,
+            "width": 520,
+            "height": 78,
+            "top": 808,
+            "right": 1201,
+            "bottom": 886,
+            "left": 681
+          },
+          "text": "Couldn’t save your take\n\nYour take is kept in this browser."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-save-recovery-reachable",
+    "observed": {
+      "h": 902,
+      "w": 1882,
+      "scroll": 88,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 333,
+            "y": 97,
+            "width": 920,
+            "height": 517.5,
+            "top": 97,
+            "right": 1253,
+            "bottom": 614.5,
+            "left": 333
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 443,
+            "y": 659.5,
+            "width": 700,
+            "height": 34,
+            "top": 659.5,
+            "right": 1143,
+            "bottom": 693.5,
+            "left": 443
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 1418,
+            "y": 373,
+            "width": 115,
+            "height": 40,
+            "top": 373,
+            "right": 1533,
+            "bottom": 413,
+            "left": 1418
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 681,
+            "y": 808,
+            "width": 520,
+            "height": 78,
+            "top": 808,
+            "right": 1201,
+            "bottom": 886,
+            "left": 681
+          },
+          "text": "Couldn’t save your take\n\nYour take is kept in this browser."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1882x902-en-save successful retry resolves",
+    "observed": true
+  },
+  {
+    "check": "hf2-review-1882x902-en-save page errors",
+    "observed": []
+  },
+  {
+    "check": "hf2-review-1280x600-ru-microphone",
+    "observed": {
+      "h": 600,
+      "w": 1280,
+      "scroll": 94,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 147.109375,
+            "y": 71,
+            "width": 577.765625,
+            "height": 324.984375,
+            "top": 71,
+            "right": 724.875,
+            "bottom": 395.984375,
+            "left": 147.109375
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 764.875,
+            "y": 120,
+            "width": 352,
+            "height": 128,
+            "top": 120,
+            "right": 1116.875,
+            "bottom": 248,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 764.875,
+            "y": 316,
+            "width": 352,
+            "height": 40,
+            "top": 316,
+            "right": 1116.875,
+            "bottom": 356,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 380,
+            "y": 506,
+            "width": 520,
+            "height": 78,
+            "top": 506,
+            "right": 900,
+            "bottom": 584,
+            "left": 380
+          },
+          "text": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-microphone preserves approved media size",
+    "observed": {
+      "before": {
+        "x": 147.109375,
+        "y": 165,
+        "width": 577.765625,
+        "height": 324.984375
+      },
+      "after": {
+        "x": 147.109375,
+        "y": 71,
+        "width": 577.765625,
+        "height": 324.984375
+      }
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-microphone notice stable during audition",
+    "observed": {
+      "mutations": 0,
+      "message": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова.",
+      "visibleErrorNotices": 1
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-microphone notice survives reload",
+    "observed": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова."
+  },
+  {
+    "check": "hf2-review-1280x600-ru-microphone-reloaded",
+    "observed": {
+      "h": 600,
+      "w": 1280,
+      "scroll": 94,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 147.109375,
+            "y": 71,
+            "width": 577.765625,
+            "height": 324.984375,
+            "top": 71,
+            "right": 724.875,
+            "bottom": 395.984375,
+            "left": 147.109375
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 764.875,
+            "y": 120,
+            "width": 352,
+            "height": 64,
+            "top": 120,
+            "right": 1116.875,
+            "bottom": 184,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 764.875,
+            "y": 252,
+            "width": 352,
+            "height": 40,
+            "top": 252,
+            "right": 1116.875,
+            "bottom": 292,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 380,
+            "y": 506,
+            "width": 520,
+            "height": 78,
+            "top": 506,
+            "right": 900,
+            "bottom": 584,
+            "left": 380
+          },
+          "text": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-microphone-recovery-reachable",
+    "observed": {
+      "h": 600,
+      "w": 1280,
+      "scroll": 94,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 147.109375,
+            "y": 71,
+            "width": 577.765625,
+            "height": 324.984375,
+            "top": 71,
+            "right": 724.875,
+            "bottom": 395.984375,
+            "left": 147.109375
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 764.875,
+            "y": 120,
+            "width": 352,
+            "height": 64,
+            "top": 120,
+            "right": 1116.875,
+            "bottom": 184,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 764.875,
+            "y": 252,
+            "width": 352,
+            "height": 40,
+            "top": 252,
+            "right": 1116.875,
+            "bottom": 292,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 380,
+            "y": 506,
+            "width": 520,
+            "height": 78,
+            "top": 506,
+            "right": 900,
+            "bottom": 584,
+            "left": 380
+          },
+          "text": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-microphone page errors",
+    "observed": []
+  },
+  {
+    "check": "hf2-review-1280x600-ru-save",
+    "observed": {
+      "h": 600,
+      "w": 1280,
+      "scroll": 94,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 147.109375,
+            "y": 71,
+            "width": 577.765625,
+            "height": 324.984375,
+            "top": 71,
+            "right": 724.875,
+            "bottom": 395.984375,
+            "left": 147.109375
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 764.875,
+            "y": 120,
+            "width": 352,
+            "height": 128,
+            "top": 120,
+            "right": 1116.875,
+            "bottom": 248,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 945.875,
+            "y": 367,
+            "width": 171,
+            "height": 60,
+            "top": 367,
+            "right": 1116.875,
+            "bottom": 427,
+            "left": 945.875
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 380,
+            "y": 506,
+            "width": 520,
+            "height": 78,
+            "top": 506,
+            "right": 900,
+            "bottom": 584,
+            "left": 380
+          },
+          "text": "Не удалось сохранить дубль\n\nВаш дубль остаётся в этом браузере."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-save preserves approved media size",
+    "observed": {
+      "before": {
+        "x": 147.109375,
+        "y": 165,
+        "width": 577.765625,
+        "height": 324.984375
+      },
+      "after": {
+        "x": 147.109375,
+        "y": 71,
+        "width": 577.765625,
+        "height": 324.984375
+      }
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-save notice stable during audition",
+    "observed": {
+      "mutations": 0,
+      "message": "Не удалось сохранить дубль\n\nВаш дубль остаётся в этом браузере.",
+      "visibleErrorNotices": 1
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-save notice survives reload",
+    "observed": "Не удалось сохранить дубль\n\nВаш дубль остаётся в этом браузере."
+  },
+  {
+    "check": "hf2-review-1280x600-ru-save-reloaded",
+    "observed": {
+      "h": 600,
+      "w": 1280,
+      "scroll": 94,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 147.109375,
+            "y": 71,
+            "width": 577.765625,
+            "height": 324.984375,
+            "top": 71,
+            "right": 724.875,
+            "bottom": 395.984375,
+            "left": 147.109375
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 764.875,
+            "y": 120,
+            "width": 352,
+            "height": 64,
+            "top": 120,
+            "right": 1116.875,
+            "bottom": 184,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 945.875,
+            "y": 303,
+            "width": 171,
+            "height": 60,
+            "top": 303,
+            "right": 1116.875,
+            "bottom": 363,
+            "left": 945.875
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 380,
+            "y": 506,
+            "width": 520,
+            "height": 78,
+            "top": 506,
+            "right": 900,
+            "bottom": 584,
+            "left": 380
+          },
+          "text": "Не удалось сохранить дубль\n\nВаш дубль остаётся в этом браузере."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-save-recovery-reachable",
+    "observed": {
+      "h": 600,
+      "w": 1280,
+      "scroll": 94,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 147.109375,
+            "y": 71,
+            "width": 577.765625,
+            "height": 324.984375,
+            "top": 71,
+            "right": 724.875,
+            "bottom": 395.984375,
+            "left": 147.109375
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 764.875,
+            "y": 120,
+            "width": 352,
+            "height": 64,
+            "top": 120,
+            "right": 1116.875,
+            "bottom": 184,
+            "left": 764.875
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 945.875,
+            "y": 303,
+            "width": 171,
+            "height": 60,
+            "top": 303,
+            "right": 1116.875,
+            "bottom": 363,
+            "left": 945.875
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 380,
+            "y": 506,
+            "width": 520,
+            "height": 78,
+            "top": 506,
+            "right": 900,
+            "bottom": 584,
+            "left": 380
+          },
+          "text": "Не удалось сохранить дубль\n\nВаш дубль остаётся в этом браузере."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-1280x600-ru-save successful retry resolves",
+    "observed": true
+  },
+  {
+    "check": "hf2-review-1280x600-ru-save page errors",
+    "observed": []
+  },
+  {
+    "check": "hf2-review-390x667-ru-microphone",
+    "observed": {
+      "h": 667,
+      "w": 390,
+      "scroll": 646,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 16,
+            "y": -402,
+            "width": 358,
+            "height": 201.375,
+            "top": -402,
+            "right": 374,
+            "bottom": -200.625,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": -155.625,
+            "width": 358,
+            "height": 128,
+            "top": -155.625,
+            "right": 374,
+            "bottom": -27.625,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 32,
+            "y": 243.375,
+            "width": 326,
+            "height": 48,
+            "top": 243.375,
+            "right": 358,
+            "bottom": 291.375,
+            "left": 32
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 16,
+            "y": 553,
+            "width": 358,
+            "height": 98,
+            "top": 553,
+            "right": 374,
+            "bottom": 651,
+            "left": 16
+          },
+          "text": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-390x667-ru-microphone preserves approved media size",
+    "observed": {
+      "before": {
+        "x": 16,
+        "y": 244,
+        "width": 358,
+        "height": 201.375
+      },
+      "after": {
+        "x": 16,
+        "y": -402,
+        "width": 358,
+        "height": 201.375
+      }
+    }
+  },
+  {
+    "check": "hf2-review-390x667-ru-microphone notice stable during audition",
+    "observed": {
+      "mutations": 0,
+      "message": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова.",
+      "visibleErrorNotices": 1
+    }
+  },
+  {
+    "check": "hf2-review-390x667-ru-microphone notice survives reload",
+    "observed": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова."
+  },
+  {
+    "check": "hf2-review-390x667-ru-microphone-reloaded",
+    "observed": {
+      "h": 667,
+      "w": 390,
+      "scroll": 228,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 16,
+            "y": 16,
+            "width": 358,
+            "height": 201.375,
+            "top": 16,
+            "right": 374,
+            "bottom": 217.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 262.375,
+            "width": 358,
+            "height": 64,
+            "top": 262.375,
+            "right": 374,
+            "bottom": 326.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 32,
+            "y": 600.375,
+            "width": 326,
+            "height": 48,
+            "top": 600.375,
+            "right": 358,
+            "bottom": 648.375,
+            "left": 32
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 16,
+            "y": 553,
+            "width": 358,
+            "height": 98,
+            "top": 553,
+            "right": 374,
+            "bottom": 651,
+            "left": 16
+          },
+          "text": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-390x667-ru-microphone-recovery-reachable",
+    "observed": {
+      "h": 667,
+      "w": 390,
+      "scroll": 335,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 16,
+            "y": -91,
+            "width": 358,
+            "height": 201.375,
+            "top": -91,
+            "right": 374,
+            "bottom": 110.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 155.375,
+            "width": 358,
+            "height": 64,
+            "top": 155.375,
+            "right": 374,
+            "bottom": 219.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "open-settings",
+          "cls": "hf-button",
+          "rect": {
+            "x": 32,
+            "y": 493.375,
+            "width": 326,
+            "height": 48,
+            "top": 493.375,
+            "right": 358,
+            "bottom": 541.375,
+            "left": 32
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 16,
+            "y": 553,
+            "width": 358,
+            "height": 98,
+            "top": 553,
+            "right": 374,
+            "bottom": 651,
+            "left": 16
+          },
+          "text": "Микрофон недоступен\n\nЗапись не началась. Откройте настройки и попробуйте записать снова."
+        }
+      ]
+    }
+  },
+  {
+    "check": "Mic recovery persists guards/boundary/navigation/reload; successful capture resolves",
+    "observed": true
+  },
+  {
+    "check": "hf2-review-390x667-ru-microphone page errors",
+    "observed": []
+  },
+  {
+    "check": "hf2-review-390x667-ru-save",
+    "observed": {
+      "h": 667,
+      "w": 390,
+      "scroll": 491,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 16,
+            "y": -247,
+            "width": 358,
+            "height": 201.375,
+            "top": -247,
+            "right": 374,
+            "bottom": -45.625,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": -0.625,
+            "width": 358,
+            "height": 128,
+            "top": -0.625,
+            "right": 374,
+            "bottom": 127.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 200,
+            "y": 449.375,
+            "width": 158,
+            "height": 72,
+            "top": 449.375,
+            "right": 358,
+            "bottom": 521.375,
+            "left": 200
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 16,
+            "y": 553,
+            "width": 358,
+            "height": 98,
+            "top": 553,
+            "right": 374,
+            "bottom": 651,
+            "left": 16
+          },
+          "text": "Не удалось сохранить дубль\n\nНовый дубль в этом браузере; сохранённый не изменён."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-390x667-ru-save preserves approved media size",
+    "observed": {
+      "before": {
+        "x": 16,
+        "y": 244,
+        "width": 358,
+        "height": 201.375
+      },
+      "after": {
+        "x": 16,
+        "y": -247,
+        "width": 358,
+        "height": 201.375
+      }
+    }
+  },
+  {
+    "check": "hf2-review-390x667-ru-save notice stable during audition",
+    "observed": {
+      "mutations": 0,
+      "message": "Не удалось сохранить дубль\n\nНовый дубль в этом браузере; сохранённый не изменён.",
+      "visibleErrorNotices": 1
+    }
+  },
+  {
+    "check": "hf2-review-390x667-ru-save notice survives reload",
+    "observed": "Не удалось сохранить дубль\n\nНовый дубль в этом браузере; сохранённый не изменён."
+  },
+  {
+    "check": "hf2-review-390x667-ru-save-reloaded",
+    "observed": {
+      "h": 667,
+      "w": 390,
+      "scroll": 228,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 16,
+            "y": 16,
+            "width": 358,
+            "height": 201.375,
+            "top": 16,
+            "right": 374,
+            "bottom": 217.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 262.375,
+            "width": 358,
+            "height": 32,
+            "top": 262.375,
+            "right": 374,
+            "bottom": 294.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 200,
+            "y": 651.375,
+            "width": 158,
+            "height": 72,
+            "top": 651.375,
+            "right": 358,
+            "bottom": 723.375,
+            "left": 200
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 16,
+            "y": 553,
+            "width": 358,
+            "height": 98,
+            "top": 553,
+            "right": 374,
+            "bottom": 651,
+            "left": 16
+          },
+          "text": "Не удалось сохранить дубль\n\nНовый дубль в этом браузере; сохранённый не изменён."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf2-review-390x667-ru-save-recovery-reachable",
+    "observed": {
+      "h": 667,
+      "w": 390,
+      "scroll": 410,
+      "items": [
+        {
+          "id": "",
+          "cls": "scene",
+          "rect": {
+            "x": 16,
+            "y": -166,
+            "width": 358,
+            "height": 201.375,
+            "top": -166,
+            "right": 374,
+            "bottom": 35.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 80.375,
+            "width": 358,
+            "height": 32,
+            "top": 80.375,
+            "right": 374,
+            "bottom": 112.375,
+            "left": 16
+          },
+          "text": ""
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 200,
+            "y": 469.375,
+            "width": 158,
+            "height": 72,
+            "top": 469.375,
+            "right": 358,
+            "bottom": 541.375,
+            "left": 200
+          },
+          "text": ""
+        },
+        {
+          "id": "feedback",
+          "cls": "hf-notice notice-error",
+          "rect": {
+            "x": 16,
+            "y": 553,
+            "width": 358,
+            "height": 98,
+            "top": 553,
+            "right": 374,
+            "bottom": 651,
+            "left": 16
+          },
+          "text": "Не удалось сохранить дубль\n\nНовый дубль в этом браузере; сохранённый не изменён."
+        }
+      ]
+    }
+  },
+  {
+    "check": "Retry after Previous failure/reload preserves exact replacement and requested Previous destination",
+    "observed": true
+  },
+  {
+    "check": "hf2-review-390x667-ru-save page errors",
+    "observed": []
+  },
+  {
+    "check": "Stable target hashes",
+    "observed": {
+      "BRIEF.md": true,
+      "CALIBRATION.md": true,
+      "index.html": true,
+      "src.js": true,
+      "style.css": true,
+      "highfi.css": true,
+      "presentation.css": true,
+      "ui.js": true,
+      "locale.js": true,
+      "icons.js": true,
+      "waveform-data.js": true,
+      "calibration.html": true,
+      "package.json": true,
+      "package-lock.json": true,
+      "public/media/scene.mp4": true,
+      "public/media/example-dub.mp4": true,
+      "public/media/take-0.wav": true,
+      "public/media/take-1.wav": true,
+      "public/media/take-2.wav": true,
+      "public/calibration/InterVariable.woff2": true,
+      "public/calibration/LUCIDE-LICENSE.txt": true,
+      "evidence/highfi-v2-journey-results.json": true,
+      "evidence/highfi-v2-short-results.json": true,
+      "evidence/highfi-v2-retention-results.json": true,
+      "evidence/highfi-v2-recovery-results.json": true,
+      "evidence/highfi-v2-notice-results.json": true,
+      "evidence/highfi-v2-completion-recovery-results.json": true,
+      "evidence/calibration-v2-check-results.json": true,
+      "evidence/calibration-v2-reference-check.json": true,
+      "evidence/highfi-v2-journey-check.py": true,
+      "evidence/highfi-v2-short-check.py": true,
+      "evidence/highfi-v2-retention-check.py": true,
+      "evidence/highfi-v2-recovery-check.py": true,
+      "evidence/highfi-v2-notice-check.py": true,
+      "evidence/highfi-v2-completion-recovery-check.py": true,
+      "evidence/calibration-v2-check.py": true,
+      "evidence/lucide-assets.json": true,
+      "evidence/waveform-provenance.json": true,
+      "evidence/hf2-recovery-1882x902-en-microphone.png": true,
+      "evidence/hf2-recovery-1882x902-en-save.png": true,
+      "evidence/hf2-recovery-1280x600-ru-microphone.png": true,
+      "evidence/hf2-recovery-1280x600-ru-save.png": true,
+      "evidence/hf2-recovery-390x667-ru-microphone.png": true,
+      "evidence/hf2-recovery-390x667-ru-save.png": true,
+      "evidence/hf2-first-save-390x667-ru.png": true,
+      "evidence/hf2-persistent-audition-390x667-ru.png": true,
+      "evidence/calibration-v2-desktop.png": true,
+      "evidence/calibration-v2-phone.png": true
+    }
+  }
+]

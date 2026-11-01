@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-23T16:36:07.759Z",
+  "boundary": "Static isolated BJfEX4XM bundle; latest countdown/locale correction snapshot. Pending form only.",
+  "states": [
+    {
+      "locale": "en",
+      "text": "Create your account\n\nCreate an account to start making a dub.\n\nCheck your email\n\nEnter the six-digit verification code for final-ui-1792773368629@example.test.\n\nSimulated code · local mock: 257119. No email was sent.\n6-digit verification code\n—\n\nCode expires in 10:00\n\nLocal mock sends remaining this hour: 4.\n\nResend available in 1:00\nChange email"
+    },
+    {
+      "locale": "ru",
+      "text": "Создайте аккаунт\n\nСоздайте аккаунт, чтобы начать озвучивание.\n\nПроверьте почту\n\nВведите шестизначный код подтверждения для final-ui-1792773368629@example.test.\n\nТестовый код · локальный мок: 257119. Письмо не отправлялось.\nПроверяем состояние регистрации…\n6-значный код подтверждения\n—\n\nКод истекает через 10:00\n\nВ локальном сценарии осталось отправок за этот час: 4.\n\nПовторить через 1:00\nИзменить email",
+      "controls": [
+        {
+          "text": "Повторить через 1:00",
+          "height": 48,
+          "clientWidth": 290,
+          "scrollWidth": 290
+        },
+        {
+          "text": "Изменить email",
+          "height": 48,
+          "clientWidth": 290,
+          "scrollWidth": 290
+        }
+      ]
+    }
+  ]
+}

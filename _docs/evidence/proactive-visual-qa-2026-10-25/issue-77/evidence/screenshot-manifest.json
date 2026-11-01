@@ -1,0 +1,121 @@
+[
+  {
+    "path": "evidence/01-en-desktop-ready.png",
+    "sha256": "614D1C8F22895D8246392CCC07139FA980E4814A0193531C726A5E91D7E5DD11",
+    "bytes": 59864,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:45.2649853Z"
+  },
+  {
+    "path": "evidence/02-en-short-ready.png",
+    "sha256": "1DF73D0791B95DD33C35F57C84D57C40B2A6B60C87413AB1A24671DEC46BD4C8",
+    "bytes": 48358,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:45.7033407Z"
+  },
+  {
+    "path": "evidence/03-en-phone-ready.png",
+    "sha256": "35D37DAE3B80C14501D947F735D065587C953B400BCC4A4F51BECE802D126B6E",
+    "bytes": 41683,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:46.1241137Z"
+  },
+  {
+    "path": "evidence/04-ru-desktop-ready.png",
+    "sha256": "7663861A0650CEB2C666D30E11E28872FB45BCD0D4D17EDF39651536ED584594",
+    "bytes": 62485,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:46.6075668Z"
+  },
+  {
+    "path": "evidence/05-ru-phone-ready.png",
+    "sha256": "20037CF466F0FA9FCB4390C9108A6F2C631291C61E3EEE757CE266FAC2822636",
+    "bytes": 44131,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:47.0113014Z"
+  },
+  {
+    "path": "evidence/06-ru-767-ready.png",
+    "sha256": "68C09667F07E9A46CE464AC223838C550C177EB616E8BBE40DD60016E0FF4DE4",
+    "bytes": 58832,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:47.4316824Z"
+  },
+  {
+    "path": "evidence/07-ru-768-ready.png",
+    "sha256": "EC9F0E91DEFD46F491150DE61ACA5DB66A55A13F809EE01397D914F1E7E31D57",
+    "bytes": 59055,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:47.8454660Z"
+  },
+  {
+    "path": "evidence/08-en-desktop-focus.png",
+    "sha256": "614D1C8F22895D8246392CCC07139FA980E4814A0193531C726A5E91D7E5DD11",
+    "bytes": 59864,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:48.3170368Z"
+  },
+  {
+    "path": "evidence/09-en-desktop-capturing.png",
+    "sha256": "8C8051E8FEC2BDA578BBFBF4DC76B42E670C731E3BF195EFD4773392C16EEFFF",
+    "bytes": 61865,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:48.8881943Z"
+  },
+  {
+    "path": "evidence/10-en-desktop-candidate.png",
+    "sha256": "B7C32C5F91EAD844815B71FB7E8AFC9D6CBCE012BED323B30C3B278366E96C90",
+    "bytes": 58668,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:51.6226359Z"
+  },
+  {
+    "path": "evidence/11-en-desktop-leave-dialog.png",
+    "sha256": "6173820B837368D06F3F13FD8B0E596FE5ECCE1602B7E54739ABFF04F1AA1283",
+    "bytes": 60420,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:52.1133141Z"
+  },
+  {
+    "path": "evidence/12-en-phone-candidate.png",
+    "sha256": "6FA2B1E363AB13FA377E37A91711668168FAAA765662A92DDB4F8C289FFD5978",
+    "bytes": 40149,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:52.5880594Z"
+  },
+  {
+    "path": "evidence/13-en-desktop-accepted-next.png",
+    "sha256": "56063CA8EA4A4579F5E9BBA0E7F14E28CE98D97FCBA703A0ABC2EC08826E856C",
+    "bytes": 59958,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:54.0585915Z"
+  },
+  {
+    "path": "evidence/14-en-zoom200-layout.png",
+    "sha256": "4259B219395EB34884541E08C5C9CEF1CFEE7A8E72DE26BD6A9C6EBE2A45E472",
+    "bytes": 22978,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:58.5856893Z"
+  },
+  {
+    "path": "evidence/15-en-phone-leave-dialog.png",
+    "sha256": "77835942A1229EE869C9A0C48206804A33E8D8BCF0EFFB64D11BD2C557594B12",
+    "bytes": 37387,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:53.0376648Z"
+  },
+  {
+    "path": "evidence/16-en-other-tab-denied.png",
+    "sha256": "362BC598178B7C72F814A69D1F3F89E7FC3110EE3198B270F480F2A6E8F08E58",
+    "bytes": 63938,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:54.9229530Z"
+  },
+  {
+    "path": "evidence/17-en-line2-candidate-back-disabled.png",
+    "sha256": "17040E67E0D449ED07C1D18BB16D9800174DA8E682E1A788933A15EC8ABDE11D",
+    "bytes": 61792,
+    "visuallyOpened": true,
+    "modifiedUtc": "2026-10-24T23:09:58.1902273Z"
+  }
+]

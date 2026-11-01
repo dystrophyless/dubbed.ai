@@ -1,0 +1,116 @@
+[
+  {
+    "state": "en-desktop-empty",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:19.390Z"
+  },
+  {
+    "state": "en-short-empty",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:21.023Z"
+  },
+  {
+    "state": "en-phone-empty",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:22.711Z"
+  },
+  {
+    "state": "en-phone-validation",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:23.089Z"
+  },
+  {
+    "state": "ru-desktop-empty",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:24.106Z"
+  },
+  {
+    "state": "ru-short-empty",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:25.022Z"
+  },
+  {
+    "state": "ru-phone-empty",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:25.974Z"
+  },
+  {
+    "state": "ru-phone-validation",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:26.260Z"
+  },
+  {
+    "state": "en-desktop-invalid-credentials",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:27.293Z"
+  },
+  {
+    "state": "en-desktop-password-visible",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:27.601Z"
+  },
+  {
+    "state": "en-desktop-keyboard-focus",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:27.873Z"
+  },
+  {
+    "state": "signin-loading",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:29.161Z"
+  },
+  {
+    "scenario": "signin-loading",
+    "calls": [
+      "identity.signIn"
+    ]
+  },
+  {
+    "state": "signin-service-error",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:30.387Z"
+  },
+  {
+    "scenario": "signin-service-error",
+    "calls": [
+      "identity.signIn"
+    ]
+  },
+  {
+    "state": "signin-session-unavailable",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:31.660Z"
+  },
+  {
+    "scenario": "signin-session-unavailable",
+    "calls": [
+      "identity.signIn"
+    ]
+  },
+  {
+    "state": "signin-provider-conflict",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:32.829Z"
+  },
+  {
+    "scenario": "signin-provider-conflict",
+    "calls": [
+      "identity.google.sign-in"
+    ]
+  },
+  {
+    "state": "ru-boundary-767",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:33.828Z"
+  },
+  {
+    "state": "ru-boundary-768",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:34.882Z"
+  },
+  {
+    "state": "ru-reflow-720x450",
+    "url": "http://127.0.0.1:4380/sign-in",
+    "timestamp": "2026-10-24T23:15:35.697Z"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "amendment": "exit-log-out-2026-10-28",
+  "date": "2026-10-28",
+  "variant": "B",
+  "result": "PASS",
+  "command": "npm.cmd run build",
+  "vite": "7.3.7",
+  "javascript": "index-DTZUH-bR.js",
+  "css": "index-OLerSvB1.css",
+  "limitations": "Bundle check only;actual-browser icon verification separate."
+}

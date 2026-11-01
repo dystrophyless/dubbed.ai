@@ -1,0 +1,298 @@
+[
+  {
+    "state": "review-shortphone-minscroll-candidate",
+    "layout": {
+      "scroll": 108,
+      "items": [
+        {
+          "id": "scene",
+          "rect": {
+            "x": 16,
+            "y": 136,
+            "width": 358,
+            "height": 200.09375,
+            "top": 136,
+            "right": 374,
+            "bottom": 336.09375,
+            "left": 16
+          }
+        },
+        {
+          "id": "capture-badge",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "rect": {
+            "x": 16,
+            "y": 381.09375,
+            "width": 358,
+            "height": 64,
+            "top": 381.09375,
+            "right": 374,
+            "bottom": 445.09375,
+            "left": 16
+          }
+        },
+        {
+          "id": "record",
+          "rect": {
+            "x": 127.625,
+            "y": 611.09375,
+            "width": 134.734375,
+            "height": 48,
+            "top": 611.09375,
+            "right": 262.359375,
+            "bottom": 659.09375,
+            "left": 127.625
+          }
+        },
+        {
+          "id": "next",
+          "rect": {
+            "x": 200,
+            "y": 790.09375,
+            "width": 174,
+            "height": 48,
+            "top": 790.09375,
+            "right": 374,
+            "bottom": 838.09375,
+            "left": 200
+          }
+        }
+      ]
+    }
+  },
+  {
+    "state": "review-shortphone-minscroll-newline",
+    "layout": {
+      "scroll": 287,
+      "items": [
+        {
+          "id": "scene",
+          "rect": {
+            "x": 16,
+            "y": -43,
+            "width": 358,
+            "height": 200.09375,
+            "top": -43,
+            "right": 374,
+            "bottom": 157.09375,
+            "left": 16
+          }
+        },
+        {
+          "id": "capture-badge",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "rect": {
+            "x": 16,
+            "y": 202.09375,
+            "width": 358,
+            "height": 32,
+            "top": 202.09375,
+            "right": 374,
+            "bottom": 234.09375,
+            "left": 16
+          }
+        },
+        {
+          "id": "record",
+          "rect": {
+            "x": 127.625,
+            "y": 432.09375,
+            "width": 134.734375,
+            "height": 48,
+            "top": 432.09375,
+            "right": 262.359375,
+            "bottom": 480.09375,
+            "left": 127.625
+          }
+        },
+        {
+          "id": "next",
+          "rect": {
+            "x": 200,
+            "y": 551.09375,
+            "width": 174,
+            "height": 48,
+            "top": 551.09375,
+            "right": 374,
+            "bottom": 599.09375,
+            "left": 200
+          }
+        }
+      ]
+    }
+  },
+  {
+    "state": "review-shortphone-minscroll-line2-capture",
+    "layout": {
+      "scroll": 287,
+      "items": [
+        {
+          "id": "scene",
+          "rect": {
+            "x": 16,
+            "y": -43,
+            "width": 358,
+            "height": 200.09375,
+            "top": -43,
+            "right": 374,
+            "bottom": 157.09375,
+            "left": 16
+          }
+        },
+        {
+          "id": "capture-badge",
+          "rect": {
+            "x": 32,
+            "y": -27,
+            "width": 153.609375,
+            "height": 33,
+            "top": -27,
+            "right": 185.609375,
+            "bottom": 6,
+            "left": 32
+          }
+        },
+        {
+          "id": "dialogue",
+          "rect": {
+            "x": 16,
+            "y": 202.09375,
+            "width": 358,
+            "height": 32,
+            "top": 202.09375,
+            "right": 374,
+            "bottom": 234.09375,
+            "left": 16
+          }
+        },
+        {
+          "id": "record",
+          "rect": {
+            "x": 127.625,
+            "y": 432.09375,
+            "width": 134.734375,
+            "height": 48,
+            "top": 432.09375,
+            "right": 262.359375,
+            "bottom": 480.09375,
+            "left": 127.625
+          }
+        },
+        {
+          "id": "next",
+          "rect": {
+            "x": 200,
+            "y": 551.09375,
+            "width": 174,
+            "height": 48,
+            "top": 551.09375,
+            "right": 374,
+            "bottom": 599.09375,
+            "left": 200
+          }
+        }
+      ]
+    }
+  },
+  {
+    "state": "Save and leave accepts and goes to Settings boundary",
+    "body": "Settings\n\nThis neighboring screen is outside this recording prototype.\n\nAfter onboarding, microphone selection and optional checks are available only in Settings.\n\nBack to scene"
+  },
+  {
+    "state": "review-shortphone-input-failure",
+    "layout": {
+      "scroll": 108,
+      "items": [
+        {
+          "id": "scene",
+          "rect": {
+            "x": 16,
+            "y": 136,
+            "width": 358,
+            "height": 200.09375,
+            "top": 136,
+            "right": 374,
+            "bottom": 336.09375,
+            "left": 16
+          }
+        },
+        {
+          "id": "capture-badge",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "rect": {
+            "x": 16,
+            "y": 381.09375,
+            "width": 358,
+            "height": 32,
+            "top": 381.09375,
+            "right": 374,
+            "bottom": 413.09375,
+            "left": 16
+          }
+        },
+        {
+          "id": "record",
+          "rect": {
+            "x": 127.625,
+            "y": 611.09375,
+            "width": 134.734375,
+            "height": 48,
+            "top": 611.09375,
+            "right": 262.359375,
+            "bottom": 659.09375,
+            "left": 127.625
+          }
+        },
+        {
+          "id": "next",
+          "rect": {
+            "x": 200,
+            "y": 868.09375,
+            "width": 174,
+            "height": 48,
+            "top": 868.09375,
+            "right": 374,
+            "bottom": 916.09375,
+            "left": 200
+          }
+        }
+      ]
+    }
+  }
+]

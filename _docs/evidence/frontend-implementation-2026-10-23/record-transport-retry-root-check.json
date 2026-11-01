@@ -1,0 +1,29 @@
+{
+  "observedAt": "2026-10-24T00:39:32.5740254+05:00",
+  "boundary": "live dirty worktree; implementation still evolving",
+  "command": "npm.cmd test -- tests/services/result-retry-lifecycle.test.ts tests/services/recording-results.test.ts tests/recording/RecordingTransport.test.tsx",
+  "result": "3 files, 13 tests PASS; 3.94 seconds",
+  "limits": "No browser composition or synchronized actual-media acceptance. Current full typecheck has unrelated WIP errors and must be rerun after integration.",
+  "hashes": [
+    {
+      "path": "frontend/src/services/mock-results.ts",
+      "sha256": "91B4DD5798DD298EB867F9DACD6185AA8265E9E58DAE510638FB439DC1703A0A"
+    },
+    {
+      "path": "frontend/src/features/recording/RecordingTransport.tsx",
+      "sha256": "BA9F60C357A0712E5715E4CAD1E39F945C50095A371FAA9E4EDAF66C484C7ED9"
+    },
+    {
+      "path": "frontend/tests/services/result-retry-lifecycle.test.ts",
+      "sha256": "47F9CAC68CBA223ABEB6666DA2250675C453D38F1026372C46707F614A723349"
+    },
+    {
+      "path": "frontend/tests/services/recording-results.test.ts",
+      "sha256": "726D6E9C9E701C9F9A92C719606059853C69E439526CC88A2BB350C6D73A6D53"
+    },
+    {
+      "path": "frontend/tests/recording/RecordingTransport.test.tsx",
+      "sha256": "5BFE7F60BE48DC319B4CDA06E451D6B348125CAB7880AB5197217BCFB2ADA748"
+    }
+  ]
+}

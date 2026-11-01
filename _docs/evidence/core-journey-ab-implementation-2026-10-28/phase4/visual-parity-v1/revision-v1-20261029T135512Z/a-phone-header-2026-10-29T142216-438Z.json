@@ -1,0 +1,162 @@
+{
+  "browserTempPath": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "screenshotPath": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\core-journey-ab-implementation-2026-10-28\\phase4\\visual-parity-v1\\revision-v1-20261029T135512Z\\a-phone-header-2026-10-29T142216-316Z.png",
+  "at": "2026-10-29T14:22:16.288Z",
+  "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=en",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "header": {
+    "text": "ExitSintel · The search",
+    "x": 16,
+    "y": 40,
+    "width": 358,
+    "height": 100,
+    "display": "grid",
+    "visibility": "visible",
+    "opacity": "1",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+    "lineHeight": "24px",
+    "margin": "0px 0px 16px",
+    "transform": "none",
+    "hit": {
+      "tag": "HEADER",
+      "className": "record-header record-header--a",
+      "text": "ExitSintel · The search"
+    }
+  },
+  "titleContainer": {
+    "text": "Sintel · The search",
+    "x": 16,
+    "y": 96,
+    "width": 358,
+    "height": 44,
+    "display": "block",
+    "visibility": "visible",
+    "opacity": "1",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+    "lineHeight": "24px",
+    "margin": "0px",
+    "transform": "none",
+    "hit": {
+      "tag": "H1",
+      "className": "",
+      "text": "Sintel · The search"
+    }
+  },
+  "title": {
+    "text": "Sintel · The search",
+    "x": 66.125,
+    "y": 96,
+    "width": 257.75,
+    "height": 28,
+    "display": "block",
+    "visibility": "visible",
+    "opacity": "1",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "font": "500 20px / 28px \"Mabry Pro\", Arial, sans-serif",
+    "lineHeight": "28px",
+    "margin": "0px 50.125px",
+    "transform": "none",
+    "hit": {
+      "tag": "H1",
+      "className": "",
+      "text": "Sintel · The search"
+    }
+  },
+  "dots": {
+    "text": "",
+    "x": 16,
+    "y": 134,
+    "width": 358,
+    "height": 6,
+    "display": "flex",
+    "visibility": "visible",
+    "opacity": "1",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+    "lineHeight": "24px",
+    "margin": "10px 0px 0px",
+    "transform": "none",
+    "hit": {
+      "tag": "LI",
+      "className": "",
+      "text": ""
+    }
+  },
+  "dotsItems": [
+    {
+      "x": 178,
+      "y": 134,
+      "width": 6,
+      "height": 6,
+      "color": "rgb(32, 32, 32)",
+      "display": "list-item",
+      "visibility": "visible",
+      "opacity": "1"
+    },
+    {
+      "x": 192,
+      "y": 134,
+      "width": 6,
+      "height": 6,
+      "color": "rgb(212, 212, 212)",
+      "display": "list-item",
+      "visibility": "visible",
+      "opacity": "1"
+    },
+    {
+      "x": 206,
+      "y": 134,
+      "width": 6,
+      "height": 6,
+      "color": "rgb(212, 212, 212)",
+      "display": "list-item",
+      "visibility": "visible",
+      "opacity": "1"
+    }
+  ],
+  "exit": {
+    "text": "Exit",
+    "x": 16,
+    "y": 40,
+    "width": 85.265625,
+    "height": 48,
+    "display": "flex",
+    "visibility": "visible",
+    "opacity": "1",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+    "lineHeight": "24px",
+    "margin": "0px",
+    "transform": "none",
+    "hit": {
+      "tag": "SPAN",
+      "className": "",
+      "text": "Exit"
+    }
+  },
+  "media": {
+    "text": "",
+    "x": 16,
+    "y": 156,
+    "width": 358,
+    "height": 201.375,
+    "display": "block",
+    "visibility": "visible",
+    "opacity": "1",
+    "color": "rgba(0, 0, 0, 0.88)",
+    "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+    "lineHeight": "24px",
+    "margin": "0px",
+    "transform": "none",
+    "hit": {
+      "tag": "VIDEO",
+      "className": "",
+      "text": ""
+    }
+  }
+}

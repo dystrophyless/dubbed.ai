@@ -1,0 +1,133 @@
+{
+  "capture": "native200-portrait-result-en",
+  "mode": "native-chromium-cdp",
+  "screenshot": {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-portrait-result-en.png",
+    "sha256": "b2c09453340dde148b43d12a3af36fa8f7a476d058a1e69447570933a37cdfd7",
+    "bytes": 98429
+  },
+  "metrics": {
+    "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/result",
+    "viewport": {
+      "innerWidth": 711,
+      "innerHeight": 432,
+      "outerWidth": 1440,
+      "outerHeight": 960
+    },
+    "devicePixelRatio": 2,
+    "bodyZoom": "1",
+    "documentWidth": 711,
+    "documentHeight": 669,
+    "horizontalOverflow": false,
+    "scrollY": 0,
+    "language": "en",
+    "title": "Dubbed",
+    "recording": {
+      "line": null,
+      "dialogue": null,
+      "stage": null,
+      "lineHeader": null,
+      "dialogueBounds": null,
+      "timeline": null,
+      "panel": null,
+      "panelPosition": null,
+      "phonePanelFlow": null,
+      "dialogueAndTimelineClearOfPanel": false
+    },
+    "media": {
+      "width": 540,
+      "height": 960,
+      "duration": 35.958433,
+      "readyState": 4,
+      "currentSrc": "http://127.0.0.1:4563/media/portrait-result-generation-001.mp4"
+    },
+    "dialog": null,
+    "activeElement": {
+      "tagName": "BODY",
+      "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits84LanguageENRUSign outYour resultportrait-long-sourceDisplayed generation: 1Synthetic fixture result; not rendered from accepted takes or a custom upload.Download MP4Return to recording",
+      "role": null,
+      "className": ""
+    },
+    "buttons": [
+      {
+        "label": "Sign out",
+        "variant": "ghost",
+        "size": "small",
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": false
+      },
+      {
+        "label": "Open navigation",
+        "variant": "ghost",
+        "size": "icon",
+        "width": 48,
+        "height": 48,
+        "top": 8,
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Download MP4",
+        "variant": "primary",
+        "size": "large",
+        "width": 679,
+        "height": 48,
+        "top": 513.2,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Return to recording",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 679,
+        "height": 48,
+        "top": 573.2,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      }
+    ],
+    "visibleRouteHeadings": [
+      "Your result"
+    ],
+    "cdp": {
+      "cssVisualViewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 0,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      },
+      "cssLayoutViewport": {
+        "pageX": 0,
+        "pageY": 0,
+        "clientWidth": 711,
+        "clientHeight": 432
+      },
+      "cssContentSize": {
+        "x": 0,
+        "y": 0,
+        "width": 711,
+        "height": 669
+      }
+    }
+  }
+}

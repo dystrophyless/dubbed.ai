@@ -1,0 +1,95 @@
+{
+  "issue": 78,
+  "model": "gpt-6-luna",
+  "effort": "max",
+  "date": "2026-10-25",
+  "baseline": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "worktree": "Shared dirty worktree; no commit, push, or GitHub mutation.",
+  "files": [
+    "frontend/src/App.css",
+    "frontend/src/components/ui/button.tsx",
+    "frontend/src/components/layout/AppHeader.tsx",
+    "frontend/e2e/harness/shared-controls.css",
+    "frontend/e2e/harness/shared-controls.tsx",
+    "frontend/e2e/shared-controls.spec.ts",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/completion.md",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/capture.cjs",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/playwright.config.cjs",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/metrics.json",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/screenshot-manifest.json",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/evidence/",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/playwright-results/"
+  ],
+  "findings": [
+    {
+      "id": "QA-78-01",
+      "status": "fixed",
+      "evidence": [
+        "EN/RU phone landing and signed-in shell screenshots",
+        "Measured 48px phone brand row, locale/sign-in controls, support link, menu trigger, sheet close, and menu rows",
+        "Escape focus restoration passed in the captured EN/RU menu cases"
+      ]
+    },
+    {
+      "id": "QA-78-02",
+      "status": "fixed",
+      "evidence": [
+        "Shared button roles: desktop 40/44/32/36/40px and phone 48px (icon 48×48px)",
+        "Medium segmented options: desktop 40px at 14/20 and phone 48px at 16/24",
+        "Focused shared-controls Playwright suite passed 4/4"
+      ]
+    },
+    {
+      "id": "QA-78-03",
+      "status": "duplicate_deferred_to_issue_82",
+      "evidence": [
+        "OTP/auth CSS was not changed; issue 82 owns the cell geometry correction"
+      ]
+    },
+    {
+      "id": "QA-78-04",
+      "status": "fixed",
+      "evidence": [
+        "Native locale select retained with accessible name and visible Lucide chevron at 1.1 stroke",
+        "EN/RU desktop and phone shell screenshots and measured 36px desktop / 48px phone controls"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "command": "node capture.cjs",
+      "environment": "Playwright Chromium 156.0.8078.4 against local mock Vite at 127.0.0.1:4578",
+      "result": "PASS: 22 screenshots, 19 checks passed, 0 page errors"
+    },
+    {
+      "command": "npm.cmd run test:e2e -- --config=../_docs/evidence/visual-qa-fixes-2026-10-25/issue-78/playwright.config.cjs",
+      "environment": "Run from frontend/ against port 4578",
+      "result": "PASS: 4 shared-control Playwright tests"
+    },
+    {
+      "command": "node --check capture.cjs; node --check playwright.config.cjs",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check -- <six owned source/test files>",
+      "result": "PASS; only line-ending conversion warnings"
+    },
+    {
+      "command": "npm.cmd run typecheck",
+      "result": "NOT RERUN by task 78: root reported the latest shared-tree typecheck was green after the issue 65 cleanup."
+    }
+  ],
+  "limitations": [
+    "Local mock account and service adapter only; no production service or real email was used.",
+    "No native 200% zoom, assistive technology, live account preference, or physical microphone/speaker test.",
+    "QA-78-03 remains assigned to issue 82.",
+    "Task 78 did not independently repeat the shared-tree typecheck."
+  ],
+  "evidence": {
+    "completion": "completion.md",
+    "metrics": "metrics.json",
+    "manifest": "screenshot-manifest.json",
+    "screenshots": "evidence/",
+    "playwrightResults": "playwright-results/"
+  }
+}

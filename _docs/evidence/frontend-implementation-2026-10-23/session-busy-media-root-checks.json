@@ -1,0 +1,72 @@
+{
+  "capturedAtUtc": "2026-10-23T19:24:56.9998968Z",
+  "head": "35d122949ad0e07a7e365bcbd4c1ec69202796c3",
+  "boundary": "Independent bounded checks against dirty current source; subsequent assigned identity/result/reprocessing edits must get fresh verification.",
+  "checks": [
+    "App/session/Button9testsPASS4.65s",
+    "Authbusy+App/session/defaultclient35tests8filesPASS12.66s",
+    "MediaE2E4284PASS1of1in39.5s",
+    "SharedcontrolsfullE2E4173PASS4of4in32.1s",
+    "Nativepersistentprofileclose/reopenPASS30days"
+  ],
+  "files": [
+    {
+      "path": "frontend/src/App.tsx",
+      "sha256": "373144e9af7aa00a9f307178c715d3593179f9da201063c076a1059e8197834e"
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "sha256": "58bb6849c660265c6c0ba8a9cdd7d5fbb3b76e292d8bacd9177cbc4403d36f6d"
+    },
+    {
+      "path": "frontend/src/services/index.ts",
+      "sha256": "35dcc78e4ed4bc6459e7c969caa49d1b280c0b6b640cbbc69e77da300e7cb2c5"
+    },
+    {
+      "path": "frontend/src/services/mock-identity.ts",
+      "sha256": "7458efa3e9aaeaefab3297bcf3ebba3c1df0ccfad1ec6d14d1c83e58c178fd72"
+    },
+    {
+      "path": "frontend/tests/services/session-lifetime.test.ts",
+      "sha256": "b456938307c41a2ae9f10638bf6210107a631e78789bb6c1487ac9328cf407ca"
+    },
+    {
+      "path": "frontend/tests/services/default-client-persistence.test.ts",
+      "sha256": "423d69f84054085ac35abd48be5a3025052bbfad692483e21de27f366c749aa1"
+    },
+    {
+      "path": "frontend/src/components/ui/button.tsx",
+      "sha256": "db0483e51e8a4b74751b25c19215b92de36bc4119a24a1117083fcab748d99b2"
+    },
+    {
+      "path": "frontend/src/App.css",
+      "sha256": "a449281a33e1063a9a2177fc6efd1445612bd1ef878bc22b810463dd310c40f7"
+    },
+    {
+      "path": "frontend/tests/components/Button.test.tsx",
+      "sha256": "a555818e57e28d2c930ce375a3845653c25cf76728027a01c03a918a5b15f748"
+    },
+    {
+      "path": "frontend/e2e/shared-controls.spec.ts",
+      "sha256": "1bdf811ffc9e97ebe1a9184eb0c7e985632bee6e9dd2e305f6d82e9bee35265d"
+    },
+    {
+      "path": "frontend/e2e/media-visual.spec.ts",
+      "sha256": "260cd0697da71c95f55691a5c75a61901b89341063d996a2414195beed224234"
+    },
+    {
+      "path": "frontend/src/features/recording/RecordingScreen.tsx",
+      "sha256": "4e7dbfe885d607a4e0141aced9d42fe91bca2e88fb32e79e4e6d3faedd89e464"
+    },
+    {
+      "path": "frontend/src/features/recording/RecordingScreen.css",
+      "sha256": "8f42f53c0ff12cdbf13a6416d89064e8dd75454fa4eb2a24bb3a85ab513c3b9b"
+    }
+  ],
+  "limits": [
+    "Earliercapturetimeoutrootcauseunproved",
+    "No wholeissueacceptance",
+    "No realbackend/physicalmic/Safari",
+    "Sameprofiletabsonevirtualdevice"
+  ]
+}

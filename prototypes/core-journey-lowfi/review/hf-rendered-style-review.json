@@ -1,0 +1,284 @@
+[
+  {
+    "check": "Actual #record",
+    "observed": {
+      "color": "rgb(193, 38, 44)",
+      "backgrounds": [
+        "rgb(255, 255, 255)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0.03)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(229, 72, 77, 0.08)"
+      ],
+      "rect": {
+        "x": 1072,
+        "y": 288,
+        "width": 240,
+        "height": 40,
+        "top": 288,
+        "right": 1312,
+        "bottom": 328,
+        "left": 1072
+      },
+      "effectiveTextContrast": 4.96809337766789
+    }
+  },
+  {
+    "check": "Actual #replay",
+    "observed": {
+      "color": "rgba(0, 0, 0, 0.88)",
+      "backgrounds": [
+        "rgb(255, 255, 255)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0.03)",
+        "rgba(0, 0, 0, 0)",
+        "rgb(255, 255, 255)"
+      ],
+      "rect": {
+        "x": 1072,
+        "y": 238,
+        "width": 240,
+        "height": 40,
+        "top": 238,
+        "right": 1312,
+        "bottom": 278,
+        "left": 1072
+      },
+      "effectiveTextContrast": 16.558445686376146
+    }
+  },
+  {
+    "check": "Actual #take-help",
+    "observed": {
+      "color": "rgba(0, 0, 0, 0.61)",
+      "backgrounds": [
+        "rgb(255, 255, 255)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0.03)",
+        "rgba(0, 0, 0, 0)"
+      ],
+      "rect": {
+        "x": 1072,
+        "y": 388,
+        "width": 240,
+        "height": 40,
+        "top": 388,
+        "right": 1312,
+        "bottom": 428,
+        "left": 1072
+      },
+      "effectiveTextContrast": 5.846102803405688
+    }
+  },
+  {
+    "check": "Actual #position",
+    "observed": {
+      "color": "rgba(0, 0, 0, 0.88)",
+      "backgrounds": [
+        "rgb(255, 255, 255)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0.03)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)"
+      ],
+      "rect": {
+        "x": 1072,
+        "y": 202,
+        "width": 63.546875,
+        "height": 19,
+        "top": 202,
+        "right": 1135.546875,
+        "bottom": 221,
+        "left": 1072
+      },
+      "effectiveTextContrast": 15.664769469509686
+    }
+  },
+  {
+    "check": "Actual #scrub",
+    "observed": {
+      "color": "rgb(16, 16, 16)",
+      "backgrounds": [
+        "rgb(255, 255, 255)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)"
+      ],
+      "rect": {
+        "x": 112,
+        "y": 797.5,
+        "width": 920,
+        "height": 40,
+        "top": 797.5,
+        "right": 1032,
+        "bottom": 837.5,
+        "left": 112
+      },
+      "effectiveTextContrast": 19.028110547666497
+    }
+  },
+  {
+    "check": "Actual #volume",
+    "observed": {
+      "color": "rgb(16, 16, 16)",
+      "backgrounds": [
+        "rgb(255, 255, 255)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)",
+        "rgba(0, 0, 0, 0)"
+      ],
+      "rect": {
+        "x": 950,
+        "y": 845.5,
+        "width": 80,
+        "height": 32,
+        "top": 845.5,
+        "right": 1030,
+        "bottom": 877.5,
+        "left": 950
+      },
+      "effectiveTextContrast": 19.028110547666497
+    }
+  },
+  {
+    "check": "Actual media keyboard focus",
+    "observed": {
+      "id": "pause",
+      "visible": true,
+      "outline": "rgb(96, 165, 250) solid 2px",
+      "offset": "2px"
+    }
+  },
+  {
+    "check": "Actual SVG icon properties",
+    "observed": [
+      {
+        "class": "lucide lucide-settings",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-chevron-right",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-pause",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-rotate-ccw",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-mic",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-headphones",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-chevron-left",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-chevron-right",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-loader-circle",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-download",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      },
+      {
+        "class": "lucide lucide-undo-2",
+        "stroke": "1.1px",
+        "fill": "none",
+        "cap": "round",
+        "join": "round",
+        "viewBox": "0 0 24 24"
+      }
+    ]
+  },
+  {
+    "check": "Browser zoom accelerator probe",
+    "observed": {
+      "before": {
+        "w": 1440,
+        "dpr": 1,
+        "scale": 1
+      },
+      "after": {
+        "w": 1440,
+        "dpr": 1,
+        "scale": 1
+      },
+      "actualZoomEstablished": false
+    }
+  }
+]

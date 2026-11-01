@@ -1,0 +1,70 @@
+{
+  "documentHeight": 600,
+  "title": {
+    "x": 518.21875,
+    "y": 16,
+    "width": 243.546875,
+    "height": 28,
+    "bottom": 44
+  },
+  "exit": {
+    "x": 366.21875,
+    "y": 16,
+    "width": 77.609375,
+    "height": 40,
+    "bottom": 56
+  },
+  "player": {
+    "x": 366.21875,
+    "y": 88,
+    "width": 547.546875,
+    "height": 379.984375,
+    "bottom": 467.984375
+  },
+  "screen": {
+    "x": 366.21875,
+    "y": 88,
+    "width": 547.546875,
+    "height": 307.984375,
+    "bottom": 395.984375
+  },
+  "rail": {
+    "x": 366.21875,
+    "y": 395.984375,
+    "width": 547.546875,
+    "height": 72,
+    "bottom": 467.984375
+  },
+  "seek": {
+    "x": 378.21875,
+    "y": 395.984375,
+    "width": 523.546875,
+    "height": 24,
+    "bottom": 419.984375
+  },
+  "controls": {
+    "x": 378.21875,
+    "y": 419.984375,
+    "width": 523.546875,
+    "height": 40,
+    "bottom": 459.984375
+  },
+  "details": {
+    "x": 366.21875,
+    "y": 483.984375,
+    "width": 547.546875,
+    "height": 92,
+    "bottom": 575.984375
+  },
+  "actions": {
+    "x": 648.5625,
+    "y": 483.984375,
+    "width": 265.203125,
+    "height": 92,
+    "bottom": 575.984375
+  },
+  "statusFontSize": "14px",
+  "statusLineHeight": "20px",
+  "workspacePaddingBottom": "8px",
+  "actionsFlex": "0 1 auto"
+}

@@ -1,0 +1,237 @@
+{
+  "recorded_at": "2026-10-24",
+  "repository": "dystrophyless/dubbed.ai",
+  "commit": "0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2",
+  "parent": "7845b84d171858628128d9e60e6d3d560f43055a",
+  "remote_branch": "origin/main",
+  "root_remote_verification": {
+    "ls_remote_main": "0c9b9d6069fcf625c1d54a2709ea16e8f0cbb2d2",
+    "local_head_and_origin_tracking_match": true,
+    "normalized_whitelist_paths": 312,
+    "commit_paths_match_whitelist": true,
+    "git_filtered_blob_ids_match_commit_tree": 312,
+    "index_paths": 0,
+    "out_of_scope_paths": 0
+  },
+  "delegated_acceptance": "Root's bounded mock-scope acceptance recorded in screen-cohort-acceptance.md (SHA-256 86488461C984DE490C1F457C8BDEEF51D403B52CBA7055BD62DF79434EDC878F).",
+  "manifest_sha256": "F76018F133CE36FB369A87AF89DFEC870AC0AC8B92369A3DF9D9BFB893F89121",
+  "closed_issues": [
+    {
+      "issue_number": 62,
+      "title": "Control account access and complete guarded sign-out or deletion",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "78E989F34D1506BF75778C95845001E10E740502CB922B1580137D50313E87EE",
+      "updated_at": "2026-10-24T01:21:06Z"
+    },
+    {
+      "issue_number": 65,
+      "title": "Reconcile a credit purchase and return to the preserved video safely",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "A91B1EF8B151AE350913E882DC2FF398177ADA30DEE6837F83C2E6E902316114",
+      "updated_at": "2026-10-24T01:21:22Z"
+    },
+    {
+      "issue_number": 66,
+      "title": "Link sign-in methods to one account with explicit dual proof",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "BC619847104DE172CD903F84085D54B280B763A90560EA4AE06A3E55DB635AB2",
+      "updated_at": "2026-10-24T01:21:33Z"
+    },
+    {
+      "issue_number": 69,
+      "title": "Check the current device microphone without creating a project take",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 6,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "E65F72EE23332ACFA06171E2F41AB3462079F2AF0A9B49B7E6C2F4C4DC2B3D10",
+      "updated_at": "2026-10-24T01:21:48Z"
+    },
+    {
+      "issue_number": 71,
+      "title": "Reset a password with purpose-bound proof and recover the correct session",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "B5697C4D1D3B69E61EEDA5A08314DD3CF38C6F299C53C53725BCD377E29D480E",
+      "updated_at": "2026-10-24T01:21:59Z"
+    },
+    {
+      "issue_number": 74,
+      "title": "Reconcile preparation progress, cancellation and safe reprocessing",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 8,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "F6F8452CFBBCA3F58337FD557FADB97792D696A14D6147CD2ECC4442F3508EA3",
+      "updated_at": "2026-10-24T01:22:09Z"
+    },
+    {
+      "issue_number": 75,
+      "title": "Resume and manage account-owned projects without losing lifecycle truth",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 6,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "AEC3328ABAA5491A4078670220CEBF342E65317D20345796722F5D89B3C370E4",
+      "updated_at": "2026-10-24T01:22:29Z"
+    },
+    {
+      "issue_number": 78,
+      "title": "Render the approved responsive shell, locale behavior and minimal landing",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 6,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "5EA72BAF7B7E60B389B622A33C9A2F0EF58EB5E0253623E0D17D392A368A9011",
+      "updated_at": "2026-10-24T01:22:39Z"
+    },
+    {
+      "issue_number": 79,
+      "title": "Present and download the exact authorized result generation safely",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "1FE1F167B49D84771FA0A17DAC20A5179EB7D8F911CCF861652A963C32A21B0C",
+      "updated_at": "2026-10-24T01:22:50Z"
+    },
+    {
+      "issue_number": 80,
+      "title": "Sign in and restore a protected session without replaying work",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 8,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "225F921426535F023CAF49FDF35FDAC97CC8DAC087676714D00448F346D38897",
+      "updated_at": "2026-10-24T01:23:49Z"
+    },
+    {
+      "issue_number": 82,
+      "title": "Complete verified registration without duplicating an account or grant",
+      "state": "closed",
+      "state_reason": "completed",
+      "workflow_status": "accepted",
+      "checked_ac_count": 9,
+      "unchecked_ac_count": 0,
+      "labels": [
+        "frontend"
+      ],
+      "comments": 0,
+      "body_sha256": "CAE4B9210E5CDCFF5D0625316997AFB48E69CE133C853E8B86C99010F251097C",
+      "updated_at": "2026-10-24T01:24:04Z"
+    }
+  ],
+  "excluded_open_issues": [
+    {
+      "issue_number": 63,
+      "state": "open",
+      "workflow_status": "blocked"
+    },
+    {
+      "issue_number": 76,
+      "state": "open",
+      "workflow_status": "blocked"
+    },
+    {
+      "issue_number": 77,
+      "state": "open",
+      "workflow_status": "in_progress"
+    },
+    {
+      "issue_number": 81,
+      "state": "open",
+      "workflow_status": "in_progress"
+    }
+  ],
+  "compact_final_readback": {
+    "fetch_issue_shape": "mcp__codex_apps__github_fetch_issue({repository_full_name:\"dystrophyless/dubbed.ai\", issue_number:<n>})",
+    "comments_shape": "mcp__codex_apps__github_fetch_issue_comments({repo_full_name:\"dystrophyless/dubbed.ai\", issue_number:<n>})",
+    "authorized_issues_all_match_posted_body_and_accepted_status": true,
+    "authorized_issues_closed_completed": 11,
+    "excluded_issues_open": 4,
+    "readback_issue_numbers": [
+      62,
+      65,
+      66,
+      69,
+      71,
+      74,
+      75,
+      78,
+      79,
+      80,
+      82,
+      63,
+      76,
+      77,
+      81
+    ]
+  },
+  "verification_boundary": {
+    "no_second_test_run": true,
+    "test_run_recorded_in_acceptance": "44 unit files / 217 tests; 117 browser tests; isolated clean-install typecheck/build; lint exit 0 with warnings; media 3 passed; real-adapter-unavailable 1 passed.",
+    "index_empty_after_commit": true,
+    "no_source_changes_after_delivery": true
+  }
+}

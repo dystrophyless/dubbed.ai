@@ -1,0 +1,86 @@
+[
+  {
+    "path": "evidence/en-desktop-start.png",
+    "kind": "real mock; identity seeded via service"
+  },
+  {
+    "path": "evidence/en-desktop-dual-proof.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "path": "evidence/en-desktop-invalid-code.png",
+    "kind": "actual mock UI wrong code"
+  },
+  {
+    "path": "evidence/en-desktop-final-review.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "path": "evidence/en-desktop-success.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "path": "evidence/ru-phone-start.png",
+    "kind": "real mock; identity seeded via service"
+  },
+  {
+    "path": "evidence/ru-phone-after-continue.png",
+    "kind": "diagnostic after Continue"
+  },
+  {
+    "path": "evidence/ru-phone-dual-proof.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "path": "evidence/ru-short-start.png",
+    "kind": "real mock; identity seeded via service"
+  },
+  {
+    "path": "evidence/ru-short-invalid-password.png",
+    "kind": "actual mock UI wrong password"
+  },
+  {
+    "path": "evidence/ru-short-final-review.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "path": "evidence/en-phone-start.png",
+    "kind": "real mock; identity seeded via service"
+  },
+  {
+    "path": "evidence/en-phone-invalid-password.png",
+    "kind": "actual mock UI wrong password"
+  },
+  {
+    "path": "evidence/en-phone-final-review.png",
+    "kind": "actual mock UI"
+  },
+  {
+    "path": "evidence/en-desktop-link-review-loading.png",
+    "kind": "existing fault harness: link-review-loading"
+  },
+  {
+    "path": "evidence/en-desktop-link-commit-conflict.png",
+    "kind": "existing fault harness: link-commit-conflict"
+  },
+  {
+    "path": "evidence/en-desktop-link-commit-unknown.png",
+    "kind": "existing fault harness: link-commit-unknown"
+  },
+  {
+    "path": "evidence/ru-767-proof.png",
+    "kind": "existing synthetic harness; incomplete proof"
+  },
+  {
+    "path": "evidence/ru-768-proof.png",
+    "kind": "existing synthetic harness; incomplete proof"
+  },
+  {
+    "path": "evidence/en-phone-google-proof.png",
+    "kind": "existing synthetic harness; incomplete proof"
+  },
+  {
+    "path": "evidence/probe.png",
+    "kind": "exploratory existing synthetic harness default; visually inspected"
+  }
+]

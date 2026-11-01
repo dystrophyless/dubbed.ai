@@ -1,0 +1,48 @@
+{
+  "issue": 72,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "8e19bb6f3c2b7b950af2732091a4f6885f923e8739be63fb4772930d901ab9e2",
+    "planned": "f43a7148a9893c70ae44dd4faf0ccc0431e68113f0588b9df1f93c7b53177eb7",
+    "readback": "f43a7148a9893c70ae44dd4faf0ccc0431e68113f0588b9df1f93c7b53177eb7"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Supply permitted playable media with explicit timeline and generation annotations",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Supply permitted playable media with explicit timeline and generation annotations",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

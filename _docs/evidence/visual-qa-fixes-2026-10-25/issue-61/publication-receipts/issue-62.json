@@ -1,0 +1,48 @@
+{
+  "issue": 62,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "78e989f34d1506bf75778c95845001e10e740502cb922b1580137d50313e87ee",
+    "planned": "182375a34bde50826701f98d070ff4329cfd8c559707047402facfb6268191ea",
+    "readback": "182375a34bde50826701f98d070ff4329cfd8c559707047402facfb6268191ea"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Control account access and complete guarded sign-out or deletion",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Control account access and complete guarded sign-out or deletion",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

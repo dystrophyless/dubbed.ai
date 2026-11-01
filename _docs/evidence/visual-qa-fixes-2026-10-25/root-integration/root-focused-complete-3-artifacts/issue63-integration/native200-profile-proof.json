@@ -1,0 +1,110 @@
+{
+  "profilePath": "C:\\Users\\roman\\AppData\\Local\\Temp\\dubbed-issue63-native200-AsIuZI",
+  "preferencesPath": "C:\\Users\\roman\\AppData\\Local\\Temp\\dubbed-issue63-native200-AsIuZI\\Default\\Preferences",
+  "preferences": {
+    "partition": {
+      "default_zoom_level": {
+        "x": 3.8017840169239308
+      }
+    }
+  },
+  "browserChannel": "chromium",
+  "headless": true,
+  "viewport": null,
+  "launchWindow": "1440x960",
+  "audioAndMediaFlags": [
+    "--mute-audio",
+    "--use-fake-device-for-media-stream",
+    "--use-fake-ui-for-media-stream"
+  ],
+  "observed": {
+    "url": "http://127.0.0.1:4563/",
+    "viewport": {
+      "innerWidth": 711,
+      "innerHeight": 432,
+      "outerWidth": 1440,
+      "outerHeight": 960
+    },
+    "devicePixelRatio": 2,
+    "bodyZoom": "1",
+    "documentWidth": 711,
+    "documentHeight": 492,
+    "horizontalOverflow": false,
+    "scrollY": 0,
+    "language": "en",
+    "title": "Dubbed",
+    "recording": {
+      "line": null,
+      "dialogue": null,
+      "stage": null,
+      "lineHeader": null,
+      "dialogueBounds": null,
+      "timeline": null,
+      "panel": null,
+      "panelPosition": null,
+      "phonePanelFlow": null,
+      "dialogueAndTimelineClearOfPanel": false
+    },
+    "media": null,
+    "dialog": null,
+    "activeElement": {
+      "tagName": "BODY",
+      "label": "Skip to contentDubbedLanguageENRUSign inDub your own sceneUpload a video, choose up to two minutes, and record every character in your own voice.Get 120 free welcome credits once with an eligible verified account.Start dubbingQuestions about payments or refunds?Contact support dystrophyless@gmail.com",
+      "role": null,
+      "className": ""
+    },
+    "buttons": [
+      {
+        "label": "Start dubbing",
+        "variant": "primary",
+        "size": "large",
+        "width": 679,
+        "height": 48,
+        "top": 292.2,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      }
+    ],
+    "visibleRouteHeadings": [
+      "Dub your own scene"
+    ],
+    "cdp": {
+      "cssVisualViewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 0,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      },
+      "cssLayoutViewport": {
+        "pageX": 0,
+        "pageY": 0,
+        "clientWidth": 711,
+        "clientHeight": 432
+      },
+      "cssContentSize": {
+        "x": 0,
+        "y": 0,
+        "width": 711,
+        "height": 492
+      }
+    }
+  },
+  "proof": {
+    "cssVisualViewportZoom": 2,
+    "devicePixelRatio": 2,
+    "innerWidthIsWithinNativeScrollbarOfHalfOuterWidth": true,
+    "innerWidthExpectedAtHalfOuterWidth": 720,
+    "innerWidthObserved": 711,
+    "innerWidthDifferenceFromHalf": 9,
+    "outerWidthRemains1440": true,
+    "bodyZoomIsComputedNormal": true
+  },
+  "status": "Observed and asserted in the newly created disposable profile."
+}

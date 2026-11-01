@@ -1,0 +1,12 @@
+Base revision: 9096925a4476e84ec9a6e5ef9bff50ae45ac0f67
+Captured: 2026-10-30 Asia/Qyzylorda
+Scope: VP05 CSS override plus the focused browser evidence script. Other listed frontend hashes are retained from visual parity v3.
+
+065C5CCF45E6780183B5CBEC18EC85C00A2ED230FCC7781F80E30532AB1749FF  frontend/src/features/record/FoundationRecordPage.tsx
+C8CB678907F7A82C84C6122099CA1B6B8261E53604189D218F176452DE1F7F13  frontend/src/features/result/FoundationResultPage.tsx
+9B0F3FCE0CEB1EA345292628247BE9D5057C09869290F388782E404A51899183  frontend/src/styles/app.css
+268AD6B0705B93C4303F6D4F8EC9543CA6ABF087DC933271A91D21FC29D57573  frontend/src/styles/prototype-record.css
+F3CB56682F9D094C9808510A04F1A8BB47C8A5CFCC4F75CDA9CB02C0F607BD09  frontend/src/styles/prototype-result.css
+BD8D4C59ACF45FA8713EE22174AA491B7E3445A9044AC2B034C9C358AA2EB9B7  frontend/src/shared/i18n.ts
+306A9019FD52C60F25CBF2065510F1331223435B2E0E71CAF5D5CCE886D28490  frontend/e2e/record-journey.spec.ts
+CF8091B80D652C62982A2DBAB081B5B77861E61FF1A0DA1F0B0228F72692BE68  _docs/evidence/core-journey-ab-implementation-2026-10-28/visual-parity-v4/capture-selector-parity.mjs

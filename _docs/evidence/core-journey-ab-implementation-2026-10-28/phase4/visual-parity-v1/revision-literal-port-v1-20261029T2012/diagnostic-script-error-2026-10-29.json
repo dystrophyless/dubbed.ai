@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-29",
+  "command": "node _docs/evidence/core-journey-ab-implementation-2026-10-28/phase4/visual-parity-v1/revision-literal-port-v1-20261029T2012/diagnose-a-short-candidate-fit.mjs",
+  "exitCode": 1,
+  "scope": "diagnostic script only; no product or prototype code executed after the error",
+  "rawError": "file:///D:/Program/python/Dubbed/_docs/evidence/core-journey-ab-implementation-2026-10-28/phase4/visual-parity-v1/revision-literal-port-v1-20261029T2012/diagnose-a-short-candidate-fit.mjs:41\n    await inspect('candidate after desktop viewport pass');\n    ^\n\nReferenceError: Cannot access 'inspect' before initialization\n    at file:///D:/Program/python/Dubbed/_docs/evidence/core-journey-ab-implementation-2026-10-28/phase4/visual-parity-v1/revision-literal-port-v1-20261029T2012/diagnose-a-short-candidate-fit.mjs:41:5\n\nNode.js v22.23.1"
+}

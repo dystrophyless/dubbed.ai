@@ -1,0 +1,873 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://127.0.0.1:4365",
+      "localStorage": [
+        {
+          "name": "dubbed.mock.client.v1.default",
+          "value": "f30df672-4646-420a-8407-7ed755dbd924"
+        }
+      ],
+      "indexedDB": [
+        {
+          "name": "dubbed.mock.v1.default",
+          "version": 1,
+          "stores": [
+            {
+              "name": "accountHistory",
+              "autoIncrement": false,
+              "keyPath": "emailHash",
+              "records": [
+                {
+                  "value": {
+                    "emailHash": "150a1714a7bd6d9691f49e61f77b37cf74c4a3c0aaba4df791d7113c9aa67ff1",
+                    "welcomeGrantUsed": true,
+                    "lastDeletionAt": 0
+                  }
+                }
+              ],
+              "indexes": []
+            },
+            {
+              "name": "accounts",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [
+                {
+                  "value": {
+                    "id": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4",
+                    "email": "qa65-1792915555620@example.invalid",
+                    "locale": "en",
+                    "revision": 1,
+                    "deleted": false,
+                    "createdAt": 1792915555794,
+                    "methods": [
+                      {
+                        "kind": "email-password",
+                        "address": "qa65-1792915555620@example.invalid",
+                        "verified": true,
+                        "linkedAt": 1792915555794
+                      }
+                    ]
+                  }
+                }
+              ],
+              "indexes": [
+                {
+                  "name": "email",
+                  "keyPath": "email",
+                  "multiEntry": false,
+                  "unique": true
+                }
+              ]
+            },
+            {
+              "name": "activityEvents",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "authorizations",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "credentials",
+              "autoIncrement": false,
+              "keyPath": "accountId",
+              "records": [
+                {
+                  "value": {
+                    "accountId": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4",
+                    "email": "qa65-1792915555620@example.invalid",
+                    "passwordHash": "47b2adefe505e6468fe802f26c62afa162c46672c90a92b296db27a123bfc55a",
+                    "passwordSalt": "44bbcb74-7ce1-43be-8e8f-06d0a901d5c9"
+                  }
+                }
+              ],
+              "indexes": []
+            },
+            {
+              "name": "creditStates",
+              "autoIncrement": false,
+              "keyPath": "accountId",
+              "records": [
+                {
+                  "value": {
+                    "accountId": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4",
+                    "revision": 1,
+                    "available": 120,
+                    "reserved": 0,
+                    "purchasedRemainder": 0,
+                    "welcomeGrantEligible": false,
+                    "welcomeGrantApplied": true,
+                    "capacityUsed": 0,
+                    "capacityTotal": 2,
+                    "firstPurchaseUpgrade": false
+                  }
+                }
+              ],
+              "indexes": []
+            },
+            {
+              "name": "drafts",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "candidateId",
+                  "keyPath": "candidateId",
+                  "multiEntry": false,
+                  "unique": true
+                },
+                {
+                  "name": "projectIdTurnId",
+                  "keyPathArray": [
+                    "projectId",
+                    "turnId"
+                  ],
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "faults",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": []
+            },
+            {
+              "name": "ledger",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [
+                {
+                  "value": {
+                    "id": "4cd2667f-3663-4572-9c3d-08ea9876b2bd",
+                    "accountId": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4",
+                    "revision": 1,
+                    "kind": "welcome-grant",
+                    "occurredAt": 1792915555796,
+                    "delta": 120,
+                    "availableAfter": 120,
+                    "reservedAfter": 0,
+                    "note": "synthetic-mock-scenario"
+                  }
+                }
+              ],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "accountRevision",
+                  "keyPathArray": [
+                    "accountId",
+                    "revision"
+                  ],
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "linkIntents",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "meta",
+              "autoIncrement": false,
+              "keyPath": "key",
+              "records": [
+                {
+                  "value": {
+                    "key": "activeSessionId:f30df672-4646-420a-8407-7ed755dbd924",
+                    "value": "e5e1c666-bf9a-4faf-b85e-5bf8bd123c39"
+                  }
+                }
+              ],
+              "indexes": []
+            },
+            {
+              "name": "operations",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [
+                {
+                  "valueEncoded": {
+                    "o": [
+                      {
+                        "k": "id",
+                        "v": "2c6f1af3-2623-4a3f-9e09-e2c6d469a9e1"
+                      },
+                      {
+                        "k": "accountId",
+                        "v": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4"
+                      },
+                      {
+                        "k": "clientId",
+                        "v": "f30df672-4646-420a-8407-7ed755dbd924"
+                      },
+                      {
+                        "k": "kind",
+                        "v": "registration.verify"
+                      },
+                      {
+                        "k": "requestHash",
+                        "v": "8595c476dc24c017b965a99623e0964b5360ad2aa614e4ca6c35a63e73a90968"
+                      },
+                      {
+                        "k": "result",
+                        "v": {
+                          "o": [
+                            {
+                              "k": "account",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "id",
+                                    "v": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4"
+                                  },
+                                  {
+                                    "k": "email",
+                                    "v": "qa65-1792915555620@example.invalid"
+                                  },
+                                  {
+                                    "k": "locale",
+                                    "v": "en"
+                                  },
+                                  {
+                                    "k": "revision",
+                                    "v": 1
+                                  },
+                                  {
+                                    "k": "deleted",
+                                    "v": false
+                                  },
+                                  {
+                                    "k": "createdAt",
+                                    "v": 1792915555794
+                                  },
+                                  {
+                                    "k": "methods",
+                                    "v": {
+                                      "a": [
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "kind",
+                                              "v": "email-password"
+                                            },
+                                            {
+                                              "k": "address",
+                                              "v": "qa65-1792915555620@example.invalid"
+                                            },
+                                            {
+                                              "k": "verified",
+                                              "v": true
+                                            },
+                                            {
+                                              "k": "linkedAt",
+                                              "v": 1792915555794
+                                            }
+                                          ],
+                                          "id": 5
+                                        }
+                                      ],
+                                      "id": 4
+                                    }
+                                  }
+                                ],
+                                "id": 3
+                              }
+                            },
+                            {
+                              "k": "session",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "id",
+                                    "v": "e5e1c666-bf9a-4faf-b85e-5bf8bd123c39"
+                                  },
+                                  {
+                                    "k": "accountId",
+                                    "v": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4"
+                                  },
+                                  {
+                                    "k": "expiresAt",
+                                    "v": 1795507555794
+                                  },
+                                  {
+                                    "k": "revision",
+                                    "v": 0
+                                  }
+                                ],
+                                "id": 6
+                              }
+                            },
+                            {
+                              "k": "credits",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "accountId",
+                                    "v": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4"
+                                  },
+                                  {
+                                    "k": "revision",
+                                    "v": 1
+                                  },
+                                  {
+                                    "k": "available",
+                                    "v": 120
+                                  },
+                                  {
+                                    "k": "reserved",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "purchasedRemainder",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "welcomeGrantEligible",
+                                    "v": false
+                                  },
+                                  {
+                                    "k": "welcomeGrantApplied",
+                                    "v": true
+                                  },
+                                  {
+                                    "k": "projectCapacity",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "used",
+                                          "v": 0
+                                        },
+                                        {
+                                          "k": "total",
+                                          "v": 2
+                                        },
+                                        {
+                                          "k": "firstPurchaseUpgrade",
+                                          "v": false
+                                        },
+                                        {
+                                          "k": "revision",
+                                          "v": 1
+                                        }
+                                      ],
+                                      "id": 8
+                                    }
+                                  }
+                                ],
+                                "id": 7
+                              }
+                            },
+                            {
+                              "k": "outcome",
+                              "v": "new-account"
+                            },
+                            {
+                              "k": "welcomeGrantApplied",
+                              "v": true
+                            }
+                          ],
+                          "id": 2
+                        }
+                      },
+                      {
+                        "k": "updatedAt",
+                        "v": 1792915555797
+                      },
+                      {
+                        "k": "revision",
+                        "v": 0
+                      },
+                      {
+                        "k": "job",
+                        "v": {
+                          "v": "undefined"
+                        }
+                      }
+                    ],
+                    "id": 1
+                  }
+                },
+                {
+                  "valueEncoded": {
+                    "o": [
+                      {
+                        "k": "id",
+                        "v": "44bbcb74-7ce1-43be-8e8f-06d0a901d5c9"
+                      },
+                      {
+                        "k": "accountId",
+                        "v": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4"
+                      },
+                      {
+                        "k": "clientId",
+                        "v": "f30df672-4646-420a-8407-7ed755dbd924"
+                      },
+                      {
+                        "k": "kind",
+                        "v": "registration.start"
+                      },
+                      {
+                        "k": "requestHash",
+                        "v": "d31e2040f617c74fb4fa27eddf7b8c08c24fc3237ac01a511dd36af0a7061c2c"
+                      },
+                      {
+                        "k": "result",
+                        "v": {
+                          "o": [
+                            {
+                              "k": "id",
+                              "v": "44bbcb74-7ce1-43be-8e8f-06d0a901d5c9"
+                            },
+                            {
+                              "k": "email",
+                              "v": "qa65-1792915555620@example.invalid"
+                            },
+                            {
+                              "k": "purpose",
+                              "v": "registration"
+                            },
+                            {
+                              "k": "scenarioCode",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "value",
+                                    "v": "090159"
+                                  },
+                                  {
+                                    "k": "note",
+                                    "v": "synthetic-mock-scenario"
+                                  }
+                                ],
+                                "id": 3
+                              }
+                            },
+                            {
+                              "k": "expiresAt",
+                              "v": 1792916155753
+                            },
+                            {
+                              "k": "resendAvailableAt",
+                              "v": 1792915615753
+                            },
+                            {
+                              "k": "resendCount",
+                              "v": 0
+                            },
+                            {
+                              "k": "sendCount",
+                              "v": 1
+                            },
+                            {
+                              "k": "remainingSends",
+                              "v": 4
+                            },
+                            {
+                              "k": "revision",
+                              "v": 0
+                            }
+                          ],
+                          "id": 2
+                        }
+                      },
+                      {
+                        "k": "updatedAt",
+                        "v": 1792915555754
+                      },
+                      {
+                        "k": "revision",
+                        "v": 0
+                      },
+                      {
+                        "k": "job",
+                        "v": {
+                          "v": "undefined"
+                        }
+                      }
+                    ],
+                    "id": 1
+                  }
+                }
+              ],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "preparations",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "operationId",
+                  "keyPath": "operationId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "projects",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "purchases",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "initiationId",
+                  "keyPath": "initiationId",
+                  "multiEntry": false,
+                  "unique": true
+                }
+              ]
+            },
+            {
+              "name": "quotes",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "recordingGrants",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "reservations",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "operationId",
+                  "keyPath": "operationId",
+                  "multiEntry": false,
+                  "unique": true
+                }
+              ]
+            },
+            {
+              "name": "resetGrants",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "results",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "generationId",
+                  "keyPath": "generationId",
+                  "multiEntry": false,
+                  "unique": true
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "returnContexts",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "sessions",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [
+                {
+                  "value": {
+                    "id": "e5e1c666-bf9a-4faf-b85e-5bf8bd123c39",
+                    "accountId": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4",
+                    "expiresAt": 1795507555794,
+                    "revision": 0
+                  }
+                }
+              ],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "sources",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "takes",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectIdTurnId",
+                  "keyPathArray": [
+                    "projectId",
+                    "turnId"
+                  ],
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "turns",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [],
+              "indexes": [
+                {
+                  "name": "accountId",
+                  "keyPath": "accountId",
+                  "multiEntry": false,
+                  "unique": false
+                },
+                {
+                  "name": "projectId",
+                  "keyPath": "projectId",
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            },
+            {
+              "name": "verifications",
+              "autoIncrement": false,
+              "keyPath": "id",
+              "records": [
+                {
+                  "value": {
+                    "id": "44bbcb74-7ce1-43be-8e8f-06d0a901d5c9",
+                    "email": "qa65-1792915555620@example.invalid",
+                    "purpose": "registration",
+                    "codeHash": "5a3463fe90d1ba5ff8114d14d1d80b204df13de839de00333667caa041a09246",
+                    "expiresAt": 1792916155753,
+                    "resendAvailableAt": 1792915615753,
+                    "resendCount": 0,
+                    "sendTimes": [
+                      1792915555751
+                    ],
+                    "codeGeneration": 0,
+                    "revision": 1,
+                    "state": "completed",
+                    "passwordHash": "47b2adefe505e6468fe802f26c62afa162c46672c90a92b296db27a123bfc55a",
+                    "accountId": "4782f7ce-a819-4db9-b7b3-268a0ecfc0a4",
+                    "registrationMode": "create-account",
+                    "emailHash": "150a1714a7bd6d9691f49e61f77b37cf74c4a3c0aaba4df791d7113c9aa67ff1",
+                    "clientId": "f30df672-4646-420a-8407-7ed755dbd924"
+                  }
+                }
+              ],
+              "indexes": [
+                {
+                  "name": "emailPurpose",
+                  "keyPathArray": [
+                    "email",
+                    "purpose"
+                  ],
+                  "multiEntry": false,
+                  "unique": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

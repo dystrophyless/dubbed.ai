@@ -1,0 +1,1152 @@
+{
+  "date": "2026-10-25",
+  "timezone": "Asia/Qyzylorda",
+  "repository": "dystrophyless/dubbed.ai",
+  "authorization": "Root explicit GO after PASS validation of the frozen exact payload set.",
+  "approved_payload_validation": "_docs/evidence/visual-qa-fixes-2026-10-25/root-payload-validation.json",
+  "expected_issue_numbers": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82
+  ],
+  "excluded_issue_numbers": [
+    76
+  ],
+  "total": 21,
+  "passed": 21,
+  "conflicts": [],
+  "receipts": [
+    {
+      "issue": 61,
+      "receipt_path": "publication-receipts/issue-61.json",
+      "receipt_sha256": "a7840a70cc9d719a0311b0e543f2d9e9373b26e1f16a957bf4c1c157f7f8702c",
+      "receipt": {
+        "issue": 61,
+        "status": "published_readback_pass",
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "7dc10dda47c2fb24897ce8a80f126e489feedf0905fe72ae9e7ebbb3c3ad2372",
+          "planned": "05e984a2d9780cc95d3ecb0d80153836c57dbdd3c0b4016d75543c2a584fb260",
+          "readback": "05e984a2d9780cc95d3ecb0d80153836c57dbdd3c0b4016d75543c2a584fb260"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Record the bounded frontend technical contract and remaining decision gates",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Record the bounded frontend technical contract and remaining decision gates",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 62,
+      "receipt_path": "publication-receipts/issue-62.json",
+      "receipt_sha256": "90f99c7b93e4e4896a8a7201766510c55e75677498f794797164cf67cca82e70",
+      "receipt": {
+        "issue": 62,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "78e989f34d1506bf75778c95845001e10e740502cb922b1580137d50313e87ee",
+          "planned": "182375a34bde50826701f98d070ff4329cfd8c559707047402facfb6268191ea",
+          "readback": "182375a34bde50826701f98d070ff4329cfd8c559707047402facfb6268191ea"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Control account access and complete guarded sign-out or deletion",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Control account access and complete guarded sign-out or deletion",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 63,
+      "receipt_path": "publication-receipts/issue-63.json",
+      "receipt_sha256": "3dd753d590b0a50a777fa40da2d76b1b247ef036b620d0d61ef2be2d6bf7ad08",
+      "receipt": {
+        "issue": 63,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "5da49212520ad276da6f70dfb2d0aaa8fe1fb6acf296fadcde46fc1e637448a4",
+          "planned": "ba464c8e99a9438199b735a5aa14d28941c1866bc9593deb69c9e3d18f45edb0",
+          "readback": "ba464c8e99a9438199b735a5aa14d28941c1866bc9593deb69c9e3d18f45edb0"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Prove the complete frontend journey with no backend and honest media evidence",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Prove the complete frontend journey with no backend and honest media evidence",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 64,
+      "receipt_path": "publication-receipts/issue-64.json",
+      "receipt_sha256": "96d25ff2592f1c55787299ea5f89acd2ff6db2e4992a18635d2fc7d30fb78fd8",
+      "receipt": {
+        "issue": 64,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "a2c99bdb0c0399f290232ea22f1da4105a165ca7be4ba68b0ff11d3034db4fd7",
+          "planned": "8ab35908ad26f94df0e65f31afdfc9d86f57edd059da6df48ad15d54e2ddf453",
+          "readback": "8ab35908ad26f94df0e65f31afdfc9d86f57edd059da6df48ad15d54e2ddf453"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Establish the supported browser media capability and timing evidence",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Establish the supported browser media capability and timing evidence",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 65,
+      "receipt_path": "publication-receipts/issue-65.json",
+      "receipt_sha256": "46ece7b73f70a01f929721d22ef773eb61e8cb73b4a3faee0d74c866e62458d7",
+      "receipt": {
+        "issue": 65,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "a91b1ef8b151ae350913e882dc2ff398177ada30dee6837f83c2e6e902316114",
+          "planned": "69c9721c2a578a9c015b5184aadc9492d4dc52d0cde60a2faf31a644a62b40cc",
+          "readback": "69c9721c2a578a9c015b5184aadc9492d4dc52d0cde60a2faf31a644a62b40cc"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Reconcile a credit purchase and return to the preserved video safely",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Reconcile a credit purchase and return to the preserved video safely",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 66,
+      "receipt_path": "publication-receipts/issue-66.json",
+      "receipt_sha256": "5388590481c11ca04b427c9bf5f00027bc29a76439710a8a0896d4af115f7b4c",
+      "receipt": {
+        "issue": 66,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "bc619847104de172cd903f84085d54b280b763a90560ea4ae06a3e55db635ab2",
+          "planned": "7028ef5f1ea80bcc0f6753a5bd850f4db56d8b8893a2b0c9950e36d417af3050",
+          "readback": "7028ef5f1ea80bcc0f6753a5bd850f4db56d8b8893a2b0c9950e36d417af3050"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Link sign-in methods to one account with explicit dual proof",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Link sign-in methods to one account with explicit dual proof",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 67,
+      "receipt_path": "publication-receipts/issue-67.json",
+      "receipt_sha256": "9ae33e122d36af39f15fa9c0909c0d5f93b20b6f8a50b2191461bb73c51019e7",
+      "receipt": {
+        "issue": 67,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "213daa73c5cfa1fdd8097d0dade6ba2a29a0d337b0512a0e691560e114617bc4",
+          "planned": "743f8465120a38a3a40c145031bb160db9ba20920df5c3ca4f5637e647410bcd",
+          "readback": "743f8465120a38a3a40c145031bb160db9ba20920df5c3ca4f5637e647410bcd"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Start and test the frontend independently of backend services",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Start and test the frontend independently of backend services",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 68,
+      "receipt_path": "publication-receipts/issue-68.json",
+      "receipt_sha256": "002163ea5ef5baf868452d00a55a818528e40ea9de1f3d94667b6d68a52501c3",
+      "receipt": {
+        "issue": 68,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "030654a054d029bb82251f818d6d0020bb200c49781111071a0d14af5ac622d2",
+          "planned": "5e5d8401b747e597ba2007cffc243d5116068a9e0f808d357a07b512c54fea84",
+          "readback": "5e5d8401b747e597ba2007cffc243d5116068a9e0f808d357a07b512c54fea84"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Freeze and enforce one interchangeable frontend services boundary",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Freeze and enforce one interchangeable frontend services boundary",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 69,
+      "receipt_path": "publication-receipts/issue-69.json",
+      "receipt_sha256": "acd6ad7e969001ae56235cb009538fd4a389c4428c37f8e6fcace7d4deeef27d",
+      "receipt": {
+        "issue": 69,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "e65f72ee23332acfa06171e2f41ab3462079f2af0a9b49b7e6c2f4c4dc2b3d10",
+          "planned": "8b11dd1a5424fb4b8ebf9d2f318bdb3b01f85474ea2159c82450cde31f103d28",
+          "readback": "8b11dd1a5424fb4b8ebf9d2f318bdb3b01f85474ea2159c82450cde31f103d28"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Check the current device microphone without creating a project take",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Check the current device microphone without creating a project take",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 70,
+      "receipt_path": "publication-receipts/issue-70.json",
+      "receipt_sha256": "c5495b3490819b165410cbc960b62d7dc779c849d9a74be039a133d1916064dc",
+      "receipt": {
+        "issue": 70,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "5bdc4a7e2f986e22d2a45149692bf4d7eb2b8ebdc7ee5d55187438a5f3379690",
+          "planned": "e577ed7b0a5676f4ddbf7faf0437ae7ae955c2e01ad6d50bfa66d6fc293ff8b6",
+          "readback": "e577ed7b0a5676f4ddbf7faf0437ae7ae955c2e01ad6d50bfa66d6fc293ff8b6"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Keep mock credits, reservations and entitlements coherent and exactly once",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Keep mock credits, reservations and entitlements coherent and exactly once",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 71,
+      "receipt_path": "publication-receipts/issue-71.json",
+      "receipt_sha256": "668ad054dc86aca06c63d9d9eb1b2f8dbf04312454a0b373742dc8bbe461402a",
+      "receipt": {
+        "issue": 71,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "b5697c4d1d3b69e61eeda5a08314dd3cf38c6f299c53c53725bcd377e29d480e",
+          "planned": "b435e2226e54563d177f39754f8654be3bd75e5d122e3e586ebbcf186ebd277c",
+          "readback": "b435e2226e54563d177f39754f8654be3bd75e5d122e3e586ebbcf186ebd277c"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Reset a password with purpose-bound proof and recover the correct session",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Reset a password with purpose-bound proof and recover the correct session",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 72,
+      "receipt_path": "publication-receipts/issue-72.json",
+      "receipt_sha256": "659a2c3f0cf1361d5c89fa0cae42ed474110014a3ef669c57580c607457608b4",
+      "receipt": {
+        "issue": 72,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "8e19bb6f3c2b7b950af2732091a4f6885f923e8739be63fb4772930d901ab9e2",
+          "planned": "f43a7148a9893c70ae44dd4faf0ccc0431e68113f0588b9df1f93c7b53177eb7",
+          "readback": "f43a7148a9893c70ae44dd4faf0ccc0431e68113f0588b9df1f93c7b53177eb7"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Supply permitted playable media with explicit timeline and generation annotations",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Supply permitted playable media with explicit timeline and generation annotations",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 73,
+      "receipt_path": "publication-receipts/issue-73.json",
+      "receipt_sha256": "77674eebf63895ab7b6f25fb7f767012140a654195881b9fa34ebb81dfbc5599",
+      "receipt": {
+        "issue": 73,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "f7c886d3a3d1dfec59cc3fd0d43b1773810bb5ad796f47f70abcde1ade66fbf3",
+          "planned": "7692ebc0243b9def2758a1e29a407b2c62524d3c1ef3749096c1ba8102be238c",
+          "readback": "7692ebc0243b9def2758a1e29a407b2c62524d3c1ef3749096c1ba8102be238c"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Persist and reconcile an isolated mock workspace through the shared facade",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Persist and reconcile an isolated mock workspace through the shared facade",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 74,
+      "receipt_path": "publication-receipts/issue-74.json",
+      "receipt_sha256": "5dff2587843b8049041f469b52dc4d6f7f23dfa23223a07a8bdfef6cac9a84da",
+      "receipt": {
+        "issue": 74,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "f6f8452cfbbca3f58337fd557fadb97792d696a14d6147cd2ecc4442f3508ea3",
+          "planned": "cb980edf401c7f37a7b37e8f959c80a9387492c205f95a90e4574eb669712c22",
+          "readback": "cb980edf401c7f37a7b37e8f959c80a9387492c205f95a90e4574eb669712c22"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Reconcile preparation progress, cancellation and safe reprocessing",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Reconcile preparation progress, cancellation and safe reprocessing",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 75,
+      "receipt_path": "publication-receipts/issue-75.json",
+      "receipt_sha256": "ffef61d2acf0e4543c0b6276bc998f9a82a2b8fe549b2bea5752bd7f7eb05fdb",
+      "receipt": {
+        "issue": 75,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "aec3328abaa5491a4078670220cebf342e65317d20345796722f5d89b3c370e4",
+          "planned": "0dc5a0fc441f27b7935cb4f18430f80d01424b41a2587ab1a25218aa562fff22",
+          "readback": "0dc5a0fc441f27b7935cb4f18430f80d01424b41a2587ab1a25218aa562fff22"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Resume and manage account-owned projects without losing lifecycle truth",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Resume and manage account-owned projects without losing lifecycle truth",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 77,
+      "receipt_path": "publication-receipts/issue-77.json",
+      "receipt_sha256": "a21ec76cdf8649c111a4ee1cbc39a13784d7237cec36e82bc392499eb06b65e1",
+      "receipt": {
+        "issue": 77,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "a4ccb95f11206ddce44a5e49b521530e4aad84dd8f61d572ddd82c3aad8ea563",
+          "planned": "f460f8d3633b0b81c1298ce2163ec093187f70f48e252a1f143fc75fca6ff1af",
+          "readback": "f460f8d3633b0b81c1298ce2163ec093187f70f48e252a1f143fc75fca6ff1af"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Record and durably accept a turn without losing protected media or navigation intent",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Record and durably accept a turn without losing protected media or navigation intent",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 78,
+      "receipt_path": "publication-receipts/issue-78.json",
+      "receipt_sha256": "389d9b0af3e963af2e5bc9344ff03e3492338c0c9f7afafcd3aaaa97a9c10895",
+      "receipt": {
+        "issue": 78,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "5ea72baf7b7e60b389b622a33c9a2f0ef58eb5e0253623e0d17d392a368a9011",
+          "planned": "07ae5bb8fdb1dfbc2b181c6fc9f819101967c54e220c072a9f0d6384e4953695",
+          "readback": "07ae5bb8fdb1dfbc2b181c6fc9f819101967c54e220c072a9f0d6384e4953695"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Render the approved responsive shell, locale behavior and minimal landing",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Render the approved responsive shell, locale behavior and minimal landing",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 79,
+      "receipt_path": "publication-receipts/issue-79.json",
+      "receipt_sha256": "698fb57eff01a85d3310deb1c858339999310a8a1161eed188016edb2d80e7cd",
+      "receipt": {
+        "issue": 79,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "1fe1f167b49d84771fa0a17dac20a5179eb7d8f911ccf861652a963c32a21b0c",
+          "planned": "fbe445eb1eacb60d503d71cfca0ea63e1b30c0dd89a614b63f2cc5581c6cfa13",
+          "readback": "fbe445eb1eacb60d503d71cfca0ea63e1b30c0dd89a614b63f2cc5581c6cfa13"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Present and download the exact authorized result generation safely",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Present and download the exact authorized result generation safely",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 80,
+      "receipt_path": "publication-receipts/issue-80.json",
+      "receipt_sha256": "9ef6489ad14e9dd168a5946bbf97a4342e27fb13cc88c8c8ed6494f2adeb1452",
+      "receipt": {
+        "issue": 80,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "225f921426535f023caf49fdf35fdac97cc8dac087676714d00448f346d38897",
+          "planned": "c18776f171e55324d7683a4e86aa57a16dcd230cdb46e649a447557ccf8d419a",
+          "readback": "c18776f171e55324d7683a4e86aa57a16dcd230cdb46e649a447557ccf8d419a"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Sign in and restore a protected session without replaying work",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Sign in and restore a protected session without replaying work",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 81,
+      "receipt_path": "publication-receipts/issue-81.json",
+      "receipt_sha256": "48e764d81dd2ec88a7117000f8d87178868f3aefdc8a2fb56803da51c317b2c3",
+      "receipt": {
+        "issue": 81,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "7dd26069d8067c25744f2ad542c1cfb5666db0b3bdad65a3f7bcd9d19720e40b",
+          "planned": "b89ff5aabc7b9e46fde0e92afe91455f73fbe0fcb5d359d268b340fc6c487e87",
+          "readback": "b89ff5aabc7b9e46fde0e92afe91455f73fbe0fcb5d359d268b340fc6c487e87"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Authorize processing from a validated source and exact selected-section quote",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Authorize processing from a validated source and exact selected-section quote",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    },
+    {
+      "issue": 82,
+      "receipt_path": "publication-receipts/issue-82.json",
+      "receipt_sha256": "abf130b629b4e058fc53935fc3a438ed9805a52901d41c917c8a558774aa103f",
+      "receipt": {
+        "issue": 82,
+        "status": "published_readback_pass",
+        "updateError": false,
+        "preGuard": {
+          "bodyExactFrozen": true,
+          "bodyHashMatchesFrozen": true,
+          "stateMatchesFrozen": true,
+          "stateReasonMatchesFrozen": true,
+          "titleMatchesFrozen": true,
+          "labelsMatchFrozen": true,
+          "assigneesMatchFrozen": true
+        },
+        "verification": {
+          "bodyExact": true,
+          "bodyHashMatchesPlanned": true,
+          "stateOpen": true,
+          "stateReasonReopened": true,
+          "workflowInProgress": true,
+          "titleUnchanged": true,
+          "labelsUnchanged": true,
+          "assigneesUnchanged": true
+        },
+        "hashes": {
+          "before": "cae4b9210e5cdcff5d0625316997afb48e69ce133c853e8b86c99010f251097c",
+          "planned": "1f58934b6c30433b9fe6f633ab46eb8e42cf93f8c7fd49f47f8605b61d36d7a3",
+          "readback": "1f58934b6c30433b9fe6f633ab46eb8e42cf93f8c7fd49f47f8605b61d36d7a3"
+        },
+        "before": {
+          "state": "closed",
+          "state_reason": "completed",
+          "title": "Complete verified registration without duplicating an account or grant",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": []
+        },
+        "after": {
+          "state": "open",
+          "state_reason": "reopened",
+          "title": "Complete verified registration without duplicating an account or grant",
+          "labels": [
+            "frontend"
+          ],
+          "assignees": [],
+          "workflow": "in_progress"
+        }
+      }
+    }
+  ],
+  "mutation_boundary": "Body, state=open, state_reason=reopened only. Titles, labels, assignees, milestones, comments, and all other issue fields were not sent in update calls.",
+  "remaining_lifecycle_actions": "No acceptance, commit, push, or closure performed."
+}

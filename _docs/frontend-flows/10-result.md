@@ -1,25 +1,25 @@
 # Flow 10 — Result assembly, playback and download
 
-Date: 2026-10-26 (Asia/Qyzylorda).
-Status: synchronized specification draft; owner answers through RESULT-B01–B03 are incorporated, and only the technical, operational, copy and presentation details listed under **Decision register** remain open. Independent re-review remains separate.
-Mode: specification only. No implementation, mock, rendered design, visual validation or executed test is represented by this document.
+Date: 2026-10-28 (Asia/Qyzylorda).
+Status: paired focused custom Result comparison synchronized; immutable generation/service evidence gates remain.
+Mode: normative frontend contract; approved prototype is design evidence only, not actual rendering, generation durability or delivery proof.
 
 ## 1. Purpose and authority
 
 This flow lets an authenticated project owner see result assembly start after every required turn has a compatible durably accepted take, follow truthful progress, watch the latest valid finished dub, download its MP4, and use `Return to recording` to reopen Record.
 
-The [shared frontend contract](00-shared-contract.md) governs the shell, current light visual direction, localization, service boundary and cross-flow behavior. Its latest owner decisions override conflicting older wording in BR-001 and SPEC-001. The Result flow therefore uses the compact top navigation and Record / Result workspace with no permanent sidebar, source Clean / Light working surfaces, a black video stage, mapped restrained component shadows and no gradients or ornamental effects.
+The [shared frontend contract](00-shared-contract.md) governs the shell, current light visual direction, localization, service boundary and cross-flow behavior. Its latest owner decisions override conflicting older wording in BR-001 and SPEC-001. The Result flow therefore uses the focused Exit/project-title workspace without a global navbar or permanent sidebar, source Clean / Light working surfaces, a black video stage, mapped restrained component shadows and no gradients or ornamental effects.
 
 Unchanged output invariants come from BR-001-R14–R18 and SPEC-001 §§4.5, 5, 7–9, AC-11–AC-17 and AC-23 where they do not conflict with the latest owner direction. Every nonempty automatically prepared turn must have a compatible durable accepted take before a new result can be assembled. A shorter accepted take remains valid. The output is MP4 up to 720p, preserves the selected section's orientation, never upscales, adds no subtitles, and keeps burned-in source captions unchanged.
 
-The latest owner direction removes the Prepare stage, manual text/speaker/timing editing, missed-line addition and background audition from the MVP. Successful processing enters Record directly. Automatic segmentation should be as good as practical but is not guaranteed to be correct; the user records the generated turns as given or starts a new project. The permanent whole-project AI-processing lock still begins after the first accepted take. Result must not expose a hidden correction path or imply that it can repair segmentation.
+The latest owner direction removes the Prepare stage, manual text/speaker/timing editing, missed-line addition and background audition from the MVP. Successful processing enters Record directly. Automatic segmentation should be as good as practical but is not guaranteed to be correct; the user records the generated turns as given or starts a new project. No user-requested same-project preparation reset exists at any recording stage. Result must not expose a hidden correction path or imply that it can repair segmentation.
 
 This document applies both requested design skills as analysis guidance:
 
 - `design-taste-frontend` is applied as an **app-screen** workflow: one screen question, restrained chrome, flat surfaces, honest states, a no-sidebar shell and responsive operation rather than a landing-page composition.
 - `frontend-design` is applied through subject-specific hierarchy: the finished moving dub is the distinctive and largest object, while progress, provenance and next actions exist to support it.
 
-No random style draw, implementation asset or mockup is created. The shared contract fixes the owner-approved typeface, palette, type sizes, control geometry, gutters, breakpoint and content width. Only the remaining presentation details named in §17 stay open, and this assignment permits editing only this specification.
+Use the approved core target and current shared tokens, not a random style draw. Core grouping/ready/unknown-progress presentation is settled; residual §17 production/font/unseen-state evidence stays open. This document governs Result behavior and does not claim a new runtime or broader owner approval.
 
 ## 2. Entry, exit and scope
 
@@ -49,7 +49,7 @@ If the user remains on the screen for the matching project and operation, a vali
 
 ### Other exits
 
-- Global navigation may leave Result without canceling an authoritative server-side render.
+- Exit leaves Result for the Projects boundary without canceling an authoritative server-side render;pause both comparison sources and preserve accepted takes. Closing a local boundary restores logical Exit focus without autoplay.
 - `Return to recording` opens the first turn in established order, preserves every accepted take, starts neither capture nor assembly, and leaves turn movement to Flow 09's `Back` / `Next` controls. Result does not target the last-viewed or last turn and does not add a turn picker.
 
 ### Out of scope
@@ -70,12 +70,12 @@ When a current finished generation exists, the full video answers that question 
 
 The visual direction follows the shared light rehearsal room:
 
-- compact top navigation and project header, with Record / Result context and authoritative save/job status;
-- Mabry Pro Regular and Medium only, with no Bold or synthetic Bold: Regular 16px/24px body and dialogue text, Regular 14px/20px supporting captions, role-specific Mabry Pro Medium desktop labels from design-tokens.md, Medium 14px/20px field labels, and a Medium 32px/40px desktop / 24px/32px phone page heading;
+- focused media-aligned Exit and centered project/Result heading,with authoritative save/job status;no global navbar;
+- Mabry Pro Regular and Medium only, with no Bold or synthetic Bold: Regular 16px/24px body and dialogue text, Regular 14px/20px supporting captions, role-specific Mabry Pro Medium desktop labels from design-tokens.md, Medium 14px/20px field labels, and a Medium20px/28px focused project/Result heading;
 - Use the [Clean / Light adoption](affect-ui-clean-light-adoption.md) and [current tokens](design-tokens.md): source dark primary, white subtly shadowed secondary, soft-destructive actions, current role sizes in [design-tokens.md](design-tokens.md): desktop task 40px / Medium 14px/20px, prominent/landing 44px / Medium 16px/24px, secondary 32px / Medium 14px/20px, navigation 36px / Medium 14px/20px; medium segmented 40px /14px/20px desktop and 48px /16px/24px phone, exact component radii/interiors and bounded functional motion. Keep Mabry, readable body/dialogue, existing layout/navigation and product semantics; phone button labels remain Mabry Pro Medium 16px/24px with retained 48px targets. Apply the explicit readable-text/link/error, essential-boundary, focus, phone-target and disabled-versus-busy adaptations. Verify the exact source variant/state, actual composites, typography/targets, EN/RU rendering, keyboard/focus and reduced motion; no runtime or accessibility pass is claimed.
 - component-specific source geometry; desktop action roles in design-tokens.md and 48px phone targets;
 - 8px between closely related elements, 16px between fields/buttons, 24px between blocks within the screen and 32px between major sections; 24px desktop/16px phone padding only for already-required panels;
-- 32px desktop / 16px phone horizontal gutters, a 1200px maximum working-content width, one column below 768 CSS px and regular top navigation/layout from 768 CSS px;
+- 32px desktop / 16px phone horizontal gutters, a 1200px maximum working-content width, one column below 768 CSS px and focused page layout from768 CSS px;
 - panel padding remains distinct from page gutters and introduces no new wrapper panel/card; no permanent sidebar, hero marketing treatment, KPI row, decorative card grid, gradient, glow, decorative shadow, all-caps styling or automatic wrapper card around every block;
 Use the catalogued functional source motion in [design-tokens.md](design-tokens.md), including reversible 140/160ms button response and eligible selection/content/width recipes. Reduced motion makes UI changes immediate; a functional spinner requires real pending work and a readable static equivalent. No page-entry/parallax/decorative background loop or invented progress; capture/save/payment/navigation never wait for animation. Functional media/playhead timing is unchanged. 
 - flat action controls, quiet grouping and one filled primary action at most in a state; the red destructive role is reserved for recording/destructive semantics and is not general Result decoration;
@@ -87,7 +87,7 @@ Conceptual composition, with no implied measurements:
 
 ```text
 Desktop
-┌ compact global navigation ─────────────────────────────────────────┐
+┌ Exit · centered project / Result heading ───────────────────────────┐
 │ project identity · Record / Result · authoritative state           │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
@@ -96,11 +96,11 @@ Desktop
 ├─────────────────────────────────────────────────────────────────────┤
 │ previous-version player below progress, when one exists             │
 │ play/pause · seek · time · volume · fullscreen                      │
-│ Download MP4 · Return to recording                                  │
+│ Download My dub · Return to recording                                  │
 └─────────────────────────────────────────────────────────────────────┘
 
 Phone
-┌ compact top navigation ┐
+┌ Exit · centered title ┐
 │ project + Result state │
 ├────────────────────────┤
 │ assembly progress      │
@@ -114,14 +114,16 @@ Phone
 └────────────────────────┘
 ```
 
-The wireframes show reading order only. They do not approve exact copy, size, spacing, sticky behavior or button order.
+The wireframes show reading order. The approved core target supplies common heading/player/footer grouping and ready/unknown-progress presentation; other generation/error/delivery states still require their current contract/evidence checks.
+
+The [approved core target](../../prototypes/core-journey-lowfi/BRIEF.md) settles the common Result section: project label/heading, player/progress and ready/actions share one bounded content container and aligned edges, including assembly/recovery. No decorative outer box is required. Fixed illustrative prototype output does not replace any generation, previous-version, retry or delivery invariant below.
 
 ## 4. Screen anatomy
 
 The Result screen contains these semantic regions in reading order.
 
 1. **Shared project shell**
-   - compact global navigation: New dub, My projects, credits balance and account;
+   - Exit with Lucide LogOut at the media/content left edge;no logo/New dub/My projects/credits/account/Settings navbar;
    - project identity and Record / Result workspace context;
    - authoritative project save/result state;
    - no permanent sidebar.
@@ -130,7 +132,7 @@ The Result screen contains these semantic regions in reading order.
    - distinguishes `assembling`, `validating`, `ready`, `failed`, `outdated` and `recordings incomplete` in plain language;
    - identifies a previous finished result as previous when current work has not produced a replacement;
    - uses plain current/previous/new-version language; generation IDs, snapshot/retry lineage and worker/provider vocabulary remain service/evidence contracts, not mandatory product explanations;
-    - keeps the displayed version and Watch new / Download MP4 consequence understandable; download stays pinned to the exact displayed generation.
+    - keeps the displayed version and Watch new / Download My dub consequence understandable; download stays pinned to the exact displayed generation.
 3. **Assembly progress**
    - reflects the authoritative Result assembly operation, separate from Flow 07 preparation progress and current-stage presentation;
    - before the service supplies a trustworthy percentage, shows `Assembling video…` / `Собираем видео…`, with no progress bar, numeric value or estimated remaining time;
@@ -138,31 +140,31 @@ The Result screen contains these semantic regions in reading order.
    - does not reuse Flow 07 preparation stages as Result assembly stages; any additional Result-specific stage label remains **OPEN-10-05**;
    - reconnecting or refreshing preserves the same operation identity rather than starting duplicate work.
 4. **Principal stage**
-   - black media stage preserving the output's orientation without cropping it to a decorative ratio;
+   - fixed16:9 black presentation space containing the complete finished image without cropping; letterboxing does not change encoded output orientation/dimensions or no-upscale rules;
    - shows the latest valid finished generation, except that active previous-version playback is preserved when a newer authoritative generation becomes ready;
    - during replacement assembly, sits below the new render's progress and labels the playable prior result `Previous version` / `Предыдущая версия`;
    - after successful replacement, active previous playback keeps that label and offers `New version ready` / `Watch new`; paused or inactive presentation switches to the new asset without autoplay;
    - otherwise keeps the stage footprint while showing assembly, validation, empty or recovery information;
    - never substitutes the source upload, a sample clip or a partial render for the finished result.
 5. **Playback controls**
-   - expose native or equivalent accessible play/pause, seeking, time, volume and fullscreen for the full selected-section output;
+   - use custom accessible play/pause,seeking,elapsed/duration,volume and fullscreen;Original / My dub comparison is inside the player with legible contrast backing and48px phone targets;
    - operate only on a validated finished asset;
-   - expose no source/take or audio-track selector, subtitle controls, export settings or editing controls;
+   - Original / My dub compares the exact prepared source against the presented finished-dub generation;it is not a take library,generation picker,mixer,subtitle or export-settings control;
    - preserve full selected-section duration, including pauses and scenes outside turns.
 6. **Output facts**
    - may show only authoritative facts useful to the owner, such as duration and current/previous status;
    - must not claim 720p when the preserved source is lower resolution, imply upscaling, or describe a sample fixture as the user's render;
    - exact metadata shown is **OPEN-10-05**.
 7. **Actions**
-   - beneath the finished player, `Download MP4` requests the exact displayed finished generation and `Return to recording` follows the established first-turn handoff;
+   - beneath the finished player, `Download My dub` requests the exact displayed finished generation and `Return to recording` follows the established first-turn handoff;
    - `Return to recording` opens Flow 09 at the first established turn without changing any accepted take, starting capture or starting assembly;
 - after the one automatic retry for a failed assembly request also fails, `Repeat assembly` / `Повторить сборку` starts an explicit user-requested attempt only for the same durably authorized exact frozen snapshot and recorded retry lineage; accepted-take changes do not implicitly authorize a new render, which requires the separate explicit completed-project `To result` path;
    - unavailable actions remain understandable, with the blocking reason available to keyboard and assistive-technology users.
 8. **Inline status and recovery message**
-   - sits with the failed or blocked region rather than as an unrelated global banner;
+   - keeps durable status/actions with the failed or blocked region; an approved transient popup may supplement but never replace them;
    - says whether a previous result remains safe, whether the accepted takes remain safe, and what action is available;
    - places a service-level error above the primary recovery action and preserves authoritative playback/job state after failure; Result contains no result-specific text field to which a field-level error would apply;
-   - as the download-specific exception, places an app-observable MP4 request error beside `Download MP4` and retries that same finished generation without assembly or credit charge;
+   - as the download-specific exception, places an app-observable MP4 request error beside `Download My dub` and retries that same finished generation without assembly or credit charge;
    - never describes a worker response as a valid result before media validation and the owner current-generation switch complete.
 
 ## 5. State model and transitions
@@ -212,7 +214,7 @@ During replacement progress, show new-render progress first, then the prior fini
 - if the previous result is playing, keep its playback, position and displayed identity uninterrupted. Show `New version ready` and the explicit `Watch new` action; the old asset remains labeled previous. Merely finishing that playback does not count as choosing Watch new;
 - `Watch new` switches the player and its download target together to the authoritative new generation, resets its playhead to the beginning and remains paused. Playback requires a separate Play action; it must not reassemble or change authoritative generation ordering;
 - if playback is paused or inactive when readiness arrives, replace the displayed asset with the new generation without autoplay;
-- throughout the retained-previous presentation, Download MP4 requests that exact previous displayed generation. It switches to the new identity only with the player switch, never just because authoritative readiness arrived.
+- throughout the retained-previous presentation, Download My dub requests that exact previous displayed generation. It switches to the new identity only with the player switch, never just because authoritative readiness arrived.
 
 Refresh/new entry loads the authoritative current generation without autoplay rather than creating a persistent old-version preference. Invalid/stale completions cannot offer Watch new, and completion after navigation elsewhere remains status-only under §5.10. Detailed action geometry and Russian copy remain open; the playback/presentation behavior is settled.
 
@@ -235,8 +237,8 @@ A generation is ready only after assembly and media validation succeed and the o
 
 - The stage plays the complete selected-section timeline.
 - Readiness never autoplays on first entry or a paused/inactive replacement. Active previous playback and the explicit Watch new transition follow §5.3; authoritative current identity and displayed identity remain distinguishable until that transition.
-- The player exposes play/pause, seeking, time, volume and fullscreen. It exposes no audio-track selector, subtitle controls or export settings.
-- Beneath the player, `Download MP4` returns the exact displayed generation and `Return to recording` opens Flow 09 at the first established turn under the existing handoff contract.
+- The player exposes play/pause, seeking, time, volume and fullscreen. It includes the Original / My dub comparison described below;no arbitrary track,mixer,subtitle or export-settings controls.
+- Beneath the player, `Download My dub` returns the exact displayed generation and `Return to recording` opens Flow 09 at the first established turn under the existing handoff contract.
 - The player does not add app-generated subtitles. Burned-in source captions remain part of source pixels and do not create a subtitle control.
 - The UI does not promise a resolution above the actual output or source.
 - Playback failure is distinct from render failure: it does not invalidate the stored generation without authoritative evidence.
@@ -280,14 +282,14 @@ An empty Result context has no valid finished generation and no active result jo
 
 - If a nonempty project has a durable initial-acceptance trigger or completed-project `To result` authorization bound to its exact eligible frozen snapshot and retry lineage, reconcile the missing assembly-start operation and enter progress. A merely eligible snapshot with no such durable authorization cannot start assembly from Result recovery.
 - If it is ineligible, show the blocked-by-recordings state and hand off to Record.
-- Initial processing with zero generated turns and no prior usable nonempty preparation cannot enter Record or Result or create a result operation. The processing-owned recovery surface shows `No dialogue found` / `Реплики не найдены` and offers eligible whole-project reprocessing under the existing quote, credit and included-retry rules or choosing another video.
-- A zero-turn reprocessing output never replaces a prior usable nonempty preparation or its unaccepted draft. Preserve that active preparation/draft, report that the new attempt found no dialogue, and allow continued Record work against the preserved turns under Flow 09. The zero-turn attempt itself is not an eligible result snapshot and cannot create a result operation; any later Result handoff must meet the normal accepted-compatible-take and durable-authorization requirements for the preserved nonempty preparation.
-- The charge for the completed zero-turn processing attempt is unchanged. This decision adds no refund, free retry or entitlement.
+- Initial zero-turn processing cannot enter Record/Result or create an assembly operation. Processing-owned No dialogue found / Реплики не найдены offers another video.
+
+- A successful zero-turn preparation remains charged; no new entitlement or refund. It is distinct from technical failure.
 - Do not offer manual turn addition, a speech-free result, the source clip as a result, or any claim that dubbing is complete.
 
 ### 5.10 Leaving, refresh and cancel semantics
 
-- Refreshing, closing the tab, losing connectivity or using global navigation does not cancel a server-owned result operation.
+- Refreshing, closing the tab, losing connectivity or activating Exit does not cancel a server-owned result operation.
 - Assembly continues in the background after leaving Result. Returning later, including through My projects, restores authoritative job and finished-generation state.
 - A completion may transition progress to ready only while the current screen still matches that project, operation and valid lifecycle. After navigation elsewhere, it updates authoritative status only and cannot redirect; stale callbacks cannot navigate or replace state for the currently open section/project.
 - Result exposes no Cancel assembly control. Navigation away does not cancel or restart the job, discard recordings or prevent later retrieval. Project/account deletion follows its own lifecycle and is not an assembly-cancel shortcut.
@@ -302,7 +304,7 @@ An empty Result context has no valid finished generation and no active result jo
 4. **One continuous mix.** The full selected-section video and one continuous processed background are combined with accepted takes at their original positions, including overlap and dialogue-free intervals. Do not duplicate per-turn background, time-stretch performances, extend the video or intentionally restore original voices.
 5. **Immutable finished bytes.** Later accepted-take replacements do not mutate an earlier finished asset. They create a newer frozen output snapshot.
 6. **Monotonic owner-current switch.** Only the latest eligible requested generation can become the owner's current result. A late older completion cannot replace it.
-7. **Prior-result protection and presentation.** A finished generation remains authoritative until a newer eligible generation validates and switches atomically. Failure/stale completion leave it untouched. After valid authoritative replacement, already playing previous media remains temporarily presented until Watch new; paused/inactive presentation swaps without autoplay. Playback and Download MP4 always target the displayed generation, with authorized access retained for that presentation. Presentation cannot reverse authoritative ordering.
+7. **Prior-result protection and presentation.** A finished generation remains authoritative until a newer eligible generation validates and switches atomically. Failure/stale completion leave it untouched. After valid authoritative replacement, already playing previous media remains temporarily presented until Watch new; paused/inactive presentation swaps without autoplay. Playback and Download My dub always target the displayed generation, with authorized access retained for that presentation. Presentation cannot reverse authoritative ordering.
 8. **Deletion fence.** A deleted or inaccessible project cannot be revived or restored as current by a late result completion.
 9. **No fixture confusion.** A fixed sample MP4 used by a frontend mock is not evidence that accepted takes were mixed, that a custom upload rendered, or that production export works. The additive #72 portrait result fixtures remain synthetic with `productRendered:false` and `assembledFromAcceptedTakes:false`: preview/preparation selection requires exact source ID/revision/SHA-256/byte length, and the first successful private `StoredAuthorization` ACK preserves that source fingerprint for result selection across later source edits/replays. Public `AssemblyAuthorization` stays unchanged. The [issue 72](https://github.com/dystrophyless/dubbed.ai/issues/72) records the fixture and its limits; native product-journey proof remains with #63.
 10. **Bounded automatic retry.** Each failed assembly request receives exactly one automatic retry. A second failure becomes an explicit-recovery state; no client or service loop may create further automatic attempts.
@@ -319,7 +321,7 @@ An empty Result context has no valid finished generation and no active result jo
 | Generated-turn set or accepted-take revision changes during render | Fence the completion. Do not publish it for the changed project state; return to Record if current work is ineligible. |
 | Older and newer jobs finish in reverse order | Only the current-generation authority may advance the owner's current result; the older completion remains stale. |
 | Finished-player network/media error | Keep the generation record intact, retry playback or refresh its secure descriptor. Do not rerender unless authoritative validation says the asset is invalid. |
-| App-observable MP4 download request fails or delivery authorization expires | Keep the player and accepted recordings intact; show the error beside `Download MP4`; retry or refresh authorized access to the same finished generation. Do not reassemble or charge credits. Do not claim an unobservable operating-system save failure or successful local saving from request initiation alone. |
+| App-observable MP4 download request fails or delivery authorization expires | Keep the player and accepted recordings intact; show the error beside `Download My dub`; retry or refresh authorized access to the same finished generation. Do not reassemble or charge credits. Do not claim an unobservable operating-system save failure or successful local saving from request initiation alone. |
 | Authentication expires | Preserve server-side work, require reauthentication for owner actions, then restore the same project/result context if authorized. |
 | Project becomes deleted/inaccessible | Stop owner playback/actions and follow project deletion/access behavior. Late job completion cannot restore access. |
 | Browser closes or phone suspends | Server-side assembly may continue. On return, restore job or finished state from the service. |
@@ -336,7 +338,7 @@ Failures must say which user-owned work remains safe. They must not claim that a
 - The selected-section duration and timeline remain intact. No app-generated subtitle track or burn-in is added.
 - A generated filename, expiry duration, download count/traffic limit and offline-retention promise are not selected in this flow.
 - A failed download does not invalidate the generation or start a new render.
-- An app-observable request failure appears beside `Download MP4` and permits retry of the same finished generation without a credit charge. Expired delivery authorization may be refreshed for that same asset.
+- An app-observable request failure appears beside `Download My dub` and permits retry of the same finished generation without a credit charge. Expired delivery authorization may be refreshed for that same asset.
 - The application does not claim to observe an operating-system save failure the browser does not report, and request initiation alone is not presented as proof that the file was saved locally.
 - Signed or private media descriptors must not be exposed in application logs, analytics or error copy.
 
@@ -364,7 +366,7 @@ The frontend uses the centralized interchangeable services facade. Names below d
 
 **Success:** existing or newly created result operation identity, frozen-input provenance and authoritative initial job state.
 
-**Errors:** zero-turn/ineligible snapshot, incomplete/incompatible takes, stale eligibility/request revision, missing asset, deleted/inaccessible project, operation creation failure, service unavailable. A zero-turn candidate snapshot cannot be assembled. If no prior usable nonempty preparation exists, route to processing-owned `No dialogue found` recovery; if a zero-turn reprocessing attempt preserved prior usable turns/draft, retain that active preparation and its Record continuation rather than excluding the project from Record/Result. Assembly eligibility and authorization apply to the preserved nonempty snapshot, never the zero-turn attempt.
+**Errors:** zero-turn/ineligible snapshot, incomplete/incompatible takes, stale request revision, missing asset, deleted/inaccessible project, operation-creation failure or unavailable service. Never assemble a zero-turn snapshot. Route zero turns to Processing-owned No dialogue found/another-video recovery; ordinary nonempty accepted snapshots retain all authorization/generation invariants.
 
 For initial sequence completion, the input follows the durable acceptance that first establishes authoritative all-required-turn eligibility, even when the accepted final gap is in the middle of established order. Flow 09 invokes it automatically: ordinary candidate-bearing `Next` opens Result, while Back/`Save and go`, `Save and leave`, sign-out or another explicit navigation guard records/reconciles the trigger before exit and completes the requested destination with background assembly. Final-turn traversal and an initial `To result` command do not exist. Navigation over an unrecorded turn, reaching the end with a gap, capture completion, draft upload, local counts or any other ineligible/non-authoritative signal cannot invoke it. For completed-project revision, Flow 09 resolves the `To result` candidate guard before calling this command and supplies accepted takes only. Eligibility or replacement `Next` alone is not revision authorization. The command cannot repair, accept, choose or persist takes, and it cannot replace a previous finished generation at request time.
 
@@ -390,7 +392,7 @@ For a matching valid replacement, the client separately checks actual player sta
 
 ### Request result download
 
-**Input:** project ID and exact displayed finished generation identity frozen at Download MP4 activation, including the temporarily presented previous generation; retry uses that original request identity even if the player later switches.
+**Input:** project ID and exact displayed finished generation identity frozen at Download My dub activation, including the temporarily presented previous generation; retry uses that original request identity even if the player later switches.
 
 **Result:** authorized download descriptor and truthful metadata for that generation.
 
@@ -433,7 +435,7 @@ The processing boundary owns the generated turn set and its fixed windows. Recor
 - choose an original-voice fallback;
 - silently assemble an older eligible snapshot as though it represented current work.
 
-If automatic segmentation is poor, Result offers no correction workflow. The user records the generated turns as given or starts a new project through the separately owned project-entry flow. Whole-project AI processing remains permanently locked after the first accepted take.
+If automatic segmentation is poor, Result offers no correction workflow. The user records the generated turns as given or starts a new project through the separately owned project-entry flow. No delivered-preparation rerun is available before or after recording.
 
 Flow 11 My projects may summarize result state, but Result and the export/current-generation service remain the detailed owner surface and truth for generation progress. For a resumable project with a prior result, `Continue` opens Record at the first turn without an accepted take when unfinished recordings remain and opens Result only when no unfinished takes remain. No completion email or push substitutes for this in-app status.
 
@@ -492,7 +494,7 @@ The interface must communicate these facts when applicable:
 - download failed without invalidating the result;
 - a result is ready and is the current generation.
 
-The confirmed Result copy includes `Assembling video…` / `Собираем видео…`, `Previous version` / `Предыдущая версия`, `Repeat assembly` / `Повторить сборку`, and the zero-turn message; confirmed English labels include `Download MP4`, `Return to recording`, `New version ready` and `Watch new`. Remaining Russian labels (including new-version readiness/action), error text and previous/outdated terminology are **OPEN-10-06**; any additional Result-specific stage label is **OPEN-10-05**. Result exposes no ETA. Service errors appear above the primary recovery action and preserve current authoritative state; Result has no result-specific text-entry field requiring a field error. Working translations in a prototype or mock are placeholders and cannot be treated as approved copy. Internal terms such as generation fence, blob, worker, callback, codec or object storage do not appear in user-facing messages.
+The confirmed Result copy includes `Assembling video…` / `Собираем видео…`, `Previous version` / `Предыдущая версия`, `Repeat assembly` / `Повторить сборку`, and the zero-turn message; confirmed English labels include `Download My dub`, `Return to recording`, `New version ready` and `Watch new`. Remaining Russian labels (including new-version readiness/action), error text and previous/outdated terminology are **OPEN-10-06**; any additional Result-specific stage label is **OPEN-10-05**. Result exposes no ETA. Service errors appear above the primary recovery action and preserve current authoritative state; Result has no result-specific text-entry field requiring a field error. Working translations in a prototype or mock are placeholders and cannot be treated as approved copy. Internal terms such as generation fence, blob, worker, callback, codec or object storage do not appear in user-facing messages.
 
 ## 14. Acceptance criteria
 
@@ -500,11 +502,11 @@ All criteria are unexecuted. A criterion marked **BLOCKED** cannot pass until it
 
 - [ ] **AC-10-01 Assembly handoffs:** the first durable acceptance that makes every required turn authoritatively eligible records/reconciles one initial assembly operation even when the accepted final gap is in the middle of turn order; no final-turn traversal or initial button is required. Ordinary candidate-bearing `Next` opens Result. Acceptance through Back/`Save and go`, `Save and leave`, sign-out or another explicit navigation guard durably records/reconciles the trigger before exit/release and starts background assembly while the requested destination wins. Capture, drafts, navigation and local counts cannot trigger it. Empty unaccepted Next is blocked without mutation; compatible accepted candidate-free revisits may advance. A present candidate must itself be authoritatively accepted before advancement; failure/unknown outcome retains current turn/candidate, without older-take fallback. Legacy/interrupted gaps recover at the first unfinished turn; no assembly is allowed until all required takes are accepted-compatible. In a completed-project revision, replacement `Next` accepts and stays in Record; only explicit `To result`, after the exact `Save and go` / `Go without saving` / `Stay` candidate guard when needed, durably authorizes the frozen all-accepted snapshot and starts/reconciles updated assembly. Eligibility alone is not revision authorization.
 - [ ] **AC-10-02 Eligibility:** a nonempty generated turn set assembles only when every turn has a compatible accepted take; shorter accepted takes remain eligible. Result consumes authoritative compatibility and exposes no manual turn-edit path.
-- [ ] **AC-10-03 Zero-turn recovery:** initial zero-turn processing without prior usable nonempty preparation shows `No dialogue found` / `Реплики не найдены`, offers eligible reprocessing or another video and cannot enter Record/Result. A zero-turn reprocessing attempt over prior usable nonempty preparation preserves that preparation and unaccepted draft, reports no dialogue for the new attempt and permits continued Record work against the preserved turns. Neither case assembles the zero-turn output, offers a speech-free result or exposes manual turn addition. Completed-attempt charging and retry consumption remain unchanged; any Result handoff for preserved turns still requires normal authoritative eligibility and durable authorization.
+- [ ] **AC-10-03 Zero-turn recovery:** successful zero-turn preparation remains charged, shows No dialogue found/another video and cannot enter Record/Result or authorize assembly. No manual addition, speech-free output or repeat-preparation entitlement.
 - [ ] **AC-10-04 Truthful progress:** queued/rendering/validation state comes from the authoritative operation and survives refresh/reconnect. Before a trustworthy service percentage exists, Result shows `Assembling video…` / `Собираем видео…`, with no bar, numeric progress or ETA; when one exists, it shows one progress bar and that service percentage without client estimation. Flow 07 preparation stages are not presented as Result assembly stages.
 - [ ] **AC-10-05 Complete media:** the finished output preserves the complete selected-section duration, orientation, pauses, dialogue-free scenes and overlapping takes with one processed background, no stretching, no intentional original-dialogue fallback and no added subtitles.
-- [ ] **AC-10-06 Delivery format and retry:** the downloadable artifact is a validated MP4 at no more than 720p, never upscaled, and download targets the exact generation shown in the player. An app-observable request failure appears beside `Download MP4`; retry or refreshed authorization uses that same generation without assembly or credit charge, preserves the player/accepted recordings and makes no unobservable operating-system save claim.
-- [ ] **AC-10-07 Current playback:** full playback is enabled only for validated finished media and provides play/pause, seeking, time, volume and fullscreen, with `Download MP4` and `Return to recording` beneath the player. It provides no audio-track selector, subtitle controls or export settings; player delivery failure is recoverable without silently starting a new render or changing generations.
+- [ ] **AC-10-06 Delivery format and retry:** the downloadable artifact is a validated MP4 at no more than 720p, never upscaled, and download targets the exact generation shown in the player. An app-observable request failure appears beside `Download My dub`; retry or refreshed authorization uses that same generation without assembly or credit charge, preserves the player/accepted recordings and makes no unobservable operating-system save claim.
+- [ ] **AC-10-07 Current playback:** full playback is enabled only for validated finished media and provides play/pause, seeking, time, volume and fullscreen, with `Download My dub` and `Return to recording` beneath the player. It includes Original / My dub comparison with independent generation identity and no arbitrary track/subtitle/export-settings controls; player delivery failure is recoverable without silently starting a new render or changing generations.
 - [ ] **AC-10-08 Prior result:** a prior finished result remains authoritative for owner playback/download while a replacement is pending, stale or failed, and changes only after an eligible validated replacement switches atomically.
 - [ ] **AC-10-09 Prior-result presentation:** during replacement assembly, show new-render progress above a playable prior result labeled `Previous version` / `Предыдущая версия`. A latest eligible validated success switches authoritative current generation atomically. If previous playback is active at readiness, preserve its playback/position/display identity and offer New version ready / Watch new; no automatic swap occurs. If paused/inactive, display the new asset without autoplay. Watch new switches player/download together to the new authoritative generation, resets to its beginning and stays paused until separate Play, without reassembly. Failure/stale completion never produces a new-version offer or disrupts prior playback.
 - [ ] **AC-10-10 Failure recovery:** start/render/validation failure preserves accepted takes and any prior result, makes exactly one automatic retry for the failed request, then shows `Repeat assembly` / `Повторить сборку` after a second failure without duplicate operations or an automatic retry loop. Recovery/retry must reuse the durable initial-trigger or completed-project `To result` authorization, exact frozen snapshot and recorded retry lineage; a newly eligible snapshot alone cannot authorize assembly.
@@ -519,8 +521,8 @@ All criteria are unexecuted. A criterion marked **BLOCKED** cannot pass until it
 - [ ] **AC-10-19 Mock truth:** a frontend mock/sample identifies its MP4 as a fixed fixture and never claims it was rendered from accepted takes or a custom upload.
 - [ ] **AC-10-20 Production evidence boundary:** real assembly/export is accepted only with backend/worker/storage and media evidence; frontend state tests and fixture playback alone cannot pass the real output contract.
 - [ ] **AC-10-21 Shared presentation:** Use the [Clean / Light adoption](affect-ui-clean-light-adoption.md) and [current tokens](design-tokens.md): source dark primary, white subtly shadowed secondary, soft-destructive actions, current role sizes in [design-tokens.md](design-tokens.md): desktop task 40px / Medium 14px/20px, prominent/landing 44px / Medium 16px/24px, secondary 32px / Medium 14px/20px, navigation 36px / Medium 14px/20px; medium segmented 40px /14px/20px desktop and 48px /16px/24px phone, exact component radii/interiors and bounded functional motion. Keep Mabry, readable body/dialogue, existing layout/navigation and product semantics; phone button labels remain Mabry Pro Medium 16px/24px with retained 48px targets. Apply the explicit readable-text/link/error, essential-boundary, focus, phone-target and disabled-versus-busy adaptations. Verify the exact source variant/state, actual composites, typography/targets, EN/RU rendering, keyboard/focus and reduced motion; no runtime or accessibility pass is claimed.
-- [ ] **AC-10-22 Locale and service errors:** first-use and account locale precedence follows §13; service failures appear above the primary recovery action except that an app-observable MP4 request failure appears beside `Download MP4`. Failures preserve current playback, accepted recordings and authoritative job state.
-- [ ] **AC-10-23 Displayed-generation download:** while previous playback is retained after a newer generation becomes authoritative, Download MP4 requests the exact previous displayed generation, with authorized access preserved for that presentation. Only the player switch changes future download targets. Each request/retry remains frozen to its activation-time displayed identity, including after Watch new; no latest-generation substitution, render or credit charge occurs.
+- [ ] **AC-10-22 Locale and service errors:** first-use and account locale precedence follows §13; service failures appear above the primary recovery action except that an app-observable MP4 request failure appears beside `Download My dub`. Failures preserve current playback, accepted recordings and authoritative job state.
+- [ ] **AC-10-23 Displayed-generation download:** while previous playback is retained after a newer generation becomes authoritative, Download My dub requests the exact previous displayed generation, with authorized access preserved for that presentation. Only a rendered-generation presentation switch (Watch new),not Original/My dub comparison,changes future download targets. Each request/retry remains frozen to its activation-time displayed identity, including after Watch new; no latest-generation substitution, render or credit charge occurs.
 
 ## 15. Verification plan
 
@@ -529,7 +531,7 @@ No verification in this section has been executed. Record the command or manual 
 ### Contract and state tests
 
 - Cover every state combination that matters: no prior result/first render; prior result/replacement render; incomplete or incompatible recordings; failed/stale job; validated finished generation; deleted/inaccessible project.
-- Verify eligibility matrices for missing/unavailable/incompatible take, shorter accepted take and accepted replacement take. For initial zero turns without prior usable nonempty preparation, verify `No dialogue found`, eligible reprocessing/another-video actions and no Record/Result entry. Separately complete zero-turn reprocessing over prior usable nonempty preparation with an unaccepted draft: prove the prior preparation/draft remains active, the no-dialogue notice refers to the new attempt, Record continuation remains available and the zero-turn output never becomes an assembly snapshot. In both cases verify unchanged completed-attempt charging/retry consumption and no manual-add or speech-free-output path; any later assembly of preserved turns must still have normal eligibility and durable authorization.
+- Verify eligibility for missing/unavailable/incompatible media, shorter accepted media and accepted replacement media. Successful zero-turn preparation keeps its charge, offers another video and never authorizes an assembly snapshot. Result assembly retry remains distinct from preparation and preserves its own frozen identity/authorization.
 - Verify duplicate start/retry and uncertain response reconciliation use one durable authorization, operation identity, frozen snapshot and retry lineage. Present a different eligible snapshot without an initial trigger or completed-project `To result` authorization and prove Result recovery creates no operation.
 - Verify an assembly operation without a trustworthy service percentage shows `Assembling video…` / `Собираем видео…` and no progress bar, number or ETA. Then supply a trustworthy percentage and verify one progress bar exposes exactly that service value without an elapsed-time estimate or client-generated progress. Do not reuse Flow 07 preparation stages as Result assembly stages or treat an unapproved Result stage label as settled.
 - Verify ordinary candidate-bearing `Next` that completes all-required-turn eligibility durably starts one assembly and opens Result. Repeat with the final gap accepted in the middle of turn order in a legacy/interrupted project with later accepted turns and prove there is no required traversal or initial action. Then accept the final gap through Back/`Save and go`, `Save and leave`, sign-out and another explicit guard; prove the same trigger is durable before exit/release, assembly runs in the background and each requested destination wins. Prove save/trigger uncertainty stays for retry/reconciliation and accepted work is not rolled back. Prove capture completion, draft upload, navigation and local counts do not trigger assembly. Separately verify blocked empty unaccepted Next without mutation, allowed compatible accepted candidate-free revisits, and candidate acceptance before advancement, including failure/unknown retention without older-take fallback. Seed legacy/interrupted gaps rather than creating them through Next; prove first-unfinished recovery and no assembly until all required takes are accepted-compatible. In a completed-project revision, verify replacement `Next` stays in Record and creates no assembly request. Verify explicit `To result` durably authorizes and starts one updated frozen-snapshot assembly only after each of `Save and go`, `Go without saving`, and `Stay` behaves exactly as specified, including save failure and preservation of the older accepted take on discard.
@@ -546,7 +548,7 @@ No verification in this section has been executed. Record the command or manual 
 - Assemble from actual accepted-take assets and the actual processed background; compare output duration/timeline and source orientation, and listen for aligned overlaps, continuous background, unused shorter-take silence and absence of intentional original-dialogue fallback.
 - Inspect the real MP4 container, dimensions, orientation handling, duration and resolution; prove no upscaling and no app-added subtitle track/burn-in.
 - Validate the finished asset before it becomes authoritative current, then compare each download's identity/bytes or authoritative checksum to its activation-time displayed asset. Exercise both a temporarily retained previous player after authoritative replacement and the new player after Watch new; never equate current authority with displayed identity during that interval. Start an old-generation request, switch presentation, fail/retry or refresh its expired descriptor and prove the request remains pinned to the old identity.
-- Fail an app-observable MP4 request and prove the error appears beside `Download MP4`; retry and expired-authorization refresh must target the same finished generation, preserve player/takes, create no assembly request and consume no credits. Separately document that an unreported operating-system save failure and completed local saving cannot be inferred from request initiation.
+- Fail an app-observable MP4 request and prove the error appears beside `Download My dub`; retry and expired-authorization refresh must target the same finished generation, preserve player/takes, create no assembly request and consume no credits. Separately document that an unreported operating-system save failure and completed local saving cannot be inferred from request initiation.
 - During replacement assembly, prove the previous finished result remains playable below new-render progress with the exact `Previous version` / `Предыдущая версия` label. Repeat with a failed/invalid render and prove the prior valid asset remains owner playback/download truth through the single automatic retry and manual-fallback state.
 
 These checks require a backend, render worker, storage/delivery integration and representative media. None currently exists as production proof. Candidate model/render/export technology remains unselected and unverified.
@@ -554,13 +556,13 @@ These checks require a backend, render worker, storage/delivery integration and 
 ### Browser and responsive interaction
 
 - Exercise first assembly, replacement assembly with a playable labeled previous version, ready playback, recordings-incomplete, the single automatic retry followed by manual `Repeat assembly`, expired playback descriptor and failed download at desktop, tablet and supported phone widths.
-- In ready playback, exercise play/pause, seeking, time, volume and fullscreen; verify `Download MP4` and `Return to recording` sit beneath the player and that no audio-track selector, subtitle controls or export settings appear. Preserve `Repeat assembly` only in its approved error state.
+- In ready playback, exercise play/pause, seeking, time, volume and fullscreen; verify `Download My dub` and `Return to recording` sit beneath the player and the inside-player Original / My dub selector is usable;no arbitrary track/subtitle/export controls appear. Preserve `Repeat assembly` only in its approved error state.
 - Verify portrait, landscape and square media fit without cropping, page-level horizontal overflow or hidden actions.
 - Use the [Clean / Light adoption](affect-ui-clean-light-adoption.md) and [current tokens](design-tokens.md): source dark primary, white subtly shadowed secondary, soft-destructive actions, current role sizes in [design-tokens.md](design-tokens.md): desktop task 40px / Medium 14px/20px, prominent/landing 44px / Medium 16px/24px, secondary 32px / Medium 14px/20px, navigation 36px / Medium 14px/20px; medium segmented 40px /14px/20px desktop and 48px /16px/24px phone, exact component radii/interiors and bounded functional motion. Keep Mabry, readable body/dialogue, existing layout/navigation and product semantics; phone button labels remain Mabry Pro Medium 16px/24px with retained 48px targets. Apply the explicit readable-text/link/error, essential-boundary, focus, phone-target and disabled-versus-busy adaptations. Verify the exact source variant/state, actual composites, typography/targets, EN/RU rendering, keyboard/focus and reduced motion; no runtime or accessibility pass is claimed.
 - Use keyboard-only and screen-reader checks for heading order, player controls, progress semantics, terminal announcements and action availability/reasons.
 Use the catalogued functional source motion in [design-tokens.md](design-tokens.md), including reversible 140/160ms button response and eligible selection/content/width recipes. Reduced motion makes UI changes immediate; a functional spinner requires real pending work and a readable static equivalent. No page-entry/parallax/decorative background loop or invented progress; capture/save/payment/navigation never wait for animation. Functional media/playhead timing is unchanged.  Under reduced motion, verify interface transitions are disabled while video/audio/playhead remains functional, and prove save acknowledgement/navigation never wait for animation. Also check high zoom, long English/Russian status text and mixed-script project names.
 - Verify first-use locale for browser `ru` versus other languages, saved account preference reuse, explicit pre-sign-in choice overriding/updating a different saved preference, and browser-derived default not overwriting it.
-- Trigger assembly and playback service errors; verify placement above their primary recovery actions, preservation of authoritative state and absence of invented field-level errors. Trigger an app-observable MP4 request failure separately and verify its error and retry beside `Download MP4` under the download-specific contract.
+- Trigger assembly and playback service errors; verify placement above their primary recovery actions, preservation of authoritative state and absence of invented field-level errors. Trigger an app-observable MP4 request failure separately and verify its error and retry beside `Download My dub` under the download-specific contract.
 - Verify reconnect/reload restores the same operation rather than starting a duplicate.
 
 ### Owner authorization and download-only scope
@@ -575,7 +577,7 @@ A UI-only adapter may simulate queued, rendering, validating, ready, failed and 
 
 Replacement fixtures carry separate authoritative-current and presented-generation identities, player playing/paused/inactive state, pending new-version identity and generation-specific playback/download descriptors. Cover readiness during playing previous media with uninterrupted old playback and New version ready / Watch new; paused/inactive readiness swapping without autoplay; Watch new switching player/download together to the new beginning while remaining paused until separate Play; stale/reversed completion fencing; and activation-time request/retry identity surviving a later player switch. These fixtures prove presentation wiring only, not real old-asset retention/authorization or generation ordering across workers.
 
-Zero-turn fixtures distinguish an initial attempt with no usable preparation from a reprocessing attempt whose zero-turn output leaves prior nonempty preparation and its draft active. Only the first excludes Record/Result entry for lack of usable preparation; the second preserves Record continuation. Neither zero-turn output can authorize or supply an assembly snapshot, and any preserved-turn Result handoff keeps the ordinary eligibility/authorization gate.
+Zero-turn fixtures never authorize an assembly snapshot or enter Record/Result. Nonempty accepted snapshots retain the ordinary eligibility/authorization gate; technical failure and Result assembly retries remain separate.
 
 Mock recovery fixtures must carry a durable initial-trigger or completed-project `To result` authorization, its exact frozen snapshot and retry lineage. A fixture with eligibility alone must prove that Result neither starts nor retries a revision assembly. Navigation fixtures distinguish ordinary final-gap `Next` opening Result from Back/leave/sign-out final-gap acceptance starting background assembly while the requested destination wins.
 
@@ -583,7 +585,7 @@ Mock recovery fixtures must carry a durable initial-trigger or completed-project
 
 - **Shared contract:** compact navigation, project header/save state, light visual direction, localization and centralized services boundary.
 - **Approved design tokens:** `design-tokens.md` owns semantic colors, component states, focus treatments, typography, spacing, geometry and motion used by Result.
-- **Processing flow/service:** owns the automatically generated fixed turn set and direct transition to Record. Initial zero turns with no prior usable preparation stay in `No dialogue found` recovery, with eligible reprocessing/another-video actions and no Record/Result entry. A zero-turn reprocessing output preserves prior usable nonempty preparation and its unaccepted draft, reports the new attempt's no-dialogue outcome and permits continued Record work against the preserved turns; it never replaces them or supplies an assembly snapshot. Completed-attempt charge/retry consumption is unchanged in both cases, and preserved-turn Result entry retains normal eligibility/authorization gates. There is no Prepare, manual correction, missed-line addition or background-audition stage in the MVP.
+- **Processing flow/service:** owns automatic fixed turns and direct Record handoff. Successful zero turns show No dialogue found/another video and remain charged, never Record/Result or an assembly snapshot. No Prepare, manual correction, missed-line or background-audition stage.
 - **Flow 09 Record:** owns candidate acceptance, turn navigation and rerecording. The durable acceptance that first completes the initial all-required-turn eligibility set records/reconciles one assembly trigger from any turn position, with no final-turn traversal or initial button; capture, draft, navigation and local counts are not triggers. Ordinary final-gap `Next` opens Result. Final-gap acceptance through Back/leave/sign-out or another explicit guard durably records/reconciles the same trigger before exit/release, runs assembly in the background and preserves the requested destination. Next blocks an empty unaccepted turn without mutation; a compatible accepted candidate-free revisit may advance. A present candidate requires authoritative acceptance before advancement, with failed/unknown outcome retaining current turn/candidate and no older-take fallback. Legacy/interrupted gaps retain first-unfinished recovery and cannot assemble until all required takes are accepted-compatible. In completed-project revision, replacement `Next` stays in Record; `To result` owns the exact three-way candidate guard and durable frozen-snapshot authorization, and hands Result accepted takes only. `Return to recording` from Result opens the first established turn without capture or assembly. A failed assembly start never rolls back an accepted take.
 - **Flow 11 My projects:** summarizes and resumes result states without becoming a second generation truth; `Continue` chooses Record when unfinished recordings remain and Result otherwise.
 - **Authentication/account and project deletion flows:** owner access restoration and immediate logical revocation.
@@ -603,7 +605,7 @@ No remaining open item below may be silently selected by implementation, a desig
 Independent review provenance: MEDIA-R02 is resolved by explicit-navigation priority with a durable background initial-assembly trigger; MEDIA-R03 is resolved by requiring durable operation authorization, the exact frozen snapshot and recorded retry lineage for every recovery/retry. Eligibility alone cannot authorize a completed-project revision.
 
 - **RESULT-B01:** A valid latest-authorized result becomes authoritative under the existing generation fence. Already playing previous media remains presented uninterrupted with New version ready / Watch new; paused/inactive presentation switches without autoplay. Detailed Russian copy/geometry remain named below.
-- **RESULT-B02:** Download MP4 always uses the exact displayed generation, including temporarily retained previous playback. Player switching changes future download targets together; an activated request and its retries remain frozen to their original identity.
+- **RESULT-B02:** Download My dub always uses the exact displayed generation, including temporarily retained previous playback. Player switching changes future download targets together; an activated request and its retries remain frozen to their original identity.
 - **RESULT-B03:** Watch new resets the newly displayed generation to its beginning and stays paused; the user explicitly selects Play to watch it. No automatic playback follows that switch.
 - **REC-B01 / REC-B05 integration:** Result consumes accepted usable interrupted partials under Flow 09, preserves all-turn eligibility and silence for an unused remainder, and no longer assumes a user early-stop capture action.
 
@@ -611,7 +613,7 @@ Independent review provenance: MEDIA-R02 is resolved by explicit-navigation prio
 |---|---|---|
 | **OPEN-10-05** | Define the production source, meaning and update semantics that make an overall assembly percentage trustworthy; decide whether any additional Result-specific stage label accompanies it and approve that wording; define any optional finished-output metadata beyond the required media facts. Settled presentation is the assembling message before a value, one bar plus the supplied percentage after it, no ETA, no reuse of preparation stages and no cancellation. | The UI must consume a real service fact without independently guessing how work maps to a percentage, borrowing another flow's stages or promising optional metadata. |
 | **OPEN-10-06** | Approve remaining Russian finished-player action labels plus blocked, previous/outdated and error copy, including download-failure wording, beyond the confirmed copy enumerated in §13. Download-error placement beside its action and same-generation retry behavior are settled. | Required for complete testable bilingual behavior; AC-10-18 remains blocked. |
-| **OPEN-10-07** | Supply/verify Mabry Pro assets, browser loading/fallback, browser/forced-colors behavior and rendered conformance; define Result-specific stage/progress/action geometry and action order not implied by the common spacing roles within the approved responsive grid. | Shared Regular/Medium roles, type sizes and line heights, 8/16/24/32px spacing roles, 24px desktop/16px phone existing-panel padding, restrained motion direction, semantic colors/component states/focus treatments, radii, control heights, separate gutters, breakpoint and maximum width are settled; the remaining evidence/details are required for rendered visual acceptance. |
+| **OPEN-10-07** | Supply/verify Mabry Pro assets, browser loading/fallback, browser/forced-colors behavior and rendered conformance; verify integrated conformance of the current paired focused heading/player/footer/custom-comparison and ready/unknown-progress geometry; other previous-version/error/delivery states remain to be evidenced. | Shared Regular/Medium roles, type sizes and line heights, 8/16/24/32px spacing roles, 24px desktop/16px phone existing-panel padding, restrained motion direction, semantic colors/component states/focus treatments, radii, control heights, separate gutters, breakpoint and maximum width are settled; the remaining evidence/details are required for rendered visual acceptance. |
 | **OPEN-10-08** | Define bounded render/download usage and old-export/CDN/backup/owner-media-descriptor lifetimes after replacement and deletion. Public-link lifetime questions are withdrawn. | SPEC-001 D08 leaves operational owner delivery and physical cleanup guarantees open; UI copy must not promise them. |
 | **OPEN-10-09** | Define automatic retry timing/backoff and how later explicit `Repeat assembly` attempts are limited, counted or charged after the confirmed one automatic retry. | The owner selected the immediate recovery shape but did not select later-attempt mechanics; the UI and service must not invent them. |
 | **TECH-10-10** | Define the transactional/idempotent boundary between initial final-take acceptance or completed-project `To result`, durable authorization/trigger recording before explicit exit/release, result-operation creation, retry lineage and owner-current generation switching. | The user-visible triggers, navigation priority and preservation rules are settled, but implementation must prevent accepted-work rollback, unrecoverable initiation, duplicate jobs, eligibility-only revision starts and stale publication without inventing a client-only transaction. |
@@ -623,3 +625,20 @@ Independent review provenance: MEDIA-R02 is resolved by explicit-navigation prio
 - No actual AI processing, take-derived render, MP4 export or secure download was proven.
 - Existing implementation and fixed sample media do not establish conformity to this corrected specification; no Result runtime behavior was executed during this pass.
 - Both requested design skills informed hierarchy, state honesty, app-screen restraint, phone behavior and accessibility. Their defaults do not resolve owner decisions or provide visual acceptance.
+
+## Approved core recovery presentation
+
+Consume shared transient-notice/durable-guidance behavior without weakening Result truth. Known recoverable media/download failures may supplement persistent associated status with the approved message-only popup; Retry/Download/Return actions stay in the normal workspace region, not inside that popup. Assembly failure, reconciliation, previous/current labels and download-target identity remain durable/actionable after transient visibility expires. Eight-second notification timing is not render progress, an automatic assembly retry budget or download-completion proof.
+
+The core target proves no actual user-input mix, signed-descriptor renewal, previous-generation access, production backoff/billing or unseen platform behavior. Preserve those OPEN gates and separate artifact approval from implementation acceptance.
+
+## Custom Original / My dub comparison - 2026-10-28
+
+Both variants share one custom Result player/controller. Default on entry/reentry is My dub at0,paused. Inside-player Original / My dub has accessible selected state and keyboard operation. Original uses the exact prepared selected-section source;My dub uses the presented validated finished generation. Switching source preserves current selected-section playhead,clamps to the valid media range and preserves playing/paused intent. It never starts capture,acceptance or rendering. Loading/readiness/error feedback is truthful;source-load tokens reject stale loaded/ended/play callbacks. End offers explicit Replay;held seek pauses and release resumes under the shared transport semantics. Phone targets48px,visible keyboard focus and reduced-motion behavior remain.
+
+`comparisonSource`,`presentedGeneration` and authoritative current generation are separate. Source comparison does not change the displayed-dub generation or download target. Download My dub always requests that presented dub generation even while Original is playing;request/retry freezes its activation-time generation and keeps it through later Watch new/descriptor refresh. Previous/current-generation rules above still apply to the generation slot. While either comparison source is actively playing a prior presentation,new generation readiness cannot silently retarget it;Watch new explicitly swaps the generation slot at0 paused,without assembly. Original cannot masquerade as finished media or rescue an invalid/missing dub.
+
+Source switch/readiness/ended-race,paused/playing/finite-end comparison,download while Original,old-generation request retry after Watch new,volume/fullscreen and Return/Exit require focused integration checks. Result route entry must restore the heading/player's useful top context and logical heading/control focus;never leave the player above retained Record scroll. Background completion cannot steal route,focus or playback. These are local interaction corrections,not new rendering/privacy/retention policy. Fixed illustrative mock output stays visibly disclosed outside product controls and never claims a custom render from actual captured speech.
+
+- [ ] **AC-10-24 Source comparison:** Both layouts share inside-player Original/My dub with actual distinct authorized descriptors,clamped playhead/play-intent preservation,paused entry,source-load/ended fencing,finite Replay,keyboard/phone targets and Download My dub pinned independently to the presented dub generation. No arbitrary track/mixer/export feature.
+- [ ] **AC-10-25 Focused entry and exit:** No global navbar;media-aligned LogOut Exit/centered heading. Result entry from a scrolled Record reveals its complete header/player with logical focus;Exit pauses both sources and boundary close restores the original logical Exit invoker,including failed-save Retry routing. Return preserves takes and opens first turn without capture/render.

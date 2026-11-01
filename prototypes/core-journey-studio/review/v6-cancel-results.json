@@ -1,0 +1,92 @@
+[
+  {
+    "viewport": [
+      1280,
+      600
+    ],
+    "pausedAfterNativeTouchCancel": true,
+    "events": [
+      {
+        "type": "pointerdown",
+        "trusted": true,
+        "value": "0",
+        "paused": true
+      },
+      {
+        "type": "input",
+        "trusted": true,
+        "value": "242",
+        "paused": true
+      },
+      {
+        "type": "pointermove",
+        "trusted": true,
+        "value": "242",
+        "paused": true
+      },
+      {
+        "type": "input",
+        "trusted": true,
+        "value": "500",
+        "paused": true
+      },
+      {
+        "type": "pointercancel",
+        "trusted": true,
+        "value": "500",
+        "paused": true
+      },
+      {
+        "type": "touchcancel",
+        "trusted": true,
+        "value": "500",
+        "paused": true
+      }
+    ]
+  },
+  {
+    "viewport": [
+      390,
+      667
+    ],
+    "pausedAfterNativeTouchCancel": true,
+    "events": [
+      {
+        "type": "pointerdown",
+        "trusted": true,
+        "value": "0",
+        "paused": true
+      },
+      {
+        "type": "input",
+        "trusted": true,
+        "value": "238",
+        "paused": true
+      },
+      {
+        "type": "pointermove",
+        "trusted": true,
+        "value": "238",
+        "paused": true
+      },
+      {
+        "type": "input",
+        "trusted": true,
+        "value": "500",
+        "paused": true
+      },
+      {
+        "type": "pointercancel",
+        "trusted": true,
+        "value": "500",
+        "paused": true
+      },
+      {
+        "type": "touchcancel",
+        "trusted": true,
+        "value": "500",
+        "paused": true
+      }
+    ]
+  }
+]

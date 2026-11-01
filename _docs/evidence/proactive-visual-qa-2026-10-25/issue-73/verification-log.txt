@@ -1,0 +1,8 @@
+2026-10-25 Asia/Qyzylorda. HEAD 9d286621177200fdb5f61ef963d0b6818ae76774, existing dirty documentation/evidence preserved.
+Command: npm.cmd test -- tests/services/default-client-persistence.test.ts tests/services/workspace-write-failures.test.ts tests/services/credit-reservation-concurrency.test.ts tests/services/account-deletion-late-work.test.ts
+Environment: D:/Program/python/Dubbed/frontend; installed Vitest 5.0.5; fake-IDB/local mock; exit 0.
+Result: 4 files / 4 tests passed; Start 13:37:52; Duration 2.78s.
+Command: npm.cmd test -- tests/services/adapter-contract.test.ts tests/services/preparation-recovery.test.ts
+Environment: same; exit 0.
+Result: 2 files / 14 tests passed; Start 13:38:58; Duration 2.22s.
+No full suite, actual quota fill, production or physical-device checks run.

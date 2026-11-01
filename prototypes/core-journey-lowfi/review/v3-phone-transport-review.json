@@ -1,0 +1,255 @@
+[
+  {
+    "check": "environment",
+    "observed": {
+      "version": "core-journey-lowfi-v3",
+      "browser": "156.0.8078.48",
+      "dpr": 1,
+      "zoom": "100%",
+      "os": "Windows",
+      "date": "2026-10-27"
+    }
+  },
+  {
+    "check": "Process again intentional utility remains boundary",
+    "observed": "Reprocessing replaces the prepared scene and unsaved takes only after confirmation. That neighboring workflow is outside this prototype."
+  },
+  {
+    "check": "original Resume retains paused position",
+    "observed": {
+      "before": [
+        {
+          "id": "scene",
+          "t": 0.636631,
+          "paused": true,
+          "muted": false,
+          "src": "http://127.0.0.1:5178/media/scene.mp4"
+        },
+        {
+          "id": "take-audio",
+          "t": 0,
+          "paused": true,
+          "muted": false,
+          "src": ""
+        }
+      ],
+      "after": [
+        {
+          "id": "scene",
+          "t": 0.888031,
+          "paused": false,
+          "muted": false,
+          "src": "http://127.0.0.1:5178/media/scene.mp4"
+        },
+        {
+          "id": "take-audio",
+          "t": 0,
+          "paused": true,
+          "muted": false,
+          "src": ""
+        }
+      ]
+    }
+  },
+  {
+    "check": "original drag held pauses without time advance",
+    "observed": {
+      "down": [
+        {
+          "id": "scene",
+          "t": 2.142,
+          "paused": true,
+          "muted": false,
+          "src": "http://127.0.0.1:5178/media/scene.mp4"
+        },
+        {
+          "id": "take-audio",
+          "t": 0,
+          "paused": true,
+          "muted": false,
+          "src": ""
+        }
+      ],
+      "held": [
+        {
+          "id": "scene",
+          "t": 2.142,
+          "paused": true,
+          "muted": false,
+          "src": "http://127.0.0.1:5178/media/scene.mp4"
+        },
+        {
+          "id": "take-audio",
+          "t": 0,
+          "paused": true,
+          "muted": false,
+          "src": ""
+        }
+      ]
+    }
+  },
+  {
+    "check": "original release plays sought correct source",
+    "observed": [
+      {
+        "id": "scene",
+        "t": 2.330785,
+        "paused": false,
+        "muted": false,
+        "src": "http://127.0.0.1:5178/media/scene.mp4"
+      },
+      {
+        "id": "take-audio",
+        "t": 0,
+        "paused": true,
+        "muted": false,
+        "src": ""
+      }
+    ]
+  },
+  {
+    "check": "Replay while playing restarts",
+    "observed": [
+      {
+        "id": "scene",
+        "t": 0.01467,
+        "paused": false,
+        "muted": false,
+        "src": "http://127.0.0.1:5178/media/scene.mp4"
+      },
+      {
+        "id": "take-audio",
+        "t": 0,
+        "paused": true,
+        "muted": false,
+        "src": ""
+      }
+    ]
+  },
+  {
+    "check": "Capture rejects pointer and keyboard seek and has no Pause",
+    "observed": {
+      "before": 0.006504,
+      "after": 0.137271,
+      "focus": "",
+      "disabled": true
+    }
+  },
+  {
+    "check": "candidate Resume retains paused position",
+    "observed": {
+      "before": [
+        {
+          "id": "scene",
+          "t": 0.618645,
+          "paused": true,
+          "muted": true,
+          "src": "http://127.0.0.1:5178/media/scene.mp4"
+        },
+        {
+          "id": "take-audio",
+          "t": 0.606808,
+          "paused": true,
+          "muted": false,
+          "src": "http://127.0.0.1:5178/media/take-0.wav"
+        }
+      ],
+      "after": [
+        {
+          "id": "scene",
+          "t": 0.852576,
+          "paused": false,
+          "muted": true,
+          "src": "http://127.0.0.1:5178/media/scene.mp4"
+        },
+        {
+          "id": "take-audio",
+          "t": 0.785523,
+          "paused": false,
+          "muted": false,
+          "src": "http://127.0.0.1:5178/media/take-0.wav"
+        }
+      ]
+    }
+  },
+  {
+    "check": "candidate drag held pauses without time advance",
+    "observed": {
+      "down": [
+        {
+          "id": "scene",
+          "t": 2.142,
+          "paused": true,
+          "muted": true,
+          "src": "http://127.0.0.1:5178/media/scene.mp4"
+        },
+        {
+          "id": "take-audio",
+          "t": 0.859058,
+          "paused": true,
+          "muted": false,
+          "src": "http://127.0.0.1:5178/media/take-0.wav"
+        }
+      ],
+      "held": [
+        {
+          "id": "scene",
+          "t": 2.142,
+          "paused": true,
+          "muted": true,
+          "src": "http://127.0.0.1:5178/media/scene.mp4"
+        },
+        {
+          "id": "take-audio",
+          "t": 0.859058,
+          "paused": true,
+          "muted": false,
+          "src": "http://127.0.0.1:5178/media/take-0.wav"
+        }
+      ]
+    }
+  },
+  {
+    "check": "candidate release plays sought correct source",
+    "observed": [
+      {
+        "id": "scene",
+        "t": 2.331907,
+        "paused": false,
+        "muted": true,
+        "src": "http://127.0.0.1:5178/media/scene.mp4"
+      },
+      {
+        "id": "take-audio",
+        "t": 2.304104,
+        "paused": false,
+        "muted": false,
+        "src": "http://127.0.0.1:5178/media/take-0.wav"
+      }
+    ]
+  },
+  {
+    "check": "Candidate identity unaffected by transport",
+    "observed": true
+  },
+  {
+    "check": "Replay after fixed window end restarts",
+    "observed": true
+  },
+  {
+    "check": "page errors",
+    "observed": []
+  },
+  {
+    "check": "stable hashes",
+    "observed": {
+      "BRIEF.md": true,
+      "index.html": true,
+      "src.js": true,
+      "style.css": true,
+      "package-lock.json": true,
+      "public/media/scene.mp4": true,
+      "public/media/example-dub.mp4": true
+    }
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "issue": 82,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "cae4b9210e5cdcff5d0625316997afb48e69ce133c853e8b86c99010f251097c",
+    "planned": "1f58934b6c30433b9fe6f633ab46eb8e42cf93f8c7fd49f47f8605b61d36d7a3",
+    "readback": "1f58934b6c30433b9fe6f633ab46eb8e42cf93f8c7fd49f47f8605b61d36d7a3"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Complete verified registration without duplicating an account or grant",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Complete verified registration without duplicating an account or grant",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

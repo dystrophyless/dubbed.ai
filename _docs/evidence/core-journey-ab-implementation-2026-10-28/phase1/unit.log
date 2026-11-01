@@ -1,0 +1,13 @@
+
+> dubbed-core-foundation@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.5 D:/Program/python/Dubbed/frontend
+
+
+ Test Files  3 passed (3)
+      Tests  11 passed (11)
+   Start at  16:55:28
+   Duration  693ms (import 55%, tests 17%, transform 17%, worker 11%)
+

@@ -1,0 +1,683 @@
+{
+  "version": "core-journey-highfi-v2",
+  "date": "2026-10-27",
+  "environment": "Windows installed Chrome156, real viewports zoom100% DPR1, mouse+keyboard; reduced motion in short-phone RU; no real SR/device/backend",
+  "checks": [
+    {
+      "viewport": [
+        1882,
+        902
+      ],
+      "locale": "en",
+      "longDialogue": false,
+      "motion": "no-preference",
+      "result": "PASS",
+      "microphone": {
+        "scroll": 88,
+        "viewport": [
+          1882,
+          902
+        ],
+        "items": {
+          "#feedback": {
+            "left": 681,
+            "top": 808,
+            "right": 1201,
+            "bottom": 886,
+            "w": 520,
+            "h": 78
+          },
+          ".project-header": {
+            "left": 333,
+            "top": 41,
+            "right": 1549,
+            "bottom": 81,
+            "w": 1216,
+            "h": 40
+          },
+          ".scene": {
+            "left": 333,
+            "top": 97,
+            "right": 1253,
+            "bottom": 614.5,
+            "w": 920,
+            "h": 517.5
+          },
+          "#dialogue": {
+            "left": 443,
+            "top": 659.5,
+            "right": 1143,
+            "bottom": 693.5,
+            "w": 700,
+            "h": 34
+          },
+          ".timeline": {
+            "left": 333,
+            "top": 709.5,
+            "right": 1253,
+            "bottom": 791.5,
+            "w": 920,
+            "h": 82
+          },
+          ".performance": {
+            "left": 1277,
+            "top": 97,
+            "right": 1549,
+            "bottom": 481,
+            "w": 272,
+            "h": 384
+          },
+          "#next": {
+            "left": 1418,
+            "top": 425,
+            "right": 1533,
+            "bottom": 465,
+            "w": 115,
+            "h": 40
+          },
+          "#open-settings": {
+            "left": 1293,
+            "top": 302,
+            "right": 1533,
+            "bottom": 342,
+            "w": 240,
+            "h": 40
+          }
+        }
+      },
+      "save": {
+        "scroll": 88,
+        "viewport": [
+          1882,
+          902
+        ],
+        "items": {
+          "#feedback": {
+            "left": 681,
+            "top": 808,
+            "right": 1201,
+            "bottom": 886,
+            "w": 520,
+            "h": 78
+          },
+          ".project-header": {
+            "left": 333,
+            "top": 41,
+            "right": 1549,
+            "bottom": 81,
+            "w": 1216,
+            "h": 40
+          },
+          ".scene": {
+            "left": 333,
+            "top": 97,
+            "right": 1253,
+            "bottom": 614.5,
+            "w": 920,
+            "h": 517.5
+          },
+          "#dialogue": {
+            "left": 443,
+            "top": 659.5,
+            "right": 1143,
+            "bottom": 693.5,
+            "w": 700,
+            "h": 34
+          },
+          ".timeline": {
+            "left": 333,
+            "top": 709.5,
+            "right": 1253,
+            "bottom": 791.5,
+            "w": 920,
+            "h": 82
+          },
+          ".performance": {
+            "left": 1277,
+            "top": 97,
+            "right": 1549,
+            "bottom": 429,
+            "w": 272,
+            "h": 332
+          },
+          "#next": {
+            "left": 1418,
+            "top": 373,
+            "right": 1533,
+            "bottom": 413,
+            "w": 115,
+            "h": 40
+          },
+          "#open-settings": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "w": 0,
+            "h": 0
+          }
+        }
+      },
+      "pageErrors": [],
+      "scenarios": [
+        "no embedded actions/white centered persistent notice",
+        "exact candidate+accepted protection",
+        "audition/Resume keeps notice without duplicate DOM announcements",
+        "repeated failure emits new live update",
+        "Settings-only recovery/close focus",
+        "guard Stay/Save and leave and turn navigation preserve microphone issue",
+        "reload restores unresolved issue and take IDs",
+        "successful capture clears microphone issue",
+        "ordinary Next becomes exact-candidate Retry save",
+        "retry resolves notice and advances only after acceptance"
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        600
+      ],
+      "locale": "ru",
+      "longDialogue": true,
+      "motion": "no-preference",
+      "result": "PASS",
+      "microphone": {
+        "scroll": 94,
+        "viewport": [
+          1280,
+          600
+        ],
+        "items": {
+          "#feedback": {
+            "left": 380,
+            "top": 506,
+            "right": 900,
+            "bottom": 584,
+            "w": 520,
+            "h": 78
+          },
+          ".project-header": {
+            "left": 147.109375,
+            "top": 15,
+            "right": 1132.875,
+            "bottom": 55,
+            "w": 985.765625,
+            "h": 40
+          },
+          ".scene": {
+            "left": 147.109375,
+            "top": 71,
+            "right": 724.875,
+            "bottom": 395.984375,
+            "w": 577.765625,
+            "h": 324.984375
+          },
+          "#dialogue": {
+            "left": 764.875,
+            "top": 120,
+            "right": 1116.875,
+            "bottom": 248,
+            "w": 352,
+            "h": 128
+          },
+          ".timeline": {
+            "left": 147.109375,
+            "top": 407.984375,
+            "right": 724.875,
+            "bottom": 489.984375,
+            "w": 577.765625,
+            "h": 82
+          },
+          ".performance": {
+            "left": 748.875,
+            "top": 71,
+            "right": 1132.875,
+            "bottom": 475,
+            "w": 384,
+            "h": 404
+          },
+          "#next": {
+            "left": 945.875,
+            "top": 419,
+            "right": 1116.875,
+            "bottom": 459,
+            "w": 171,
+            "h": 40
+          },
+          "#open-settings": {
+            "left": 764.875,
+            "top": 316,
+            "right": 1116.875,
+            "bottom": 356,
+            "w": 352,
+            "h": 40
+          }
+        }
+      },
+      "save": {
+        "scroll": 94,
+        "viewport": [
+          1280,
+          600
+        ],
+        "items": {
+          "#feedback": {
+            "left": 380,
+            "top": 506,
+            "right": 900,
+            "bottom": 584,
+            "w": 520,
+            "h": 78
+          },
+          ".project-header": {
+            "left": 147.109375,
+            "top": 15,
+            "right": 1132.875,
+            "bottom": 55,
+            "w": 985.765625,
+            "h": 40
+          },
+          ".scene": {
+            "left": 147.109375,
+            "top": 71,
+            "right": 724.875,
+            "bottom": 395.984375,
+            "w": 577.765625,
+            "h": 324.984375
+          },
+          "#dialogue": {
+            "left": 764.875,
+            "top": 120,
+            "right": 1116.875,
+            "bottom": 248,
+            "w": 352,
+            "h": 128
+          },
+          ".timeline": {
+            "left": 147.109375,
+            "top": 407.984375,
+            "right": 724.875,
+            "bottom": 489.984375,
+            "w": 577.765625,
+            "h": 82
+          },
+          ".performance": {
+            "left": 748.875,
+            "top": 71,
+            "right": 1132.875,
+            "bottom": 443,
+            "w": 384,
+            "h": 372
+          },
+          "#next": {
+            "left": 945.875,
+            "top": 367,
+            "right": 1116.875,
+            "bottom": 427,
+            "w": 171,
+            "h": 60
+          },
+          "#open-settings": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "w": 0,
+            "h": 0
+          }
+        }
+      },
+      "pageErrors": [],
+      "scenarios": [
+        "no embedded actions/white centered persistent notice",
+        "exact candidate+accepted protection",
+        "audition/Resume keeps notice without duplicate DOM announcements",
+        "repeated failure emits new live update",
+        "Settings-only recovery/close focus",
+        "guard Stay/Save and leave and turn navigation preserve microphone issue",
+        "reload restores unresolved issue and take IDs",
+        "successful capture clears microphone issue",
+        "ordinary Next becomes exact-candidate Retry save",
+        "retry resolves notice and advances only after acceptance"
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "locale": "en",
+      "longDialogue": false,
+      "motion": "no-preference",
+      "result": "PASS",
+      "microphone": {
+        "scroll": 265,
+        "viewport": [
+          390,
+          844
+        ],
+        "items": {
+          "#feedback": {
+            "left": 16,
+            "top": 730,
+            "right": 374,
+            "bottom": 828,
+            "w": 358,
+            "h": 98
+          },
+          ".project-header": {
+            "left": 16,
+            "top": -96,
+            "right": 374,
+            "bottom": -37,
+            "w": 358,
+            "h": 59
+          },
+          ".scene": {
+            "left": 16,
+            "top": -21,
+            "right": 374,
+            "bottom": 180.375,
+            "w": 358,
+            "h": 201.375
+          },
+          "#dialogue": {
+            "left": 16,
+            "top": 225.375,
+            "right": 374,
+            "bottom": 257.375,
+            "w": 358,
+            "h": 32
+          },
+          ".timeline": {
+            "left": 16,
+            "top": 304.375,
+            "right": 374,
+            "bottom": 410.375,
+            "w": 358,
+            "h": 106
+          },
+          ".performance": {
+            "left": 16,
+            "top": 430.375,
+            "right": 374,
+            "bottom": 714.375,
+            "w": 358,
+            "h": 284
+          },
+          "#next": {
+            "left": 200,
+            "top": 650.375,
+            "right": 358,
+            "bottom": 698.375,
+            "w": 158,
+            "h": 48
+          },
+          "#open-settings": {
+            "left": 32,
+            "top": 539.375,
+            "right": 358,
+            "bottom": 587.375,
+            "w": 326,
+            "h": 48
+          }
+        }
+      },
+      "save": {
+        "scroll": 205,
+        "viewport": [
+          390,
+          844
+        ],
+        "items": {
+          "#feedback": {
+            "left": 16,
+            "top": 730,
+            "right": 374,
+            "bottom": 828,
+            "w": 358,
+            "h": 98
+          },
+          ".project-header": {
+            "left": 16,
+            "top": -36,
+            "right": 374,
+            "bottom": 23,
+            "w": 358,
+            "h": 59
+          },
+          ".scene": {
+            "left": 16,
+            "top": 39,
+            "right": 374,
+            "bottom": 240.375,
+            "w": 358,
+            "h": 201.375
+          },
+          "#dialogue": {
+            "left": 16,
+            "top": 285.375,
+            "right": 374,
+            "bottom": 349.375,
+            "w": 358,
+            "h": 64
+          },
+          ".timeline": {
+            "left": 16,
+            "top": 364.375,
+            "right": 374,
+            "bottom": 470.375,
+            "w": 358,
+            "h": 106
+          },
+          ".performance": {
+            "left": 16,
+            "top": 490.375,
+            "right": 374,
+            "bottom": 714.375,
+            "w": 358,
+            "h": 224
+          },
+          "#next": {
+            "left": 200,
+            "top": 650.375,
+            "right": 358,
+            "bottom": 698.375,
+            "w": 158,
+            "h": 48
+          },
+          "#open-settings": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "w": 0,
+            "h": 0
+          }
+        }
+      },
+      "pageErrors": [],
+      "scenarios": [
+        "no embedded actions/white centered persistent notice",
+        "exact candidate+accepted protection",
+        "audition/Resume keeps notice without duplicate DOM announcements",
+        "repeated failure emits new live update",
+        "Settings-only recovery/close focus",
+        "guard Stay/Save and leave and turn navigation preserve microphone issue",
+        "reload restores unresolved issue and take IDs",
+        "successful capture clears microphone issue",
+        "ordinary Next becomes exact-candidate Retry save",
+        "retry resolves notice and advances only after acceptance"
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "longDialogue": true,
+      "motion": "reduce",
+      "result": "PASS",
+      "microphone": {
+        "scroll": 527,
+        "viewport": [
+          390,
+          667
+        ],
+        "items": {
+          "#feedback": {
+            "left": 16,
+            "top": 553,
+            "right": 374,
+            "bottom": 651,
+            "w": 358,
+            "h": 98
+          },
+          ".project-header": {
+            "left": 16,
+            "top": -358,
+            "right": 374,
+            "bottom": -299,
+            "w": 358,
+            "h": 59
+          },
+          ".scene": {
+            "left": 16,
+            "top": -283,
+            "right": 374,
+            "bottom": -81.625,
+            "w": 358,
+            "h": 201.375
+          },
+          "#dialogue": {
+            "left": 16,
+            "top": -36.625,
+            "right": 374,
+            "bottom": 91.375,
+            "w": 358,
+            "h": 128
+          },
+          ".timeline": {
+            "left": 16,
+            "top": 103.375,
+            "right": 374,
+            "bottom": 209.375,
+            "w": 358,
+            "h": 106
+          },
+          ".performance": {
+            "left": 16,
+            "top": 229.375,
+            "right": 374,
+            "bottom": 537.375,
+            "w": 358,
+            "h": 308
+          },
+          "#next": {
+            "left": 200,
+            "top": 473.375,
+            "right": 358,
+            "bottom": 521.375,
+            "w": 158,
+            "h": 48
+          },
+          "#open-settings": {
+            "left": 32,
+            "top": 362.375,
+            "right": 358,
+            "bottom": 410.375,
+            "w": 326,
+            "h": 48
+          }
+        }
+      },
+      "save": {
+        "scroll": 491,
+        "viewport": [
+          390,
+          667
+        ],
+        "items": {
+          "#feedback": {
+            "left": 16,
+            "top": 553,
+            "right": 374,
+            "bottom": 651,
+            "w": 358,
+            "h": 98
+          },
+          ".project-header": {
+            "left": 16,
+            "top": -322,
+            "right": 374,
+            "bottom": -263,
+            "w": 358,
+            "h": 59
+          },
+          ".scene": {
+            "left": 16,
+            "top": -247,
+            "right": 374,
+            "bottom": -45.625,
+            "w": 358,
+            "h": 201.375
+          },
+          "#dialogue": {
+            "left": 16,
+            "top": -0.625,
+            "right": 374,
+            "bottom": 127.375,
+            "w": 358,
+            "h": 128
+          },
+          ".timeline": {
+            "left": 16,
+            "top": 139.375,
+            "right": 374,
+            "bottom": 245.375,
+            "w": 358,
+            "h": 106
+          },
+          ".performance": {
+            "left": 16,
+            "top": 265.375,
+            "right": 374,
+            "bottom": 537.375,
+            "w": 358,
+            "h": 272
+          },
+          "#next": {
+            "left": 200,
+            "top": 449.375,
+            "right": 358,
+            "bottom": 521.375,
+            "w": 158,
+            "h": 72
+          },
+          "#open-settings": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "w": 0,
+            "h": 0
+          }
+        }
+      },
+      "pageErrors": [],
+      "scenarios": [
+        "no embedded actions/white centered persistent notice",
+        "exact candidate+accepted protection",
+        "audition/Resume keeps notice without duplicate DOM announcements",
+        "repeated failure emits new live update",
+        "Settings-only recovery/close focus",
+        "guard Stay/Save and leave and turn navigation preserve microphone issue",
+        "reload restores unresolved issue and take IDs",
+        "successful capture clears microphone issue",
+        "ordinary Next becomes exact-candidate Retry save",
+        "retry resolves notice and advances only after acceptance"
+      ]
+    }
+  ]
+}

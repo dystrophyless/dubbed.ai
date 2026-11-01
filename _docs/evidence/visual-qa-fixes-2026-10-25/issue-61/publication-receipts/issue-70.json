@@ -1,0 +1,48 @@
+{
+  "issue": 70,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "5bdc4a7e2f986e22d2a45149692bf4d7eb2b8ebdc7ee5d55187438a5f3379690",
+    "planned": "e577ed7b0a5676f4ddbf7faf0437ae7ae955c2e01ad6d50bfa66d6fc293ff8b6",
+    "readback": "e577ed7b0a5676f4ddbf7faf0437ae7ae955c2e01ad6d50bfa66d6fc293ff8b6"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Keep mock credits, reservations and entitlements coherent and exactly once",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Keep mock credits, reservations and entitlements coherent and exactly once",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

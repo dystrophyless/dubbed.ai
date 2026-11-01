@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-23T02:54:20.985Z",
+  "boundary": "Isolated pre-registration snapshot; appearance/initial state only, not complete auth acceptance.",
+  "results": [
+    {
+      "name": "signin-en-desktop",
+      "route": "http://127.0.0.1:4281/sign-in",
+      "errors": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Sign in",
+          "font": "\"Mabry Pro\", sans-serif",
+          "size": "32px"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "height": 40
+        },
+        {
+          "type": "password",
+          "height": 40
+        }
+      ],
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ]
+    },
+    {
+      "name": "signin-ru-phone",
+      "route": "http://127.0.0.1:4281/sign-in",
+      "errors": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Войти",
+          "font": "\"Mabry Pro\", sans-serif",
+          "size": "24px"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "height": 48
+        },
+        {
+          "type": "password",
+          "height": 48
+        }
+      ],
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ]
+    },
+    {
+      "name": "reset-en-desktop",
+      "route": "http://127.0.0.1:4281/reset-password",
+      "errors": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Reset your password",
+          "font": "\"Mabry Pro\", sans-serif",
+          "size": "32px"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "height": 40
+        }
+      ],
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ]
+    },
+    {
+      "name": "reset-ru-phone",
+      "route": "http://127.0.0.1:4281/reset-password",
+      "errors": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Сбросить пароль",
+          "font": "\"Mabry Pro\", sans-serif",
+          "size": "24px"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "email",
+          "height": 48
+        }
+      ],
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ]
+    }
+  ]
+}

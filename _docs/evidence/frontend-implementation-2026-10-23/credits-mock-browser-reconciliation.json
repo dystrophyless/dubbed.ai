@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-23T01:24:31.128Z",
+  "boundary": "Fresh isolated browser, synthetic mock payment only, no payment provider or real payment; Chromium muted.",
+  "pending": "Credits\n\nAvailable\n120\n\nReserved\n0\n\nProject capacity\n0 of 2 projects used\nOpen projects\nCredit packs\n20 credits\n\nConfigured mock amount: 0 MOCK units. This is test currency, not a real price.\n\nLocal mock scenario only. No payment is collected and no payment provider is connected.\n\nStart mock checkout\n\nConfirming payment\n\nThis mock checkout is still pending. Available credits and history have not changed.\n\nKeep pending\nSimulate verified payment\nSimulate cancellation\nSimulate failure\nCredit history\nActivity\nChange\nAvailable after\nReserved after\nWelcome credits\nOct 23, 2026, 6:24 AM\n+120\n120\n0",
+  "completed": "Credits\n\nAvailable\n140\n\nReserved\n0\n\nProject capacity\n0 of 10 projects used\nOpen projects\nCredit packs\n20 credits\n\nConfigured mock amount: 0 MOCK units. This is test currency, not a real price.\n\nLocal mock scenario only. No payment is collected and no payment provider is connected.\n\nStart mock checkout\n\nVerified in this local scenario. Credits are updated from the service balance.\n\nCredit history\nActivity\nChange\nAvailable after\nReserved after\nWelcome credits\nOct 23, 2026, 6:24 AM\n+120\n120\n0\nPending purchase\nOct 23, 2026, 6:24 AM\n—\n—\n0\nVerified purchase\nOct 23, 2026, 6:24 AM\n+20\n140\n0",
+  "reloaded": "Credits\n\nAvailable\n140\n\nReserved\n0\n\nProject capacity\n0 of 10 projects used\nOpen projects\nCredit packs\n20 credits\n\nConfigured mock amount: 0 MOCK units. This is test currency, not a real price.\n\nLocal mock scenario only. No payment is collected and no payment provider is connected.\n\nStart mock checkout\n\nVerified in this local scenario. Credits are updated from the service balance.\n\nCredit history\nActivity\nChange\nAvailable after\nReserved after\nWelcome credits\nOct 23, 2026, 6:24 AM\n+120\n120\n0\nPending purchase\nOct 23, 2026, 6:24 AM\n—\n—\n0\nVerified purchase\nOct 23, 2026, 6:24 AM\n+20\n140\n0",
+  "data": {
+    "balance": {
+      "status": "ok",
+      "data": {
+        "accountId": "55193e4e-214b-431e-9d64-f09ad70c5601",
+        "revision": 3,
+        "available": 140,
+        "reserved": 0,
+        "purchasedRemainder": 20,
+        "welcomeGrantEligible": false,
+        "welcomeGrantApplied": true,
+        "projectCapacity": {
+          "used": 0,
+          "total": 10,
+          "firstPurchaseUpgrade": true,
+          "revision": 3
+        }
+      },
+      "replayed": false
+    },
+    "history": {
+      "status": "ok",
+      "data": [
+        {
+          "id": "de5374a7-940a-4198-8597-0f230e95013a",
+          "accountId": "55193e4e-214b-431e-9d64-f09ad70c5601",
+          "revision": 1,
+          "kind": "welcome-grant",
+          "occurredAt": 1792718670321,
+          "delta": 120,
+          "availableAfter": 120,
+          "reservedAfter": 0,
+          "note": "synthetic-mock-scenario"
+        },
+        {
+          "id": "a3f45d47-1971-44ab-b7da-da0e6267643e",
+          "accountId": "55193e4e-214b-431e-9d64-f09ad70c5601",
+          "revision": 2,
+          "kind": "pending-purchase",
+          "occurredAt": 1792718670604,
+          "delta": null,
+          "availableAfter": null,
+          "reservedAfter": 0,
+          "relatedOperationId": "9143eafa-f364-4596-831e-6ee70d639c56",
+          "note": "synthetic-mock-scenario"
+        },
+        {
+          "id": "58b0bd39-4ea8-449d-b3f2-98b8fcdbdeec",
+          "accountId": "55193e4e-214b-431e-9d64-f09ad70c5601",
+          "revision": 3,
+          "kind": "verified-purchase",
+          "occurredAt": 1792718670699,
+          "delta": 20,
+          "availableAfter": 140,
+          "reservedAfter": 0,
+          "relatedOperationId": "9143eafa-f364-4596-831e-6ee70d639c56",
+          "note": "synthetic-mock-scenario"
+        }
+      ],
+      "replayed": false
+    }
+  }
+}

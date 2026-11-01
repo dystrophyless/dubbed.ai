@@ -1,0 +1,9 @@
+# Reinstallable dependencies, generated builds and package-manager caches.
+node_modules/
+dist/
+npm-cache/
+ctx7-cache/
+
+# Local environment secrets; keep documented examples versioned.
+.env
+.env.*.local

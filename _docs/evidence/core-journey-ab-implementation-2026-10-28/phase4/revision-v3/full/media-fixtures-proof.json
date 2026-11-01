@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-28T19:15:24.269Z",
+  "browser": "156.0.8078.49",
+  "sourceAttribution": "Sintel · Blender Foundation · CC BY 3.0",
+  "fixtures": [
+    {
+      "url": "/media/scene.mp4",
+      "bytes": 886403,
+      "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+      "durationSeconds": 13.416667,
+      "durationMeasuredBy": "metadata",
+      "width": 960,
+      "height": 408
+    },
+    {
+      "url": "/media/example-dub.mp4",
+      "bytes": 749601,
+      "sha256": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9",
+      "durationSeconds": 13.416667,
+      "durationMeasuredBy": "metadata",
+      "width": 960,
+      "height": 408
+    },
+    {
+      "url": "/media/result-generation-002.webm",
+      "bytes": 2514724,
+      "sha256": "f3802515a6738409226b8c9c705d31671e7768f81043ada452302240bb146d93",
+      "durationSeconds": 13.398,
+      "durationMeasuredBy": "full-playback-end",
+      "width": 960,
+      "height": 408
+    }
+  ],
+  "generatedFixtureProvenance": "The WebM uses the approved source video and three supplied synthetic WAV takes; not a user recording or product render.",
+  "productRendered": false,
+  "assembledFromAcceptedTakes": false
+}

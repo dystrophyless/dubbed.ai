@@ -1,0 +1,813 @@
+{
+  "date": "2026-10-25T11:45:01.590Z",
+  "port": 4580,
+  "browser": "Playwright Chromium, headless, DPR 1, reduced motion, audio muted, fake-media flags only",
+  "fixture": "Synthetic mock identity only; no real credentials, provider, email, backend, microphone, or payment.",
+  "screenshots": [
+    {
+      "name": "en-desktop-provider-conflict",
+      "scenario": "synthetic Google provider conflict",
+      "locale": "en",
+      "viewportName": "desktop",
+      "url": "http://127.0.0.1:4580/sign-in",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 973
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Continue with Google",
+          "type": "button",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Show password",
+          "type": "button",
+          "height": 32,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Sign in",
+          "type": "submit",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": [
+        "This Google sign-in is linked to a different account. Accounts remain separate. Use that account’s other sign-in method, or recover its password if it uses one. Reset password for that account"
+      ]
+    },
+    {
+      "name": "en-short-provider-conflict",
+      "scenario": "synthetic Google provider conflict",
+      "locale": "en",
+      "viewportName": "short",
+      "url": "http://127.0.0.1:4580/sign-in",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "document": {
+        "width": 1440,
+        "height": 973
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Continue with Google",
+          "type": "button",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Show password",
+          "type": "button",
+          "height": 32,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Sign in",
+          "type": "submit",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": [
+        "This Google sign-in is linked to a different account. Accounts remain separate. Use that account’s other sign-in method, or recover its password if it uses one. Reset password for that account"
+      ]
+    },
+    {
+      "name": "en-phone-provider-conflict",
+      "scenario": "synthetic Google provider conflict",
+      "locale": "en",
+      "viewportName": "phone",
+      "url": "http://127.0.0.1:4580/sign-in",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1085
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Continue with Google",
+          "type": "button",
+          "height": 48,
+          "width": 292,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "Show password",
+          "type": "button",
+          "height": 48,
+          "width": 292,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "Sign in",
+          "type": "submit",
+          "height": 48,
+          "width": 292,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      ],
+      "alerts": [
+        "This Google sign-in is linked to a different account. Accounts remain separate. Use that account’s other sign-in method, or recover its password if it uses one. Reset password for that account"
+      ]
+    },
+    {
+      "name": "ru-desktop-provider-conflict",
+      "scenario": "synthetic Google provider conflict",
+      "locale": "ru",
+      "viewportName": "desktop",
+      "url": "http://127.0.0.1:4580/sign-in",
+      "lang": "ru",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 1013
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Продолжить с Google",
+          "type": "button",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Показать пароль",
+          "type": "button",
+          "height": 32,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Войти",
+          "type": "submit",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": [
+        "Этот способ входа через Google связан с другим аккаунтом. Аккаунты остаются раздельными. Войдите в тот аккаунт другим способом или восстановите его пароль, если он используется. Сбросить пароль этого аккаунта"
+      ]
+    },
+    {
+      "name": "ru-short-provider-conflict",
+      "scenario": "synthetic Google provider conflict",
+      "locale": "ru",
+      "viewportName": "short",
+      "url": "http://127.0.0.1:4580/sign-in",
+      "lang": "ru",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "document": {
+        "width": 1440,
+        "height": 1013
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Продолжить с Google",
+          "type": "button",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Показать пароль",
+          "type": "button",
+          "height": 32,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Войти",
+          "type": "submit",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": [
+        "Этот способ входа через Google связан с другим аккаунтом. Аккаунты остаются раздельными. Войдите в тот аккаунт другим способом или восстановите его пароль, если он используется. Сбросить пароль этого аккаунта"
+      ]
+    },
+    {
+      "name": "ru-phone-provider-conflict",
+      "scenario": "synthetic Google provider conflict",
+      "locale": "ru",
+      "viewportName": "phone",
+      "url": "http://127.0.0.1:4580/sign-in",
+      "lang": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1081
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Продолжить с Google",
+          "type": "button",
+          "height": 48,
+          "width": 292,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "Показать пароль",
+          "type": "button",
+          "height": 48,
+          "width": 292,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "text": "Войти",
+          "type": "submit",
+          "height": 48,
+          "width": 292,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      ],
+      "alerts": [
+        "Этот способ входа через Google связан с другим аккаунтом. Аккаунты остаются раздельными. Войдите в тот аккаунт другим способом или восстановите его пароль, если он используется. Сбросить пароль этого аккаунта"
+      ]
+    },
+    {
+      "name": "en-desktop-account-expired",
+      "scenario": "native Account session expiry gate",
+      "locale": "en",
+      "viewportName": "desktop",
+      "url": "http://127.0.0.1:4580/account",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Sign in",
+          "type": "button",
+          "height": 40,
+          "width": 560,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": [
+        "Your session ended. Sign in to continue."
+      ]
+    },
+    {
+      "name": "en-desktop-account-reauth-new-dub",
+      "scenario": "native Account reauthentication destination",
+      "locale": "en",
+      "viewportName": "desktop",
+      "url": "http://127.0.0.1:4580/new",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Continue with Google",
+          "type": "button",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Show password",
+          "type": "button",
+          "height": 32,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        {
+          "text": "Sign in",
+          "type": "submit",
+          "height": 40,
+          "width": 350,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": []
+    },
+    {
+      "name": "en-short-account-expired",
+      "scenario": "native Account session expiry gate",
+      "locale": "en",
+      "viewportName": "short",
+      "url": "http://127.0.0.1:4580/account",
+      "lang": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "document": {
+        "width": 1440,
+        "height": 700
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Sign in",
+          "type": "button",
+          "height": 40,
+          "width": 560,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": [
+        "Your session ended. Sign in to continue."
+      ]
+    },
+    {
+      "name": "en-phone-account-expired",
+      "scenario": "native Account session expiry gate",
+      "locale": "en",
+      "viewportName": "phone",
+      "url": "http://127.0.0.1:4580/account",
+      "lang": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Sign in",
+          "type": "button",
+          "height": 48,
+          "width": 358,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      ],
+      "alerts": [
+        "Your session ended. Sign in to continue."
+      ]
+    },
+    {
+      "name": "ru-desktop-account-expired",
+      "scenario": "native Account session expiry gate",
+      "locale": "ru",
+      "viewportName": "desktop",
+      "url": "http://127.0.0.1:4580/account",
+      "lang": "ru",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Войти",
+          "type": "button",
+          "height": 40,
+          "width": 560,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": [
+        "Сессия завершилась. Войдите, чтобы продолжить."
+      ]
+    },
+    {
+      "name": "ru-short-account-expired",
+      "scenario": "native Account session expiry gate",
+      "locale": "ru",
+      "viewportName": "short",
+      "url": "http://127.0.0.1:4580/account",
+      "lang": "ru",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "document": {
+        "width": 1440,
+        "height": 700
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Войти",
+          "type": "button",
+          "height": 40,
+          "width": 560,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      ],
+      "alerts": [
+        "Сессия завершилась. Войдите, чтобы продолжить."
+      ]
+    },
+    {
+      "name": "ru-phone-account-expired",
+      "scenario": "native Account session expiry gate",
+      "locale": "ru",
+      "viewportName": "phone",
+      "url": "http://127.0.0.1:4580/account",
+      "lang": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "fonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400",
+          "status": "loaded"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500",
+          "status": "loaded"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Войти",
+          "type": "button",
+          "height": 48,
+          "width": 358,
+          "font": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      ],
+      "alerts": [
+        "Сессия завершилась. Войдите, чтобы продолжить."
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "QA-80-02",
+      "locale": "en",
+      "viewportName": "desktop",
+      "calls": [
+        "identity.google.sign-in"
+      ],
+      "recoveryHref": "/reset-password",
+      "taskButtonHeight": 40
+    },
+    {
+      "id": "QA-80-02",
+      "locale": "en",
+      "viewportName": "short",
+      "calls": [
+        "identity.google.sign-in"
+      ],
+      "recoveryHref": "/reset-password",
+      "taskButtonHeight": 40
+    },
+    {
+      "id": "QA-80-02",
+      "locale": "en",
+      "viewportName": "phone",
+      "calls": [
+        "identity.google.sign-in"
+      ],
+      "recoveryHref": "/reset-password",
+      "taskButtonHeight": 48
+    },
+    {
+      "id": "QA-80-02",
+      "locale": "ru",
+      "viewportName": "desktop",
+      "calls": [
+        "identity.google.sign-in"
+      ],
+      "recoveryHref": "/reset-password",
+      "taskButtonHeight": 40
+    },
+    {
+      "id": "QA-80-02",
+      "locale": "ru",
+      "viewportName": "short",
+      "calls": [
+        "identity.google.sign-in"
+      ],
+      "recoveryHref": "/reset-password",
+      "taskButtonHeight": 40
+    },
+    {
+      "id": "QA-80-02",
+      "locale": "ru",
+      "viewportName": "phone",
+      "calls": [
+        "identity.google.sign-in"
+      ],
+      "recoveryHref": "/reset-password",
+      "taskButtonHeight": 48
+    },
+    {
+      "id": "QA-80-01",
+      "locale": "en",
+      "viewportName": "desktop",
+      "gateRoute": "/account",
+      "signInAction": true,
+      "taskButtonHeight": 40,
+      "sessionIdPreservedAcrossReload": true,
+      "expiryPreservedAcrossReload": true,
+      "approxThirtyDayExpiry": true
+    },
+    {
+      "id": "QA-80-01-native-destination",
+      "route": "/account -> /sign-in -> /new",
+      "destinationRendered": true,
+      "syntheticAccount": true
+    },
+    {
+      "id": "QA-80-01",
+      "locale": "en",
+      "viewportName": "short",
+      "gateRoute": "/account",
+      "signInAction": true,
+      "taskButtonHeight": 40,
+      "sessionIdPreservedAcrossReload": true,
+      "expiryPreservedAcrossReload": true,
+      "approxThirtyDayExpiry": true
+    },
+    {
+      "id": "QA-80-01",
+      "locale": "en",
+      "viewportName": "phone",
+      "gateRoute": "/account",
+      "signInAction": true,
+      "taskButtonHeight": 48,
+      "sessionIdPreservedAcrossReload": true,
+      "expiryPreservedAcrossReload": true,
+      "approxThirtyDayExpiry": true
+    },
+    {
+      "id": "QA-80-01",
+      "locale": "ru",
+      "viewportName": "desktop",
+      "gateRoute": "/account",
+      "signInAction": true,
+      "taskButtonHeight": 40,
+      "sessionIdPreservedAcrossReload": true,
+      "expiryPreservedAcrossReload": true,
+      "approxThirtyDayExpiry": true
+    },
+    {
+      "id": "QA-80-01",
+      "locale": "ru",
+      "viewportName": "short",
+      "gateRoute": "/account",
+      "signInAction": true,
+      "taskButtonHeight": 40,
+      "sessionIdPreservedAcrossReload": true,
+      "expiryPreservedAcrossReload": true,
+      "approxThirtyDayExpiry": true
+    },
+    {
+      "id": "QA-80-01",
+      "locale": "ru",
+      "viewportName": "phone",
+      "gateRoute": "/account",
+      "signInAction": true,
+      "taskButtonHeight": 48,
+      "sessionIdPreservedAcrossReload": true,
+      "expiryPreservedAcrossReload": true,
+      "approxThirtyDayExpiry": true
+    }
+  ],
+  "pageErrors": []
+}

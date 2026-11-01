@@ -1,0 +1,93 @@
+{
+  "issue": 68,
+  "model": "gpt-6-luna",
+  "effort": "max",
+  "files": [
+    "frontend/src/components/ui/notice.tsx",
+    "frontend/src/components/ui/notice.test.tsx",
+    "frontend/src/i18n/service-errors.ts",
+    "frontend/src/i18n/service-errors.test.ts",
+    "frontend/src/i18n/messages.ts",
+    "frontend/src/i18n/messages.test.ts",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/capture-service-notice.cjs",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/service-notice-captures.json",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/en-desktop.png",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/ru-desktop.png",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/en-phone.png",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/ru-phone.png",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/completion.md",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/summary.json"
+  ],
+  "findings": [
+    {
+      "id": "QA-68-01",
+      "status": "duplicate-fixed-by-65",
+      "evidence": [
+        "_docs/evidence/proactive-visual-qa-2026-10-25/issue-68/review.md:36-55 (pre-fix two-operation trace)",
+        "_docs/evidence/visual-qa-fixes-2026-10-25/issue-65/completion.md (owner-reported 18-test run and current disposition)",
+        "frontend/src/features/credits/CreditsScreen.test.tsx (source regression inspected; not rerun by #68)"
+      ]
+    },
+    {
+      "id": "QA-68-02",
+      "status": "shared-mapping-and-copy-fixed; consumer-integration-pending-67-75-80",
+      "evidence": [
+        "frontend/src/i18n/service-errors.ts",
+        "frontend/src/components/ui/notice.tsx",
+        "frontend/src/i18n/messages.ts",
+        "frontend/src/i18n/messages.test.ts",
+        "frontend/src/i18n/service-errors.test.ts",
+        "frontend/src/components/ui/notice.test.tsx",
+        "_docs/evidence/visual-qa-fixes-2026-10-25/issue-68/service-notice-captures.json"
+      ]
+    },
+    {
+      "id": "QA-68-03",
+      "status": "duplicate-routed-to-78; consumer-sizing-proof-pending-67-75-80",
+      "evidence": [
+        "_docs/evidence/visual-qa-fixes-2026-10-25/EXECUTION-PACKET.md (shared density ownership)",
+        "consumer recovery actions are not rendered by the shared notice and were not sized by this change"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "command": "node node_modules/vitest/vitest.mjs run src/i18n/service-errors.test.ts src/components/ui/notice.test.tsx src/i18n/messages.test.ts",
+      "result": "PASS: 3 files, 9 tests; includes alias-metadata reconciliation and EN/RU account-language rollback copy"
+    },
+    {
+      "command": "npm.cmd run lint -- src/components/ui/notice.tsx src/components/ui/notice.test.tsx src/i18n/service-errors.ts src/i18n/service-errors.test.ts src/i18n/messages.ts src/i18n/messages.test.ts",
+      "result": "PASS"
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution Bundler --jsx react-jsx --strict --skipLibCheck --types vitest/globals src/i18n/service-errors.ts src/i18n/service-errors.test.ts src/components/ui/notice.tsx src/components/ui/notice.test.tsx",
+      "result": "PASS: selected helper/component/test graph"
+    },
+    {
+      "command": "npm.cmd run typecheck",
+      "result": "PASS: one global tsc -b --pretty false run; FeatureRoute alias-metadata TS2345 resolved"
+    },
+    {
+      "command": "node _docs/evidence/visual-qa-fixes-2026-10-25/issue-68/capture-service-notice.cjs",
+      "result": "PASS: four fresh EN/RU desktop/phone captures; Mabry loaded; no page errors or horizontal overflow; visually inspected"
+    }
+  ],
+  "limitations": [
+    "QA-68-02 screen actions remain pending in owners #67, #75, and #80.",
+    "QA-68-03 uses shared button sizing owned by #78; consumer recovery sizing has not been verified here.",
+    "QA-62-03 shared EN/RU rollback copy is corrected; Account flow pending/save/failure/retry behavior and rendered announcement verification remain with #62.",
+    "No real session-expiry, IndexedDB denial, backend, payment, or full suite verification was run.",
+    "No commit, push, GitHub update, or issue closure was performed."
+  ],
+  "crossTaskFollowUps": [
+    {
+      "id": "QA-62-03",
+      "status": "shared-copy-corrected; account-flow-verification-pending-62",
+      "evidence": [
+        "frontend/src/i18n/messages.ts",
+        "frontend/src/i18n/messages.test.ts"
+      ],
+      "note": "EN/RU now state the unsaved language change failed and the language saved in the account was restored; no LocaleProvider or AppHeader behavior changed."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "kind": "conflict",
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "replacements": 12,
+    "body": "Skip to content\nDubbed\nNew dub\nProjects\nCredits\nAccount\nCredits\n120\nLanguage\nEN\nRU\nSign out\nMy projects\nNew dub\n\nThis information changed. Refresh and try again.\n\nRetry",
+    "calls": [
+      "credits.snapshot",
+      "projects.list"
+    ]
+  },
+  {
+    "kind": "unauthenticated",
+    "locale": "ru",
+    "width": 390,
+    "height": 844,
+    "replacements": 12,
+    "body": "Перейти к содержимому\nDubbed\nКредиты\n120\nМои проекты\nНовая озвучка\n\nСессия завершилась. Войдите, чтобы продолжить.\n\nПовторить",
+    "calls": [
+      "credits.snapshot",
+      "projects.list"
+    ]
+  }
+]

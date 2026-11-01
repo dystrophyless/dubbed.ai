@@ -1,0 +1,47 @@
+{
+  "issue": 61,
+  "status": "published_readback_pass",
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "7dc10dda47c2fb24897ce8a80f126e489feedf0905fe72ae9e7ebbb3c3ad2372",
+    "planned": "05e984a2d9780cc95d3ecb0d80153836c57dbdd3c0b4016d75543c2a584fb260",
+    "readback": "05e984a2d9780cc95d3ecb0d80153836c57dbdd3c0b4016d75543c2a584fb260"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Record the bounded frontend technical contract and remaining decision gates",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Record the bounded frontend technical contract and remaining decision gates",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

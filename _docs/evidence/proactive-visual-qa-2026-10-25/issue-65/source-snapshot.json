@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-25T08:16:54.938Z",
+  "baseline": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "browser": {
+    "name": "Playwright Chromium",
+    "version": "156.0.8078.4",
+    "headless": true,
+    "DPR": 1,
+    "locale": [
+      "en-US",
+      "ru-RU"
+    ],
+    "timezone": "default browser timezone; not forced to owner timezone"
+  },
+  "mockOnly": true,
+  "files": [
+    {
+      "file": "frontend/src/features/credits/CreditsScreen.tsx",
+      "sha256": "1007e078bbe470fa79d766ed91b0b82be58c3bb15112491d8ffea1ca4411675d"
+    },
+    {
+      "file": "frontend/src/features/credits/CreditsScreen.css",
+      "sha256": "f5bb09b74168b2327ee33bb6b3f060f4c46ecdd075b087b75d6ff7a29694d436"
+    },
+    {
+      "file": "frontend/src/features/new-dub/NewDubScreen.tsx",
+      "sha256": "2ab0b9cd33df154575a32d1432fb6dcb03e21f1c79e0b40a6a610e69dcb10f3a"
+    },
+    {
+      "file": "frontend/src/services/mock-credits.ts",
+      "sha256": "65ddbb2eda34efe20bf12c08435fc3df4d49b28f5c345caa968144f1987dc47e"
+    },
+    {
+      "file": "frontend/src/services/contracts.ts",
+      "sha256": "df4e55c8574d7f3c0e522241b39d6adf1cab89f977fb7e21f946b886c8ca9ff6"
+    },
+    {
+      "file": "_docs/frontend-flows/12-credits.md",
+      "sha256": "5720a52662ccc17e297160909921a7b5a20c4fb148286cc09f343091d04eb9b7"
+    },
+    {
+      "file": "_docs/frontend-flows/00-shared-contract.md",
+      "sha256": "bea5a398659a5c40a7294a0872166250d77659fe352827d6960d2a3f4b90185f"
+    },
+    {
+      "file": "_docs/frontend-flows/design-tokens.md",
+      "sha256": "10f2753e82f4db46003eee25b866dd73aba0240ff3624bcdd01fa32511f278e8"
+    },
+    {
+      "file": "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+      "sha256": "60020477975cec2679db73cf848a3babc2b10ff2ea9e6f80743039723f1fa92f"
+    },
+    {
+      "file": "_docs/frontend-flows/affect-ui-clean-light-reference.md",
+      "sha256": "c78170b3720b57f4803480686a9dd31969e7eef34025098612207035e8347a6e"
+    },
+    {
+      "file": "_docs/frontend-flows/affect-ui-workflow.md",
+      "sha256": "c3013e9dc7159f3fcb4ccdcddfad73df1d1f57beb3c12fbf395a13a6572860d0"
+    },
+    {
+      "file": "_docs/evidence/proactive-visual-qa-2026-10-25/contracts/issue-65.md",
+      "sha256": "0c2ddfb482b134086b05a260509c11900112334bb4935efc8f5a02f681d346da"
+    }
+  ]
+}

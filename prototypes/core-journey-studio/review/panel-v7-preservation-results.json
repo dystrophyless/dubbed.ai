@@ -1,0 +1,149 @@
+{
+  "version": "core-journey-panel-highfi-v7",
+  "date": "2026-10-28",
+  "targets": [
+    {
+      "variant": "A",
+      "version": "core-journey-panel-highfi-v7",
+      "manifestSha256": "810ed52123c19442d470b5583c71feb5a92ed2d2a106d481331be01299a855e3",
+      "entries": 477
+    },
+    {
+      "variant": "B",
+      "version": "core-journey-studio-highfi-v1",
+      "manifestSha256": "5170ff3fd978894829bd00b6d54f02ee61e39d3ee397680d7c464e17c998ba70",
+      "entries": 340
+    }
+  ],
+  "checks": [
+    {
+      "name": "A current fingerprints match",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "B current fingerprints match",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "B manifest byte unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All340 B prior files unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Only bounded A prior files changed",
+      "pass": true,
+      "detail": [
+        "AB-CALIBRATION.md",
+        "BRIEF.md",
+        "README.md",
+        "focused-exit.css",
+        "index.html",
+        "src.js"
+      ]
+    },
+    {
+      "name": "All9 canonical hashes unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B stop",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B pauseAudition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B isSaveFailure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B isMicFailure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B atCompleteEnd",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B retryGuidance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B seekStart",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B updateClock",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B startAudition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B play",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B move",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B acceptAndMove",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B guard",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B showResult",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Dots derive actual current transcript position",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No global navigation/speaker/legend markup",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Dialogue fixed in external rehearsal flow",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "pass": 24,
+  "total": 24
+}

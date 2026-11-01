@@ -1,0 +1,5 @@
+{
+  "at": "2026-10-29T16:03:34.711Z",
+  "message": "page.waitForFunction: Timeout 20000ms exceeded.",
+  "stack": "page.waitForFunction: Timeout 20000ms exceeded.\n    at createAuthorizedAppResult (D:\\Program\\python\\Dubbed\\_docs\\evidence\\core-journey-ab-implementation-2026-10-28\\phase4\\visual-parity-v1\\revision-literal-port-v1-20261029T2012\\capture-connected-result-parity.mjs:115:18)\n    at async file:///D:/Program/python/Dubbed/_docs/evidence/core-journey-ab-implementation-2026-10-28/phase4/visual-parity-v1/revision-literal-port-v1-20261029T2012/capture-connected-result-parity.mjs:137:29"
+}

@@ -18,6 +18,20 @@ This is an operating policy for the available agent tools, not a background daem
 
 For meaningful new frontend screens, redesigns, or connected journeys, follow the [frontend design-first workflow](frontend-design-workflow.md) before finalizing specifications/task contracts or starting production integration. That workflow permits a bounded isolated design prototype and requires its named owner checkpoints; it does not start design or implementation without a user request. The numbered specification-first path below remains the default for backend/non-frontend work and stable-composition fixes.
 
+## Dependent-stage dispatch
+
+Autonomy means progressing when prerequisites are satisfied, not inventing completion or overlapping dependent stages. A named role is a future responsibility, not an instruction to spawn it immediately. For frontend work, follow the [stage handoff and restraint rules](frontend-design-workflow.md#stage-handoff-and-orchestrator-restraint): wait for the author's explicit versioned ready-for-review handoff and completed self-checks, verify the review inputs, then dispatch the reviewer. Do not pre-spawn reviewers for preparation/standby, infer readiness from files or builds, co-author the lead's unfinished design, or review files while their author is still changing them. Root waits for messages, handles concrete blockers, and reports the actual stage; role autonomy does not override artifact ownership or the two owner checkpoints.
+
+## Low-activity waiting
+
+After dispatching authorized work, if Root has no concrete independent task required for the current stage, its next action is the native agent wait tool. Wait for up to 60 seconds per call (or the tool's supported shorter bound), handling early notifications/user input; after a timeout with no actionable update, immediately wait again. Do not fill waiting intervals with planning, repeated reasoning, re-reading contracts/transcripts, file/status polling, speculative reviews, duplicate verification, extra agents or invented housekeeping. An unused slot or elapsed time is not work.
+
+On wake-up, classify the event once: a completion/handoff triggers its bounded gate check; a concrete blocker triggers the smallest necessary response; a user message receives an answer or scope adjustment. Routine progress needs no response unless it raises a question or changes a decision; return to waiting. A timeout is neither failure nor completion and does not justify asking the worker for status. Necessary user-facing progress updates remain brief and factual; send any update required by higher-priority communication instructions, then return to waiting without reopening the plan.
+
+Before delegation, define the bounded deliverable and return conditions once. Ask workers to notify Root when ready for handoff, blocked, or needing a consequential decision; do not solicit continuous narration. After handoff, verify the evidence needed for the actual gate without routinely redoing the worker's entire task. Preserve independent reviews, safety checks and owner checkpoints. Root must not end the task prematurely simply to avoid waiting tokens.
+
+This is an instruction to minimize active work, not a claim that repository text can set model reasoning effort or enforce a token budget. Keep the user/app-selected Root model unchanged.
+
 ## Review boundary
 
 Independent reviewers review specifications, individual task drafts/issues, and task packages before execution. For backend/non-frontend work and localized frontend fixes with stable approved composition, there is no mandatory separate implementation Reviewer. Meaningful frontend work uses the bounded independent UX, contract, and post-integration reviews in the [design-first workflow](frontend-design-workflow.md). Executors supply raw checks; the Orchestrator directly verifies acceptance criteria, integration evidence, delivery conditions, revision/environment, and limitations. Neither agent review nor verification replaces an explicit owner design decision.

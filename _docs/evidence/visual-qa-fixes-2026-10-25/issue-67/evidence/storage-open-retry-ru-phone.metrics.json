@@ -1,0 +1,35 @@
+{
+  "capturedAt": "2026-10-25T11:45:14.862Z",
+  "locale": "ru",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 390,
+  "text": "Этот режим сервиса недоступен\n\nНе удалось открыть или прочитать локальную рабочую область. Проверьте хранилище браузера и попробуйте загрузить её снова.\n\nПовторить",
+  "buttons": [
+    {
+      "label": "Повторить",
+      "width": 113.1875,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "capture": "01-register-otp-en-desktop",
+    "url": "/register",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  {
+    "capture": "02-new-en-desktop",
+    "url": "/new",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  {
+    "capture": "03-new-ru-short",
+    "url": "/new",
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    }
+  },
+  {
+    "capture": "04-new-ru-phone",
+    "url": "/new",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "capture": "05-new-ru-767",
+    "url": "/new",
+    "viewport": {
+      "width": 767,
+      "height": 900
+    }
+  },
+  {
+    "capture": "06-new-ru-768",
+    "url": "/new",
+    "viewport": {
+      "width": 768,
+      "height": 900
+    }
+  },
+  {
+    "capture": "07-signin-error-focus-en-desktop",
+    "body": "Sign in\n\nUse your email and password to continue.\n\nContinue with Google\n\nLocal mock only. This does not contact Google.\n\nor\n\nEmail\nPassword\nShow password\nIncorrect email or password\nSign in\nForgot password?\n\nNew to Dubbed? Create an account"
+  },
+  {
+    "capture": "08-signin-error-ru-phone",
+    "body": "Войти\n\nПродолжите с помощью email и пароля.\n\nПродолжить с Google\n\nТолько локальная имитация. Подключения к Google нет.\n\nили\n\nЭлектронная почта\nПароль\nПоказать пароль\nНеверный email или пароль\nВойти\nЗабыли пароль?\n\nВпервые в Dubbed? Создать аккаунт"
+  }
+]

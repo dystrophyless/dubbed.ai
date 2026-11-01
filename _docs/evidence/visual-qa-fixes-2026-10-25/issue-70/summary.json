@@ -1,0 +1,42 @@
+{
+  "issue": 70,
+  "model": "GPT-6 Luna Max",
+  "effort": "max",
+  "date": "2026-10-25",
+  "revision": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "report": "completion.md",
+  "findings": {
+    "high": 0,
+    "medium": 1,
+    "low": 2
+  },
+  "qaDispositions": {
+    "QA-70-01": "resolved; issue65 history labels, observational purchase state, captured pack facts, honest legacy fallback; owner70 read-only store invariant passed",
+    "QA-70-02": "resolved; issue65 aggregate In processing state and held-not-final-charge explanation; service reservation/settlement paths passed",
+    "QA-70-03": "resolved through issue78; issue65 Credits consumer uses shared medium role with no local size override"
+  },
+  "screenshotCount": 0,
+  "verification": {
+    "environment": "Windows PowerShell; Node v22.23.1; npm 10.9.8; frontend Vitest/jsdom and fake IndexedDB",
+    "command": "npm.cmd test -- tests/services/accounting-invariants.test.ts tests/services/credit-reservation-concurrency.test.ts tests/services/credits-activity.test.ts tests/services/checkout-simulation.test.ts tests/services/preparation-recovery.test.ts tests/services/core-services.test.ts tests/services/active-project-deletion.test.ts tests/services/account-deletion-late-work.test.ts tests/services/identity-google.test.ts tests/services/identity-linking-recovery.test.ts",
+    "result": "PASS",
+    "testFiles": 10,
+    "tests": 45,
+    "log": "evidence/focused-service-suite.log",
+    "worktreeBoundary": "evidence/worktree-boundary.txt"
+  },
+  "owner70Changes": [
+    "frontend/tests/services/accounting-invariants.test.ts",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-70/completion.md",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-70/summary.json",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-70/evidence/focused-service-suite.log",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-70/evidence/worktree-boundary.txt"
+  ],
+  "ledgerLogicChanged": false,
+  "limitations": [
+    "Synthetic local mock and fake IndexedDB only; no production backend or payment provider",
+    "No browser capture or screen-reader session run by owner70; issue65/78 own visual evidence",
+    "No full suite, build, global typecheck, commit, push, GitHub update, or issue closure",
+    "Production allocation, refund, reversal, tax, and chargeback policy remain outside this task"
+  ]
+}

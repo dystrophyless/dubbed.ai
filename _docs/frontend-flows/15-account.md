@@ -8,6 +8,7 @@ This flow follows [the shared frontend contract](00-shared-contract.md), the lat
 The screen lets an authenticated account owner:
 
 - switch the product interface between English and Russian;
+- open the microphone settings area for all post-onboarding checks and reconfiguration, using the selection, levels and optional temporary test defined in [Flow 09 §4.1](09-record.md#41-microphone-check-screen);
 - inspect the Google and email/password methods associated with the account;
 - continue to the established verification, reset, or verified-linking flows when applicable;
 - sign out; and
@@ -36,6 +37,8 @@ The screen is a sparse settings view, not a profile dashboard, usage report, or 
 The user selects Account in the authenticated compact top navigation.
 Entry requires an authenticated account context and an authoritative account-settings snapshot.
 If the session has expired, private account facts stay hidden and the user continues through Flow 02. Successful sign-in opens Flow 06 New dub; Account is not a return intent. This follows the owner answer recorded in the [shared contract](00-shared-contract.md#account-session-expiry-destination).
+Microphone settings never starts capture of a project take or launches dubbing. Entering Settings from Record uses the existing candidate-preserving exit guard; permission/device failure does not discard work or reset onboarding. Temporary test bytes are deleted on leaving the microphone area. Exact area geometry and safe return presentation remain design work.
+
 ### 3.3 Exits
 
 - Language change: remain on Account with the selected locale applied to the whole visible state.
@@ -57,9 +60,10 @@ The account snapshot and the top-navigation balance must use the same authoritat
 
 1. `Account` noun title and one short scope sentence.
 2. Language.
-3. Sign-in methods.
-4. Session action: Sign out.
-5. Destructive action: Delete account, last and visually separate.
+3. Microphone settings (the only place for repeat checks after pre-registration onboarding).
+4. Sign-in methods.
+5. Session action: Sign out.
+6. Destructive action: Delete account, last and visually separate.
 The destructive section cannot appear before the account-access controls in visual, DOM, focus, or screen-reader order.
 ### 4.3 Settings rows
 On wide screens, each area uses a label/description column beside one flat working panel.
@@ -339,3 +343,5 @@ Their app-screen guidance produced the sparse settings hierarchy, noun title, to
 The confirmed Dubbed direction overrides any generic or randomly dealt palette: [design-tokens.md](design-tokens.md) supplies semantic/component states, focus, typography, geometry, spacing and motion; this flow retains the flat settings hierarchy. Mapped source component shadows are permitted; gradients, new panel wrappers and a sidebar are prohibited.
 No style draw was promoted to a requirement; the values above come from the shared approved contract. Remaining font-asset/loading/fallback/rendering, screen-specific geometry, final copy and rendered focus/accessibility evidence stay explicit.
 No mockup, product code, screenshot inspection, browser run, live identity/email request, destructive account operation, or backend verification occurred.
+
+- [ ] **F15-AC12 — Repeat microphone checks:** After pre-registration onboarding, microphone selection, levels and optional test controls exist only in Settings. Test audio stays local and is cleared on exit. Record-to-Settings navigation preserves candidates through the existing guard; completing a test neither starts a project take nor launches dubbing.

@@ -1,0 +1,238 @@
+[
+  {
+    "file": "evidence/01-form-en-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "3c09476d97c24e0b878eb9a0755bad02c81e1e05e1e987e2107fa1a704acedcb"
+  },
+  {
+    "file": "evidence/02-validation-en-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "ceab7984cbed388bb8de5b85c0e1a92f065f8258a71a84daf5b44d6322ddd40f"
+  },
+  {
+    "file": "evidence/03-code-en-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "3f149f68bf1cf95a32fce4605723f5b988978ad1ef181355f9eb1a10d524f39f"
+  },
+  {
+    "file": "evidence/04-invalid-en-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "edddca6405c88c0172be52f405c0168b8007076de0a6f3d1c8e5a92ccdbe494e"
+  },
+  {
+    "file": "evidence/05-invalid-caret-en-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "8d30c743707c9e906d18b521065a24aea8937022ca8ede145161fad4ff852e35"
+  },
+  {
+    "file": "evidence/06-partial-en-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "17d7564930fa7bdb8956044f29bc908081acc75415e76e1fe18bd84dd1f4624e"
+  },
+  {
+    "file": "evidence/07-code-en-short.png",
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "9a3dc1ea6fa6c0295e34441ec804ccdc6ecfc9a709d39b1f96d31b7f110d540a"
+  },
+  {
+    "file": "evidence/08-verified-en-short.png",
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    },
+    "url": "http://127.0.0.1:4382/new",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "5633b3d32324865017b9529346ca2b4f0bf3448c3f964e456d6f6cbda661bbd9"
+  },
+  {
+    "file": "evidence/09-verified-reload-en-short.png",
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    },
+    "url": "http://127.0.0.1:4382/new",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "c4b847aa36234d1ff11b96f75b42a85652b9dfb3ebe2be9769dfb189647c7854"
+  },
+  {
+    "file": "evidence/10-form-ru-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "3947dbec4cb035f4dd883d2d6b1628360e63a41f55b74feff01961ab41a63c8f"
+  },
+  {
+    "file": "evidence/11-code-ru-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "7de31e7d6495b7cf1d0e9c7ab8e1d2c34ff001d115b467b2a2d380972ef2bd31"
+  },
+  {
+    "file": "evidence/12-invalid-ru-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "166f298808222093c74675581095ef5be17bd6334fcb6d2809eb2d46c278f530"
+  },
+  {
+    "file": "evidence/13-restored-ru-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "ed06dfcfc29d95b4901a442085ba2b74b347246becf6c7fcd7b22e22589bba78"
+  },
+  {
+    "file": "evidence/14-correct-email-ru-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "997504c4c74ef4830aa6f66981a3657fe7b86747ecfe22cef2c2947b72e9bbc0"
+  },
+  {
+    "file": "evidence/15-long-email-en-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "1c6ce273c3b05f272c6168404e4135946ecf05923e4f8a0e56b4e7b08be5fcbb"
+  },
+  {
+    "file": "evidence/16-code-en-767.png",
+    "viewport": {
+      "width": 767,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "5cccd88cb99337e3789559c4b312fee5e9bf3133497a04590e507e6ffa1191cd"
+  },
+  {
+    "file": "evidence/17-code-en-768.png",
+    "viewport": {
+      "width": 768,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Native visible UI; isolated mock browser context",
+    "sha256": "27da7bdb0a22a041735765c73e074cad91a510ae16e38c7b3abfab44ad90e009"
+  },
+  {
+    "file": "evidence/18-unknown-ru-short.png",
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Existing auth-state-visual harness injects facade outcome; entered through visible form; synthetic NOT native service verification",
+    "scenario": "register-unknown-code",
+    "sha256": "b0b511b2bb3be3638a9572bd52719e4a367de2309db3bfaf91dfa35b4aa5b9ca"
+  },
+  {
+    "file": "evidence/19-loading-en-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Existing auth-state-visual harness injects facade outcome; entered through visible form; synthetic NOT native service verification",
+    "scenario": "register-loading",
+    "sha256": "2bd453d9787ec983500a9b99ec15f4f71be4f5b3621b4cc4b4d984c7673ecace"
+  },
+  {
+    "file": "evidence/20-collision-en-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Existing auth-state-visual harness injects facade outcome; entered through visible form; synthetic NOT native service verification",
+    "scenario": "register-collision",
+    "sha256": "1bf7b9d6459ce103df70c7761941355683ffe423d92e2e5a9244cb4d64bf50c8"
+  },
+  {
+    "file": "evidence/21-service-error-en-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Existing auth-state-visual harness injects facade outcome; entered through visible form; synthetic NOT native service verification",
+    "scenario": "register-service-error",
+    "sha256": "0ab033b7738983daa2cdbd3acdcf3d1f1b3020d6ce523684d4cb34c4b6100a2b"
+  },
+  {
+    "file": "evidence/22-form-ru-desktop.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Existing auth-state-visual harness injects facade outcome; entered through visible form; synthetic NOT native service verification",
+    "scenario": "default",
+    "sha256": "f26ec2e7d57d3ec2550b2b2e5b3577f0cfefffc66dde89d8c9a03a1b772dfe58"
+  },
+  {
+    "file": "evidence/23-form-en-phone.png",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "url": "http://127.0.0.1:4382/register",
+    "method": "Existing auth-state-visual harness injects facade outcome; entered through visible form; synthetic NOT native service verification",
+    "scenario": "default",
+    "sha256": "7eea5b5f06ff567a0b17048ec957c30668c2638938301cf0e7ad6811066d68bb"
+  }
+]

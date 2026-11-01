@@ -1,0 +1,247 @@
+
+> frontend@0.0.0 test
+> vitest run --reporter=default
+
+
+ RUN  v5.0.5 D:/Program/python/Dubbed/frontend
+
+ ✓ tests/auth/RegistrationScreen.test.tsx (7 tests) 3978ms
+   ✓ RegistrationScreen (7)
+     ✓ keeps the Flow 03 provider-first order and the shared Russian email label 1398ms
+     ✓ creates the account only after the six-digit code is verified and follows the new-dub route 469ms
+     ✓ starts expiry and resend countdowns from the returned verification snapshot 1450ms
+ ✓ tests/result/ResultScreen.test.tsx (8 tests) 4313ms
+   ✓ Result screen (8)
+     ✓ keeps the playing generation until the user chooses Watch new 1605ms
+     ✓ pins a download request to the generation displayed when the button is activated 344ms
+     ✓ keeps a failed download pinned through a same-id refresh and Watch new 1541ms
+ ✓ tests/account/AccountScreen.test.tsx (5 tests) 4017ms
+   ✓ AccountScreen (5)
+     ✓ shows only the sign-in methods returned by the account and offers linking for an absent method 1352ms
+     ✓ blocks a short password locally and submits the two password fields without class rules 613ms
+     ✓ keeps entered values while an unknown password operation is pending and applies its committed snapshot in place 1024ms
+     ✓ keeps deletion status-first after an unknown result and leaves only after a completed receipt 783ms
+ ✓ tests/new-dub/NewDubSelection.test.tsx (5 tests) 5833ms
+   ✓ editing Start and tabbing out saves the captured input value without unmounting the screen 2931ms
+   ✓ shows correctable boundary feedback for an invalid 0.999-second interval 1204ms
+   ✓ shows correctable boundary feedback for an invalid 8.626-second interval 920ms
+   ✓ shows and starts the one included retry without opening a price-confirmation dialog 582ms
+ ✓ src/App.test.tsx (5 tests) 4490ms
+   ✓ frontend runtime (5)
+     ✓ renders the landing and sends an anonymous start action to registration 1738ms
+     ✓ keeps a route guard in front of shell navigation 1814ms
+     ✓ fences account snapshot updates by account identity and revision 759ms
+ ✓ src/features/projects/ProjectsScreen.test.tsx (6 tests) 7570ms
+   ✓ ProjectsScreen (6)
+     ✓ keeps service ordering and does not change activity while the list is read 1744ms
+     ✓ reconciles an unknown Continue result and retries only the same operation when not started 1164ms
+     ✓ keeps an overlong grapheme title editable and shows the localized limit before calling the service 531ms
+     ✓ recovers a thrown rename call by checking status and retrying the same operation id 1411ms
+     ✓ reloads service ordering after rename updates project activity 1901ms
+     ✓ shows the impact before deletion and checks an unknown delete before retrying it 812ms
+Not implemented: HTMLMediaElement's pause() method
+Not implemented: HTMLMediaElement's pause() method
+ ✓ tests/recording/RecordingScreen.test.tsx (17 tests) 16394ms
+   ✓ Record screen (17)
+     ✓ keeps reference volume separate from My recording and opens microphone check explicitly 2218ms
+     ✓ shows the paid quote and draft-loss warning, and starts only after explicit replacement confirmation 2054ms
+     ✓ shows an included retry as zero-credit and requires the same explicit confirmation 759ms
+     ✓ disables Process again with a permanent explanation after an accepted take 330ms
+     ✓ reconciles an unknown operation with the same ID, then permits a new attempt only after rejection 1612ms
+     ✓ rejects a stale quoted revision before start and keeps the saved draft until a fresh quote 943ms
+     ✓ shows a localized disabled capture status while preserving the prior draft and offering no stop action 829ms
+     ✓ keeps the source and active capture through locale changes and re-localizes existing error and success notices 1656ms
+     ✓ does not request microphone on load and captures the authoritative fixed window before autosaving a draft 338ms
+     ✓ accepts only a decoded capture using the service revisions and authoritative take revision 766ms
+     ✓ keeps the line and candidate when acceptance conflicts instead of advancing 599ms
+     ✓ refreshes the project revision before persisting a later line 614ms
+     ✓ refreshes the completed project revision before releasing access and entering Result from final Next 850ms
+     ✓ pauses the source at the fixed-window boundary before capture decoding finishes 547ms
+     ✓ renews a held grant during an edit lasting beyond the mock lease 392ms
+     ✓ keeps a saved candidate visible and read-only after grant renewal fails 393ms
+     ✓ contains focus and treats Escape or Stay as a local no-mutation return 1489ms
+ ✓ tests/services/result-retry-lifecycle.test.ts (5 tests) 2406ms
+   ✓ durable automatic result retry lifecycle (5)
+     ✓ reconciles the first failed assembly, retries once in the same lineage, and replays the same child operation 1019ms
+     ✓ persists the one automatic retry across service recreation and offers manual Repeat only after its second failure 530ms
+     ✓ reports a stale frozen snapshot when the persisted automatic retry resumes after source revision changes 367ms
+ ✓ tests/auth/SignInScreen.test.tsx (11 tests) 3138ms
+   ✓ SignInScreen Google mock (11)
+     ✓ keeps the adopted sign-in order and Russian email label 1290ms
+     ✓ renders an in-flight sign-in status in the latest locale without clearing fields 548ms
+ ✓ src/features/credits/CreditsScreen.test.tsx (2 tests) 1950ms
+   ✓ CreditsScreen (2)
+     ✓ keeps a pending mock checkout out of the balance until the service verifies it 1392ms
+     ✓ resolves an unknown simulated result before retrying the same operation id 547ms
+ ✓ tests/account-linking/AccountLinkingScreen.test.tsx (2 tests) 1732ms
+   ✓ AccountLinkingScreen (2)
+     ✓ requires current and candidate proof before explicit commit 1493ms
+ ✓ tests/services/preparation-recovery.test.ts (12 tests) 4733ms
+   ✓ preparation recovery and accounting (12)
+     ✓ grants the single included retry after the first successful run even when an earlier initial run was cancelled 499ms
+     ✓ grants the retry on the first successful run after a failed initial attempt 583ms
+     ✓ settles an authorized initial quote when preparation completes successfully with zero turns 389ms
+     ✓ grants one included retry after initial zero turns, preserves it on queued cancel or system failure, then consumes it on success 714ms
+     ✓ keeps an expired cancellation quote from changing the pending operation or reservation 311ms
+     ✓ consumes an included retry on success without replenishing it for later paid reprocessing 329ms
+     ✓ preserves the prior preparation and unaccepted draft on synthetic system failure 527ms
+     ✓ preserves the prior usable preparation and unaccepted draft on a zero-turn included replacement 435ms
+ ✓ tests/services/recording-results.test.ts (6 tests) 2801ms
+   ✓ persistent recording and result services (6)
+     ✓ renews only the same live recording grant and fences stale grant revisions 364ms
+     ✓ reconciles an unknown final Save and leave before the requested sign-out can proceed 415ms
+     ✓ separates draft persistence from acceptance, authorizes the complete snapshot once, and pins result generations 684ms
+     ✓ automatically retries a failed first assembly within the same lineage 761ms
+ ✓ src/features/new-dub/NewDubScreen.test.tsx (2 tests) 2001ms
+   ✓ NewDubScreen upload validation (2)
+     ✓ distinguishes confirmed missing audio from unknown track evidence without creating a project 1682ms
+     ✓ keeps the unresolved sub-second source rule explicit and does not occupy a project slot 316ms
+ ✓ tests/microphone/MicrophoneScreen.test.tsx (2 tests) 1527ms
+   ✓ microphone check screen (2)
+     ✓ asks permission only after an explicit action and continues without an optional recording test 1068ms
+     ✓ sends a project-origin check back to that project Record screen 453ms
+ ✓ tests/services/password-reset-recovery.test.ts (4 tests) 2963ms
+   ✓ password reset recovery boundaries (4)
+     ✓ keeps the request and code-entry receipt neutral across the six synthetic identity classes 650ms
+     ✓ binds proof to reset purpose, request, identity, and issuing client 1027ms
+     ✓ rejects replaced and expired proof, including a grant that expires after verification 647ms
+     ✓ reconciles an uncertain completion once, starts a 30-day session, and revokes the other client 635ms
+ ✓ tests/recording/RecordingTransport.test.tsx (3 tests) 1458ms
+   ✓ RecordingTransport (3)
+     ✓ renders the selected source waveform, position, and common playback controls 1002ms
+     ✓ delegates mode changes, play/pause, and scrubbing to the synchronized owner 361ms
+ ✓ tests/processing/ProcessingScreen.test.tsx (4 tests) 1311ms
+   ✓ Processing screen status observation (4)
+     ✓ does not activate a zero-turn completion and offers reprocess or another-video recovery 604ms
+ ✓ tests/services/project-title-and-replacement.test.ts (3 tests) 1452ms
+   ✓ project title and source replacement service boundaries (3)
+     ✓ returns ServiceResult for invalid upload and rename titles at the visible-grapheme boundary 484ms
+     ✓ regenerates only filename-derived titles and preserves manual titles on source replacement 604ms
+     ✓ allows a fresh interval quote after initial cancellation without unlocking source replacement 360ms
+ ✓ tests/auth/PasswordResetScreen.test.tsx (6 tests) 2911ms
+   ✓ PasswordResetScreen (6)
+     ✓ uses the same Russian email field label as sign-in and registration 982ms
+     ✓ sends a neutral response and binds the request to the exact project-return intent 578ms
+     ✓ retains an incorrect code in the single accessible field until the user changes it 380ms
+     ✓ requires matching eight-character passwords and resumes the authoritative project screen 508ms
+     ✓ keeps both password values through an unknown completion and navigates only after reconciliation 396ms
+ ✓ tests/app/locale.test.tsx (4 tests) 900ms
+   ✓ LocaleProvider preference precedence (4)
+     ✓ persists a stored choice, updates the parent account, then uses its new revision for a later locale change 488ms
+ ✓ tests/services/registration-client-binding.test.ts (3 tests) 1780ms
+   ✓ registration request client binding (3)
+     ✓ keeps recovery and every mutation on the initiating client, including operation replays 915ms
+     ✓ requires another client to start a fresh request and expires the prior code 426ms
+     ✓ does not let a fresh request reset the per-hour send budget 432ms
+ ✓ tests/services/credits-activity.test.ts (4 tests) 2105ms
+   ✓ credit ledger and recent-project activity (4)
+     ✓ uses shared 1 ms selection revisions, ceilings once, and settles only the authorized reservation 577ms
+     ✓ completes due background work on a later project-list reload exactly once 370ms
+     ✓ orders activities across projects under a frozen clock and ignores observer or duplicate replays 359ms
+     ✓ isolates account sessions across clients and resets only the selected namespace 795ms
+ ✓ tests/services/identity-linking-recovery.test.ts (6 tests) 2493ms
+   ✓ mock identity linking and recovery boundaries (6)
+     ✓ does not associate a candidate password before final review, then makes the verified secondary address usable 489ms
+     ✓ does not accept an expired or another account’s proof set 640ms
+     ✓ reports a candidate method owned elsewhere without associating it 380ms
+     ✓ preserves a validated project return through reset and recovers a lost verification grant only for its client 381ms
+     ✓ reconciles account deletion anonymously and prevents a deleted email from receiving another welcome grant 334ms
+ ✓ tests/components/Button.test.tsx (2 tests) 692ms
+   ✓ keeps the busy Button focusable while blocking pointer and keyboard activation 546ms
+ ✓ tests/components/AppHeader.test.tsx (2 tests) 2281ms
+   ✓ AppHeader credit balance (1)
+     ✓ hides stale balances during route and committed-mutation refreshes 653ms
+   ✓ AppHeader signed-in navigation (1)
+     ✓ keeps the phone destinations and language selector inside the accessible menu 1625ms
+stderr | tests/app/route-failure.test.tsx > a render failure shows localized recovery copy without exposing the exception
+Error: secret backend detail and stack
+    at BrokenScreen (D:/Program/python/Dubbed/frontend/tests/app/route-failure.test.tsx:15:11)
+    at Object.react_stack_bottom_frame (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:28571:20)
+    at renderWithHooks (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:8030:22)
+    at updateFunctionComponent (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:10569:19)
+    at beginWork (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:12205:18)
+    at runWithFiberInDEV (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:1048:13)
+    at performUnitOfWork (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:19176:22)
+    at workLoopSync (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:19004:41)
+    at renderRootSync (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:18985:11)
+    at performWorkOnRoot (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:18094:35) {
+  [stack]: [Getter/Setter],
+  [message]: 'secret backend detail and stack'
+}
+
+The above error occurred in the <BrokenScreen> component.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, RenderErrorBoundary.
+
+React Router caught the following error during render Error: secret backend detail and stack
+    at BrokenScreen (D:/Program/python/Dubbed/frontend/tests/app/route-failure.test.tsx:15:11)
+    at Object.react_stack_bottom_frame (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:28571:20)
+    at renderWithHooks (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:8030:22)
+    at updateFunctionComponent (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:10569:19)
+    at beginWork (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:12205:18)
+    at runWithFiberInDEV (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:1048:13)
+    at performUnitOfWork (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:19176:22)
+    at workLoopSync (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:19004:41)
+    at renderRootSync (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:18985:11)
+    at performWorkOnRoot (D:\Program\python\Dubbed\frontend\node_modules\react-dom\cjs\react-dom-client.development.js:18094:35)
+
+ ✓ tests/app/route-failure.test.tsx (1 test) 975ms
+   ✓ a render failure shows localized recovery copy without exposing the exception 972ms
+ ✓ tests/media/source-probe.test.ts (5 tests) 653ms
+   ✓ local media source probe (5)
+     ✓ identifies the exact permitted source fixture and reads browser metadata separately 415ms
+ ✓ src/features/auth/OtpInput.test.tsx (3 tests) 1207ms
+   ✓ OtpInput (3)
+     ✓ exposes one accessible numeric one-time-code field and six decorative cells 1051ms
+ ✓ tests/services/default-client-persistence.test.ts (1 test) 455ms
+   ✓ default mock client identity persistence (1)
+     ✓ resolves the same session after browser storage context reopens and keeps namespace/client boundaries 436ms
+ ✓ tests/services/compatible-previews.test.ts (4 tests) 1962ms
+   ✓ fixture-bound compatible previews (4)
+     ✓ keeps the exact source identity and full moving scene timeline in a free synthetic ready descriptor 513ms
+     ✓ only produces a transient error when explicitly requested, then retries the same source to ready 674ms
+     ✓ rejects observation after the source revision changes 411ms
+ ✓ tests/services/identity-google.test.ts (9 tests) 1776ms
+   ✓ ordinary synthetic Google identity outcomes (9)
+     ✓ creates an eligible Google registration once, then signs in to the same account without another grant 445ms
+     ✓ auto-links only an exact verified canonical email and preserves that account and grant history 656ms
+     ✓ reconciles a committed registration response loss in the same local client 364ms
+ ✓ tests/services/core-services.test.ts (4 tests) 2455ms
+   ✓ service factory and persistent identity/upload services (4)
+     ✓ reconciles an unknown anonymous registration and grants only after proof 469ms
+     ✓ persists uploaded source bytes across service recreation and fingerprints same-sized payloads 604ms
+     ✓ enforces the minimum password length for registration, account changes, and reset 1322ms
+ ✓ tests/services/verification-send-limits.test.ts (2 tests) 1297ms
+   ✓ synthetic verification send limits (2)
+     ✓ counts the initial registration email, replaces codes, and enforces five sends per mock rolling hour 931ms
+     ✓ applies the same authoritative send cap and replacement-code rule to password reset 363ms
+ ✓ tests/services/credit-reservation-concurrency.test.ts (1 test) 1056ms
+   ✓ concurrent shared-credit reservations (1)
+     ✓ lets only one stale same-revision quote reserve a limited shared account balance and replays IDs safely 1051ms
+ ✓ tests/services/checkout-simulation.test.ts (1 test) 888ms
+   ✓ synthetic hosted-checkout service flow (1)
+     ✓ reconciles durable outcomes, requires verified proof to post credits, and preserves optional origin 885ms
+ ✓ tests/services/active-project-deletion.test.ts (2 tests) 1365ms
+   ✓ active project deletion accounting (2)
+     ✓ settles a successful accepted job once without restoring the deleted project 881ms
+     ✓ releases the reservation once when an accepted job fails after deletion 481ms
+ ✓ tests/services/adapter-contract.test.ts (2 tests) 506ms
+   ✓ mock adapter (1)
+     ✓ reconciles a committed unknown result, replays one operation, and rejects ID reuse 493ms
+ ✓ tests/services/workspace-write-failures.test.ts (1 test) 829ms
+   ✓ workspace write failures through public services (1)
+     ✓ rolls back earlier reservation writes on a quota error and permits same-ID retry after reconciliation 826ms
+ ✓ tests/microphone/browser-media.test.ts (11 tests) 187ms
+ ✓ tests/services/session-lifetime.test.ts (2 tests) 325ms
+ ✓ tests/account/sign-out.test.ts (2 tests) 49ms
+ ✓ tests/services/title-and-boundary.test.ts (3 tests) 100ms
+
+ Test Files  43 passed (43)
+      Tests  190 passed (190)
+   Start at  02:24:03
+   Duration  83.74s (environment 56%, tests 21%, setup 17%, import 5%, transform 1%)
+
+Environment  jsdom was created 43 times · 272.80s total, 56% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

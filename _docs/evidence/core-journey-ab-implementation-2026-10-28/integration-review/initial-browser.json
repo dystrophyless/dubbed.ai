@@ -1,0 +1,803 @@
+{
+  "date": "2026-10-28T16:19:18.696Z",
+  "errors": [],
+  "cohorts": [
+    {
+      "layout": "A",
+      "geometry": {
+        ".record-header h1": {
+          "text": "Sintel · The Search",
+          "display": "block",
+          "rect": {
+            "x": 410,
+            "y": 26,
+            "width": 620,
+            "height": 28,
+            "top": 26,
+            "right": 1030,
+            "bottom": 54,
+            "left": 410
+          }
+        },
+        ".position-dots": {
+          "text": "",
+          "display": "flex",
+          "rect": {
+            "x": 328,
+            "y": 58,
+            "width": 784,
+            "height": 6,
+            "top": 58,
+            "right": 1112,
+            "bottom": 64,
+            "left": 328
+          }
+        },
+        ".record-header__line-count": null,
+        ".media-viewport": {
+          "text": "",
+          "display": "block",
+          "rect": {
+            "x": 328,
+            "y": 96,
+            "width": 784,
+            "height": 441,
+            "top": 96,
+            "right": 1112,
+            "bottom": 537,
+            "left": 328
+          }
+        },
+        ".record-panel": {
+          "text": "Line 1 / 3OriginalRecordYour takeRecord this line to continue.PreviousNext",
+          "display": "block",
+          "rect": {
+            "x": 1136,
+            "y": 96,
+            "width": 272,
+            "height": 311,
+            "top": 96,
+            "right": 1408,
+            "bottom": 407,
+            "left": 1136
+          }
+        },
+        ".dialogue-copy": {
+          "text": "What brings you to the land of the gatekeepers?",
+          "display": "block",
+          "rect": {
+            "x": 328,
+            "y": 537,
+            "width": 784,
+            "height": 107.984375,
+            "top": 537,
+            "right": 1112,
+            "bottom": 644.984375,
+            "left": 328
+          }
+        },
+        ".waveform-row": {
+          "text": "",
+          "display": "block",
+          "rect": {
+            "x": 328,
+            "y": 644.984375,
+            "width": 784,
+            "height": 64,
+            "top": 644.984375,
+            "right": 1112,
+            "bottom": 708.984375,
+            "left": 328
+          }
+        },
+        ".waveform-meta": {
+          "text": "0:00 / 0:05Reference volume",
+          "display": "flex",
+          "rect": {
+            "x": 328,
+            "y": 716.984375,
+            "width": 784,
+            "height": 28,
+            "top": 716.984375,
+            "right": 1112,
+            "bottom": 744.984375,
+            "left": 328
+          }
+        },
+        ".record-controls": {
+          "text": "OriginalRecordYour takeRecord this line to continue.PreviousNext",
+          "display": "grid",
+          "rect": {
+            "x": 1152,
+            "y": 150,
+            "width": 240,
+            "height": 241,
+            "top": 150,
+            "right": 1392,
+            "bottom": 391,
+            "left": 1152
+          }
+        },
+        ".exit-link": {
+          "text": "Exit",
+          "display": "flex",
+          "rect": {
+            "x": 328,
+            "y": 20,
+            "width": 96,
+            "height": 40,
+            "top": 20,
+            "right": 424,
+            "bottom": 60,
+            "left": 328
+          },
+          "html": "<button aria-label=\"Exit\" type=\"button\" class=\"button button--secondary exit-link\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chevron-left\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"></path></svg><span>Exit</span></button>"
+        }
+      },
+      "buttons": [
+        "Exit",
+        "Original",
+        "Record",
+        "Your take",
+        "Previous",
+        "Next"
+      ]
+    },
+    {
+      "layout": "B",
+      "geometry": {
+        ".record-header h1": {
+          "text": "Sintel · The Search",
+          "display": "none",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        ".position-dots": {
+          "text": "",
+          "display": "none",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        ".record-header__line-count": {
+          "text": "Line 1 / 3",
+          "display": "block",
+          "rect": {
+            "x": 1099.40625,
+            "y": 30,
+            "width": 57.59375,
+            "height": 20,
+            "top": 30,
+            "right": 1157,
+            "bottom": 50,
+            "left": 1099.40625
+          }
+        },
+        ".media-viewport": {
+          "text": "",
+          "display": "block",
+          "rect": {
+            "x": 283,
+            "y": 96,
+            "width": 874,
+            "height": 491.625,
+            "top": 96,
+            "right": 1157,
+            "bottom": 587.625,
+            "left": 283
+          }
+        },
+        ".record-panel": null,
+        ".dialogue-copy": {
+          "text": "What brings you to the land of the gatekeepers?",
+          "display": "block",
+          "rect": {
+            "x": 283,
+            "y": 587.625,
+            "width": 874,
+            "height": 107.984375,
+            "top": 587.625,
+            "right": 1157,
+            "bottom": 695.609375,
+            "left": 283
+          }
+        },
+        ".waveform-row": {
+          "text": "",
+          "display": "block",
+          "rect": {
+            "x": 283,
+            "y": 695.609375,
+            "width": 874,
+            "height": 64,
+            "top": 695.609375,
+            "right": 1157,
+            "bottom": 759.609375,
+            "left": 283
+          }
+        },
+        ".waveform-meta": {
+          "text": "0:00 / 0:05Reference volume",
+          "display": "flex",
+          "rect": {
+            "x": 283,
+            "y": 767.609375,
+            "width": 874,
+            "height": 28,
+            "top": 767.609375,
+            "right": 1157,
+            "bottom": 795.609375,
+            "left": 283
+          }
+        },
+        ".record-controls": {
+          "text": "PreviousOriginalRecordYour takeNext",
+          "display": "grid",
+          "rect": {
+            "x": 283,
+            "y": 819.609375,
+            "width": 874,
+            "height": 40,
+            "top": 819.609375,
+            "right": 1157,
+            "bottom": 859.609375,
+            "left": 283
+          }
+        },
+        ".exit-link": {
+          "text": "Exit",
+          "display": "flex",
+          "rect": {
+            "x": 283,
+            "y": 20,
+            "width": 78,
+            "height": 40,
+            "top": 20,
+            "right": 361,
+            "bottom": 60,
+            "left": 283
+          },
+          "html": "<button aria-label=\"Exit\" type=\"button\" class=\"button button--secondary exit-link\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-chevron-left\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"></path></svg><span>Exit</span></button>"
+        }
+      },
+      "buttons": [
+        "Exit",
+        "Previous",
+        "Original",
+        "Record",
+        "Your take",
+        "Next"
+      ]
+    },
+    {
+      "case": {
+        "layout": "B",
+        "width": 1280,
+        "height": 600,
+        "locale": "ru",
+        "turn": "sintel-turn-3"
+      },
+      "geometry": {
+        ".record-header h1": {
+          "text": "Sintel · The Search",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "font": "20px"
+        },
+        ".position-dots": {
+          "text": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "font": "16px"
+        },
+        ".media-viewport": {
+          "text": "",
+          "rect": {
+            "x": 203,
+            "y": 96,
+            "width": 874,
+            "height": 491.625,
+            "top": 96,
+            "right": 1077,
+            "bottom": 587.625,
+            "left": 203
+          },
+          "font": "16px"
+        },
+        ".record-panel": null,
+        ".dialogue-copy p": {
+          "text": "Кого-то очень близкого? Родственную душу?",
+          "rect": {
+            "x": 203,
+            "y": 591.625,
+            "width": 874,
+            "height": 30,
+            "top": 591.625,
+            "right": 1077,
+            "bottom": 621.625,
+            "left": 203
+          },
+          "font": "24px"
+        },
+        ".record-controls": {
+          "text": "НазадОригиналЗаписатьВаша записьДалее",
+          "rect": {
+            "x": 203,
+            "y": 747.625,
+            "width": 874,
+            "height": 40,
+            "top": 747.625,
+            "right": 1077,
+            "bottom": 787.625,
+            "left": 203
+          },
+          "font": "16px"
+        },
+        ".reference-volume input": {
+          "text": "",
+          "rect": {
+            "x": 1003,
+            "y": 697.625,
+            "width": 72,
+            "height": 24,
+            "top": 697.625,
+            "right": 1075,
+            "bottom": 721.625,
+            "left": 1003
+          },
+          "font": "14px"
+        }
+      }
+    },
+    {
+      "case": {
+        "layout": "A",
+        "width": 1248,
+        "height": 900,
+        "locale": "en"
+      },
+      "geometry": {
+        ".record-header h1": {
+          "text": "Sintel · The Search",
+          "rect": {
+            "x": 314,
+            "y": 26,
+            "width": 620,
+            "height": 28,
+            "top": 26,
+            "right": 934,
+            "bottom": 54,
+            "left": 314
+          },
+          "font": "20px"
+        },
+        ".position-dots": {
+          "text": "",
+          "rect": {
+            "x": 328,
+            "y": 58,
+            "width": 592,
+            "height": 6,
+            "top": 58,
+            "right": 920,
+            "bottom": 64,
+            "left": 328
+          },
+          "font": "16px"
+        },
+        ".media-viewport": {
+          "text": "",
+          "rect": {
+            "x": 328,
+            "y": 96,
+            "width": 592,
+            "height": 333,
+            "top": 96,
+            "right": 920,
+            "bottom": 429,
+            "left": 328
+          },
+          "font": "16px"
+        },
+        ".record-panel": {
+          "text": "Line 1 / 3OriginalRecordYour takeRecord this line to continue.PreviousNext",
+          "rect": {
+            "x": 944,
+            "y": 96,
+            "width": 272,
+            "height": 311,
+            "top": 96,
+            "right": 1216,
+            "bottom": 407,
+            "left": 944
+          },
+          "font": "16px"
+        },
+        ".dialogue-copy p": {
+          "text": "What brings you to the land of the gatekeepers?",
+          "rect": {
+            "x": 328,
+            "y": 441,
+            "width": 592,
+            "height": 34,
+            "top": 441,
+            "right": 920,
+            "bottom": 475,
+            "left": 328
+          },
+          "font": "26px"
+        },
+        ".record-controls": {
+          "text": "OriginalRecordYour takeRecord this line to continue.PreviousNext",
+          "rect": {
+            "x": 960,
+            "y": 150,
+            "width": 240,
+            "height": 241,
+            "top": 150,
+            "right": 1200,
+            "bottom": 391,
+            "left": 960
+          },
+          "font": "16px"
+        },
+        ".reference-volume input": {
+          "text": "",
+          "rect": {
+            "x": 846,
+            "y": 610.984375,
+            "width": 72,
+            "height": 24,
+            "top": 610.984375,
+            "right": 918,
+            "bottom": 634.984375,
+            "left": 846
+          },
+          "font": "14px"
+        }
+      }
+    },
+    {
+      "case": {
+        "layout": "A",
+        "width": 1247,
+        "height": 900,
+        "locale": "en"
+      },
+      "geometry": {
+        ".record-header h1": {
+          "text": "Sintel · The Search",
+          "rect": {
+            "x": 313.5,
+            "y": 26,
+            "width": 620,
+            "height": 28,
+            "top": 26,
+            "right": 933.5,
+            "bottom": 54,
+            "left": 313.5
+          },
+          "font": "20px"
+        },
+        ".position-dots": {
+          "text": "",
+          "rect": {
+            "x": 163.5,
+            "y": 58,
+            "width": 920,
+            "height": 6,
+            "top": 58,
+            "right": 1083.5,
+            "bottom": 64,
+            "left": 163.5
+          },
+          "font": "16px"
+        },
+        ".media-viewport": {
+          "text": "",
+          "rect": {
+            "x": 163.5,
+            "y": 96,
+            "width": 920,
+            "height": 517.5,
+            "top": 96,
+            "right": 1083.5,
+            "bottom": 613.5,
+            "left": 163.5
+          },
+          "font": "16px"
+        },
+        ".record-panel": {
+          "text": "Line 1 / 3OriginalRecordYour takeRecord this line to continue.PreviousNext",
+          "rect": {
+            "x": 163.5,
+            "y": 845.484375,
+            "width": 920,
+            "height": 311,
+            "top": 845.484375,
+            "right": 1083.5,
+            "bottom": 1156.484375,
+            "left": 163.5
+          },
+          "font": "16px"
+        },
+        ".dialogue-copy p": {
+          "text": "What brings you to the land of the gatekeepers?",
+          "rect": {
+            "x": 163.5,
+            "y": 625.5,
+            "width": 920,
+            "height": 34,
+            "top": 625.5,
+            "right": 1083.5,
+            "bottom": 659.5,
+            "left": 163.5
+          },
+          "font": "26px"
+        },
+        ".record-controls": {
+          "text": "OriginalRecordYour takeRecord this line to continue.PreviousNext",
+          "rect": {
+            "x": 179.5,
+            "y": 899.484375,
+            "width": 888,
+            "height": 241,
+            "top": 899.484375,
+            "right": 1067.5,
+            "bottom": 1140.484375,
+            "left": 179.5
+          },
+          "font": "16px"
+        },
+        ".reference-volume input": {
+          "text": "",
+          "rect": {
+            "x": 1009.5,
+            "y": 795.484375,
+            "width": 72,
+            "height": 24,
+            "top": 795.484375,
+            "right": 1081.5,
+            "bottom": 819.484375,
+            "left": 1009.5
+          },
+          "font": "14px"
+        }
+      }
+    },
+    {
+      "case": {
+        "layout": "A",
+        "width": 390,
+        "height": 667,
+        "locale": "ru"
+      },
+      "geometry": {
+        ".record-header h1": {
+          "text": "Sintel · The Search",
+          "rect": {
+            "x": 66.125,
+            "y": 30,
+            "width": 257.75,
+            "height": 24,
+            "top": 30,
+            "right": 323.875,
+            "bottom": 54,
+            "left": 66.125
+          },
+          "font": "16px"
+        },
+        ".position-dots": {
+          "text": "",
+          "rect": {
+            "x": 16,
+            "y": 72,
+            "width": 358,
+            "height": 6,
+            "top": 72,
+            "right": 374,
+            "bottom": 78,
+            "left": 16
+          },
+          "font": "16px"
+        },
+        ".media-viewport": {
+          "text": "",
+          "rect": {
+            "x": 16,
+            "y": 94,
+            "width": 358,
+            "height": 201.375,
+            "top": 94,
+            "right": 374,
+            "bottom": 295.375,
+            "left": 16
+          },
+          "font": "16px"
+        },
+        ".record-panel": {
+          "text": "Реплика 1 / 3ОригиналЗаписатьВаша записьЗапишите эту реплику, чтобы продолжить.НазадДалее",
+          "rect": {
+            "x": 16,
+            "y": 543.375,
+            "width": 358,
+            "height": 343,
+            "top": 543.375,
+            "right": 374,
+            "bottom": 886.375,
+            "left": 16
+          },
+          "font": "16px"
+        },
+        ".dialogue-copy p": {
+          "text": "Что привело тебя в страну хранителей?",
+          "rect": {
+            "x": 16,
+            "y": 309.375,
+            "width": 358,
+            "height": 64,
+            "top": 309.375,
+            "right": 374,
+            "bottom": 373.375,
+            "left": 16
+          },
+          "font": "24px"
+        },
+        ".record-controls": {
+          "text": "ОригиналЗаписатьВаша записьЗапишите эту реплику, чтобы продолжить.НазадДалее",
+          "rect": {
+            "x": 32,
+            "y": 597.375,
+            "width": 326,
+            "height": 273,
+            "top": 597.375,
+            "right": 358,
+            "bottom": 870.375,
+            "left": 32
+          },
+          "font": "16px"
+        },
+        ".reference-volume input": {
+          "text": "",
+          "rect": {
+            "x": 252,
+            "y": 497.375,
+            "width": 120,
+            "height": 24,
+            "top": 497.375,
+            "right": 372,
+            "bottom": 521.375,
+            "left": 252
+          },
+          "font": "14px"
+        }
+      }
+    },
+    {
+      "case": {
+        "layout": "B",
+        "width": 390,
+        "height": 844,
+        "locale": "ru"
+      },
+      "geometry": {
+        ".record-header h1": {
+          "text": "Sintel · The Search",
+          "rect": {
+            "x": 66.125,
+            "y": 98,
+            "width": 257.75,
+            "height": 24,
+            "top": 98,
+            "right": 323.875,
+            "bottom": 122,
+            "left": 66.125
+          },
+          "font": "16px"
+        },
+        ".position-dots": {
+          "text": "",
+          "rect": {
+            "x": 16,
+            "y": 133,
+            "width": 358,
+            "height": 6,
+            "top": 133,
+            "right": 374,
+            "bottom": 139,
+            "left": 16
+          },
+          "font": "16px"
+        },
+        ".media-viewport": {
+          "text": "",
+          "rect": {
+            "x": 16,
+            "y": 155,
+            "width": 358,
+            "height": 201.375,
+            "top": 155,
+            "right": 374,
+            "bottom": 356.375,
+            "left": 16
+          },
+          "font": "16px"
+        },
+        ".record-panel": null,
+        ".dialogue-copy p": {
+          "text": "Что привело тебя в страну хранителей?",
+          "rect": {
+            "x": 16,
+            "y": 370.375,
+            "width": 358,
+            "height": 64,
+            "top": 370.375,
+            "right": 374,
+            "bottom": 434.375,
+            "left": 16
+          },
+          "font": "24px"
+        },
+        ".record-controls": {
+          "text": "НазадОригиналЗаписатьВаша записьДалее",
+          "rect": {
+            "x": 16,
+            "y": 608.375,
+            "width": 358,
+            "height": 160,
+            "top": 608.375,
+            "right": 374,
+            "bottom": 768.375,
+            "left": 16
+          },
+          "font": "16px"
+        },
+        ".reference-volume input": {
+          "text": "",
+          "rect": {
+            "x": 252,
+            "y": 558.375,
+            "width": 120,
+            "height": 24,
+            "top": 558.375,
+            "right": 372,
+            "bottom": 582.375,
+            "left": 252
+          },
+          "font": "14px"
+        }
+      }
+    }
+  ]
+}

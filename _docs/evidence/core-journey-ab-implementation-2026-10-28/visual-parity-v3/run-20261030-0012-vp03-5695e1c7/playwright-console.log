@@ -1,0 +1,13 @@
+
+> dubbed-core-foundation@0.1.0 test:browser
+> playwright test --config playwright.config.mjs e2e/record-journey.spec.ts --grep records real browser fake input --output D:\Program\python\Dubbed\_docs\evidence\core-journey-ab-implementation-2026-10-28\visual-parity-v3\run-20261030-0012-vp03-5695e1c7\playwright-output
+
+
+Running 2 tests using 1 worker
+
+(node:2092) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\record-journey.spec.ts:667:3 › Layout A records real browser fake input, recovers the candidate, and completes the accepted snapshot (46.2s)
+  ok 2 e2e\record-journey.spec.ts:667:3 › Layout B records real browser fake input, recovers the candidate, and completes the accepted snapshot (33.5s)
+
+  2 passed (1.4m)

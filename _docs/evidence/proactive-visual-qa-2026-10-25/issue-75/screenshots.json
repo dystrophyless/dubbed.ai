@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-25T08:12:35.040Z",
+  "baseline": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "files": [
+    {
+      "path": "evidence/fixture-active-processing-delete-ru-phone.png",
+      "bytes": 60437,
+      "sha256": "6b86cd7b394bf5e7bb4646c175a6679e3cf51750e5422a13b3fe1524e2af73aa",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-default-ru-phone.png",
+      "bytes": 46242,
+      "sha256": "532d0e93773bb6ce4e0d5cfea5edc73de49215c93adeb1ec5d617ce8d98166e0",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-en-767.png",
+      "bytes": 48405,
+      "sha256": "18775702bc65d0061096357cdcca2a527ca62670a411ad6f4a3b73dc97cc12df",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-en-768.png",
+      "bytes": 49859,
+      "sha256": "22cb7c510e65e169f7c35a34105fb05d7d864006ef39fbd786ca300c0e3d02cd",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-en-desktop.png",
+      "bytes": 53689,
+      "sha256": "f6f58a96169140b22a3a25ab207ea9eb96b17d1744ed0b34999f64ae82c36dfa",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-en-phone.png",
+      "bytes": 45605,
+      "sha256": "211c4e9dc3db85e68b2077d91ad4de2f034fcfdcd8a2befb6b88f88eaf188bcb",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-en-short.png",
+      "bytes": 52811,
+      "sha256": "e09d71c02184454e3c068738cb44ce9bfbe2439612b9172af488b2302c4d5aae",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-ru-767.png",
+      "bytes": 49564,
+      "sha256": "2d376968804bec768d3c8f994cc29ca1d3848cb21d9eaae1a30d3632885313f5",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-ru-768.png",
+      "bytes": 50774,
+      "sha256": "0ce005ab9a46fda5ea97e295e6c432e218ceb77c695936fb3da3c7615ba5ed06",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-ru-desktop.png",
+      "bytes": 54719,
+      "sha256": "68ee1bfaf4d447e410ce513d337378ef62d540eeb456130e81497010e92b6422",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-ru-phone.png",
+      "bytes": 46633,
+      "sha256": "aaf0404199a570f9d6296998f6752b70c08e60e34af1f03ff5588d01a2472bc4",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-mixed-ru-short.png",
+      "bytes": 53852,
+      "sha256": "82c2492d1fc4ee01c228e825808165710be9198b2b39d7f8bc42179dadee65c7",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-projects-delete-error-ru-phone.png",
+      "bytes": 41884,
+      "sha256": "bd45bc0725c3846b78cf5e49d177cd756beb6a7be797626d1501f65042c662d4",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-projects-list-error-ru-phone.png",
+      "bytes": 14406,
+      "sha256": "495ecab1e2d8904a27561bb37fd17d4ceb06abd934479fdb5628aaf751a96cbf",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-projects-list-pending-ru-phone.png",
+      "bytes": 10233,
+      "sha256": "c521de643c17764103359db853d17b86d5c37c3d989facb289c6bee8322c9ee2",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/fixture-projects-rename-error-ru-phone.png",
+      "bytes": 38871,
+      "sha256": "c0f132a119e782fafa70f0ef47e9a165bc1510a6444f26280f4fdbec527d0a1e",
+      "visuallyOpened": true,
+      "provenance": "fresh existing synthetic workspace harness"
+    },
+    {
+      "path": "evidence/native-cyrillic-long-en-phone.png",
+      "bytes": 19588,
+      "sha256": "c7af73abb9654c041fcdd30bb3feffb1398d10a1f649b911c8d30379fb316f87",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-delete-en-short.png",
+      "bytes": 59927,
+      "sha256": "951210cbab72ceaa8ee3af545a289724a6a10c41ef2ea3c5af4aeb1ff1db6ca7",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-deleted-en-short.png",
+      "bytes": 25542,
+      "sha256": "17cda0afb0b11872d7b936514175b3eaefdc3fc1a8ea95dac2717edffcd28f5d",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-empty-en-desktop.png",
+      "bytes": 23156,
+      "sha256": "f1c9eaf55eeddf960800c3c0f674bb5b751e4c2015c9ba1ee9fb15b874cff606",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-empty-en-phone.png",
+      "bytes": 15861,
+      "sha256": "cd0da65c7625d145c0ab5eb7eee22f5b501388bfd8fb0320dcba2d9add748fe4",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-empty-ru-desktop.png",
+      "bytes": 23957,
+      "sha256": "cd51364785c7eb25079de3beef169a19af3d6c0457de83e3ab015addbcae8adb",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-empty-ru-phone.png",
+      "bytes": 17318,
+      "sha256": "9da88940b94f6f0059ff16aaf1d9e2efe33cac462011159e9e5442e59433b908",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-long-delete-en-phone.png",
+      "bytes": 50805,
+      "sha256": "0217c9daf3cd23c9c91e11f4fbba583038f9362af8fe5c3f2961b2828adc22ee",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-menu-en-short.png",
+      "bytes": 32736,
+      "sha256": "e76693d8a65a280b4547b484eecf8e2ea69574a5f91947303c9c1b42136fd7fe",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-rename-validation-en-short.png",
+      "bytes": 38357,
+      "sha256": "4dd0f5efb4b59f7db18ffaf004838836493c18dcdf999c5041ddbb2082b8c641",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-renamed-en-short.png",
+      "bytes": 29445,
+      "sha256": "2aec77d81a1ee57db4e0d98fe0500b1016281024df947fb0e4107336b5472890",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-resume-draft-en-desktop.png",
+      "bytes": 100226,
+      "sha256": "6d463d53f33aa30aff0c8c64180c53a46f7c07216e42d4a053df0fec88b7673d",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-two-long-en-desktop.png",
+      "bytes": 30525,
+      "sha256": "10ce69056a282fef632e3885c4d5b9c6264096e780a78d383bc3c1ec62298954",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-two-long-en-phone.png",
+      "bytes": 26096,
+      "sha256": "d12d098cf81ec89d24d352e7e8f760a9806c77036351b0ab46b1636fc4739165",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-two-long-ru-phone.png",
+      "bytes": 26798,
+      "sha256": "a377e826933020f15f414520444e1973b7629922520c989d25c061f00710a63a",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    },
+    {
+      "path": "evidence/native-two-long-ru-short.png",
+      "bytes": 29721,
+      "sha256": "32d7382f6ed673656540ec80f78762d37965b351cce5a7bad718bcd366c81479",
+      "visuallyOpened": true,
+      "provenance": "fresh native mock app; registration/upload seeded through facade; subsequent actions via UI"
+    }
+  ]
+}

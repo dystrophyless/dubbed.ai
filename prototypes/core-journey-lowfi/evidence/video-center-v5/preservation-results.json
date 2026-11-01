@@ -1,0 +1,1567 @@
+{
+  "version": "core-journey-panel-highfi-v5",
+  "date": "2026-10-28",
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "B current manifest byte unchanged",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: COMPARISON.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: README.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: ab-calibration.html",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: comparison-components.css",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: comparison-lab.css",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1280x600-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-1440x900-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-390x667-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-layout-1024x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-layout-1366x650-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-layout-1920x910-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-layout-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-layout-720x450-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-layout-768x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-final-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-final-1366x650.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-final-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-final-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-final-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-layout-1280x600-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-layout-1440x900-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-layout-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-layout-768x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-source-failure.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/ab-B-result-source-loading.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-A-1440x1000-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-A-1440x1000.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-A-390x844-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-A-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-B-1440x1000-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-B-1440x1000.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-B-390x844-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-B-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-A-1440-source.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-A-1440-wave.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-A-1440x1000-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-A-1440x1000.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-A-390-source.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-A-390-wave.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-A-390x844-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-A-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-B-1440-source.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-B-1440-wave.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-B-1440x1000-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-B-1440x1000.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-B-390-source.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-B-390-wave.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-B-390x844-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-B-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-final-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/calibration-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/capture-nav-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/completion-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/completion-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-completed.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-guard.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-mic-expired.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1280x600-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-completed.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-guard.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-1440x900-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-candidate-controls.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-completed.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-guard.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-mic-expired.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-B-390x667-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-visual-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/final-visual-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/first-A-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/first-A-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/first-A-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/first-B-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/first-B-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/first-B-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/first-browser-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/first-browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/freeze-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/interaction-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/journey-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/journey-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/mic-font-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/mic-font-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/parity-preservation-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/parity-preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/probe-A-768x700.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/probe-B-768x700.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/responsive-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/responsive-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/result-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/ab-highfi-v1/tablet-probe.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/capture-v3-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/capture-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/capture-v5-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/capture-v5-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/final-journey-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/00-shared-contract-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/06-new-dub-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/07-processing-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/09-record-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/10-result-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/11-projects-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/12-credits-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/BR-001_custom_video_dubbing-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/README-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/SPEC-001_dubbed_mvp-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/affect-ui-clean-light-reference-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/brainstorm-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/doc-check-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/doc-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/frontend-implementation-contract-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/issue-readback.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/original-amended-1280x600-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/original-amended-1440x900-en.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/original-amended-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/original-browser-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/original-browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/preparation_progress_cancel_and_reprocess-before.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/scoped-doc-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/sync-crossflows.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/sync-removal.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v3/sync-requirements.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v4/AUDIT-v4.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v4/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v4/runtime-copy-check.mjs",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-removal-v4/runtime-copy-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/first-1280x600-False.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/first-1280x600-True.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/first-1440x900-False.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/first-390x667-True.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/freeze-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/original-browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/original-no-speaker-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/original-no-speaker-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/original-no-speaker-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/scoped-doc-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/owner-studio-v5/verify.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/phone-completion-v3-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/phone-completion-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/phone-completion-v5-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/phone-completion-v5-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/responsive-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/responsive-v5-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/responsive-v5-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/DESIGN.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/browser-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/completed-fixture-state.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/debug-short.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/final-visual-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/final-visual-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/initial-browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/interaction-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/interaction-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/preservation-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/previous-BRIEF-v5.md",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/previous-version-v5.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/record-regression-check.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/record-regression-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/reference-font-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-1366x650.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-fullscreen.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-mydub-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-mydub-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-mydub-1920x910.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-mydub-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-mydub-720x450.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-original-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-original-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-original-1920x910.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-original-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-final-original-720x450.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-record-recovery-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-record-recovery-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-result-1280x600-en.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-result-1366x650-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-result-1440x900-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-result-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-result-390x844-en.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-result-767x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-result-768x700-en.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-source-failure.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-source-keyboard-focus.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/result-player-v6/studio-v6-source-loading.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/self-check-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/self-check-v3.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/self-check-v5-results.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/self-check-v5.py",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1280x600-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1280x600-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1280x600-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1280x600-line2-capture.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1280x600-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1280x600-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1280x600-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1366x650-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1366x650-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1366x650-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1440x900-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1440x900-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1440x900-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-1440x900-line2-capture.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-390x667-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-390x667-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v3-final-390x667-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1280x600-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1280x600-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1280x600-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1280x600-ru-long-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1280x600-ru-long-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1280x600-ru-long-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1366x650-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1366x650-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1366x650-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1440x900-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1440x900-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1440x900-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1920x910-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1920x910-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-1920x910-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x667-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x667-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x667-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x667-ru-long-reduced-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x667-ru-long-reduced-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x667-ru-long-reduced-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x844-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x844-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-390x844-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-desktop-result.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-desktop-save-failure-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-desktop-save-failure-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1280x600-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1280x600-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1280x600-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1280x600-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1280x600-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1280x600-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1366x650-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1366x650-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1366x650-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1440x900-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1440x900-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-1440x900-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-390x667-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-390x667-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-final-390x667-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-phone-mic-failure-after.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-phone-mic-failure-during.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: evidence/studio-v5-phone-result.png",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: icons.js",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: index.html",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: locale.js",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: package.json",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: presentation.css",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: public/calibration/INTER-LICENSE.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: public/calibration/InterVariable.woff2",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: public/calibration/LUCIDE-LICENSE.txt",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: public/media/example-dub.mp4",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: public/media/scene.mp4",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: public/media/take-0.wav",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: public/media/take-1.wav",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: public/media/take-2.wav",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: result-player.css",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: result-player.js",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: src.js",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: studio-highfi.css",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: studio.css",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: toast.js",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: ui.js",
+      "passed": true
+    },
+    {
+      "name": "B unchanged: waveform-data.js",
+      "passed": true
+    },
+    {
+      "name": "Only bounded existing A files change",
+      "passed": true,
+      "changed": [
+        "BRIEF.md",
+        "README.md",
+        "index.html",
+        "src.js"
+      ],
+      "previousFingerprintCount": 158
+    },
+    {
+      "name": "Canonical unchanged: _docs/frontend-flows/00-shared-contract.md",
+      "passed": true
+    },
+    {
+      "name": "Canonical unchanged: _docs/frontend-flows/06-new-dub.md",
+      "passed": true
+    },
+    {
+      "name": "Canonical unchanged: _docs/frontend-flows/09-record.md",
+      "passed": true
+    },
+    {
+      "name": "Canonical unchanged: _docs/frontend-implementation-contract.md",
+      "passed": true
+    },
+    {
+      "name": "Canonical unchanged: _docs/business-requirements/BR-001_custom_video_dubbing.md",
+      "passed": true
+    },
+    {
+      "name": "Canonical unchanged: _docs/specifications/SPEC-001_dubbed_mvp.md",
+      "passed": true
+    },
+    {
+      "name": "Canonical unchanged: _docs/HANDOFF.md",
+      "passed": true
+    },
+    {
+      "name": "Canonical unchanged: _docs/PROJECT_BRAINSTORM.md",
+      "passed": true
+    },
+    {
+      "name": "Canonical unchanged: brainstorm.md",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: stop",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: pauseAudition",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: isSaveFailure",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: isMicFailure",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: atCompleteEnd",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: retryGuidance",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: seekStart",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: updateClock",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: startAudition",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: play",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: record",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: move",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: acceptAndMove",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: guard",
+      "passed": true
+    },
+    {
+      "name": "Protected common behavior unchanged: showResult",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: ab-calibration.html",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: calibration.html",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: comparison-components.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: comparison-lab.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: highfi.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: icons.js",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: index.html",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: locale.js",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: panel-responsive.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: panel-result.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: presentation.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: result-player.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: result-player.js",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: src.js",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: style.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: toast.js",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: ui.js",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: video-center.css",
+      "passed": true
+    },
+    {
+      "name": "No retired feature copy: waveform-data.js",
+      "passed": true
+    },
+    {
+      "name": "No speaker/legend hooks",
+      "passed": true
+    },
+    {
+      "name": "git diff --check",
+      "passed": true,
+      "output": "warning: in the working copy of '_docs/PROJECT_BRAINSTORM.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-app-layout.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-proof.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard.sha256', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-after.jsonl', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-rendered-metrics.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/10-result.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/11-projects.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-clean-light-adoption.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-clean-light-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-workflow.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/specifications/SPEC-001_dubbed_mvp.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/task-drafts/frontend-flows/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/task-drafts/frontend-flows/preparation_progress_cancel_and_reprocess.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'brainstorm.md', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "name": "No production frontend",
+      "passed": true
+    }
+  ]
+}

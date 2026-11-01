@@ -1,0 +1,573 @@
+{
+  "version": "core-journey-lowfi-v5",
+  "browser": "156.0.8078.48",
+  "date": "2026-10-27",
+  "method": "Wheel only enough for full button visibility +8px, coordinate click, no locator auto-scroll; assertions on viewport crops",
+  "checks": [
+    {
+      "viewport": [
+        390,
+        667
+      ],
+      "longDialogue": false,
+      "reducedMotion": "no-preference",
+      "result": "PASS",
+      "firstCapture": {
+        "scroll": 133,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 111,
+            "bottom": 312.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 357.375,
+            "bottom": 421.375,
+            "height": 64
+          },
+          "#capture-badge": {
+            "top": 127,
+            "bottom": 160,
+            "height": 33
+          },
+          "#record": {
+            "top": 611.375,
+            "bottom": 659.375,
+            "height": 48
+          }
+        }
+      },
+      "beforeNext": {
+        "scroll": 245,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": -1,
+            "bottom": 200.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 245.375,
+            "bottom": 309.375,
+            "height": 64
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 499.375,
+            "bottom": 547.375,
+            "height": 48
+          }
+        }
+      },
+      "newLine": {
+        "scroll": 228,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 16,
+            "bottom": 217.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 262.375,
+            "bottom": 294.375,
+            "height": 32
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 516.375,
+            "bottom": 564.375,
+            "height": 48
+          }
+        }
+      },
+      "secondCapture": {
+        "scroll": 228,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 16,
+            "bottom": 217.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 262.375,
+            "bottom": 294.375,
+            "height": 32
+          },
+          "#capture-badge": {
+            "top": 32,
+            "bottom": 65,
+            "height": 33
+          },
+          "#record": {
+            "top": 516.375,
+            "bottom": 564.375,
+            "height": 48
+          }
+        }
+      }
+    },
+    {
+      "viewport": [
+        390,
+        667
+      ],
+      "longDialogue": true,
+      "reducedMotion": "no-preference",
+      "result": "PASS",
+      "firstCapture": {
+        "scroll": 194,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 50,
+            "bottom": 251.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 296.375,
+            "bottom": 424.375,
+            "height": 128
+          },
+          "#capture-badge": {
+            "top": 66,
+            "bottom": 99,
+            "height": 33
+          },
+          "#record": {
+            "top": 611.375,
+            "bottom": 659.375,
+            "height": 48
+          }
+        }
+      },
+      "beforeNext": {
+        "scroll": 306,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": -62,
+            "bottom": 139.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 184.375,
+            "bottom": 312.375,
+            "height": 128
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 499.375,
+            "bottom": 547.375,
+            "height": 48
+          }
+        }
+      },
+      "newLine": {
+        "scroll": 228,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 16,
+            "bottom": 217.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 262.375,
+            "bottom": 390.375,
+            "height": 128
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 577.375,
+            "bottom": 625.375,
+            "height": 48
+          }
+        }
+      },
+      "secondCapture": {
+        "scroll": 228,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 16,
+            "bottom": 217.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 262.375,
+            "bottom": 390.375,
+            "height": 128
+          },
+          "#capture-badge": {
+            "top": 32,
+            "bottom": 65,
+            "height": 33
+          },
+          "#record": {
+            "top": 577.375,
+            "bottom": 625.375,
+            "height": 48
+          }
+        }
+      }
+    },
+    {
+      "viewport": [
+        390,
+        667
+      ],
+      "longDialogue": true,
+      "reducedMotion": "reduce",
+      "result": "PASS",
+      "firstCapture": {
+        "scroll": 194,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 50,
+            "bottom": 251.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 296.375,
+            "bottom": 424.375,
+            "height": 128
+          },
+          "#capture-badge": {
+            "top": 66,
+            "bottom": 99,
+            "height": 33
+          },
+          "#record": {
+            "top": 611.375,
+            "bottom": 659.375,
+            "height": 48
+          }
+        }
+      },
+      "beforeNext": {
+        "scroll": 306,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": -62,
+            "bottom": 139.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 184.375,
+            "bottom": 312.375,
+            "height": 128
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 499.375,
+            "bottom": 547.375,
+            "height": 48
+          }
+        }
+      },
+      "newLine": {
+        "scroll": 228,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 16,
+            "bottom": 217.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 262.375,
+            "bottom": 390.375,
+            "height": 128
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 577.375,
+            "bottom": 625.375,
+            "height": 48
+          }
+        }
+      },
+      "secondCapture": {
+        "scroll": 228,
+        "height": 667,
+        "items": {
+          "#scene": {
+            "top": 16,
+            "bottom": 217.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 262.375,
+            "bottom": 390.375,
+            "height": 128
+          },
+          "#capture-badge": {
+            "top": 32,
+            "bottom": 65,
+            "height": 33
+          },
+          "#record": {
+            "top": 577.375,
+            "bottom": 625.375,
+            "height": 48
+          }
+        }
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "longDialogue": false,
+      "reducedMotion": "no-preference",
+      "result": "PASS",
+      "firstCapture": {
+        "scroll": 0,
+        "height": 844,
+        "items": {
+          "#scene": {
+            "top": 244,
+            "bottom": 445.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 490.375,
+            "bottom": 554.375,
+            "height": 64
+          },
+          "#capture-badge": {
+            "top": 260,
+            "bottom": 293,
+            "height": 33
+          },
+          "#record": {
+            "top": 744.375,
+            "bottom": 792.375,
+            "height": 48
+          }
+        }
+      },
+      "beforeNext": {
+        "scroll": 67,
+        "height": 844,
+        "items": {
+          "#scene": {
+            "top": 177,
+            "bottom": 378.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 423.375,
+            "bottom": 487.375,
+            "height": 64
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 677.375,
+            "bottom": 725.375,
+            "height": 48
+          }
+        }
+      },
+      "newLine": {
+        "scroll": 67,
+        "height": 844,
+        "items": {
+          "#scene": {
+            "top": 177,
+            "bottom": 378.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 423.375,
+            "bottom": 455.375,
+            "height": 32
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 677.375,
+            "bottom": 725.375,
+            "height": 48
+          }
+        }
+      },
+      "secondCapture": {
+        "scroll": 67,
+        "height": 844,
+        "items": {
+          "#scene": {
+            "top": 177,
+            "bottom": 378.375,
+            "height": 201.375
+          },
+          "#dialogue": {
+            "top": 423.375,
+            "bottom": 455.375,
+            "height": 32
+          },
+          "#capture-badge": {
+            "top": 193,
+            "bottom": 226,
+            "height": 33
+          },
+          "#record": {
+            "top": 677.375,
+            "bottom": 725.375,
+            "height": 48
+          }
+        }
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "longDialogue": false,
+      "reducedMotion": "no-preference",
+      "result": "PASS",
+      "firstCapture": {
+        "scroll": 0,
+        "height": 900,
+        "items": {
+          "#scene": {
+            "top": 185,
+            "bottom": 702.5,
+            "height": 517.5
+          },
+          "#dialogue": {
+            "top": 747.5,
+            "bottom": 781.5,
+            "height": 34
+          },
+          "#capture-badge": {
+            "top": 201,
+            "bottom": 234,
+            "height": 33
+          },
+          "#record": {
+            "top": 292,
+            "bottom": 336,
+            "height": 44
+          }
+        }
+      },
+      "beforeNext": {
+        "scroll": 0,
+        "height": 900,
+        "items": {
+          "#scene": {
+            "top": 185,
+            "bottom": 702.5,
+            "height": 517.5
+          },
+          "#dialogue": {
+            "top": 747.5,
+            "bottom": 781.5,
+            "height": 34
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 292,
+            "bottom": 336,
+            "height": 44
+          }
+        }
+      },
+      "newLine": {
+        "scroll": 0,
+        "height": 900,
+        "items": {
+          "#scene": {
+            "top": 185,
+            "bottom": 702.5,
+            "height": 517.5
+          },
+          "#dialogue": {
+            "top": 747.5,
+            "bottom": 781.5,
+            "height": 34
+          },
+          "#capture-badge": {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          "#record": {
+            "top": 292,
+            "bottom": 336,
+            "height": 44
+          }
+        }
+      },
+      "secondCapture": {
+        "scroll": 0,
+        "height": 900,
+        "items": {
+          "#scene": {
+            "top": 185,
+            "bottom": 702.5,
+            "height": 517.5
+          },
+          "#dialogue": {
+            "top": 747.5,
+            "bottom": 781.5,
+            "height": 34
+          },
+          "#capture-badge": {
+            "top": 201,
+            "bottom": 234,
+            "height": 33
+          },
+          "#record": {
+            "top": 292,
+            "bottom": 336,
+            "height": 44
+          }
+        }
+      }
+    }
+  ]
+}

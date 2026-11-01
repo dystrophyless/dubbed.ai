@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23T01:43:13.142Z",
+  "boundary": "Current dirty-worktree UI upload/quote/start with fresh mock account; fake microphone configured but no capture action yet; Chromium muted.",
+  "quoted": "New dub\n\nChoose a source video, review the selected section, and request its exact processing quote.\n\n1 of 2 project slots used\nManage projects\n\nValidated draft saved in this mock workspace.\n\nSaved source\n\nsource-dialogue\n\nsource-dialogue.mp4\n\n8.625 · 640 × 360\n\nReplace video\nVideo preview\nSelected section\n\nChoose one contiguous interval from the saved source. Only this interval proceeds to processing.\n\nStart (seconds)\nEnd (seconds)\n\nSelected duration: 8.625 seconds\n\nProcessing quote\nCredits for this section\n9\nAvailable after reservations\n120\nIn processing\n0\nProcess for 9 credits",
+  "url": "http://127.0.0.1:4280/new",
+  "afterStart": "New dub\n\nChoose a source video, review the selected section, and request its exact processing quote.\n\n1 of 2 project slots used\nManage projects\n\nSaved source\n\nsource-dialogue\n\nsource-dialogue.mp4\n\n8.625 · 640 × 360\n\nReplace video\nVideo preview\nSelected section\n\nChoose one contiguous interval from the saved source. Only this interval proceeds to processing.\n\nStart (seconds)\nEnd (seconds)\n\nSelected duration: 8.625 seconds\n\nProcessing quote\nCredits for this section\n9\nAvailable after reservations\n120\nIn processing\n0\nProcess for 9 credits",
+  "buttons": [
+    "Manage projects",
+    "Replace video",
+    "Process for 9 credits"
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,48 @@
+{
+  "issue": 80,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "225f921426535f023caf49fdf35fdac97cc8dac087676714d00448f346d38897",
+    "planned": "c18776f171e55324d7683a4e86aa57a16dcd230cdb46e649a447557ccf8d419a",
+    "readback": "c18776f171e55324d7683a4e86aa57a16dcd230cdb46e649a447557ccf8d419a"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Sign in and restore a protected session without replaying work",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Sign in and restore a protected session without replaying work",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

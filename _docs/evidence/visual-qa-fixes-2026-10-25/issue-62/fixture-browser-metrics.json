@@ -1,0 +1,493 @@
+{
+  "date": "2026-10-25T12:18:13.563Z",
+  "fixture": "Existing controlled workspace-state-visual facade; held/error/unknown outcomes are synthetic UI results, not persistent account operations.",
+  "origin": "http://127.0.0.1:4562",
+  "states": [
+    {
+      "name": "locale-pending-en-to-ru-desktop",
+      "screenshot": "screenshots\\fixture-locale-pending-en-to-ru-desktop.png",
+      "language": "ru",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "document": {
+        "width": 1440,
+        "height": 1107
+      },
+      "visibleText": "Перейти к содержимому\nDubbed\nНовая озвучка\nПроекты\nКредиты\nАккаунт\nКредиты\n120\nЯзык\nEN\nRU\nВыйти\nАккаунт\n\nНастройте язык, способы входа и доступ к аккаунту.\n\nworkspace-visual@example.invalid\n\nВ этой версии используются тестовые данные аккаунта. Изменения остаются в этом браузере.\nЯзык\n\nВыберите язык интерфейса Dubbed.\n\nЯзык\nEnglish\nРусский\n\nСохраняем язык аккаунта…\n\nСпособы входа\n\nСписок получен из аккаунта. Наличие одинакового адреса само по себе не означает связь.\n\nGoogle\n\nworkspace-visual@example.invalid\n\nПодтверждён\n\nПодключён\n@\nЭлектронная почта и пароль\n\nworkspace-visual@example.invalid\n\nПодтверждён\n\nПодключён\nИзменить пароль\nТекущий пароль\nНовый пароль\n\nНе менее 8 символов. Особые классы символов не требуются.\n\nСохранить пароль\nЗабыли пароль?\nСеанс\n\nВыйдите из аккаунта на этом устройстве.\n\nВыйти\nУдалить аккаунт\n\nЭто действие закроет доступ к данным аккаунта и проектам.\n\nУдалить аккаунт",
+      "localeControl": {
+        "value": "ru",
+        "busy": "true",
+        "disabled": false
+      },
+      "fontLoaded": true,
+      "controls": [
+        {
+          "text": "English\nРусский",
+          "height": 48,
+          "fontSize": "15px",
+          "disabled": false
+        },
+        {
+          "text": "Сохранить пароль",
+          "height": 44,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Забыли пароль?",
+          "height": 40,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "Выйти",
+          "height": 40,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "Удалить аккаунт",
+          "height": 44,
+          "fontSize": "16px",
+          "disabled": false
+        }
+      ],
+      "disclosureTypography": [],
+      "dialog": null,
+      "callTrace": [
+        "credits.snapshot",
+        "account.load",
+        "account.setLocale"
+      ]
+    },
+    {
+      "name": "locale-failure-en-restored-desktop",
+      "screenshot": "screenshots\\fixture-locale-failure-en-restored-desktop.png",
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 1151
+      },
+      "visibleText": "Skip to content\nDubbed\nNew dub\nProjects\nCredits\nAccount\nCredits\n120\nLanguage\nEN\nRU\nThe language change could not be saved. The language saved in your account has been restored.\nSign out\nAccount\n\nManage your language, sign-in methods, and account access.\n\nworkspace-visual@example.invalid\n\nThis preview uses simulated account data. Changes stay in this browser.\nLanguage\n\nChoose the language used across Dubbed.\n\nLanguage\nEnglish\nРусский\nThe account language was not saved. English is still selected. Retry to save the account preference.\nRetry saving language\nSign-in methods\n\nThese methods are reported by your account. Email addresses are not used to infer a link.\n\nGoogle\n\nworkspace-visual@example.invalid\n\nVerified\n\nLinked\n@\nEmail and password\n\nworkspace-visual@example.invalid\n\nVerified\n\nLinked\nChange password\nCurrent password\nNew password\n\nUse at least 8 characters. No character classes are required.\n\nSave password\nForgot password?\nSession\n\nSign out from this device.\n\nSign out\nDelete account\n\nThis action removes your access to account data and projects.\n\nDelete account",
+      "localeControl": {
+        "value": "en",
+        "busy": null,
+        "disabled": false
+      },
+      "fontLoaded": true,
+      "controls": [
+        {
+          "text": "English\nРусский",
+          "height": 48,
+          "fontSize": "15px",
+          "disabled": false
+        },
+        {
+          "text": "Retry saving language",
+          "height": 32,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "Save password",
+          "height": 44,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Forgot password?",
+          "height": 40,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "Sign out",
+          "height": 40,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "Delete account",
+          "height": 44,
+          "fontSize": "16px",
+          "disabled": false
+        }
+      ],
+      "disclosureTypography": [],
+      "dialog": null,
+      "callTrace": [
+        "credits.snapshot",
+        "account.load",
+        "account.setLocale"
+      ],
+      "localeRollbackCopyCheck": {
+        "expectedCurrentLocaleCopy": "English is still selected.",
+        "currentLocaleCopyPresent": true,
+        "sharedRestoredCopy": "The language saved in your account has been restored.",
+        "sharedRestoredCopyPresent": true,
+        "staleChangedHereCopyAbsent": true
+      }
+    },
+    {
+      "name": "locale-failure-ru-restored-phone390",
+      "screenshot": "screenshots\\fixture-locale-failure-ru-restored-phone390.png",
+      "language": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1929
+      },
+      "visibleText": "Перейти к содержимому\nDubbed\nКредиты\n120\nАккаунт\n\nНастройте язык, способы входа и доступ к аккаунту.\n\nworkspace-visual@example.invalid\n\nВ этой версии используются тестовые данные аккаунта. Изменения остаются в этом браузере.\nЯзык\n\nВыберите язык интерфейса Dubbed.\n\nЯзык\nEnglish\nРусский\nНе удалось сохранить язык аккаунта. Сейчас выбран язык «Русский». Повторите попытку.\nПовторить сохранение языка\nСпособы входа\n\nСписок получен из аккаунта. Наличие одинакового адреса само по себе не означает связь.\n\nGoogle\n\nworkspace-visual@example.invalid\n\nПодтверждён\n\nПодключён\n@\nЭлектронная почта и пароль\n\nworkspace-visual@example.invalid\n\nПодтверждён\n\nПодключён\nИзменить пароль\nТекущий пароль\nНовый пароль\n\nНе менее 8 символов. Особые классы символов не требуются.\n\nСохранить пароль\nЗабыли пароль?\nСеанс\n\nВыйдите из аккаунта на этом устройстве.\n\nВыйти\nУдалить аккаунт\n\nЭто действие закроет доступ к данным аккаунта и проектам.\n\nУдалить аккаунт",
+      "localeControl": {
+        "value": "ru",
+        "busy": null,
+        "disabled": false
+      },
+      "fontLoaded": true,
+      "controls": [
+        {
+          "text": "English\nРусский",
+          "height": 48,
+          "fontSize": "15px",
+          "disabled": false
+        },
+        {
+          "text": "Повторить сохранение языка",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Сохранить пароль",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Забыли пароль?",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Выйти",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Удалить аккаунт",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        }
+      ],
+      "disclosureTypography": [],
+      "dialog": null,
+      "callTrace": [
+        "credits.snapshot",
+        "account.load",
+        "account.setLocale"
+      ],
+      "localeRollbackCopyCheck": {
+        "expectedCurrentLocaleCopy": "Сейчас выбран язык «Русский».",
+        "currentLocaleCopyPresent": true,
+        "sharedRestoredCopy": null,
+        "sharedRestoredCopyPresent": null,
+        "staleChangedHereCopyAbsent": true
+      }
+    },
+    {
+      "name": "delete-error-en-phone390",
+      "screenshot": "screenshots\\fixture-delete-error-en-phone390.png",
+      "language": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1877
+      },
+      "visibleText": "Skip to content\nDubbed\nCredits\n120\nAccount\n\nManage your language, sign-in methods, and account access.\n\nworkspace-visual@example.invalid\n\nThis preview uses simulated account data. Changes stay in this browser.\nLanguage\n\nChoose the language used across Dubbed.\n\nLanguage\nEnglish\nРусский\nSign-in methods\n\nThese methods are reported by your account. Email addresses are not used to infer a link.\n\nGoogle\n\nworkspace-visual@example.invalid\n\nVerified\n\nLinked\n@\nEmail and password\n\nworkspace-visual@example.invalid\n\nVerified\n\nLinked\nChange password\nCurrent password\nNew password\n\nUse at least 8 characters. No character classes are required.\n\nSave password\nForgot password?\nSession\n\nSign out from this device.\n\nSign out\nDelete account\n\nThis action removes your access to account data and projects.\n\nThis service is not available in this build.\n\nDelete account\nDelete this account?\n\nAccount to delete: workspace-visual@example.invalid\n\nThis removes access to your projects, recordings, takes, and results from Dubbed and cannot be undone here. It does not retract files already downloaded outside Dubbed or promise backup erasure.\n\nPurchased credit remainder: 0. Deletion does not submit a refund request or promise a refund.\n\nThis service is not available in this build.\n\nType DELETE to confirm\n\nThe word must match. Leading and trailing spaces are ignored.\n\nCancel\nDelete account",
+      "localeControl": {
+        "value": "en",
+        "busy": null,
+        "disabled": false
+      },
+      "fontLoaded": true,
+      "controls": [
+        {
+          "text": "English\nРусский",
+          "height": 48,
+          "fontSize": "15px",
+          "disabled": false
+        },
+        {
+          "text": "Save password",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Forgot password?",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Sign out",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Delete account",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Cancel",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Delete account",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        }
+      ],
+      "disclosureTypography": [
+        {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      ],
+      "dialog": {
+        "text": "Delete this account?\n\nAccount to delete: workspace-visual@example.invalid\n\nThis removes access to your projects, recordings, takes, and results from Dubbed and cannot be undone here. It does not retract files already downloaded outside Dubbed or promise backup erasure.\n\nPurchased credit remainder: 0. Deletion does not submit a refund request or promise a refund.\n\nThis service is not available in this build.\n\nType DELETE to confirm\n\nThe word must match. Leading and trailing spaces are ignored.\n\nCancel\nDelete account",
+        "describedBy": "account-delete-identity account-delete-description account-delete-impact radix-_r_d_"
+      },
+      "callTrace": [
+        "credits.snapshot",
+        "account.load",
+        "account.delete",
+        "account.load"
+      ]
+    },
+    {
+      "name": "delete-error-ru-phone390",
+      "screenshot": "screenshots\\fixture-delete-error-ru-phone390.png",
+      "language": "ru",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1875
+      },
+      "visibleText": "Перейти к содержимому\nDubbed\nКредиты\n120\nАккаунт\n\nНастройте язык, способы входа и доступ к аккаунту.\n\nworkspace-visual@example.invalid\n\nВ этой версии используются тестовые данные аккаунта. Изменения остаются в этом браузере.\nЯзык\n\nВыберите язык интерфейса Dubbed.\n\nЯзык\nEnglish\nРусский\nСпособы входа\n\nСписок получен из аккаунта. Наличие одинакового адреса само по себе не означает связь.\n\nGoogle\n\nworkspace-visual@example.invalid\n\nПодтверждён\n\nПодключён\n@\nЭлектронная почта и пароль\n\nworkspace-visual@example.invalid\n\nПодтверждён\n\nПодключён\nИзменить пароль\nТекущий пароль\nНовый пароль\n\nНе менее 8 символов. Особые классы символов не требуются.\n\nСохранить пароль\nЗабыли пароль?\nСеанс\n\nВыйдите из аккаунта на этом устройстве.\n\nВыйти\nУдалить аккаунт\n\nЭто действие закроет доступ к данным аккаунта и проектам.\n\nЭтот сервис недоступен в данной сборке.\n\nУдалить аккаунт\nУдалить этот аккаунт?\n\nАккаунт для удаления: workspace-visual@example.invalid\n\nДоступ к проектам, записям, дублям и результатам в Dubbed будет удалён без возможности отмены. Это не удалит ранее скачанные файлы вне Dubbed и не является обещанием удалить резервные копии.\n\nОстаток купленных кредитов: 0. Запрос на возврат не отправляется, возврат средств не гарантируется.\n\nЭтот сервис недоступен в данной сборке.\n\nВведите УДАЛИТЬ для подтверждения\n\nСлово должно совпадать. Пробелы в начале и конце не учитываются.\n\nОтмена\nУдалить аккаунт",
+      "localeControl": {
+        "value": "ru",
+        "busy": null,
+        "disabled": false
+      },
+      "fontLoaded": true,
+      "controls": [
+        {
+          "text": "English\nРусский",
+          "height": 48,
+          "fontSize": "15px",
+          "disabled": false
+        },
+        {
+          "text": "Сохранить пароль",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Забыли пароль?",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Выйти",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Удалить аккаунт",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Отмена",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Удалить аккаунт",
+          "height": 48,
+          "fontSize": "16px",
+          "disabled": false
+        }
+      ],
+      "disclosureTypography": [
+        {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      ],
+      "dialog": {
+        "text": "Удалить этот аккаунт?\n\nАккаунт для удаления: workspace-visual@example.invalid\n\nДоступ к проектам, записям, дублям и результатам в Dubbed будет удалён без возможности отмены. Это не удалит ранее скачанные файлы вне Dubbed и не является обещанием удалить резервные копии.\n\nОстаток купленных кредитов: 0. Запрос на возврат не отправляется, возврат средств не гарантируется.\n\nЭтот сервис недоступен в данной сборке.\n\nВведите УДАЛИТЬ для подтверждения\n\nСлово должно совпадать. Пробелы в начале и конце не учитываются.\n\nОтмена\nУдалить аккаунт",
+        "describedBy": "account-delete-identity account-delete-description account-delete-impact radix-_r_d_"
+      },
+      "callTrace": [
+        "credits.snapshot",
+        "account.load",
+        "account.delete",
+        "account.load"
+      ]
+    },
+    {
+      "name": "delete-unknown-en-desktop",
+      "screenshot": "screenshots\\fixture-delete-unknown-en-desktop.png",
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 1135
+      },
+      "visibleText": "Skip to content\nDubbed\nNew dub\nProjects\nCredits\nAccount\nCredits\n120\nLanguage\nEN\nRU\nSign out\nAccount\n\nManage your language, sign-in methods, and account access.\n\nworkspace-visual@example.invalid\n\nThis preview uses simulated account data. Changes stay in this browser.\nDeletion is not confirmed. Check its status before trying again.Check deletion status\nLanguage\n\nChoose the language used across Dubbed.\n\nLanguage\nEnglish\nРусский\nSign-in methods\n\nThese methods are reported by your account. Email addresses are not used to infer a link.\n\nGoogle\n\nworkspace-visual@example.invalid\n\nVerified\n\nLinked\n@\nEmail and password\n\nworkspace-visual@example.invalid\n\nVerified\n\nLinked\nChange password\nCurrent password\nNew password\n\nUse at least 8 characters. No character classes are required.\n\nSave password\nForgot password?\nSession\n\nSign out from this device.\n\nSign out\nDelete account\n\nThis action removes your access to account data and projects.\n\nDelete account\nDelete this account?\n\nAccount to delete: workspace-visual@example.invalid\n\nThis removes access to your projects, recordings, takes, and results from Dubbed and cannot be undone here. It does not retract files already downloaded outside Dubbed or promise backup erasure.\n\nPurchased credit remainder: 0. Deletion does not submit a refund request or promise a refund.\n\nDeletion is not confirmed. Check its status before trying again.Check deletion status\nType DELETE to confirm\n\nThe word must match. Leading and trailing spaces are ignored.\n\nCancel\nDelete account",
+      "localeControl": {
+        "value": "en",
+        "busy": null,
+        "disabled": false
+      },
+      "fontLoaded": true,
+      "controls": [
+        {
+          "text": "Check deletion status",
+          "height": 32,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "English\nРусский",
+          "height": 48,
+          "fontSize": "15px",
+          "disabled": false
+        },
+        {
+          "text": "Save password",
+          "height": 44,
+          "fontSize": "16px",
+          "disabled": false
+        },
+        {
+          "text": "Forgot password?",
+          "height": 40,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "Sign out",
+          "height": 40,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "Delete account",
+          "height": 44,
+          "fontSize": "16px",
+          "disabled": true
+        },
+        {
+          "text": "Check deletion status",
+          "height": 32,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "height": 40,
+          "fontSize": "16px",
+          "disabled": true
+        },
+        {
+          "text": "Cancel",
+          "height": 40,
+          "fontSize": "14px",
+          "disabled": false
+        },
+        {
+          "text": "Delete account",
+          "height": 44,
+          "fontSize": "16px",
+          "disabled": true
+        }
+      ],
+      "disclosureTypography": [
+        {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        },
+        {
+          "fontSize": "16px",
+          "lineHeight": "24px"
+        }
+      ],
+      "dialog": {
+        "text": "Delete this account?\n\nAccount to delete: workspace-visual@example.invalid\n\nThis removes access to your projects, recordings, takes, and results from Dubbed and cannot be undone here. It does not retract files already downloaded outside Dubbed or promise backup erasure.\n\nPurchased credit remainder: 0. Deletion does not submit a refund request or promise a refund.\n\nDeletion is not confirmed. Check its status before trying again.Check deletion status\nType DELETE to confirm\n\nThe word must match. Leading and trailing spaces are ignored.\n\nCancel\nDelete account",
+        "describedBy": "account-delete-identity account-delete-description account-delete-impact radix-_r_7_"
+      },
+      "callTrace": [
+        "credits.snapshot",
+        "account.load",
+        "account.delete"
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "browserVersion": "156.0.8078.4"
+}

@@ -1,0 +1,1446 @@
+{
+  "variant": "A",
+  "result": "PASS",
+  "checks": [
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1920,
+        910
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 352,
+          "y": 148,
+          "w": 920,
+          "h": 517.5,
+          "right": 1272,
+          "bottom": 665.5
+        },
+        "wave": {
+          "x": 352,
+          "y": 765.5,
+          "w": 920,
+          "h": 32,
+          "right": 1272,
+          "bottom": 797.5
+        },
+        "script": {
+          "x": 352,
+          "y": 665.5,
+          "w": 920,
+          "h": 100,
+          "right": 1272,
+          "bottom": 765.5
+        },
+        "timeline": {
+          "x": 352,
+          "y": 765.5,
+          "w": 920,
+          "h": 82,
+          "right": 1272,
+          "bottom": 847.5
+        },
+        "panel": {
+          "x": 1296,
+          "y": 148,
+          "w": 272,
+          "h": 332,
+          "right": 1568,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 1190,
+          "y": 813.5,
+          "w": 80,
+          "h": 32,
+          "right": 1270,
+          "bottom": 845.5
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 112,
+          "y": 148,
+          "w": 920,
+          "h": 517.5,
+          "right": 1032,
+          "bottom": 665.5
+        },
+        "wave": {
+          "x": 112,
+          "y": 765.5,
+          "w": 920,
+          "h": 32,
+          "right": 1032,
+          "bottom": 797.5
+        },
+        "script": {
+          "x": 112,
+          "y": 665.5,
+          "w": 920,
+          "h": 100,
+          "right": 1032,
+          "bottom": 765.5
+        },
+        "timeline": {
+          "x": 112,
+          "y": 765.5,
+          "w": 920,
+          "h": 82,
+          "right": 1032,
+          "bottom": 847.5
+        },
+        "panel": {
+          "x": 1056,
+          "y": 148,
+          "w": 272,
+          "h": 332,
+          "right": 1328,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 950,
+          "y": 813.5,
+          "w": 80,
+          "h": 32,
+          "right": 1030,
+          "bottom": 845.5
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1366,
+        650
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 112.78125,
+          "y": 128,
+          "w": 732.4375,
+          "h": 411.984375,
+          "right": 845.21875,
+          "bottom": 539.984375
+        },
+        "wave": {
+          "x": 112.78125,
+          "y": 551.984375,
+          "w": 732.4375,
+          "h": 32,
+          "right": 845.21875,
+          "bottom": 583.984375
+        },
+        "script": {
+          "x": 885.21875,
+          "y": 177,
+          "w": 352,
+          "h": 128,
+          "right": 1237.21875,
+          "bottom": 305
+        },
+        "timeline": {
+          "x": 112.78125,
+          "y": 551.984375,
+          "w": 732.4375,
+          "h": 82,
+          "right": 845.21875,
+          "bottom": 633.984375
+        },
+        "panel": {
+          "x": 869.21875,
+          "y": 128,
+          "w": 384,
+          "h": 352,
+          "right": 1253.21875,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 763.21875,
+          "y": 599.984375,
+          "w": 80,
+          "h": 32,
+          "right": 843.21875,
+          "bottom": 631.984375
+        },
+        "overflow": false,
+        "scriptParent": "compact-script-slot",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1280,
+        600
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 114.21875,
+          "y": 128,
+          "w": 643.546875,
+          "h": 361.984375,
+          "right": 757.765625,
+          "bottom": 489.984375
+        },
+        "wave": {
+          "x": 114.21875,
+          "y": 501.984375,
+          "w": 643.546875,
+          "h": 32,
+          "right": 757.765625,
+          "bottom": 533.984375
+        },
+        "script": {
+          "x": 797.765625,
+          "y": 177,
+          "w": 352,
+          "h": 128,
+          "right": 1149.765625,
+          "bottom": 305
+        },
+        "timeline": {
+          "x": 114.21875,
+          "y": 501.984375,
+          "w": 643.546875,
+          "h": 82,
+          "right": 757.765625,
+          "bottom": 583.984375
+        },
+        "panel": {
+          "x": 781.765625,
+          "y": 128,
+          "w": 384,
+          "h": 352,
+          "right": 1165.765625,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 675.765625,
+          "y": 549.984375,
+          "w": 80,
+          "h": 32,
+          "right": 755.765625,
+          "bottom": 581.984375
+        },
+        "overflow": false,
+        "scriptParent": "compact-script-slot",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1280,
+        699
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 32,
+          "y": 128,
+          "w": 808,
+          "h": 454.5,
+          "right": 840,
+          "bottom": 582.5
+        },
+        "wave": {
+          "x": 32,
+          "y": 594.5,
+          "w": 808,
+          "h": 32,
+          "right": 840,
+          "bottom": 626.5
+        },
+        "script": {
+          "x": 880,
+          "y": 177,
+          "w": 352,
+          "h": 128,
+          "right": 1232,
+          "bottom": 305
+        },
+        "timeline": {
+          "x": 32,
+          "y": 594.5,
+          "w": 808,
+          "h": 82,
+          "right": 840,
+          "bottom": 676.5
+        },
+        "panel": {
+          "x": 864,
+          "y": 128,
+          "w": 384,
+          "h": 352,
+          "right": 1248,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 758,
+          "y": 642.5,
+          "w": 80,
+          "h": 32,
+          "right": 838,
+          "bottom": 674.5
+        },
+        "overflow": false,
+        "scriptParent": "compact-script-slot",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1280,
+        700
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 32,
+          "y": 128,
+          "w": 808,
+          "h": 454.5,
+          "right": 840,
+          "bottom": 582.5
+        },
+        "wave": {
+          "x": 32,
+          "y": 594.5,
+          "w": 808,
+          "h": 32,
+          "right": 840,
+          "bottom": 626.5
+        },
+        "script": {
+          "x": 880,
+          "y": 177,
+          "w": 352,
+          "h": 128,
+          "right": 1232,
+          "bottom": 305
+        },
+        "timeline": {
+          "x": 32,
+          "y": 594.5,
+          "w": 808,
+          "h": 82,
+          "right": 840,
+          "bottom": 676.5
+        },
+        "panel": {
+          "x": 864,
+          "y": 128,
+          "w": 384,
+          "h": 352,
+          "right": 1248,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 758,
+          "y": 642.5,
+          "w": 80,
+          "h": 32,
+          "right": 838,
+          "bottom": 674.5
+        },
+        "overflow": false,
+        "scriptParent": "compact-script-slot",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1280,
+        701
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 38.671875,
+          "y": 144,
+          "w": 794.65625,
+          "h": 446.984375,
+          "right": 833.328125,
+          "bottom": 590.984375
+        },
+        "wave": {
+          "x": 38.671875,
+          "y": 602.984375,
+          "w": 794.65625,
+          "h": 32,
+          "right": 833.328125,
+          "bottom": 634.984375
+        },
+        "script": {
+          "x": 873.328125,
+          "y": 193,
+          "w": 352,
+          "h": 128,
+          "right": 1225.328125,
+          "bottom": 321
+        },
+        "timeline": {
+          "x": 38.671875,
+          "y": 602.984375,
+          "w": 794.65625,
+          "h": 82,
+          "right": 833.328125,
+          "bottom": 684.984375
+        },
+        "panel": {
+          "x": 857.328125,
+          "y": 144,
+          "w": 384,
+          "h": 352,
+          "right": 1241.328125,
+          "bottom": 496
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 751.328125,
+          "y": 650.984375,
+          "w": 80,
+          "h": 32,
+          "right": 831.328125,
+          "bottom": 682.984375
+        },
+        "overflow": false,
+        "scriptParent": "compact-script-slot",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1440,
+        759
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 67.109375,
+          "y": 144,
+          "w": 897.765625,
+          "h": 504.984375,
+          "right": 964.875,
+          "bottom": 648.984375
+        },
+        "wave": {
+          "x": 67.109375,
+          "y": 660.984375,
+          "w": 897.765625,
+          "h": 32,
+          "right": 964.875,
+          "bottom": 692.984375
+        },
+        "script": {
+          "x": 1004.875,
+          "y": 193,
+          "w": 352,
+          "h": 128,
+          "right": 1356.875,
+          "bottom": 321
+        },
+        "timeline": {
+          "x": 67.109375,
+          "y": 660.984375,
+          "w": 897.765625,
+          "h": 82,
+          "right": 964.875,
+          "bottom": 742.984375
+        },
+        "panel": {
+          "x": 988.875,
+          "y": 144,
+          "w": 384,
+          "h": 352,
+          "right": 1372.875,
+          "bottom": 496
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 882.875,
+          "y": 708.984375,
+          "w": 80,
+          "h": 32,
+          "right": 962.875,
+          "bottom": 740.984375
+        },
+        "overflow": false,
+        "scriptParent": "compact-script-slot",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1440,
+        760
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 204,
+          "y": 148,
+          "w": 736,
+          "h": 414,
+          "right": 940,
+          "bottom": 562
+        },
+        "wave": {
+          "x": 204,
+          "y": 662,
+          "w": 736,
+          "h": 32,
+          "right": 940,
+          "bottom": 694
+        },
+        "script": {
+          "x": 204,
+          "y": 562,
+          "w": 736,
+          "h": 100,
+          "right": 940,
+          "bottom": 662
+        },
+        "timeline": {
+          "x": 204,
+          "y": 662,
+          "w": 736,
+          "h": 82,
+          "right": 940,
+          "bottom": 744
+        },
+        "panel": {
+          "x": 964,
+          "y": 148,
+          "w": 272,
+          "h": 332,
+          "right": 1236,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 858,
+          "y": 710,
+          "w": 80,
+          "h": 32,
+          "right": 938,
+          "bottom": 742
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1440,
+        761
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 203.109375,
+          "y": 148,
+          "w": 737.765625,
+          "h": 414.984375,
+          "right": 940.875,
+          "bottom": 562.984375
+        },
+        "wave": {
+          "x": 203.109375,
+          "y": 662.984375,
+          "w": 737.765625,
+          "h": 32,
+          "right": 940.875,
+          "bottom": 694.984375
+        },
+        "script": {
+          "x": 203.109375,
+          "y": 562.984375,
+          "w": 737.765625,
+          "h": 100,
+          "right": 940.875,
+          "bottom": 662.984375
+        },
+        "timeline": {
+          "x": 203.109375,
+          "y": 662.984375,
+          "w": 737.765625,
+          "h": 82,
+          "right": 940.875,
+          "bottom": 744.984375
+        },
+        "panel": {
+          "x": 964.875,
+          "y": 148,
+          "w": 272,
+          "h": 332,
+          "right": 1236.875,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 858.875,
+          "y": 710.984375,
+          "w": 80,
+          "h": 32,
+          "right": 938.875,
+          "bottom": 742.984375
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1023,
+        700
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 24,
+          "y": 136,
+          "w": 975,
+          "h": 548.4375,
+          "right": 999,
+          "bottom": 684.4375
+        },
+        "wave": {
+          "x": 24,
+          "y": 776.4375,
+          "w": 975,
+          "h": 32,
+          "right": 999,
+          "bottom": 808.4375
+        },
+        "script": {
+          "x": 24,
+          "y": 684.4375,
+          "w": 975,
+          "h": 92,
+          "right": 999,
+          "bottom": 776.4375
+        },
+        "timeline": {
+          "x": 24,
+          "y": 776.4375,
+          "w": 975,
+          "h": 82,
+          "right": 999,
+          "bottom": 858.4375
+        },
+        "panel": {
+          "x": 24,
+          "y": 882.4375,
+          "w": 975,
+          "h": 248,
+          "right": 999,
+          "bottom": 1130.4375
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 917,
+          "y": 824.4375,
+          "w": 80,
+          "h": 32,
+          "right": 997,
+          "bottom": 856.4375
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        1024,
+        700
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 32,
+          "y": 128,
+          "w": 552,
+          "h": 310.5,
+          "right": 584,
+          "bottom": 438.5
+        },
+        "wave": {
+          "x": 32,
+          "y": 450.5,
+          "w": 552,
+          "h": 32,
+          "right": 584,
+          "bottom": 482.5
+        },
+        "script": {
+          "x": 624,
+          "y": 177,
+          "w": 352,
+          "h": 128,
+          "right": 976,
+          "bottom": 305
+        },
+        "timeline": {
+          "x": 32,
+          "y": 450.5,
+          "w": 552,
+          "h": 82,
+          "right": 584,
+          "bottom": 532.5
+        },
+        "panel": {
+          "x": 608,
+          "y": 128,
+          "w": 384,
+          "h": 352,
+          "right": 992,
+          "bottom": 480
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 502,
+          "y": 498.5,
+          "w": 80,
+          "h": 32,
+          "right": 582,
+          "bottom": 530.5
+        },
+        "overflow": false,
+        "scriptParent": "compact-script-slot",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        767,
+        700
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 16,
+          "y": 183,
+          "w": 735,
+          "h": 413.4375,
+          "right": 751,
+          "bottom": 596.4375
+        },
+        "wave": {
+          "x": 16,
+          "y": 728.4375,
+          "w": 735,
+          "h": 32,
+          "right": 751,
+          "bottom": 760.4375
+        },
+        "script": {
+          "x": 16,
+          "y": 596.4375,
+          "w": 735,
+          "h": 124,
+          "right": 751,
+          "bottom": 720.4375
+        },
+        "timeline": {
+          "x": 16,
+          "y": 720.4375,
+          "w": 735,
+          "h": 106,
+          "right": 751,
+          "bottom": 826.4375
+        },
+        "panel": {
+          "x": 16,
+          "y": 846.4375,
+          "w": 735,
+          "h": 224,
+          "right": 751,
+          "bottom": 1070.4375
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 669,
+          "y": 776.4375,
+          "w": 80,
+          "h": 48,
+          "right": 749,
+          "bottom": 824.4375
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        768,
+        700
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 24,
+          "y": 136,
+          "w": 720,
+          "h": 405,
+          "right": 744,
+          "bottom": 541
+        },
+        "wave": {
+          "x": 24,
+          "y": 633,
+          "w": 720,
+          "h": 32,
+          "right": 744,
+          "bottom": 665
+        },
+        "script": {
+          "x": 24,
+          "y": 541,
+          "w": 720,
+          "h": 92,
+          "right": 744,
+          "bottom": 633
+        },
+        "timeline": {
+          "x": 24,
+          "y": 633,
+          "w": 720,
+          "h": 82,
+          "right": 744,
+          "bottom": 715
+        },
+        "panel": {
+          "x": 24,
+          "y": 739,
+          "w": 720,
+          "h": 248,
+          "right": 744,
+          "bottom": 987
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 662,
+          "y": 681,
+          "w": 80,
+          "h": 32,
+          "right": 742,
+          "bottom": 713
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        390,
+        844
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 16,
+          "y": 183,
+          "w": 358,
+          "h": 201.375,
+          "right": 374,
+          "bottom": 384.375
+        },
+        "wave": {
+          "x": 16,
+          "y": 548.375,
+          "w": 358,
+          "h": 32,
+          "right": 374,
+          "bottom": 580.375
+        },
+        "script": {
+          "x": 16,
+          "y": 384.375,
+          "w": 358,
+          "h": 156,
+          "right": 374,
+          "bottom": 540.375
+        },
+        "timeline": {
+          "x": 16,
+          "y": 540.375,
+          "w": 358,
+          "h": 106,
+          "right": 374,
+          "bottom": 646.375
+        },
+        "panel": {
+          "x": 16,
+          "y": 666.375,
+          "w": 358,
+          "h": 248,
+          "right": 374,
+          "bottom": 914.375
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 292,
+          "y": 596.375,
+          "w": 80,
+          "h": 48,
+          "right": 372,
+          "bottom": 644.375
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 16,
+          "y": 183,
+          "w": 358,
+          "h": 201.375,
+          "right": 374,
+          "bottom": 384.375
+        },
+        "wave": {
+          "x": 16,
+          "y": 548.375,
+          "w": 358,
+          "h": 32,
+          "right": 374,
+          "bottom": 580.375
+        },
+        "script": {
+          "x": 16,
+          "y": 384.375,
+          "w": 358,
+          "h": 156,
+          "right": 374,
+          "bottom": 540.375
+        },
+        "timeline": {
+          "x": 16,
+          "y": 540.375,
+          "w": 358,
+          "h": 106,
+          "right": 374,
+          "bottom": 646.375
+        },
+        "panel": {
+          "x": 16,
+          "y": 666.375,
+          "w": 358,
+          "h": 248,
+          "right": 374,
+          "bottom": 914.375
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 292,
+          "y": 596.375,
+          "w": 80,
+          "h": 48,
+          "right": 372,
+          "bottom": 644.375
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "record",
+      "viewport": [
+        720,
+        450
+      ],
+      "locale": "ru-long",
+      "result": "PASS",
+      "geometry": {
+        "scene": {
+          "x": 16,
+          "y": 183,
+          "w": 688,
+          "h": 387,
+          "right": 704,
+          "bottom": 570
+        },
+        "wave": {
+          "x": 16,
+          "y": 702,
+          "w": 688,
+          "h": 32,
+          "right": 704,
+          "bottom": 734
+        },
+        "script": {
+          "x": 16,
+          "y": 570,
+          "w": 688,
+          "h": 124,
+          "right": 704,
+          "bottom": 694
+        },
+        "timeline": {
+          "x": 16,
+          "y": 694,
+          "w": 688,
+          "h": 106,
+          "right": 704,
+          "bottom": 800
+        },
+        "panel": {
+          "x": 16,
+          "y": 820,
+          "w": 688,
+          "h": 224,
+          "right": 704,
+          "bottom": 1044
+        },
+        "sourceFit": "contain",
+        "volume": {
+          "x": 622,
+          "y": 750,
+          "w": 80,
+          "h": 48,
+          "right": 702,
+          "bottom": 798
+        },
+        "overflow": false,
+        "scriptParent": "rehearsal",
+        "actionGap": null
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        1920,
+        910
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 500,
+          "y": 179,
+          "w": 920,
+          "h": 517.5,
+          "bottom": 696.5
+        },
+        "player": {
+          "x": 500,
+          "y": 179,
+          "w": 920,
+          "h": 589.5,
+          "bottom": 768.5
+        },
+        "footer": {
+          "x": 500,
+          "y": 792.5,
+          "w": 920,
+          "h": 88,
+          "bottom": 880.5
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 260,
+          "y": 179,
+          "w": 920,
+          "h": 517.5,
+          "bottom": 696.5
+        },
+        "player": {
+          "x": 260,
+          "y": 179,
+          "w": 920,
+          "h": 589.5,
+          "bottom": 768.5
+        },
+        "footer": {
+          "x": 260,
+          "y": 792.5,
+          "w": 920,
+          "h": 88,
+          "bottom": 880.5
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        1366,
+        650
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 409.21875,
+          "y": 138,
+          "w": 547.546875,
+          "h": 307.984375,
+          "bottom": 445.984375
+        },
+        "player": {
+          "x": 409.21875,
+          "y": 138,
+          "w": 547.546875,
+          "h": 379.984375,
+          "bottom": 517.984375
+        },
+        "footer": {
+          "x": 409.21875,
+          "y": 533.984375,
+          "w": 547.546875,
+          "h": 92,
+          "bottom": 625.984375
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        1280,
+        600
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 400,
+          "y": 138,
+          "w": 480,
+          "h": 270,
+          "bottom": 408
+        },
+        "player": {
+          "x": 400,
+          "y": 138,
+          "w": 480,
+          "h": 342,
+          "bottom": 480
+        },
+        "footer": {
+          "x": 400,
+          "y": 496,
+          "w": 480,
+          "h": 92,
+          "bottom": 588
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        1023,
+        700
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 193.28125,
+          "y": 138,
+          "w": 636.4375,
+          "h": 357.984375,
+          "bottom": 495.984375
+        },
+        "player": {
+          "x": 193.28125,
+          "y": 138,
+          "w": 636.4375,
+          "h": 429.984375,
+          "bottom": 567.984375
+        },
+        "footer": {
+          "x": 193.28125,
+          "y": 583.984375,
+          "w": 636.4375,
+          "h": 92,
+          "bottom": 675.984375
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        1024,
+        700
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 193.78125,
+          "y": 138,
+          "w": 636.4375,
+          "h": 357.984375,
+          "bottom": 495.984375
+        },
+        "player": {
+          "x": 193.78125,
+          "y": 138,
+          "w": 636.4375,
+          "h": 429.984375,
+          "bottom": 567.984375
+        },
+        "footer": {
+          "x": 193.78125,
+          "y": 583.984375,
+          "w": 636.4375,
+          "h": 92,
+          "bottom": 675.984375
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        767,
+        700
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 16,
+          "y": 179,
+          "w": 735,
+          "h": 413.4375,
+          "bottom": 592.4375
+        },
+        "player": {
+          "x": 16,
+          "y": 179,
+          "w": 735,
+          "h": 517.4375,
+          "bottom": 696.4375
+        },
+        "footer": {
+          "x": 16,
+          "y": 712.4375,
+          "w": 735,
+          "h": 152,
+          "bottom": 864.4375
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        768,
+        700
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 65.78125,
+          "y": 138,
+          "w": 636.4375,
+          "h": 357.984375,
+          "bottom": 495.984375
+        },
+        "player": {
+          "x": 65.78125,
+          "y": 138,
+          "w": 636.4375,
+          "h": 429.984375,
+          "bottom": 567.984375
+        },
+        "footer": {
+          "x": 65.78125,
+          "y": 583.984375,
+          "w": 636.4375,
+          "h": 92,
+          "bottom": 675.984375
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 16,
+          "y": 179,
+          "w": 358,
+          "h": 201.375,
+          "bottom": 380.375
+        },
+        "player": {
+          "x": 16,
+          "y": 179,
+          "w": 358,
+          "h": 305.375,
+          "bottom": 484.375
+        },
+        "footer": {
+          "x": 16,
+          "y": 500.375,
+          "w": 358,
+          "h": 212,
+          "bottom": 712.375
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    },
+    {
+      "variant": "A",
+      "view": "result",
+      "viewport": [
+        720,
+        450
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "geometry": {
+        "picture": {
+          "x": 16,
+          "y": 179,
+          "w": 688,
+          "h": 387,
+          "bottom": 566
+        },
+        "player": {
+          "x": 16,
+          "y": 179,
+          "w": 688,
+          "h": 491,
+          "bottom": 670
+        },
+        "footer": {
+          "x": 16,
+          "y": 686,
+          "w": 688,
+          "h": 152,
+          "bottom": 838
+        },
+        "overflow": false,
+        "sourcePaused": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual Chrome continuous resize at100% DPR1;RU long dialogue;720x450 is CSS reflow equivalent,not browser UI zoom. Narrow phone/tablet may scroll."
+}

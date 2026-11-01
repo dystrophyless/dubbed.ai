@@ -1,0 +1,2745 @@
+[
+  {
+    "name": "en-desktop-request",
+    "scenario": "native mock request form",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-desktop-request.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 372,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-desktop-code",
+    "scenario": "native mock code entry",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-desktop-code.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 562,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 576,
+          "y": 464,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 350,
+          "height": 48,
+          "x": 545,
+          "y": 462,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          0
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-desktop-invalid-code",
+    "scenario": "native mock invalid code; corrected value is retained and selected",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-desktop-invalid-code.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "label": "6-digit reset code"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 618,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 576,
+          "y": 464,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 350,
+          "height": 48,
+          "x": 545,
+          "y": 462,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          6
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-desktop-password-visible",
+    "scenario": "both independent password values are visible",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-desktop-password-visible.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": "Repeat password visibility"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 638,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "text",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "text",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "true",
+          "size": "small",
+          "box": {
+            "width": 115.515625,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "true",
+          "size": "small",
+          "box": {
+            "width": 115.515625,
+            "height": 32,
+            "x": 545,
+            "y": 590,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-desktop-password",
+    "scenario": "native mock password form with independent hidden controls",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-desktop-password.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": "Repeat password visibility"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 638,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 590,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-desktop-mismatch",
+    "scenario": "native mock mismatch feedback",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-desktop-mismatch.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 664,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": true,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 616,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-desktop-success-destination",
+    "scenario": "native mock reset completion on the existing New dub destination",
+    "url": "http://127.0.0.1:4571/new",
+    "screenshot": "evidence\\en-desktop-success-destination.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": null,
+      "completionDismiss": {
+        "width": 40,
+        "height": 40,
+        "x": 943,
+        "y": 126,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": true,
+      "historyUserState": null,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-short-request",
+    "scenario": "native mock request form",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-short-request.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 700
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 372,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-short-code",
+    "scenario": "native mock code entry",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-short-code.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 763
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 562,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 576,
+          "y": 464,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 350,
+          "height": 48,
+          "x": 545,
+          "y": 462,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          0
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-short-invalid-code",
+    "scenario": "native mock invalid code; corrected value is retained and selected",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-short-invalid-code.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 819
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "label": "6-digit reset code"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 618,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 576,
+          "y": 464,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 350,
+          "height": 48,
+          "x": 545,
+          "y": 462,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          6
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-short-password-visible",
+    "scenario": "both independent password values are visible",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-short-password-visible.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 839
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": "Repeat password visibility"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 638,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "text",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "text",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "true",
+          "size": "small",
+          "box": {
+            "width": 115.515625,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "true",
+          "size": "small",
+          "box": {
+            "width": 115.515625,
+            "height": 32,
+            "x": 545,
+            "y": 590,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-short-password",
+    "scenario": "native mock password form with independent hidden controls",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-short-password.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 839
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": "Repeat password visibility"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 638,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 590,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-short-mismatch",
+    "scenario": "native mock mismatch feedback",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\en-short-mismatch.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 865
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 664,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": true,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 616,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "en-short-success-destination",
+    "scenario": "native mock reset completion on the existing New dub destination",
+    "url": "http://127.0.0.1:4571/new",
+    "screenshot": "evidence\\en-short-success-destination.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 700
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": null,
+      "completionDismiss": {
+        "width": 40,
+        "height": 40,
+        "x": 943,
+        "y": 126,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": true,
+      "historyUserState": null,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-desktop-request",
+    "scenario": "native mock request form",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-desktop-request.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 348,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-desktop-code",
+    "scenario": "native mock code entry",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-desktop-code.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 582,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 576,
+          "y": 484,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 350,
+          "height": 48,
+          "x": 545,
+          "y": 482,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          0
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-desktop-invalid-code",
+    "scenario": "native mock invalid code; corrected value is retained and selected",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-desktop-invalid-code.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "label": "6-значный код сброса"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 638,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 576,
+          "y": 484,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 350,
+          "height": 48,
+          "x": 545,
+          "y": 482,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          6
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-desktop-password-visible",
+    "scenario": "both independent password values are visible",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-desktop-password-visible.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": "Видимость повторного пароля"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 638,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "text",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "text",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "true",
+          "size": "small",
+          "box": {
+            "width": 120.28125,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "true",
+          "size": "small",
+          "box": {
+            "width": 120.28125,
+            "height": 32,
+            "x": 545,
+            "y": 590,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-desktop-password",
+    "scenario": "native mock password form with independent hidden controls",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-desktop-password.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": "Видимость повторного пароля"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 638,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 129.828125,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 129.828125,
+            "height": 32,
+            "x": 545,
+            "y": 590,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-desktop-mismatch",
+    "scenario": "native mock mismatch feedback",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-desktop-mismatch.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 664,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 378,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": true,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 534,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 129.828125,
+            "height": 32,
+            "x": 545,
+            "y": 460,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 129.828125,
+            "height": 32,
+            "x": 545,
+            "y": 616,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-desktop-success-destination",
+    "scenario": "native mock reset completion on the existing New dub destination",
+    "url": "http://127.0.0.1:4571/new",
+    "screenshot": "evidence\\ru-desktop-success-destination.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": null,
+      "completionDismiss": {
+        "width": 40,
+        "height": 40,
+        "x": 943,
+        "y": 126,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": true,
+      "historyUserState": null,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-phone390-request",
+    "scenario": "native mock request form",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-phone390-request.png",
+    "measured": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 292,
+        "height": 48,
+        "x": 49,
+        "y": 316,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-phone390-code",
+    "scenario": "native mock code entry",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-phone390-code.png",
+    "measured": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 292,
+        "height": 48,
+        "x": 49,
+        "y": 566,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 51,
+          "y": 468,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 292,
+          "height": 48,
+          "x": 49,
+          "y": 466,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          0
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-phone390-invalid-code",
+    "scenario": "native mock invalid code; corrected value is retained and selected",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-phone390-invalid-code.png",
+    "measured": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "label": "6-значный код сброса"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 292,
+        "height": 48,
+        "x": 49,
+        "y": 642,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 51,
+          "y": 468,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 292,
+          "height": 48,
+          "x": 49,
+          "y": 466,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          6
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-phone390-password-visible",
+    "scenario": "both independent password values are visible",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-phone390-password-visible.png",
+    "measured": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 863
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": "Видимость повторного пароля"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 292,
+        "height": 48,
+        "x": 49,
+        "y": 666,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "text",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 292,
+            "height": 48,
+            "x": 49,
+            "y": 358,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "text",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 292,
+            "height": 48,
+            "x": 49,
+            "y": 538,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "true",
+          "size": "small",
+          "box": {
+            "width": 146.3125,
+            "height": 48,
+            "x": 49,
+            "y": 448,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "true",
+          "size": "small",
+          "box": {
+            "width": 146.3125,
+            "height": 48,
+            "x": 49,
+            "y": 602,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-phone390-password",
+    "scenario": "native mock password form with independent hidden controls",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-phone390-password.png",
+    "measured": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 863
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": "Видимость повторного пароля"
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 292,
+        "height": 48,
+        "x": 49,
+        "y": 666,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 292,
+            "height": 48,
+            "x": 49,
+            "y": 358,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 14,
+          "focused": false,
+          "box": {
+            "width": 292,
+            "height": 48,
+            "x": 49,
+            "y": 538,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 157.21875,
+            "height": 48,
+            "x": 49,
+            "y": 448,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 157.21875,
+            "height": 48,
+            "x": 49,
+            "y": 602,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-phone390-mismatch",
+    "scenario": "native mock mismatch feedback",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\ru-phone390-mismatch.png",
+    "measured": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 889
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 292,
+        "height": 48,
+        "x": 49,
+        "y": 692,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": false,
+          "box": {
+            "width": 292,
+            "height": 48,
+            "x": 49,
+            "y": 358,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": true,
+          "box": {
+            "width": 292,
+            "height": 48,
+            "x": 49,
+            "y": 538,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 157.21875,
+            "height": 48,
+            "x": 49,
+            "y": 448,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 157.21875,
+            "height": 48,
+            "x": 49,
+            "y": 628,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "ru-phone390-success-destination",
+    "scenario": "native mock reset completion on the existing New dub destination",
+    "url": "http://127.0.0.1:4571/new",
+    "screenshot": "evidence\\ru-phone390-success-destination.png",
+    "measured": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": null,
+      "completionDismiss": {
+        "width": 48,
+        "height": 48,
+        "x": 309,
+        "y": 116,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": true,
+      "historyUserState": null,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "code-en-767",
+    "scenario": "native mock code screen at responsive breakpoint",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\code-en-767.png",
+    "measured": {
+      "viewport": {
+        "width": 767,
+        "height": 844
+      },
+      "page": {
+        "width": 767,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 366,
+        "height": 48,
+        "x": 200.5,
+        "y": 502,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 239.5,
+          "y": 404,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 366,
+          "height": 48,
+          "x": 200.5,
+          "y": 402,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          0
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "code-en-768",
+    "scenario": "native mock code screen at responsive breakpoint",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\code-en-768.png",
+    "measured": {
+      "viewport": {
+        "width": 768,
+        "height": 844
+      },
+      "page": {
+        "width": 768,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 209,
+        "y": 562,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": {
+        "cell": {
+          "width": 40,
+          "height": 44,
+          "x": 240,
+          "y": 464,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "24px",
+          "fontWeight": "500"
+        },
+        "digits": {
+          "fontSize": "15px",
+          "lineHeight": "24px"
+        },
+        "input": {
+          "width": 350,
+          "height": 48,
+          "x": 209,
+          "y": 462,
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        "selection": [
+          0,
+          0
+        ]
+      },
+      "codeInstructionCount": 1,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "controlled-request-error-en-short",
+    "scenario": "controlled harness fault: reset-service-error",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\controlled-request-error-en-short.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 700
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 434,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "controlled-unknown-code-ru-phone390",
+    "scenario": "controlled harness fault: reset-unknown-code",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\controlled-unknown-code-ru-phone390.png",
+    "measured": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 292,
+        "height": 48,
+        "x": 49,
+        "y": 328,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [],
+      "visibilityControls": [],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  },
+  {
+    "name": "controlled-completion-loading-en-short",
+    "scenario": "controlled harness fault: reset-complete-loading",
+    "url": "http://127.0.0.1:4571/reset-password",
+    "screenshot": "evidence\\controlled-completion-loading-en-short.png",
+    "measured": {
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 777
+      },
+      "horizontalOverflow": false,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "label": null
+      },
+      "loadedFonts": [
+        {
+          "family": "Mabry Pro",
+          "weight": "400"
+        },
+        {
+          "family": "Mabry Pro",
+          "weight": "500"
+        }
+      ],
+      "primary": {
+        "width": 350,
+        "height": 40,
+        "x": 545,
+        "y": 576,
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontWeight": "500"
+      },
+      "completionDismiss": null,
+      "passwordFields": [
+        {
+          "id": "password-reset-new-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 316,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        },
+        {
+          "id": "password-reset-repeat-password",
+          "type": "password",
+          "valueLength": 8,
+          "focused": false,
+          "box": {
+            "width": 350,
+            "height": 40,
+            "x": 545,
+            "y": 472,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        }
+      ],
+      "visibilityControls": [
+        {
+          "field": "password-reset-new-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 398,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        },
+        {
+          "field": "password-reset-repeat-password",
+          "pressed": "false",
+          "size": "small",
+          "box": {
+            "width": 121.390625,
+            "height": 32,
+            "x": 545,
+            "y": 528,
+            "fontFamily": "\"Mabry Pro\", sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "20px",
+            "fontWeight": "500"
+          }
+        }
+      ],
+      "otp": null,
+      "codeInstructionCount": 0,
+      "completionNoticeTextPresent": false,
+      "destinationNoticeInHistory": false
+    }
+  }
+]

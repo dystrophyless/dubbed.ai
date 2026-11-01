@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-23T18:28:52.418Z",
+  "boundary": "Current source ResultScreen through existing controlled fixture facade at Vite4283; native Chromium zoom2. English only. No real backend generation, physical capture, or actual download file save asserted.",
+  "states": [
+    {
+      "name": "result-normal-en",
+      "innerWidth": 711,
+      "outerWidth": 1440,
+      "bodyZoom": "1",
+      "overflow": false,
+      "heading": "Your result",
+      "video": [
+        {
+          "src": "/media/result-generation-001.mp4",
+          "muted": true,
+          "volume": 0,
+          "paused": true
+        }
+      ],
+      "text": "Your result\n\nControlled fixture project\n\nReturn to recording\nDisplayed generation: 1\nSynthetic fixture result; not rendered from accepted takes or a custom upload.\nDownload MP4",
+      "viewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 0,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      }
+    }
+  ],
+  "errors": [],
+  "outcome": "failed",
+  "failure": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Watch new', exact: true }) to be visible\u001b[22m\n"
+}

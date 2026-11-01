@@ -1,0 +1,51 @@
+{
+  "before": {
+    "x": 16,
+    "y": -156,
+    "width": 358,
+    "height": 200.09375
+  },
+  "after": [
+    {
+      "id": "scene",
+      "rect": {
+        "x": 16,
+        "y": 16,
+        "width": 358,
+        "height": 200.09375,
+        "top": 16,
+        "right": 374,
+        "bottom": 216.09375,
+        "left": 16
+      }
+    },
+    {
+      "id": "capture-badge",
+      "rect": {
+        "x": 32,
+        "y": 32,
+        "width": 154.046875,
+        "height": 33,
+        "top": 32,
+        "right": 186.046875,
+        "bottom": 65,
+        "left": 32
+      }
+    },
+    {
+      "id": "dialogue",
+      "rect": {
+        "x": 16,
+        "y": 261.09375,
+        "width": 358,
+        "height": 128,
+        "top": 261.09375,
+        "right": 374,
+        "bottom": 389.09375,
+        "left": 16
+      }
+    }
+  ],
+  "reducedMotion": true,
+  "captureImmediatePlaying": true
+}

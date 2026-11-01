@@ -1,0 +1,96 @@
+{
+  "capturedAtUtc": "2026-10-23T20:02:09.474Z",
+  "boundary": "Current public mock facade/native Chromium IndexedDB, isolated namespace, simulated source bytes/metadata; active project deletion/accounting probe only.",
+  "result": {
+    "quoteCredits": 9,
+    "reservationId": "4a424217-c833-4987-9191-36353c639c7a",
+    "before": {
+      "accountId": "9f2dd4bf-36c1-4ae4-8827-1b900a4a16c6",
+      "revision": 3,
+      "available": 111,
+      "reserved": 9,
+      "purchasedRemainder": 0,
+      "welcomeGrantEligible": false,
+      "welcomeGrantApplied": true,
+      "projectCapacity": {
+        "used": 1,
+        "total": 2,
+        "firstPurchaseUpgrade": false,
+        "revision": 3
+      }
+    },
+    "deletion": {
+      "deleted": true,
+      "freedSlot": true
+    },
+    "listCount": 0,
+    "after": {
+      "accountId": "9f2dd4bf-36c1-4ae4-8827-1b900a4a16c6",
+      "revision": 5,
+      "available": 111,
+      "reserved": 0,
+      "purchasedRemainder": 0,
+      "welcomeGrantEligible": false,
+      "welcomeGrantApplied": true,
+      "projectCapacity": {
+        "used": 0,
+        "total": 2,
+        "firstPurchaseUpgrade": false,
+        "revision": 5
+      }
+    },
+    "operation": {
+      "status": "ok",
+      "data": {
+        "id": "a2aca13b-7495-4e11-ae97-6019c08d8cc1",
+        "accountId": "9f2dd4bf-36c1-4ae4-8827-1b900a4a16c6",
+        "state": "committed",
+        "kind": "preparation",
+        "revision": 3,
+        "updatedAt": 1792785740594,
+        "result": {
+          "state": "complete",
+          "deletedProject": true
+        }
+      },
+      "replayed": false
+    },
+    "observe": {
+      "status": "error",
+      "error": {
+        "code": "not-found",
+        "message": "Project was not found.",
+        "retry": "none"
+      }
+    },
+    "ledger": [
+      {
+        "id": "d6fc26d0-1bee-4abc-b251-bf3dce494dcf",
+        "accountId": "9f2dd4bf-36c1-4ae4-8827-1b900a4a16c6",
+        "revision": 3,
+        "kind": "processing-reservation",
+        "occurredAt": 1792785730594,
+        "delta": null,
+        "availableAfter": 111,
+        "reservedAfter": 9,
+        "projectId": "12fb9834-8756-4cac-8c37-2c1bea3b3d19",
+        "relatedOperationId": "a2aca13b-7495-4e11-ae97-6019c08d8cc1",
+        "note": "synthetic-mock-scenario"
+      },
+      {
+        "id": "0a515123-eb57-4371-a4cc-ee53180c1875",
+        "accountId": "9f2dd4bf-36c1-4ae4-8827-1b900a4a16c6",
+        "revision": 5,
+        "kind": "processing-settlement",
+        "occurredAt": 1792785740594,
+        "delta": -9,
+        "availableAfter": 111,
+        "reservedAfter": 0,
+        "projectId": "12fb9834-8756-4cac-8c37-2c1bea3b3d19",
+        "relatedOperationId": "a2aca13b-7495-4e11-ae97-6019c08d8cc1",
+        "note": "synthetic-mock-scenario"
+      }
+    ]
+  },
+  "outcome": "deleted-job-settled"
+}

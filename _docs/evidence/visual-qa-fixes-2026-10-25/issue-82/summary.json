@@ -1,0 +1,39 @@
+{
+  "issue": 82,
+  "date": "2026-10-25",
+  "revision": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "worktree": "shared dirty worktree; no commit, push, or GitHub mutation",
+  "status": "verified locally with scoped unit and browser regressions",
+  "numeric_visual_roles": "Orchestrator-selected under owner-authorized fixes; no separate human approval of each pixel value is claimed.",
+  "findings": [
+    { "id": "QA-82-01", "status": "resolved", "proof": "EN/RU long-email code-step screenshots and DOM metrics at 320/390/767/768; full text visible, paragraph not clipped, document has no horizontal overflow." },
+    { "id": "QA-82-02", "status": "resolved", "proof": "One native logical input and six decorative cells; unit/browser coverage for selection, caret, pointer click/drag, keyboard select-all, normalized replacement paste, aria-invalid, described error, and retained value." },
+    { "id": "QA-82-03", "status": "resolved", "proof": "Held registration preserves form, entered values, focus and geometry; busy state stays readable/focusable; click and Enter do not duplicate start; failure restores usable form." },
+    { "id": "QA-82-04", "status": "resolved", "proof": "DOM metrics: desktop primary 40px and 14/20 Medium; phone primary 48px and 16/24 Medium; password toggle 32px desktop/48px phone; phone text link 48px and 16/24; Mabry loaded and synthetic bold disabled." },
+    { "id": "QA-82-05", "status": "resolved", "proof": "EN/RU short-desktop screenshots and assertions show current code-step h1 once, destination description, 500 weight, font-synthesis none." },
+    { "id": "QA-82-06", "status": "resolved", "proof": "DOM metrics verify 48px logical target, 40x44 cells where they fit, 8px gap, 8px radius, 15/24 Medium digits; cells shrink to 29x44 at 320px and remain 40x44 from 390px." }
+  ],
+  "shared_duplicates": [
+    { "id": "QA-78-03", "status": "OTP-geometry-duplicate-validated-by-QA-82-06", "proof": "QA-78-03 concerns OTP cell geometry, grouping, and typography, not button density. QA-82-06 metrics record the 48px logical target, 40x44 cells where they fit, 29x44 cells at 320px, 8px gap, and 15/24 Medium digits. This corrects attribution and does not report a new source defect." },
+    { "id": "QA-71-04", "status": "OTP-typography-consumption-corroborated", "proof": "The #71 completion and tests verify shared OTP typography consumption. QA-82 unit/browser evidence confirms the current shared control uses the one-input contract and 15/24 Medium digits; no new source defect is claimed." }
+  ],
+  "verification": [
+    { "command": "npm.cmd test -- src/features/auth/OtpInput.test.tsx --reporter=verbose", "cwd": "frontend", "result": "PASS 5/5, Vitest 5.0.5" },
+    { "command": "npm.cmd run test:e2e -- --config=playwright.qa82.config.ts e2e/registration-qa82.spec.ts", "cwd": "frontend", "result": "PASS 6/6, local Chromium and Vite 127.0.0.1:4582 with mock service adapter" },
+    { "command": "npm.cmd run test:e2e -- --config=playwright.qa82.config.ts e2e/registration-qa82.spec.ts --grep \"pastes invalid\" --repeat-each=3", "cwd": "frontend", "result": "PASS 3/3 repeated OTP transition runs" },
+    { "command": "git diff --check -- assigned QA82 source paths", "cwd": "repository root", "result": "PASS; line-ending notices only" }
+  ],
+  "visual_evidence": {
+    "directory": "evidence/",
+    "screenshots_opened": 24,
+    "paired_dom_metrics": true,
+    "localization": ["en-US", "ru-RU"],
+    "long_email_widths": [320, 390, 767, 768],
+    "categories": ["desktop registration", "phone registration", "short desktop code step", "long email", "pending registration", "failure restore", "invalid OTP", "caret", "pointer mapping", "replacement paste"]
+  },
+  "limits": [
+    "No full application test suite run.",
+    "No physical microphone, real email delivery, or real provider request.",
+    "Local mock-harness/browser evidence only; no production acceptance implied."
+  ]
+}

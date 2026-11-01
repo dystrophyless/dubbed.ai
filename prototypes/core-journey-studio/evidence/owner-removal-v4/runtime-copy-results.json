@@ -1,0 +1,49 @@
+{
+  "version": "core-journey-studio-lowfi-v4",
+  "date": "2026-10-27",
+  "result": "PASS",
+  "scope": "REMOVE-01 dictionary deletion and current-key/value/runtime absence; no visual or interaction change",
+  "checks": [
+    {
+      "target": "core-journey-studio",
+      "result": "PASS",
+      "localeSha256": "9534363f028e3cd70274c0377863eac891589b215101c77769d08b5f69f0906a",
+      "dictionaryPairs": 74,
+      "currentRuntimeFilesScanned": [
+        "icons.js",
+        "index.html",
+        "locale.js",
+        "presentation.css",
+        "src.js",
+        "studio.css",
+        "toast.js",
+        "ui.js",
+        "waveform-data.js"
+      ],
+      "unchangedPreviousFingerprints": 69
+    },
+    {
+      "target": "core-journey-lowfi",
+      "result": "PASS",
+      "localeSha256": "9534363f028e3cd70274c0377863eac891589b215101c77769d08b5f69f0906a",
+      "dictionaryPairs": 74,
+      "currentRuntimeFilesScanned": [
+        "calibration.html",
+        "highfi.css",
+        "icons.js",
+        "index.html",
+        "locale.js",
+        "presentation.css",
+        "src.js",
+        "style.css",
+        "toast.js",
+        "ui.js",
+        "waveform-data.js"
+      ],
+      "unchangedPreviousFingerprints": 52
+    }
+  ],
+  "positiveDetectorFixtures": 2,
+  "legitimateRecoveryFixture": 1,
+  "limits": "Static/syntax/build check only for unused copy. Previous v3 independent49/49 browser checks and screenshots remain historical evidence for unchanged visuals/behavior; no full browser rerun claimed."
+}

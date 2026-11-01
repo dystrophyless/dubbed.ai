@@ -1,0 +1,107 @@
+{
+  "issue": 63,
+  "date": "2026-10-25",
+  "canonicalFindingIds": [
+    "QA-63-01",
+    "QA-63-02",
+    "QA-63-03"
+  ],
+  "status": "focused_browser_run_and_root_build_passed_full_browser_gate_pending",
+  "productSourceChanged": false,
+  "focusedPlaywright": {
+    "command": "npm.cmd exec -- playwright test --config=playwright.issue63.config.ts --reporter=line",
+    "workingDirectory": "frontend",
+    "artifactRoot": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final-2",
+    "result": "2 passed (1.9m)",
+    "log": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/focused-playwright-attempt-4.log",
+    "port": 4563,
+    "serverClosed": true,
+    "sourceBoundaryAtRun": {
+      "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/e2e-test-source-freeze.json",
+      "fileCount": 40,
+      "focusedSpecSha256AtRun": "dd68ae246af5f0728b97ffc0969c79d2d97bc4c49a6b1287c5dc1c74c2495606"
+    },
+    "postRunCompilerFix": {
+      "change": "Renamed only the unused page parameter to _page; no assertions, call sites, config, or product source changed.",
+      "currentFocusedSpecSha256": "59843f10385ef36752e0e32853fc82d060bf1af1cc3b89053f4dc5fc482b877b",
+      "rootCurrentSourceBoundary": "_docs/evidence/visual-qa-fixes-2026-10-25/root-test-source-freeze.json",
+      "rootBuildRecheck": {
+        "status": "passed",
+        "checks": ["tsc -b --pretty false", "vite build --mode mock"],
+        "log": "_docs/evidence/visual-qa-fixes-2026-10-25/root-integration/build-recheck.log",
+        "advisory": "Vite reported a bundle chunk larger than 500 kB."
+      }
+    }
+  },
+  "productSourceBoundary": {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/root-product-source-freeze.json",
+    "fileCount": 125,
+    "sha256": "9a0a9837c4efdf822b71a6a8651a392ded9a1277cd56e7f8f978491b8f518640",
+    "rootVerification": "_docs/evidence/visual-qa-fixes-2026-10-25/root-product-source-freeze-verification.json"
+  },
+  "portraitFixture": {
+    "path": "frontend/public/media/portrait-long-source.mp4",
+    "sha256": "4ebe060311dfa4411f474ad45c8b2bfab3c9718e5813eea3db9c0dc6bf68d626",
+    "width": 540,
+    "height": 960,
+    "durationSeconds": 35.9591,
+    "quoteCredits": 36,
+    "recordLines": 4
+  },
+  "resultDownload": {
+    "generation": 1,
+    "fixturePath": "frontend/public/media/portrait-result-generation-001.mp4",
+    "sha256": "dcc9218f3fee9a54c18fa10a97413453d6f7411e527cf8920119f4a8382c9f1d",
+    "bytes": 868886,
+    "browserDownloadMatchedFixture": true,
+    "generation2UiPathRun": false
+  },
+  "nativeZoom": {
+    "status": "observed_and_asserted_in_new_disposable_chromium_profile",
+    "preference": 3.8017840169239308,
+    "browserChannel": "chromium",
+    "headless": true,
+    "viewport": null,
+    "window": "1440x960",
+    "cdpCssVisualViewportZoom": 2,
+    "devicePixelRatio": 2,
+    "bodyZoom": "1",
+    "outerWidth": 1440,
+    "innerWidth": 711,
+    "halfOuterWidth": 720,
+    "deltaWithinNativeScrollbarAllowance": 9,
+    "scrollbarGutterWidthMeasuredSeparately": false,
+    "proof": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final-2/issue63-integration/native200-profile-proof.json"
+  },
+  "matrix": [
+    { "route": "New Dub", "locale": "EN", "viewport": "1440x900 at 100%", "state": "portrait source preview and quote", "result": "observed" },
+    { "route": "Record line 3", "locale": "EN/RU", "viewport": "390x844", "state": "in-flow panel, caption and waveform clear", "result": "observed" },
+    { "route": "Record line 3", "locale": "EN/RU", "viewport": "390x844 after wheel", "state": "fixed panel and recording action reachable", "result": "observed" },
+    { "route": "Record line 3", "locale": "EN/RU", "viewport": "767x900", "state": "fixed panel, no overlap or horizontal overflow", "result": "observed" },
+    { "route": "Record line 3", "locale": "EN/RU", "viewport": "768x900", "state": "in-flow panel, no overlap or horizontal overflow", "result": "observed" },
+    { "route": "Record and actions", "locale": "EN", "viewport": "1440x900 and 1440x700", "state": "long line, desktop action roles, short-height scroll", "result": "observed" },
+    { "route": "Leave dialog", "locale": "EN", "viewport": "1440x900 and native 200%", "state": "safe focus and one Tab transition", "result": "observed" },
+    { "route": "Result and return", "locale": "EN", "viewport": "1440x900, 1440x700, and sampled native 200%", "state": "generation 1, exact fixture download, return to recording", "result": "observed" }
+  ],
+  "findingDispositions": [
+    { "id": "QA-63-01", "status": "bounded_matrix_and_native_200_percent_evidence_added", "remaining": "unlisted route/state/input cells remain not run; no umbrella visual pass claimed" },
+    { "id": "QA-63-02", "status": "current_long_line_sample_clear_at_390_767_768_en_ru", "remaining": "other heights, states, and arbitrary widths not run" },
+    { "id": "QA-63-03", "status": "current_sample_measures_32_40_44_desktop_and_48_phone_targets", "remaining": "no human usability study or universal comfort claim" }
+  ],
+  "artifactCounts": {
+    "screenshotsPng": 29,
+    "captureMetricsJson": 38,
+    "directory": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final-2/issue63-integration"
+  },
+  "notRun": [
+    "unknown-outcome and recovery branches",
+    "expired session, draft recovery, and account return paths",
+    "generation 2 UI path and exhaustive preparation/recording failure combinations",
+    "physical microphone or camera, production services, billing, and cross-device durability",
+    "other browser engines, full keyboard traversal, screen reader, reduced motion, and forced colors",
+    "all native 200% routes/states, arbitrary viewport combinations, exhaustive timing/interruption cases, and human usability study",
+    "Root full E2E/real-mode gate and consolidated acceptance"
+  ],
+  "artifactRootPreservation": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/historical-artifacts-preservation.json",
+  "commitPushOrIssueUpdateByWorker": false
+}

@@ -1,0 +1,314 @@
+{
+  "version": "core-journey-studio-lowfi-v6",
+  "checks": [
+    {
+      "scenario": "real connected three captures to Result; distinct-source playing/paused switch",
+      "result": "PASS",
+      "originalSwitch": {
+        "time": 1.41527,
+        "paused": false
+      }
+    },
+    {
+      "viewport": [
+        1280,
+        600
+      ],
+      "ru": false,
+      "result": "PASS",
+      "geometry": {
+        "player": {
+          "x": 380,
+          "width": 520,
+          "bottom": 472.5
+        },
+        "pictureRatio": 1.7777777777777777,
+        "footerBottom": 580.5,
+        "overflow": false,
+        "targets": [
+          {
+            "id": "source-original",
+            "w": 78.609375,
+            "h": 40
+          },
+          {
+            "id": "source-dub",
+            "w": 75.671875,
+            "h": 40
+          },
+          {
+            "id": "result-seek",
+            "w": 496,
+            "h": 24
+          },
+          {
+            "id": "result-play",
+            "w": 40,
+            "h": 40
+          },
+          {
+            "id": "result-volume",
+            "w": 80,
+            "h": 40
+          },
+          {
+            "id": "result-fullscreen",
+            "w": 40,
+            "h": 40
+          }
+        ]
+      }
+    },
+    {
+      "viewport": [
+        1366,
+        650
+      ],
+      "ru": true,
+      "result": "PASS",
+      "geometry": {
+        "player": {
+          "x": 382.5625,
+          "width": 600.875,
+          "bottom": 517.984375
+        },
+        "pictureRatio": 1.7778188710646756,
+        "footerBottom": 625.984375,
+        "overflow": false,
+        "targets": [
+          {
+            "id": "source-original",
+            "w": 92.546875,
+            "h": 40
+          },
+          {
+            "id": "source-dub",
+            "w": 108.5625,
+            "h": 40
+          },
+          {
+            "id": "result-seek",
+            "w": 576.875,
+            "h": 24
+          },
+          {
+            "id": "result-play",
+            "w": 40,
+            "h": 40
+          },
+          {
+            "id": "result-volume",
+            "w": 80,
+            "h": 40
+          },
+          {
+            "id": "result-fullscreen",
+            "w": 40,
+            "h": 40
+          }
+        ]
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "ru": false,
+      "result": "PASS",
+      "geometry": {
+        "player": {
+          "x": 16,
+          "width": 358,
+          "bottom": 473.375
+        },
+        "pictureRatio": 1.7777777777777777,
+        "footerBottom": 705.375,
+        "overflow": false,
+        "targets": [
+          {
+            "id": "source-original",
+            "w": 81.84375,
+            "h": 48
+          },
+          {
+            "id": "source-dub",
+            "w": 78.46875,
+            "h": 48
+          },
+          {
+            "id": "result-seek",
+            "w": 342,
+            "h": 48
+          },
+          {
+            "id": "result-play",
+            "w": 48,
+            "h": 48
+          },
+          {
+            "id": "result-volume",
+            "w": 56,
+            "h": 48
+          },
+          {
+            "id": "result-fullscreen",
+            "w": 48,
+            "h": 48
+          }
+        ]
+      }
+    },
+    {
+      "viewport": [
+        390,
+        667
+      ],
+      "ru": true,
+      "result": "PASS",
+      "geometry": {
+        "player": {
+          "x": 16,
+          "width": 358,
+          "bottom": 473.375
+        },
+        "pictureRatio": 1.7777777777777777,
+        "footerBottom": 705.375,
+        "overflow": false,
+        "targets": [
+          {
+            "id": "source-original",
+            "w": 97.765625,
+            "h": 48
+          },
+          {
+            "id": "source-dub",
+            "w": 116.0625,
+            "h": 48
+          },
+          {
+            "id": "result-seek",
+            "w": 342,
+            "h": 48
+          },
+          {
+            "id": "result-play",
+            "w": 48,
+            "h": 48
+          },
+          {
+            "id": "result-volume",
+            "w": 56,
+            "h": 48
+          },
+          {
+            "id": "result-fullscreen",
+            "w": 48,
+            "h": 48
+          }
+        ]
+      }
+    },
+    {
+      "viewport": [
+        767,
+        700
+      ],
+      "ru": true,
+      "result": "PASS",
+      "geometry": {
+        "player": {
+          "x": 16,
+          "width": 735,
+          "bottom": 685.4375
+        },
+        "pictureRatio": 1.7777777777777777,
+        "footerBottom": 833.4375,
+        "overflow": false,
+        "targets": [
+          {
+            "id": "source-original",
+            "w": 97.765625,
+            "h": 48
+          },
+          {
+            "id": "source-dub",
+            "w": 116.0625,
+            "h": 48
+          },
+          {
+            "id": "result-seek",
+            "w": 719,
+            "h": 48
+          },
+          {
+            "id": "result-play",
+            "w": 48,
+            "h": 48
+          },
+          {
+            "id": "result-volume",
+            "w": 56,
+            "h": 48
+          },
+          {
+            "id": "result-fullscreen",
+            "w": 48,
+            "h": 48
+          }
+        ]
+      }
+    },
+    {
+      "viewport": [
+        768,
+        700
+      ],
+      "ru": false,
+      "result": "PASS",
+      "geometry": {
+        "player": {
+          "x": 39.109375,
+          "width": 689.765625,
+          "bottom": 567.984375
+        },
+        "pictureRatio": 1.7778180500181224,
+        "footerBottom": 675.984375,
+        "overflow": false,
+        "targets": [
+          {
+            "id": "source-original",
+            "w": 78.609375,
+            "h": 40
+          },
+          {
+            "id": "source-dub",
+            "w": 75.671875,
+            "h": 40
+          },
+          {
+            "id": "result-seek",
+            "w": 665.765625,
+            "h": 24
+          },
+          {
+            "id": "result-play",
+            "w": 40,
+            "h": 40
+          },
+          {
+            "id": "result-volume",
+            "w": 80,
+            "h": 40
+          },
+          {
+            "id": "result-fullscreen",
+            "w": 40,
+            "h": 40
+          }
+        ]
+      }
+    }
+  ],
+  "pageErrors": []
+}

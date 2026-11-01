@@ -1,0 +1,31 @@
+{
+  "capture": "portrait-record-leave-dialog-en-1440x900",
+  "actions": [
+    {
+      "label": "Save and leave",
+      "size": "medium",
+      "variant": "primary",
+      "width": 350,
+      "height": 40,
+      "focused": true
+    },
+    {
+      "label": "Leave without saving",
+      "size": "medium",
+      "variant": "secondary",
+      "width": 350,
+      "height": 40,
+      "focused": false
+    },
+    {
+      "label": "Stay here",
+      "size": "medium",
+      "variant": "ghost",
+      "width": 350,
+      "height": 40,
+      "focused": false
+    }
+  ],
+  "safeAutoFocus": "Stay here",
+  "keyboardFocusAfterTab": "Save and leave"
+}

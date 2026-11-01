@@ -1,0 +1,6 @@
+PASS An explicit connection click obtains a fake browser track; no test starts automatically.
+PASS EN/RU ready screenshots at desktop, short desktop, 390, 767 and 768 confirm shared 32/40/44 desktop roles and 48px phone targets.
+PASS Injected denied connection omits the initial waiting sentence in EN/RU, blocks Continue, then an explicit retry restores readiness.
+PASS A synthetic ended event on the fake track disables Continue and asks for reconnection in EN/RU.
+PASS Missing MediaRecorder produces localized browser-capability copy; the fake live connection and optional Continue readiness remain available.
+21 viewport screenshots saved.

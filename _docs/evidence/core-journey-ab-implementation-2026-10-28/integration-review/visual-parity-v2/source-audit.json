@@ -1,0 +1,51 @@
+[
+  {
+    "target": "frontend/src/styles/prototype-record.css",
+    "source": "prototypes/core-journey-lowfi/style.css",
+    "sourceRules": 150,
+    "exactRecipeMatches": 150,
+    "missing": []
+  },
+  {
+    "target": "frontend/src/styles/prototype-record.css",
+    "source": "prototypes/core-journey-lowfi/highfi.css",
+    "sourceRules": 53,
+    "exactRecipeMatches": 53,
+    "missing": []
+  },
+  {
+    "target": "frontend/src/styles/prototype-record.css",
+    "source": "prototypes/core-journey-lowfi/panel-responsive.css",
+    "sourceRules": 9,
+    "exactRecipeMatches": 9,
+    "missing": []
+  },
+  {
+    "target": "frontend/src/styles/prototype-record.css",
+    "source": "prototypes/core-journey-lowfi/video-center.css",
+    "sourceRules": 22,
+    "exactRecipeMatches": 22,
+    "missing": []
+  },
+  {
+    "target": "frontend/src/styles/prototype-record.css",
+    "source": "prototypes/core-journey-lowfi/focused-exit.css",
+    "sourceRules": 36,
+    "exactRecipeMatches": 36,
+    "missing": []
+  },
+  {
+    "target": "frontend/src/styles/prototype-record-b.css",
+    "source": "prototypes/core-journey-studio/studio.css",
+    "sourceRules": 155,
+    "exactRecipeMatches": 155,
+    "missing": []
+  },
+  {
+    "target": "frontend/src/styles/prototype-record-b.css",
+    "source": "prototypes/core-journey-studio/studio-highfi.css",
+    "sourceRules": 1,
+    "exactRecipeMatches": 1,
+    "missing": []
+  }
+]

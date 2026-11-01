@@ -1,0 +1,214 @@
+{
+  "generatedAtLocal": "2026-10-29T06:59:27.6497518+05:00",
+  "generatedAtUtc": "2026-10-29T01:59:27.6527509Z",
+  "baseRevision": "9096925a4476e84ec9a6e5ef9bff50ae45ac0f67",
+  "scope": "New uncommitted frontend implementation and phase4/revision-v3 evidence; unrelated dirty worktree state preserved; no commit, push, prototype or canonical contract edits.",
+  "environment": {
+    "os": "Windows 11 Pro 10.0.26200",
+    "node": "v22.23.1",
+    "npm": "10.9.8",
+    "browser": "Chrome 156.0.8078.49; Playwright headless with fake media input flags",
+    "browserTemp": "Default C: user temp location; no TEMP/TMP override",
+    "npmCache": "Per-run caches under D:\\Program\\python\\Dubbed\\_docs\\evidence\\core-journey-ab-implementation-2026-10-28\\phase4\\revision-v3\\npm-cache"
+  },
+  "verificationSummary": {
+    "latestFullC": "21/21 passed in 3.7m before two evidence-test-only timing waits",
+    "fullC2": "19/21; A Result player reported video unavailable at restart; B mobile horizontalOverflow=true; both full journeys passed the immediate focused rerun 2/2",
+    "fullC3": "20/21; completed-revision helper observed no video.currentTime movement within a fixed 400ms after recorder start; active recording remained visible; helper now polls the same actual clock-progress requirement up to 5s",
+    "focusedFinal": "Long-RU frame wait 1/1; A/B journeys 2/2; completed-revision clock journey 1/1 after helper adjustment",
+    "staticFinal": "Typecheck and lint passed after the final test helper adjustment; unit 17/17 and build passed immediately before it; no product source changed after unit/build."
+  },
+  "limitations": [
+    "Browser capture exercised Chrome fake audio input, not a physical microphone.",
+    "Lifecycle interruption was modeled with browser visibility/pagehide events; real OS backgrounding, device microphones, and hardware/browser combinations were not exercised.",
+    "Result playback and download use fixed illustrative mock media; productRendered=false and assembledFromAcceptedTakes=false; no real backend or render pipeline.",
+    "A final full Playwright run after the last test-only timing helper change was intentionally not launched per the root instruction; exact failures and focused results are retained."
+  ],
+  "sourceFiles": [
+    {
+      "path": "frontend/e2e/foundation.spec.ts",
+      "bytes": 8014,
+      "sha256": "e2be5ddf32e704420c9becc0a33cd6826a920f6a29a200a370be16f3c028ec55"
+    },
+    {
+      "path": "frontend/e2e/native-media.spec.ts",
+      "bytes": 7563,
+      "sha256": "71fedae47111086c53243d7bd990b3edf7f5615cb4f03a5227d2dedf0e32eecb"
+    },
+    {
+      "path": "frontend/e2e/phase4-visual.spec.ts",
+      "bytes": 10575,
+      "sha256": "78634b2500f0feb3dd480d6ed4f46847e21a5aa83d452d5ea3b338b7df0a2a4c"
+    },
+    {
+      "path": "frontend/e2e/record-journey.spec.ts",
+      "bytes": 99486,
+      "sha256": "d0e4002801f09cbd3b4d49ae106e546cd5187d1631415d726d8cc39fa54fd0e9"
+    },
+    {
+      "path": "frontend/eslint.config.mjs",
+      "bytes": 533,
+      "sha256": "2743942521eb30874fa9e77ea556303929487f5be4f5c838aa1b4533e3438d29"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 357,
+      "sha256": "dbbe15a0dae9f843b481f30d89af7ab372ed034b604c28b65e1a0223bdc49153"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 88134,
+      "sha256": "392935b96ec238405491b7504f2ed481d9d2c0c0156a7054735931aef208c130"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 1216,
+      "sha256": "a34834349ed3c1f5f0831ffa6c5354c175844a8971e823ae1a4433eb52565d26"
+    },
+    {
+      "path": "frontend/playwright.config.mjs",
+      "bytes": 804,
+      "sha256": "8c09dcd3364e6c57ef29127a6c05fb08bae524c99e378636bd83086e070d49e9"
+    },
+    {
+      "path": "frontend/public/media/example-dub.mp4",
+      "bytes": 749601,
+      "sha256": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9"
+    },
+    {
+      "path": "frontend/public/media/result-generation-002.webm",
+      "bytes": 2514724,
+      "sha256": "f3802515a6738409226b8c9c705d31671e7768f81043ada452302240bb146d93"
+    },
+    {
+      "path": "frontend/public/media/scene.mp4",
+      "bytes": 886403,
+      "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c"
+    },
+    {
+      "path": "frontend/src/app/App.tsx",
+      "bytes": 14767,
+      "sha256": "2ce7f0a78341e72592b898c0d15e0d0a925e0aa6f12ecf9bc138d61c4a0e2635"
+    },
+    {
+      "path": "frontend/src/app/state.ts",
+      "bytes": 458,
+      "sha256": "b91f35b809c81bc46c70a09e61f73440e60dc108042b5661521ab397e7efa5c5"
+    },
+    {
+      "path": "frontend/src/features/record/FoundationRecordPage.tsx",
+      "bytes": 32032,
+      "sha256": "7dfb7aeeeae35f37f8a4a063ba0d341609cf78d2735ef204dbcf60e7249ccf97"
+    },
+    {
+      "path": "frontend/src/features/record/NativeMediaProofPage.tsx",
+      "bytes": 8608,
+      "sha256": "10c9d0a66933507a59d395d6811751c3399b0dba5aee2c176654bd2e0c8cd44e"
+    },
+    {
+      "path": "frontend/src/features/record/useRecordController.ts",
+      "bytes": 44873,
+      "sha256": "b38cfa1c6f29b1a4ab597108616a06944d18aae421a015a51e047bf80acf350f"
+    },
+    {
+      "path": "frontend/src/features/result/FoundationResultPage.tsx",
+      "bytes": 33614,
+      "sha256": "32ddddae7d129ba37efded359c779deaffd76748c669de19fece497bb37fe7c5"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "bytes": 1104,
+      "sha256": "76012685146874bb2f50766f14994f0d2b3750a62b372e3496f275a375521189"
+    },
+    {
+      "path": "frontend/src/services/architecture.test.ts",
+      "bytes": 1239,
+      "sha256": "5963e9d5350e1128a83d6459fac416b3b04184308c06761e974479ca65b4d77e"
+    },
+    {
+      "path": "frontend/src/services/browser-capture/WebLockCaptureGrants.ts",
+      "bytes": 2615,
+      "sha256": "fe7e28e6ccacc4bc6f585db52e63c048c23598761d55d56fb8d4080a13156b8c"
+    },
+    {
+      "path": "frontend/src/services/browser-media/NativeBrowserMedia.ts",
+      "bytes": 16312,
+      "sha256": "0ab37d5d64ec53a9efebf40722e26040d71cbf42d60eaee824dbed679538ee51"
+    },
+    {
+      "path": "frontend/src/services/contracts.ts",
+      "bytes": 13386,
+      "sha256": "68bd75477a6f3f108e2420333ddee81973004c97f15787cebf02f64e0181ada6"
+    },
+    {
+      "path": "frontend/src/services/index.test.ts",
+      "bytes": 879,
+      "sha256": "839b3999bd5013717a456b5b76778f31f5b0431516ac38e47cae8acf6b0f0c5f"
+    },
+    {
+      "path": "frontend/src/services/index.ts",
+      "bytes": 1976,
+      "sha256": "259b13a5f0b35836cef3b2b6cf772e56cf670606e74a967bd6c0c74396b6b636"
+    },
+    {
+      "path": "frontend/src/services/mock/fixture-data.json",
+      "bytes": 2500,
+      "sha256": "3a754a772b10ae122b70207261a20f90bcfda0803efcd6d0046c70a765f69eb5"
+    },
+    {
+      "path": "frontend/src/services/mock/fixtures.ts",
+      "bytes": 1634,
+      "sha256": "8631de3ddb247016cb3659f89efa8a324a7b1cb644ec450c80a35376717cab09"
+    },
+    {
+      "path": "frontend/src/services/mock/IndexedDbProjectStore.test.ts",
+      "bytes": 17567,
+      "sha256": "ddbf4b239ddc833c0679acbfb7ba312acc101b43ba57250bd8b6e7ea7990d7ef"
+    },
+    {
+      "path": "frontend/src/services/mock/IndexedDbProjectStore.ts",
+      "bytes": 99071,
+      "sha256": "2a8a7607caa0bd2204c8b603fbd775098f0e0eb1a4bdd7d9b606a849437c7494"
+    },
+    {
+      "path": "frontend/src/services/mock/IndexedDbResultPort.test.ts",
+      "bytes": 14680,
+      "sha256": "79fc8edc35d104d14740fff5d8434cb6cf0d79486995ac908f6b8dc6e2db6c20"
+    },
+    {
+      "path": "frontend/src/shared/i18n.ts",
+      "bytes": 24210,
+      "sha256": "5704a48cd757015c29df00216ec10598ffb92791bf81d318f45f04126866b7d6"
+    },
+    {
+      "path": "frontend/src/shared/ServicesContext.tsx",
+      "bytes": 561,
+      "sha256": "6caeb047a39206382e1221ea5b26d84e6502ca1a3780b778653af4ccc594bfcb"
+    },
+    {
+      "path": "frontend/src/shared/ui.tsx",
+      "bytes": 2262,
+      "sha256": "9ab04328b4006582dfd97e83dbc00120b1b73672937140ddcbabfdb4defc908b"
+    },
+    {
+      "path": "frontend/src/styles/app.css",
+      "bytes": 25138,
+      "sha256": "c74abf6c4fa6918939704291449b8ab160b7b274dc7df0fe3ae1a4f92d0af9b3"
+    },
+    {
+      "path": "frontend/src/styles/tokens.css",
+      "bytes": 1357,
+      "sha256": "9d81e19ccb9fc3ec92fddcef0368cc81a4dc17ffa584f1175169ad37337a58e6"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 629,
+      "sha256": "860ba3b723097eb4082701471cf2f7c47bbc5c231dd88552ff9c1a08254e99b0"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 365,
+      "sha256": "eadd0c25470bb624d05a6628be6f1e3c2f3683e7f1c22890cff8b416a3de9d7e"
+    }
+  ]
+}

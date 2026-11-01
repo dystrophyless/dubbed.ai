@@ -1,0 +1,157 @@
+{
+  "version": "core-journey-lowfi-v5",
+  "browser": "156.0.8078.48",
+  "date": "2026-10-27",
+  "checks": [
+    {
+      "scenario": "Desktop 16:9 stage and exactly aligned full-width waveform",
+      "result": "PASS",
+      "geometry": {
+        "stage": {
+          "x": 112,
+          "width": 920,
+          "height": 517.5
+        },
+        "wave": {
+          "x": 112,
+          "width": 920
+        },
+        "playheadTarget": 40,
+        "objectFit": "contain",
+        "overflow": false
+      }
+    },
+    {
+      "scenario": "Pause exposes Resume; Resume continues original from paused position",
+      "result": "PASS",
+      "pausedAt": 1.052441
+    },
+    {
+      "scenario": "original: drag stays paused, LMB release starts selected synchronized source at sought position",
+      "result": "PASS",
+      "soughtTime": 1.784999
+    },
+    {
+      "scenario": "Capture: seek disabled for pointer and keyboard; no Pause/Resume; current-time only advances naturally; consistent capture hints",
+      "result": "PASS"
+    },
+    {
+      "scenario": "take: drag stays paused, LMB release starts selected synchronized source at sought position",
+      "result": "PASS",
+      "soughtTime": 1.784999
+    },
+    {
+      "scenario": "Candidate Pause/Resume and seeking retain candidate identity",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Replay explicitly restarts even while original is already playing; Pause remains a separate action",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Replay explicitly restarts; ended-window replay remains usable",
+      "result": "PASS"
+    },
+    {
+      "scenario": "desktop: exact 16:9 stage/wave alignment",
+      "result": "PASS",
+      "geometry": {
+        "stage": {
+          "x": 112,
+          "width": 920,
+          "height": 517.5
+        },
+        "wave": {
+          "x": 112,
+          "width": 920
+        },
+        "playheadTarget": 40,
+        "objectFit": "contain",
+        "overflow": false
+      }
+    },
+    {
+      "scenario": "short-desktop: exact 16:9 stage/wave alignment",
+      "result": "PASS",
+      "geometry": {
+        "stage": {
+          "x": 32,
+          "width": 920,
+          "height": 517.5
+        },
+        "wave": {
+          "x": 32,
+          "width": 920
+        },
+        "playheadTarget": 40,
+        "objectFit": "contain",
+        "overflow": false
+      }
+    },
+    {
+      "scenario": "phone: exact 16:9 stage/wave alignment",
+      "result": "PASS",
+      "geometry": {
+        "stage": {
+          "x": 16,
+          "width": 358,
+          "height": 201.375
+        },
+        "wave": {
+          "x": 16,
+          "width": 358
+        },
+        "playheadTarget": 48,
+        "objectFit": "contain",
+        "overflow": false
+      }
+    },
+    {
+      "scenario": "original: drag stays paused, LMB release starts selected synchronized source at sought position",
+      "result": "PASS",
+      "soughtTime": 1.779899
+    },
+    {
+      "scenario": "take: drag stays paused, LMB release starts selected synchronized source at sought position",
+      "result": "PASS",
+      "soughtTime": 1.779899
+    },
+    {
+      "scenario": "phone: original/candidate listening Resume and actual held-drag release-to-play operated",
+      "result": "PASS"
+    },
+    {
+      "scenario": "short-phone: exact 16:9 stage/wave alignment",
+      "result": "PASS",
+      "geometry": {
+        "stage": {
+          "x": 16,
+          "width": 358,
+          "height": 201.375
+        },
+        "wave": {
+          "x": 16,
+          "width": 358
+        },
+        "playheadTarget": 48,
+        "objectFit": "contain",
+        "overflow": false
+      }
+    },
+    {
+      "scenario": "original: drag stays paused, LMB release starts selected synchronized source at sought position",
+      "result": "PASS",
+      "soughtTime": 1.779899
+    },
+    {
+      "scenario": "take: drag stays paused, LMB release starts selected synchronized source at sought position",
+      "result": "PASS",
+      "soughtTime": 1.779899
+    },
+    {
+      "scenario": "short-phone: original/candidate listening Resume and actual held-drag release-to-play operated",
+      "result": "PASS"
+    }
+  ],
+  "pageErrors": []
+}

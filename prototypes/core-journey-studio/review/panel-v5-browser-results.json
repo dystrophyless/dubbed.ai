@@ -1,0 +1,8039 @@
+{
+  "version": "core-journey-panel-highfi-v5",
+  "date": "2026-10-28",
+  "browser": "Chrome 156.0.8078.48",
+  "environment": "Windows/headless installed Chrome/DPR1/100% CSS viewport",
+  "checks": [
+    {
+      "name": "1440x900 normal video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1440x900 normal panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 148,
+          "width": 784,
+          "height": 441,
+          "bottom": 589,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "wave": {
+          "x": 328,
+          "y": 655,
+          "width": 784,
+          "height": 32,
+          "bottom": 687,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "dialogue": {
+          "x": 370,
+          "y": 605,
+          "width": 700,
+          "height": 34,
+          "bottom": 639,
+          "right": 1070,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 328,
+          "y": 92,
+          "width": 784,
+          "height": 40,
+          "bottom": 132,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "panel": {
+          "x": 1136,
+          "y": 148,
+          "width": 272,
+          "height": 332,
+          "bottom": 480,
+          "right": 1408,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1277,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1392,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        "help": {
+          "x": 1152,
+          "y": 351,
+          "width": 240,
+          "height": 40,
+          "bottom": 391,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1152,
+            "y": 201,
+            "width": 240,
+            "height": 40,
+            "bottom": 241,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#record",
+            "x": 1152,
+            "y": 251,
+            "width": 240,
+            "height": 40,
+            "bottom": 291,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#take",
+            "x": 1152,
+            "y": 301,
+            "width": 240,
+            "height": 40,
+            "bottom": 341,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#previous",
+            "x": 1152,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1267,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          },
+          {
+            "selector": "#next",
+            "x": 1277,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1392,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          }
+        ],
+        "dialogueType": {
+          "size": "26px",
+          "line": "34px"
+        }
+      }
+    },
+    {
+      "name": "1440x900 normal heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1440x900 normal complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 148,
+          "width": 784,
+          "height": 441,
+          "bottom": 589,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "wave": {
+          "x": 328,
+          "y": 655,
+          "width": 784,
+          "height": 32,
+          "bottom": 687,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "dialogue": {
+          "x": 370,
+          "y": 605,
+          "width": 700,
+          "height": 34,
+          "bottom": 639,
+          "right": 1070,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 328,
+          "y": 92,
+          "width": 784,
+          "height": 40,
+          "bottom": 132,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "panel": {
+          "x": 1136,
+          "y": 148,
+          "width": 272,
+          "height": 332,
+          "bottom": 480,
+          "right": 1408,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1277,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1392,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        "help": {
+          "x": 1152,
+          "y": 351,
+          "width": 240,
+          "height": 40,
+          "bottom": 391,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1152,
+            "y": 201,
+            "width": 240,
+            "height": 40,
+            "bottom": 241,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#record",
+            "x": 1152,
+            "y": 251,
+            "width": 240,
+            "height": 40,
+            "bottom": 291,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#take",
+            "x": 1152,
+            "y": 301,
+            "width": 240,
+            "height": 40,
+            "bottom": 341,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#previous",
+            "x": 1152,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1267,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          },
+          {
+            "selector": "#next",
+            "x": 1277,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1392,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          }
+        ],
+        "dialogueType": {
+          "size": "26px",
+          "line": "34px"
+        }
+      }
+    },
+    {
+      "name": "1440x900 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1440x900 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 370,
+        "y": 605,
+        "width": 700,
+        "height": 34,
+        "bottom": 639,
+        "right": 1070,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      }
+    },
+    {
+      "name": "1440x900 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 1152,
+          "y": 201,
+          "width": 240,
+          "height": 40,
+          "bottom": 241,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#record",
+          "x": 1152,
+          "y": 251,
+          "width": 240,
+          "height": 40,
+          "bottom": 291,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#take",
+          "x": 1152,
+          "y": 301,
+          "width": 240,
+          "height": 40,
+          "bottom": 341,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#previous",
+          "x": 1152,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1267,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        {
+          "selector": "#next",
+          "x": 1277,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1392,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        }
+      ]
+    },
+    {
+      "name": "1440x900 completed video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1440x900 completed panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 148,
+          "width": 784,
+          "height": 441,
+          "bottom": 589,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "wave": {
+          "x": 328,
+          "y": 655,
+          "width": 784,
+          "height": 32,
+          "bottom": 687,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "dialogue": {
+          "x": 370,
+          "y": 605,
+          "width": 700,
+          "height": 34,
+          "bottom": 639,
+          "right": 1070,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 328,
+          "y": 92,
+          "width": 784,
+          "height": 40,
+          "bottom": 132,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "panel": {
+          "x": 1136,
+          "y": 148,
+          "width": 272,
+          "height": 332,
+          "bottom": 480,
+          "right": 1408,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1277,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1392,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        "help": {
+          "x": 1152,
+          "y": 351,
+          "width": 240,
+          "height": 40,
+          "bottom": 391,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1152,
+            "y": 201,
+            "width": 240,
+            "height": 40,
+            "bottom": 241,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#record",
+            "x": 1152,
+            "y": 251,
+            "width": 240,
+            "height": 40,
+            "bottom": 291,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#take",
+            "x": 1152,
+            "y": 301,
+            "width": 240,
+            "height": 40,
+            "bottom": 341,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#previous",
+            "x": 1152,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1267,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          },
+          {
+            "selector": "#next",
+            "x": 1277,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1392,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          }
+        ],
+        "dialogueType": {
+          "size": "26px",
+          "line": "34px"
+        }
+      }
+    },
+    {
+      "name": "1440x900 completed heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1440x900 completed complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 148,
+          "width": 784,
+          "height": 441,
+          "bottom": 589,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "wave": {
+          "x": 328,
+          "y": 655,
+          "width": 784,
+          "height": 32,
+          "bottom": 687,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "dialogue": {
+          "x": 370,
+          "y": 605,
+          "width": 700,
+          "height": 34,
+          "bottom": 639,
+          "right": 1070,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 328,
+          "y": 92,
+          "width": 784,
+          "height": 40,
+          "bottom": 132,
+          "right": 1112,
+          "scrollWidth": 784,
+          "clientWidth": 784
+        },
+        "panel": {
+          "x": 1136,
+          "y": 148,
+          "width": 272,
+          "height": 332,
+          "bottom": 480,
+          "right": 1408,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1277,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1392,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        "help": {
+          "x": 1152,
+          "y": 351,
+          "width": 240,
+          "height": 40,
+          "bottom": 391,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1152,
+            "y": 201,
+            "width": 240,
+            "height": 40,
+            "bottom": 241,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#record",
+            "x": 1152,
+            "y": 251,
+            "width": 240,
+            "height": 40,
+            "bottom": 291,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#take",
+            "x": 1152,
+            "y": 301,
+            "width": 240,
+            "height": 40,
+            "bottom": 341,
+            "right": 1392,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#previous",
+            "x": 1152,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1267,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          },
+          {
+            "selector": "#next",
+            "x": 1277,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1392,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          }
+        ],
+        "dialogueType": {
+          "size": "26px",
+          "line": "34px"
+        }
+      }
+    },
+    {
+      "name": "1440x900 completed full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1440x900 completed dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 370,
+        "y": 605,
+        "width": 700,
+        "height": 34,
+        "bottom": 639,
+        "right": 1070,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      }
+    },
+    {
+      "name": "1440x900 completed action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 1152,
+          "y": 201,
+          "width": 240,
+          "height": 40,
+          "bottom": 241,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#record",
+          "x": 1152,
+          "y": 251,
+          "width": 240,
+          "height": 40,
+          "bottom": 291,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#take",
+          "x": 1152,
+          "y": 301,
+          "width": 240,
+          "height": 40,
+          "bottom": 341,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#previous",
+          "x": 1152,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1267,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        {
+          "selector": "#next",
+          "x": 1277,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1392,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        }
+      ]
+    },
+    {
+      "name": "1920x910 normal video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1920x910 normal panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1920,
+          910
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 500,
+          "y": 148,
+          "width": 920,
+          "height": 517.5,
+          "bottom": 665.5,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "wave": {
+          "x": 500,
+          "y": 731.5,
+          "width": 920,
+          "height": 32,
+          "bottom": 763.5,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "dialogue": {
+          "x": 610,
+          "y": 681.5,
+          "width": 700,
+          "height": 34,
+          "bottom": 715.5,
+          "right": 1310,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 500,
+          "y": 92,
+          "width": 920,
+          "height": 40,
+          "bottom": 132,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "panel": {
+          "x": 1444,
+          "y": 148,
+          "width": 272,
+          "height": 332,
+          "bottom": 480,
+          "right": 1716,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1585,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1700,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        "help": {
+          "x": 1460,
+          "y": 351,
+          "width": 240,
+          "height": 40,
+          "bottom": 391,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1460,
+            "y": 201,
+            "width": 240,
+            "height": 40,
+            "bottom": 241,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#record",
+            "x": 1460,
+            "y": 251,
+            "width": 240,
+            "height": 40,
+            "bottom": 291,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#take",
+            "x": 1460,
+            "y": 301,
+            "width": 240,
+            "height": 40,
+            "bottom": 341,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#previous",
+            "x": 1460,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1575,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          },
+          {
+            "selector": "#next",
+            "x": 1585,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1700,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          }
+        ],
+        "dialogueType": {
+          "size": "26px",
+          "line": "34px"
+        }
+      }
+    },
+    {
+      "name": "1920x910 normal heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1920x910 normal complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1920,
+          910
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 500,
+          "y": 148,
+          "width": 920,
+          "height": 517.5,
+          "bottom": 665.5,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "wave": {
+          "x": 500,
+          "y": 731.5,
+          "width": 920,
+          "height": 32,
+          "bottom": 763.5,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "dialogue": {
+          "x": 610,
+          "y": 681.5,
+          "width": 700,
+          "height": 34,
+          "bottom": 715.5,
+          "right": 1310,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 500,
+          "y": 92,
+          "width": 920,
+          "height": 40,
+          "bottom": 132,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "panel": {
+          "x": 1444,
+          "y": 148,
+          "width": 272,
+          "height": 332,
+          "bottom": 480,
+          "right": 1716,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1585,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1700,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        "help": {
+          "x": 1460,
+          "y": 351,
+          "width": 240,
+          "height": 40,
+          "bottom": 391,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1460,
+            "y": 201,
+            "width": 240,
+            "height": 40,
+            "bottom": 241,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#record",
+            "x": 1460,
+            "y": 251,
+            "width": 240,
+            "height": 40,
+            "bottom": 291,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#take",
+            "x": 1460,
+            "y": 301,
+            "width": 240,
+            "height": 40,
+            "bottom": 341,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#previous",
+            "x": 1460,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1575,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          },
+          {
+            "selector": "#next",
+            "x": 1585,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1700,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          }
+        ],
+        "dialogueType": {
+          "size": "26px",
+          "line": "34px"
+        }
+      }
+    },
+    {
+      "name": "1920x910 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1920x910 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 610,
+        "y": 681.5,
+        "width": 700,
+        "height": 34,
+        "bottom": 715.5,
+        "right": 1310,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      }
+    },
+    {
+      "name": "1920x910 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 1460,
+          "y": 201,
+          "width": 240,
+          "height": 40,
+          "bottom": 241,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#record",
+          "x": 1460,
+          "y": 251,
+          "width": 240,
+          "height": 40,
+          "bottom": 291,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#take",
+          "x": 1460,
+          "y": 301,
+          "width": 240,
+          "height": 40,
+          "bottom": 341,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#previous",
+          "x": 1460,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1575,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        {
+          "selector": "#next",
+          "x": 1585,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1700,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        }
+      ]
+    },
+    {
+      "name": "1920x910 completed video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1920x910 completed panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1920,
+          910
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 500,
+          "y": 148,
+          "width": 920,
+          "height": 517.5,
+          "bottom": 665.5,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "wave": {
+          "x": 500,
+          "y": 731.5,
+          "width": 920,
+          "height": 32,
+          "bottom": 763.5,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "dialogue": {
+          "x": 610,
+          "y": 681.5,
+          "width": 700,
+          "height": 34,
+          "bottom": 715.5,
+          "right": 1310,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 500,
+          "y": 92,
+          "width": 920,
+          "height": 40,
+          "bottom": 132,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "panel": {
+          "x": 1444,
+          "y": 148,
+          "width": 272,
+          "height": 332,
+          "bottom": 480,
+          "right": 1716,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1585,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1700,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        "help": {
+          "x": 1460,
+          "y": 351,
+          "width": 240,
+          "height": 40,
+          "bottom": 391,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1460,
+            "y": 201,
+            "width": 240,
+            "height": 40,
+            "bottom": 241,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#record",
+            "x": 1460,
+            "y": 251,
+            "width": 240,
+            "height": 40,
+            "bottom": 291,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#take",
+            "x": 1460,
+            "y": 301,
+            "width": 240,
+            "height": 40,
+            "bottom": 341,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#previous",
+            "x": 1460,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1575,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          },
+          {
+            "selector": "#next",
+            "x": 1585,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1700,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          }
+        ],
+        "dialogueType": {
+          "size": "26px",
+          "line": "34px"
+        }
+      }
+    },
+    {
+      "name": "1920x910 completed heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1920x910 completed complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1920,
+          910
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 500,
+          "y": 148,
+          "width": 920,
+          "height": 517.5,
+          "bottom": 665.5,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "wave": {
+          "x": 500,
+          "y": 731.5,
+          "width": 920,
+          "height": 32,
+          "bottom": 763.5,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "dialogue": {
+          "x": 610,
+          "y": 681.5,
+          "width": 700,
+          "height": 34,
+          "bottom": 715.5,
+          "right": 1310,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 500,
+          "y": 92,
+          "width": 920,
+          "height": 40,
+          "bottom": 132,
+          "right": 1420,
+          "scrollWidth": 920,
+          "clientWidth": 920
+        },
+        "panel": {
+          "x": 1444,
+          "y": 148,
+          "width": 272,
+          "height": 332,
+          "bottom": 480,
+          "right": 1716,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1585,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1700,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        "help": {
+          "x": 1460,
+          "y": 351,
+          "width": 240,
+          "height": 40,
+          "bottom": 391,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1460,
+            "y": 201,
+            "width": 240,
+            "height": 40,
+            "bottom": 241,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#record",
+            "x": 1460,
+            "y": 251,
+            "width": 240,
+            "height": 40,
+            "bottom": 291,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#take",
+            "x": 1460,
+            "y": 301,
+            "width": 240,
+            "height": 40,
+            "bottom": 341,
+            "right": 1700,
+            "scrollWidth": 240,
+            "clientWidth": 240
+          },
+          {
+            "selector": "#previous",
+            "x": 1460,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1575,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          },
+          {
+            "selector": "#next",
+            "x": 1585,
+            "y": 424,
+            "width": 115,
+            "height": 40,
+            "bottom": 464,
+            "right": 1700,
+            "scrollWidth": 115,
+            "clientWidth": 115
+          }
+        ],
+        "dialogueType": {
+          "size": "26px",
+          "line": "34px"
+        }
+      }
+    },
+    {
+      "name": "1920x910 completed full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1920x910 completed dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 610,
+        "y": 681.5,
+        "width": 700,
+        "height": 34,
+        "bottom": 715.5,
+        "right": 1310,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      }
+    },
+    {
+      "name": "1920x910 completed action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 1460,
+          "y": 201,
+          "width": 240,
+          "height": 40,
+          "bottom": 241,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#record",
+          "x": 1460,
+          "y": 251,
+          "width": 240,
+          "height": 40,
+          "bottom": 291,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#take",
+          "x": 1460,
+          "y": 301,
+          "width": 240,
+          "height": 40,
+          "bottom": 341,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#previous",
+          "x": 1460,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1575,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        {
+          "selector": "#next",
+          "x": 1585,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1700,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        }
+      ]
+    },
+    {
+      "name": "1280x600 normal video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1280x600 normal panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 446,
+          "bottom": 574,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1117,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 988,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1107,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1117,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1236,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 normal heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 normal complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 446,
+          "bottom": 574,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1117,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 988,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1107,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1117,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1236,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1280x600 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1107,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1117,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ]
+    },
+    {
+      "name": "1280x600 completed video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1280x600 completed panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 466,
+          "bottom": 594,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1114.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1236,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        },
+        "help": {
+          "x": 988,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 522,
+            "width": 116.359375,
+            "height": 60,
+            "bottom": 582,
+            "right": 1104.359375,
+            "scrollWidth": 116,
+            "clientWidth": 116
+          },
+          {
+            "selector": "#next",
+            "x": 1114.359375,
+            "y": 522,
+            "width": 121.640625,
+            "height": 60,
+            "bottom": 582,
+            "right": 1236,
+            "scrollWidth": 122,
+            "clientWidth": 122
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 completed heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 completed complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 466,
+          "bottom": 594,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1114.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1236,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        },
+        "help": {
+          "x": 988,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 522,
+            "width": 116.359375,
+            "height": 60,
+            "bottom": 582,
+            "right": 1104.359375,
+            "scrollWidth": 116,
+            "clientWidth": 116
+          },
+          {
+            "selector": "#next",
+            "x": 1114.359375,
+            "y": 522,
+            "width": 121.640625,
+            "height": 60,
+            "bottom": 582,
+            "right": 1236,
+            "scrollWidth": 122,
+            "clientWidth": 122
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 completed full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 completed dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1280x600 completed action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 522,
+          "width": 116.359375,
+          "height": 60,
+          "bottom": 582,
+          "right": 1104.359375,
+          "scrollWidth": 116,
+          "clientWidth": 116
+        },
+        {
+          "selector": "#next",
+          "x": 1114.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1236,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        }
+      ]
+    },
+    {
+      "name": "1366x650 normal video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1366x650 normal panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1366,
+          650
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 710,
+          "height": 399.375,
+          "bottom": 527.375,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "wave": {
+          "x": 328,
+          "y": 539.375,
+          "width": 710,
+          "height": 32,
+          "bottom": 571.375,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "dialogue": {
+          "x": 1074,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 710,
+          "height": 40,
+          "bottom": 112,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "panel": {
+          "x": 1062,
+          "y": 128,
+          "width": 272,
+          "height": 446,
+          "bottom": 574,
+          "right": 1334,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1203,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1322,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 1074,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1074,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1195,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 1074,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1322,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1201,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1322,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 1074,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1193,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1203,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1322,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1366x650 normal heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1366x650 normal complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1366,
+          650
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 710,
+          "height": 399.375,
+          "bottom": 527.375,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "wave": {
+          "x": 328,
+          "y": 539.375,
+          "width": 710,
+          "height": 32,
+          "bottom": 571.375,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "dialogue": {
+          "x": 1074,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 710,
+          "height": 40,
+          "bottom": 112,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "panel": {
+          "x": 1062,
+          "y": 128,
+          "width": 272,
+          "height": 446,
+          "bottom": 574,
+          "right": 1334,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1203,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1322,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 1074,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1074,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1195,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 1074,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1322,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1201,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1322,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 1074,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1193,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1203,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1322,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1366x650 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1366x650 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 1074,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1322,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1366x650 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 1074,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1195,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 1074,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1201,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1322,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 1074,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1193,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1203,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1322,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ]
+    },
+    {
+      "name": "1366x650 completed video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1366x650 completed panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1366,
+          650
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 710,
+          "height": 399.375,
+          "bottom": 527.375,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "wave": {
+          "x": 328,
+          "y": 539.375,
+          "width": 710,
+          "height": 32,
+          "bottom": 571.375,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "dialogue": {
+          "x": 1074,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 710,
+          "height": 40,
+          "bottom": 112,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "panel": {
+          "x": 1062,
+          "y": 128,
+          "width": 272,
+          "height": 466,
+          "bottom": 594,
+          "right": 1334,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1200.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1322,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        },
+        "help": {
+          "x": 1074,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1074,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1195,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 1074,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1322,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1201,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1322,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 1074,
+            "y": 522,
+            "width": 116.359375,
+            "height": 60,
+            "bottom": 582,
+            "right": 1190.359375,
+            "scrollWidth": 116,
+            "clientWidth": 116
+          },
+          {
+            "selector": "#next",
+            "x": 1200.359375,
+            "y": 522,
+            "width": 121.640625,
+            "height": 60,
+            "bottom": 582,
+            "right": 1322,
+            "scrollWidth": 122,
+            "clientWidth": 122
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1366x650 completed heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1366x650 completed complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1366,
+          650
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 710,
+          "height": 399.375,
+          "bottom": 527.375,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "wave": {
+          "x": 328,
+          "y": 539.375,
+          "width": 710,
+          "height": 32,
+          "bottom": 571.375,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "dialogue": {
+          "x": 1074,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 710,
+          "height": 40,
+          "bottom": 112,
+          "right": 1038,
+          "scrollWidth": 710,
+          "clientWidth": 710
+        },
+        "panel": {
+          "x": 1062,
+          "y": 128,
+          "width": 272,
+          "height": 466,
+          "bottom": 594,
+          "right": 1334,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1200.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1322,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        },
+        "help": {
+          "x": 1074,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 1074,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1195,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 1074,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1322,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1201,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1322,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 1074,
+            "y": 522,
+            "width": 116.359375,
+            "height": 60,
+            "bottom": 582,
+            "right": 1190.359375,
+            "scrollWidth": 116,
+            "clientWidth": 116
+          },
+          {
+            "selector": "#next",
+            "x": 1200.359375,
+            "y": 522,
+            "width": 121.640625,
+            "height": 60,
+            "bottom": 582,
+            "right": 1322,
+            "scrollWidth": 122,
+            "clientWidth": 122
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1366x650 completed full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1366x650 completed dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 1074,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1322,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1366x650 completed action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 1074,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1195,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 1074,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1201,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1322,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 1074,
+          "y": 522,
+          "width": 116.359375,
+          "height": 60,
+          "bottom": 582,
+          "right": 1190.359375,
+          "scrollWidth": 116,
+          "clientWidth": 116
+        },
+        {
+          "selector": "#next",
+          "x": 1200.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1322,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        }
+      ]
+    },
+    {
+      "name": "1023x700 normal useful stacked media/panel",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1023,
+          700
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 24,
+          "y": 136,
+          "width": 975,
+          "height": 548.4375,
+          "bottom": 684.4375,
+          "right": 999,
+          "scrollWidth": 975,
+          "clientWidth": 975
+        },
+        "wave": {
+          "x": 24,
+          "y": 776.4375,
+          "width": 975,
+          "height": 32,
+          "bottom": 808.4375,
+          "right": 999,
+          "scrollWidth": 975,
+          "clientWidth": 975
+        },
+        "dialogue": {
+          "x": 161.5,
+          "y": 700.4375,
+          "width": 700,
+          "height": 60,
+          "bottom": 760.4375,
+          "right": 861.5,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 24,
+          "y": 80,
+          "width": 975,
+          "height": 40,
+          "bottom": 120,
+          "right": 999,
+          "scrollWidth": 975,
+          "clientWidth": 975
+        },
+        "panel": {
+          "x": 24,
+          "y": 882.4375,
+          "width": 975,
+          "height": 248,
+          "bottom": 1130.4375,
+          "right": 999,
+          "scrollWidth": 975,
+          "clientWidth": 975
+        },
+        "next": {
+          "x": 516.5,
+          "y": 1066.4375,
+          "width": 466.5,
+          "height": 48,
+          "bottom": 1114.4375,
+          "right": 983,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        },
+        "help": {
+          "x": 40,
+          "y": 993.4375,
+          "width": 943,
+          "height": 40,
+          "bottom": 1033.4375,
+          "right": 983,
+          "scrollWidth": 943,
+          "clientWidth": 943
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 40,
+            "y": 935.4375,
+            "width": 307.65625,
+            "height": 48,
+            "bottom": 983.4375,
+            "right": 347.65625,
+            "scrollWidth": 308,
+            "clientWidth": 308
+          },
+          {
+            "selector": "#record",
+            "x": 357.65625,
+            "y": 935.4375,
+            "width": 307.671875,
+            "height": 48,
+            "bottom": 983.4375,
+            "right": 665.328125,
+            "scrollWidth": 308,
+            "clientWidth": 308
+          },
+          {
+            "selector": "#take",
+            "x": 675.328125,
+            "y": 935.4375,
+            "width": 307.65625,
+            "height": 48,
+            "bottom": 983.4375,
+            "right": 982.984375,
+            "scrollWidth": 308,
+            "clientWidth": 308
+          },
+          {
+            "selector": "#previous",
+            "x": 40,
+            "y": 1066.4375,
+            "width": 466.5,
+            "height": 48,
+            "bottom": 1114.4375,
+            "right": 506.5,
+            "scrollWidth": 467,
+            "clientWidth": 467
+          },
+          {
+            "selector": "#next",
+            "x": 516.5,
+            "y": 1066.4375,
+            "width": 466.5,
+            "height": 48,
+            "bottom": 1114.4375,
+            "right": 983,
+            "scrollWidth": 467,
+            "clientWidth": 467
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "30px"
+        }
+      }
+    },
+    {
+      "name": "1023x700 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1023x700 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 161.5,
+        "y": 700.4375,
+        "width": 700,
+        "height": 60,
+        "bottom": 760.4375,
+        "right": 861.5,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      }
+    },
+    {
+      "name": "1023x700 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 40,
+          "y": 935.4375,
+          "width": 307.65625,
+          "height": 48,
+          "bottom": 983.4375,
+          "right": 347.65625,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#record",
+          "x": 357.65625,
+          "y": 935.4375,
+          "width": 307.671875,
+          "height": 48,
+          "bottom": 983.4375,
+          "right": 665.328125,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#take",
+          "x": 675.328125,
+          "y": 935.4375,
+          "width": 307.65625,
+          "height": 48,
+          "bottom": 983.4375,
+          "right": 982.984375,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#previous",
+          "x": 40,
+          "y": 1066.4375,
+          "width": 466.5,
+          "height": 48,
+          "bottom": 1114.4375,
+          "right": 506.5,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        },
+        {
+          "selector": "#next",
+          "x": 516.5,
+          "y": 1066.4375,
+          "width": 466.5,
+          "height": 48,
+          "bottom": 1114.4375,
+          "right": 983,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        }
+      ]
+    },
+    {
+      "name": "1024x700 normal useful stacked media/panel",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1024,
+          700
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 24,
+          "y": 136,
+          "width": 976,
+          "height": 549,
+          "bottom": 685,
+          "right": 1000,
+          "scrollWidth": 976,
+          "clientWidth": 976
+        },
+        "wave": {
+          "x": 24,
+          "y": 777,
+          "width": 976,
+          "height": 32,
+          "bottom": 809,
+          "right": 1000,
+          "scrollWidth": 976,
+          "clientWidth": 976
+        },
+        "dialogue": {
+          "x": 162,
+          "y": 701,
+          "width": 700,
+          "height": 60,
+          "bottom": 761,
+          "right": 862,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 24,
+          "y": 80,
+          "width": 976,
+          "height": 40,
+          "bottom": 120,
+          "right": 1000,
+          "scrollWidth": 976,
+          "clientWidth": 976
+        },
+        "panel": {
+          "x": 24,
+          "y": 883,
+          "width": 976,
+          "height": 248,
+          "bottom": 1131,
+          "right": 1000,
+          "scrollWidth": 976,
+          "clientWidth": 976
+        },
+        "next": {
+          "x": 517,
+          "y": 1067,
+          "width": 467,
+          "height": 48,
+          "bottom": 1115,
+          "right": 984,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        },
+        "help": {
+          "x": 40,
+          "y": 994,
+          "width": 944,
+          "height": 40,
+          "bottom": 1034,
+          "right": 984,
+          "scrollWidth": 944,
+          "clientWidth": 944
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 40,
+            "y": 936,
+            "width": 308,
+            "height": 48,
+            "bottom": 984,
+            "right": 348,
+            "scrollWidth": 308,
+            "clientWidth": 308
+          },
+          {
+            "selector": "#record",
+            "x": 358,
+            "y": 936,
+            "width": 308,
+            "height": 48,
+            "bottom": 984,
+            "right": 666,
+            "scrollWidth": 308,
+            "clientWidth": 308
+          },
+          {
+            "selector": "#take",
+            "x": 676,
+            "y": 936,
+            "width": 308,
+            "height": 48,
+            "bottom": 984,
+            "right": 984,
+            "scrollWidth": 308,
+            "clientWidth": 308
+          },
+          {
+            "selector": "#previous",
+            "x": 40,
+            "y": 1067,
+            "width": 467,
+            "height": 48,
+            "bottom": 1115,
+            "right": 507,
+            "scrollWidth": 467,
+            "clientWidth": 467
+          },
+          {
+            "selector": "#next",
+            "x": 517,
+            "y": 1067,
+            "width": 467,
+            "height": 48,
+            "bottom": 1115,
+            "right": 984,
+            "scrollWidth": 467,
+            "clientWidth": 467
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "30px"
+        }
+      }
+    },
+    {
+      "name": "1024x700 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1024x700 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 162,
+        "y": 701,
+        "width": 700,
+        "height": 60,
+        "bottom": 761,
+        "right": 862,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      }
+    },
+    {
+      "name": "1024x700 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 40,
+          "y": 936,
+          "width": 308,
+          "height": 48,
+          "bottom": 984,
+          "right": 348,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#record",
+          "x": 358,
+          "y": 936,
+          "width": 308,
+          "height": 48,
+          "bottom": 984,
+          "right": 666,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#take",
+          "x": 676,
+          "y": 936,
+          "width": 308,
+          "height": 48,
+          "bottom": 984,
+          "right": 984,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#previous",
+          "x": 40,
+          "y": 1067,
+          "width": 467,
+          "height": 48,
+          "bottom": 1115,
+          "right": 507,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        },
+        {
+          "selector": "#next",
+          "x": 517,
+          "y": 1067,
+          "width": 467,
+          "height": 48,
+          "bottom": 1115,
+          "right": 984,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        }
+      ]
+    },
+    {
+      "name": "1247x700 normal useful stacked media/panel",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1247,
+          700
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 24,
+          "y": 136,
+          "width": 1199,
+          "height": 674.4375,
+          "bottom": 810.4375,
+          "right": 1223,
+          "scrollWidth": 1199,
+          "clientWidth": 1199
+        },
+        "wave": {
+          "x": 24,
+          "y": 902.4375,
+          "width": 1199,
+          "height": 32,
+          "bottom": 934.4375,
+          "right": 1223,
+          "scrollWidth": 1199,
+          "clientWidth": 1199
+        },
+        "dialogue": {
+          "x": 273.5,
+          "y": 826.4375,
+          "width": 700,
+          "height": 60,
+          "bottom": 886.4375,
+          "right": 973.5,
+          "scrollWidth": 700,
+          "clientWidth": 700
+        },
+        "heading": {
+          "x": 24,
+          "y": 80,
+          "width": 1199,
+          "height": 40,
+          "bottom": 120,
+          "right": 1223,
+          "scrollWidth": 1199,
+          "clientWidth": 1199
+        },
+        "panel": {
+          "x": 24,
+          "y": 1008.4375,
+          "width": 1199,
+          "height": 248,
+          "bottom": 1256.4375,
+          "right": 1223,
+          "scrollWidth": 1199,
+          "clientWidth": 1199
+        },
+        "next": {
+          "x": 628.5,
+          "y": 1192.4375,
+          "width": 578.5,
+          "height": 48,
+          "bottom": 1240.4375,
+          "right": 1207,
+          "scrollWidth": 579,
+          "clientWidth": 579
+        },
+        "help": {
+          "x": 40,
+          "y": 1119.4375,
+          "width": 1167,
+          "height": 40,
+          "bottom": 1159.4375,
+          "right": 1207,
+          "scrollWidth": 1167,
+          "clientWidth": 1167
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 40,
+            "y": 1061.4375,
+            "width": 382.328125,
+            "height": 48,
+            "bottom": 1109.4375,
+            "right": 422.328125,
+            "scrollWidth": 382,
+            "clientWidth": 382
+          },
+          {
+            "selector": "#record",
+            "x": 432.328125,
+            "y": 1061.4375,
+            "width": 382.328125,
+            "height": 48,
+            "bottom": 1109.4375,
+            "right": 814.65625,
+            "scrollWidth": 382,
+            "clientWidth": 382
+          },
+          {
+            "selector": "#take",
+            "x": 824.65625,
+            "y": 1061.4375,
+            "width": 382.34375,
+            "height": 48,
+            "bottom": 1109.4375,
+            "right": 1207,
+            "scrollWidth": 382,
+            "clientWidth": 382
+          },
+          {
+            "selector": "#previous",
+            "x": 40,
+            "y": 1192.4375,
+            "width": 578.5,
+            "height": 48,
+            "bottom": 1240.4375,
+            "right": 618.5,
+            "scrollWidth": 579,
+            "clientWidth": 579
+          },
+          {
+            "selector": "#next",
+            "x": 628.5,
+            "y": 1192.4375,
+            "width": 578.5,
+            "height": 48,
+            "bottom": 1240.4375,
+            "right": 1207,
+            "scrollWidth": 579,
+            "clientWidth": 579
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "30px"
+        }
+      }
+    },
+    {
+      "name": "1247x700 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1247x700 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 273.5,
+        "y": 826.4375,
+        "width": 700,
+        "height": 60,
+        "bottom": 886.4375,
+        "right": 973.5,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      }
+    },
+    {
+      "name": "1247x700 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 40,
+          "y": 1061.4375,
+          "width": 382.328125,
+          "height": 48,
+          "bottom": 1109.4375,
+          "right": 422.328125,
+          "scrollWidth": 382,
+          "clientWidth": 382
+        },
+        {
+          "selector": "#record",
+          "x": 432.328125,
+          "y": 1061.4375,
+          "width": 382.328125,
+          "height": 48,
+          "bottom": 1109.4375,
+          "right": 814.65625,
+          "scrollWidth": 382,
+          "clientWidth": 382
+        },
+        {
+          "selector": "#take",
+          "x": 824.65625,
+          "y": 1061.4375,
+          "width": 382.34375,
+          "height": 48,
+          "bottom": 1109.4375,
+          "right": 1207,
+          "scrollWidth": 382,
+          "clientWidth": 382
+        },
+        {
+          "selector": "#previous",
+          "x": 40,
+          "y": 1192.4375,
+          "width": 578.5,
+          "height": 48,
+          "bottom": 1240.4375,
+          "right": 618.5,
+          "scrollWidth": 579,
+          "clientWidth": 579
+        },
+        {
+          "selector": "#next",
+          "x": 628.5,
+          "y": 1192.4375,
+          "width": 578.5,
+          "height": 48,
+          "bottom": 1240.4375,
+          "right": 1207,
+          "scrollWidth": 579,
+          "clientWidth": 579
+        }
+      ]
+    },
+    {
+      "name": "1248x700 normal video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1248x700 normal panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1248,
+          700
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 592,
+          "height": 333,
+          "bottom": 461,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "wave": {
+          "x": 328,
+          "y": 473,
+          "width": 592,
+          "height": 32,
+          "bottom": 505,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "dialogue": {
+          "x": 956,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 592,
+          "height": 40,
+          "bottom": 112,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "panel": {
+          "x": 944,
+          "y": 128,
+          "width": 272,
+          "height": 446,
+          "bottom": 574,
+          "right": 1216,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1085,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1204,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 956,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 956,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1077,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 956,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1204,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1083,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1204,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 956,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1075,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1085,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1204,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1248x700 normal heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1248x700 normal complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1248,
+          700
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 592,
+          "height": 333,
+          "bottom": 461,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "wave": {
+          "x": 328,
+          "y": 473,
+          "width": 592,
+          "height": 32,
+          "bottom": 505,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "dialogue": {
+          "x": 956,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 592,
+          "height": 40,
+          "bottom": 112,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "panel": {
+          "x": 944,
+          "y": 128,
+          "width": 272,
+          "height": 446,
+          "bottom": 574,
+          "right": 1216,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1085,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1204,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 956,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 956,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1077,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 956,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1204,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1083,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1204,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 956,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1075,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1085,
+            "y": 522,
+            "width": 119,
+            "height": 40,
+            "bottom": 562,
+            "right": 1204,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1248x700 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1248x700 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 956,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1204,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1248x700 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 956,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1077,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 956,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1083,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1204,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 956,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1075,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1085,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1204,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ]
+    },
+    {
+      "name": "1248x700 completed video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1248x700 completed panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1248,
+          700
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 592,
+          "height": 333,
+          "bottom": 461,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "wave": {
+          "x": 328,
+          "y": 473,
+          "width": 592,
+          "height": 32,
+          "bottom": 505,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "dialogue": {
+          "x": 956,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 592,
+          "height": 40,
+          "bottom": 112,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "panel": {
+          "x": 944,
+          "y": 128,
+          "width": 272,
+          "height": 466,
+          "bottom": 594,
+          "right": 1216,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1082.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1204,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        },
+        "help": {
+          "x": 956,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 956,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1077,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 956,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1204,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1083,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1204,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 956,
+            "y": 522,
+            "width": 116.359375,
+            "height": 60,
+            "bottom": 582,
+            "right": 1072.359375,
+            "scrollWidth": 116,
+            "clientWidth": 116
+          },
+          {
+            "selector": "#next",
+            "x": 1082.359375,
+            "y": 522,
+            "width": 121.640625,
+            "height": 60,
+            "bottom": 582,
+            "right": 1204,
+            "scrollWidth": 122,
+            "clientWidth": 122
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1248x700 completed heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1248x700 completed complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1248,
+          700
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 592,
+          "height": 333,
+          "bottom": 461,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "wave": {
+          "x": 328,
+          "y": 473,
+          "width": 592,
+          "height": 32,
+          "bottom": 505,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "dialogue": {
+          "x": 956,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 592,
+          "height": 40,
+          "bottom": 112,
+          "right": 920,
+          "scrollWidth": 592,
+          "clientWidth": 592
+        },
+        "panel": {
+          "x": 944,
+          "y": 128,
+          "width": 272,
+          "height": 466,
+          "bottom": 594,
+          "right": 1216,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1082.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1204,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        },
+        "help": {
+          "x": 956,
+          "y": 457,
+          "width": 248,
+          "height": 40,
+          "bottom": 497,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 956,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1077,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 956,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1204,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1083,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1204,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 956,
+            "y": 522,
+            "width": 116.359375,
+            "height": 60,
+            "bottom": 582,
+            "right": 1072.359375,
+            "scrollWidth": 116,
+            "clientWidth": 116
+          },
+          {
+            "selector": "#next",
+            "x": 1082.359375,
+            "y": 522,
+            "width": 121.640625,
+            "height": 60,
+            "bottom": 582,
+            "right": 1204,
+            "scrollWidth": 122,
+            "clientWidth": 122
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1248x700 completed full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1248x700 completed dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 956,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1204,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1248x700 completed action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 956,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1077,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 956,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1083,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1204,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 956,
+          "y": 522,
+          "width": 116.359375,
+          "height": 60,
+          "bottom": 582,
+          "right": 1072.359375,
+          "scrollWidth": 116,
+          "clientWidth": 116
+        },
+        {
+          "selector": "#next",
+          "x": 1082.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1204,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        }
+      ]
+    },
+    {
+      "name": "390x667 normal phone useful contained media",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "390x667 normal full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "390x667 normal dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 16,
+        "y": 400.375,
+        "width": 358,
+        "height": 128,
+        "bottom": 528.375,
+        "right": 374,
+        "scrollWidth": 358,
+        "clientWidth": 358
+      }
+    },
+    {
+      "name": "390x667 normal action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 32,
+          "y": 715.375,
+          "width": 93.9375,
+          "height": 72,
+          "bottom": 787.375,
+          "right": 125.9375,
+          "scrollWidth": 94,
+          "clientWidth": 94
+        },
+        {
+          "selector": "#record",
+          "x": 133.9375,
+          "y": 715.375,
+          "width": 122.109375,
+          "height": 72,
+          "bottom": 787.375,
+          "right": 256.046875,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        },
+        {
+          "selector": "#take",
+          "x": 264.046875,
+          "y": 715.375,
+          "width": 93.9375,
+          "height": 72,
+          "bottom": 787.375,
+          "right": 357.984375,
+          "scrollWidth": 94,
+          "clientWidth": 94
+        },
+        {
+          "selector": "#previous",
+          "x": 32,
+          "y": 850.375,
+          "width": 158,
+          "height": 48,
+          "bottom": 898.375,
+          "right": 190,
+          "scrollWidth": 158,
+          "clientWidth": 158
+        },
+        {
+          "selector": "#next",
+          "x": 200,
+          "y": 850.375,
+          "width": 158,
+          "height": 48,
+          "bottom": 898.375,
+          "right": 358,
+          "scrollWidth": 158,
+          "clientWidth": 158
+        }
+      ]
+    },
+    {
+      "name": "Listening Pause still preserves position",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Listening Resume continues",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 actual capture video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1280x600 actual capture panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 426,
+          "bottom": 554,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1117,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 988,
+          "y": 457,
+          "width": 248,
+          "height": 20,
+          "bottom": 477,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 502,
+            "width": 119,
+            "height": 40,
+            "bottom": 542,
+            "right": 1107,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1117,
+            "y": 502,
+            "width": 119,
+            "height": 40,
+            "bottom": 542,
+            "right": 1236,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 actual capture heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 actual capture complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 426,
+          "bottom": 554,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1117,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 988,
+          "y": 457,
+          "width": 248,
+          "height": 20,
+          "bottom": 477,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 502,
+            "width": 119,
+            "height": 40,
+            "bottom": 542,
+            "right": 1107,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1117,
+            "y": 502,
+            "width": 119,
+            "height": 40,
+            "bottom": 542,
+            "right": 1236,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 actual capture full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 actual capture dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1280x600 actual capture action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1107,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1117,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ]
+    },
+    {
+      "name": "Capture seek locked/no Pause",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 actual candidate video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1280x600 actual candidate panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 426,
+          "bottom": 554,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1117,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 988,
+          "y": 457,
+          "width": 248,
+          "height": 20,
+          "bottom": 477,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 502,
+            "width": 119,
+            "height": 40,
+            "bottom": 542,
+            "right": 1107,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1117,
+            "y": 502,
+            "width": 119,
+            "height": 40,
+            "bottom": 542,
+            "right": 1236,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 actual candidate heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 actual candidate complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 160,
+          "bottom": 333,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 426,
+          "bottom": 554,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1117,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 988,
+          "y": 457,
+          "width": 248,
+          "height": 20,
+          "bottom": 477,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 407,
+            "width": 248,
+            "height": 40,
+            "bottom": 447,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 361,
+            "width": 121,
+            "height": 40,
+            "bottom": 401,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 502,
+            "width": 119,
+            "height": 40,
+            "bottom": 542,
+            "right": 1107,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1117,
+            "y": 502,
+            "width": 119,
+            "height": 40,
+            "bottom": 542,
+            "right": 1236,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 actual candidate full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 actual candidate dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1280x600 actual candidate action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1107,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1117,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ]
+    },
+    {
+      "name": "Candidate actual audio/video playback",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Failed guard retains exact candidate accepted destination",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Failed guard focus visible Retry",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Toast alone expires with recovery retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recovery reload retains exact identities",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Retry still honors Previous",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Result Return preserves accepted set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 Return restored media axis video itself viewport-centered",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "1280x600 Return restored media axis panel24 right/32 gutter",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 96,
+          "bottom": 269,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 382,
+          "bottom": 510,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1117,
+          "y": 458,
+          "width": 119,
+          "height": 40,
+          "bottom": 498,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 988,
+          "y": 393,
+          "width": 248,
+          "height": 40,
+          "bottom": 433,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 297,
+            "width": 121,
+            "height": 40,
+            "bottom": 337,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 343,
+            "width": 248,
+            "height": 40,
+            "bottom": 383,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 297,
+            "width": 121,
+            "height": 40,
+            "bottom": 337,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 458,
+            "width": 119,
+            "height": 40,
+            "bottom": 498,
+            "right": 1107,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1117,
+            "y": 458,
+            "width": 119,
+            "height": 40,
+            "bottom": 498,
+            "right": 1236,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 Return restored media axis heading/wave share media edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 Return restored media axis complete task fits desktop",
+      "pass": true,
+      "detail": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scrollY": 0,
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "width": 624,
+          "height": 351,
+          "bottom": 479,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "width": 624,
+          "height": 32,
+          "bottom": 523,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "dialogue": {
+          "x": 988,
+          "y": 173,
+          "width": 248,
+          "height": 96,
+          "bottom": 269,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "heading": {
+          "x": 328,
+          "y": 72,
+          "width": 624,
+          "height": 40,
+          "bottom": 112,
+          "right": 952,
+          "scrollWidth": 624,
+          "clientWidth": 624
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "width": 272,
+          "height": 382,
+          "bottom": 510,
+          "right": 1248,
+          "scrollWidth": 272,
+          "clientWidth": 272
+        },
+        "next": {
+          "x": 1117,
+          "y": 458,
+          "width": 119,
+          "height": 40,
+          "bottom": 498,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        "help": {
+          "x": 988,
+          "y": 393,
+          "width": 248,
+          "height": 40,
+          "bottom": 433,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        "buttons": [
+          {
+            "selector": "#replay",
+            "x": 988,
+            "y": 297,
+            "width": 121,
+            "height": 40,
+            "bottom": 337,
+            "right": 1109,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#record",
+            "x": 988,
+            "y": 343,
+            "width": 248,
+            "height": 40,
+            "bottom": 383,
+            "right": 1236,
+            "scrollWidth": 248,
+            "clientWidth": 248
+          },
+          {
+            "selector": "#take",
+            "x": 1115,
+            "y": 297,
+            "width": 121,
+            "height": 40,
+            "bottom": 337,
+            "right": 1236,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "selector": "#previous",
+            "x": 988,
+            "y": 458,
+            "width": 119,
+            "height": 40,
+            "bottom": 498,
+            "right": 1107,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          },
+          {
+            "selector": "#next",
+            "x": 1117,
+            "y": 458,
+            "width": 119,
+            "height": 40,
+            "bottom": 498,
+            "right": 1236,
+            "scrollWidth": 119,
+            "clientWidth": 119
+          }
+        ],
+        "dialogueType": {
+          "size": "24px",
+          "line": "32px"
+        }
+      }
+    },
+    {
+      "name": "1280x600 Return restored media axis full16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 Return restored media axis dialogue outside complete image",
+      "pass": true,
+      "detail": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 96,
+        "bottom": 269,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      }
+    },
+    {
+      "name": "1280x600 Return restored media axis action labels fit their controls",
+      "pass": true,
+      "detail": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 297,
+          "width": 121,
+          "height": 40,
+          "bottom": 337,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 343,
+          "width": 248,
+          "height": 40,
+          "bottom": 383,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 297,
+          "width": 121,
+          "height": 40,
+          "bottom": 337,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 458,
+          "width": 119,
+          "height": 40,
+          "bottom": 498,
+          "right": 1107,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1117,
+          "y": 458,
+          "width": 119,
+          "height": 40,
+          "bottom": 498,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ]
+    }
+  ],
+  "geometry": [
+    {
+      "label": "1440x900 normal",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 148,
+        "width": 784,
+        "height": 441,
+        "bottom": 589,
+        "right": 1112,
+        "scrollWidth": 784,
+        "clientWidth": 784
+      },
+      "wave": {
+        "x": 328,
+        "y": 655,
+        "width": 784,
+        "height": 32,
+        "bottom": 687,
+        "right": 1112,
+        "scrollWidth": 784,
+        "clientWidth": 784
+      },
+      "dialogue": {
+        "x": 370,
+        "y": 605,
+        "width": 700,
+        "height": 34,
+        "bottom": 639,
+        "right": 1070,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      },
+      "heading": {
+        "x": 328,
+        "y": 92,
+        "width": 784,
+        "height": 40,
+        "bottom": 132,
+        "right": 1112,
+        "scrollWidth": 784,
+        "clientWidth": 784
+      },
+      "panel": {
+        "x": 1136,
+        "y": 148,
+        "width": 272,
+        "height": 332,
+        "bottom": 480,
+        "right": 1408,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1277,
+        "y": 424,
+        "width": 115,
+        "height": 40,
+        "bottom": 464,
+        "right": 1392,
+        "scrollWidth": 115,
+        "clientWidth": 115
+      },
+      "help": {
+        "x": 1152,
+        "y": 351,
+        "width": 240,
+        "height": 40,
+        "bottom": 391,
+        "right": 1392,
+        "scrollWidth": 240,
+        "clientWidth": 240
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 1152,
+          "y": 201,
+          "width": 240,
+          "height": 40,
+          "bottom": 241,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#record",
+          "x": 1152,
+          "y": 251,
+          "width": 240,
+          "height": 40,
+          "bottom": 291,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#take",
+          "x": 1152,
+          "y": 301,
+          "width": 240,
+          "height": 40,
+          "bottom": 341,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#previous",
+          "x": 1152,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1267,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        {
+          "selector": "#next",
+          "x": 1277,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1392,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        }
+      ],
+      "dialogueType": {
+        "size": "26px",
+        "line": "34px"
+      }
+    },
+    {
+      "label": "1440x900 completed",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 148,
+        "width": 784,
+        "height": 441,
+        "bottom": 589,
+        "right": 1112,
+        "scrollWidth": 784,
+        "clientWidth": 784
+      },
+      "wave": {
+        "x": 328,
+        "y": 655,
+        "width": 784,
+        "height": 32,
+        "bottom": 687,
+        "right": 1112,
+        "scrollWidth": 784,
+        "clientWidth": 784
+      },
+      "dialogue": {
+        "x": 370,
+        "y": 605,
+        "width": 700,
+        "height": 34,
+        "bottom": 639,
+        "right": 1070,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      },
+      "heading": {
+        "x": 328,
+        "y": 92,
+        "width": 784,
+        "height": 40,
+        "bottom": 132,
+        "right": 1112,
+        "scrollWidth": 784,
+        "clientWidth": 784
+      },
+      "panel": {
+        "x": 1136,
+        "y": 148,
+        "width": 272,
+        "height": 332,
+        "bottom": 480,
+        "right": 1408,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1277,
+        "y": 424,
+        "width": 115,
+        "height": 40,
+        "bottom": 464,
+        "right": 1392,
+        "scrollWidth": 115,
+        "clientWidth": 115
+      },
+      "help": {
+        "x": 1152,
+        "y": 351,
+        "width": 240,
+        "height": 40,
+        "bottom": 391,
+        "right": 1392,
+        "scrollWidth": 240,
+        "clientWidth": 240
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 1152,
+          "y": 201,
+          "width": 240,
+          "height": 40,
+          "bottom": 241,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#record",
+          "x": 1152,
+          "y": 251,
+          "width": 240,
+          "height": 40,
+          "bottom": 291,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#take",
+          "x": 1152,
+          "y": 301,
+          "width": 240,
+          "height": 40,
+          "bottom": 341,
+          "right": 1392,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#previous",
+          "x": 1152,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1267,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        {
+          "selector": "#next",
+          "x": 1277,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1392,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        }
+      ],
+      "dialogueType": {
+        "size": "26px",
+        "line": "34px"
+      }
+    },
+    {
+      "label": "1920x910 normal",
+      "viewport": [
+        1920,
+        910
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 500,
+        "y": 148,
+        "width": 920,
+        "height": 517.5,
+        "bottom": 665.5,
+        "right": 1420,
+        "scrollWidth": 920,
+        "clientWidth": 920
+      },
+      "wave": {
+        "x": 500,
+        "y": 731.5,
+        "width": 920,
+        "height": 32,
+        "bottom": 763.5,
+        "right": 1420,
+        "scrollWidth": 920,
+        "clientWidth": 920
+      },
+      "dialogue": {
+        "x": 610,
+        "y": 681.5,
+        "width": 700,
+        "height": 34,
+        "bottom": 715.5,
+        "right": 1310,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      },
+      "heading": {
+        "x": 500,
+        "y": 92,
+        "width": 920,
+        "height": 40,
+        "bottom": 132,
+        "right": 1420,
+        "scrollWidth": 920,
+        "clientWidth": 920
+      },
+      "panel": {
+        "x": 1444,
+        "y": 148,
+        "width": 272,
+        "height": 332,
+        "bottom": 480,
+        "right": 1716,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1585,
+        "y": 424,
+        "width": 115,
+        "height": 40,
+        "bottom": 464,
+        "right": 1700,
+        "scrollWidth": 115,
+        "clientWidth": 115
+      },
+      "help": {
+        "x": 1460,
+        "y": 351,
+        "width": 240,
+        "height": 40,
+        "bottom": 391,
+        "right": 1700,
+        "scrollWidth": 240,
+        "clientWidth": 240
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 1460,
+          "y": 201,
+          "width": 240,
+          "height": 40,
+          "bottom": 241,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#record",
+          "x": 1460,
+          "y": 251,
+          "width": 240,
+          "height": 40,
+          "bottom": 291,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#take",
+          "x": 1460,
+          "y": 301,
+          "width": 240,
+          "height": 40,
+          "bottom": 341,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#previous",
+          "x": 1460,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1575,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        {
+          "selector": "#next",
+          "x": 1585,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1700,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        }
+      ],
+      "dialogueType": {
+        "size": "26px",
+        "line": "34px"
+      }
+    },
+    {
+      "label": "1920x910 completed",
+      "viewport": [
+        1920,
+        910
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 500,
+        "y": 148,
+        "width": 920,
+        "height": 517.5,
+        "bottom": 665.5,
+        "right": 1420,
+        "scrollWidth": 920,
+        "clientWidth": 920
+      },
+      "wave": {
+        "x": 500,
+        "y": 731.5,
+        "width": 920,
+        "height": 32,
+        "bottom": 763.5,
+        "right": 1420,
+        "scrollWidth": 920,
+        "clientWidth": 920
+      },
+      "dialogue": {
+        "x": 610,
+        "y": 681.5,
+        "width": 700,
+        "height": 34,
+        "bottom": 715.5,
+        "right": 1310,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      },
+      "heading": {
+        "x": 500,
+        "y": 92,
+        "width": 920,
+        "height": 40,
+        "bottom": 132,
+        "right": 1420,
+        "scrollWidth": 920,
+        "clientWidth": 920
+      },
+      "panel": {
+        "x": 1444,
+        "y": 148,
+        "width": 272,
+        "height": 332,
+        "bottom": 480,
+        "right": 1716,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1585,
+        "y": 424,
+        "width": 115,
+        "height": 40,
+        "bottom": 464,
+        "right": 1700,
+        "scrollWidth": 115,
+        "clientWidth": 115
+      },
+      "help": {
+        "x": 1460,
+        "y": 351,
+        "width": 240,
+        "height": 40,
+        "bottom": 391,
+        "right": 1700,
+        "scrollWidth": 240,
+        "clientWidth": 240
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 1460,
+          "y": 201,
+          "width": 240,
+          "height": 40,
+          "bottom": 241,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#record",
+          "x": 1460,
+          "y": 251,
+          "width": 240,
+          "height": 40,
+          "bottom": 291,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#take",
+          "x": 1460,
+          "y": 301,
+          "width": 240,
+          "height": 40,
+          "bottom": 341,
+          "right": 1700,
+          "scrollWidth": 240,
+          "clientWidth": 240
+        },
+        {
+          "selector": "#previous",
+          "x": 1460,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1575,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        },
+        {
+          "selector": "#next",
+          "x": 1585,
+          "y": 424,
+          "width": 115,
+          "height": 40,
+          "bottom": 464,
+          "right": 1700,
+          "scrollWidth": 115,
+          "clientWidth": 115
+        }
+      ],
+      "dialogueType": {
+        "size": "26px",
+        "line": "34px"
+      }
+    },
+    {
+      "label": "1280x600 normal",
+      "viewport": [
+        1280,
+        600
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 624,
+        "height": 351,
+        "bottom": 479,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "wave": {
+        "x": 328,
+        "y": 491,
+        "width": 624,
+        "height": 32,
+        "bottom": 523,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "dialogue": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 624,
+        "height": 40,
+        "bottom": 112,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "panel": {
+        "x": 976,
+        "y": 128,
+        "width": 272,
+        "height": 446,
+        "bottom": 574,
+        "right": 1248,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1117,
+        "y": 522,
+        "width": 119,
+        "height": 40,
+        "bottom": 562,
+        "right": 1236,
+        "scrollWidth": 119,
+        "clientWidth": 119
+      },
+      "help": {
+        "x": 988,
+        "y": 457,
+        "width": 248,
+        "height": 40,
+        "bottom": 497,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1107,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1117,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "1280x600 completed",
+      "viewport": [
+        1280,
+        600
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 624,
+        "height": 351,
+        "bottom": 479,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "wave": {
+        "x": 328,
+        "y": 491,
+        "width": 624,
+        "height": 32,
+        "bottom": 523,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "dialogue": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 624,
+        "height": 40,
+        "bottom": 112,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "panel": {
+        "x": 976,
+        "y": 128,
+        "width": 272,
+        "height": 466,
+        "bottom": 594,
+        "right": 1248,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1114.359375,
+        "y": 522,
+        "width": 121.640625,
+        "height": 60,
+        "bottom": 582,
+        "right": 1236,
+        "scrollWidth": 122,
+        "clientWidth": 122
+      },
+      "help": {
+        "x": 988,
+        "y": 457,
+        "width": 248,
+        "height": 40,
+        "bottom": 497,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 522,
+          "width": 116.359375,
+          "height": 60,
+          "bottom": 582,
+          "right": 1104.359375,
+          "scrollWidth": 116,
+          "clientWidth": 116
+        },
+        {
+          "selector": "#next",
+          "x": 1114.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1236,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "1366x650 normal",
+      "viewport": [
+        1366,
+        650
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 710,
+        "height": 399.375,
+        "bottom": 527.375,
+        "right": 1038,
+        "scrollWidth": 710,
+        "clientWidth": 710
+      },
+      "wave": {
+        "x": 328,
+        "y": 539.375,
+        "width": 710,
+        "height": 32,
+        "bottom": 571.375,
+        "right": 1038,
+        "scrollWidth": 710,
+        "clientWidth": 710
+      },
+      "dialogue": {
+        "x": 1074,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1322,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 710,
+        "height": 40,
+        "bottom": 112,
+        "right": 1038,
+        "scrollWidth": 710,
+        "clientWidth": 710
+      },
+      "panel": {
+        "x": 1062,
+        "y": 128,
+        "width": 272,
+        "height": 446,
+        "bottom": 574,
+        "right": 1334,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1203,
+        "y": 522,
+        "width": 119,
+        "height": 40,
+        "bottom": 562,
+        "right": 1322,
+        "scrollWidth": 119,
+        "clientWidth": 119
+      },
+      "help": {
+        "x": 1074,
+        "y": 457,
+        "width": 248,
+        "height": 40,
+        "bottom": 497,
+        "right": 1322,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 1074,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1195,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 1074,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1201,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1322,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 1074,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1193,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1203,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1322,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "1366x650 completed",
+      "viewport": [
+        1366,
+        650
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 710,
+        "height": 399.375,
+        "bottom": 527.375,
+        "right": 1038,
+        "scrollWidth": 710,
+        "clientWidth": 710
+      },
+      "wave": {
+        "x": 328,
+        "y": 539.375,
+        "width": 710,
+        "height": 32,
+        "bottom": 571.375,
+        "right": 1038,
+        "scrollWidth": 710,
+        "clientWidth": 710
+      },
+      "dialogue": {
+        "x": 1074,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1322,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 710,
+        "height": 40,
+        "bottom": 112,
+        "right": 1038,
+        "scrollWidth": 710,
+        "clientWidth": 710
+      },
+      "panel": {
+        "x": 1062,
+        "y": 128,
+        "width": 272,
+        "height": 466,
+        "bottom": 594,
+        "right": 1334,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1200.359375,
+        "y": 522,
+        "width": 121.640625,
+        "height": 60,
+        "bottom": 582,
+        "right": 1322,
+        "scrollWidth": 122,
+        "clientWidth": 122
+      },
+      "help": {
+        "x": 1074,
+        "y": 457,
+        "width": 248,
+        "height": 40,
+        "bottom": 497,
+        "right": 1322,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 1074,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1195,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 1074,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1322,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1201,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1322,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 1074,
+          "y": 522,
+          "width": 116.359375,
+          "height": 60,
+          "bottom": 582,
+          "right": 1190.359375,
+          "scrollWidth": 116,
+          "clientWidth": 116
+        },
+        {
+          "selector": "#next",
+          "x": 1200.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1322,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "1023x700 normal",
+      "viewport": [
+        1023,
+        700
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 24,
+        "y": 136,
+        "width": 975,
+        "height": 548.4375,
+        "bottom": 684.4375,
+        "right": 999,
+        "scrollWidth": 975,
+        "clientWidth": 975
+      },
+      "wave": {
+        "x": 24,
+        "y": 776.4375,
+        "width": 975,
+        "height": 32,
+        "bottom": 808.4375,
+        "right": 999,
+        "scrollWidth": 975,
+        "clientWidth": 975
+      },
+      "dialogue": {
+        "x": 161.5,
+        "y": 700.4375,
+        "width": 700,
+        "height": 60,
+        "bottom": 760.4375,
+        "right": 861.5,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      },
+      "heading": {
+        "x": 24,
+        "y": 80,
+        "width": 975,
+        "height": 40,
+        "bottom": 120,
+        "right": 999,
+        "scrollWidth": 975,
+        "clientWidth": 975
+      },
+      "panel": {
+        "x": 24,
+        "y": 882.4375,
+        "width": 975,
+        "height": 248,
+        "bottom": 1130.4375,
+        "right": 999,
+        "scrollWidth": 975,
+        "clientWidth": 975
+      },
+      "next": {
+        "x": 516.5,
+        "y": 1066.4375,
+        "width": 466.5,
+        "height": 48,
+        "bottom": 1114.4375,
+        "right": 983,
+        "scrollWidth": 467,
+        "clientWidth": 467
+      },
+      "help": {
+        "x": 40,
+        "y": 993.4375,
+        "width": 943,
+        "height": 40,
+        "bottom": 1033.4375,
+        "right": 983,
+        "scrollWidth": 943,
+        "clientWidth": 943
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 40,
+          "y": 935.4375,
+          "width": 307.65625,
+          "height": 48,
+          "bottom": 983.4375,
+          "right": 347.65625,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#record",
+          "x": 357.65625,
+          "y": 935.4375,
+          "width": 307.671875,
+          "height": 48,
+          "bottom": 983.4375,
+          "right": 665.328125,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#take",
+          "x": 675.328125,
+          "y": 935.4375,
+          "width": 307.65625,
+          "height": 48,
+          "bottom": 983.4375,
+          "right": 982.984375,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#previous",
+          "x": 40,
+          "y": 1066.4375,
+          "width": 466.5,
+          "height": 48,
+          "bottom": 1114.4375,
+          "right": 506.5,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        },
+        {
+          "selector": "#next",
+          "x": 516.5,
+          "y": 1066.4375,
+          "width": 466.5,
+          "height": 48,
+          "bottom": 1114.4375,
+          "right": 983,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "30px"
+      }
+    },
+    {
+      "label": "1024x700 normal",
+      "viewport": [
+        1024,
+        700
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 24,
+        "y": 136,
+        "width": 976,
+        "height": 549,
+        "bottom": 685,
+        "right": 1000,
+        "scrollWidth": 976,
+        "clientWidth": 976
+      },
+      "wave": {
+        "x": 24,
+        "y": 777,
+        "width": 976,
+        "height": 32,
+        "bottom": 809,
+        "right": 1000,
+        "scrollWidth": 976,
+        "clientWidth": 976
+      },
+      "dialogue": {
+        "x": 162,
+        "y": 701,
+        "width": 700,
+        "height": 60,
+        "bottom": 761,
+        "right": 862,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      },
+      "heading": {
+        "x": 24,
+        "y": 80,
+        "width": 976,
+        "height": 40,
+        "bottom": 120,
+        "right": 1000,
+        "scrollWidth": 976,
+        "clientWidth": 976
+      },
+      "panel": {
+        "x": 24,
+        "y": 883,
+        "width": 976,
+        "height": 248,
+        "bottom": 1131,
+        "right": 1000,
+        "scrollWidth": 976,
+        "clientWidth": 976
+      },
+      "next": {
+        "x": 517,
+        "y": 1067,
+        "width": 467,
+        "height": 48,
+        "bottom": 1115,
+        "right": 984,
+        "scrollWidth": 467,
+        "clientWidth": 467
+      },
+      "help": {
+        "x": 40,
+        "y": 994,
+        "width": 944,
+        "height": 40,
+        "bottom": 1034,
+        "right": 984,
+        "scrollWidth": 944,
+        "clientWidth": 944
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 40,
+          "y": 936,
+          "width": 308,
+          "height": 48,
+          "bottom": 984,
+          "right": 348,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#record",
+          "x": 358,
+          "y": 936,
+          "width": 308,
+          "height": 48,
+          "bottom": 984,
+          "right": 666,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#take",
+          "x": 676,
+          "y": 936,
+          "width": 308,
+          "height": 48,
+          "bottom": 984,
+          "right": 984,
+          "scrollWidth": 308,
+          "clientWidth": 308
+        },
+        {
+          "selector": "#previous",
+          "x": 40,
+          "y": 1067,
+          "width": 467,
+          "height": 48,
+          "bottom": 1115,
+          "right": 507,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        },
+        {
+          "selector": "#next",
+          "x": 517,
+          "y": 1067,
+          "width": 467,
+          "height": 48,
+          "bottom": 1115,
+          "right": 984,
+          "scrollWidth": 467,
+          "clientWidth": 467
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "30px"
+      }
+    },
+    {
+      "label": "1247x700 normal",
+      "viewport": [
+        1247,
+        700
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 24,
+        "y": 136,
+        "width": 1199,
+        "height": 674.4375,
+        "bottom": 810.4375,
+        "right": 1223,
+        "scrollWidth": 1199,
+        "clientWidth": 1199
+      },
+      "wave": {
+        "x": 24,
+        "y": 902.4375,
+        "width": 1199,
+        "height": 32,
+        "bottom": 934.4375,
+        "right": 1223,
+        "scrollWidth": 1199,
+        "clientWidth": 1199
+      },
+      "dialogue": {
+        "x": 273.5,
+        "y": 826.4375,
+        "width": 700,
+        "height": 60,
+        "bottom": 886.4375,
+        "right": 973.5,
+        "scrollWidth": 700,
+        "clientWidth": 700
+      },
+      "heading": {
+        "x": 24,
+        "y": 80,
+        "width": 1199,
+        "height": 40,
+        "bottom": 120,
+        "right": 1223,
+        "scrollWidth": 1199,
+        "clientWidth": 1199
+      },
+      "panel": {
+        "x": 24,
+        "y": 1008.4375,
+        "width": 1199,
+        "height": 248,
+        "bottom": 1256.4375,
+        "right": 1223,
+        "scrollWidth": 1199,
+        "clientWidth": 1199
+      },
+      "next": {
+        "x": 628.5,
+        "y": 1192.4375,
+        "width": 578.5,
+        "height": 48,
+        "bottom": 1240.4375,
+        "right": 1207,
+        "scrollWidth": 579,
+        "clientWidth": 579
+      },
+      "help": {
+        "x": 40,
+        "y": 1119.4375,
+        "width": 1167,
+        "height": 40,
+        "bottom": 1159.4375,
+        "right": 1207,
+        "scrollWidth": 1167,
+        "clientWidth": 1167
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 40,
+          "y": 1061.4375,
+          "width": 382.328125,
+          "height": 48,
+          "bottom": 1109.4375,
+          "right": 422.328125,
+          "scrollWidth": 382,
+          "clientWidth": 382
+        },
+        {
+          "selector": "#record",
+          "x": 432.328125,
+          "y": 1061.4375,
+          "width": 382.328125,
+          "height": 48,
+          "bottom": 1109.4375,
+          "right": 814.65625,
+          "scrollWidth": 382,
+          "clientWidth": 382
+        },
+        {
+          "selector": "#take",
+          "x": 824.65625,
+          "y": 1061.4375,
+          "width": 382.34375,
+          "height": 48,
+          "bottom": 1109.4375,
+          "right": 1207,
+          "scrollWidth": 382,
+          "clientWidth": 382
+        },
+        {
+          "selector": "#previous",
+          "x": 40,
+          "y": 1192.4375,
+          "width": 578.5,
+          "height": 48,
+          "bottom": 1240.4375,
+          "right": 618.5,
+          "scrollWidth": 579,
+          "clientWidth": 579
+        },
+        {
+          "selector": "#next",
+          "x": 628.5,
+          "y": 1192.4375,
+          "width": 578.5,
+          "height": 48,
+          "bottom": 1240.4375,
+          "right": 1207,
+          "scrollWidth": 579,
+          "clientWidth": 579
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "30px"
+      }
+    },
+    {
+      "label": "1248x700 normal",
+      "viewport": [
+        1248,
+        700
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 592,
+        "height": 333,
+        "bottom": 461,
+        "right": 920,
+        "scrollWidth": 592,
+        "clientWidth": 592
+      },
+      "wave": {
+        "x": 328,
+        "y": 473,
+        "width": 592,
+        "height": 32,
+        "bottom": 505,
+        "right": 920,
+        "scrollWidth": 592,
+        "clientWidth": 592
+      },
+      "dialogue": {
+        "x": 956,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1204,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 592,
+        "height": 40,
+        "bottom": 112,
+        "right": 920,
+        "scrollWidth": 592,
+        "clientWidth": 592
+      },
+      "panel": {
+        "x": 944,
+        "y": 128,
+        "width": 272,
+        "height": 446,
+        "bottom": 574,
+        "right": 1216,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1085,
+        "y": 522,
+        "width": 119,
+        "height": 40,
+        "bottom": 562,
+        "right": 1204,
+        "scrollWidth": 119,
+        "clientWidth": 119
+      },
+      "help": {
+        "x": 956,
+        "y": 457,
+        "width": 248,
+        "height": 40,
+        "bottom": 497,
+        "right": 1204,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 956,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1077,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 956,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1083,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1204,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 956,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1075,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1085,
+          "y": 522,
+          "width": 119,
+          "height": 40,
+          "bottom": 562,
+          "right": 1204,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "1248x700 completed",
+      "viewport": [
+        1248,
+        700
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 592,
+        "height": 333,
+        "bottom": 461,
+        "right": 920,
+        "scrollWidth": 592,
+        "clientWidth": 592
+      },
+      "wave": {
+        "x": 328,
+        "y": 473,
+        "width": 592,
+        "height": 32,
+        "bottom": 505,
+        "right": 920,
+        "scrollWidth": 592,
+        "clientWidth": 592
+      },
+      "dialogue": {
+        "x": 956,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1204,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 592,
+        "height": 40,
+        "bottom": 112,
+        "right": 920,
+        "scrollWidth": 592,
+        "clientWidth": 592
+      },
+      "panel": {
+        "x": 944,
+        "y": 128,
+        "width": 272,
+        "height": 466,
+        "bottom": 594,
+        "right": 1216,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1082.359375,
+        "y": 522,
+        "width": 121.640625,
+        "height": 60,
+        "bottom": 582,
+        "right": 1204,
+        "scrollWidth": 122,
+        "clientWidth": 122
+      },
+      "help": {
+        "x": 956,
+        "y": 457,
+        "width": 248,
+        "height": 40,
+        "bottom": 497,
+        "right": 1204,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 956,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1077,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 956,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1204,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1083,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1204,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 956,
+          "y": 522,
+          "width": 116.359375,
+          "height": 60,
+          "bottom": 582,
+          "right": 1072.359375,
+          "scrollWidth": 116,
+          "clientWidth": 116
+        },
+        {
+          "selector": "#next",
+          "x": 1082.359375,
+          "y": 522,
+          "width": 121.640625,
+          "height": 60,
+          "bottom": 582,
+          "right": 1204,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "390x667 normal",
+      "viewport": [
+        390,
+        667
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 16,
+        "y": 183,
+        "width": 358,
+        "height": 201.375,
+        "bottom": 384.375,
+        "right": 374,
+        "scrollWidth": 358,
+        "clientWidth": 358
+      },
+      "wave": {
+        "x": 16,
+        "y": 548.375,
+        "width": 358,
+        "height": 32,
+        "bottom": 580.375,
+        "right": 374,
+        "scrollWidth": 358,
+        "clientWidth": 358
+      },
+      "dialogue": {
+        "x": 16,
+        "y": 400.375,
+        "width": 358,
+        "height": 128,
+        "bottom": 528.375,
+        "right": 374,
+        "scrollWidth": 358,
+        "clientWidth": 358
+      },
+      "heading": {
+        "x": 16,
+        "y": 108,
+        "width": 358,
+        "height": 59,
+        "bottom": 167,
+        "right": 374,
+        "scrollWidth": 358,
+        "clientWidth": 358
+      },
+      "panel": {
+        "x": 16,
+        "y": 666.375,
+        "width": 358,
+        "height": 248,
+        "bottom": 914.375,
+        "right": 374,
+        "scrollWidth": 358,
+        "clientWidth": 358
+      },
+      "next": {
+        "x": 200,
+        "y": 850.375,
+        "width": 158,
+        "height": 48,
+        "bottom": 898.375,
+        "right": 358,
+        "scrollWidth": 158,
+        "clientWidth": 158
+      },
+      "help": {
+        "x": 32,
+        "y": 797.375,
+        "width": 326,
+        "height": 20,
+        "bottom": 817.375,
+        "right": 358,
+        "scrollWidth": 326,
+        "clientWidth": 326
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 32,
+          "y": 715.375,
+          "width": 93.9375,
+          "height": 72,
+          "bottom": 787.375,
+          "right": 125.9375,
+          "scrollWidth": 94,
+          "clientWidth": 94
+        },
+        {
+          "selector": "#record",
+          "x": 133.9375,
+          "y": 715.375,
+          "width": 122.109375,
+          "height": 72,
+          "bottom": 787.375,
+          "right": 256.046875,
+          "scrollWidth": 122,
+          "clientWidth": 122
+        },
+        {
+          "selector": "#take",
+          "x": 264.046875,
+          "y": 715.375,
+          "width": 93.9375,
+          "height": 72,
+          "bottom": 787.375,
+          "right": 357.984375,
+          "scrollWidth": 94,
+          "clientWidth": 94
+        },
+        {
+          "selector": "#previous",
+          "x": 32,
+          "y": 850.375,
+          "width": 158,
+          "height": 48,
+          "bottom": 898.375,
+          "right": 190,
+          "scrollWidth": 158,
+          "clientWidth": 158
+        },
+        {
+          "selector": "#next",
+          "x": 200,
+          "y": 850.375,
+          "width": 158,
+          "height": 48,
+          "bottom": 898.375,
+          "right": 358,
+          "scrollWidth": 158,
+          "clientWidth": 158
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "1280x600 actual capture",
+      "viewport": [
+        1280,
+        600
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 624,
+        "height": 351,
+        "bottom": 479,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "wave": {
+        "x": 328,
+        "y": 491,
+        "width": 624,
+        "height": 32,
+        "bottom": 523,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "dialogue": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 624,
+        "height": 40,
+        "bottom": 112,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "panel": {
+        "x": 976,
+        "y": 128,
+        "width": 272,
+        "height": 426,
+        "bottom": 554,
+        "right": 1248,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1117,
+        "y": 502,
+        "width": 119,
+        "height": 40,
+        "bottom": 542,
+        "right": 1236,
+        "scrollWidth": 119,
+        "clientWidth": 119
+      },
+      "help": {
+        "x": 988,
+        "y": 457,
+        "width": 248,
+        "height": 20,
+        "bottom": 477,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1107,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1117,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "1280x600 actual candidate",
+      "viewport": [
+        1280,
+        600
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 624,
+        "height": 351,
+        "bottom": 479,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "wave": {
+        "x": 328,
+        "y": 491,
+        "width": 624,
+        "height": 32,
+        "bottom": 523,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "dialogue": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 160,
+        "bottom": 333,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 624,
+        "height": 40,
+        "bottom": 112,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "panel": {
+        "x": 976,
+        "y": 128,
+        "width": 272,
+        "height": 426,
+        "bottom": 554,
+        "right": 1248,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1117,
+        "y": 502,
+        "width": 119,
+        "height": 40,
+        "bottom": 542,
+        "right": 1236,
+        "scrollWidth": 119,
+        "clientWidth": 119
+      },
+      "help": {
+        "x": 988,
+        "y": 457,
+        "width": 248,
+        "height": 20,
+        "bottom": 477,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 407,
+          "width": 248,
+          "height": 40,
+          "bottom": 447,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 361,
+          "width": 121,
+          "height": 40,
+          "bottom": 401,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1107,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1117,
+          "y": 502,
+          "width": 119,
+          "height": 40,
+          "bottom": 542,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    },
+    {
+      "label": "1280x600 Return restored media axis",
+      "viewport": [
+        1280,
+        600
+      ],
+      "scrollY": 0,
+      "scene": {
+        "x": 328,
+        "y": 128,
+        "width": 624,
+        "height": 351,
+        "bottom": 479,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "wave": {
+        "x": 328,
+        "y": 491,
+        "width": 624,
+        "height": 32,
+        "bottom": 523,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "dialogue": {
+        "x": 988,
+        "y": 173,
+        "width": 248,
+        "height": 96,
+        "bottom": 269,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "heading": {
+        "x": 328,
+        "y": 72,
+        "width": 624,
+        "height": 40,
+        "bottom": 112,
+        "right": 952,
+        "scrollWidth": 624,
+        "clientWidth": 624
+      },
+      "panel": {
+        "x": 976,
+        "y": 128,
+        "width": 272,
+        "height": 382,
+        "bottom": 510,
+        "right": 1248,
+        "scrollWidth": 272,
+        "clientWidth": 272
+      },
+      "next": {
+        "x": 1117,
+        "y": 458,
+        "width": 119,
+        "height": 40,
+        "bottom": 498,
+        "right": 1236,
+        "scrollWidth": 119,
+        "clientWidth": 119
+      },
+      "help": {
+        "x": 988,
+        "y": 393,
+        "width": 248,
+        "height": 40,
+        "bottom": 433,
+        "right": 1236,
+        "scrollWidth": 248,
+        "clientWidth": 248
+      },
+      "buttons": [
+        {
+          "selector": "#replay",
+          "x": 988,
+          "y": 297,
+          "width": 121,
+          "height": 40,
+          "bottom": 337,
+          "right": 1109,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#record",
+          "x": 988,
+          "y": 343,
+          "width": 248,
+          "height": 40,
+          "bottom": 383,
+          "right": 1236,
+          "scrollWidth": 248,
+          "clientWidth": 248
+        },
+        {
+          "selector": "#take",
+          "x": 1115,
+          "y": 297,
+          "width": 121,
+          "height": 40,
+          "bottom": 337,
+          "right": 1236,
+          "scrollWidth": 121,
+          "clientWidth": 121
+        },
+        {
+          "selector": "#previous",
+          "x": 988,
+          "y": 458,
+          "width": 119,
+          "height": 40,
+          "bottom": 498,
+          "right": 1107,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        },
+        {
+          "selector": "#next",
+          "x": 1117,
+          "y": 458,
+          "width": 119,
+          "height": 40,
+          "bottom": 498,
+          "right": 1236,
+          "scrollWidth": 119,
+          "clientWidth": 119
+        }
+      ],
+      "dialogueType": {
+        "size": "24px",
+        "line": "32px"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "pass": 117,
+  "total": 117
+}

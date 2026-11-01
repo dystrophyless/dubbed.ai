@@ -1,0 +1,136 @@
+{
+  "elapsedMs": 8352.699999988079,
+  "entryPartial": [
+    {
+      "t": 720.7000000178814,
+      "hidden": false,
+      "o": 0.083054,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 5.0083)"
+    },
+    {
+      "t": 759.4000000059605,
+      "hidden": false,
+      "o": 0.466889,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 1.56831)"
+    },
+    {
+      "t": 771.3000000119209,
+      "hidden": false,
+      "o": 0.637346,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 0.823625)"
+    },
+    {
+      "t": 787.7000000178814,
+      "hidden": false,
+      "o": 0.762651,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 0.414347)"
+    },
+    {
+      "t": 804.6000000238419,
+      "hidden": false,
+      "o": 0.852211,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 0.19467)"
+    },
+    {
+      "t": 821.2000000178814,
+      "hidden": false,
+      "o": 0.91465,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 0.0820632)"
+    },
+    {
+      "t": 837.9000000059605,
+      "hidden": false,
+      "o": 0.956868,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 0.0284158)"
+    },
+    {
+      "t": 854.6000000238419,
+      "hidden": false,
+      "o": 0.983455,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 0.00652335)"
+    },
+    {
+      "t": 871,
+      "hidden": false,
+      "o": 0.996895,
+      "phase": "open",
+      "transform": "matrix(1, 0, 0, 1, -179, 0.000514052)"
+    }
+  ],
+  "exitPartial": [
+    {
+      "t": 8920.100000023842,
+      "hidden": false,
+      "o": 0.873411,
+      "phase": "exit",
+      "transform": "matrix(1, 0, 0, 1, -179, 3.71185)"
+    },
+    {
+      "t": 8937.300000011921,
+      "hidden": false,
+      "o": 0.617024,
+      "phase": "exit",
+      "transform": "matrix(1, 0, 0, 1, -179, 5.97052)"
+    },
+    {
+      "t": 8953.90000000596,
+      "hidden": false,
+      "o": 0.383338,
+      "phase": "exit",
+      "transform": "matrix(1, 0, 0, 1, -179, 7.09785)"
+    },
+    {
+      "t": 8970.300000011921,
+      "hidden": false,
+      "o": 0.22289,
+      "phase": "exit",
+      "transform": "matrix(1, 0, 0, 1, -179, 7.6254)"
+    },
+    {
+      "t": 8988,
+      "hidden": false,
+      "o": 0.115767,
+      "phase": "exit",
+      "transform": "matrix(1, 0, 0, 1, -179, 7.86761)"
+    },
+    {
+      "t": 9004.300000011921,
+      "hidden": false,
+      "o": 0.0528324,
+      "phase": "exit",
+      "transform": "matrix(1, 0, 0, 1, -179, 7.9611)"
+    },
+    {
+      "t": 9020.100000023842,
+      "hidden": false,
+      "o": 0.0161853,
+      "phase": "exit",
+      "transform": "matrix(1, 0, 0, 1, -179, 7.99369)"
+    },
+    {
+      "t": 9036.800000011921,
+      "hidden": false,
+      "o": 0.00118515,
+      "phase": "exit",
+      "transform": "matrix(1, 0, 0, 1, -179, 7.99988)"
+    }
+  ],
+  "before": {
+    "scroll": 397,
+    "focus": "record"
+  },
+  "after": {
+    "scroll": 397,
+    "focus": "record"
+  },
+  "durableHelp": "Microphone unavailable. Open Settings, then try again.",
+  "video": "D:\\Program\\python\\Dubbed\\prototypes\\core-journey-lowfi\\review\\hf3-phone-video\\aebc64eccbeef9a2bbdec0ffcbd313b9.webm"
+}

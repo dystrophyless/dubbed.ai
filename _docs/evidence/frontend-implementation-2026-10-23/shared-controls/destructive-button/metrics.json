@@ -1,0 +1,489 @@
+{
+  "date": "2026-10-24T19:56:10.757Z",
+  "sourceBoundary": "shared local worktree; screenshots cover the actual shared Button component in the test-only Vite harness",
+  "browser": "local Chromium, reduced motion, no media capture or external services",
+  "reference": {
+    "buttonClean": "_docs/evidence/affect-ui-clean-light/source/components/button/Clean/button-clean.md.txt",
+    "lightInitial": "_docs/evidence/affect-ui-clean-light/source/components/button/Clean/Light/01-initial.png",
+    "adoptedTokens": "_docs/frontend-flows/design-tokens.md",
+    "secondaryShadowDefault": "0 0 0 0.5px rgba(0,0,0,0.06), 0 1px 1px -1px rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.05)",
+    "secondaryShadowHover": "0 0 0 0.5px rgba(0,0,0,0.1), 0 1px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.07); white fill remains unchanged",
+    "ghostHoverBackground": "rgba(0,0,0,0.03)",
+    "disabledOpacity": "0.4",
+    "defaultBackground": "rgba(229, 72, 77, 0.08)",
+    "hoverBackground": "rgba(229, 72, 77, 0.12)",
+    "foreground": "#C1262C",
+    "pressed": "hover fill plus source scale(0.97); no additional shade",
+    "focus": "2px solid #0060E2 outline with 2px offset"
+  },
+  "captures": [
+    {
+      "locale": "en",
+      "viewportWidth": 1440,
+      "label": "Delete project",
+      "mediumFontLoaded": true,
+      "states": {
+        "default": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "13px",
+          "width": 111.921875,
+          "height": 32,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "3px",
+          "outlineStyle": "none",
+          "outlineColor": "rgb(193, 38, 44)",
+          "outlineOffset": "0px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        },
+        "hover": {
+          "background": "rgba(229, 72, 77, 0.12)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "13px",
+          "width": 111.921875,
+          "height": 32,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "3px",
+          "outlineStyle": "none",
+          "outlineColor": "rgb(193, 38, 44)",
+          "outlineOffset": "0px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(252, 233, 234)",
+          "contrastRatio": 5.02
+        },
+        "pressed": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "13px",
+          "width": 108.564208984375,
+          "height": 31.040008544921875,
+          "transform": "matrix(0.97, 0, 0, 0.97, 0, 0)",
+          "transformScale": 0.97,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(0, 96, 226)",
+          "outlineOffset": "2px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        },
+        "focus": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "13px",
+          "width": 111.921875,
+          "height": 32,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(0, 96, 226)",
+          "outlineOffset": "2px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        }
+      },
+      "screenshots": [
+        "destructive-en-1440-default.png",
+        "destructive-en-1440-hover.png",
+        "destructive-en-1440-pressed.png",
+        "destructive-en-1440-focus.png"
+      ],
+      "variants": {
+        "secondary": {
+          "default": {
+            "background": "rgb(255, 255, 255)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "1px",
+            "boxShadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+            "opacity": "1"
+          },
+          "hover": {
+            "background": "rgb(255, 255, 255)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "1px",
+            "boxShadow": "rgba(0, 0, 0, 0.1) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.12) 0px 1px 1px -1px, rgba(0, 0, 0, 0.07) 0px 1px 3px 0px",
+            "opacity": "1"
+          },
+          "screenshots": [
+            "buttons-en-1440-secondary-default.png",
+            "buttons-en-1440-secondary-hover.png"
+          ]
+        },
+        "ghost": {
+          "default": "rgba(0, 0, 0, 0)",
+          "hover": "rgba(0, 0, 0, 0.03)",
+          "screenshots": [
+            "buttons-en-1440-ghost-default.png",
+            "buttons-en-1440-ghost-hover.png"
+          ]
+        },
+        "disabled": {
+          "opacity": "0.4",
+          "cursor": "not-allowed",
+          "screenshot": "buttons-en-1440-disabled.png"
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "viewportWidth": 390,
+      "label": "Delete project",
+      "mediumFontLoaded": true,
+      "states": {
+        "default": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "width": 139.734375,
+          "height": 48,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "3px",
+          "outlineStyle": "none",
+          "outlineColor": "rgb(193, 38, 44)",
+          "outlineOffset": "0px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        },
+        "hover": {
+          "background": "rgba(229, 72, 77, 0.12)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "width": 139.734375,
+          "height": 48,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "3px",
+          "outlineStyle": "none",
+          "outlineColor": "rgb(193, 38, 44)",
+          "outlineOffset": "0px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(252, 233, 234)",
+          "contrastRatio": 5.02
+        },
+        "pressed": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "width": 135.5423583984375,
+          "height": 46.55999755859375,
+          "transform": "matrix(0.97, 0, 0, 0.97, 0, 0)",
+          "transformScale": 0.97,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(0, 96, 226)",
+          "outlineOffset": "2px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        },
+        "focus": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "width": 139.734375,
+          "height": 48,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(0, 96, 226)",
+          "outlineOffset": "2px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        }
+      },
+      "screenshots": [
+        "destructive-en-390-default.png",
+        "destructive-en-390-hover.png",
+        "destructive-en-390-pressed.png",
+        "destructive-en-390-focus.png"
+      ],
+      "variants": {
+        "secondary": {
+          "default": {
+            "background": "rgb(255, 255, 255)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "1px",
+            "boxShadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+            "opacity": "1"
+          },
+          "hover": {
+            "background": "rgb(255, 255, 255)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "1px",
+            "boxShadow": "rgba(0, 0, 0, 0.1) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.12) 0px 1px 1px -1px, rgba(0, 0, 0, 0.07) 0px 1px 3px 0px",
+            "opacity": "1"
+          },
+          "screenshots": [
+            "buttons-en-390-secondary-default.png",
+            "buttons-en-390-secondary-hover.png"
+          ]
+        },
+        "ghost": {
+          "default": "rgba(0, 0, 0, 0)",
+          "hover": "rgba(0, 0, 0, 0.03)",
+          "screenshots": [
+            "buttons-en-390-ghost-default.png",
+            "buttons-en-390-ghost-hover.png"
+          ]
+        },
+        "disabled": {
+          "opacity": "0.4",
+          "cursor": "not-allowed",
+          "screenshot": "buttons-en-390-disabled.png"
+        }
+      }
+    },
+    {
+      "locale": "ru",
+      "viewportWidth": 1440,
+      "label": "Удалить проект",
+      "mediumFontLoaded": true,
+      "states": {
+        "default": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "13px",
+          "width": 118.625,
+          "height": 32,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "3px",
+          "outlineStyle": "none",
+          "outlineColor": "rgb(193, 38, 44)",
+          "outlineOffset": "0px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        },
+        "hover": {
+          "background": "rgba(229, 72, 77, 0.12)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "13px",
+          "width": 118.625,
+          "height": 32,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "3px",
+          "outlineStyle": "none",
+          "outlineColor": "rgb(193, 38, 44)",
+          "outlineOffset": "0px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(252, 233, 234)",
+          "contrastRatio": 5.02
+        },
+        "pressed": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "13px",
+          "width": 115.06622314453125,
+          "height": 31.040008544921875,
+          "transform": "matrix(0.97, 0, 0, 0.97, 0, 0)",
+          "transformScale": 0.97,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(0, 96, 226)",
+          "outlineOffset": "2px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        },
+        "focus": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "13px",
+          "width": 118.625,
+          "height": 32,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(0, 96, 226)",
+          "outlineOffset": "2px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        }
+      },
+      "screenshots": [
+        "destructive-ru-1440-default.png",
+        "destructive-ru-1440-hover.png",
+        "destructive-ru-1440-pressed.png",
+        "destructive-ru-1440-focus.png"
+      ],
+      "variants": {
+        "secondary": {
+          "default": {
+            "background": "rgb(255, 255, 255)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "1px",
+            "boxShadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+            "opacity": "1"
+          },
+          "hover": {
+            "background": "rgb(255, 255, 255)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "1px",
+            "boxShadow": "rgba(0, 0, 0, 0.1) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.12) 0px 1px 1px -1px, rgba(0, 0, 0, 0.07) 0px 1px 3px 0px",
+            "opacity": "1"
+          },
+          "screenshots": [
+            "buttons-ru-1440-secondary-default.png",
+            "buttons-ru-1440-secondary-hover.png"
+          ]
+        },
+        "ghost": {
+          "default": "rgba(0, 0, 0, 0)",
+          "hover": "rgba(0, 0, 0, 0.03)",
+          "screenshots": [
+            "buttons-ru-1440-ghost-default.png",
+            "buttons-ru-1440-ghost-hover.png"
+          ]
+        },
+        "disabled": {
+          "opacity": "0.4",
+          "cursor": "not-allowed",
+          "screenshot": "buttons-ru-1440-disabled.png"
+        }
+      }
+    },
+    {
+      "locale": "ru",
+      "viewportWidth": 390,
+      "label": "Удалить проект",
+      "mediumFontLoaded": true,
+      "states": {
+        "default": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "width": 148,
+          "height": 48,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "3px",
+          "outlineStyle": "none",
+          "outlineColor": "rgb(193, 38, 44)",
+          "outlineOffset": "0px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        },
+        "hover": {
+          "background": "rgba(229, 72, 77, 0.12)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "width": 148,
+          "height": 48,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "3px",
+          "outlineStyle": "none",
+          "outlineColor": "rgb(193, 38, 44)",
+          "outlineOffset": "0px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(252, 233, 234)",
+          "contrastRatio": 5.02
+        },
+        "pressed": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "width": 143.55999755859375,
+          "height": 46.55999755859375,
+          "transform": "matrix(0.97, 0, 0, 0.97, 0, 0)",
+          "transformScale": 0.97,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(0, 96, 226)",
+          "outlineOffset": "2px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        },
+        "focus": {
+          "background": "rgba(229, 72, 77, 0.08)",
+          "color": "rgb(193, 38, 44)",
+          "fontFamily": "\"Mabry Pro\", sans-serif",
+          "fontSize": "16px",
+          "width": 148,
+          "height": 48,
+          "transform": "none",
+          "transformScale": 1,
+          "outlineWidth": "2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(0, 96, 226)",
+          "outlineOffset": "2px",
+          "surfaceColor": "rgb(255, 255, 255)",
+          "compositeColor": "rgb(253, 240, 241)",
+          "contrastRatio": 5.28
+        }
+      },
+      "screenshots": [
+        "destructive-ru-390-default.png",
+        "destructive-ru-390-hover.png",
+        "destructive-ru-390-pressed.png",
+        "destructive-ru-390-focus.png"
+      ],
+      "variants": {
+        "secondary": {
+          "default": {
+            "background": "rgb(255, 255, 255)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "1px",
+            "boxShadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+            "opacity": "1"
+          },
+          "hover": {
+            "background": "rgb(255, 255, 255)",
+            "borderColor": "rgba(0, 0, 0, 0)",
+            "borderWidth": "1px",
+            "boxShadow": "rgba(0, 0, 0, 0.1) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.12) 0px 1px 1px -1px, rgba(0, 0, 0, 0.07) 0px 1px 3px 0px",
+            "opacity": "1"
+          },
+          "screenshots": [
+            "buttons-ru-390-secondary-default.png",
+            "buttons-ru-390-secondary-hover.png"
+          ]
+        },
+        "ghost": {
+          "default": "rgba(0, 0, 0, 0)",
+          "hover": "rgba(0, 0, 0, 0.03)",
+          "screenshots": [
+            "buttons-ru-390-ghost-default.png",
+            "buttons-ru-390-ghost-hover.png"
+          ]
+        },
+        "disabled": {
+          "opacity": "0.4",
+          "cursor": "not-allowed",
+          "screenshot": "buttons-ru-390-disabled.png"
+        }
+      }
+    }
+  ]
+}

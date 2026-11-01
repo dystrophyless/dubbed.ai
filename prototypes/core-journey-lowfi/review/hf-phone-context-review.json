@@ -1,0 +1,346 @@
+[
+  {
+    "check": "environment",
+    "observed": {
+      "browser": "156.0.8078.48",
+      "date": "2026-10-27",
+      "os": "Windows",
+      "dpr": 1,
+      "zoom": "100%",
+      "version": "core-journey-highfi-v1"
+    }
+  },
+  {
+    "check": "hf-review-390x667-long-reduce-first-capture",
+    "observed": {
+      "scroll": 218,
+      "height": 667,
+      "items": [
+        {
+          "id": "scene",
+          "rect": {
+            "x": 16,
+            "y": 26,
+            "width": 358,
+            "height": 201.375,
+            "top": 26,
+            "right": 374,
+            "bottom": 227.375,
+            "left": 16
+          }
+        },
+        {
+          "id": "capture-badge",
+          "rect": {
+            "x": 32,
+            "y": 42,
+            "width": 196.84375,
+            "height": 32,
+            "top": 42,
+            "right": 228.84375,
+            "bottom": 74,
+            "left": 32
+          }
+        },
+        {
+          "id": "dialogue",
+          "rect": {
+            "x": 16,
+            "y": 272.375,
+            "width": 358,
+            "height": 128,
+            "top": 272.375,
+            "right": 374,
+            "bottom": 400.375,
+            "left": 16
+          }
+        }
+      ],
+      "stageAndWave": [
+        {
+          "class": "scene",
+          "id": "",
+          "rect": {
+            "x": 16,
+            "y": 26,
+            "width": 358,
+            "height": 201.375,
+            "top": 26,
+            "right": 374,
+            "bottom": 227.375,
+            "left": 16
+          }
+        },
+        {
+          "class": "wave",
+          "id": "",
+          "rect": {
+            "x": 16,
+            "y": 420.375,
+            "width": 358,
+            "height": 32,
+            "top": 420.375,
+            "right": 374,
+            "bottom": 452.375,
+            "left": 16
+          }
+        },
+        {
+          "class": "",
+          "id": "scrub",
+          "rect": {
+            "x": 16,
+            "y": 412.375,
+            "width": 358,
+            "height": 48,
+            "top": 412.375,
+            "right": 374,
+            "bottom": 460.375,
+            "left": 16
+          }
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf-review-390x667-long-reduce-first-capture pointer-keyboard seek locked",
+    "observed": {
+      "before": 0.225399,
+      "after": 0.272066
+    }
+  },
+  {
+    "check": "hf-review-390x667-long-reduce-new-line",
+    "observed": {
+      "scroll": 228,
+      "height": 667,
+      "items": [
+        {
+          "id": "scene",
+          "rect": {
+            "x": 16,
+            "y": 16,
+            "width": 358,
+            "height": 201.375,
+            "top": 16,
+            "right": 374,
+            "bottom": 217.375,
+            "left": 16
+          }
+        },
+        {
+          "id": "capture-badge",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "rect": {
+            "x": 16,
+            "y": 262.375,
+            "width": 358,
+            "height": 128,
+            "top": 262.375,
+            "right": 374,
+            "bottom": 390.375,
+            "left": 16
+          }
+        }
+      ],
+      "stageAndWave": [
+        {
+          "class": "scene",
+          "id": "",
+          "rect": {
+            "x": 16,
+            "y": 16,
+            "width": 358,
+            "height": 201.375,
+            "top": 16,
+            "right": 374,
+            "bottom": 217.375,
+            "left": 16
+          }
+        },
+        {
+          "class": "wave",
+          "id": "",
+          "rect": {
+            "x": 16,
+            "y": 410.375,
+            "width": 358,
+            "height": 32,
+            "top": 410.375,
+            "right": 374,
+            "bottom": 442.375,
+            "left": 16
+          }
+        },
+        {
+          "class": "",
+          "id": "scrub",
+          "rect": {
+            "x": 16,
+            "y": 402.375,
+            "width": 358,
+            "height": 48,
+            "top": 402.375,
+            "right": 374,
+            "bottom": 450.375,
+            "left": 16
+          }
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf-review-390x667-long-reduce-second-capture",
+    "observed": {
+      "scroll": 228,
+      "height": 667,
+      "items": [
+        {
+          "id": "scene",
+          "rect": {
+            "x": 16,
+            "y": 16,
+            "width": 358,
+            "height": 201.375,
+            "top": 16,
+            "right": 374,
+            "bottom": 217.375,
+            "left": 16
+          }
+        },
+        {
+          "id": "capture-badge",
+          "rect": {
+            "x": 32,
+            "y": 32,
+            "width": 196.375,
+            "height": 32,
+            "top": 32,
+            "right": 228.375,
+            "bottom": 64,
+            "left": 32
+          }
+        },
+        {
+          "id": "dialogue",
+          "rect": {
+            "x": 16,
+            "y": 262.375,
+            "width": 358,
+            "height": 128,
+            "top": 262.375,
+            "right": 374,
+            "bottom": 390.375,
+            "left": 16
+          }
+        }
+      ],
+      "stageAndWave": [
+        {
+          "class": "scene",
+          "id": "",
+          "rect": {
+            "x": 16,
+            "y": 16,
+            "width": 358,
+            "height": 201.375,
+            "top": 16,
+            "right": 374,
+            "bottom": 217.375,
+            "left": 16
+          }
+        },
+        {
+          "class": "wave",
+          "id": "",
+          "rect": {
+            "x": 16,
+            "y": 410.375,
+            "width": 358,
+            "height": 32,
+            "top": 410.375,
+            "right": 374,
+            "bottom": 442.375,
+            "left": 16
+          }
+        },
+        {
+          "class": "",
+          "id": "scrub",
+          "rect": {
+            "x": 16,
+            "y": 402.375,
+            "width": 358,
+            "height": 48,
+            "top": 402.375,
+            "right": 374,
+            "bottom": 450.375,
+            "left": 16
+          }
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf-review-390x667-long-reduce-second-capture pointer-keyboard seek locked",
+    "observed": {
+      "before": 5.139547,
+      "after": 5.175984
+    }
+  },
+  {
+    "check": "hf-review-390x667-long-reduce page errors",
+    "observed": []
+  },
+  {
+    "check": "final stable target hashes",
+    "observed": {
+      "BRIEF.md": true,
+      "CALIBRATION.md": true,
+      "index.html": true,
+      "src.js": true,
+      "style.css": true,
+      "highfi.css": true,
+      "presentation.css": true,
+      "ui.js": true,
+      "locale.js": true,
+      "icons.js": true,
+      "waveform-data.js": true,
+      "calibration.html": true,
+      "package.json": true,
+      "package-lock.json": true,
+      "public/media/scene.mp4": true,
+      "public/media/example-dub.mp4": true,
+      "public/media/take-0.wav": true,
+      "public/media/take-1.wav": true,
+      "public/media/take-2.wav": true,
+      "public/calibration/InterVariable.woff2": true,
+      "public/calibration/LUCIDE-LICENSE.txt": true,
+      "evidence/highfi-check-results.json": true,
+      "evidence/highfi-short-check-results.json": true,
+      "evidence/highfi-retention-check.json": true,
+      "evidence/highfi-target-check.json": true,
+      "evidence/highfi-ru-font-check.json": true,
+      "evidence/calibration-check-results.json": true,
+      "evidence/calibration-reference-check.json": true,
+      "evidence/lucide-assets.json": true,
+      "evidence/waveform-provenance.json": true,
+      "evidence/highfi-check.py": true,
+      "evidence/highfi-short-check.py": true,
+      "evidence/highfi-retention-check.py": true,
+      "evidence/calibration-check.py": true
+    }
+  }
+]

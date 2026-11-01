@@ -1,0 +1,43 @@
+{
+  "layout": "B",
+  "viewport": {
+    "name": "1280x600",
+    "width": 1280,
+    "height": 600
+  },
+  "responseStatus": 200,
+  "fontLoaded": true,
+  "selector": {
+    "x": 371.109375,
+    "y": 92,
+    "width": 160.28125,
+    "height": 44,
+    "minWidth": "0px",
+    "padding": "2px",
+    "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+  },
+  "borderTopWidth": "0px",
+  "backdropFilter": "none",
+  "buttons": [
+    {
+      "text": "Original",
+      "x": 373.109375,
+      "y": 94,
+      "width": 78.609375,
+      "height": 40,
+      "minWidth": "0px",
+      "padding": "8px 14px",
+      "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+    },
+    {
+      "text": "My dub",
+      "x": 453.71875,
+      "y": 94,
+      "width": 75.671875,
+      "height": 40,
+      "minWidth": "0px",
+      "padding": "8px 14px",
+      "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+    }
+  ]
+}

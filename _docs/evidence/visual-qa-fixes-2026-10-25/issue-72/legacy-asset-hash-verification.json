@@ -1,0 +1,147 @@
+{
+  "generatedAt": "2026-10-25T13:22:28.655Z",
+  "originalAssetCount": 13,
+  "allHashesUnchanged": true,
+  "assets": [
+    {
+      "key": "source",
+      "fileName": "source-dialogue.mp4",
+      "expectedPreGenerationSha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+      "manifestSha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+      "actualSha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "sourceAudio",
+      "fileName": "source-dialogue-master.wav",
+      "expectedPreGenerationSha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+      "manifestSha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+      "actualSha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "recordingTakeA",
+      "fileName": "recording-take-a.wav",
+      "expectedPreGenerationSha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+      "manifestSha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+      "actualSha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "recordingTakeB",
+      "fileName": "recording-take-b.wav",
+      "expectedPreGenerationSha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+      "manifestSha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+      "actualSha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "resultGeneration1Audio",
+      "fileName": "result-generation-001-master.wav",
+      "expectedPreGenerationSha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+      "manifestSha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+      "actualSha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "resultGeneration2Audio",
+      "fileName": "result-generation-002-master.wav",
+      "expectedPreGenerationSha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+      "manifestSha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+      "actualSha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "resultGeneration1",
+      "fileName": "result-generation-001.mp4",
+      "expectedPreGenerationSha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+      "manifestSha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+      "actualSha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "resultGeneration2",
+      "fileName": "result-generation-002.mp4",
+      "expectedPreGenerationSha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+      "manifestSha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+      "actualSha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "validSilencePcm",
+      "fileName": "valid-silence.wav",
+      "expectedPreGenerationSha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+      "manifestSha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+      "actualSha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "validSilence",
+      "fileName": "valid-silence.mp4",
+      "expectedPreGenerationSha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+      "manifestSha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+      "actualSha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "usablePartial",
+      "fileName": "usable-partial.mp4",
+      "expectedPreGenerationSha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+      "manifestSha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+      "actualSha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "noAudioTrack",
+      "fileName": "no-audio-track.mp4",
+      "expectedPreGenerationSha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+      "manifestSha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+      "actualSha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    },
+    {
+      "key": "shortSource",
+      "fileName": "short-source.mp4",
+      "expectedPreGenerationSha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+      "manifestSha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+      "actualSha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20",
+      "hashUnchanged": true,
+      "generationIdentity": null
+    }
+  ],
+  "legacyResultGenerations": [
+    {
+      "key": "resultGeneration1",
+      "fileName": "result-generation-001.mp4",
+      "fixtureKey": "resultGeneration1",
+      "generationId": "generation-001",
+      "expectedGenerationId": "generation-001",
+      "generatedTitleCard": "GENERATION 001",
+      "expectedGeneratedTitleCard": "GENERATION 001",
+      "identityUnchanged": true
+    },
+    {
+      "key": "resultGeneration2",
+      "fileName": "result-generation-002.mp4",
+      "fixtureKey": "resultGeneration2",
+      "generationId": "generation-002",
+      "expectedGenerationId": "generation-002",
+      "generatedTitleCard": "GENERATION 002",
+      "expectedGeneratedTitleCard": "GENERATION 002",
+      "identityUnchanged": true
+    }
+  ],
+  "generationIdentitiesUnchanged": true
+}

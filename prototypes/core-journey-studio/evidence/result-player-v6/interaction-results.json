@@ -1,0 +1,68 @@
+{
+  "version": "core-journey-studio-lowfi-v6",
+  "date": "2026-10-27",
+  "browser": "156.0.8078.48",
+  "result": "PASS",
+  "checks": [
+    {
+      "scenario": "source/paused/ended/replay/pointer+keyboard seek/volume/fullscreen/actual download/return/reentry",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "en",
+      "result": "PASS"
+    },
+    {
+      "scenario": "source/paused/ended/replay/pointer+keyboard seek/volume/fullscreen/actual download/return/reentry",
+      "viewport": [
+        1280,
+        600
+      ],
+      "locale": "en",
+      "result": "PASS"
+    },
+    {
+      "scenario": "source/paused/ended/replay/pointer+keyboard seek/volume/fullscreen/actual download/return/reentry",
+      "viewport": [
+        1366,
+        650
+      ],
+      "locale": "ru",
+      "result": "PASS"
+    },
+    {
+      "scenario": "source/paused/ended/replay/pointer+keyboard seek/volume/fullscreen/actual download/return/reentry",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "result": "PASS"
+    },
+    {
+      "scenario": "source/paused/ended/replay/pointer+keyboard seek/volume/fullscreen/actual download/return/reentry",
+      "viewport": [
+        390,
+        844
+      ],
+      "locale": "en",
+      "result": "PASS"
+    },
+    {
+      "scenario": "late metadata cannot overwrite latest source,playhead or playback intent",
+      "result": "PASS"
+    },
+    {
+      "scenario": "actual failed asset,alternate source,explicit successful retry stays paused",
+      "result": "PASS"
+    }
+  ],
+  "pageErrors": [],
+  "fixtures": {
+    "original": "scene.mp4",
+    "dub": "example-dub.mp4",
+    "durationSecondsEach": 13.416667
+  },
+  "limits": "Actual Chrome/synthetic fixtures/network interception; no real render/backend,microphone,physical mobile or SR speech proof."
+}

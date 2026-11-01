@@ -1,0 +1,193 @@
+[
+  {
+    "check": "studio-review-phone-first-capture visible capture context",
+    "observed": [
+      {
+        "id": "scene",
+        "rect": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 201.375,
+          "top": 106,
+          "right": 374,
+          "bottom": 307.375,
+          "left": 16
+        }
+      },
+      {
+        "id": "capture-badge",
+        "rect": {
+          "x": 24,
+          "y": 114,
+          "width": 180.21875,
+          "height": 32,
+          "top": 114,
+          "right": 204.21875,
+          "bottom": 146,
+          "left": 24
+        }
+      },
+      {
+        "id": "dialogue",
+        "rect": {
+          "x": 16,
+          "y": 345.375,
+          "width": 358,
+          "height": 128,
+          "top": 345.375,
+          "right": 374,
+          "bottom": 473.375,
+          "left": 16
+        }
+      }
+    ]
+  },
+  {
+    "check": "studio-review-phone-next-capture visible capture context",
+    "observed": [
+      {
+        "id": "scene",
+        "rect": {
+          "x": 16,
+          "y": 49,
+          "width": 358,
+          "height": 201.375,
+          "top": 49,
+          "right": 374,
+          "bottom": 250.375,
+          "left": 16
+        }
+      },
+      {
+        "id": "capture-badge",
+        "rect": {
+          "x": 24,
+          "y": 57,
+          "width": 179.78125,
+          "height": 32,
+          "top": 57,
+          "right": 203.78125,
+          "bottom": 89,
+          "left": 24
+        }
+      },
+      {
+        "id": "dialogue",
+        "rect": {
+          "x": 16,
+          "y": 288.375,
+          "width": 358,
+          "height": 128,
+          "top": 288.375,
+          "right": 374,
+          "bottom": 416.375,
+          "left": 16
+        }
+      }
+    ]
+  },
+  {
+    "check": "studio-review-phone-replacement visible capture context",
+    "observed": [
+      {
+        "id": "scene",
+        "rect": {
+          "x": 16,
+          "y": 49,
+          "width": 358,
+          "height": 201.375,
+          "top": 49,
+          "right": 374,
+          "bottom": 250.375,
+          "left": 16
+        }
+      },
+      {
+        "id": "capture-badge",
+        "rect": {
+          "x": 24,
+          "y": 57,
+          "width": 180.21875,
+          "height": 32,
+          "top": 57,
+          "right": 204.21875,
+          "bottom": 89,
+          "left": 24
+        }
+      },
+      {
+        "id": "dialogue",
+        "rect": {
+          "x": 16,
+          "y": 288.375,
+          "width": 358,
+          "height": 128,
+          "top": 288.375,
+          "right": 374,
+          "bottom": 416.375,
+          "left": 16
+        }
+      }
+    ]
+  },
+  {
+    "check": "Blocked recapture protects candidate, prior accepted ID and completed overlay",
+    "observed": true
+  },
+  {
+    "check": "studio-review-phone-recapture visible capture context",
+    "observed": [
+      {
+        "id": "scene",
+        "rect": {
+          "x": 16,
+          "y": 16,
+          "width": 358,
+          "height": 201.375,
+          "top": 16,
+          "right": 374,
+          "bottom": 217.375,
+          "left": 16
+        }
+      },
+      {
+        "id": "capture-badge",
+        "rect": {
+          "x": 24,
+          "y": 24,
+          "width": 180.21875,
+          "height": 32,
+          "top": 24,
+          "right": 204.21875,
+          "bottom": 56,
+          "left": 24
+        }
+      },
+      {
+        "id": "dialogue",
+        "rect": {
+          "x": 16,
+          "y": 255.375,
+          "width": 358,
+          "height": 128,
+          "top": 255.375,
+          "right": 374,
+          "bottom": 383.375,
+          "left": 16
+        }
+      }
+    ]
+  },
+  {
+    "check": "Failed replacement/reload keep exact media; Retry accepts candidate",
+    "observed": {
+      "oldAccepted": 1793106035696,
+      "replacement": 1793106035699
+    }
+  },
+  {
+    "check": "Page errors",
+    "observed": []
+  }
+]

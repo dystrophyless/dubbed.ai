@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-28T15:51:09.829Z",
+  "browser": "Chrome 156.0.8078.49",
+  "scenario": "First accepted take preserved after a known pre-write quota failure. Retry saved the exact captured Blob without re-recording.",
+  "physicalMicrophone": false,
+  "nativeApiEvidence": {
+    "getUserMediaCalls": 2,
+    "recorderStarts": 2
+  },
+  "acceptedCandidateBeforeFailure": "candidate:operation:918ad703-ddec-4851-a76d-8f791b3da2ed",
+  "failedAttempt": {
+    "saveCalls": 1,
+    "lookupCalls": 1,
+    "operationIds": [
+      "operation:424a8fa3-6d93-43b6-beac-5d23fb5d28f5"
+    ],
+    "blobSizes": [
+      74476
+    ],
+    "retrySameBlob": null
+  },
+  "retry": {
+    "saveCalls": 2,
+    "lookupCalls": 1,
+    "operationIds": [
+      "operation:424a8fa3-6d93-43b6-beac-5d23fb5d28f5",
+      "operation:8ce234a6-a0da-44d2-ba0b-b7e9f53ab85d"
+    ],
+    "blobSizes": [
+      74476,
+      74476
+    ],
+    "retrySameBlob": true
+  },
+  "finalProject": {
+    "revision": 4,
+    "draftCandidateByTurn": {
+      "sintel-turn-1": "candidate:operation:8ce234a6-a0da-44d2-ba0b-b7e9f53ab85d"
+    },
+    "acceptedByTurn": {
+      "sintel-turn-1": "candidate:operation:918ad703-ddec-4851-a76d-8f791b3da2ed"
+    },
+    "tombstonedAt": null
+  },
+  "retriedCandidate": {
+    "id": "candidate:operation:8ce234a6-a0da-44d2-ba0b-b7e9f53ab85d",
+    "purpose": "recording",
+    "turnId": "sintel-turn-1",
+    "byteSize": 74476,
+    "sha256": "014d4255d28dbe43ba08dc31c508e946cdc0f5e9f3e043d3b8b23681e71f6d0c",
+    "mimeType": "audio/webm;codecs=opus",
+    "endReason": "fixed-window",
+    "probe": {
+      "mimeType": "audio/webm;codecs=opus",
+      "byteSize": 74476,
+      "durationSeconds": 5.1,
+      "decodedFrames": 244800,
+      "channelCount": 1,
+      "sampleRate": 48000,
+      "decodeStatus": "decoded",
+      "waveformPeaks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.018,
+        0.066,
+        0.011,
+        0.002,
+        0,
+        0,
+        1.002,
+        0.983,
+        0.012,
+        0.002,
+        0,
+        0,
+        0,
+        1.017,
+        0.035,
+        0.007,
+        0.001,
+        0,
+        0,
+        1.042,
+        0.028,
+        0.006,
+        0.001,
+        0,
+        0,
+        1.002,
+        0.977,
+        0.019,
+        0.004,
+        0.001,
+        0,
+        0.024,
+        1.001,
+        0.026,
+        0.005,
+        0.001,
+        0,
+        0,
+        1.009,
+        0.023,
+        0.005,
+        0.001,
+        0,
+        0,
+        1.007,
+        0.047,
+        0.008,
+        0.001,
+        0,
+        0,
+        0.999,
+        0.997,
+        0.02,
+        0.004,
+        0.001,
+        0,
+        0.004,
+        1.032
+      ]
+    },
+    "blobSize": 74476
+  }
+}

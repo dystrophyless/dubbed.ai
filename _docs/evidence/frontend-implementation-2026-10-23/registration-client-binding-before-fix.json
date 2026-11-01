@@ -1,0 +1,72 @@
+{
+  "capturedAtUtc": "2026-10-23T19:43:31.906Z",
+  "boundary": "Public mock facade, isolated namespace, two explicitly injected clients in native Chromium; no real identity provider or user data.",
+  "result": {
+    "requestId": "b5b08f46-ab23-4613-818f-b370c99beb2b",
+    "foreignResolve": {
+      "status": "ok",
+      "data": {
+        "id": "b5b08f46-ab23-4613-818f-b370c99beb2b",
+        "email": "root-registration-binding-81bdc8d3-db9c-4d37-8eae-06b4cb3dee2f@example.test",
+        "purpose": "registration",
+        "scenarioCode": {
+          "value": "370992",
+          "note": "synthetic-mock-scenario"
+        },
+        "expiresAt": 1792785212450,
+        "resendAvailableAt": 1792784672450,
+        "resendCount": 0,
+        "sendCount": 1,
+        "remainingSends": 4,
+        "revision": 0
+      },
+      "replayed": false
+    },
+    "foreignVerify": {
+      "status": "ok",
+      "data": {
+        "account": {
+          "id": "4f142d59-24a9-413c-a912-e57a0726449b",
+          "email": "root-registration-binding-81bdc8d3-db9c-4d37-8eae-06b4cb3dee2f@example.test",
+          "locale": "en",
+          "revision": 1,
+          "deleted": false,
+          "createdAt": 1792784612454,
+          "methods": [
+            {
+              "kind": "email-password",
+              "address": "root-registration-binding-81bdc8d3-db9c-4d37-8eae-06b4cb3dee2f@example.test",
+              "verified": true,
+              "linkedAt": 1792784612454
+            }
+          ]
+        },
+        "session": {
+          "id": "5886f094-df7c-49a9-8f48-8780533ae4b1",
+          "accountId": "4f142d59-24a9-413c-a912-e57a0726449b",
+          "expiresAt": 1795376612454,
+          "revision": 0
+        },
+        "credits": {
+          "accountId": "4f142d59-24a9-413c-a912-e57a0726449b",
+          "revision": 1,
+          "available": 120,
+          "reserved": 0,
+          "purchasedRemainder": 0,
+          "welcomeGrantEligible": false,
+          "welcomeGrantApplied": true,
+          "projectCapacity": {
+            "used": 0,
+            "total": 2,
+            "firstPurchaseUpgrade": false,
+            "revision": 1
+          }
+        },
+        "outcome": "new-account",
+        "welcomeGrantApplied": true
+      },
+      "replayed": false
+    }
+  },
+  "outcome": "cross-client-registration-verified"
+}

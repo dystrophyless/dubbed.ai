@@ -1,0 +1,20 @@
+{
+  "version": "core-journey-highfi-v1",
+  "date": "2026-10-27",
+  "browser": "156.0.8078.48",
+  "checks": [
+    {
+      "scenario": "Previous Stay retains candidate; explicit Go without saving discards only that candidate and preserves accepted line",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Reload after failed replacement retains exact candidate and old accepted take, audition/save enabled, Process again hidden",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Workspace leave Stay protects candidate; explicit Save and leave accepts exact candidate before opening neighboring boundary",
+      "result": "PASS"
+    }
+  ],
+  "limit": "browser-local draft only, no server durability"
+}

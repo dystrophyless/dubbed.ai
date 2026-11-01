@@ -1,0 +1,31 @@
+{
+  "version": "core-journey-studio-lowfi-v6",
+  "canonicalMismatches": [],
+  "targets": [
+    {
+      "target": "core-journey-studio",
+      "version": "core-journey-studio-lowfi-v6",
+      "manifestSha256": "0d763f67ff721418a20e8968f3ba2c11c6752898fb624ec70eaa25c509cde7a7",
+      "samePriorManifest": false,
+      "manifestEntries": 190,
+      "manifestMismatches": [],
+      "priorChanged": [
+        "BRIEF.md",
+        "README.md",
+        "index.html",
+        "src.js"
+      ],
+      "priorEntries": 142
+    },
+    {
+      "target": "core-journey-lowfi",
+      "version": "core-journey-highfi-v3-owner-amendment-3",
+      "manifestSha256": "70a378a32a02337ca089d0559920978d6f0ead7e8bd9d4539f9281a3be97cff0",
+      "samePriorManifest": true,
+      "manifestEntries": 54,
+      "manifestMismatches": [],
+      "priorChanged": [],
+      "priorEntries": 54
+    }
+  ]
+}

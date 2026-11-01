@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23T03:07:42.312Z",
+  "boundary": "Full isolated build index-CaPd7_El.js; actual registration UI with synthetic OTP, no email provider.",
+  "errors": [],
+  "beforeReload": "Create your account\n\nCreate an account to start making a dub.\n\nCheck your email\n\nEnter the six-digit verification code for ui-1792724863665@example.test.\n\nSimulated code · local mock: 825118. No email was sent.\n6-digit verification code\n—\n\nCode expires in 10:01\n\nLocal mock sends remaining this hour: 4.\n\nResend available in 1:01\nChange email",
+  "sameCodeAfterReload": true,
+  "afterReload": "Create your account\n\nCreate an account to start making a dub.\n\nCheck your email\n\nEnter the six-digit verification code for ui-1792724863665@example.test.\n\nSimulated code · local mock: 825118. No email was sent.\nChecking registration status…\n6-digit verification code\n—\n\nCode expires in 10:00\n\nLocal mock sends remaining this hour: 4.\n\nResend available in 1:00\nChange email",
+  "ruPending": "Создайте аккаунт\n\nСоздайте аккаунт, чтобы начать озвучивание.\n\nПроверьте почту\n\nВведите шестизначный код подтверждения для ui-1792724863665@example.test.\n\nТестовый код · локальный мок: 825118. Письмо не отправлялось.\nChecking registration status…\n6-значный код подтверждения\n—\n\nКод истекает через 10:00\n\nВ локальном сценарии осталось отправок за этот час: 4.\n\nПовторная отправка доступна через 1:00\nИзменить email",
+  "overflow": false,
+  "destination": "http://127.0.0.1:4281/new",
+  "final": "Создайте аккаунт\n\nСоздайте аккаунт, чтобы начать озвучивание.",
+  "outcome": "passed"
+}

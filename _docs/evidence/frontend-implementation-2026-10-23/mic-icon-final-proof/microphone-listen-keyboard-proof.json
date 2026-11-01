@@ -23,8 +23,8 @@
   },
   "playback": {
     "paused": false,
-    "currentTimeSeconds": 0.363237,
-    "durationSeconds": 1.2,
+    "currentTimeSeconds": 0.368175,
+    "durationSeconds": 1.14,
     "muted": true,
     "volume": 0,
     "sourceProtocol": "blob:",
@@ -34,10 +34,10 @@
     "indexedDbWritesBeforeTest": 0,
     "indexedDbWritesAfterExit": 0,
     "objectUrlsCreated": [
-      "blob:http://127.0.0.1:4284/7df4134a-4898-49f0-9bbd-ef1805c53148"
+      "blob:http://127.0.0.1:4284/85709cea-f5df-4dd8-ae7a-7ae8f26c2085"
     ],
     "objectUrlsRevoked": [
-      "blob:http://127.0.0.1:4284/7df4134a-4898-49f0-9bbd-ef1805c53148"
+      "blob:http://127.0.0.1:4284/85709cea-f5df-4dd8-ae7a-7ae8f26c2085"
     ],
     "recorderStops": 1,
     "trackStops": 1,
@@ -45,6 +45,6 @@
   },
   "screenshot": {
     "file": "microphone-listen-keyboard-en-1440.png",
-    "sha256": "947b873866c657febd4ef288474191740bad596166c896c91e5f90aa922341fe"
+    "sha256": "f6debbf3b74c5f9d98ee6b0aa0342b15225907956962367e8f44a183cac4da3c"
   }
 }

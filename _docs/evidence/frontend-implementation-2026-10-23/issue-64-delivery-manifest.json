@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-23T17:07:52.612Z",
+  "issue": 64,
+  "repository": "dystrophyless/dubbed.ai",
+  "branch": "main",
+  "remote": "origin",
+  "baseCommit": "2de6290b98ef9dd2b9cb923f4a12d3fb1fe610d4",
+  "files": [
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/media/investigation-report.md",
+      "sha256": "34062d4690ab3a22618d523723cd54e53d76c547d603a5141e5999c99656edfa"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/media/criterion-evidence.json",
+      "sha256": "0ee69ab4dc1bf6f511ce9e3bdb403ac798dfe9d2234e8db36708212b029baf41"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/media/browser-media-matrix.json",
+      "sha256": "c6b0218014f58624c95b1e4be15cf1baa04fa1df28347e58ed48f11625946938"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/media/orchestrator-native-capture.json",
+      "sha256": "68642c1363b0bac6427e26fe10ab9b4bf05a1fcc45f06336bf529aa3c4278fce"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/media/orchestrator-asset-integrity.json",
+      "sha256": "dd64572fd6be728a9ae50e98c08fd9f94d527bb985ef87ab4cb1d5cb4c711af5"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-64-acceptance.md",
+      "sha256": "950c7a6b092c512873ac51b83b3088eb4c14dd059ed7e75e59dfe0189b6f6468"
+    }
+  ],
+  "acceptance": "_docs/evidence/frontend-implementation-2026-10-23/issue-64-acceptance.md",
+  "scope": "Bounded media investigation report/rawmatrix only, no72 orproductacceptance",
+  "closureDecision": "Root authorizes64closureonlyafterverified→recordedacceptance→exactscopedcommit→normalpush→remoteverification. Preserveinitialdirtyfiles; noPR/merge/deploy/force/reset/otherissues."
+}

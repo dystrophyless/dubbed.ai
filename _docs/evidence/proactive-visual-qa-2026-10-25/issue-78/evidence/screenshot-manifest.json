@@ -1,0 +1,122 @@
+[
+  {
+    "name": "landing-en-desktop",
+    "path": "evidence/landing-en-desktop.png",
+    "captured": "2026-10-24T23:07:04.378Z",
+    "url": "http://127.0.0.1:4378/"
+  },
+  {
+    "name": "landing-en-keyboard-focus",
+    "path": "evidence/landing-en-keyboard-focus.png",
+    "captured": "2026-10-24T23:07:04.647Z",
+    "url": "http://127.0.0.1:4378/"
+  },
+  {
+    "name": "landing-ru-desktop",
+    "path": "evidence/landing-ru-desktop.png",
+    "captured": "2026-10-24T23:07:06.023Z",
+    "url": "http://127.0.0.1:4378/"
+  },
+  {
+    "name": "landing-en-short",
+    "path": "evidence/landing-en-short.png",
+    "captured": "2026-10-24T23:07:06.980Z",
+    "url": "http://127.0.0.1:4378/"
+  },
+  {
+    "name": "landing-ru-phone",
+    "path": "evidence/landing-ru-phone.png",
+    "captured": "2026-10-24T23:07:07.811Z",
+    "url": "http://127.0.0.1:4378/"
+  },
+  {
+    "name": "landing-en-phone",
+    "path": "evidence/landing-en-phone.png",
+    "captured": "2026-10-24T23:07:08.661Z",
+    "url": "http://127.0.0.1:4378/"
+  },
+  {
+    "name": "landing-en-767",
+    "path": "evidence/landing-en-767.png",
+    "captured": "2026-10-24T23:07:09.514Z",
+    "url": "http://127.0.0.1:4378/"
+  },
+  {
+    "name": "landing-ru-768",
+    "path": "evidence/landing-ru-768.png",
+    "captured": "2026-10-24T23:07:10.461Z",
+    "url": "http://127.0.0.1:4378/"
+  },
+  {
+    "name": "shell-en-desktop",
+    "path": "evidence/shell-en-desktop.png",
+    "captured": "2026-10-24T23:07:12.229Z",
+    "url": "http://127.0.0.1:4378/new"
+  },
+  {
+    "name": "shell-ru-desktop",
+    "path": "evidence/shell-ru-desktop.png",
+    "captured": "2026-10-24T23:07:12.522Z",
+    "url": "http://127.0.0.1:4378/new"
+  },
+  {
+    "name": "shell-ru-768",
+    "path": "evidence/shell-ru-768.png",
+    "captured": "2026-10-24T23:07:12.755Z",
+    "url": "http://127.0.0.1:4378/new"
+  },
+  {
+    "name": "shell-ru-767",
+    "path": "evidence/shell-ru-767.png",
+    "captured": "2026-10-24T23:07:12.983Z",
+    "url": "http://127.0.0.1:4378/new"
+  },
+  {
+    "name": "shell-ru-phone-menu",
+    "path": "evidence/shell-ru-phone-menu.png",
+    "captured": "2026-10-24T23:07:13.328Z",
+    "url": "http://127.0.0.1:4378/new"
+  },
+  {
+    "name": "shell-en-phone-menu",
+    "path": "evidence/shell-en-phone-menu.png",
+    "captured": "2026-10-24T23:07:13.643Z",
+    "url": "http://127.0.0.1:4378/new"
+  },
+  {
+    "name": "controls-en-desktop",
+    "path": "evidence/controls-en-desktop.png",
+    "captured": "2026-10-24T23:07:14.402Z",
+    "url": "http://127.0.0.1:4378/e2e/harness/shared-controls.html?busy-proof=1"
+  },
+  {
+    "name": "controls-en-busy",
+    "path": "evidence/controls-en-busy.png",
+    "captured": "2026-10-24T23:07:14.732Z",
+    "url": "http://127.0.0.1:4378/e2e/harness/shared-controls.html?busy-proof=1"
+  },
+  {
+    "name": "controls-ru-phone",
+    "path": "evidence/controls-ru-phone.png",
+    "captured": "2026-10-24T23:07:15.488Z",
+    "url": "http://127.0.0.1:4378/e2e/harness/shared-controls.html?busy-proof=1"
+  },
+  {
+    "name": "landing-ru-720-reflow-proxy",
+    "path": "evidence/landing-ru-720-reflow-proxy.png",
+    "captured": "2026-10-24T23:09:08.131Z",
+    "note": "Supplemental capture; see supplemental-metrics.json"
+  },
+  {
+    "name": "landing-ru-forced-colors",
+    "path": "evidence/landing-ru-forced-colors.png",
+    "captured": "2026-10-24T23:09:08.131Z",
+    "note": "Supplemental capture; see supplemental-metrics.json"
+  },
+  {
+    "name": "controls-ru-hover",
+    "path": "evidence/controls-ru-hover.png",
+    "captured": "2026-10-24T23:09:08.131Z",
+    "note": "Supplemental capture; see supplemental-metrics.json"
+  }
+]

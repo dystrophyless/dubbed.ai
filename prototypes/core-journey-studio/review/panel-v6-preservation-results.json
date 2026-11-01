@@ -1,0 +1,149 @@
+{
+  "version": "core-journey-panel-highfi-v6",
+  "date": "2026-10-28",
+  "targets": [
+    {
+      "variant": "A",
+      "version": "core-journey-panel-highfi-v6",
+      "manifestSha256": "9f711a35bd141d9d25f9272124c41a05c2b8280866a388bfef9054040efeea3f",
+      "entries": 350
+    },
+    {
+      "variant": "B",
+      "version": "core-journey-studio-highfi-v1",
+      "manifestSha256": "5170ff3fd978894829bd00b6d54f02ee61e39d3ee397680d7c464e17c998ba70",
+      "entries": 340
+    }
+  ],
+  "checks": [
+    {
+      "name": "A current fingerprints match",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "B current fingerprints match",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "B manifest byte-for-byte unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All340 B previous fingerprints unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Only bounded existing A changes",
+      "pass": true,
+      "detail": [
+        "BRIEF.md",
+        "README.md",
+        "index.html",
+        "panel-responsive.css",
+        "panel-result.css",
+        "src.js"
+      ]
+    },
+    {
+      "name": "All9 canonical hashes unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B stop",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B pauseAudition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B isSaveFailure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B isMicFailure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B atCompleteEnd",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B retryGuidance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B seekStart",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B updateClock",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B startAudition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B play",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B record",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B move",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B acceptAndMove",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B guard",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected behavior identical to B showResult",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No global shell markup",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Exit sole destination hook",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Retired preparation feature absent",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "pass": 24,
+  "total": 24
+}

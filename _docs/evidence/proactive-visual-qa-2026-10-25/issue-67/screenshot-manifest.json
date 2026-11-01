@@ -1,0 +1,77 @@
+[
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\deep-link-en-desktop.png",
+    "bytes": 30130,
+    "sha256": "CB1CCF2A28903BDBF4CD96FFEDEAD4BDD5ED302A3069486EFB7F62517FF12284"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\landing-en-desktop.png",
+    "bytes": 28664,
+    "sha256": "552A251CC6D7052BEC5D5A01581E1B09C97966E647EDC9773DC6036060A0B25B"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\real-en-desktop.png",
+    "bytes": 17138,
+    "sha256": "1EE8232AA4F0D86B39CE46C90E1CDFBF75D384A5BDBE21E7F2E6778389595CB8"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\real-ru-phone.png",
+    "bytes": 13019,
+    "sha256": "56A256D22025EF1FC445873AB5CB587A6244C857EBC9F409E6A20C9E2AC73242"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\signin-en-phone.png",
+    "bytes": 26660,
+    "sha256": "7CB5AAB5CD26C80A506F24FCA3F341CC30214C27D340A7093A8B5B4EE4FC62A0"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\signin-en-short.png",
+    "bytes": 28535,
+    "sha256": "53A95B497DB3718DB606112064B795FE253C2ED4160AF3991228EF1CFB499132"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\signin-ru-767.png",
+    "bytes": 27302,
+    "sha256": "F1BBE5F7110A5D9B55F7DD59D37935AD74FC48271332F6428DC3CC47B99F8283"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\signin-ru-768.png",
+    "bytes": 26554,
+    "sha256": "AD8DDCF1C1916857A0119DB9EBDF22D0643C81EDBC643A4177B7070F12DE0AD0"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\signin-ru-desktop.png",
+    "bytes": 28975,
+    "sha256": "F759C6954AD91AA1A470DE97B33C40A5CCCBCC4904708D43D0A44E2297A35738"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\signin-ru-phone.png",
+    "bytes": 25280,
+    "sha256": "84EA978B22FA45B8906EBAF3D9D9E166B84A7EB2A49AD9AB1FDC706FCB454970"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\storage-absent-en-desktop.png",
+    "bytes": 14835,
+    "sha256": "541F91A6EC91873518F20CAF0720C5A0DB15950240093B26B49C6D883312D279"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\storage-absent-ru-phone.png",
+    "bytes": 12003,
+    "sha256": "6D255037466CBF09529C44C5B8DB644A36A1036D19A7266BA67837F3412DC86C"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\storage-denied-en-desktop.png",
+    "bytes": 5851,
+    "sha256": "99DB2A93B06FA1BF617F5C495E02DCF6C0B76961108491217E2CF4FED8699D35"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\storage-local-absent-ru-phone.png",
+    "bytes": 25273,
+    "sha256": "615DCEB92EC12FAD470EE158D760A366F0723B47D3CBA0008BB7F84D29C9E452"
+  },
+  {
+    "path": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\evidence\\storage-open-denied-en-desktop.png",
+    "bytes": 28664,
+    "sha256": "552A251CC6D7052BEC5D5A01581E1B09C97966E647EDC9773DC6036060A0B25B"
+  }
+]

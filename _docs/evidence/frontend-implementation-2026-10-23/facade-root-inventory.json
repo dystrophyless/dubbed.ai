@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-23T16:42:00.142Z",
+  "boundary": "Root static facade inventory, not criterion acceptance. Current account/Result fixes and final suite remain pending.",
+  "surfaces": [
+    {
+      "name": "identity",
+      "type": "IdentityService"
+    },
+    {
+      "name": "registration",
+      "type": "RegistrationService"
+    },
+    {
+      "name": "passwordReset",
+      "type": "PasswordResetService"
+    },
+    {
+      "name": "accountLinking",
+      "type": "AccountLinkingService"
+    },
+    {
+      "name": "account",
+      "type": "AccountService"
+    },
+    {
+      "name": "projects",
+      "type": "ProjectsService"
+    },
+    {
+      "name": "uploads",
+      "type": "UploadService"
+    },
+    {
+      "name": "previews",
+      "type": "PreviewService"
+    },
+    {
+      "name": "preparation",
+      "type": "PreparationService"
+    },
+    {
+      "name": "recording",
+      "type": "RecordingService"
+    },
+    {
+      "name": "results",
+      "type": "ResultService"
+    },
+    {
+      "name": "credits",
+      "type": "CreditsService"
+    },
+    {
+      "name": "browserMedia",
+      "type": "BrowserMediaService"
+    },
+    {
+      "name": "operations",
+      "type": "OperationService"
+    },
+    {
+      "name": "workspace",
+      "type": "WorkspaceService"
+    }
+  ],
+  "files": [
+    {
+      "path": "frontend/src/services/contracts.ts",
+      "sha256": "2ac1e85ab169de80728e6348e0c7527f7c22b1cd6b8243ede497ef50715950b1"
+    },
+    {
+      "path": "frontend/src/services/index.ts",
+      "sha256": "99778582116464ee86f5f82b306af83958ca34ae72aeb4922a18a56adfc1d6ce"
+    },
+    {
+      "path": "frontend/tests/services/title-and-boundary.test.ts",
+      "sha256": "67b7a46390bf190058d0c34117ec0c304489d442e7c496da5c5656968012008a"
+    },
+    {
+      "path": "frontend/tests/services/core-services.test.ts",
+      "sha256": "b40c7de46ae30741bf0fb03be7b7829034546872e2515e55c28422b307872c38"
+    },
+    {
+      "path": "frontend/tests/services/test-support.ts",
+      "sha256": "3f5468aaec95b375776d175bb743e79ebd6f42c18bda5e5b0cbb40f78d3e4311"
+    }
+  ],
+  "observations": [
+    "Services declares 15 logical consumer responsibilities; factory assembles concrete IndexedDB mocks plus browser-media capability service.",
+    "Representative forbidden fetch and direct adapter import negative fixtures are present; UI source scan excludes service implementations. Regex enforcement is bounded to represented request/import patterns.",
+    "Unknown anonymous registration, content-fingerprint conflict and exactly-once grant checks are exercised through public facade. Test harness controls fault store privately, not product UI.",
+    "Explicit real throws typed unavailable; separate root browser test passed and does not establish a real adapter."
+  ],
+  "remaining": [
+    "Final generic adapter conformance/injection review against AC68-04; mock harness currently constructs createServices directly.",
+    "Recheck changed Account/Result consumer seams and current full suite after fixes."
+  ]
+}

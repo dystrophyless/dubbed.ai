@@ -12,7 +12,7 @@ This flow lets a visitor authenticate with Google or an existing email/password 
 Confirmed boundaries:
 
 - sign-in occurs before any upload;
-- ordinary successful sign-in enters Flow 06 **New dub**;
+- ordinary successful sign-in enters Flow 06 **New dub**, without repeating microphone onboarding. All later microphone checks are in Settings;
 - **My projects** is available from authenticated navigation;
 - Flow 03 owns sign-up, email verification, and completion of email/password registration;
 - a first-time Google registration initiated from Flow 03 completes only when the identity service creates one verified canonical account, establishes its signed-in session, reports the eligible welcome grant exactly once, and returns New dub readiness; it does not add an emailed-code step;
@@ -30,7 +30,7 @@ The flow is bilingual in English and Russian and must work on desktop and phone.
 ### 2.1 Entry
 
 - **Sign in** from the public landing page.
-- **Sign in** explicitly selected from Flow 03 after the anonymous landing **Start dubbing** action routed the user to registration, carrying the confirmed logical intent to enter New dub after authentication.
+- **Sign in** explicitly selected from Flow 03 after the anonymous landing **Start dubbing** action routed the user through one-time microphone onboarding to registration, carrying the confirmed logical intent to enter New dub after authentication.
 - An unauthenticated attempt to enter an authenticated destination, carrying only validated safe return context.
 - A session-expired handoff from a project flow, carrying the persisted project-screen context needed for the confirmed same-screen return after reauthentication.
 - A return from Flow 03, Flow 04, or Flow 05 when that flow explicitly hands control back.

@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-24T00:53:10.862Z",
+  "capturedAt": "2026-10-24T19:53:43.353Z",
   "command": "npm.cmd run test:e2e -- e2e/identity-account-journey.spec.ts",
   "factBoundary": "Actual App route geometry with deterministic local mock identity data; no live identity provider or account service.",
   "expected": {

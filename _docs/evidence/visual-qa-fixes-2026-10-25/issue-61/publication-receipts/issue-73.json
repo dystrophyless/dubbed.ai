@@ -1,0 +1,48 @@
+{
+  "issue": 73,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "f7c886d3a3d1dfec59cc3fd0d43b1773810bb5ad796f47f70abcde1ade66fbf3",
+    "planned": "7692ebc0243b9def2758a1e29a407b2c62524d3c1ef3749096c1ba8102be238c",
+    "readback": "7692ebc0243b9def2758a1e29a407b2c62524d3c1ef3749096c1ba8102be238c"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Persist and reconcile an isolated mock workspace through the shared facade",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Persist and reconcile an isolated mock workspace through the shared facade",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

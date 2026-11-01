@@ -1,0 +1,34 @@
+{
+  "notice": {
+    "background": "rgb(255, 255, 255)",
+    "radius": "10px",
+    "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+    "padding": "16px",
+    "buttons": 0,
+    "title": {
+      "font": "500 15px / 24px \"Mabry Pro\", Arial, sans-serif",
+      "color": "rgb(0, 0, 0)"
+    },
+    "copy": {
+      "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+      "color": "rgba(0, 0, 0, 0.61)"
+    },
+    "icon": "<svg aria-hidden=\"true\" focusable=\"false\" class=\"lucide lucide-circle-alert\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"12\" cy=\"12\" r=\"10\"></circle>\n  <line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"></line>\n  <line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"></line>\n</svg>"
+  },
+  "references": {
+    "source/components/button/Clean/button-clean.md.txt": true,
+    "source/components/button/Clean/Light/01-initial.png": true,
+    "source/components/button/Clean/Light/03-loading.png": true,
+    "source/components/profile-menu/Clean/profile-menu-clean.md.txt": true,
+    "source/components/profile-menu/Clean/Light/01-initial.png": true,
+    "source/components/notification-stack/Clean/notification-stack-clean.md.txt": true,
+    "source/components/notification-stack/Clean/Light/01-initial.png": true,
+    "source/components/thinking-loader/Clean/thinking-loader-clean.md.txt": true,
+    "source/components/thinking-loader/Clean/Light/01-initial.png": true
+  },
+  "contrast": {
+    "titleOnWhite": 21.0,
+    "bodyOnWhite": 5.967014760405726,
+    "semanticErrorIconOnWhite": 5.864109505498192
+  }
+}

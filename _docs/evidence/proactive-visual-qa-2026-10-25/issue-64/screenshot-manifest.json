@@ -1,0 +1,42 @@
+[
+  {
+    "state": "unsupported-en-desktop",
+    "path": "evidence/unsupported-en-desktop.png",
+    "injection": "navigator.mediaDevices getter returns undefined; genuine UI clicks; no media input requested"
+  },
+  {
+    "state": "recorder-unavailable-en-desktop",
+    "path": "evidence/recorder-unavailable-en-desktop.png",
+    "injection": "MediaRecorder getter returns undefined; native fake microphone live track; actual service returns unsupported, UI shows local test failure"
+  },
+  {
+    "state": "unsupported-en-short",
+    "path": "evidence/unsupported-en-short.png",
+    "injection": "navigator.mediaDevices getter returns undefined; genuine UI clicks; no media input requested"
+  },
+  {
+    "state": "recorder-unavailable-en-short",
+    "path": "evidence/recorder-unavailable-en-short.png",
+    "injection": "MediaRecorder getter returns undefined; native fake microphone live track; actual service returns unsupported, UI shows local test failure"
+  },
+  {
+    "state": "unsupported-ru-phone",
+    "path": "evidence/unsupported-ru-phone.png",
+    "injection": "navigator.mediaDevices getter returns undefined; genuine UI clicks; no media input requested"
+  },
+  {
+    "state": "recorder-unavailable-ru-phone",
+    "path": "evidence/recorder-unavailable-ru-phone.png",
+    "injection": "MediaRecorder getter returns undefined; native fake microphone live track; actual service returns unsupported, UI shows local test failure"
+  },
+  {
+    "state": "unsupported-en-phone",
+    "path": "evidence/unsupported-en-phone.png",
+    "injection": "navigator.mediaDevices getter returns undefined; genuine UI clicks; no media input requested"
+  },
+  {
+    "state": "recorder-unavailable-en-phone",
+    "path": "evidence/recorder-unavailable-en-phone.png",
+    "injection": "MediaRecorder getter returns undefined; native fake microphone live track; actual service returns unsupported, UI shows local test failure"
+  }
+]

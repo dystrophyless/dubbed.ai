@@ -1,0 +1,2409 @@
+[
+  {
+    "name": "request-en-desktop",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:25.499Z",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "page": {
+      "w": 1440,
+      "h": 900
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-email",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 316,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send reset email",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 372,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 412,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "email-error-en-desktop",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:25.714Z",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "page": {
+      "w": 1440,
+      "h": 900
+    },
+    "active": {
+      "tag": "INPUT",
+      "id": "password-reset-email"
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-email",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 316,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send reset email",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 398,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 438,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "code-en-desktop",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:25.992Z",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "page": {
+      "w": 1440,
+      "h": 900
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 545,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 593,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "—",
+        "height": 44,
+        "width": 40,
+        "x": 641,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 689,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 737,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 785,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 280,
+        "x": 545,
+        "y": 518,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false,
+        "selection": [
+          0,
+          0
+        ]
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Resend code",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 618,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 658,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "invalid-code-en-desktop",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:26.199Z",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "page": {
+      "w": 1440,
+      "h": 900
+    },
+    "active": {
+      "tag": "INPUT",
+      "id": "_r_1_"
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 40,
+        "x": 545,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 40,
+        "x": 593,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0—",
+        "height": 44,
+        "width": 40,
+        "x": 641,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 40,
+        "x": 689,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 40,
+        "x": 737,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 40,
+        "x": 785,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 280,
+        "x": 545,
+        "y": 518,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false,
+        "selection": [
+          0,
+          6
+        ]
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Resend code",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 674,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 714,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "password-en-desktop",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:26.398Z",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "page": {
+      "w": 1440,
+      "h": 900
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-new-password",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 378,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 486,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save new password",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 542,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 582,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "mismatch-en-desktop",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:26.621Z",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "page": {
+      "w": 1440,
+      "h": 900
+    },
+    "active": {
+      "tag": "INPUT",
+      "id": "password-reset-repeat-password"
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-new-password",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 378,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 486,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save new password",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 568,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 608,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "success-destination-en-desktop",
+    "url": "http://127.0.0.1:4371/new",
+    "at": "2026-10-25T08:16:26.896Z",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "page": {
+      "w": 1440,
+      "h": 900
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Sign out",
+        "height": 24,
+        "width": 63.90625,
+        "x": 1256.09375,
+        "y": 20,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "12px",
+        "lineHeight": "16px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "",
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Manage projects",
+        "height": 32,
+        "width": 134.515625,
+        "x": 409.34375,
+        "y": 237,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "",
+        "text": "[redacted]",
+        "height": 1,
+        "width": 1,
+        "x": 240,
+        "y": 318,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Choose video",
+        "height": 28,
+        "width": 960,
+        "x": 240,
+        "y": 358,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "name": "request-ru-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:27.614Z",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-email",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 252,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Отправить письмо для сброса",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 316,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Вернуться ко входу",
+        "height": 48,
+        "width": 123.703125,
+        "x": 49,
+        "y": 376,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "email-error-ru-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:27.816Z",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "INPUT",
+      "id": "password-reset-email"
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-email",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 252,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Отправить письмо для сброса",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 342,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Вернуться ко входу",
+        "height": 48,
+        "width": 123.703125,
+        "x": 49,
+        "y": 402,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "code-ru-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:28.069Z",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 36,
+        "x": 49,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 36,
+        "x": 91,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "—",
+        "height": 44,
+        "width": 36,
+        "x": 133,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 36,
+        "x": 175,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 36,
+        "x": 217,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 36,
+        "x": 259,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 246,
+        "x": 49,
+        "y": 498,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false,
+        "selection": [
+          0,
+          0
+        ]
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Отправить код ещё раз",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 598,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Вернуться ко входу",
+        "height": 48,
+        "width": 123.703125,
+        "x": 49,
+        "y": 658,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "invalid-code-ru-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:28.282Z",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 871
+    },
+    "active": {
+      "tag": "INPUT",
+      "id": "_r_1_"
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 36,
+        "x": 49,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 36,
+        "x": 91,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0—",
+        "height": 44,
+        "width": 36,
+        "x": 133,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 36,
+        "x": 175,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 36,
+        "x": 217,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "0",
+        "height": 44,
+        "width": 36,
+        "x": 259,
+        "y": 500,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "22px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 246,
+        "x": 49,
+        "y": 498,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false,
+        "selection": [
+          0,
+          6
+        ]
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Отправить код ещё раз",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 674,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Вернуться ко входу",
+        "height": 48,
+        "width": 123.703125,
+        "x": 49,
+        "y": 734,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "password-ru-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:28.467Z",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-new-password",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 358,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 474,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Сохранить новый пароль",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 538,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Вернуться ко входу",
+        "height": 48,
+        "width": 123.703125,
+        "x": 49,
+        "y": 598,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "mismatch-ru-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:28.684Z",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "INPUT",
+      "id": "password-reset-repeat-password"
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-new-password",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 358,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 474,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Сохранить новый пароль",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 564,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Вернуться ко входу",
+        "height": 48,
+        "width": 123.703125,
+        "x": 49,
+        "y": 624,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "success-destination-ru-phone",
+    "url": "http://127.0.0.1:4371/new",
+    "at": "2026-10-25T08:16:28.917Z",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Sign out",
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "",
+        "height": 48,
+        "width": 48,
+        "x": 326,
+        "y": 8,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Manage projects",
+        "height": 48,
+        "width": 134.515625,
+        "x": 185.34375,
+        "y": 209,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "",
+        "text": "[redacted]",
+        "height": 1,
+        "width": 1,
+        "x": 16,
+        "y": 298,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Choose video",
+        "height": 48,
+        "width": 358,
+        "x": 16,
+        "y": 364,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "name": "request-service-error-en-short",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:30.005Z",
+    "viewport": {
+      "w": 1440,
+      "h": 700
+    },
+    "page": {
+      "w": 1440,
+      "h": 700
+    },
+    "active": {
+      "tag": "BUTTON",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-email",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 316,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send reset email",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 434,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 474,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "unknown-verification-ru-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:31.079Z",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Проверить состояние сброса",
+        "height": 48,
+        "width": 292,
+        "x": 49,
+        "y": 328,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Вернуться ко входу",
+        "height": 48,
+        "width": 123.703125,
+        "x": 49,
+        "y": 388,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "password-loading-en-short",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:32.212Z",
+    "viewport": {
+      "w": 1440,
+      "h": 700
+    },
+    "page": {
+      "w": 1440,
+      "h": 700
+    },
+    "active": {
+      "tag": "BUTTON",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-new-password",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 316,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "x": 545,
+        "y": 424,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Saving password…",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 480,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": false
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "reload-code-en-short",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:33.417Z",
+    "viewport": {
+      "w": 1440,
+      "h": 700
+    },
+    "page": {
+      "w": 1440,
+      "h": 807
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 545,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 593,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "—",
+        "height": 44,
+        "width": 40,
+        "x": 641,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 689,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 737,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 785,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "INPUT",
+        "id": "_r_0_",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 280,
+        "x": 545,
+        "y": 518,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false,
+        "selection": [
+          0,
+          0
+        ]
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Resend code",
+        "height": 28,
+        "width": 350,
+        "x": 545,
+        "y": 618,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 545,
+        "y": 658,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "code-en-767",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:33.571Z",
+    "viewport": {
+      "w": 767,
+      "h": 844
+    },
+    "page": {
+      "w": 767,
+      "h": 844
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 200.5,
+        "y": 460,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 248.5,
+        "y": 460,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "—",
+        "height": 44,
+        "width": 40,
+        "x": 296.5,
+        "y": 460,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 344.5,
+        "y": 460,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 392.5,
+        "y": 460,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 440.5,
+        "y": 460,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "INPUT",
+        "id": "_r_0_",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 280,
+        "x": 200.5,
+        "y": 458,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false,
+        "selection": [
+          0,
+          0
+        ]
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Resend code",
+        "height": 48,
+        "width": 366,
+        "x": 200.5,
+        "y": 558,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "500",
+        "disabled": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 48,
+        "width": 91.625,
+        "x": 200.5,
+        "y": 618,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "code-en-768",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "at": "2026-10-25T08:16:33.722Z",
+    "viewport": {
+      "w": 768,
+      "h": 844
+    },
+    "page": {
+      "w": 768,
+      "h": 844
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "fonts": [
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "400"
+      },
+      {
+        "family": "Mabry Pro",
+        "status": "loaded",
+        "weight": "500"
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 209,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 257,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "—",
+        "height": 44,
+        "width": 40,
+        "x": 305,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 353,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 401,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "x": 449,
+        "y": 520,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "24px",
+        "lineHeight": "32px",
+        "weight": "500"
+      },
+      {
+        "tag": "INPUT",
+        "id": "_r_0_",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 280,
+        "x": 209,
+        "y": 518,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "lineHeight": "24px",
+        "weight": "400",
+        "disabled": false,
+        "selection": [
+          0,
+          0
+        ]
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Resend code",
+        "height": 28,
+        "width": 350,
+        "x": 209,
+        "y": 618,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "13px",
+        "lineHeight": "20px",
+        "weight": "500",
+        "disabled": true
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "text": "Back to sign in",
+        "height": 19,
+        "width": 91.625,
+        "x": 209,
+        "y": 658,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "lineHeight": "20px",
+        "weight": "400"
+      }
+    ]
+  },
+  {
+    "name": "request-ru-desktop",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "page": {
+      "w": 1440,
+      "h": 900
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-email",
+        "text": "[redacted]",
+        "height": 40,
+        "width": 350,
+        "size": "16px",
+        "lineHeight": "24px"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Отправить письмо для сброса",
+        "height": 28,
+        "width": 350,
+        "size": "13px",
+        "lineHeight": "20px"
+      }
+    ]
+  },
+  {
+    "name": "code-ru-short",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "viewport": {
+      "w": 1440,
+      "h": 700
+    },
+    "page": {
+      "w": 1440,
+      "h": 827
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "controls": [
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "size": "24px",
+        "lineHeight": "32px"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "size": "24px",
+        "lineHeight": "32px"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "—",
+        "height": 44,
+        "width": 40,
+        "size": "24px",
+        "lineHeight": "32px"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "size": "24px",
+        "lineHeight": "32px"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "size": "24px",
+        "lineHeight": "32px"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "text": "",
+        "height": 44,
+        "width": 40,
+        "size": "24px",
+        "lineHeight": "32px"
+      },
+      {
+        "tag": "INPUT",
+        "id": "_r_1_",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 280,
+        "size": "16px",
+        "lineHeight": "24px"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Отправить код ещё раз",
+        "height": 28,
+        "width": 350,
+        "size": "13px",
+        "lineHeight": "20px"
+      }
+    ]
+  },
+  {
+    "name": "expired-ru-short",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "viewport": {
+      "w": 1440,
+      "h": 700
+    },
+    "page": {
+      "w": 1440,
+      "h": 700
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Запросить другое письмо",
+        "height": 28,
+        "width": 350,
+        "size": "13px",
+        "lineHeight": "20px"
+      }
+    ]
+  },
+  {
+    "name": "request-en-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "INPUT",
+      "id": "password-reset-email"
+    },
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-email",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "size": "16px",
+        "lineHeight": "24px"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Send reset email",
+        "height": 48,
+        "width": 292,
+        "size": "16px",
+        "lineHeight": "24px"
+      }
+    ]
+  },
+  {
+    "name": "password-en-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "BODY",
+      "id": ""
+    },
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-new-password",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "size": "16px",
+        "lineHeight": "24px"
+      },
+      {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "size": "16px",
+        "lineHeight": "24px"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save new password",
+        "height": 48,
+        "width": 292,
+        "size": "16px",
+        "lineHeight": "24px"
+      }
+    ]
+  },
+  {
+    "name": "password-service-error-en-phone",
+    "url": "http://127.0.0.1:4371/reset-password",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "page": {
+      "w": 390,
+      "h": 844
+    },
+    "active": {
+      "tag": "BUTTON",
+      "id": ""
+    },
+    "controls": [
+      {
+        "tag": "INPUT",
+        "id": "password-reset-new-password",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "size": "16px",
+        "lineHeight": "24px"
+      },
+      {
+        "tag": "INPUT",
+        "id": "password-reset-repeat-password",
+        "text": "[redacted]",
+        "height": 48,
+        "width": 292,
+        "size": "16px",
+        "lineHeight": "24px"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "text": "Save new password",
+        "height": 48,
+        "width": 292,
+        "size": "16px",
+        "lineHeight": "24px"
+      }
+    ]
+  }
+]

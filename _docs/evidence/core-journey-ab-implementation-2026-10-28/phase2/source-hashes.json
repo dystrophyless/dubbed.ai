@@ -1,0 +1,191 @@
+{
+  "generatedAtUtc": "2026-10-28T13:55:38.8202450Z",
+  "baseHead": "9096925a4476e84ec9a6e5ef9bff50ae45ac0f67",
+  "files": [
+    {
+      "path": "frontend/e2e/foundation.spec.ts",
+      "bytes": 7896,
+      "sha256": "2b1a801e5d60125ec890e99d976863004ce70c150271fe394fa9bc655647810b"
+    },
+    {
+      "path": "frontend/e2e/native-media.spec.ts",
+      "bytes": 7617,
+      "sha256": "f5e195673cdef4a0fa4a5a144cff46c296fc5f8e3808c1071abd5ada301e9ed4"
+    },
+    {
+      "path": "frontend/e2e/record-journey.spec.ts",
+      "bytes": 28319,
+      "sha256": "9f32e021231da0516eb60b51bdf7f4b65428521deb67e5e9a277ed75adcf098a"
+    },
+    {
+      "path": "frontend/eslint.config.mjs",
+      "bytes": 533,
+      "sha256": "2743942521eb30874fa9e77ea556303929487f5be4f5c838aa1b4533e3438d29"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 357,
+      "sha256": "dbbe15a0dae9f843b481f30d89af7ab372ed034b604c28b65e1a0223bdc49153"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 88134,
+      "sha256": "392935b96ec238405491b7504f2ed481d9d2c0c0156a7054735931aef208c130"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 1216,
+      "sha256": "a34834349ed3c1f5f0831ffa6c5354c175844a8971e823ae1a4433eb52565d26"
+    },
+    {
+      "path": "frontend/playwright.config.mjs",
+      "bytes": 778,
+      "sha256": "1b5a238aaf26a516d06887ff718e7891ae084a1eeb018340ebac49469ba54b3c"
+    },
+    {
+      "path": "frontend/public/media/example-dub.mp4",
+      "bytes": 749601,
+      "sha256": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9"
+    },
+    {
+      "path": "frontend/public/media/result-generation-002.webm",
+      "bytes": 2514724,
+      "sha256": "f3802515a6738409226b8c9c705d31671e7768f81043ada452302240bb146d93"
+    },
+    {
+      "path": "frontend/public/media/scene.mp4",
+      "bytes": 886403,
+      "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c"
+    },
+    {
+      "path": "frontend/README.md",
+      "bytes": 1574,
+      "sha256": "75f301f82f65376f74a250284e3b596c512505419db0b18cca186d22fe5f1e90"
+    },
+    {
+      "path": "frontend/scripts/build-alternate-fixture.mjs",
+      "bytes": 6398,
+      "sha256": "b5d9346b53fc0bf6f03bba1997c3052cdef86f08b78c49b4173045f699f12b8d"
+    },
+    {
+      "path": "frontend/src/app/App.tsx",
+      "bytes": 11985,
+      "sha256": "fe6fc8f81625dec64919479b087824511dfcc67f8a681d171e6ab037b8b7d08a"
+    },
+    {
+      "path": "frontend/src/app/state.ts",
+      "bytes": 458,
+      "sha256": "b91f35b809c81bc46c70a09e61f73440e60dc108042b5661521ab397e7efa5c5"
+    },
+    {
+      "path": "frontend/src/features/record/FoundationRecordPage.tsx",
+      "bytes": 22024,
+      "sha256": "45a6ff3fd14e5653d746af13b2cd99d5574cb676e59166f2dda6c13a5f891fd2"
+    },
+    {
+      "path": "frontend/src/features/record/NativeMediaProofPage.tsx",
+      "bytes": 8608,
+      "sha256": "10c9d0a66933507a59d395d6811751c3399b0dba5aee2c176654bd2e0c8cd44e"
+    },
+    {
+      "path": "frontend/src/features/record/useRecordController.ts",
+      "bytes": 39229,
+      "sha256": "1ce01a7bf565b28879fbd3eae8adc866abdf861a88e0bc5afc6f1da004133c44"
+    },
+    {
+      "path": "frontend/src/features/result/FoundationResultPage.tsx",
+      "bytes": 2034,
+      "sha256": "e5941f562ba7644f8295196ef82dd455a55a5b3005226b0e06ae51fb521c0a4f"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "bytes": 1104,
+      "sha256": "76012685146874bb2f50766f14994f0d2b3750a62b372e3496f275a375521189"
+    },
+    {
+      "path": "frontend/src/services/architecture.test.ts",
+      "bytes": 1239,
+      "sha256": "5963e9d5350e1128a83d6459fac416b3b04184308c06761e974479ca65b4d77e"
+    },
+    {
+      "path": "frontend/src/services/browser-capture/WebLockCaptureGrants.ts",
+      "bytes": 2615,
+      "sha256": "fe7e28e6ccacc4bc6f585db52e63c048c23598761d55d56fb8d4080a13156b8c"
+    },
+    {
+      "path": "frontend/src/services/browser-media/NativeBrowserMedia.ts",
+      "bytes": 9471,
+      "sha256": "2c8439271260ba4f5322b3732beacad46e5c628509231804366f7248750dff1a"
+    },
+    {
+      "path": "frontend/src/services/contracts.ts",
+      "bytes": 9766,
+      "sha256": "324466ac9cd9ea2604d2127801c6b1d7fd8b829b4e05b06d6ac08170f6bf0e9e"
+    },
+    {
+      "path": "frontend/src/services/index.test.ts",
+      "bytes": 879,
+      "sha256": "839b3999bd5013717a456b5b76778f31f5b0431516ac38e47cae8acf6b0f0c5f"
+    },
+    {
+      "path": "frontend/src/services/index.ts",
+      "bytes": 1692,
+      "sha256": "ab33c6e75677770a1186e36325ef3fef001908e06998730afff1782642a66d49"
+    },
+    {
+      "path": "frontend/src/services/mock/fixture-data.json",
+      "bytes": 2500,
+      "sha256": "3a754a772b10ae122b70207261a20f90bcfda0803efcd6d0046c70a765f69eb5"
+    },
+    {
+      "path": "frontend/src/services/mock/fixtures.ts",
+      "bytes": 2017,
+      "sha256": "10c6a8dff21eea3536457c7d98175729f2ff4b897c4a8672c45c095189cd6cdf"
+    },
+    {
+      "path": "frontend/src/services/mock/IndexedDbProjectStore.test.ts",
+      "bytes": 17567,
+      "sha256": "ddbf4b239ddc833c0679acbfb7ba312acc101b43ba57250bd8b6e7ea7990d7ef"
+    },
+    {
+      "path": "frontend/src/services/mock/IndexedDbProjectStore.ts",
+      "bytes": 62053,
+      "sha256": "43a6f76a3d6b5a2200a59be7f195d37299ba164304aa6f7d825f8075b8f0b566"
+    },
+    {
+      "path": "frontend/src/shared/i18n.ts",
+      "bytes": 19373,
+      "sha256": "f10977ab5ccfb37a25be77e9730294e64473c619ade3fbf2578af614ef742b54"
+    },
+    {
+      "path": "frontend/src/shared/ServicesContext.tsx",
+      "bytes": 561,
+      "sha256": "6caeb047a39206382e1221ea5b26d84e6502ca1a3780b778653af4ccc594bfcb"
+    },
+    {
+      "path": "frontend/src/shared/ui.tsx",
+      "bytes": 2262,
+      "sha256": "9ab04328b4006582dfd97e83dbc00120b1b73672937140ddcbabfdb4defc908b"
+    },
+    {
+      "path": "frontend/src/styles/app.css",
+      "bytes": 14100,
+      "sha256": "82bbe781277888a28bd7f681a77edbb7a553905aed4b7bd33a476915c6de3d6f"
+    },
+    {
+      "path": "frontend/src/styles/tokens.css",
+      "bytes": 1357,
+      "sha256": "9d81e19ccb9fc3ec92fddcef0368cc81a4dc17ffa584f1175169ad37337a58e6"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 629,
+      "sha256": "860ba3b723097eb4082701471cf2f7c47bbc5c231dd88552ff9c1a08254e99b0"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 365,
+      "sha256": "eadd0c25470bb624d05a6628be6f1e3c2f3683e7f1c22890cff8b416a3de9d7e"
+    }
+  ]
+}

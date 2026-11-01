@@ -1,0 +1,15 @@
+{
+  "viewportHeight": 844,
+  "measurements": [
+    {
+      "width": 767,
+      "appMainPaddingLeft": 16,
+      "resultWidth": 735
+    },
+    {
+      "width": 768,
+      "appMainPaddingLeft": 32,
+      "resultWidth": 704
+    }
+  ]
+}

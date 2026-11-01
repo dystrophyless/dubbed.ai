@@ -1,0 +1,31 @@
+{
+  "origin": "http://127.0.0.1:4573",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "screenshots": [
+    {
+      "file": "before-retry.png",
+      "bytes": 15154,
+      "sha256": "94D0C31A50E891BC0890123FB4C60754838D247B6EFA55B030F912DF730E4724",
+      "state": "Synthetic first IndexedDB open fails; actual Retry action is visible."
+    },
+    {
+      "file": "after-retry.png",
+      "bytes": 30800,
+      "sha256": "D1AD313486139CE5A572CEBF873265933DE0F4A660C4F87C4B837FFA0C995B11",
+      "state": "The actual Retry action reopened storage and navigated to Sign in."
+    }
+  ],
+  "visualChecks": {
+    "mabryRegularLoaded": true,
+    "mabryMediumLoaded": true,
+    "horizontalOverflow": false,
+    "clientIdentityStableAcrossRetry": true,
+    "pageErrors": 0,
+    "consoleErrors": 0,
+    "externalRequests": 0,
+    "screenshotsOpenedAndInspected": true
+  }
+}

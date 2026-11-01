@@ -1,0 +1,113 @@
+{
+  "issue": 81,
+  "date": "2026-10-24T23:12:17.839Z",
+  "baseline": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "allOpenedWithViewImage": true,
+  "screenshots": [
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/01-real-empty-en-desktop.png",
+      "fresh": true,
+      "source": "ordinary mock UI journey"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/02-real-short-source-error-en.png",
+      "fresh": true,
+      "source": "ordinary mock UI journey"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/03-real-validated-en-desktop.png",
+      "fresh": true,
+      "source": "ordinary mock UI journey"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/04-real-quote-en-full.png",
+      "fresh": true,
+      "source": "ordinary mock UI journey"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/05-real-short-en-top.png",
+      "fresh": true,
+      "source": "ordinary mock UI journey"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/06-real-short-en-selector.png",
+      "fresh": true,
+      "source": "ordinary mock UI journey"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/07-real-invalid-selection-en.png",
+      "fresh": true,
+      "source": "ordinary mock UI journey"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/08-seeded-ru-phone-top.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/09-seeded-ru-phone-full.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/10-seeded-insufficient-en.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/11-seeded-quote-error-en.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/12-seeded-preview-failure-en.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/13-seeded-en-767.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/14-seeded-en-768.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/15-seeded-capacity-full-en.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/16-seeded-upload-pending-en.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/18-seeded-preview-retry-error-en.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/19-seeded-preview-retry-ready-en.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/20-seeded-ru-short-full.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/21-seeded-en-phone-full.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/issue-81/evidence/22-seeded-millisecond-focus-en.png",
+      "fresh": true,
+      "source": "existing synthetic workspace-state-visual harness"
+    }
+  ]
+}

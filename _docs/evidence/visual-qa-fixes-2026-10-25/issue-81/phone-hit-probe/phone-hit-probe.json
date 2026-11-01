@@ -1,0 +1,1681 @@
+{
+  "capturedAtUtc": "2026-10-25T14:59:36.070Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "scenario": "controlled workspace-state-visual New Dub default, English",
+  "base": "http://127.0.0.1:4581",
+  "evidence": {
+    "presentedMediaFrame": {
+      "mediaTime": 0.2597,
+      "presentedFrames": 2,
+      "width": 640,
+      "height": 360,
+      "readyState": 4
+    },
+    "initial": {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "scrollY": 474
+      },
+      "range": {
+        "x": 16,
+        "y": 398.375,
+        "width": 358,
+        "height": 48
+      },
+      "track": {
+        "x": 26,
+        "y": 420.375,
+        "width": 338,
+        "height": 4
+      },
+      "trackPointerEvents": "auto",
+      "selectedBand": {
+        "x": 26,
+        "y": 420.375,
+        "width": 313.5,
+        "height": 4
+      },
+      "handles": [
+        {
+          "label": "Selection start",
+          "min": 0,
+          "max": 8625,
+          "step": 1,
+          "value": 0,
+          "disabled": false,
+          "valueText": "0.000 seconds",
+          "rect": {
+            "x": 16,
+            "y": 398.375,
+            "width": 358,
+            "height": 48
+          },
+          "pointerEvents": "none",
+          "thumb": {
+            "renderedCssWidth": 16,
+            "renderedCssHeight": 16,
+            "cssPointerEvents": "auto (frozen stylesheet rule)"
+          },
+          "thumbCenter": {
+            "x": 24,
+            "y": 422.375
+          }
+        },
+        {
+          "label": "Selection end",
+          "min": 0,
+          "max": 8625,
+          "step": 1,
+          "value": 8000,
+          "disabled": false,
+          "valueText": "8.000 seconds",
+          "rect": {
+            "x": 16,
+            "y": 398.375,
+            "width": 358,
+            "height": 48
+          },
+          "pointerEvents": "none",
+          "thumb": {
+            "renderedCssWidth": 16,
+            "renderedCssHeight": 16,
+            "cssPointerEvents": "auto (frozen stylesheet rule)"
+          },
+          "thumbCenter": {
+            "x": 341.2173913043478,
+            "y": 422.375
+          }
+        }
+      ],
+      "domainLabels": [
+        "0.000 s",
+        "8.625 s"
+      ],
+      "selectionFields": [
+        {
+          "label": "Start (seconds)",
+          "value": "0.000",
+          "min": "",
+          "max": "",
+          "step": "",
+          "rect": {
+            "x": 16,
+            "y": 564.375,
+            "width": 358,
+            "height": 48
+          }
+        },
+        {
+          "label": "End (seconds)",
+          "value": "8.000",
+          "min": "",
+          "max": "",
+          "step": "",
+          "rect": {
+            "x": 16,
+            "y": 650.375,
+            "width": 358,
+            "height": 48
+          }
+        }
+      ],
+      "document": {
+        "lang": "en",
+        "scrollWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    "startHitGrid": {
+      "label": "Selection start",
+      "inputRect": {
+        "x": 16,
+        "y": 398.375,
+        "width": 358,
+        "height": 48
+      },
+      "thumbCenter": {
+        "x": 24,
+        "y": 422.375
+      },
+      "offsets": [
+        -24,
+        -16,
+        -12,
+        -8,
+        0,
+        8,
+        12,
+        16,
+        24
+      ],
+      "cells": [
+        {
+          "dx": -24,
+          "dy": -24,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -24,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -24,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -16,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -16,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -16,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -12,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -12,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -12,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -8,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -8,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -8,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range__input new-dub-range__input--start",
+          "targetPointerEvents": "none",
+          "isRangeInput": true
+        },
+        {
+          "dx": 8,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 0,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 0,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 0,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__input new-dub-range__input--start",
+          "targetPointerEvents": "none",
+          "isRangeInput": true
+        },
+        {
+          "dx": 0,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__input new-dub-range__input--start",
+          "targetPointerEvents": "none",
+          "isRangeInput": true
+        },
+        {
+          "dx": 8,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__selected",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__selected",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__selected",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__selected",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 8,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 8,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 8,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 12,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 12,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 12,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 16,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 16,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 16,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 24,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 24,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 24,
+          "insideInputBox": false,
+          "target": "app-main",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        }
+      ],
+      "inputCells": 3,
+      "insideInputCells": 54
+    },
+    "endHitGrid": {
+      "label": "Selection end",
+      "inputRect": {
+        "x": 16,
+        "y": 398.375,
+        "width": 358,
+        "height": 48
+      },
+      "thumbCenter": {
+        "x": 341.2173913043478,
+        "y": 422.375
+      },
+      "offsets": [
+        -24,
+        -16,
+        -12,
+        -8,
+        0,
+        8,
+        12,
+        16,
+        24
+      ],
+      "cells": [
+        {
+          "dx": -24,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range__input new-dub-range__input--end",
+          "targetPointerEvents": "none",
+          "isRangeInput": true
+        },
+        {
+          "dx": 8,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__selected",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__selected",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__selected",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__input new-dub-range__input--end",
+          "targetPointerEvents": "none",
+          "isRangeInput": true
+        },
+        {
+          "dx": 0,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__input new-dub-range__input--end",
+          "targetPointerEvents": "none",
+          "isRangeInput": true
+        },
+        {
+          "dx": 8,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__track",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__track",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range__track",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": "new-dub-range",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": "new-dub-selection",
+          "targetPointerEvents": "auto",
+          "isRangeInput": false
+        }
+      ],
+      "inputCells": 3,
+      "insideInputCells": 81
+    },
+    "startThumbTouchDrag": {
+      "beforeMs": 0,
+      "afterMs": 681,
+      "pixelDelta": 27,
+      "changed": true
+    },
+    "endThumbTouchDrag": {
+      "beforeMs": 8000,
+      "afterMs": 7314,
+      "pixelDelta": 27,
+      "changed": true
+    },
+    "verticalOffsetStart": {
+      "yOffsetWithin48pxBox": 20,
+      "beforeMs": 681,
+      "afterMs": 681,
+      "changed": false,
+      "hit": {
+        "className": "new-dub-range",
+        "tagName": "div",
+        "pointerEvents": "auto"
+      }
+    },
+    "verticalOffsetEnd": {
+      "yOffsetWithin48pxBox": 20,
+      "beforeMs": 7314,
+      "afterMs": 7314,
+      "changed": false,
+      "hit": {
+        "className": "new-dub-range",
+        "tagName": "div",
+        "pointerEvents": "auto"
+      }
+    },
+    "trackTouchDrag": {
+      "offsetWithin48pxBox": 0,
+      "hit": {
+        "className": "new-dub-range__selected",
+        "tagName": "span",
+        "pointerEvents": "auto"
+      },
+      "startBeforeMs": 681,
+      "startAfterMs": 681,
+      "endBeforeMs": 7314,
+      "endAfterMs": 7314,
+      "changedEitherBoundary": false
+    },
+    "touchStartBoundaryReach": {
+      "attemptedStartMs": 6814,
+      "endMs": 7314,
+      "expectedStartMs": 6314,
+      "actualStartMs": 6053,
+      "selectedMs": 1261,
+      "exactOneSecondReachableByThumbTouch": false
+    },
+    "keyboardStartRejectsInvalidBoundary": {
+      "endMs": 7314,
+      "attemptedStartMs": 8625,
+      "actualStartMs": 6053,
+      "selectedMs": 1261,
+      "boundaryUnchanged": true,
+      "validationTextVisible": true
+    },
+    "exactOneSecondInterval": {
+      "startMs": 6314,
+      "endMs": 7314,
+      "selectedMs": 1000,
+      "startField": "6.314",
+      "endField": "7.314",
+      "displayedDuration": "Selected duration: 1.000 seconds"
+    },
+    "startBoundaryRejects999ms": {
+      "beforeMs": 6314,
+      "attemptedMs": 6315,
+      "afterMs": 6314,
+      "unchanged": true,
+      "validationTextVisible": true
+    },
+    "endBoundaryRejects999ms": {
+      "startMs": 6314,
+      "beforeMs": 7314,
+      "attemptedMs": 7313,
+      "afterMs": 7314,
+      "unchanged": true,
+      "validationTextVisible": true
+    },
+    "finalSelectionFields": {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "scrollY": 440
+      },
+      "range": {
+        "x": 16,
+        "y": 510.375,
+        "width": 358,
+        "height": 48
+      },
+      "track": {
+        "x": 26,
+        "y": 532.375,
+        "width": 338,
+        "height": 4
+      },
+      "trackPointerEvents": "auto",
+      "selectedBand": {
+        "x": 273.421875,
+        "y": 532.375,
+        "width": 39.1875,
+        "height": 4
+      },
+      "handles": [
+        {
+          "label": "Selection start",
+          "min": 0,
+          "max": 8625,
+          "step": 1,
+          "value": 6314,
+          "disabled": false,
+          "valueText": "6.314 seconds",
+          "rect": {
+            "x": 16,
+            "y": 510.375,
+            "width": 358,
+            "height": 48
+          },
+          "pointerEvents": "none",
+          "thumb": {
+            "renderedCssWidth": 16,
+            "renderedCssHeight": 16,
+            "cssPointerEvents": "auto (frozen stylesheet rule)"
+          },
+          "thumbCenter": {
+            "x": 274.3638260869565,
+            "y": 534.375
+          }
+        },
+        {
+          "label": "Selection end",
+          "min": 0,
+          "max": 8625,
+          "step": 1,
+          "value": 7314,
+          "disabled": false,
+          "valueText": "7.314 seconds",
+          "rect": {
+            "x": 16,
+            "y": 510.375,
+            "width": 358,
+            "height": 48
+          },
+          "pointerEvents": "none",
+          "thumb": {
+            "renderedCssWidth": 16,
+            "renderedCssHeight": 16,
+            "cssPointerEvents": "auto (frozen stylesheet rule)"
+          },
+          "thumbCenter": {
+            "x": 314.016,
+            "y": 534.375
+          }
+        }
+      ],
+      "domainLabels": [
+        "0.000 s",
+        "8.625 s"
+      ],
+      "selectionFields": [
+        {
+          "label": "Start (seconds)",
+          "value": "6.314",
+          "min": "",
+          "max": "",
+          "step": "",
+          "rect": {
+            "x": 16,
+            "y": 676.375,
+            "width": 358,
+            "height": 48
+          }
+        },
+        {
+          "label": "End (seconds)",
+          "value": "7.314",
+          "min": "",
+          "max": "",
+          "step": "",
+          "rect": {
+            "x": 16,
+            "y": 762.375,
+            "width": 358,
+            "height": 48
+          }
+        }
+      ]
+    }
+  }
+}

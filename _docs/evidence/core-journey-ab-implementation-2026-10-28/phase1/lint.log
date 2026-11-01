@@ -1,0 +1,4 @@
+
+> dubbed-core-foundation@0.1.0 lint
+> eslint src e2e vite.config.ts eslint.config.mjs playwright.config.mjs --max-warnings=0
+

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-23T01:31:52.460Z",
+  "boundary": "Fresh isolated mock account and two uploaded local fixture drafts. UI rename/delete and reload, no backend.",
+  "invalidVisibleCharacters": 101,
+  "validVisibleCharacters": 100,
+  "invalidState": "My projects\n\n2 of 2 project slots used\n\nNew dub\nSecond scene\nDraft\n\nLast activity\nOct 23, 2026, 6:31 AM\n\nContinue\nRename project\n\nPress Enter to save, Escape to cancel, or leave the field to save.\n\nUse 100 visible characters or fewer.\n\nLast activity\nOct 23, 2026, 6:31 AM\n\nContinue",
+  "renamedOrder": [
+    "Rename project: Second scene",
+    "Rename project: 🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬🎬é"
+  ],
+  "cancelRetained": true,
+  "remaining": "My projects\n\n1 of 2 project slots used\n\nNew dub\nSecond scene\nDraft\n\nLast activity\nOct 23, 2026, 6:31 AM\n\nContinue",
+  "pageErrors": []
+}

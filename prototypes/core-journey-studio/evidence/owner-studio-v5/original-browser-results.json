@@ -1,0 +1,33 @@
+{
+  "version": "original-highfi-v3-owner-amendment-3",
+  "checks": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "result": "PASS",
+      "checked": "No visible/accessibility speaker hooks or removed reset action; Record/Your take/Next still works",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        1280,
+        600
+      ],
+      "result": "PASS",
+      "checked": "No visible/accessibility speaker hooks or removed reset action; Record/Your take/Next still works",
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        390,
+        667
+      ],
+      "result": "PASS",
+      "checked": "No visible/accessibility speaker hooks or removed reset action; Record/Your take/Next still works",
+      "pageErrors": []
+    }
+  ],
+  "scope": "Speaker-identity removal only; comparison composition preserved"
+}

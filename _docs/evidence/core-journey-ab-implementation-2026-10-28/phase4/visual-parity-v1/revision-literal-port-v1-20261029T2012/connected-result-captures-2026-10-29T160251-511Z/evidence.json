@@ -1,0 +1,689 @@
+{
+  "startedAt": "2026-10-29T16:02:51.511Z",
+  "browserTempPath": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "app": "The app journey records three real MediaRecorder Blobs from Chrome fake media input, accepts them through the local service, then explicitly opens the authorized mock Result. This is not a physical microphone or a backend render.",
+  "prototype": "The approved prototypes use their existing completed illustrative fixture state; prototype captures are visual references only.",
+  "captures": [
+    {
+      "image": "A-prototype-result-desktop-1440x900.png",
+      "layout": "A",
+      "target": "prototype-result",
+      "viewport": [
+        1440,
+        900
+      ],
+      "prototypeChromeOffset": 0,
+      "scroll": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "header": null,
+      "title": null,
+      "player": {
+        "x": 260,
+        "y": 108,
+        "width": 920,
+        "height": 589.5,
+        "right": 1180,
+        "bottom": 697.5,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "6px"
+      },
+      "screen": {
+        "x": 260,
+        "y": 108,
+        "width": 920,
+        "height": 517.5,
+        "right": 1180,
+        "bottom": 625.5,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(0, 0, 0)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "video": {
+        "box": {
+          "x": 260,
+          "y": 108,
+          "width": 920,
+          "height": 517.5
+        },
+        "paused": true,
+        "currentTime": 0,
+        "width": 960,
+        "height": 408,
+        "source": "http://127.0.0.1:5178/media/example-dub.mp4"
+      },
+      "sourceTabs": [
+        {
+          "text": "Original",
+          "pressed": "false",
+          "disabled": false
+        },
+        {
+          "text": "My dub",
+          "pressed": "true",
+          "disabled": false
+        }
+      ],
+      "transport": {
+        "x": 260,
+        "y": 625.5,
+        "width": 920,
+        "height": 72,
+        "right": 1180,
+        "bottom": 697.5,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "bottom": {
+        "x": 260,
+        "y": 721.5,
+        "width": 920,
+        "height": 88,
+        "right": 1180,
+        "bottom": 809.5,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "disclosure": "ExitYour resultSintel · The search\n  \n\nTo result\nRecording\n  \n  \n\nPauseSomeone very dear? A kindred spirit?Original waveform with your take overlay. Listening source: Original.0:00 / 0:04Reference volume \nLine 3 / 3\n  \n\nSaved\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n  \n\nOpen SettingsAll lines are saved. Open your result when you’re ready.\n  \n\nPrevious\n  \n\nTo result\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nYour dub is readyCompare Original and My dub. Download always saves My dub.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording",
+      "overflow": false
+    },
+    {
+      "image": "A-prototype-result-short-1280x600.png",
+      "layout": "A",
+      "target": "prototype-result",
+      "viewport": [
+        1280,
+        600
+      ],
+      "prototypeChromeOffset": 0,
+      "scroll": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 626
+      },
+      "header": null,
+      "title": null,
+      "player": {
+        "x": 366.21875,
+        "y": 88,
+        "width": 547.546875,
+        "height": 379.984375,
+        "right": 913.765625,
+        "bottom": 467.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "6px"
+      },
+      "screen": {
+        "x": 366.21875,
+        "y": 88,
+        "width": 547.546875,
+        "height": 307.984375,
+        "right": 913.765625,
+        "bottom": 395.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(0, 0, 0)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "video": {
+        "box": {
+          "x": 366.21875,
+          "y": 88,
+          "width": 547.546875,
+          "height": 307.984375
+        },
+        "paused": true,
+        "currentTime": 0,
+        "width": 960,
+        "height": 408,
+        "source": "http://127.0.0.1:5178/media/example-dub.mp4"
+      },
+      "sourceTabs": [
+        {
+          "text": "Original",
+          "pressed": "false",
+          "disabled": false
+        },
+        {
+          "text": "My dub",
+          "pressed": "true",
+          "disabled": false
+        }
+      ],
+      "transport": {
+        "x": 366.21875,
+        "y": 395.984375,
+        "width": 547.546875,
+        "height": 72,
+        "right": 913.765625,
+        "bottom": 467.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "bottom": {
+        "x": 366.21875,
+        "y": 483.984375,
+        "width": 547.546875,
+        "height": 92,
+        "right": 913.765625,
+        "bottom": 575.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "disclosure": "ExitYour resultSintel · The search\n  \n\nTo result\nRecording\n  \n  \n\nPauseSomeone very dear? A kindred spirit?Original waveform with your take overlay. Listening source: Original.0:00 / 0:04Reference volume \nLine 3 / 3\n  \n\nSaved\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n  \n\nOpen SettingsAll lines are saved. Open your result when you’re ready.\n  \n\nPrevious\n  \n\nTo result\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nYour dub is readyCompare Original and My dub. Download always saves My dub.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording",
+      "overflow": false
+    },
+    {
+      "image": "A-prototype-result-phone-390x844.png",
+      "layout": "A",
+      "target": "prototype-result",
+      "viewport": [
+        390,
+        844
+      ],
+      "prototypeChromeOffset": 28,
+      "scroll": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "header": null,
+      "title": null,
+      "player": {
+        "x": 16,
+        "y": 164,
+        "width": 358,
+        "height": 305.375,
+        "right": 374,
+        "bottom": 469.375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "6px"
+      },
+      "screen": {
+        "x": 16,
+        "y": 164,
+        "width": 358,
+        "height": 201.375,
+        "right": 374,
+        "bottom": 365.375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(0, 0, 0)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "video": {
+        "box": {
+          "x": 16,
+          "y": 164,
+          "width": 358,
+          "height": 201.375
+        },
+        "paused": true,
+        "currentTime": 0,
+        "width": 960,
+        "height": 408,
+        "source": "http://127.0.0.1:5178/media/example-dub.mp4"
+      },
+      "sourceTabs": [
+        {
+          "text": "Original",
+          "pressed": "false",
+          "disabled": false
+        },
+        {
+          "text": "My dub",
+          "pressed": "true",
+          "disabled": false
+        }
+      ],
+      "transport": {
+        "x": 16,
+        "y": 365.375,
+        "width": 358,
+        "height": 104,
+        "right": 374,
+        "bottom": 469.375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "bottom": {
+        "x": 16,
+        "y": 485.375,
+        "width": 358,
+        "height": 212,
+        "right": 374,
+        "bottom": 697.375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "disclosure": "ExitYour resultSintel · The search\n  \n\nTo result\nRecording\n  \n  \n\nPauseSomeone very dear? A kindred spirit?Original waveform with your take overlay. Listening source: Original.0:00 / 0:04Reference volume \nLine 3 / 3\n  \n\nSaved\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n  \n\nOpen SettingsAll lines are saved. Open your result when you’re ready.\n  \n\nPrevious\n  \n\nTo result\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nYour dub is readyCompare Original and My dub. Download always saves My dub.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording",
+      "overflow": false
+    },
+    {
+      "image": "B-prototype-result-desktop-1440x900.png",
+      "layout": "B",
+      "target": "prototype-result",
+      "viewport": [
+        1440,
+        900
+      ],
+      "prototypeChromeOffset": 0,
+      "scroll": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "header": {
+        "x": 260,
+        "y": 28,
+        "width": 920,
+        "height": 64,
+        "right": 1180,
+        "bottom": 92,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "title": {
+        "x": 453.59375,
+        "y": 28,
+        "width": 532.796875,
+        "height": 56,
+        "right": 986.390625,
+        "bottom": 84,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "player": {
+        "x": 260,
+        "y": 104,
+        "width": 920,
+        "height": 589.5,
+        "right": 1180,
+        "bottom": 693.5,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "6px"
+      },
+      "screen": {
+        "x": 260,
+        "y": 104,
+        "width": 920,
+        "height": 517.5,
+        "right": 1180,
+        "bottom": 621.5,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(0, 0, 0)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "video": {
+        "box": {
+          "x": 260,
+          "y": 104,
+          "width": 920,
+          "height": 517.5
+        },
+        "paused": true,
+        "currentTime": 0,
+        "width": 960,
+        "height": 408,
+        "source": "http://127.0.0.1:5179/media/example-dub.mp4"
+      },
+      "sourceTabs": [
+        {
+          "text": "Original",
+          "pressed": "false",
+          "disabled": false
+        },
+        {
+          "text": "My dub",
+          "pressed": "true",
+          "disabled": false
+        }
+      ],
+      "transport": {
+        "x": 260,
+        "y": 621.5,
+        "width": 920,
+        "height": 72,
+        "right": 1180,
+        "bottom": 693.5,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "bottom": {
+        "x": 260,
+        "y": 713.5,
+        "width": 920,
+        "height": 64,
+        "right": 1180,
+        "bottom": 777.5,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "disclosure": "ExitYour resultSintel · The searchLine 3 / 3\n\n Recording\n  \n  \n\nPause\n Someone very dear? A kindred spirit?\n Original waveform with your take overlay. Listening source: Original.0:00 / 0:04Reference volume\n \n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nTo result\n  \n\nSavedAll lines are saved. Open your result when you’re ready.\n  \n  \n\nOpen Settings\n  \n\nTo result\n\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nYour dub is readyCompare Original and My dub. Download always saves My dub.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording",
+      "overflow": false
+    },
+    {
+      "image": "B-prototype-result-short-1280x600.png",
+      "layout": "B",
+      "target": "prototype-result",
+      "viewport": [
+        1280,
+        600
+      ],
+      "prototypeChromeOffset": 0,
+      "scroll": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 654
+      },
+      "header": {
+        "x": 359.109375,
+        "y": 16,
+        "width": 561.765625,
+        "height": 56,
+        "right": 920.875,
+        "bottom": 72,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "title": {
+        "x": 481.0625,
+        "y": 16,
+        "width": 317.859375,
+        "height": 56,
+        "right": 798.921875,
+        "bottom": 72,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "player": {
+        "x": 359.109375,
+        "y": 80,
+        "width": 561.765625,
+        "height": 387.984375,
+        "right": 920.875,
+        "bottom": 467.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "6px"
+      },
+      "screen": {
+        "x": 359.109375,
+        "y": 80,
+        "width": 561.765625,
+        "height": 315.984375,
+        "right": 920.875,
+        "bottom": 395.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(0, 0, 0)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "video": {
+        "box": {
+          "x": 359.109375,
+          "y": 80,
+          "width": 561.765625,
+          "height": 315.984375
+        },
+        "paused": true,
+        "currentTime": 0,
+        "width": 960,
+        "height": 408,
+        "source": "http://127.0.0.1:5179/media/example-dub.mp4"
+      },
+      "sourceTabs": [
+        {
+          "text": "Original",
+          "pressed": "false",
+          "disabled": false
+        },
+        {
+          "text": "My dub",
+          "pressed": "true",
+          "disabled": false
+        }
+      ],
+      "transport": {
+        "x": 359.109375,
+        "y": 395.984375,
+        "width": 561.765625,
+        "height": 72,
+        "right": 920.875,
+        "bottom": 467.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "bottom": {
+        "x": 359.109375,
+        "y": 483.984375,
+        "width": 561.765625,
+        "height": 92,
+        "right": 920.875,
+        "bottom": 575.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "disclosure": "ExitYour resultSintel · The searchLine 3 / 3\n\n Recording\n  \n  \n\nPause\n Someone very dear? A kindred spirit?\n Original waveform with your take overlay. Listening source: Original.0:00 / 0:04Reference volume\n \n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nTo result\n  \n\nSavedAll lines are saved. Open your result when you’re ready.\n  \n  \n\nOpen Settings\n  \n\nTo result\n\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nYour dub is readyCompare Original and My dub. Download always saves My dub.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording",
+      "overflow": false
+    },
+    {
+      "image": "B-prototype-result-phone-390x844.png",
+      "layout": "B",
+      "target": "prototype-result",
+      "viewport": [
+        390,
+        844
+      ],
+      "prototypeChromeOffset": 28,
+      "scroll": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "header": {
+        "x": 16,
+        "y": 40,
+        "width": 358,
+        "height": 112,
+        "right": 374,
+        "bottom": 152,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "title": {
+        "x": 16,
+        "y": 96,
+        "width": 358,
+        "height": 56,
+        "right": 374,
+        "bottom": 152,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "player": {
+        "x": 16,
+        "y": 168,
+        "width": 358,
+        "height": 305.375,
+        "right": 374,
+        "bottom": 473.375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "6px"
+      },
+      "screen": {
+        "x": 16,
+        "y": 168,
+        "width": 358,
+        "height": 201.375,
+        "right": 374,
+        "bottom": 369.375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(0, 0, 0)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "video": {
+        "box": {
+          "x": 16,
+          "y": 168,
+          "width": 358,
+          "height": 201.375
+        },
+        "paused": true,
+        "currentTime": 0,
+        "width": 960,
+        "height": 408,
+        "source": "http://127.0.0.1:5179/media/example-dub.mp4"
+      },
+      "sourceTabs": [
+        {
+          "text": "Original",
+          "pressed": "false",
+          "disabled": false
+        },
+        {
+          "text": "My dub",
+          "pressed": "true",
+          "disabled": false
+        }
+      ],
+      "transport": {
+        "x": 16,
+        "y": 369.375,
+        "width": 358,
+        "height": 104,
+        "right": 374,
+        "bottom": 473.375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgb(252, 252, 252)",
+        "background": "rgb(23, 23, 23)",
+        "border": "0px none rgb(252, 252, 252)",
+        "radius": "0px"
+      },
+      "bottom": {
+        "x": 16,
+        "y": 489.375,
+        "width": 358,
+        "height": 216,
+        "right": 374,
+        "bottom": 705.375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "color": "rgba(0, 0, 0, 0.88)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px none rgba(0, 0, 0, 0.88)",
+        "radius": "0px"
+      },
+      "disclosure": "ExitYour resultSintel · The searchLine 3 / 3\n\n Recording\n  \n  \n\nPause\n Someone very dear? A kindred spirit?\n Original waveform with your take overlay. Listening source: Original.0:00 / 0:04Reference volume\n \n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nTo result\n  \n\nSavedAll lines are saved. Open your result when you’re ready.\n  \n  \n\nOpen Settings\n  \n\nTo result\n\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nYour dub is readyCompare Original and My dub. Download always saves My dub.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording",
+      "overflow": false
+    }
+  ],
+  "journey": [
+    {
+      "at": "2026-10-29T16:03:05.598Z",
+      "action": "capture and accept",
+      "turn": 1,
+      "result": "candidate accepted through the app controls"
+    },
+    {
+      "at": "2026-10-29T16:03:09.429Z",
+      "action": "capture and accept",
+      "turn": 2,
+      "result": "candidate accepted through the app controls"
+    },
+    {
+      "at": "2026-10-29T16:03:14.691Z",
+      "action": "capture and accept",
+      "turn": 3,
+      "result": "candidate accepted through the app controls"
+    }
+  ],
+  "errors": [],
+  "browser": "Chrome 156.0.8078.49",
+  "failure": {
+    "at": "2026-10-29T16:03:34.711Z",
+    "message": "page.waitForFunction: Timeout 20000ms exceeded.",
+    "stack": "page.waitForFunction: Timeout 20000ms exceeded.\n    at createAuthorizedAppResult (D:\\Program\\python\\Dubbed\\_docs\\evidence\\core-journey-ab-implementation-2026-10-28\\phase4\\visual-parity-v1\\revision-literal-port-v1-20261029T2012\\capture-connected-result-parity.mjs:115:18)\n    at async file:///D:/Program/python/Dubbed/_docs/evidence/core-journey-ab-implementation-2026-10-28/phase4/visual-parity-v1/revision-literal-port-v1-20261029T2012/capture-connected-result-parity.mjs:137:29"
+  }
+}

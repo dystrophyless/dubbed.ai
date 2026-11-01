@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-10-25T14:14:31.734Z",
+  "locale": "ru",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "unloaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 390,
+  "text": "Проверяем сессию…",
+  "buttons": []
+}

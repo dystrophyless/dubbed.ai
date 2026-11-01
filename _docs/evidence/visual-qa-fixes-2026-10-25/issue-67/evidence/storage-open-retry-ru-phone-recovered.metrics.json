@@ -1,0 +1,89 @@
+{
+  "capturedAt": "2026-10-25T11:45:15.095Z",
+  "locale": "ru",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 390,
+  "text": "Перейти к содержимому\nDubbed\nКредиты\n120\nАккаунт\n\nНастройте язык, способы входа и доступ к аккаунту.\n\nqa67-1792928713995-7351@example.test\n\nВ этой версии используются тестовые данные аккаунта. Изменения остаются в этом браузере.\nЯзык\n\nВыберите язык интерфейса Dubbed.\n\nЯзык\nEnglish\nРусский\nСпособы входа\n\nСписок получен из аккаунта. Наличие одинакового адреса само по себе не означает связь.\n\nGoogle\n\nНе подключён\n\nПодключить способ\n@\nЭлектронная почта и пароль\n\nqa67-1792928713995-7351@example.test\n\nПодтверждён\n\nПодключён\nИзменить пароль\nТекущий пароль\nНовый пароль\n\nНе менее 8 символов. Особые классы символов не требуются.\n\nСохранить пароль\nЗабыли пароль?\nСеанс\n\nВыйдите из аккаунта на этом устройстве.\n\nВыйти\nУдалить аккаунт\n\nЭто действие закроет доступ к данным аккаунта и проектам.\n\nУдалить аккаунт",
+  "buttons": [
+    {
+      "label": "Выйти",
+      "width": 0,
+      "height": 0,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    },
+    {
+      "label": "Открыть навигацию",
+      "width": 48,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "13px",
+      "lineHeight": "20px",
+      "padding": "0px"
+    },
+    {
+      "label": "Подключить способ",
+      "width": 207.03125,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    },
+    {
+      "label": "Сохранить пароль",
+      "width": 169.734375,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    },
+    {
+      "label": "Забыли пароль?",
+      "width": 177.65625,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    },
+    {
+      "label": "Выйти",
+      "width": 324,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    },
+    {
+      "label": "Удалить аккаунт",
+      "width": 324,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    }
+  ]
+}

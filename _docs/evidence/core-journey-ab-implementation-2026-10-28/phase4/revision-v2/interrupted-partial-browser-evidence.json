@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-28T17:47:51.703Z",
+  "browser": "156.0.8078.49",
+  "mode": "Chromium browser-supplied fake audio input; test harness dispatches an ended event at about 700ms",
+  "physicalMicrophone": false,
+  "verificationOnly": true,
+  "capture": {
+    "endReason": "interrupted",
+    "byteSize": 2992,
+    "mimeType": "audio/webm;codecs=opus",
+    "durationSeconds": 0.66,
+    "decodedFrames": 31680,
+    "elapsedMs": 708,
+    "sha256": "af779f0d635d10c196f2885ad0512a18c3f9c16308912b13d69267c0b583088f"
+  }
+}

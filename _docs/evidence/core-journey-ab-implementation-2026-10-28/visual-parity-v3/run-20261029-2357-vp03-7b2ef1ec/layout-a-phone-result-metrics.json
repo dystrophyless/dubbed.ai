@@ -1,0 +1,70 @@
+{
+  "screen": {
+    "x": 16,
+    "y": 136,
+    "width": 358,
+    "height": 201.375,
+    "bottom": 337.375
+  },
+  "exit": {
+    "x": 16,
+    "y": 12,
+    "width": 77.265625,
+    "height": 48,
+    "bottom": 60
+  },
+  "title": {
+    "x": 16,
+    "y": 68,
+    "width": 358,
+    "height": 28,
+    "bottom": 96
+  },
+  "seek": {
+    "x": 24,
+    "y": 337.375,
+    "width": 342,
+    "height": 48,
+    "bottom": 385.375
+  },
+  "controls": {
+    "x": 24,
+    "y": 385.375,
+    "width": 342,
+    "height": 48,
+    "bottom": 433.375
+  },
+  "volume": {
+    "x": 258,
+    "y": 385.375,
+    "width": 56,
+    "height": 48,
+    "bottom": 433.375
+  },
+  "source": {
+    "x": 26,
+    "y": 146,
+    "width": 81.84375,
+    "height": 48,
+    "bottom": 194
+  },
+  "sourceBorder": "0px",
+  "sourceBackdrop": "none",
+  "actionMarginTop": "16px",
+  "actions": [
+    {
+      "x": 16,
+      "y": 561.375,
+      "width": 177.859375,
+      "height": 48,
+      "bottom": 609.375
+    },
+    {
+      "x": 16,
+      "y": 621.375,
+      "width": 194.859375,
+      "height": 48,
+      "bottom": 669.375
+    }
+  ]
+}

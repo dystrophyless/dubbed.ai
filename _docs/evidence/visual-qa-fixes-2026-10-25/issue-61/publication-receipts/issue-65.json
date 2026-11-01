@@ -1,0 +1,48 @@
+{
+  "issue": 65,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "a91b1ef8b151ae350913e882dc2ff398177ada30dee6837f83c2e6e902316114",
+    "planned": "69c9721c2a578a9c015b5184aadc9492d4dc52d0cde60a2faf31a644a62b40cc",
+    "readback": "69c9721c2a578a9c015b5184aadc9492d4dc52d0cde60a2faf31a644a62b40cc"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Reconcile a credit purchase and return to the preserved video safely",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Reconcile a credit purchase and return to the preserved video safely",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

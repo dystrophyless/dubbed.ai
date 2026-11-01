@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-29T19:08:17.243Z",
+  "temp": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "checks": [
+    {
+      "name": "A Record fresh volume",
+      "value": {
+        "input": 0.7,
+        "media": 0.7
+      },
+      "pass": true
+    },
+    {
+      "name": "A audition volume",
+      "value": {
+        "paused": false,
+        "volume": 0.7
+      },
+      "pass": true
+    },
+    {
+      "name": "A capture locks",
+      "value": {
+        "record": true,
+        "scrub": true,
+        "exit": true,
+        "next": true
+      },
+      "pass": true
+    },
+    {
+      "name": "A actual candidate audition",
+      "value": {
+        "src": "blob:http://127.0.0.1:5180/a8e8d63d-a00e-4a94-8ba8-255a2c385dce",
+        "ready": 1,
+        "error": null,
+        "paused": false
+      },
+      "pass": true
+    },
+    {
+      "name": "A candidate reload audition",
+      "value": {
+        "ready": 4,
+        "error": null,
+        "paused": false
+      },
+      "pass": true
+    },
+    {
+      "name": "A phone candidate padding",
+      "value": {
+        "app": {
+          "record": {
+            "rect": {
+              "x": 133.9375,
+              "y": 680.375,
+              "width": 122.109375,
+              "height": 72,
+              "top": 680.375,
+              "right": 256.046875,
+              "bottom": 752.375,
+              "left": 133.9375
+            },
+            "padding": "12px 8px",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "border": "0px none rgb(193, 38, 44)",
+            "backdrop": "none",
+            "flex": "0 1 auto",
+            "margin": "0px",
+            "text": "Перезаписать"
+          },
+          "take": {
+            "rect": {
+              "x": 264.046875,
+              "y": 680.375,
+              "width": 93.9375,
+              "height": 72,
+              "top": 680.375,
+              "right": 357.984375,
+              "bottom": 752.375,
+              "left": 264.046875
+            },
+            "padding": "12px 8px",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "border": "0px none rgba(0, 0, 0, 0.88)",
+            "backdrop": "none",
+            "flex": "0 1 auto",
+            "margin": "0px",
+            "text": "Ваш дубль"
+          }
+        },
+        "ref": {
+          "record": {
+            "rect": {
+              "x": 133.9375,
+              "y": 680.375,
+              "width": 122.109375,
+              "height": 72,
+              "top": 680.375,
+              "right": 256.046875,
+              "bottom": 752.375,
+              "left": 133.9375
+            },
+            "padding": "12px 8px",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "border": "0px none rgb(193, 38, 44)",
+            "backdrop": "none",
+            "flex": "0 1 auto",
+            "margin": "0px",
+            "text": "\n  \n  \n  \n\nПерезаписать"
+          },
+          "take": {
+            "rect": {
+              "x": 264.046875,
+              "y": 680.375,
+              "width": 93.9375,
+              "height": 72,
+              "top": 680.375,
+              "right": 357.984375,
+              "bottom": 752.375,
+              "left": 264.046875
+            },
+            "padding": "12px 8px",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "border": "0px none rgba(0, 0, 0, 0.88)",
+            "backdrop": "none",
+            "flex": "0 1 auto",
+            "margin": "0px",
+            "text": "\n  \n\nВаш дубль"
+          }
+        },
+        "overflow": false
+      },
+      "pass": true
+    },
+    {
+      "name": "A Record seek release",
+      "value": {
+        "paused": true,
+        "time": 0.0051
+      },
+      "pass": false
+    }
+  ],
+  "pairs": [],
+  "errors": [
+    "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#pause')\u001b[22m\n\n    at D:\\Program\\python\\Dubbed\\_docs\\evidence\\core-journey-ab-implementation-2026-10-28\\integration-review\\visual-parity-v3\\probe.cjs:14:434"
+  ]
+}

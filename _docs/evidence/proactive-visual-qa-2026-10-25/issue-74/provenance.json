@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-25T13:12:11.7475507+05:00",
+  "head": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "browser": "Chromium 156.0.8078.4",
+  "port": 4374,
+  "productDiff": "git diff --name-only -- frontend returned empty",
+  "hashes": [
+    {
+      "path": "frontend/src/features/processing/ProcessingScreen.tsx",
+      "sha256": "FA61A3AFE3EBFFF0BA875610CF209C50F11BC8687EF28899DA29271D4F7B846B"
+    },
+    {
+      "path": "frontend/src/features/processing/ProcessingScreen.css",
+      "sha256": "4F76C3F3003F2282D061AB855DDFF9453E88E8E532485733D6F14303749B12DF"
+    },
+    {
+      "path": "frontend/src/services/mock-preparation.ts",
+      "sha256": "3B69FA15D5A0A4622CE902007D7CB1E5E8D6E0564B894525F1DEEDF178C161AD"
+    },
+    {
+      "path": "_docs/frontend-flows/07-processing.md",
+      "sha256": "77BD982A0BE1C57D256870ED6F8A9DF9B0A740B49096FABCEEF7B4A936432766"
+    },
+    {
+      "path": "_docs/frontend-flows/design-tokens.md",
+      "sha256": "10F2753E82F4DB46003EEE25B866DD73ABA0240FF3624BCDD01FA32511F278E8"
+    },
+    {
+      "path": "_docs/evidence/proactive-visual-qa-2026-10-25/contracts/issue-74.md",
+      "sha256": "753CF8CE5FF551C8F76978A7AD640B0A27BE4D84B570FF1AD3F6034190A7201D"
+    }
+  ]
+}

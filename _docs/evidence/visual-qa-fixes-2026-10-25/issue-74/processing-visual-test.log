@@ -1,0 +1,117 @@
+[WebServer] (node:13212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 79 tests using 1 worker
+
+(node:8108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 e2e\processing-visual.spec.ts:352:3 › Issue #74 real ProcessingScreen rendering and interaction evidence › integrated real mock queue journey shows no zero-percent progress (1.9s)
+  ok  2 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued en desktop (756ms)
+  ok  3 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued en short (804ms)
+  ok  4 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued en phone (768ms)
+  ok  5 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued ru desktop (920ms)
+  ok  6 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued ru short (1.0s)
+  ok  7 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued ru phone (830ms)
+  ok  8 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-unknown en desktop (816ms)
+  ok  9 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-unknown en short (781ms)
+  ok 10 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-unknown en phone (684ms)
+  ok 11 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-unknown ru desktop (696ms)
+  ok 12 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-unknown ru short (789ms)
+  ok 13 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-unknown ru phone (789ms)
+  ok 14 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known en desktop (782ms)
+  ok 15 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known en short (871ms)
+  ok 16 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known en phone (732ms)
+  ok 17 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known ru desktop (780ms)
+  ok 18 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known ru short (826ms)
+  ok 19 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known ru phone (693ms)
+  ok 20 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › retry-failure en desktop (800ms)
+  ok 21 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › retry-failure en short (727ms)
+  ok 22 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › retry-failure en phone (695ms)
+  ok 23 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › retry-failure ru desktop (719ms)
+  ok 24 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › retry-failure ru short (745ms)
+  ok 25 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › retry-failure ru phone (794ms)
+  ok 26 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-initial en desktop (1.0s)
+  ok 27 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-initial en short (839ms)
+  ok 28 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-initial en phone (747ms)
+  ok 29 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-initial ru desktop (825ms)
+  ok 30 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-initial ru short (858ms)
+  ok 31 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-initial ru phone (856ms)
+  ok 32 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior en desktop (928ms)
+  ok 33 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior en short (850ms)
+  ok 34 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior en phone (718ms)
+  ok 35 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior ru desktop (833ms)
+  ok 36 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior ru short (1.0s)
+  ok 37 e2e\processing-visual.spec.ts:388:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior ru phone (789ms)
+  ok 38 e2e\processing-visual.spec.ts:446:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known en belowBreakpoint responsive boundary (797ms)
+  ok 39 e2e\processing-visual.spec.ts:446:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known en atBreakpoint responsive boundary (936ms)
+  ok 40 e2e\processing-visual.spec.ts:446:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known ru belowBreakpoint responsive boundary (808ms)
+  ok 41 e2e\processing-visual.spec.ts:446:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › running-known ru atBreakpoint responsive boundary (737ms)
+  ok 42 e2e\processing-visual.spec.ts:458:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued en belowBreakpoint responsive boundary (958ms)
+  ok 43 e2e\processing-visual.spec.ts:458:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued en atBreakpoint responsive boundary (1.1s)
+  ok 44 e2e\processing-visual.spec.ts:458:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior en belowBreakpoint responsive boundary (1.1s)
+  ok 45 e2e\processing-visual.spec.ts:458:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior en atBreakpoint responsive boundary (759ms)
+  ok 46 e2e\processing-visual.spec.ts:458:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued ru belowBreakpoint responsive boundary (753ms)
+  ok 47 e2e\processing-visual.spec.ts:458:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › queued ru atBreakpoint responsive boundary (836ms)
+  ok 48 e2e\processing-visual.spec.ts:458:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior ru belowBreakpoint responsive boundary (820ms)
+  ok 49 e2e\processing-visual.spec.ts:458:9 › Issue #74 real ProcessingScreen rendering and interaction evidence › zero-turn-prior ru atBreakpoint responsive boundary (991ms)
+  ok 50 e2e\processing-visual.spec.ts:476:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation quote en desktop (1.1s)
+  ok 51 e2e\processing-visual.spec.ts:476:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation quote en phone (857ms)
+  ok 52 e2e\processing-visual.spec.ts:476:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation quote en belowBreakpoint (738ms)
+  ok 53 e2e\processing-visual.spec.ts:476:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation quote en atBreakpoint (784ms)
+  ok 54 e2e\processing-visual.spec.ts:476:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation quote ru desktop (852ms)
+  ok 55 e2e\processing-visual.spec.ts:476:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation quote ru phone (789ms)
+  ok 56 e2e\processing-visual.spec.ts:476:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation quote ru belowBreakpoint (740ms)
+  ok 57 e2e\processing-visual.spec.ts:476:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation quote ru atBreakpoint (1.1s)
+  ok 58 e2e\processing-visual.spec.ts:493:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › expired quote refresh and explicit cancellation confirmation en desktop (2.6s)
+  ok 59 e2e\processing-visual.spec.ts:493:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › expired quote refresh and explicit cancellation confirmation en phone (2.7s)
+  ok 60 e2e\processing-visual.spec.ts:493:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › expired quote refresh and explicit cancellation confirmation ru desktop (3.0s)
+  ok 61 e2e\processing-visual.spec.ts:493:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › expired quote refresh and explicit cancellation confirmation ru phone (2.5s)
+  x  62 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation en desktop (6.9s)
+  -  63 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation en short
+  -  64 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation en phone
+  -  65 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation en belowBreakpoint
+  -  66 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation en atBreakpoint
+  -  67 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation ru desktop
+  -  68 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation ru short
+  -  69 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation ru phone
+  -  70 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation ru belowBreakpoint
+  -  71 e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation ru atBreakpoint
+  -  72 e2e\processing-visual.spec.ts:593:5 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation-quote-same-operation recovery follows the service directive en desktop
+  -  73 e2e\processing-visual.spec.ts:593:5 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation-quote-same-operation recovery follows the service directive ru phone
+  -  74 e2e\processing-visual.spec.ts:593:5 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation-quote-reconcile-first recovery follows the service directive en phone
+  -  75 e2e\processing-visual.spec.ts:593:5 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation-quote-reconcile-first recovery follows the service directive ru desktop
+  -  76 e2e\processing-visual.spec.ts:593:5 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation-quote-no-retry recovery follows the service directive en desktop
+  -  77 e2e\processing-visual.spec.ts:593:5 › Issue #74 real ProcessingScreen rendering and interaction evidence › cancellation-quote-no-retry recovery follows the service directive ru phone
+  -  78 e2e\processing-visual.spec.ts:663:5 › Issue #74 real ProcessingScreen rendering and interaction evidence › keyboard focus, modal containment and focus return en phone
+  -  79 e2e\processing-visual.spec.ts:663:5 › Issue #74 real ProcessingScreen rendering and interaction evidence › keyboard focus, modal containment and focus return ru phone
+
+
+  1) e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation en desktop 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Preparing your scene' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'Preparing your scene' }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Preparing your scene' })
+
+
+      563 |
+      564 |         await page.reload()
+    > 565 |         await expect(page.getByRole('heading', { name: text[locale].title })).toBeVisible()
+          |                                                                               ^
+      566 |         await expect(page.getByText(text[locale].cancelUnknown, { exact: true })).toBeVisible()
+      567 |         const storedAfterReload = await page.evaluate(() => {
+      568 |           const key = Object.keys(localStorage).find((candidate) => candidate.startsWith('dubbed.processing.v1.') && candidate.endsWith('.cancel'))
+        at D:\Program\python\Dubbed\frontend\e2e\processing-visual.spec.ts:565:79
+
+    Error Context: test-results\processing-visual-Issue-74-11dd3-s-reconciliation-en-desktop\error-context.md
+
+  1 failed
+    e2e\processing-visual.spec.ts:532:7 › Issue #74 real ProcessingScreen rendering and interaction evidence › pending cancellation stays unresolved and requires status reconciliation en desktop 
+  17 did not run
+  61 passed (1.2m)

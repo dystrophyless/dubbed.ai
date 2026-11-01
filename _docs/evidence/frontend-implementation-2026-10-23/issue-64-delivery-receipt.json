@@ -1,0 +1,77 @@
+{
+  "recordedAt": "2026-10-23T17:14:53Z",
+  "repository": "dystrophyless/dubbed.ai",
+  "issue": {
+    "number": 64,
+    "url": "https://github.com/dystrophyless/dubbed.ai/issues/64",
+    "finalState": "closed",
+    "stateReason": "completed",
+    "finalReadback": {
+      "comments": 0,
+      "acceptanceCriteriaChecked": ["AC-01", "AC-02", "AC-03", "AC-04"],
+      "workflowStatus": "accepted — bounded investigation evidence delivered; scoped commit pushed and verified on origin/main; closed as completed."
+    }
+  },
+  "acceptance": {
+    "source": "Orchestrator delegated rule-based acceptance under the user's full-cycle frontend request and standing AGENTS/orchestration instructions.",
+    "record": "_docs/evidence/frontend-implementation-2026-10-23/issue-64-acceptance.md",
+    "recordSha256": "950c7a6b092c512873ac51b83b3088eb4c14dd059ed7e75e59dfe0189b6f6468",
+    "humanReviewClaimed": false,
+    "acceptedScope": "Completeness and honesty of the bounded investigation against AC-01–04, including explicitly marked unavailable and unrun rows."
+  },
+  "delivery": {
+    "branch": "main",
+    "remote": "origin",
+    "remoteUrl": "https://github.com/dystrophyless/dubbed.ai.git",
+    "baseCommit": "2de6290b98ef9dd2b9cb923f4a12d3fb1fe610d4",
+    "commit": "15f2075621c11b438ee38734640114f80b8dc9cf",
+    "parentCommit": "2de6290b98ef9dd2b9cb923f4a12d3fb1fe610d4",
+    "commitMessage": "docs(evidence): deliver bounded media investigation for #64",
+    "committedPaths": [
+      {
+        "path": "_docs/evidence/frontend-implementation-2026-10-23/media/investigation-report.md",
+        "sha256": "34062d4690ab3a22618d523723cd54e53d76c547d603a5141e5999c99656edfa"
+      },
+      {
+        "path": "_docs/evidence/frontend-implementation-2026-10-23/media/criterion-evidence.json",
+        "sha256": "0ee69ab4dc1bf6f511ce9e3bdb403ac798dfe9d2234e8db36708212b029baf41"
+      },
+      {
+        "path": "_docs/evidence/frontend-implementation-2026-10-23/media/browser-media-matrix.json",
+        "sha256": "c6b0218014f58624c95b1e4be15cf1baa04fa1df28347e58ed48f11625946938"
+      },
+      {
+        "path": "_docs/evidence/frontend-implementation-2026-10-23/media/orchestrator-native-capture.json",
+        "sha256": "68642c1363b0bac6427e26fe10ab9b4bf05a1fcc45f06336bf529aa3c4278fce"
+      },
+      {
+        "path": "_docs/evidence/frontend-implementation-2026-10-23/media/orchestrator-asset-integrity.json",
+        "sha256": "dd64572fd6be728a9ae50e98c08fd9f94d527bb985ef87ab4cb1d5cb4c711af5"
+      },
+      {
+        "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-64-acceptance.md",
+        "sha256": "950c7a6b092c512873ac51b83b3088eb4c14dd059ed7e75e59dfe0189b6f6468"
+      }
+    ],
+    "push": {
+      "command": "git push origin main",
+      "result": "2de6290..15f2075 main -> main",
+      "remoteVerificationCommand": "git ls-remote origin refs/heads/main",
+      "verifiedRemoteRef": "refs/heads/main",
+      "verifiedRemoteSha": "15f2075621c11b438ee38734640114f80b8dc9cf"
+    },
+    "unrelatedDirtyWorktree": "Pre-existing unrelated modified and untracked files were preserved. Only the six manifest paths were staged and committed; the index was empty after commit. The worktree is not claimed clean."
+  },
+  "verification": {
+    "manifestHashes": "All six working-tree and staged-blob SHA-256 values matched issue-64-delivery-manifest.json before commit.",
+    "commitBoundary": "Commit parent matched the frozen base and the commit contained exactly the six manifest paths.",
+    "remoteContainment": "Direct ls-remote returned the delivery commit SHA for origin/main.",
+    "issueReadback": "After closure, GitHub readback showed state=closed, state_reason=completed, zero comments, AC-01–04 checked, and the delivery SHA and remote verification recorded.",
+    "whitespaceCheck": "git diff --cached --check reported one trailing blank line at investigation-report.md:93. The hash-frozen, accepted artifact was preserved without modification."
+  },
+  "limits": [
+    "This closes only issue #64's bounded investigation-evidence delivery.",
+    "Physical-device testing, real server inspection/conversion/storage, production readiness, corpus rights under issue #72, and whole-product/browser-support acceptance remain unproved or outside this acceptance.",
+    "No PR, merge, deployment, or paid service action was performed."
+  ]
+}

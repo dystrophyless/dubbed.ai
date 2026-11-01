@@ -1,0 +1,2151 @@
+{
+  "issue": 69,
+  "model": "gpt-6-luna",
+  "effort": "max",
+  "capturedAt": "2026-10-25T12:04:16.393Z",
+  "baseline": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "worktreeBoundary": "Current shared worktree; product edits limited to MicrophoneScreen.tsx, its CSS, and focused test; screenshots use the local mock only.",
+  "runtime": "Playwright Chromium 156.0.8078.4 on Vite mock at 127.0.0.1:4569; DPR 1; --mute-audio --use-fake-device-for-media-stream --use-fake-ui-for-media-stream.",
+  "fixture": "One disposable browser-local mock account created through the visible registration and verification UI. Permission denial, track end, and missing MediaRecorder were injected only in the isolated browser realm.",
+  "reference": {
+    "buttonClean": "_docs/evidence/affect-ui-clean-light/source/components/button/Clean/button-clean.md.txt",
+    "buttonLight": "_docs/evidence/affect-ui-clean-light/source/components/button/Clean/Light/01-initial.png"
+  },
+  "captures": [
+    {
+      "name": "not-asked-en-desktop",
+      "path": "evidence/not-asked-en-desktop.png",
+      "locale": "en",
+      "state": "fresh visit, permission not requested",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Your browser has not been asked for microphone access yet.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 911.6,
+              "y": 282,
+              "width": 143.4,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": null,
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": true,
+            "rect": {
+              "x": 385,
+              "y": 702,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": true,
+            "rect": {
+              "x": 863.3,
+              "y": 525,
+              "width": 191.7,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 97
+        },
+        "testRect": {
+          "x": 385,
+          "y": 593,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": null
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "not-asked-ru-desktop",
+      "path": "evidence/not-asked-ru-desktop.png",
+      "locale": "ru",
+      "state": "fresh visit, permission not requested",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Браузер ещё не запрашивал доступ к микрофону.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 872.4,
+              "y": 282,
+              "width": 182.6,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": null,
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": true,
+            "rect": {
+              "x": 385,
+              "y": 702,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": true,
+            "rect": {
+              "x": 819.6,
+              "y": 525,
+              "width": 235.4,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 97
+        },
+        "testRect": {
+          "x": 385,
+          "y": 593,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": null
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-en-desktop",
+      "path": "evidence/ready-en-desktop.png",
+      "locale": "en",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 983
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Connected. The browser is providing a live microphone track.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 911.6,
+              "y": 282,
+              "width": 143.4,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 408,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 814,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 863.3,
+              "y": 637,
+              "width": 191.7,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 209
+        },
+        "testRect": {
+          "x": 385,
+          "y": 705,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-en-short",
+      "path": "evidence/ready-en-short.png",
+      "locale": "en",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 700
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 700,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 983
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Connected. The browser is providing a live microphone track.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 911.6,
+              "y": 282,
+              "width": 143.4,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 408,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 814,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 863.3,
+              "y": 637,
+              "width": 191.7,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 209
+        },
+        "testRect": {
+          "x": 385,
+          "y": 705,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-en-390",
+      "path": "evidence/ready-en-390.png",
+      "locale": "en",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPixels": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 390,
+          "height": 844,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 1059
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Connected. The browser is providing a live microphone track.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 183.1,
+              "y": 270,
+              "width": 169.9,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 420,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 890,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 693,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 37,
+          "y": 488,
+          "width": 316,
+          "height": 253
+        },
+        "testRect": {
+          "x": 37,
+          "y": 761,
+          "width": 316,
+          "height": 229
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-en-767",
+      "path": "evidence/ready-en-767.png",
+      "locale": "en",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 767,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 767,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 767,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 767,
+          "scrollWidth": 767,
+          "scrollHeight": 959
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Connected. The browser is providing a live microphone track.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 552.6,
+              "y": 250,
+              "width": 169.9,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 44.5,
+              "y": 400,
+              "width": 678,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 44.5,
+              "y": 810,
+              "width": 678,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 44.5,
+              "y": 633,
+              "width": 678,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 44.5,
+          "y": 468,
+          "width": 678,
+          "height": 213
+        },
+        "testRect": {
+          "x": 44.5,
+          "y": 701,
+          "width": 678,
+          "height": 189
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-en-768",
+      "path": "evidence/ready-en-768.png",
+      "locale": "en",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 768,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 768,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 983
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Connected. The browser is providing a live microphone track.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 567.6,
+              "y": 282,
+              "width": 143.4,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 57,
+              "y": 408,
+              "width": 654,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 57,
+              "y": 814,
+              "width": 654,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 519.3,
+              "y": 637,
+              "width": 191.7,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 57,
+          "y": 472,
+          "width": 654,
+          "height": 209
+        },
+        "testRect": {
+          "x": 57,
+          "y": 705,
+          "width": 654,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-ru-desktop",
+      "path": "evidence/ready-ru-desktop.png",
+      "locale": "ru",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 983
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключено. Браузер передаёт активную дорожку микрофона.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 872.4,
+              "y": 282,
+              "width": 182.6,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 408,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 814,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 819.6,
+              "y": 637,
+              "width": 235.4,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 209
+        },
+        "testRect": {
+          "x": 385,
+          "y": 705,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-ru-short",
+      "path": "evidence/ready-ru-short.png",
+      "locale": "ru",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 700
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 1440,
+          "height": 700,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 983
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключено. Браузер передаёт активную дорожку микрофона.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 872.4,
+              "y": 282,
+              "width": 182.6,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 408,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 814,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 819.6,
+              "y": 637,
+              "width": 235.4,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 209
+        },
+        "testRect": {
+          "x": 385,
+          "y": 705,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-ru-390",
+      "path": "evidence/ready-ru-390.png",
+      "locale": "ru",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPixels": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 1079
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключено. Браузер передаёт активную дорожку микрофона.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 160.8,
+              "y": 290,
+              "width": 192.2,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 440,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 910,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 713,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 37,
+          "y": 508,
+          "width": 316,
+          "height": 253
+        },
+        "testRect": {
+          "x": 37,
+          "y": 781,
+          "width": 316,
+          "height": 229
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-ru-767",
+      "path": "evidence/ready-ru-767.png",
+      "locale": "ru",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 767,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 767,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 767,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 767,
+          "scrollWidth": 767,
+          "scrollHeight": 959
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключено. Браузер передаёт активную дорожку микрофона.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 507.8,
+              "y": 250,
+              "width": 214.7,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 44.5,
+              "y": 400,
+              "width": 678,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 44.5,
+              "y": 810,
+              "width": 678,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 44.5,
+              "y": 633,
+              "width": 678,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 44.5,
+          "y": 468,
+          "width": 678,
+          "height": 213
+        },
+        "testRect": {
+          "x": 44.5,
+          "y": 701,
+          "width": 678,
+          "height": 189
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "ready-ru-768",
+      "path": "evidence/ready-ru-768.png",
+      "locale": "ru",
+      "state": "connected, optional test not started",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 768,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 768,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 768,
+          "scrollWidth": 768,
+          "scrollHeight": 983
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключено. Браузер передаёт активную дорожку микрофона.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 528.4,
+              "y": 282,
+              "width": 182.6,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 57,
+              "y": 408,
+              "width": 654,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 57,
+              "y": 814,
+              "width": 654,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 475.6,
+              "y": 637,
+              "width": 235.4,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 57,
+          "y": 472,
+          "width": 654,
+          "height": 209
+        },
+        "testRect": {
+          "x": 57,
+          "y": 705,
+          "width": 654,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "denied-en-desktop",
+      "path": "evidence/denied-en-desktop.png",
+      "locale": "en",
+      "state": "injected NotAllowedError; no microphone track",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": null,
+        "alerts": [
+          "Microphone access was denied. Allow access in your browser settings, then try again."
+        ],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 911.6,
+              "y": 282,
+              "width": 143.4,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 408,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": true,
+            "rect": {
+              "x": 385,
+              "y": 702,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": true,
+            "rect": {
+              "x": 863.3,
+              "y": 525,
+              "width": 191.7,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 97
+        },
+        "testRect": {
+          "x": 385,
+          "y": 593,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "denied-ru-390",
+      "path": "evidence/denied-ru-390.png",
+      "locale": "ru",
+      "state": "injected NotAllowedError; no microphone track",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPixels": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 947
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": null,
+        "alerts": [
+          "Доступ к микрофону запрещён. Разрешите его в настройках браузера и повторите попытку."
+        ],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 160.8,
+              "y": 290,
+              "width": 192.2,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 440,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": true,
+            "rect": {
+              "x": 37,
+              "y": 778,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": true,
+            "rect": {
+              "x": 37,
+              "y": 581,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 37,
+          "y": 508,
+          "width": 316,
+          "height": 121
+        },
+        "testRect": {
+          "x": 37,
+          "y": 649,
+          "width": 316,
+          "height": 229
+        },
+        "mediaCalls": {
+          "getUserMedia": 1,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "retry-en-desktop",
+      "path": "evidence/retry-en-desktop.png",
+      "locale": "en",
+      "state": "explicit retry succeeds with fake track",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 983
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Connected. The browser is providing a live microphone track.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 911.6,
+              "y": 282,
+              "width": 143.4,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 408,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 814,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 863.3,
+              "y": 637,
+              "width": 191.7,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 209
+        },
+        "testRect": {
+          "x": 385,
+          "y": 705,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 2,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "retry-ru-390",
+      "path": "evidence/retry-ru-390.png",
+      "locale": "ru",
+      "state": "explicit retry succeeds with fake track",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPixels": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 1079
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключено. Браузер передаёт активную дорожку микрофона.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 160.8,
+              "y": 290,
+              "width": 192.2,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 440,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 910,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 713,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 37,
+          "y": 508,
+          "width": 316,
+          "height": 253
+        },
+        "testRect": {
+          "x": 37,
+          "y": 781,
+          "width": 316,
+          "height": 229
+        },
+        "mediaCalls": {
+          "getUserMedia": 2,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "lost-en-desktop",
+      "path": "evidence/lost-en-desktop.png",
+      "locale": "en",
+      "state": "synthetic ended event on fake track",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 900
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "The microphone connection ended. Reconnect to continue.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 911.6,
+              "y": 282,
+              "width": 143.4,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 408,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": true,
+            "rect": {
+              "x": 385,
+              "y": 702,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": true,
+            "rect": {
+              "x": 863.3,
+              "y": 525,
+              "width": 191.7,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 97
+        },
+        "testRect": {
+          "x": 385,
+          "y": 593,
+          "width": 670,
+          "height": 181
+        },
+        "mediaCalls": {
+          "getUserMedia": 2,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "lost-ru-390",
+      "path": "evidence/lost-ru-390.png",
+      "locale": "ru",
+      "state": "synthetic ended event on fake track",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPixels": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 947
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключение к микрофону прервано. Подключитесь снова, чтобы продолжить.",
+        "alerts": [],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 160.8,
+              "y": 290,
+              "width": 192.2,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 440,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": true,
+            "rect": {
+              "x": 37,
+              "y": 778,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": true,
+            "rect": {
+              "x": 37,
+              "y": 581,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 37,
+          "y": 508,
+          "width": 316,
+          "height": 121
+        },
+        "testRect": {
+          "x": 37,
+          "y": 649,
+          "width": 316,
+          "height": 229
+        },
+        "mediaCalls": {
+          "getUserMedia": 2,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "test-unsupported-en-desktop",
+      "path": "evidence/test-unsupported-en-desktop.png",
+      "locale": "en",
+      "state": "fake live track; MediaRecorder API unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "metrics": {
+        "locale": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollHeight": 1015
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Connected. The browser is providing a live microphone track.",
+        "alerts": [
+          "This browser cannot record a local microphone test. You can continue without it."
+        ],
+        "buttons": {
+          "refresh": {
+            "label": "Refresh devices",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 911.6,
+              "y": 282,
+              "width": 143.4,
+              "height": 32
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "connect": {
+            "label": "Connect selected microphone",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 408,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "record": {
+            "label": "Record test",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 385,
+              "y": 814,
+              "width": 670,
+              "height": 40
+            },
+            "fontSize": "14px",
+            "lineHeight": "20px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Continue to New Dub",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 863.3,
+              "y": 637,
+              "width": 191.7,
+              "height": 44
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 385,
+          "y": 472,
+          "width": 670,
+          "height": 209
+        },
+        "testRect": {
+          "x": 385,
+          "y": 705,
+          "width": 670,
+          "height": 213
+        },
+        "mediaCalls": {
+          "getUserMedia": 3,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "test-unsupported-ru-390",
+      "path": "evidence/test-unsupported-ru-390.png",
+      "locale": "ru",
+      "state": "fake live track; MediaRecorder API unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPixels": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 1131
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключено. Браузер передаёт активную дорожку микрофона.",
+        "alerts": [
+          "В этом браузере недоступна локальная тестовая запись. Можно продолжить без неё."
+        ],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 160.8,
+              "y": 290,
+              "width": 192.2,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 440,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 910,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 713,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 37,
+          "y": 508,
+          "width": 316,
+          "height": 253
+        },
+        "testRect": {
+          "x": 37,
+          "y": 781,
+          "width": 316,
+          "height": 281
+        },
+        "mediaCalls": {
+          "getUserMedia": 3,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    },
+    {
+      "name": "test-unsupported-ru-390-alert",
+      "path": "evidence/test-unsupported-ru-390-alert.png",
+      "locale": "ru",
+      "state": "fake live track; localized unavailable message scrolled into view",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotPixels": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "locale": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844,
+          "dpr": 1
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 1131
+        },
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "status": "Подключено. Браузер передаёт активную дорожку микрофона.",
+        "alerts": [
+          "В этом браузере недоступна локальная тестовая запись. Можно продолжить без неё."
+        ],
+        "buttons": {
+          "refresh": {
+            "label": "Обновить устройства",
+            "size": "small",
+            "disabled": false,
+            "rect": {
+              "x": 160.8,
+              "y": 3,
+              "width": 192.2,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "connect": {
+            "label": "Подключить выбранный микрофон",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 153,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "record": {
+            "label": "Записать тест",
+            "size": "medium",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 623,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          },
+          "stop": null,
+          "continue": {
+            "label": "Перейти к новому дубляжу",
+            "size": "large",
+            "disabled": false,
+            "rect": {
+              "x": 37,
+              "y": 426,
+              "width": 316,
+              "height": 48
+            },
+            "fontSize": "16px",
+            "lineHeight": "24px"
+          }
+        },
+        "statusRect": {
+          "x": 37,
+          "y": 221,
+          "width": 316,
+          "height": 253
+        },
+        "testRect": {
+          "x": 37,
+          "y": 494,
+          "width": 316,
+          "height": 281
+        },
+        "mediaCalls": {
+          "getUserMedia": 3,
+          "recorderStart": 0
+        }
+      },
+      "openedForVisualInspection": true
+    }
+  ],
+  "checks": [
+    "An explicit connection click obtains a fake browser track; no test starts automatically.",
+    "EN/RU ready screenshots at desktop, short desktop, 390, 767 and 768 confirm shared 32/40/44 desktop roles and 48px phone targets.",
+    "Injected denied connection omits the initial waiting sentence in EN/RU, blocks Continue, then an explicit retry restores readiness.",
+    "A synthetic ended event on the fake track disables Continue and asks for reconnection in EN/RU.",
+    "Missing MediaRecorder produces localized browser-capability copy; the fake live connection and optional Continue readiness remain available."
+  ],
+  "pageErrors": [],
+  "limitations": [
+    "No physical microphone or speakers were used.",
+    "Injected failure states prove this UI handling only; the recoverable media-invalid test error is covered by the focused unit test, not a browser fault capture. These checks do not establish native permission UI, physical-device behavior, browser support policy, OS contention, a real phone, screen-reader, forced-colors, native zoom, provider, backend, or production behavior.",
+    "Only the focused MicrophoneScreen unit test file was run; no full suite, typecheck, or build was run during concurrent writers."
+  ]
+}

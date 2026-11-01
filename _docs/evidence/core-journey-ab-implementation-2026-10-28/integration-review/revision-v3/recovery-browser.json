@@ -1,0 +1,40 @@
+[
+  {
+    "name": "record-cancel-then-blur",
+    "value": {
+      "paused": true,
+      "time": 2.049999
+    }
+  },
+  {
+    "name": "phone-popup-expiry-scroll",
+    "before": {
+      "scrollY": 237,
+      "maxScroll": 373,
+      "active": "\n    ExitSintel · The SearchLine 1 / 3What brings you to the land of the gatekeepers?Position in dialogue window0:00 / 0:05Reference volumePreviousOriginalRecordYour takeNextSettingsMicrophone access was denied or interrupted. Recording did not begin; you can open the Settings boundary from here.Leave this dialogue window?Stay hereSave and leaveLeave without savingStay hereRecording needs attentionMicrophone access was denied or interrupted. Recording did not begin; you can open the Settings boundary from here.Local fixture sourcesCloseSintel · Blender Foundation · CC BY 3.0scene.mp4 · 960 × 408 · 13.416667 s · rotation 0°illustrative-generation-001Prototype example-dub sample made from the supplied synthetic takes; not a user recording or product render.749601 bytes · fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9productRendered: false · assembledFromAcceptedTakes: falseillustrative-generation-002Synthetic alternate mix fixture created from the supplied Sintel source and synthetic takes; not a user recording or product render.2514724 bytes · f3802515a6738409226b8c9c705d31671e7768f81043ada452302240bb146d93productRendered: false · assembledFromAcceptedTakes: false\n    \n  \n\n"
+    },
+    "after": {
+      "scrollY": 237,
+      "maxScroll": 373,
+      "active": "\n    ExitSintel · The SearchLine 1 / 3What brings you to the land of the gatekeepers?Position in dialogue window0:00 / 0:05Reference volumePreviousOriginalRecordYour takeNextSettingsMicrophone access was denied or interrupted. Recording did not begin; you can open the Settings boundary from here.Leave this dialogue window?Stay hereSave and leaveLeave without savingStay hereLocal fixture sourcesCloseSintel · Blender Foundation · CC BY 3.0scene.mp4 · 960 × 408 · 13.416667 s · rotation 0°illustrative-generation-001Prototype example-dub sample made from the supplied synthetic takes; not a user recording or product render.749601 bytes · fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9productRendered: false · assembledFromAcceptedTakes: falseillustrative-generation-002Synthetic alternate mix fixture created from the supplied Sintel source and synthetic takes; not a user recording or product render.2514724 bytes · f3802515a6738409226b8c9c705d31671e7768f81043ada452302240bb146d93productRendered: false · assembledFromAcceptedTakes: false\n    \n  \n\n",
+      "toast": false
+    }
+  },
+  {
+    "name": "settings-button",
+    "count": 1
+  },
+  {
+    "name": "settings-failure-focus",
+    "value": {
+      "active": "Retry accept and leave"
+    }
+  },
+  {
+    "name": "logical-settings-return",
+    "value": {
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=B&returnFocus=settings&locale=en",
+      "active": "settings"
+    }
+  }
+]

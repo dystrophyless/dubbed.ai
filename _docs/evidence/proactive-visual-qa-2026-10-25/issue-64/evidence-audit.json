@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-10-25T08:27:35.171Z",
+  "node": "v22.23.1",
+  "os": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "architecture": "x64"
+  },
+  "revision": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "frontendDirty": "",
+  "artifacts": [
+    {
+      "file": "_docs/evidence/frontend-implementation-2026-10-23/media/investigation-report.md",
+      "expected": "34062d4690ab3a22618d523723cd54e53d76c547d603a5141e5999c99656edfa",
+      "actual": "34062d4690ab3a22618d523723cd54e53d76c547d603a5141e5999c99656edfa",
+      "matches": true
+    },
+    {
+      "file": "_docs/evidence/frontend-implementation-2026-10-23/media/criterion-evidence.json",
+      "expected": "0ee69ab4dc1bf6f511ce9e3bdb403ac798dfe9d2234e8db36708212b029baf41",
+      "actual": "0ee69ab4dc1bf6f511ce9e3bdb403ac798dfe9d2234e8db36708212b029baf41",
+      "matches": true
+    },
+    {
+      "file": "_docs/evidence/frontend-implementation-2026-10-23/media/browser-media-matrix.json",
+      "expected": "c6b0218014f58624c95b1e4be15cf1baa04fa1df28347e58ed48f11625946938",
+      "actual": "c6b0218014f58624c95b1e4be15cf1baa04fa1df28347e58ed48f11625946938",
+      "matches": true
+    },
+    {
+      "file": "_docs/evidence/frontend-implementation-2026-10-23/media/orchestrator-native-capture.json",
+      "expected": "68642c1363b0bac6427e26fe10ab9b4bf05a1fcc45f06336bf529aa3c4278fce",
+      "actual": "68642c1363b0bac6427e26fe10ab9b4bf05a1fcc45f06336bf529aa3c4278fce",
+      "matches": true
+    }
+  ],
+  "sourceFingerprints": [
+    {
+      "file": "frontend/src/services/browser-media.ts",
+      "sha256": "a5ba3ff3e464d53a0af261519c19512d61eb3b655c4dbed94d555e369710519e"
+    },
+    {
+      "file": "frontend/src/features/microphone/MicrophoneScreen.tsx",
+      "sha256": "e35d9272aefcc17c0a44c32793eba77565d800caae773071f3022d3f3c5dcf35"
+    },
+    {
+      "file": "_docs/frontend-flows/06-new-dub.md",
+      "sha256": "e16511701f193eaf512054222e9aadd303cde6eff4412dcd88d4c16c1253be19"
+    },
+    {
+      "file": "_docs/frontend-flows/09-record.md",
+      "sha256": "d139d8318ad6d17767bb910d610314036a3169b099c02f462c96635b0c68cc7a"
+    },
+    {
+      "file": "_docs/frontend-flows/design-tokens.md",
+      "sha256": "10f2753e82f4db46003eee25b866dd73aba0240ff3624bcdd01fa32511f278e8"
+    }
+  ],
+  "checks": {
+    "freshBrowser": "8 explicit-injection screenshots; completed, zero page errors",
+    "physicalInput": "not run; fake input only",
+    "timing": "Historical native timing artifact audited, no fresh synchronization timing measurements",
+    "fullSuite": "not run; bounded review"
+  },
+  "screenshotNote": "All eight images captured fullPage; viewport records in metrics.json are the actual browser viewport, not the image height."
+}

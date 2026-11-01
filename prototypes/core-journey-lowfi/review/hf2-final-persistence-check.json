@@ -1,0 +1,11 @@
+{
+  "afterMs": 6500,
+  "messageUnchanged": true,
+  "buttons": 0,
+  "visible": true,
+  "target": {
+    "version": "core-journey-highfi-v2",
+    "count": 48,
+    "mismatches": []
+  }
+}

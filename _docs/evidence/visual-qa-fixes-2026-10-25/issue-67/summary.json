@@ -1,0 +1,76 @@
+{
+  "task": "67",
+  "date": "2026-10-25",
+  "status": "implementation-and-focused-browser-verification-complete",
+  "source_revision": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "worktree_boundary": "Shared dirty worktree; issue 67 edits are limited to the listed paths, with parallel task edits outside this ownership scope.",
+  "scope": [
+    "frontend/src/main.tsx",
+    "frontend/src/App.tsx",
+    "frontend/src/app/RuntimeFailure.tsx",
+    "frontend/e2e/runtime-storage-recovery.spec.ts",
+    "frontend/e2e-real/adapter-unavailable.spec.ts",
+    "frontend/playwright.runtime-recovery.config.ts"
+  ],
+  "findings": [
+    {
+      "id": "QA-67-01",
+      "status": "fixed-and-verified",
+      "details": "Startup shows localized readiness while identity is checked, distinguishes storage faults from auth/expiry and configuration states, and exposes a read-context Retry action for missing, denied, and failed IndexedDB opens. Retrying a transient open failure preserves the existing account, session, and persisted mock client ID."
+    },
+    {
+      "id": "QA-67-02",
+      "status": "shared-owner-consumer-validated",
+      "details": "No duplicate CSS was added. Sign-in primary and password-toggle measurements satisfy shared desktop minima of 40/32 px at widths 1440 and 768, and phone minima of 48/48 px at widths 390 and 767."
+    }
+  ],
+  "qa68_consumer_integration": {
+    "status": "integrated",
+    "details": "Bootstrap uses serviceRecoveryAction with read context and serviceProblemMessage with read context. App.refreshIdentity forwards result.error.retry exactly and omits retry when absent. RuntimeFailure uses the shared Notice primitive because the app LocaleProvider is unavailable during bootstrap failure."
+  },
+  "verification": [
+    {
+      "command": "npm.cmd run test:e2e -- --config=playwright.runtime-recovery.config.ts",
+      "adapter": "mock",
+      "result": "PASS",
+      "testsPassed": 11,
+      "details": "Normal runtime smoke; missing/denied storage recovery; open-failure retry with session preservation; English/Russian desktop and phone form-control validation."
+    },
+    {
+      "command": "$env:RUNTIME_SERVICE_MODE='real'; npm.cmd run test:e2e -- --config=playwright.runtime-recovery.config.ts",
+      "adapter": "real",
+      "result": "PASS",
+      "testsPassed": 4,
+      "details": "Explicit unavailable state in English and Russian at desktop and phone sizes; no blank landing, external HTTP requests, page errors, or horizontal overflow."
+    },
+    {
+      "command": "git diff --check -- <issue 67 source and test paths>",
+      "result": "PASS",
+      "details": "Only normal LF-to-CRLF working-copy notices."
+    }
+  ],
+  "not_run": [
+    "Full frontend test suite and typecheck; shared frontend/service contract changes were in progress in other agents during this task."
+  ],
+  "evidence": {
+    "directory": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-67/evidence",
+    "screenshots": 22,
+    "metricFiles": 22,
+    "dimensions": [
+      "English desktop 1440x900",
+      "Russian desktop 1440x900",
+      "Russian desktop breakpoint 768x900",
+      "English phone 390x844",
+      "Russian phone breakpoint 767x844"
+    ]
+  },
+  "limits": [
+    "Local Playwright Chromium only; no physical device, cross-browser, production backend, or full-suite acceptance."
+  ],
+  "git_operations": {
+    "commit": false,
+    "push": false,
+    "issue_mutation": false,
+    "destructive_storage_operation": false
+  }
+}

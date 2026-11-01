@@ -22,7 +22,7 @@ This document owns the signed-in journey from entering **New dub** through:
 This document does not own:
 
 - authentication or account linking (Flows 02–05);
-- processing progress, cancellation after authorization, retry, or reprocessing (Flow 07);
+- processing progress, cancellation after authorization and technical-failure recovery (Flow07);
 - any Prepare/review/editing stage: the owner removed Flow 08 from the active MVP;
 - manual transcript, speaker, timing, missed-line, or bad-segmentation correction;
 - background-only audition or quality approval;
@@ -114,9 +114,9 @@ The UI must not navigate to Processing merely because a client request was sent.
 
 - Processing costs `ceil(selectedDurationSeconds)` credits, rounded once for the complete selected interval.
 - Examples fixed by the approved contract: 12.4 seconds costs 13 credits; 120 seconds costs 120 credits.
-- The cost covers transcription, automatic speaker/timing processing, detected character sounds, and background separation.
+- The cost covers transcription, automatic turn/timing processing, detected nonverbal sounds and background separation. Speaker identity extraction is unavailable and is not a promised output or quote requirement.
 - There is no surcharge for speech-only duration, internal worker latency/retries, speaker count, language mix, or overlap complexity.
-- Before authorization, show the selected duration, exact credit cost, available balance, included-retry eligibility, and project capacity.
+- Before authorization, show the selected duration, exact credit cost, available balance, and project capacity.
 - **Available balance** means credits currently spendable after active reservations. Header balance, quote sufficiency, and insufficient-credit checks use this same value. A reservation is never counted as available or presented as a settled charge; if this flow exposes reserved credits, it labels them separately as **In processing**.
 - A quote is authoritative only when bound to the validated source revision, exact selected interval/duration, account, and pricing-policy revision.
 - Changing the source or interval makes the displayed quote stale immediately. Processing remains unavailable until a replacement quote is accepted by the service and displayed.
@@ -139,11 +139,11 @@ The UI must not navigate to Processing merely because a client request was sent.
 
 - Flow 07 processing leads directly to Flow 09 Record when processing succeeds with at least one recording turn.
 - There is no transcript review, turn editor, speaker/timing editor, missed-line addition, or background-only audition/approval in this MVP.
-- If an automatically supplied recording turn is clipped or otherwise poorly segmented, the user records it as supplied or starts a new project under the ordinary credit and slot rules. This flow must not offer repair, targeted reprocessing, refund, skip/original fallback, or manual correction.
-- The first successfully accepted saved take permanently locks whole-section reprocessing. Failed capture/save does not set the lock. Flow 07/09 own enforcement and presentation; Flow 06 must not imply that starting the first run creates the lock.
-- When processing detects zero recording turns, the project does not enter Record or Result. The processing surface shows `No dialogue found` / `Реплики не найдены` and offers eligible reprocessing under the existing quote/credit/included-retry rules or a return to New dub to choose another video. The already-confirmed charge for a successfully completed zero-turn processing run remains unchanged; this outcome adds no refund or free retry.
+- If an automatically supplied recording turn is clipped or otherwise poorly segmented, the user records it as supplied or starts a new project under the ordinary credit and slot rules. This flow must not offer repair, targeted AI reset, refund, skip/original fallback, or manual correction.
+- No user-initiated rerun/reset of delivered preparation exists. New dub cannot expose a same-project bypass.
+- Zero detected turns never enter Record/Result. Show No dialogue found / Реплики не найдены and New dub to choose another video. A successful zero-turn delivery remains charged; no refund or repeat allowance is added.
 - This zero-turn policy applies only when authoritative inspection found an audio track and completed processing found no dialogue. It does not convert a validation-time missing-audio rejection into a charged run, silent-video voiceover mode or manual turn creation.
-- If an eligible reprocessing run finds zero turns while an earlier usable preparation has turns, the new run does not replace that preparation or delete its unaccepted draft. Flow 07/09 preserve and expose the prior usable recording state while reporting that the new run found no dialogue. Replacement occurs only after reprocessing yields a usable nonempty turn set. The completed zero-turn run still follows the existing charge and retry-consumption rules.
+
 
 ### 3.7 Durable draft identity and naming
 
@@ -233,7 +233,6 @@ Required anatomy:
 - reserved credits only as a separately labelled **In processing** amount if that secondary accounting detail is shown here;
 - sufficient/insufficient balance result;
 - project capacity and occupied/available status;
-- included-retry eligibility information;
 - one paid-processing launch action containing the exact current credit cost when all prerequisites are current; and
 - when balance is insufficient, a separate route to Flow 12 that does not authorize processing.
 
@@ -249,7 +248,7 @@ Only consequential blockers may interrupt the page:
 
 - insufficient credits: show required amount and available balance, with an action to Flow 12 and a non-purchase return path;
 - capacity reached: explain the current limit and route to Flow 11 to choose a project for deletion;
-- source replacement before the first AI preparation launch: keep the old validated source and title active while the candidate uploads/validates; on failure preserve both, and on success atomically replace the source within the same project/slot, reset the approved interval default, invalidate the old quote, and update the title only when authoritative provenance still marks it auto-assigned. After the first launch this action is unavailable and cannot bypass retry or permanent first-accepted-take rules;
+- source replacement before the first AI preparation launch: keep the old validated source and title active while the candidate uploads/validates; on failure preserve both, and on success atomically replace the source within the same project/slot, reset the approved interval default, invalidate the old quote, and update the title only when authoritative provenance still marks it auto-assigned. After the first launch this action is unavailable and cannot bypass initial authorization, technical recovery or protected-media revisions;
 - quote changed after the user acted: show old versus current amount when available and require activation of the refreshed exact-cost button; and
 - authorization conflict: explain whether balance, slot, source revision, or quote changed, then return to the relevant current state.
 
@@ -276,7 +275,7 @@ Do not use a generic error dialog when an inline block can identify and repair t
 | `replacing-source` | Before first AI launch, a candidate source is uploading/validating while the current source remains authoritative. | Wait or cancel where safe; failure keeps the current source, while success atomically switches within the same project/slot. |
 | `selection-valid` | Canonical candidate interval is in source bounds and from 1.0 through 120.0 seconds inclusive at 0.001-second precision. | Request/refresh quote or adjust selection. |
 | `quote-loading` | Source-bound quote is requested; prior quote cannot authorize. | Wait or retry quote request. |
-| `quote-ready-sufficient` | Exact current quote, balance, capacity, and retry entitlement permit processing. | Activate the one-click exact-cost processing button, adjust selection, or leave. |
+| `quote-ready-sufficient` | Exact current quote, balance, capacity permit processing. | Activate the one-click exact-cost processing button, adjust selection, or leave. |
 | `quote-ready-insufficient` | Quote is current but balance is too low. | Open Flow 12, adjust selection, or leave. |
 | `quote-stale` | Source, interval, policy, balance, or quote validity changed. | Refresh/requote; no processing authorization. |
 | `authorizing` | One idempotent authorization is in flight. | Wait; repeat interaction must not create a duplicate. |
@@ -285,7 +284,7 @@ Do not use a generic error dialog when an inline block can identify and repair t
 
 ### 5.2 Main transition sequence
 
-1. Enter signed-in New dub and load available balance, capacity, and retry-entitlement context.
+1. Enter signed-in New dub and load available balance, capacity context.
 2. If capacity is exhausted, keep new upload unavailable, show the current limit and **Manage projects**, and for a purchase-naive account explain the verified first-purchase increase from 2 to 10. After return, refresh capacity before enabling upload.
 3. With available capacity, select one source through the accessible file input.
 4. Transfer the source and show transport truth. Cancel may stop a still-cancellable transfer; cancellation, interruption, or leaving before validation requires selecting and uploading the file again from the beginning.
@@ -323,8 +322,8 @@ Do not use a generic error dialog when an inline block can identify and repair t
 
 - Leaving after successful validation requires no save/delete prompt. The draft remains in My projects, keeps its slot, and can be resumed on another signed-in device without starting processing.
 - When cancellation of the initial processing attempt completes in Flow 07, return to New dub with the saved source and selected interval preserved. The user may change the interval; New dub then loads current entitlements, requests a fresh quote, and requires a new deliberate exact-cost authorization.
-- When Flow 07 reports zero detected turns, do not route to Record or Result. The user can authorize an eligible reprocessing attempt under current rules or return to New dub and choose another video.
-- If that zero-turn outcome came from reprocessing and a prior usable preparation exists, keep its segmentation and unaccepted draft authoritative; the empty replacement never displaces them.
+- Zero detected turns stay in Processing-owned No dialogue found recovery with another-video/New dub action, never Record/Result.
+
 - Once a processing attempt has been accepted, leaving the application does not stop that approved background job. The MVP sends no preparation-completion email or push notification; returning users retrieve authoritative status in the application or My projects.
 
 ## 6. Error, cancellation, and recovery matrix
@@ -348,7 +347,7 @@ Do not use a generic error dialog when an inline block can identify and repair t
 | Preview media cannot load after validation | Keep the durable draft, identify direct or compatible-preview delivery failure, and offer retry/reload. | Do not silently delete the occupied project, require external conversion, spend credits, or quote unseen media. |
 | Replacement candidate fails transfer/validation before first AI launch | Explain the candidate failure and keep **Replace video** repair available where eligible. | Existing source, title, section, quote, project and single occupied slot remain unchanged. |
 | Replacement candidate validates before first AI launch | Show the new source through the direct/compatible-preview path and reset section to the approved default. | Atomically replace within the same project/slot; invalidate old selection/quote; update title only when authoritative provenance is auto-assigned; do not start or charge processing. |
-| Replace video is requested after first AI launch | Do not expose or accept this pre-launch replacement action. | Existing processing/retry and permanent first-accepted-take constraints remain authoritative and cannot be bypassed. |
+| Replace video is requested after first AI launch | Do not expose or accept this pre-launch replacement action. | Initial authorization, technical recovery and protected-media revisions remain authoritative; no delivered-preparation reset is available. |
 | Invalid section | Identify an interval outside source bounds, below 1.0 second or above 120.0 seconds under the selected transient-input behavior. | No current quote or authorization. The inclusive bounds, 0.001-second precision and source-end flooring are settled; transient invalid-input presentation remains OPEN. |
 | Quote service failure | Keep the source and selection, show quote-specific retry. | No paid action. |
 | Quote response is stale | Keep current source/selection and request a matching quote. | Old quote cannot authorize. |
@@ -359,8 +358,8 @@ Do not use a generic error dialog when an inline block can identify and repair t
 | User leaves before validation | Explain on return that an unfinished transfer was not saved; require file reselection and a new upload. | Never claim a saved project or resumable partial transfer unless validation/project commit succeeded before departure. |
 | User leaves after validation | Leave without a save/delete prompt; the validated project remains available in My projects. | Account-owned draft and occupied slot persist until explicit project/account deletion; no processing is authorized. |
 | Initial processing cancellation completes in Flow 07 | Return to New dub with the saved source and interval, allow interval changes, and show a fresh quote before any new paid action. | No automatic restart or reservation; prior cancellation billing remains owned by Flow 07. |
-| Processing completes with zero detected turns | Show `No dialogue found` / `Реплики не найдены` in the processing recovery context and offer eligible reprocessing or another video. | Do not enter Record/Result; successful zero-turn processing charge remains unchanged and creates no extra entitlement. |
-| Reprocessing completes with zero turns while a prior usable preparation exists | Report that the new run found no dialogue and keep the prior usable preparation available. | Preserve its segmentation and unaccepted draft; do not replace with an empty turn set. Charge/retry consumption remains unchanged. |
+| Processing completes with zero detected turns | Show No dialogue found / Реплики не найдены and another video. | No Record/Result; successful delivery charge unchanged, no new entitlement. |
+
 
 ## 7. Desktop, mobile, and keyboard behavior
 
@@ -434,7 +433,7 @@ Both English and Russian locales must cover:
 - automatic return after confirmed purchase success, with refreshed balance/quote and no automatic processing;
 - automatic draft preservation after validation, occupied-slot consequence, and safe resume without automatic processing;
 - the initial project title derived from the source filename's last-extension stem with the confirmed 100-character rule; and
-- zero-turn reprocessing preservation of a prior usable preparation; and
+
 - recovery actions for every blocking state.
 
 ### 8.2 Copy rules
@@ -552,7 +551,6 @@ Accepted result includes:
 - authoritative available spendable balance after active reservations and sufficiency at quote time;
 - reserved amount separately if supplied for display, without treating it as settled spending;
 - current project capacity;
-- included-retry eligibility; and
 - source/selection/pricing identities echoed for client matching.
 
 The client may display an immediate non-authoritative estimate only if it is explicitly superseded by the authoritative quote and can never enable authorization on its own.
@@ -608,8 +606,8 @@ Validated projects and sources in this section are account-owned durable state, 
 - Flow 11 may delete a chosen project and free a slot; Flow 06 then refreshes capacity and must not assume the current draft survived if that exact project was deleted.
 - When capacity was exhausted, Flow 06 keeps upload disabled until that refresh authoritatively reports a free or newly purchased slot.
 - Flow 11 displays the preserved validated draft in its most-recent-activity-first order; the shared service owns the exact activity-event and tie semantics.
-- Flow 07 receives the accepted attempt identity and owns all subsequent progress/cancel/retry behavior. Successful processing with turns proceeds directly to Flow 09 Record. Completed initial cancellation returns the preserved source/selection to Flow 06 for fresh quote and authorization; zero detected turns stay out of Record/Result and offer eligible reprocessing or another video.
-- A zero-turn reprocessing result cannot replace a prior usable preparation or delete its unaccepted draft. The previous state remains authoritative until a nonempty replacement succeeds.
+- Flow07 receives accepted attempt identity and owns progress/cancel/technical recovery. Usable turns hand off directly to Record. Completed initial cancellation returns source/selection for fresh quote and explicit authorization; successful zero turns offer another video, no Record/Result.
+
 - No cross-flow handoff promises a completion email or push notification. Accepted background jobs remain retrievable through application/project status after the user returns.
 
 ## 11. Mock truth and production dependencies
@@ -640,7 +638,7 @@ The mock implementation may deterministically simulate:
 - authorization acceptance, conflict, timeout reconciliation, and duplicate recovery;
 - completed initial-cancellation return with preserved source/selection and a required fresh quote;
 - initial zero-turn recovery with no Record/Result transition;
-- zero-turn reprocessing that preserves a prior usable preparation and unaccepted draft;
+
 - accepted background processing with no completion email/push notification.
 
 Mock scenarios must use explicit fixed fixture values and source/selection/quote revisions so identity mismatch can be tested. Preview and replacement fixtures must identify themselves as simulated and cannot prove actual conversion, playback compatibility, orientation/timeline preservation or atomic media replacement. A mock “accepted” or “recovered on another device” response proves only UI contract behavior. It does not prove real codec compatibility, durable or cross-device storage, no-expiry retention, ledger correctness, payment success, or worker readiness.
@@ -692,7 +690,7 @@ Production readiness depends on evidence for:
 - **AC-F06-13 — Failure preservation:** Upload, validation, preview, quote, entitlement, or authorization failure never fabricates a saved/paid/processing success and preserves every already-authoritative project/source/selection state that the failure does not invalidate.
 - **AC-F06-13A — Upload cancellation without resume:** The user can cancel transfer before validated project creation. Cancelled, interrupted, or abandoned pre-validation uploads cannot resume and require file reselection/upload from the beginning after leave/close or disconnect. Race reconciliation preserves a project that committed before cancellation completed.
 - **AC-F06-14 — Initial-cancellation return:** After Flow 07 confirms cancellation of an initial processing attempt, New dub restores the saved source/selection, permits a changed interval, requests a fresh quote, and requires another exact-cost authorization without automatically restarting or reserving credits.
-- **AC-F06-15 — Zero-turn boundary:** An initial completed processing attempt with zero detected turns does not enter Record or Result. The user sees `No dialogue found` / `Реплики не найдены` and can choose eligible reprocessing or another video; the successful zero-turn processing charge and existing retry rules remain unchanged. If reprocessing finds zero turns while a prior usable preparation exists, that preparation and its unaccepted draft remain available and authoritative.
+- **AC-F06-15 — Zero-turn boundary:** completed zero-turn processing shows No dialogue found / Реплики не найдены and another video, never Record/Result. Successful delivery charge remains unchanged; no repeat-preparation entitlement.
 - **AC-F06-16 — Background status only:** Leaving after an accepted processing handoff does not stop the approved background job. The MVP sends no preparation-completion email or push notification; authoritative application/project status is the recovery source.
 - **AC-F06-17 — Shared presentation contract:** Use the [Clean / Light adoption](affect-ui-clean-light-adoption.md) and [current tokens](design-tokens.md): source dark primary, white subtly shadowed secondary, soft-destructive actions, current role sizes in [design-tokens.md](design-tokens.md): desktop task 40px / Medium 14px/20px, prominent/landing 44px / Medium 16px/24px, secondary 32px / Medium 14px/20px, navigation 36px / Medium 14px/20px; medium segmented 40px /14px/20px desktop and 48px /16px/24px phone, exact component radii/interiors and bounded functional motion. Keep Mabry, readable body/dialogue, existing layout/navigation and product semantics; phone button labels remain Mabry Pro Medium 16px/24px with retained 48px targets. Apply the explicit readable-text/link/error, essential-boundary, focus, phone-target and disabled-versus-busy adaptations. Verify the exact source variant/state, actual composites, typography/targets, EN/RU rendering, keyboard/focus and reduced motion; no runtime or accessibility pass is claimed. Use the catalogued functional source motion in [design-tokens.md](design-tokens.md), including reversible 140/160ms button response and eligible selection/content/width recipes. Reduced motion makes UI changes immediate; a functional spinner requires real pending work and a readable static equivalent. No page-entry/parallax/decorative background loop or invented progress; capture/save/payment/navigation never wait for animation. Functional media/playhead timing is unchanged.
 
@@ -744,9 +742,9 @@ No check below has been run. This is the required future evidence plan.
 - Change the canonical interval in 0.001-second steps through each draggable handle, each **Start**/**End** time field, pointer, touch and keyboard. Prove every representation, persisted selection, quote identity, authorization and output remains synchronized and is source-section selection rather than turn/frame editing or a frame-accuracy claim. Exercise exact durations below/at/above 1.0 and 120.0 seconds through both methods: 1.0 through 120.0 inclusive can establish an in-bounds selection, while out-of-range values cannot become current, silently move the unedited boundary, receive a matching quote/authorization or auto-start processing. In a 600-second source, establish `[300.000, 420.000]` and prove the 120-second duration is accepted; reject an end beyond the floored source end and reject a duration above 120 seconds without treating `120.000` as an absolute-end cap. Prove default end flooring with `1.0009 -> 1.000`, `12.34 -> 12.340`, `12.3456 -> 12.345`, `119.9999 -> 119.999`, and `120.04 -> 120.000`, with no **To end** exception and no restoration of the excluded remainder in later stages. Every committed admissible change invalidates the old quote and requires a matching one. For fractional selected durations, prove cost is one `ceil` over the whole selected duration at one credit per second, without separately rounding either boundary or billing the original source duration. Exercise media-alignment/serialization fixtures and prove they do not silently alter the authorized interval. Verify the 1.0-second section minimum does not become a recording-turn/microphone minimum and does not reject otherwise eligible usable interrupted partial audio. Verify dialogue capture has no manual Stop, continues after the user finishes speaking early and automatically ends at the fixed window boundary; actual browser/device interruption recovery and the optional microphone-test Stop remain separate. Record transient invalid-entry behavior. Verify an original source shorter than 1.000 seconds is rejected before project/source commit, exactly 1.000 seconds is eligible, and a rejected replacement preserves the prior project/source state.
 - Verify canonical section-to-original offset mapping remains consistent at Flow 07 handoff.
 - Verify a completed initial cancellation returns to New dub with the saved source/selection, supports changing the interval, and requires a fresh quote and authorization.
-- Verify a zero-turn result shows the confirmed bilingual state, does not enter Record/Result, preserves the unchanged successful-processing charge, and exposes only eligible reprocessing or another-video recovery.
+- Verify bilingual zero-turn recovery, unchanged successful-delivery charge, another-video action and no Record/Result.
 - Verify the zero-turn fixture contains an audio track and reaches the outcome only after completed processing; prove its charge/recovery remains distinct from validation-time missing-audio rejection.
-- Verify zero-turn reprocessing preserves a prior usable segmentation and unaccepted draft, while a later usable nonempty replacement can apply through the existing replacement contract.
+
 
 ### 13.4 Interaction and accessibility verification
 
@@ -771,7 +769,7 @@ Future evidence must record command/manual procedure, result, environment/browse
 | Flows 02–05 | Authenticated account and safe return after session/auth work. | Authentication, verification, reset, linking. |
 | Shared shell | Compact navigation, locale precedence, available-balance/account access, approved Mabry Pro/palette/geometry, and the 768px responsive shell. | Shared frontend contract/design system. |
 | Approved design tokens | Semantic colors, component states, focus treatments, typography, spacing, geometry and motion from `design-tokens.md`. | Shared frontend design system. |
-| Flow 07 | Retrieve the accepted attempt; on success with turns proceed directly to Record; after completed initial cancellation return the saved source/selection to New dub; for zero turns show the confirmed recovery without Record/Result; preserve prior usable preparation on zero-turn reprocessing. | Processing, cancellation, reservation settlement/release, retry, background status, and zero-turn lifecycle presentation. |
+| Flow07 | Resolve accepted attempt; usable success enters Record; completed initial cancellation returns saved source/selection to New dub; zero turns show another-video recovery. | Processing, cancellation, reservation settlement/release, technical recovery, background status and zero-turn lifecycle. |
 | Flow 09 | Receive successful processing output directly; no intervening Prepare/editing flow. | Recording and take lifecycle. |
 | Flow 11 | Show automatically preserved validated drafts, order projects by most recent activity, let the owner choose deletion, and return after capacity is freed. | Project list, activity ordering, delete confirmation, rename entry point/resume, and the shared 100-grapheme-cluster title-counting contract used by initial truncation. |
 | Flow 12 | Preserve return context, sell one-time packs, verify fulfillment, automatically return after confirmed purchase success, and never auto-start processing. | Credits, packs, purchase/history, cancellation/failure presentation. |

@@ -1,0 +1,4112 @@
+{
+  "pairs": [
+    {
+      "layout": "A",
+      "item": {
+        "width": 1280,
+        "height": 600,
+        "locale": "en"
+      },
+      "ref": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 577,
+              "top": 0,
+              "right": 1280,
+              "bottom": 577,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 32px 40px",
+            "text": "\n  \n  \n  \n\nExitSintel · The searchSintel · The search\n  \n\nTo result\n\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nResumeЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Original waveform with your take overlay. Listening source: Your take.0:00 / 0:05Reference volume \nLine 1 / 3New take\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n  \n\nOpen SettingsNext saves this take and continues.\n  \n\nPrevious\n  \n\nNext\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nPutting your scene togetherYou can leave this page. Your recordings stay saved.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording\n",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 328,
+              "y": 12,
+              "width": 624,
+              "height": 40,
+              "top": 12,
+              "right": 952,
+              "bottom": 52,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nExitSintel · The searchSintel · The search\n  \n\nTo result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 480,
+              "y": 44,
+              "width": 320,
+              "height": 6,
+              "top": 44,
+              "right": 800,
+              "bottom": 50,
+              "left": 480
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 328,
+              "y": 12,
+              "width": 77.609375,
+              "height": 40,
+              "top": 12,
+              "right": 405.609375,
+              "bottom": 52,
+              "left": 328
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px 14px",
+            "text": "\n  \n  \n  \n\nExit",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 328,
+              "y": 56,
+              "width": 624,
+              "height": 351,
+              "top": 56,
+              "right": 952,
+              "bottom": 407,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nResume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 328,
+              "y": 407,
+              "width": 624,
+              "height": 68,
+              "top": 407,
+              "right": 952,
+              "bottom": 475,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "4px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 328,
+              "y": 411,
+              "width": 624,
+              "height": 60,
+              "top": 411,
+              "right": 952,
+              "bottom": 471,
+              "left": 328
+            },
+            "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 328,
+              "y": 475,
+              "width": 624,
+              "height": 62,
+              "top": 475,
+              "right": 952,
+              "bottom": 537,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Original waveform with your take overlay. Listening source: Your take.0:00 / 0:05Reference volume ",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 328,
+              "y": 475,
+              "width": 624,
+              "height": 32,
+              "top": 475,
+              "right": 952,
+              "bottom": 507,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 328,
+              "y": 475,
+              "width": 624,
+              "height": 32,
+              "top": 475,
+              "right": 952,
+              "bottom": 507,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 328,
+              "y": 513,
+              "width": 624,
+              "height": 24,
+              "top": 513,
+              "right": 952,
+              "bottom": 537,
+              "left": 328
+            },
+            "font": "",
+            "padding": "0px",
+            "text": "0:00 / 0:05Reference volume ",
+            "color": "rgb(98, 98, 98)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 976,
+              "y": 56,
+              "width": 272,
+              "height": 234,
+              "top": 56,
+              "right": 1248,
+              "bottom": 290,
+              "left": 976
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "Line 1 / 3New take\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n  \n\nOpen SettingsNext saves this take and continues.\n  \n\nPrevious\n  \n\nNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0.03)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 988,
+              "y": 97,
+              "width": 248,
+              "height": 86,
+              "top": 97,
+              "right": 1236,
+              "bottom": 183,
+              "left": 988
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 988,
+              "y": 143,
+              "width": 248,
+              "height": 40,
+              "top": 143,
+              "right": 1236,
+              "bottom": 183,
+              "left": 988
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px 6px",
+            "text": "\n  \n  \n  \n\nRecord again",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 1115,
+              "y": 97,
+              "width": 121,
+              "height": 40,
+              "top": 97,
+              "right": 1236,
+              "bottom": 137,
+              "left": 1115
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px 6px",
+            "text": "\n  \n\nYour take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 1117,
+              "y": 238,
+              "width": 119,
+              "height": 40,
+              "top": 238,
+              "right": 1236,
+              "bottom": 278,
+              "left": 1117
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px 14px",
+            "text": "\n  \n\nNext",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 1176.71875,
+              "y": 68,
+              "width": 59.28125,
+              "height": 21,
+              "top": 68,
+              "right": 1236,
+              "bottom": 89,
+              "left": 1176.71875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "New take",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 988,
+              "y": 193,
+              "width": 248,
+              "height": 20,
+              "top": 193,
+              "right": 1236,
+              "bottom": 213,
+              "left": 988
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Next saves this take and continues.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 600,
+        "width": 1280,
+        "viewport": 1280
+      },
+      "app": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 577,
+              "top": 0,
+              "right": 1280,
+              "bottom": 577,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 32px 40px",
+            "text": "ExitSintel · The searchSintel · The searchTo resultRecording · 0:05 leftResumeЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Original waveform with your take overlay. Listening source: Your take.Position in dialogue window0:00 / 0:05Reference volumeLine 1 / 3New takeOriginalRecord againYour takeNext saves this take and continues.PreviousNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 328,
+              "y": 12,
+              "width": 624,
+              "height": 40,
+              "top": 12,
+              "right": 952,
+              "bottom": 52,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "ExitSintel · The searchSintel · The searchTo result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 480,
+              "y": 44,
+              "width": 320,
+              "height": 6,
+              "top": 44,
+              "right": 800,
+              "bottom": 50,
+              "left": 480
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 328,
+              "y": 12,
+              "width": 77.609375,
+              "height": 40,
+              "top": 12,
+              "right": 405.609375,
+              "bottom": 52,
+              "left": 328
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px 14px",
+            "text": "Exit",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 328,
+              "y": 56,
+              "width": 624,
+              "height": 351,
+              "top": 56,
+              "right": 952,
+              "bottom": 407,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Recording · 0:05 leftResume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 328,
+              "y": 407,
+              "width": 624,
+              "height": 68,
+              "top": 407,
+              "right": 952,
+              "bottom": 475,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "4px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 328,
+              "y": 411,
+              "width": 624,
+              "height": 60,
+              "top": 411,
+              "right": 952,
+              "bottom": 471,
+              "left": 328
+            },
+            "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 328,
+              "y": 475,
+              "width": 624,
+              "height": 62,
+              "top": 475,
+              "right": 952,
+              "bottom": 537,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Original waveform with your take overlay. Listening source: Your take.Position in dialogue window0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 328,
+              "y": 475,
+              "width": 624,
+              "height": 32,
+              "top": 475,
+              "right": 952,
+              "bottom": 507,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 328,
+              "y": 475,
+              "width": 624,
+              "height": 32,
+              "top": 475,
+              "right": 952,
+              "bottom": 507,
+              "left": 328
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 328,
+              "y": 513,
+              "width": 624,
+              "height": 24,
+              "top": 513,
+              "right": 952,
+              "bottom": 537,
+              "left": 328
+            },
+            "font": "",
+            "padding": "0px",
+            "text": "0:00 / 0:05Reference volume",
+            "color": "rgb(98, 98, 98)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 976,
+              "y": 56,
+              "width": 272,
+              "height": 234,
+              "top": 56,
+              "right": 1248,
+              "bottom": 290,
+              "left": 976
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "Line 1 / 3New takeOriginalRecord againYour takeNext saves this take and continues.PreviousNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0.03)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 988,
+              "y": 97,
+              "width": 248,
+              "height": 86,
+              "top": 97,
+              "right": 1236,
+              "bottom": 183,
+              "left": 988
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "OriginalRecord againYour take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 988,
+              "y": 143,
+              "width": 248,
+              "height": 40,
+              "top": 143,
+              "right": 1236,
+              "bottom": 183,
+              "left": 988
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px 6px",
+            "text": "Record again",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 1115,
+              "y": 97,
+              "width": 121,
+              "height": 40,
+              "top": 97,
+              "right": 1236,
+              "bottom": 137,
+              "left": 1115
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px 6px",
+            "text": "Your take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 1117,
+              "y": 238,
+              "width": 119,
+              "height": 40,
+              "top": 238,
+              "right": 1236,
+              "bottom": 278,
+              "left": 1117
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px 14px",
+            "text": "Next",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 1176.71875,
+              "y": 68,
+              "width": 59.28125,
+              "height": 21,
+              "top": 68,
+              "right": 1236,
+              "bottom": 89,
+              "left": 1176.71875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "New take",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 988,
+              "y": 193,
+              "width": 248,
+              "height": 20,
+              "top": 193,
+              "right": 1236,
+              "bottom": 213,
+              "left": 988
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Next saves this take and continues.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 600,
+        "width": 1280,
+        "viewport": 1280
+      },
+      "diff": []
+    },
+    {
+      "layout": "A",
+      "item": {
+        "width": 390,
+        "height": 844,
+        "locale": "en"
+      },
+      "ref": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 887.375,
+              "top": 0,
+              "right": 390,
+              "bottom": 887.375,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 16px 32px",
+            "text": "\n  \n  \n  \n\nExitSintel · The searchSintel · The search\n  \n\nTo result\n\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nResumeЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Original waveform with your take overlay. Listening source: Your take.0:00 / 0:05Reference volume \nLine 1 / 3New take\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n  \n\nOpen SettingsNext saves this take and continues.\n  \n\nPrevious\n  \n\nNext\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nPutting your scene togetherYou can leave this page. Your recordings stay saved.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording\n",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 358,
+              "height": 100,
+              "top": 12,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nExitSintel · The searchSintel · The search\n  \n\nTo result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 16,
+              "y": 106,
+              "width": 358,
+              "height": 6,
+              "top": 106,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 77.265625,
+              "height": 48,
+              "top": 12,
+              "right": 93.265625,
+              "bottom": 60,
+              "left": 16
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "\n  \n  \n  \n\nExit",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 16,
+              "y": 128,
+              "width": 358,
+              "height": 201.375,
+              "top": 128,
+              "right": 374,
+              "bottom": 329.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nResume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 16,
+              "y": 329.375,
+              "width": 358,
+              "height": 156,
+              "top": 329.375,
+              "right": 374,
+              "bottom": 485.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "14px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 16,
+              "y": 343.375,
+              "width": 358,
+              "height": 128,
+              "top": 343.375,
+              "right": 374,
+              "bottom": 471.375,
+              "left": 16
+            },
+            "font": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 126,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 611.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Original waveform with your take overlay. Listening source: Your take.0:00 / 0:05Reference volume ",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 16,
+              "y": 555.375,
+              "width": 358,
+              "height": 56,
+              "top": 555.375,
+              "right": 374,
+              "bottom": 611.375,
+              "left": 16
+            },
+            "font": "",
+            "padding": "4px 0px 0px",
+            "text": "0:00 / 0:05Reference volume ",
+            "color": "rgb(98, 98, 98)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 16,
+              "y": 631.375,
+              "width": 358,
+              "height": 224,
+              "top": 631.375,
+              "right": 374,
+              "bottom": 855.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "16px",
+            "text": "Line 1 / 3New take\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n  \n\nOpen SettingsNext saves this take and continues.\n  \n\nPrevious\n  \n\nNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0.03)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 32,
+              "y": 680.375,
+              "width": 326,
+              "height": 48,
+              "top": 680.375,
+              "right": 358,
+              "bottom": 728.375,
+              "left": 32
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 133.9375,
+              "y": 680.375,
+              "width": 122.109375,
+              "height": 48,
+              "top": 680.375,
+              "right": 256.046875,
+              "bottom": 728.375,
+              "left": 133.9375
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 8px",
+            "text": "\n  \n  \n  \n\nRecord again",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 264.046875,
+              "y": 680.375,
+              "width": 93.9375,
+              "height": 48,
+              "top": 680.375,
+              "right": 357.984375,
+              "bottom": 728.375,
+              "left": 264.046875
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 8px",
+            "text": "\n  \n\nYour take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 200,
+              "y": 791.375,
+              "width": 158,
+              "height": 48,
+              "top": 791.375,
+              "right": 358,
+              "bottom": 839.375,
+              "left": 200
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "\n  \n\nNext",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 298.71875,
+              "y": 647.375,
+              "width": 59.28125,
+              "height": 21,
+              "top": 647.375,
+              "right": 358,
+              "bottom": 668.375,
+              "left": 298.71875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "New take",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 32,
+              "y": 738.375,
+              "width": 326,
+              "height": 20,
+              "top": 738.375,
+              "right": 358,
+              "bottom": 758.375,
+              "left": 32
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Next saves this take and continues.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 888,
+        "width": 390,
+        "viewport": 390
+      },
+      "app": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 887.375,
+              "top": 0,
+              "right": 390,
+              "bottom": 887.375,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 16px 32px",
+            "text": "ExitSintel · The searchSintel · The searchTo resultRecording · 0:05 leftResumeЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Original waveform with your take overlay. Listening source: Your take.Position in dialogue window0:00 / 0:05Reference volumeLine 1 / 3New takeOriginalRecord againYour takeNext saves this take and continues.PreviousNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 358,
+              "height": 100,
+              "top": 12,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "ExitSintel · The searchSintel · The searchTo result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 16,
+              "y": 106,
+              "width": 358,
+              "height": 6,
+              "top": 106,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 77.265625,
+              "height": 48,
+              "top": 12,
+              "right": 93.265625,
+              "bottom": 60,
+              "left": 16
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "Exit",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 16,
+              "y": 128,
+              "width": 358,
+              "height": 201.375,
+              "top": 128,
+              "right": 374,
+              "bottom": 329.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Recording · 0:05 leftResume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 16,
+              "y": 329.375,
+              "width": 358,
+              "height": 156,
+              "top": 329.375,
+              "right": 374,
+              "bottom": 485.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "14px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 16,
+              "y": 343.375,
+              "width": 358,
+              "height": 128,
+              "top": 343.375,
+              "right": 374,
+              "bottom": 471.375,
+              "left": 16
+            },
+            "font": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 126,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 611.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Original waveform with your take overlay. Listening source: Your take.Position in dialogue window0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 16,
+              "y": 555.375,
+              "width": 358,
+              "height": 56,
+              "top": 555.375,
+              "right": 374,
+              "bottom": 611.375,
+              "left": 16
+            },
+            "font": "",
+            "padding": "4px 0px 0px",
+            "text": "0:00 / 0:05Reference volume",
+            "color": "rgb(98, 98, 98)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 16,
+              "y": 631.375,
+              "width": 358,
+              "height": 224,
+              "top": 631.375,
+              "right": 374,
+              "bottom": 855.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "16px",
+            "text": "Line 1 / 3New takeOriginalRecord againYour takeNext saves this take and continues.PreviousNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0.03)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 32,
+              "y": 680.375,
+              "width": 326,
+              "height": 48,
+              "top": 680.375,
+              "right": 358,
+              "bottom": 728.375,
+              "left": 32
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "OriginalRecord againYour take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 133.9375,
+              "y": 680.375,
+              "width": 122.109375,
+              "height": 48,
+              "top": 680.375,
+              "right": 256.046875,
+              "bottom": 728.375,
+              "left": 133.9375
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Record again",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 264.046875,
+              "y": 680.375,
+              "width": 93.9375,
+              "height": 48,
+              "top": 680.375,
+              "right": 357.984375,
+              "bottom": 728.375,
+              "left": 264.046875
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Your take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 200,
+              "y": 791.375,
+              "width": 158,
+              "height": 48,
+              "top": 791.375,
+              "right": 358,
+              "bottom": 839.375,
+              "left": 200
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "Next",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 298.71875,
+              "y": 647.375,
+              "width": 59.28125,
+              "height": 21,
+              "top": 647.375,
+              "right": 358,
+              "bottom": 668.375,
+              "left": 298.71875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "New take",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 32,
+              "y": 738.375,
+              "width": 326,
+              "height": 20,
+              "top": 738.375,
+              "right": 358,
+              "bottom": 758.375,
+              "left": 32
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Next saves this take and continues.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 887,
+        "width": 390,
+        "viewport": 390
+      },
+      "diff": [
+        {
+          "s": "#record",
+          "key": "padding",
+          "ref": "12px 8px",
+          "app": "8px"
+        },
+        {
+          "s": "#take",
+          "key": "padding",
+          "ref": "12px 8px",
+          "app": "8px"
+        }
+      ]
+    },
+    {
+      "layout": "A",
+      "item": {
+        "width": 390,
+        "height": 844,
+        "locale": "ru"
+      },
+      "ref": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 911.375,
+              "top": 0,
+              "right": 390,
+              "bottom": 911.375,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 16px 32px",
+            "text": "\n  \n  \n  \n\nВыйтиSintel · The searchSintel · The search\n  \n\nК результату\n\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nПродолжитьЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Исходная звуковая волна с наложением вашего дубля. Прослушивание: ваш дубль.0:00 / 0:05Громкость оригинала \nРеплика 1 / 3Новый дубль\n  \n  \n\nОригинал\n  \n  \n  \n\nПерезаписать\n  \n\nВаш дубль\n  \n  \n\nOpen Settings«Далее» сохраняет этот дубль.\n  \n\nНазад\n  \n\nДалее\n\n  \n\nСобираем ваше видео…Все три сохранённых дубля в безопасности.ОригиналМой дубляжЗагружается «Мой дубляж»…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nPutting your scene togetherYou can leave this page. Your recordings stay saved.\n  \n  \n  \n\nСкачать мой дубляж\n  \n  \n\nПовторить сборку\n  \n  \n\nВернуться к записи\n",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 358,
+              "height": 100,
+              "top": 12,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nВыйтиSintel · The searchSintel · The search\n  \n\nК результату",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 16,
+              "y": 106,
+              "width": 358,
+              "height": 6,
+              "top": 106,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 97,
+              "height": 48,
+              "top": 12,
+              "right": 113,
+              "bottom": 60,
+              "left": 16
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "\n  \n  \n  \n\nВыйти",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 16,
+              "y": 128,
+              "width": 358,
+              "height": 201.375,
+              "top": 128,
+              "right": 374,
+              "bottom": 329.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nПродолжить",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 16,
+              "y": 329.375,
+              "width": 358,
+              "height": 156,
+              "top": 329.375,
+              "right": 374,
+              "bottom": 485.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "14px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 16,
+              "y": 343.375,
+              "width": 358,
+              "height": 128,
+              "top": 343.375,
+              "right": 374,
+              "bottom": 471.375,
+              "left": 16
+            },
+            "font": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 126,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 611.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Исходная звуковая волна с наложением вашего дубля. Прослушивание: ваш дубль.0:00 / 0:05Громкость оригинала ",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 16,
+              "y": 555.375,
+              "width": 358,
+              "height": 56,
+              "top": 555.375,
+              "right": 374,
+              "bottom": 611.375,
+              "left": 16
+            },
+            "font": "",
+            "padding": "4px 0px 0px",
+            "text": "0:00 / 0:05Громкость оригинала ",
+            "color": "rgb(98, 98, 98)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 16,
+              "y": 631.375,
+              "width": 358,
+              "height": 248,
+              "top": 631.375,
+              "right": 374,
+              "bottom": 879.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "16px",
+            "text": "Реплика 1 / 3Новый дубль\n  \n  \n\nОригинал\n  \n  \n  \n\nПерезаписать\n  \n\nВаш дубль\n  \n  \n\nOpen Settings«Далее» сохраняет этот дубль.\n  \n\nНазад\n  \n\nДалее",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0.03)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 32,
+              "y": 680.375,
+              "width": 326,
+              "height": 72,
+              "top": 680.375,
+              "right": 358,
+              "bottom": 752.375,
+              "left": 32
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n\nОригинал\n  \n  \n  \n\nПерезаписать\n  \n\nВаш дубль",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 133.9375,
+              "y": 680.375,
+              "width": 122.109375,
+              "height": 72,
+              "top": 680.375,
+              "right": 256.046875,
+              "bottom": 752.375,
+              "left": 133.9375
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 8px",
+            "text": "\n  \n  \n  \n\nПерезаписать",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 264.046875,
+              "y": 680.375,
+              "width": 93.9375,
+              "height": 72,
+              "top": 680.375,
+              "right": 357.984375,
+              "bottom": 752.375,
+              "left": 264.046875
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 8px",
+            "text": "\n  \n\nВаш дубль",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 200,
+              "y": 815.375,
+              "width": 158,
+              "height": 48,
+              "top": 815.375,
+              "right": 358,
+              "bottom": 863.375,
+              "left": 200
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "\n  \n\nДалее",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 274.109375,
+              "y": 647.375,
+              "width": 83.890625,
+              "height": 21,
+              "top": 647.375,
+              "right": 358,
+              "bottom": 668.375,
+              "left": 274.109375
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Новый дубль",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 32,
+              "y": 762.375,
+              "width": 326,
+              "height": 20,
+              "top": 762.375,
+              "right": 358,
+              "bottom": 782.375,
+              "left": 32
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "«Далее» сохраняет этот дубль.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 912,
+        "width": 390,
+        "viewport": 390
+      },
+      "app": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 903.375,
+              "top": 0,
+              "right": 390,
+              "bottom": 903.375,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 16px 32px",
+            "text": "ВыходSintel · The searchSintel · The searchК результатуЗапись · осталось 0:05ПродолжитьЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Исходная звуковая волна с наложением вашего дубля. Прослушивание: ваш дубль.Позиция в диалоговом окне0:00 / 0:05Громкость оригиналаРеплика 1 / 3Новый дубльОригиналПерезаписатьВаш дубль«Далее» сохраняет этот дубль.НазадДалее",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 358,
+              "height": 100,
+              "top": 12,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "ВыходSintel · The searchSintel · The searchК результату",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 16,
+              "y": 106,
+              "width": 358,
+              "height": 6,
+              "top": 106,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 96.15625,
+              "height": 48,
+              "top": 12,
+              "right": 112.15625,
+              "bottom": 60,
+              "left": 16
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "Выход",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 16,
+              "y": 128,
+              "width": 358,
+              "height": 201.375,
+              "top": 128,
+              "right": 374,
+              "bottom": 329.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Запись · осталось 0:05Продолжить",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 16,
+              "y": 329.375,
+              "width": 358,
+              "height": 156,
+              "top": 329.375,
+              "right": 374,
+              "bottom": 485.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "14px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 16,
+              "y": 343.375,
+              "width": 358,
+              "height": 128,
+              "top": 343.375,
+              "right": 374,
+              "bottom": 471.375,
+              "left": 16
+            },
+            "font": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 126,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 611.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Исходная звуковая волна с наложением вашего дубля. Прослушивание: ваш дубль.Позиция в диалоговом окне0:00 / 0:05Громкость оригинала",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 16,
+              "y": 555.375,
+              "width": 358,
+              "height": 56,
+              "top": 555.375,
+              "right": 374,
+              "bottom": 611.375,
+              "left": 16
+            },
+            "font": "",
+            "padding": "4px 0px 0px",
+            "text": "0:00 / 0:05Громкость оригинала",
+            "color": "rgb(98, 98, 98)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 16,
+              "y": 631.375,
+              "width": 358,
+              "height": 240,
+              "top": 631.375,
+              "right": 374,
+              "bottom": 871.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "16px",
+            "text": "Реплика 1 / 3Новый дубльОригиналПерезаписатьВаш дубль«Далее» сохраняет этот дубль.НазадДалее",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0.03)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 32,
+              "y": 680.375,
+              "width": 326,
+              "height": 64,
+              "top": 680.375,
+              "right": 358,
+              "bottom": 744.375,
+              "left": 32
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "ОригиналПерезаписатьВаш дубль",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 133.9375,
+              "y": 680.375,
+              "width": 122.109375,
+              "height": 64,
+              "top": 680.375,
+              "right": 256.046875,
+              "bottom": 744.375,
+              "left": 133.9375
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Перезаписать",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 264.046875,
+              "y": 680.375,
+              "width": 93.9375,
+              "height": 64,
+              "top": 680.375,
+              "right": 357.984375,
+              "bottom": 744.375,
+              "left": 264.046875
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Ваш дубль",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 200,
+              "y": 807.375,
+              "width": 158,
+              "height": 48,
+              "top": 807.375,
+              "right": 358,
+              "bottom": 855.375,
+              "left": 200
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "Далее",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 274.109375,
+              "y": 647.375,
+              "width": 83.890625,
+              "height": 21,
+              "top": 647.375,
+              "right": 358,
+              "bottom": 668.375,
+              "left": 274.109375
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Новый дубль",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 32,
+              "y": 754.375,
+              "width": 326,
+              "height": 20,
+              "top": 754.375,
+              "right": 358,
+              "bottom": 774.375,
+              "left": 32
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "«Далее» сохраняет этот дубль.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 903,
+        "width": 390,
+        "viewport": 390
+      },
+      "diff": [
+        {
+          "s": "#main",
+          "key": "height",
+          "ref": 911.375,
+          "app": 903.375
+        },
+        {
+          "s": "#exit",
+          "key": "width",
+          "ref": 97,
+          "app": 96.15625
+        },
+        {
+          "s": ".performance",
+          "key": "height",
+          "ref": 248,
+          "app": 240
+        },
+        {
+          "s": ".performance-actions,.studio-controls",
+          "key": "height",
+          "ref": 72,
+          "app": 64
+        },
+        {
+          "s": "#record",
+          "key": "height",
+          "ref": 72,
+          "app": 64
+        },
+        {
+          "s": "#record",
+          "key": "padding",
+          "ref": "12px 8px",
+          "app": "8px"
+        },
+        {
+          "s": "#take",
+          "key": "height",
+          "ref": 72,
+          "app": 64
+        },
+        {
+          "s": "#take",
+          "key": "padding",
+          "ref": "12px 8px",
+          "app": "8px"
+        },
+        {
+          "s": "#next",
+          "key": "y",
+          "ref": 815.375,
+          "app": 807.375
+        },
+        {
+          "s": "#take-help",
+          "key": "y",
+          "ref": 762.375,
+          "app": 754.375
+        }
+      ]
+    },
+    {
+      "layout": "B",
+      "item": {
+        "width": 1280,
+        "height": 600,
+        "locale": "en"
+      },
+      "ref": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 334.21875,
+              "y": 4,
+              "width": 611.546875,
+              "height": 595.984375,
+              "top": 4,
+              "right": 945.765625,
+              "bottom": 599.984375,
+              "left": 334.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px 16px 6px",
+            "text": "\n\n  \n  \n  \n\nExitSintel · The searchSintel · The searchLine 1 / 3\n\n \n  \n  \n  \n\nRecording · 0:00 left\n  \n\nResume\n Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.\n Original waveform with your take overlay. Listening source: Your take.0:00 / 0:05Reference volume\n \n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nNextNew takeNext saves this take and continues.\n  \n  \n\nOpen Settings\n  \n\nTo result\n\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nPutting your scene togetherYou can leave this page. Your recordings stay saved.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording\n",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 350.21875,
+              "y": 12,
+              "width": 579.546875,
+              "height": 40,
+              "top": 12,
+              "right": 929.765625,
+              "bottom": 52,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nExitSintel · The searchSintel · The searchLine 1 / 3",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 475.71875,
+              "y": 44,
+              "width": 328.53125,
+              "height": 6,
+              "top": 44,
+              "right": 804.25,
+              "bottom": 50,
+              "left": 475.71875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 350.21875,
+              "y": 12,
+              "width": 77.609375,
+              "height": 40,
+              "top": 12,
+              "right": 427.828125,
+              "bottom": 52,
+              "left": 350.21875
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px 14px",
+            "text": "\n  \n  \n  \n\nExit",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 350.21875,
+              "y": 56,
+              "width": 579.546875,
+              "height": 325.984375,
+              "top": 56,
+              "right": 929.765625,
+              "bottom": 381.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nResume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 350.21875,
+              "y": 381.984375,
+              "width": 579.546875,
+              "height": 68,
+              "top": 381.984375,
+              "right": 929.765625,
+              "bottom": 449.984375,
+              "left": 350.21875
+            },
+            "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "4px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 350.21875,
+              "y": 385.984375,
+              "width": 579.546875,
+              "height": 60,
+              "top": 385.984375,
+              "right": 929.765625,
+              "bottom": 445.984375,
+              "left": 350.21875
+            },
+            "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 350.21875,
+              "y": 449.984375,
+              "width": 579.546875,
+              "height": 56,
+              "top": 449.984375,
+              "right": 929.765625,
+              "bottom": 505.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Original waveform with your take overlay. Listening source: Your take.0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 350.21875,
+              "y": 449.984375,
+              "width": 579.546875,
+              "height": 32,
+              "top": 449.984375,
+              "right": 929.765625,
+              "bottom": 481.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 350.21875,
+              "y": 449.984375,
+              "width": 579.546875,
+              "height": 32,
+              "top": 449.984375,
+              "right": 929.765625,
+              "bottom": 481.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 350.21875,
+              "y": 481.984375,
+              "width": 579.546875,
+              "height": 24,
+              "top": 481.984375,
+              "right": 929.765625,
+              "bottom": 505.984375,
+              "left": 350.21875
+            },
+            "font": "",
+            "padding": "0px",
+            "text": "0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 350.21875,
+              "y": 505.984375,
+              "width": 579.546875,
+              "height": 88,
+              "top": 505.984375,
+              "right": 929.765625,
+              "bottom": 593.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "24px 0px 0px",
+            "text": "\n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nNextNew takeNext saves this take and continues.\n  \n  \n\nOpen Settings\n  \n\nTo result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 350.21875,
+              "y": 529.984375,
+              "width": 579.546875,
+              "height": 40,
+              "top": 529.984375,
+              "right": 929.765625,
+              "bottom": 569.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 575.984375,
+              "y": 529.984375,
+              "width": 128,
+              "height": 40,
+              "top": 529.984375,
+              "right": 703.984375,
+              "bottom": 569.984375,
+              "left": 575.984375
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px",
+            "text": "\n  \n  \n  \n\nRecord again",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 711.984375,
+              "y": 529.984375,
+              "width": 96,
+              "height": 40,
+              "top": 529.984375,
+              "right": 807.984375,
+              "bottom": 569.984375,
+              "left": 711.984375
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px",
+            "text": "\n  \n\nYour take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 815.984375,
+              "y": 529.984375,
+              "width": 96,
+              "height": 40,
+              "top": 529.984375,
+              "right": 911.984375,
+              "bottom": 569.984375,
+              "left": 815.984375
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px",
+            "text": "\n  \n\nNext",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 494.046875,
+              "y": 573.984375,
+              "width": 59.28125,
+              "height": 20,
+              "top": 573.984375,
+              "right": 553.328125,
+              "bottom": 593.984375,
+              "left": 494.046875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "New take",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 565.328125,
+              "y": 573.984375,
+              "width": 220.609375,
+              "height": 20,
+              "top": 573.984375,
+              "right": 785.9375,
+              "bottom": 593.984375,
+              "left": 565.328125
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Next saves this take and continues.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 625,
+        "width": 1280,
+        "viewport": 1280
+      },
+      "app": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 334.21875,
+              "y": 4,
+              "width": 611.546875,
+              "height": 595.984375,
+              "top": 4,
+              "right": 945.765625,
+              "bottom": 599.984375,
+              "left": 334.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px 16px 6px",
+            "text": "ExitSintel · The searchSintel · The searchLine 1 / 3Recording · 0:05 leftResumeЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Original waveform with your take overlay. Listening source: Your take.Position in dialogue window0:00 / 0:05Reference volumePreviousOriginalRecord againYour takeNextNew takeNext saves this take and continues.To result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 350.21875,
+              "y": 12,
+              "width": 579.546875,
+              "height": 40,
+              "top": 12,
+              "right": 929.765625,
+              "bottom": 52,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "ExitSintel · The searchSintel · The searchLine 1 / 3",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 475.71875,
+              "y": 44,
+              "width": 328.53125,
+              "height": 6,
+              "top": 44,
+              "right": 804.25,
+              "bottom": 50,
+              "left": 475.71875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 350.21875,
+              "y": 12,
+              "width": 77.609375,
+              "height": 40,
+              "top": 12,
+              "right": 427.828125,
+              "bottom": 52,
+              "left": 350.21875
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px 14px",
+            "text": "Exit",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 350.21875,
+              "y": 56,
+              "width": 579.546875,
+              "height": 325.984375,
+              "top": 56,
+              "right": 929.765625,
+              "bottom": 381.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Recording · 0:05 leftResume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 350.21875,
+              "y": 381.984375,
+              "width": 579.546875,
+              "height": 68,
+              "top": 381.984375,
+              "right": 929.765625,
+              "bottom": 449.984375,
+              "left": 350.21875
+            },
+            "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "4px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 350.21875,
+              "y": 385.984375,
+              "width": 579.546875,
+              "height": 60,
+              "top": 385.984375,
+              "right": 929.765625,
+              "bottom": 445.984375,
+              "left": 350.21875
+            },
+            "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 350.21875,
+              "y": 449.984375,
+              "width": 579.546875,
+              "height": 56,
+              "top": 449.984375,
+              "right": 929.765625,
+              "bottom": 505.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Original waveform with your take overlay. Listening source: Your take.Position in dialogue window0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 350.21875,
+              "y": 449.984375,
+              "width": 579.546875,
+              "height": 32,
+              "top": 449.984375,
+              "right": 929.765625,
+              "bottom": 481.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 350.21875,
+              "y": 449.984375,
+              "width": 579.546875,
+              "height": 32,
+              "top": 449.984375,
+              "right": 929.765625,
+              "bottom": 481.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 350.21875,
+              "y": 481.984375,
+              "width": 579.546875,
+              "height": 24,
+              "top": 481.984375,
+              "right": 929.765625,
+              "bottom": 505.984375,
+              "left": 350.21875
+            },
+            "font": "",
+            "padding": "0px",
+            "text": "0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 350.21875,
+              "y": 505.984375,
+              "width": 579.546875,
+              "height": 88,
+              "top": 505.984375,
+              "right": 929.765625,
+              "bottom": 593.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "24px 0px 0px",
+            "text": "PreviousOriginalRecord againYour takeNextNew takeNext saves this take and continues.To result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 350.21875,
+              "y": 529.984375,
+              "width": 579.546875,
+              "height": 40,
+              "top": 529.984375,
+              "right": 929.765625,
+              "bottom": 569.984375,
+              "left": 350.21875
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "PreviousOriginalRecord againYour takeNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 575.984375,
+              "y": 529.984375,
+              "width": 128,
+              "height": 40,
+              "top": 529.984375,
+              "right": 703.984375,
+              "bottom": 569.984375,
+              "left": 575.984375
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px",
+            "text": "Record again",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 711.984375,
+              "y": 529.984375,
+              "width": 96,
+              "height": 40,
+              "top": 529.984375,
+              "right": 807.984375,
+              "bottom": 569.984375,
+              "left": 711.984375
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px",
+            "text": "Your take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 815.984375,
+              "y": 529.984375,
+              "width": 96,
+              "height": 40,
+              "top": 529.984375,
+              "right": 911.984375,
+              "bottom": 569.984375,
+              "left": 815.984375
+            },
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "10px",
+            "text": "Next",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 494.046875,
+              "y": 573.984375,
+              "width": 59.28125,
+              "height": 20,
+              "top": 573.984375,
+              "right": 553.328125,
+              "bottom": 593.984375,
+              "left": 494.046875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "New take",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 565.328125,
+              "y": 573.984375,
+              "width": 220.609375,
+              "height": 20,
+              "top": 573.984375,
+              "right": 785.9375,
+              "bottom": 593.984375,
+              "left": 565.328125
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Next saves this take and continues.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 604,
+        "width": 1280,
+        "viewport": 1280
+      },
+      "diff": []
+    },
+    {
+      "layout": "B",
+      "item": {
+        "width": 390,
+        "height": 844,
+        "locale": "en"
+      },
+      "ref": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 785.375,
+              "top": 0,
+              "right": 390,
+              "bottom": 785.375,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 16px 24px",
+            "text": "\n\n  \n  \n  \n\nExitSintel · The searchSintel · The searchLine 1 / 3\n\n \n  \n  \n  \n\nRecording · 0:00 left\n  \n\nResume\n Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.\n Original waveform with your take overlay. Listening source: Your take.0:00 / 0:05Reference volume\n \n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nNextNew takeNext saves this take and continues.\n  \n  \n\nOpen Settings\n  \n\nTo result\n\n\n  \n\nAssembling your video…Your three saved lines are safe.OriginalMy dubLoading My dub…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nPutting your scene togetherYou can leave this page. Your recordings stay saved.\n  \n  \n  \n\nDownload My dub\n  \n  \n\nRetry assembly\n  \n  \n\nReturn to recording\n",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 358,
+              "height": 100,
+              "top": 12,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nExitSintel · The searchSintel · The searchLine 1 / 3",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 16,
+              "y": 106,
+              "width": 358,
+              "height": 6,
+              "top": 106,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 77.265625,
+              "height": 48,
+              "top": 12,
+              "right": 93.265625,
+              "bottom": 60,
+              "left": 16
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "\n  \n  \n  \n\nExit",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 16,
+              "y": 128,
+              "width": 358,
+              "height": 201.375,
+              "top": 128,
+              "right": 374,
+              "bottom": 329.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nResume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 16,
+              "y": 329.375,
+              "width": 358,
+              "height": 156,
+              "top": 329.375,
+              "right": 374,
+              "bottom": 485.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "14px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 16,
+              "y": 343.375,
+              "width": 358,
+              "height": 128,
+              "top": 343.375,
+              "right": 374,
+              "bottom": 471.375,
+              "left": 16
+            },
+            "font": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 120,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 605.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Original waveform with your take overlay. Listening source: Your take.0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 16,
+              "y": 549.375,
+              "width": 358,
+              "height": 56,
+              "top": 549.375,
+              "right": 374,
+              "bottom": 605.375,
+              "left": 16
+            },
+            "font": "",
+            "padding": "4px 0px 0px",
+            "text": "0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 16,
+              "y": 605.375,
+              "width": 358,
+              "height": 156,
+              "top": 605.375,
+              "right": 374,
+              "bottom": 761.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "24px 0px 0px",
+            "text": "\n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nNextNew takeNext saves this take and continues.\n  \n  \n\nOpen Settings\n  \n\nTo result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 16,
+              "y": 629.375,
+              "width": 358,
+              "height": 104,
+              "top": 629.375,
+              "right": 374,
+              "bottom": 733.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n\nPrevious\n  \n  \n\nOriginal\n  \n  \n  \n\nRecord again\n  \n\nYour take\n  \n\nNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 129.21875,
+              "y": 629.375,
+              "width": 131.546875,
+              "height": 48,
+              "top": 629.375,
+              "right": 260.765625,
+              "bottom": 677.375,
+              "left": 129.21875
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "\n  \n  \n  \n\nRecord again",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 268.765625,
+              "y": 629.375,
+              "width": 105.21875,
+              "height": 48,
+              "top": 629.375,
+              "right": 373.984375,
+              "bottom": 677.375,
+              "left": 268.765625
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "\n  \n\nYour take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 268.765625,
+              "y": 685.375,
+              "width": 105.21875,
+              "height": 48,
+              "top": 685.375,
+              "right": 373.984375,
+              "bottom": 733.375,
+              "left": 268.765625
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "\n  \n\nNext",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 51.046875,
+              "y": 741.375,
+              "width": 59.28125,
+              "height": 20,
+              "top": 741.375,
+              "right": 110.328125,
+              "bottom": 761.375,
+              "left": 51.046875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "New take",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 118.328125,
+              "y": 741.375,
+              "width": 220.609375,
+              "height": 20,
+              "top": 741.375,
+              "right": 338.9375,
+              "bottom": 761.375,
+              "left": 118.328125
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Next saves this take and continues.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 844,
+        "width": 390,
+        "viewport": 390
+      },
+      "app": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 785.375,
+              "top": 0,
+              "right": 390,
+              "bottom": 785.375,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 16px 24px",
+            "text": "ExitSintel · The searchSintel · The searchLine 1 / 3Recording · 0:05 leftResumeЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Original waveform with your take overlay. Listening source: Your take.Position in dialogue window0:00 / 0:05Reference volumePreviousOriginalRecord againYour takeNextNew takeNext saves this take and continues.To result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 358,
+              "height": 100,
+              "top": 12,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "ExitSintel · The searchSintel · The searchLine 1 / 3",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 16,
+              "y": 106,
+              "width": 358,
+              "height": 6,
+              "top": 106,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 77.265625,
+              "height": 48,
+              "top": 12,
+              "right": 93.265625,
+              "bottom": 60,
+              "left": 16
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "Exit",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 16,
+              "y": 128,
+              "width": 358,
+              "height": 201.375,
+              "top": 128,
+              "right": 374,
+              "bottom": 329.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Recording · 0:05 leftResume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 16,
+              "y": 329.375,
+              "width": 358,
+              "height": 156,
+              "top": 329.375,
+              "right": 374,
+              "bottom": 485.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "14px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 16,
+              "y": 343.375,
+              "width": 358,
+              "height": 128,
+              "top": 343.375,
+              "right": 374,
+              "bottom": 471.375,
+              "left": 16
+            },
+            "font": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 120,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 605.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Original waveform with your take overlay. Listening source: Your take.Position in dialogue window0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 16,
+              "y": 549.375,
+              "width": 358,
+              "height": 56,
+              "top": 549.375,
+              "right": 374,
+              "bottom": 605.375,
+              "left": 16
+            },
+            "font": "",
+            "padding": "4px 0px 0px",
+            "text": "0:00 / 0:05Reference volume",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 16,
+              "y": 605.375,
+              "width": 358,
+              "height": 156,
+              "top": 605.375,
+              "right": 374,
+              "bottom": 761.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "24px 0px 0px",
+            "text": "PreviousOriginalRecord againYour takeNextNew takeNext saves this take and continues.To result",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 16,
+              "y": 629.375,
+              "width": 358,
+              "height": 104,
+              "top": 629.375,
+              "right": 374,
+              "bottom": 733.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "PreviousOriginalRecord againYour takeNext",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 129.21875,
+              "y": 629.375,
+              "width": 131.546875,
+              "height": 48,
+              "top": 629.375,
+              "right": 260.765625,
+              "bottom": 677.375,
+              "left": 129.21875
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Record again",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 268.765625,
+              "y": 629.375,
+              "width": 105.21875,
+              "height": 48,
+              "top": 629.375,
+              "right": 373.984375,
+              "bottom": 677.375,
+              "left": 268.765625
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Your take",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 268.765625,
+              "y": 685.375,
+              "width": 105.21875,
+              "height": 48,
+              "top": 685.375,
+              "right": 373.984375,
+              "bottom": 733.375,
+              "left": 268.765625
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Next",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 51.046875,
+              "y": 741.375,
+              "width": 59.28125,
+              "height": 20,
+              "top": 741.375,
+              "right": 110.328125,
+              "bottom": 761.375,
+              "left": 51.046875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "New take",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 118.328125,
+              "y": 741.375,
+              "width": 220.609375,
+              "height": 20,
+              "top": 741.375,
+              "right": 338.9375,
+              "bottom": 761.375,
+              "left": 118.328125
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Next saves this take and continues.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 844,
+        "width": 390,
+        "viewport": 390
+      },
+      "diff": []
+    },
+    {
+      "layout": "B",
+      "item": {
+        "width": 390,
+        "height": 844,
+        "locale": "ru"
+      },
+      "ref": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 785.375,
+              "top": 0,
+              "right": 390,
+              "bottom": 785.375,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 16px 24px",
+            "text": "\n\n  \n  \n  \n\nВыйтиSintel · The searchSintel · The searchРеплика 1 / 3\n\n \n  \n  \n  \n\nRecording · 0:00 left\n  \n\nПродолжить\n Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.\n Исходная звуковая волна с наложением вашего дубля. Прослушивание: ваш дубль.0:00 / 0:05Громкость оригинала\n \n  \n\nНазад\n  \n  \n\nОригинал\n  \n  \n  \n\nПерезаписать\n  \n\nВаш дубль\n  \n\nДалееНовый дубль«Далее» сохраняет этот дубль.\n  \n  \n\nOpen Settings\n  \n\nК результату\n\n\n  \n\nСобираем ваше видео…Все три сохранённых дубля в безопасности.ОригиналМой дубляжЗагружается «Мой дубляж»…\n  \n\n0:00 / 0:13\n  \n  \n  \n\n\n\n  \n  \n  \n  \n\nPutting your scene togetherYou can leave this page. Your recordings stay saved.\n  \n  \n  \n\nСкачать мой дубляж\n  \n  \n\nПовторить сборку\n  \n  \n\nВернуться к записи\n",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 358,
+              "height": 100,
+              "top": 12,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nВыйтиSintel · The searchSintel · The searchРеплика 1 / 3",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 16,
+              "y": 106,
+              "width": 358,
+              "height": 6,
+              "top": 106,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 97,
+              "height": 48,
+              "top": 12,
+              "right": 113,
+              "bottom": 60,
+              "left": 16
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "\n  \n  \n  \n\nВыйти",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 16,
+              "y": 128,
+              "width": 358,
+              "height": 201.375,
+              "top": 128,
+              "right": 374,
+              "bottom": 329.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n  \n  \n\nRecording · 0:00 left\n  \n\nПродолжить",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 16,
+              "y": 329.375,
+              "width": 358,
+              "height": 156,
+              "top": 329.375,
+              "right": 374,
+              "bottom": 485.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "14px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 16,
+              "y": 343.375,
+              "width": 358,
+              "height": 128,
+              "top": 343.375,
+              "right": 374,
+              "bottom": 471.375,
+              "left": 16
+            },
+            "font": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 120,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 605.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Исходная звуковая волна с наложением вашего дубля. Прослушивание: ваш дубль.0:00 / 0:05Громкость оригинала",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 16,
+              "y": 549.375,
+              "width": 358,
+              "height": 56,
+              "top": 549.375,
+              "right": 374,
+              "bottom": 605.375,
+              "left": 16
+            },
+            "font": "",
+            "padding": "4px 0px 0px",
+            "text": "0:00 / 0:05Громкость оригинала",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 16,
+              "y": 605.375,
+              "width": 358,
+              "height": 156,
+              "top": 605.375,
+              "right": 374,
+              "bottom": 761.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "24px 0px 0px",
+            "text": "\n  \n\nНазад\n  \n  \n\nОригинал\n  \n  \n  \n\nПерезаписать\n  \n\nВаш дубль\n  \n\nДалееНовый дубль«Далее» сохраняет этот дубль.\n  \n  \n\nOpen Settings\n  \n\nК результату",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 16,
+              "y": 629.375,
+              "width": 358,
+              "height": 104,
+              "top": 629.375,
+              "right": 374,
+              "bottom": 733.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "\n  \n\nНазад\n  \n  \n\nОригинал\n  \n  \n  \n\nПерезаписать\n  \n\nВаш дубль\n  \n\nДалее",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 129.21875,
+              "y": 629.375,
+              "width": 131.546875,
+              "height": 48,
+              "top": 629.375,
+              "right": 260.765625,
+              "bottom": 677.375,
+              "left": 129.21875
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "\n  \n  \n  \n\nПерезаписать",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 268.765625,
+              "y": 629.375,
+              "width": 105.21875,
+              "height": 48,
+              "top": 629.375,
+              "right": 373.984375,
+              "bottom": 677.375,
+              "left": 268.765625
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "\n  \n\nВаш дубль",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 268.765625,
+              "y": 685.375,
+              "width": 105.21875,
+              "height": 48,
+              "top": 685.375,
+              "right": 373.984375,
+              "bottom": 733.375,
+              "left": 268.765625
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "\n  \n\nДалее",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 51.578125,
+              "y": 741.375,
+              "width": 83.890625,
+              "height": 20,
+              "top": 741.375,
+              "right": 135.46875,
+              "bottom": 761.375,
+              "left": 51.578125
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Новый дубль",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 143.46875,
+              "y": 741.375,
+              "width": 194.953125,
+              "height": 20,
+              "top": 741.375,
+              "right": 338.421875,
+              "bottom": 761.375,
+              "left": 143.46875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "«Далее» сохраняет этот дубль.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 844,
+        "width": 390,
+        "viewport": 390
+      },
+      "app": {
+        "values": {
+          "#main": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 785.375,
+              "top": 0,
+              "right": 390,
+              "bottom": 785.375,
+              "left": 0
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px 16px 24px",
+            "text": "ВыходSintel · The searchSintel · The searchРеплика 1 / 3Запись · осталось 0:05ПродолжитьЯ ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.Исходная звуковая волна с наложением вашего дубля. Прослушивание: ваш дубль.Позиция в диалоговом окне0:00 / 0:05Громкость оригиналаНазадОригиналПерезаписатьВаш дубльДалееНовый дубль«Далее» сохраняет этот дубль.К результату",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".project-header,.studio-header": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 358,
+              "height": 100,
+              "top": 12,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "ВыходSintel · The searchSintel · The searchРеплика 1 / 3",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dots": {
+            "rect": {
+              "x": 16,
+              "y": 106,
+              "width": 358,
+              "height": 6,
+              "top": 106,
+              "right": 374,
+              "bottom": 112,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#exit": {
+            "rect": {
+              "x": 16,
+              "y": 12,
+              "width": 96.15625,
+              "height": 48,
+              "top": 12,
+              "right": 112.15625,
+              "bottom": 60,
+              "left": 16
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "12px",
+            "text": "Выход",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          ".scene": {
+            "rect": {
+              "x": 16,
+              "y": 128,
+              "width": 358,
+              "height": 201.375,
+              "top": 128,
+              "right": 374,
+              "bottom": 329.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Запись · осталось 0:05Продолжить",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(0, 0, 0)",
+            "shadow": "none"
+          },
+          ".script": {
+            "rect": {
+              "x": 16,
+              "y": 329.375,
+              "width": 358,
+              "height": 156,
+              "top": 329.375,
+              "right": 374,
+              "bottom": 485.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "14px 0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#dialogue": {
+            "rect": {
+              "x": 16,
+              "y": 343.375,
+              "width": 358,
+              "height": 128,
+              "top": 343.375,
+              "right": 374,
+              "bottom": 471.375,
+              "left": 16
+            },
+            "font": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 120,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 605.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Исходная звуковая волна с наложением вашего дубля. Прослушивание: ваш дубль.Позиция в диалоговом окне0:00 / 0:05Громкость оригинала",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".wave": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(244, 244, 244)",
+            "shadow": "none"
+          },
+          "#scrub": {
+            "rect": {
+              "x": 16,
+              "y": 485.375,
+              "width": 358,
+              "height": 64,
+              "top": 485.375,
+              "right": 374,
+              "bottom": 549.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "",
+            "color": "rgb(16, 16, 16)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".timeline-meta": {
+            "rect": {
+              "x": 16,
+              "y": 549.375,
+              "width": 358,
+              "height": 56,
+              "top": 549.375,
+              "right": 374,
+              "bottom": 605.375,
+              "left": 16
+            },
+            "font": "",
+            "padding": "4px 0px 0px",
+            "text": "0:00 / 0:05Громкость оригинала",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance": {
+            "rect": {
+              "x": 16,
+              "y": 605.375,
+              "width": 358,
+              "height": 156,
+              "top": 605.375,
+              "right": 374,
+              "bottom": 761.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "24px 0px 0px",
+            "text": "НазадОригиналПерезаписатьВаш дубльДалееНовый дубль«Далее» сохраняет этот дубль.К результату",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          ".performance-actions,.studio-controls": {
+            "rect": {
+              "x": 16,
+              "y": 629.375,
+              "width": 358,
+              "height": 104,
+              "top": 629.375,
+              "right": 374,
+              "bottom": 733.375,
+              "left": 16
+            },
+            "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "НазадОригиналПерезаписатьВаш дубльДалее",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#record": {
+            "rect": {
+              "x": 129.21875,
+              "y": 629.375,
+              "width": 131.546875,
+              "height": 48,
+              "top": 629.375,
+              "right": 260.765625,
+              "bottom": 677.375,
+              "left": 129.21875
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Перезаписать",
+            "color": "rgb(193, 38, 44)",
+            "background": "rgba(229, 72, 77, 0.08)",
+            "shadow": "none"
+          },
+          "#take": {
+            "rect": {
+              "x": 268.765625,
+              "y": 629.375,
+              "width": 105.21875,
+              "height": 48,
+              "top": 629.375,
+              "right": 373.984375,
+              "bottom": 677.375,
+              "left": 268.765625
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Ваш дубль",
+            "color": "rgba(0, 0, 0, 0.88)",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(0, 0, 0, 0.06) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.1) 0px 1px 1px -1px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"
+          },
+          "#next": {
+            "rect": {
+              "x": 268.765625,
+              "y": 685.375,
+              "width": 105.21875,
+              "height": 48,
+              "top": 685.375,
+              "right": 373.984375,
+              "bottom": 733.375,
+              "left": 268.765625
+            },
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "8px",
+            "text": "Далее",
+            "color": "rgb(252, 252, 252)",
+            "background": "rgba(0, 0, 0, 0.88)",
+            "shadow": "none"
+          },
+          "#saved": {
+            "rect": {
+              "x": 51.578125,
+              "y": 741.375,
+              "width": 83.890625,
+              "height": 20,
+              "top": 741.375,
+              "right": 135.46875,
+              "bottom": 761.375,
+              "left": 51.578125
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "Новый дубль",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          },
+          "#take-help": {
+            "rect": {
+              "x": 143.46875,
+              "y": 741.375,
+              "width": 194.953125,
+              "height": 20,
+              "top": 741.375,
+              "right": 338.421875,
+              "bottom": 761.375,
+              "left": 143.46875
+            },
+            "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+            "padding": "0px",
+            "text": "«Далее» сохраняет этот дубль.",
+            "color": "rgba(0, 0, 0, 0.61)",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none"
+          }
+        },
+        "height": 844,
+        "width": 390,
+        "viewport": 390
+      },
+      "diff": [
+        {
+          "s": "#exit",
+          "key": "width",
+          "ref": 97,
+          "app": 96.15625
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

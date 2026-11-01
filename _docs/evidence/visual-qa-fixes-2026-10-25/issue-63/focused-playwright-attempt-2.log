@@ -1,0 +1,42 @@
+
+[WebServer] (node:21344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+
+(node:15464) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/2] e2e\issue63-integration.spec.ts:452:1 › portrait fixture runs through New Dub, long-line viewport matrix, leave dialog, Result and return
+  1) e2e\issue63-integration.spec.ts:452:1 › portrait fixture runs through New Dub, long-line viewport matrix, leave dialog, Result and return 
+
+    Error: portrait-line3-en-390x844: phone transport remains fixed
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "fixed"
+    Received: "static"
+
+      195 |   expect(metrics.horizontalOverflow, `${entry.capture}: no horizontal document overflow`).toBe(false)
+      196 |   if (width < 768) {
+    > 197 |     expect(metrics.recording.panelPosition, `${entry.capture}: phone transport remains fixed`).toBe('fixed')
+          |                                                                                                ^
+      198 |     expect(metrics.recording.dialogueAndTimelineClearOfPanel, `${entry.capture}: long caption and waveform clear phone panel`).toBe(true)
+      199 |     const controls = metrics.buttons.filter((button) => button.visible && button.label && !['Stay here'].includes(button.label))
+      200 |     expect(controls.every((button) => button.height >= 48), `${entry.capture}: phone buttons meet 48px target`).toBe(true)
+        at assertViewportContract (D:\Program\python\Dubbed\frontend\e2e\issue63-integration.spec.ts:197:96)
+        at runPortraitJourney (D:\Program\python\Dubbed\frontend\e2e\issue63-integration.spec.ts:290:11)
+        at D:\Program\python\Dubbed\frontend\e2e\issue63-integration.spec.ts:454:3
+
+    Error Context: test-results\issue63-playwright\issue63-integration-portra-9ab57-ve-dialog-Result-and-return\error-context.md
+
+
+
+(node:18684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[2/2] e2e\issue63-integration.spec.ts:457:1 › native 200% Chromium zoom is proven from a new disposable profile across the current portrait journey
+  1 failed
+    e2e\issue63-integration.spec.ts:452:1 › portrait fixture runs through New Dub, long-line viewport matrix, leave dialog, Result and return 
+  1 passed (1.4m)

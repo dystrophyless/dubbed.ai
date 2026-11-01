@@ -1,0 +1,126 @@
+[
+  {
+    "path": "frontend/e2e\\foundation.spec.ts",
+    "sha256": "e2be5ddf32e704420c9becc0a33cd6826a920f6a29a200a370be16f3c028ec55"
+  },
+  {
+    "path": "frontend/e2e\\native-media.spec.ts",
+    "sha256": "71fedae47111086c53243d7bd990b3edf7f5615cb4f03a5227d2dedf0e32eecb"
+  },
+  {
+    "path": "frontend/e2e\\record-journey.spec.ts",
+    "sha256": "8c53a02555de600948169c908dc055e874915809686649ba043fa82adfd67b99"
+  },
+  {
+    "path": "frontend/package-lock.json",
+    "sha256": "392935b96ec238405491b7504f2ed481d9d2c0c0156a7054735931aef208c130"
+  },
+  {
+    "path": "frontend/package.json",
+    "sha256": "a34834349ed3c1f5f0831ffa6c5354c175844a8971e823ae1a4433eb52565d26"
+  },
+  {
+    "path": "frontend/playwright.config.mjs",
+    "sha256": "1b5a238aaf26a516d06887ff718e7891ae084a1eeb018340ebac49469ba54b3c"
+  },
+  {
+    "path": "frontend/src\\app\\App.tsx",
+    "sha256": "a565fc8dafba40de12ef898c61adc7d34c217c7a55a46797e61392c8733f48b6"
+  },
+  {
+    "path": "frontend/src\\app\\state.ts",
+    "sha256": "b91f35b809c81bc46c70a09e61f73440e60dc108042b5661521ab397e7efa5c5"
+  },
+  {
+    "path": "frontend/src\\features\\record\\FoundationRecordPage.tsx",
+    "sha256": "08ed549db6cc2c2872da6c1a1cbc558bc8f3ea00a79092609b01347865bb7982"
+  },
+  {
+    "path": "frontend/src\\features\\record\\NativeMediaProofPage.tsx",
+    "sha256": "10c9d0a66933507a59d395d6811751c3399b0dba5aee2c176654bd2e0c8cd44e"
+  },
+  {
+    "path": "frontend/src\\features\\record\\useRecordController.ts",
+    "sha256": "c434ee7102c83700955ae8bc499d517b425d796743cc9a5329fdde39b14b5243"
+  },
+  {
+    "path": "frontend/src\\features\\result\\FoundationResultPage.tsx",
+    "sha256": "51d761adfd7d5a245e59491e791a7ec9bf641f814254dac33f55bbd76cfe60f3"
+  },
+  {
+    "path": "frontend/src\\main.tsx",
+    "sha256": "76012685146874bb2f50766f14994f0d2b3750a62b372e3496f275a375521189"
+  },
+  {
+    "path": "frontend/src\\services\\architecture.test.ts",
+    "sha256": "5963e9d5350e1128a83d6459fac416b3b04184308c06761e974479ca65b4d77e"
+  },
+  {
+    "path": "frontend/src\\services\\browser-capture\\WebLockCaptureGrants.ts",
+    "sha256": "fe7e28e6ccacc4bc6f585db52e63c048c23598761d55d56fb8d4080a13156b8c"
+  },
+  {
+    "path": "frontend/src\\services\\browser-media\\NativeBrowserMedia.ts",
+    "sha256": "bcb8e89f7ff2582496bb30f7e7021c9338c55c8773f2bee0dd86a02ee505f8c2"
+  },
+  {
+    "path": "frontend/src\\services\\contracts.ts",
+    "sha256": "0ae0c76ab27770147ca6b34c8e8bd1bd8d520588aa77e63bf3f84fe692108851"
+  },
+  {
+    "path": "frontend/src\\services\\index.test.ts",
+    "sha256": "839b3999bd5013717a456b5b76778f31f5b0431516ac38e47cae8acf6b0f0c5f"
+  },
+  {
+    "path": "frontend/src\\services\\index.ts",
+    "sha256": "259b13a5f0b35836cef3b2b6cf772e56cf670606e74a967bd6c0c74396b6b636"
+  },
+  {
+    "path": "frontend/src\\services\\mock\\fixture-data.json",
+    "sha256": "3a754a772b10ae122b70207261a20f90bcfda0803efcd6d0046c70a765f69eb5"
+  },
+  {
+    "path": "frontend/src\\services\\mock\\fixtures.ts",
+    "sha256": "f2f8697317b0c68ce263220b1df8c0815a75ca0a88155ecec6b5a6b0cba83d09"
+  },
+  {
+    "path": "frontend/src\\services\\mock\\IndexedDbProjectStore.test.ts",
+    "sha256": "ddbf4b239ddc833c0679acbfb7ba312acc101b43ba57250bd8b6e7ea7990d7ef"
+  },
+  {
+    "path": "frontend/src\\services\\mock\\IndexedDbProjectStore.ts",
+    "sha256": "2a8a7607caa0bd2204c8b603fbd775098f0e0eb1a4bdd7d9b606a849437c7494"
+  },
+  {
+    "path": "frontend/src\\services\\mock\\IndexedDbResultPort.test.ts",
+    "sha256": "79fc8edc35d104d14740fff5d8434cb6cf0d79486995ac908f6b8dc6e2db6c20"
+  },
+  {
+    "path": "frontend/src\\shared\\i18n.ts",
+    "sha256": "81a0fd4a655de245c31df7a26808612ac13aa20feda4e862dc1ea3400386c322"
+  },
+  {
+    "path": "frontend/src\\shared\\ServicesContext.tsx",
+    "sha256": "6caeb047a39206382e1221ea5b26d84e6502ca1a3780b778653af4ccc594bfcb"
+  },
+  {
+    "path": "frontend/src\\shared\\ui.tsx",
+    "sha256": "9ab04328b4006582dfd97e83dbc00120b1b73672937140ddcbabfdb4defc908b"
+  },
+  {
+    "path": "frontend/src\\styles\\app.css",
+    "sha256": "45d7b60bbc2cb467d0f488a39eaf6817719ac0183ad3d7b2b02a89b4820edaf5"
+  },
+  {
+    "path": "frontend/src\\styles\\tokens.css",
+    "sha256": "9d81e19ccb9fc3ec92fddcef0368cc81a4dc17ffa584f1175169ad37337a58e6"
+  },
+  {
+    "path": "frontend/tsconfig.json",
+    "sha256": "860ba3b723097eb4082701471cf2f7c47bbc5c231dd88552ff9c1a08254e99b0"
+  },
+  {
+    "path": "frontend/vite.config.ts",
+    "sha256": "eadd0c25470bb624d05a6628be6f1e3c2f3683e7f1c22890cff8b416a3de9d7e"
+  }
+]

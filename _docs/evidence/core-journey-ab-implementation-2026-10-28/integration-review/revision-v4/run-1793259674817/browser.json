@@ -1,0 +1,466 @@
+{
+  "date": "2026-10-29T07:41:14.817Z",
+  "temp": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "tmp": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "checks": [
+    {
+      "name": "native-partial-seed-to-result",
+      "value": {
+        "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=A&snapshot=snapshot%3Aoperation%3A2aef5803-bce8-48ec-a74d-e803e5a73b3a&locale=en",
+        "media": {
+          "source": "dub",
+          "paused": true,
+          "time": 0,
+          "ready": 4,
+          "error": null,
+          "notice": null,
+          "disabled": false,
+          "control": "Play"
+        }
+      },
+      "pass": true
+    },
+    {
+      "name": "A-stale-abort-switch",
+      "value": {
+        "source": "dub",
+        "paused": false,
+        "time": 0.570814,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-source-key-recurrence",
+      "value": {
+        "source": "original",
+        "paused": false,
+        "time": 1.360859,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-same-element-pause",
+      "value": {
+        "source": "original",
+        "paused": true,
+        "time": 1.532862,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-same-element-seek-cancel",
+      "value": {
+        "source": "original",
+        "paused": true,
+        "time": 1.623635,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-reload-epoch-reject",
+      "value": {
+        "source": "original",
+        "paused": false,
+        "time": 0.578145,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-current-failure-visible",
+      "value": {
+        "source": "original",
+        "paused": true,
+        "time": 0.626351,
+        "ready": 4,
+        "error": null,
+        "notice": "Video is not available in this browser.",
+        "disabled": true,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-current-failure-recovered",
+      "value": {
+        "source": "original",
+        "paused": false,
+        "time": 0.114367,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-paused-source-position",
+      "value": {
+        "source": "dub",
+        "paused": true,
+        "time": 3,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-playing-source-position",
+      "value": {
+        "before": 3.09291,
+        "source": "original",
+        "paused": false,
+        "time": 3.174738,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-finite-replay",
+      "value": {
+        "source": "original",
+        "paused": false,
+        "time": 0.106961,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-unmount-remount-late-error",
+      "value": {
+        "source": "dub",
+        "paused": true,
+        "time": 0,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "A-valid-download",
+      "value": {
+        "filename": "example-dub.mp4",
+        "hash": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-stale-abort-switch",
+      "value": {
+        "source": "dub",
+        "paused": false,
+        "time": 0.663412,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-source-key-recurrence",
+      "value": {
+        "source": "original",
+        "paused": false,
+        "time": 1.399368,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-same-element-pause",
+      "value": {
+        "source": "original",
+        "paused": true,
+        "time": 1.54753,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-same-element-seek-cancel",
+      "value": {
+        "source": "original",
+        "paused": true,
+        "time": 1.625914,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-reload-epoch-reject",
+      "value": {
+        "source": "original",
+        "paused": false,
+        "time": 0.577003,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-current-failure-visible",
+      "value": {
+        "source": "original",
+        "paused": true,
+        "time": 0.649474,
+        "ready": 4,
+        "error": null,
+        "notice": "Video is not available in this browser.",
+        "disabled": true,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-current-failure-recovered",
+      "value": {
+        "source": "original",
+        "paused": false,
+        "time": 0.058843,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-paused-source-position",
+      "value": {
+        "source": "dub",
+        "paused": true,
+        "time": 3,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-playing-source-position",
+      "value": {
+        "before": 3.08076,
+        "source": "original",
+        "paused": false,
+        "time": 3.146051,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-finite-replay",
+      "value": {
+        "source": "original",
+        "paused": false,
+        "time": 0.100563,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Pause"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-unmount-remount-late-error",
+      "value": {
+        "source": "dub",
+        "paused": true,
+        "time": 0,
+        "ready": 4,
+        "error": null,
+        "notice": null,
+        "disabled": false,
+        "control": "Play"
+      },
+      "pass": true
+    },
+    {
+      "name": "B-valid-download",
+      "value": {
+        "filename": "example-dub.mp4",
+        "hash": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9"
+      },
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "trace": [
+    {
+      "requestedAt": 827.1999999992549,
+      "src": "/media/scene.mp4",
+      "fault": {
+        "name": "AbortError",
+        "delay": 400
+      },
+      "rejectedAt": 1262.8999999985099,
+      "connectedAtRejection": false
+    },
+    {
+      "requestedAt": 1016.6000000014901,
+      "src": "blob:http://127.0.0.1:5180/7dadb9e8-599f-4aaf-8259-46cd86b69e0f",
+      "fault": null
+    },
+    {
+      "requestedAt": 1975.1000000014901,
+      "src": "/media/scene.mp4",
+      "fault": {
+        "name": "NotSupportedError",
+        "delay": 450
+      },
+      "rejectedAt": 2443.10000000149,
+      "connectedAtRejection": false
+    },
+    {
+      "requestedAt": 2105.10000000149,
+      "src": "blob:http://127.0.0.1:5180/7dadb9e8-599f-4aaf-8259-46cd86b69e0f",
+      "fault": null
+    },
+    {
+      "requestedAt": 2325.800000000745,
+      "src": "/media/scene.mp4",
+      "fault": null
+    },
+    {
+      "requestedAt": 3095.800000000745,
+      "src": "/media/scene.mp4",
+      "fault": {
+        "name": "NotSupportedError",
+        "delay": 400
+      },
+      "rejectedAt": 3511.5,
+      "connectedAtRejection": true
+    },
+    {
+      "requestedAt": 3691.89999999851,
+      "src": "/media/scene.mp4",
+      "fault": {
+        "name": "AbortError",
+        "delay": 400
+      },
+      "rejectedAt": 4106.5,
+      "connectedAtRejection": true
+    },
+    {
+      "requestedAt": 4274.10000000149,
+      "src": "/media/scene.mp4",
+      "fault": {
+        "name": "NotSupportedError",
+        "delay": 500
+      },
+      "rejectedAt": 4789.699999999255,
+      "connectedAtRejection": true
+    },
+    {
+      "requestedAt": 4415.5,
+      "src": "/media/scene.mp4",
+      "fault": null
+    },
+    {
+      "requestedAt": 5299.89999999851,
+      "src": "/media/scene.mp4",
+      "fault": {
+        "name": "NotSupportedError",
+        "immediate": true
+      }
+    },
+    {
+      "requestedAt": 5556.199999999255,
+      "src": "/media/scene.mp4",
+      "fault": null
+    },
+    {
+      "requestedAt": 6272.89999999851,
+      "src": "blob:http://127.0.0.1:5180/7dadb9e8-599f-4aaf-8259-46cd86b69e0f",
+      "fault": null
+    },
+    {
+      "requestedAt": 6441.39999999851,
+      "src": "/media/scene.mp4",
+      "fault": null
+    },
+    {
+      "requestedAt": 6693.39999999851,
+      "src": "/media/scene.mp4",
+      "fault": null
+    },
+    {
+      "requestedAt": 6991.10000000149,
+      "src": "/media/scene.mp4",
+      "fault": null
+    },
+    {
+      "requestedAt": 7272.300000000745,
+      "src": "/media/scene.mp4",
+      "fault": {
+        "name": "NotSupportedError",
+        "delay": 500
+      },
+      "rejectedAt": 7791.199999999255,
+      "connectedAtRejection": false
+    }
+  ]
+}

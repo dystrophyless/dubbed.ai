@@ -1,0 +1,158 @@
+[
+  {
+    "path": "evidence/code-en-767.png",
+    "sha256": "9802ABC5DB93C35A8B0681049B68BB2E760DA067361BCEFB3DF657199578BE53",
+    "bytes": 33459,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/code-en-768.png",
+    "sha256": "A0DBF8278E8677656F16EAF3FC89B278E5A963A867DDD57E5F93AEE92EF2346A",
+    "bytes": 34283,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/code-en-desktop.png",
+    "sha256": "37483007BCA56F11E3AE39BD6D4930630D139BA3973ACBF93EF22BD92A8B308B",
+    "bytes": 37566,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/code-ru-phone.png",
+    "sha256": "B268AE929E88955D32CA117BF887BC78B52F76B32498D65E15925A1743F30F4A",
+    "bytes": 34117,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/code-ru-short.png",
+    "sha256": "E50C3D977A8EBC6AF73151B186C14DFC16D7F523B9234A4A1CC83878A22E5FA9",
+    "bytes": 39760,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/email-error-en-desktop.png",
+    "sha256": "8D3AC625F91ACAD4E634CA079D9109A8BB0E8181C7C4215718CAB98571C48252",
+    "bytes": 25844,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/email-error-ru-phone.png",
+    "sha256": "8265045CA44C4641412E822B8C66B12CEA88F13FE1047CB27DC95A9D25CF01A4",
+    "bytes": 21489,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/expired-ru-short.png",
+    "sha256": "DFE45B26CF980D4D82D059CCF58C8473752C1A194240285C90428FE1877369C8",
+    "bytes": 25723,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/invalid-code-en-desktop.png",
+    "sha256": "52B325B007E717F428A50579E19A2DDE427F97E868823780866DE9E92AD4CA41",
+    "bytes": 47118,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/invalid-code-ru-phone.png",
+    "sha256": "B30EA05C09512C7976356A7FB7A918AA0E0B483A98713FA4A78EFEE6A78D621E",
+    "bytes": 43233,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/mismatch-en-desktop.png",
+    "sha256": "1F7F540712D737E30FA0B0BE4625BCAA34444845F247A80BEA733651E3283BA7",
+    "bytes": 36271,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/mismatch-ru-phone.png",
+    "sha256": "01C7A4B2C13C5CE042BF758385E799F2FD69F50321B74CB68883D317F610CDDF",
+    "bytes": 28985,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/password-en-desktop.png",
+    "sha256": "B06793D88B42BC9E0BFFC5BE03FB2970E21EAB244E8751D35A43C2748EC490F4",
+    "bytes": 31910,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/password-en-phone.png",
+    "sha256": "B06AA0C4CF40E359465464FABAC244B174925943EF2109ECD4998AA4C6DAAF35",
+    "bytes": 26031,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/password-loading-en-short.png",
+    "sha256": "9F2F831EBE8204C9FFFF81F448C28A215C211BDC345070D9E0414A8D4C1B65FF",
+    "bytes": 28094,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/password-ru-phone.png",
+    "sha256": "DCA92AC0B03A953A8487E353538810BB8C099BC5F1C60098BDDA59999ECB6E4D",
+    "bytes": 25340,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/password-service-error-en-phone.png",
+    "sha256": "66DEF19FC916CED1A30028E0DDD583430EC3BBD9115496C6E2B7D51A45EA453C",
+    "bytes": 26969,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/reload-code-en-short.png",
+    "sha256": "9DE80D9568DF3EC6CE1DDC4855EAD0C48433E3F104096E6A11B0C996FDFE0AA3",
+    "bytes": 36547,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/request-en-desktop.png",
+    "sha256": "0F2FA0BD3C2AF0408B9E7321DFAA97AA47E1725A784E2999027FDCB6C4A52611",
+    "bytes": 21888,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/request-en-phone.png",
+    "sha256": "5F35C7121B2B71DC65C0AADFC57CFBB40574BA69633096F7267BEA862DE7164A",
+    "bytes": 20530,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/request-ru-desktop.png",
+    "sha256": "40F1DA807BBA8126FED20DB37ED2CE121CAC2FA04B5D28ACFB1FCDE26DE25172",
+    "bytes": 22479,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/request-ru-phone.png",
+    "sha256": "2F8A9B056BE8639107D56F1B43E94B4271BA0E7A218F6E14B553F5E298B8772C",
+    "bytes": 17719,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/request-service-error-en-short.png",
+    "sha256": "B6921016012274052AE12F0ABF5279EF26278313485A6DE71DC942DCD255B143",
+    "bytes": 26626,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/success-destination-en-desktop.png",
+    "sha256": "9DB97AAA2C6987AACD9BF21017DBA60F5FE9B87AF6832DAC85027891E32EB3AA",
+    "bytes": 28540,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/success-destination-ru-phone.png",
+    "sha256": "F0E2237A13B0E2456B49BF4A15C3A68C26088C583CF7C8FE8A9FED31F4627D2E",
+    "bytes": 20618,
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/unknown-verification-ru-phone.png",
+    "sha256": "F3E6C51657A7B8D84944E1877445FDD04AB41A6EC923517B5AD7799BBF4B6D9D",
+    "bytes": 20600,
+    "visuallyInspected": true
+  }
+]

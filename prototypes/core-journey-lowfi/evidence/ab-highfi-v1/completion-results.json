@@ -1,0 +1,52 @@
+{
+  "variant": "A",
+  "result": "PASS",
+  "checks": [
+    {
+      "variant": "A",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "en",
+      "result": "PASS",
+      "primaryResultActionVisibleAtCompletedEnd": true,
+      "duplicateShortcutHiddenOnlyThere": true,
+      "earlierAcceptedNextUnchanged": true,
+      "replacementNextSaveFailureRetryRetainsExactCandidate": true,
+      "acceptanceDoesNotAutoAssemble": true,
+      "explicitResultPreservesAcceptedSet": true
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        1280,
+        600
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "primaryResultActionVisibleAtCompletedEnd": true,
+      "duplicateShortcutHiddenOnlyThere": true,
+      "earlierAcceptedNextUnchanged": true,
+      "replacementNextSaveFailureRetryRetainsExactCandidate": true,
+      "acceptanceDoesNotAutoAssemble": true,
+      "explicitResultPreservesAcceptedSet": true
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "primaryResultActionVisibleAtCompletedEnd": true,
+      "duplicateShortcutHiddenOnlyThere": true,
+      "earlierAcceptedNextUnchanged": true,
+      "replacementNextSaveFailureRetryRetainsExactCandidate": true,
+      "acceptanceDoesNotAutoAssemble": true,
+      "explicitResultPreservesAcceptedSet": true
+    }
+  ],
+  "proposal": "Existing primary Next slot becomes To result at an already-accepted completed last line;explicit assembly only. Pending high-fi owner decision;no canonical/backend synchronization."
+}

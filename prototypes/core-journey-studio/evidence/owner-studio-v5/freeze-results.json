@@ -1,0 +1,51 @@
+{
+  "version": "core-journey-studio-lowfi-v5",
+  "date": "2026-10-27",
+  "timezone": "Asia/Qyzylorda",
+  "result": "PASS",
+  "previewsHTTP": {
+    "5178": 200,
+    "5179": 200
+  },
+  "dirtyBaseline": "9096925a4476e84ec9a6e5ef9bff50ae45ac0f67",
+  "prototypeDeltas": {
+    "core-journey-studio": {
+      "priorFingerprintCount": 75,
+      "changed": [
+        "BRIEF.md",
+        "index.html",
+        "README.md",
+        "src.js",
+        "studio.css"
+      ],
+      "unchanged": 70
+    },
+    "core-journey-lowfi": {
+      "priorFingerprintCount": 54,
+      "changed": [
+        "BRIEF.md",
+        "index.html",
+        "src.js",
+        "style.css"
+      ],
+      "unchanged": 50
+    }
+  },
+  "canonicalChangedFiles": [
+    "_docs/frontend-flows/00-shared-contract.md",
+    "_docs/frontend-flows/06-new-dub.md",
+    "_docs/frontend-flows/09-record.md",
+    "_docs/frontend-implementation-contract.md",
+    "_docs/business-requirements/BR-001_custom_video_dubbing.md",
+    "_docs/specifications/SPEC-001_dubbed_mvp.md",
+    "_docs/HANDOFF.md",
+    "_docs/PROJECT_BRAINSTORM.md",
+    "brainstorm.md"
+  ],
+  "builds": {
+    "studio": "PASS Vite7.3.7",
+    "comparison": "PASS Vite7.3.7"
+  },
+  "limits": "No real microphone/backend/render,production integration,GitHub mutation or git delivery. Historical evidence remains untouched.",
+  "stage": "Ready for low-fi review; EDITS PAUSED"
+}

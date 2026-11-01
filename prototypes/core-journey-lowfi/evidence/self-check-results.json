@@ -1,0 +1,80 @@
+{
+  "browser": "156.0.8078.48",
+  "date": "2026-10-27",
+  "environment": "Windows, real Chrome headless, DPR 1; mouse/keyboard automation, no real mic/backend/mobile hardware",
+  "checks": [
+    {
+      "scenario": "Initial empty turn cannot advance; no autoplay",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Replay from fixed-window end restarts and plays",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Record supersedes playback; fixed-window automatic stop; controls locked",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Your take plays synthetic candidate audio with synchronized muted source video",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Rerecord replaces candidate only after new capture completes",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Failed save retains exact candidate on same line and remains auditionable",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Browser-local draft survives reload (not account storage proof)",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Retry acceptance and accepted revisit use sequential navigation",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Final durable simulated acceptance leads assembly \u2192 playable distinct output fixture \u2192 download",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Return opens first saved line, no capture, and stops result playback",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Blocked capture preserves accepted take; recovery links only to Settings boundary",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Leaving without candidate preserves prior accepted media",
+      "result": "PASS"
+    },
+    {
+      "scenario": "1440\u00d7900: no horizontal overflow; visible full-image stage; reachable controls",
+      "result": "PASS"
+    },
+    {
+      "scenario": "1280\u00d7600: no horizontal overflow; visible full-image stage; reachable controls",
+      "result": "PASS"
+    },
+    {
+      "scenario": "390\u00d7844: no horizontal overflow; visible full-image stage; reachable controls",
+      "result": "PASS"
+    },
+    {
+      "scenario": "390\u00d7667: no horizontal overflow; visible full-image stage; reachable controls",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Long Russian dialogue wraps on short phone without horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "scenario": "Keyboard focus reaches native interactive control",
+      "result": "PASS"
+    }
+  ],
+  "pageErrors": []
+}

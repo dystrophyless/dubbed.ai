@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-25T10:22:27.916Z",
+  "sourceBoundary": "actual shared Button, actual auth OtpInput Check, test-only deferred synthetic action harness; no auth or media service is called",
+  "browser": "local Playwright Chromium, reduced motion, English and Russian at 1440px and 390px viewport widths",
+  "buttonProof": "one deferred action is held; focus, aria-busy, aria-disabled, native-enabled state, and opacity are observed; pointer/Enter/Space/implicit Enter/direct submit do not create a second mutation; the synthetic request rejects and leaves its draft unchanged",
+  "otpIconMapping": "verified OtpInput Check uses the adopted Lucide outline treatment. The Clean/Light PNG is only a visual reference, so exact SVG path identity is not inferred from the raster source.",
+  "reference": {
+    "buttonClean": "_docs/evidence/affect-ui-clean-light/source/components/button/Clean/button-clean.md.txt",
+    "otpClean": "_docs/evidence/affect-ui-clean-light/source/components/otp-input/Clean/otp-input-clean.md.txt",
+    "otpVerifiedLight": "_docs/evidence/affect-ui-clean-light/source/components/otp-input/Clean/Light/04-verified.png"
+  },
+  "captures": [
+    {
+      "locale": "en",
+      "viewportWidth": 1440,
+      "busyButton": {
+        "opacity": "1",
+        "pointerEvents": "auto",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "width": 148.703125,
+        "height": 40,
+        "focusVisible": true
+      },
+      "keyboardFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)"
+      },
+      "blockedSubmit": {
+        "accepted": false,
+        "defaultPrevented": true
+      },
+      "mutationCount": 1,
+      "retainedDraft": "retain this draft",
+      "resolvedStatus": "The synthetic save failed; the draft remains.",
+      "otpCheck": {
+        "viewBox": "0 0 24 24",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1",
+        "fill": "none",
+        "lineCap": "round",
+        "lineJoin": "round",
+        "ariaHidden": "true",
+        "decorativeContainerHidden": "true",
+        "width": 20,
+        "height": 20,
+        "color": "rgba(0, 0, 0, 0.88)",
+        "pathCount": 1
+      },
+      "screenshot": "busy-en-1440.png"
+    },
+    {
+      "locale": "en",
+      "viewportWidth": 390,
+      "busyButton": {
+        "opacity": "1",
+        "pointerEvents": "auto",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "width": 169.65625,
+        "height": 48,
+        "focusVisible": true
+      },
+      "keyboardFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)"
+      },
+      "blockedSubmit": {
+        "accepted": false,
+        "defaultPrevented": true
+      },
+      "mutationCount": 1,
+      "retainedDraft": "retain this draft",
+      "resolvedStatus": "The synthetic save failed; the draft remains.",
+      "otpCheck": {
+        "viewBox": "0 0 24 24",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1",
+        "fill": "none",
+        "lineCap": "round",
+        "lineJoin": "round",
+        "ariaHidden": "true",
+        "decorativeContainerHidden": "true",
+        "width": 20,
+        "height": 20,
+        "color": "rgba(0, 0, 0, 0.88)",
+        "pathCount": 1
+      },
+      "screenshot": "busy-en-390.png"
+    },
+    {
+      "locale": "ru",
+      "viewportWidth": 1440,
+      "busyButton": {
+        "opacity": "1",
+        "pointerEvents": "auto",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "width": 241.53125,
+        "height": 40,
+        "focusVisible": true
+      },
+      "keyboardFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)"
+      },
+      "blockedSubmit": {
+        "accepted": false,
+        "defaultPrevented": true
+      },
+      "mutationCount": 1,
+      "retainedDraft": "сохранить этот черновик",
+      "resolvedStatus": "Тестовое сохранение не удалось; черновик остался.",
+      "otpCheck": {
+        "viewBox": "0 0 24 24",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1",
+        "fill": "none",
+        "lineCap": "round",
+        "lineJoin": "round",
+        "ariaHidden": "true",
+        "decorativeContainerHidden": "true",
+        "width": 20,
+        "height": 20,
+        "color": "rgba(0, 0, 0, 0.88)",
+        "pathCount": 1
+      },
+      "screenshot": "busy-ru-1440.png"
+    },
+    {
+      "locale": "ru",
+      "viewportWidth": 390,
+      "busyButton": {
+        "opacity": "1",
+        "pointerEvents": "auto",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)",
+        "width": 275.75,
+        "height": 48,
+        "focusVisible": true
+      },
+      "keyboardFocus": {
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(0, 96, 226)"
+      },
+      "blockedSubmit": {
+        "accepted": false,
+        "defaultPrevented": true
+      },
+      "mutationCount": 1,
+      "retainedDraft": "сохранить этот черновик",
+      "resolvedStatus": "Тестовое сохранение не удалось; черновик остался.",
+      "otpCheck": {
+        "viewBox": "0 0 24 24",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1",
+        "fill": "none",
+        "lineCap": "round",
+        "lineJoin": "round",
+        "ariaHidden": "true",
+        "decorativeContainerHidden": "true",
+        "width": 20,
+        "height": 20,
+        "color": "rgba(0, 0, 0, 0.88)",
+        "pathCount": 1
+      },
+      "screenshot": "busy-ru-390.png"
+    }
+  ],
+  "pageErrors": []
+}

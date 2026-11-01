@@ -1,0 +1,285 @@
+{
+  "capture": "native200-record-leave-dialog",
+  "mode": "native-chromium-cdp",
+  "screenshot": {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e/issue63-integration/native200-record-leave-dialog.png",
+    "sha256": "2155e186c9ad16413e634efc3fed836adce54a16905970d4b73dd676c534702c",
+    "bytes": 67851
+  },
+  "metrics": {
+    "url": "http://127.0.0.1:4563/projects/afef28c7-c431-416f-b63e-e766a97689f4/record",
+    "viewport": {
+      "innerWidth": 711,
+      "innerHeight": 432,
+      "outerWidth": 1440,
+      "outerHeight": 960
+    },
+    "devicePixelRatio": 2,
+    "bodyZoom": "1",
+    "documentWidth": 711,
+    "documentHeight": 1471,
+    "horizontalOverflow": false,
+    "scrollY": 161.5,
+    "language": "en",
+    "title": "Dubbed",
+    "recording": {
+      "line": "Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4",
+      "dialogue": "The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.",
+      "stage": {
+        "x": 16,
+        "y": 63.5,
+        "width": 679,
+        "height": 381.94,
+        "top": 63.5,
+        "right": 695,
+        "bottom": 445.44
+      },
+      "lineHeader": {
+        "x": 35.5,
+        "y": 457.44,
+        "width": 640,
+        "height": 134,
+        "top": 457.44,
+        "right": 675.5,
+        "bottom": 591.44
+      },
+      "dialogueBounds": {
+        "x": 35.5,
+        "y": 487.44,
+        "width": 640,
+        "height": 48,
+        "top": 487.44,
+        "right": 675.5,
+        "bottom": 535.44
+      },
+      "timeline": {
+        "x": 35.5,
+        "y": 603.44,
+        "width": 640,
+        "height": 48,
+        "top": 603.44,
+        "right": 675.5,
+        "bottom": 651.44
+      },
+      "panel": {
+        "x": 16,
+        "y": 663.44,
+        "width": 679,
+        "height": 181,
+        "top": 663.44,
+        "right": 695,
+        "bottom": 844.44
+      },
+      "panelPosition": "static",
+      "phonePanelFlow": "in-flow",
+      "dialogueAndTimelineClearOfPanel": true
+    },
+    "media": {
+      "width": 540,
+      "height": 960,
+      "duration": 35.9591,
+      "readyState": 4,
+      "currentSrc": "blob:http://127.0.0.1:4563/7b99deda-c542-4784-8295-4ce8d369aad5"
+    },
+    "dialog": {
+      "title": "Leave recording?",
+      "x": 0,
+      "y": 159,
+      "width": 711,
+      "height": 273
+    },
+    "activeElement": {
+      "tagName": "BUTTON",
+      "label": "Stay here",
+      "role": null,
+      "className": "ui-button ui-button--ghost ui-button--medium"
+    },
+    "buttons": [
+      {
+        "label": "Sign out",
+        "variant": "ghost",
+        "size": "small",
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": false
+      },
+      {
+        "label": "Open navigation",
+        "variant": "ghost",
+        "size": "icon",
+        "width": 48,
+        "height": 48,
+        "top": -153.5,
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Projects",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 120.57,
+        "height": 48,
+        "top": 3.5,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Play",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 48,
+        "height": 48,
+        "top": 674.44,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Record again",
+        "variant": "primary",
+        "size": "medium",
+        "width": 319.5,
+        "height": 48,
+        "top": 732.44,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Previous line",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 319.5,
+        "height": 48,
+        "top": 732.44,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Next line",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 319.5,
+        "height": 48,
+        "top": 788.44,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Microphone",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 319.5,
+        "height": 48,
+        "top": 788.44,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Process again",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 135.41,
+        "height": 48,
+        "top": 1167.44,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": true,
+        "visible": true
+      },
+      {
+        "label": "Save and leave",
+        "variant": "primary",
+        "size": "medium",
+        "width": 679,
+        "height": 48,
+        "top": 256,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Leave without saving",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 679,
+        "height": 48,
+        "top": 312,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Stay here",
+        "variant": "ghost",
+        "size": "medium",
+        "width": 679,
+        "height": 48,
+        "top": 368,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": true,
+        "disabled": false,
+        "visible": true
+      }
+    ],
+    "visibleRouteHeadings": [
+      "Record your voice",
+      "Current draft recording",
+      "Leave recording?"
+    ],
+    "cdp": {
+      "cssVisualViewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 161.5,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      },
+      "cssLayoutViewport": {
+        "pageX": 0,
+        "pageY": 162,
+        "clientWidth": 711,
+        "clientHeight": 431
+      },
+      "cssContentSize": {
+        "x": 0,
+        "y": 0,
+        "width": 711,
+        "height": 1471
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "capturedAt": "2026-10-25T11:45:08.670Z",
+  "locale": "en",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 390,
+  "text": "Skip to content\nDubbed\nLanguage\nEN\nRU\nDub your own scene\n\nUpload a video, choose up to two minutes, and record every character in your own voice.\n\nGet 120 free welcome credits once with an eligible verified account.\n\nStart dubbing\n\nQuestions about payments or refunds?\n\nContact support\ndystrophyless@gmail.com",
+  "buttons": [
+    {
+      "label": "Start dubbing",
+      "width": 358,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    }
+  ]
+}

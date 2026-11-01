@@ -13,11 +13,13 @@ The public landing page must explain what Dubbed does, make the intended result/
 
 This flow ends before authentication or file selection:
 
-- a signed-out visitor who chooses **Start dubbing** enters Flow 03 registration;
+- a signed-out visitor who chooses **Start dubbing** enters the one-time microphone onboarding before Flow 03 registration;
 - an authenticated user who chooses **Start dubbing** enters Flow 06, **New dub**;
 - no upload control, browser file picker, project creation, processing job, credit reservation, purchase, recording, or result operation occurs on the landing page.
 
 The page is bilingual in English and Russian and usable on desktop and phone. Useful explanation, explanatory navigation and truthful demonstration/proof may be proposed. No fixed section count, three-card template, or tiny content quota is required.
+
+The pre-registration microphone check is not repeated if this onboarding step is already complete. Ordinary Sign in bypasses onboarding; all later checks are in Settings.
 
 ## 2. Design argument
 
@@ -25,7 +27,7 @@ The page must let a visitor understand the product without coaching. Explain the
 
 Truthful demonstration/proof is a design option, not an approved asset or layout. A genuine product-rendered example needs provenance and permission; a synthetic fixture, concept illustration, source clip or mock playback must be identified for what it is and cannot be represented as a custom result assembled from accepted takes. Do not invent testimonials, customers, usage metrics, prices, performance guarantees, AI voice cloning or unsupported capability claims. Preserve the existing download-only, no-translation and own-voice product scope.
 
-Keep **Start dubbing**, locale access, **Sign in** and the public support link to `dystrophyless@gmail.com` discoverable. Guest Start dubbing enters registration; authenticated Start dubbing enters New dub. An explanatory anchor or repeated contextual CTA may be considered in a prototype; neither an extra navigation ban nor a mandated marketing template applies.
+Keep **Start dubbing**, locale access, **Sign in** and the public support link to `dystrophyless@gmail.com` discoverable. Guest Start dubbing enters the one-time microphone onboarding, then registration; authenticated Start dubbing enters New dub. An explanatory anchor or repeated contextual CTA may be considered in a prototype; neither an extra navigation ban nor a mandated marketing template applies.
 
 Use the owner-selected Affect UI Clean/Light component identity, Mabry Pro and [current tokens](design-tokens.md). Component samples do not select page hierarchy or cap landing explanation. Current heading roles are the baseline, not proof that a 32px application heading is a validated hero. If prototype exploration needs a new type role or token, record that source gap for review rather than silently changing tokens. Final content, media behavior, type hierarchy and responsive geometry remain unapproved until the [design-first checkpoints](../frontend-design-workflow.md).
 
@@ -44,7 +46,7 @@ Use the owner-selected Affect UI Clean/Light component identity, Mabry Pro and [
 
 | User state and action | Required destination |
 |---|---|
-| Signed-out visitor chooses **Start dubbing** | Flow 03 registration. |
+| Signed-out visitor chooses **Start dubbing** | One-time microphone onboarding, then Flow 03 registration. |
 | Authenticated user chooses **Start dubbing** | Flow 06 New dub. |
 | Signed-out visitor chooses **Sign in** | Flow 02 sign-in; Flow 02 owns the default post-sign-in destination. |
 
@@ -80,7 +82,7 @@ Working Russian entry copy, not a complete page content inventory or approved fi
 - Primary action: **Начать озвучку**
 - Offer line: **Получите 120 бесплатных приветственных кредитов один раз для подходящего подтверждённого аккаунта.**
 
-Copy remains proposed pending bilingual editorial review. It must not imply that every account is eligible, that the welcome grant repeats or expires, that a cash price has been chosen, or that arbitrary content is permitted. The signed-out **Start dubbing** action leads to Flow 03 registration; it does not open upload directly.
+Copy remains proposed pending bilingual editorial review. It must not imply that every account is eligible, that the welcome grant repeats or expires, that a cash price has been chosen, or that arbitrary content is permitted. The signed-out **Start dubbing** action leads through the one-time microphone onboarding to Flow 03 registration; it does not open upload directly.
 
 ### 4.3 Signed-out return status
 
@@ -96,7 +98,7 @@ Copy remains proposed pending bilingual editorial review. It must not imply that
 1. The visitor receives the product explanation, welcome-credit information, and **Start dubbing** action without an account gate or full-page loader.
 2. The visitor chooses **Start dubbing**.
 3. The client resolves the current session through the shared authentication boundary.
-4. For an anonymous session, navigation enters Flow 03 registration.
+4. For an anonymous session, navigation enters the one-time microphone onboarding before Flow 03 registration.
 5. Flow 03 owns registration, verification, cancellation, and its successful post-registration destination.
 
 ### Authenticated transition
@@ -206,7 +208,7 @@ Former deleted frontend assets, fixtures, screenshots, and historical test resul
 |---|---|---|
 | F01-AC01 | In EN and RU, a visitor can understand the product, truthful intended result/value, own recording role/effort, and next step; the eligible one-time 120 free welcome-credit offer is accurate. | Required purpose; final copy/content and comprehension evidence pending prototype validation. |
 | F01-AC02 | Logo/home, RU / EN and Sign in remain discoverable; final header grouping and useful explanatory navigation are validated in the prototype rather than restricted to a closed inventory. | Capabilities retained; composition pending. |
-| F01-AC03 | A signed-out visitor choosing **Start dubbing** enters Flow 03 registration before any upload. | Confirmed. |
+| F01-AC03 | A signed-out visitor choosing **Start dubbing** enters the one-time microphone onboarding before Flow 03 registration before any upload. | Confirmed. |
 | F01-AC04 | **Sign in** enters Flow 02, while an authenticated user choosing **Start dubbing** enters Flow 06 New dub. | Confirmed. |
 | F01-AC05 | Useful explanatory content or truthful demonstration is not rejected by a sparse-content/media ban. Any proof asset has permission/provenance and an accurate representation label; fixtures are never claimed as genuine user-rendered results. No invented testimonials, metrics, prices or unsupported capabilities appear. | Truth requirements confirmed; exact assets and presentation pending. |
 | F01-AC06 | No landing interaction creates a project, selects a local file, reserves or spends credits, buys a pack, records media, or generates/downloads a result. | Confirmed. |
@@ -229,7 +231,7 @@ No product verification has been run for this document. After implementation exi
 
 1. **Source/content review:** trace the short service description and 120-credit claim to the shared contract; bilingual editorial review confirms equivalent meaning and avoids unsupported promises.
 2. **Purpose/content review:** validate product/result/value/effort comprehension and a discoverable next step in EN/RU. Review useful explanatory navigation and any proof assets against their permission/provenance/representation; do not enforce an obsolete closed content inventory.
-3. **Routing/state tests:** exercise anonymous, authenticated, pending, expired, and failed session states; verify signed-out **Start dubbing** -> Flow 03, **Sign in** -> Flow 02, authenticated **Start dubbing** -> Flow 06, and absence of landing-side workflow mutations. Verify ordinary logout arrives only after current-session termination and carries no deletion status; verify deletion success arrives only after all-session revocation and carries the validated deleted-account outcome.
+3. **Routing/state tests:** exercise anonymous, authenticated, pending, expired, and failed session states; verify signed-out **Start dubbing** -> one-time microphone onboarding -> Flow 03, **Sign in** -> Flow 02, authenticated **Start dubbing** -> Flow 06, and absence of landing-side workflow mutations. Verify ordinary logout arrives only after current-session termination and carries no deletion status; verify deletion success arrives only after all-session revocation and carries the validated deleted-account outcome.
 4. **Localization tests:** verify browser `ru` -> RU, all other browser languages -> EN, complete manual switching, explicit pre-sign-in choice overriding/updating a different saved account preference, browser-derived default deferring without overwrite, and no mixed-language success state.
 5. Use the [Clean / Light adoption](affect-ui-clean-light-adoption.md) and [current tokens](design-tokens.md): source dark primary, white subtly shadowed secondary, soft-destructive actions, current role sizes in [design-tokens.md](design-tokens.md): desktop task 40px / Medium 14px/20px, prominent/landing 44px / Medium 16px/24px, secondary 32px / Medium 14px/20px, navigation 36px / Medium 14px/20px; medium segmented 40px /14px/20px desktop and 48px /16px/24px phone, exact component radii/interiors and bounded functional motion. Keep Mabry, readable body/dialogue, existing layout/navigation and product semantics; phone button labels remain Mabry Pro Medium 16px/24px with retained 48px targets. Apply the explicit readable-text/link/error, essential-boundary, focus, phone-target and disabled-versus-busy adaptations. Verify the exact source variant/state, actual composites, typography/targets, EN/RU rendering, keyboard/focus and reduced motion; no runtime or accessibility pass is claimed.
 6. **Responsive visual review:** inspect below and at 768 CSS px plus a wide desktop; verify one column below the breakpoint, regular desktop layout at and above it, 1200px working-content maximum, truthful product/result/value/effort explanation, discoverable entry, logical reading order, action priority, flat component treatment, no per-block card wrappers/gradients/unmapped decorative shadows, and no clipping or overflow. Confirm the 400px auth-form maximum is exercised only in the destination Flow 02/03 form, not imposed on the landing main content. Specification prose is not a screenshot pass.

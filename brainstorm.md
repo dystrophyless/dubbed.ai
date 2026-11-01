@@ -1,5 +1,9 @@
 # Dubbed — project brainstorm
 
+Latest owner capability correction2026-10-27: speaker identity extraction is unavailable and the UI must not invent or display names/numbered speaker labels. Transcription and timed turns remain. Older diarization/model/identity discussion below or linked is historical research/proposal, not current capability or a required output field.
+
+Current owner amendment2026-10-27: user-initiated whole-section repeat preparation, its free project allowance and paid reruns are removed. Initial technical-failure recovery and identity-bound reconciliation remain; Result assembly retry/rerecording are distinct. Older discussion below/linked is historical provenance, not current authority for the removed feature. Active shared/flow/BR/SPEC contracts carry the removal; integration remains held.
+
 Recorded: 2026-10-20 (Asia/Qyzylorda).
 Source: this chat, including the preceding AI-native workflow setup request.
 Status: brainstorming record, not an approved implementation specification or claim of working software.
@@ -539,3 +543,7 @@ Official documentation checked during the discussion on 2026-10-20:
 - [Figma additional credits](https://help.figma.com/hc/en-us/articles/35865276858647-Manage-AI-credits): subscription credit pools and capped pay-as-you-go are alternatives there; Dubbed retains the owner's one-time-pack-only decision. Competitor recurring/expiry rules were not adopted.
 
 Remaining work is evidence and bounded policy/technical detail: real models/providers, original-speaker isolation during overlap, nonverbal detection/quality, margins/pause rules, device acoustic/sync tolerance, exact normalization/codec/browser versions, one-minute preparation benchmark definition, full costs and USD packs/stage allocations, cancellation races/reservation expiry, reversal/account-deletion balance treatment, content/reporting/trial-abuse/support policy, asset/cache/backup cleanup mechanics, and remaining toolchain/infrastructure choices. None is proven by this brainstorm. Earlier independent reviews cover their frozen inputs, not these later changed contracts. No product code, paid services, GitHub publication or executable product tests are authorized by saving these decisions.
+
+## 18. Owner-selected design refresh, 2026-10-21
+
+The owner rejected the initial frontend design and requested a substantial refresh. The selected direction is **Dark editing suite: charcoal surfaces, prominent video and restrained blue accents**. This supersedes the earlier neutral white/gray palette in §17. Preserve flat fills, no gradients/decorative effects, shadcn components, EN/RU, phone/desktop support, centralized services and the executable mock. Exact rendered design acceptance remains pending; this decision does not change product/timing/billing/capture behavior or authorize commit/push/deployment.

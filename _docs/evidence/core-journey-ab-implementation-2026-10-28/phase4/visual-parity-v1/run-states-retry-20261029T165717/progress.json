@@ -1,0 +1,31 @@
+[
+  {
+    "saved": "B-prototype-initial",
+    "url": "http://127.0.0.1:5179/"
+  },
+  {
+    "saved": "B-prototype-candidate",
+    "url": "http://127.0.0.1:5179/"
+  },
+  {
+    "saved": "B-prototype-result-desktop",
+    "url": "http://127.0.0.1:5179/"
+  },
+  {
+    "saved": "B-prototype-result-phone",
+    "url": "http://127.0.0.1:5179/"
+  },
+  {
+    "layout": "B",
+    "stage": "result",
+    "title": "Putting your scene together"
+  },
+  {
+    "saved": "A-app-initial",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=en"
+  },
+  {
+    "saved": "A-app-candidate",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=en"
+  }
+]

@@ -1,0 +1,477 @@
+{
+  "date": "2026-10-25T08:41:59.054Z",
+  "baseline": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "head": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "expectedIssues": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82
+  ],
+  "completed": 21,
+  "missing": [],
+  "brokenImages": [],
+  "changedSource": [],
+  "frontendStatus": "",
+  "index": "",
+  "issues": [
+    {
+      "issue": 61,
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "findings": {
+        "high": 0,
+        "medium": 2,
+        "low": 0
+      },
+      "screenshotCount": 8,
+      "embeddedImages": 8,
+      "reportBytes": 17713,
+      "reportSha256": "7AD338C1BF494B385F8C56ED18705851A23E4A7AF0735F83099F446E26A23DFC",
+      "limitations": [
+        "Nonvisual investigation: document-only acceptance, representative visible consequences only",
+        "No full suite, production/backend/security/media proof, two-tab runtime, hardware, zoom, forced colors, screen reader or motion timing",
+        "Representative EN desktop and RU desktop-short/phone/breakpoints; no complete locale/state matrix",
+        "Sign-in support screenshots lack separate DOM metric snapshots"
+      ]
+    },
+    {
+      "issue": 62,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 4,
+        "low": 2
+      },
+      "screenshotCount": 24,
+      "embeddedImages": 11,
+      "reportBytes": 22412,
+      "reportSha256": "4DAC3C2DFEF863F2C33BAC25541A96E1BE2BA0790862A4114227F4EF5E6BD5E8",
+      "limitations": [
+        "Mock-only native accounts and explicitly labeled controlled facade fixtures; no production deletion/revocation/retention proof.",
+        "No full suite, native 200% zoom, forced colors, screen reader or physical-phone keyboard/safe-area pass.",
+        "Other-device sessions, full uncertain-outcome/reload/late-event matrix, positive purchased balance and re-registration eligibility were not rerun."
+      ]
+    },
+    {
+      "issue": 63,
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "findings": {
+        "high": 1,
+        "medium": 2,
+        "low": 0
+      },
+      "screenshotCount": 17,
+      "embeddedImages": 5,
+      "reportBytes": 17514,
+      "reportSha256": "9E0971B26CE8E9BBFD531448226B76F300BD0C190BBF19F2813FC4835B643374",
+      "limitations": [
+        "Sampled native mock journey; full suite not rerun",
+        "No fresh native200%/forced-colors/motion/screen-reader audit",
+        "Physical devices and production services untested",
+        "Initial buffering/decoding captures do not prove persistent media failures",
+        "Programmatic focus probe is not native Tab evidence"
+      ]
+    },
+    {
+      "issue": 64,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 1,
+        "low": 2
+      },
+      "screenshotCount": 8,
+      "embeddedImages": 4,
+      "reportBytes": 15128,
+      "reportSha256": "302F735C32C8309684AC7895E3FC507F0B6D5A51AFD592745307DF3DC6D268D0",
+      "limitations": [
+        "Nonvisual investigation; representative consuming microphone screen only; no ownership re-review of issue69",
+        "Missing APIs are explicitly fault-injected on Chromium; not Safari/phone certification",
+        "EN desktop1440x900/short1440x700 and EN/RU390x844; no RU desktop,767/768,native200% zoom,screen reader",
+        "Full-page screenshots; actual viewport recorded separately",
+        "No physical mic/speakers/BT or phone interruption testing",
+        "Historical timing/playback evidence audited and hashes matched; not rerun; no fresh synchronization/SLA proof",
+        "No production server conversion/storage/processing or MOV/WebM input and size/duration-boundary checks",
+        "Initial phone locale-selector automation failure preserved; corrected capture completed eight states, zero page errors"
+      ]
+    },
+    {
+      "issue": 65,
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "findings": {
+        "high": 1,
+        "medium": 5,
+        "low": 0
+      },
+      "screenshotCount": 28,
+      "embeddedImages": 9,
+      "reportBytes": 24044,
+      "reportSha256": "318E12B584642895CC09C032C10B72FD33A3D4B534DB729A2E289EA93BB964E8",
+      "limitations": [
+        "Mock only; no real payment/provider/commerce/ledger atomicity evidence",
+        "Native 200% zoom, forced colors, screen reader and reduced-motion timing not run",
+        "Unknown/lost-start/multitab/replay/session/account-switch and invalid-origin paths not re-executed",
+        "Origin journey EN desktop only; available balance seeded to 2",
+        "History failure and catalog failure use existing labelled synthetic presentation harness; genuine 20+ pagination not re-executed"
+      ]
+    },
+    {
+      "issue": 66,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 4,
+        "low": 1
+      },
+      "screenshotCount": 21,
+      "embeddedImages": 11,
+      "reportBytes": 21228,
+      "reportSha256": "013B7E82A77841C4EBC52E2FA2F4987E7C90B115224C9DABE9DE6D775B194324",
+      "limitations": [
+        "Local mock only; no real OAuth/email/accounts/security proof",
+        "Synthetic existing harness for busy/conflict/unknown and breakpoints",
+        "Native 200% zoom, full locale/viewport matrix and full suite not run",
+        "No production atomicity/resource-preservation or all recovery/race scenarios verified"
+      ]
+    },
+    {
+      "issue": 67,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 1,
+        "low": 1
+      },
+      "screenshotCount": 15,
+      "embeddedImages": 8,
+      "reportBytes": 15903,
+      "reportSha256": "5512DCEB693DB9820F29BB5C010F712947F04D2A43AAC4C22B095919933D2BEC",
+      "limitations": [
+        "Nonvisual runtime issue; representative screens reviewed, not all downstream flows.",
+        "Build/clean install/unit/full suites not rerun; one existing browser smoke passed.",
+        "Storage-denial defect reproduced through controlled init-script faults; native browser-policy prevalence unproved.",
+        "Compact-desktop finding is cross-owner requirement/design feedback, not a #67 implementation mismatch.",
+        "No 200% browser zoom, physical media, Safari/Firefox or dedicated loading/dialog/focus matrix."
+      ]
+    },
+    {
+      "issue": 68,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 1,
+        "medium": 1,
+        "low": 1
+      },
+      "screenshotCount": 13,
+      "embeddedImages": 13,
+      "reportBytes": 17171,
+      "reportSha256": "3E8039C1DF450256EA25B435AA0C6CA04604F4D5BF73D847CA08699A7984C9EC",
+      "limitations": [
+        "Foundation has no standalone UI; controlled existing consumer harness used",
+        "Unknown repeat proves two distinct frontend mutation intents, not actual duplicate payment",
+        "Real configuration unavailable only; no real adapter/backend/security proof",
+        "3 files/9 targeted tests pass; no full suite/build/lint",
+        "No native zoom, keyboard/dialog, screen reader or physical media pass",
+        "Review-only; no product/spec/Git/GitHub changes"
+      ]
+    },
+    {
+      "issue": 69,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "low": 1,
+        "medium": 2,
+        "high": 0
+      },
+      "screenshotCount": 27,
+      "embeddedImages": 5,
+      "reportBytes": 18366,
+      "reportSha256": "F9209F9ED683B703B1BEBA8B136D354BCF82984C5E1858CC7235D7E0B23BA6E4",
+      "limitations": [
+        "Fake-device Chromium only; no physical mic/speaker/native permission chrome",
+        "No screen reader/native 200% zoom/forced-colors or complete motion acceptance",
+        "Direct new-origin route; no project redirect or exhaustive lifecycle/native error matrix",
+        "No full suite or real backend/provider/deployment"
+      ]
+    },
+    {
+      "issue": 70,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "low": 2,
+        "medium": 1,
+        "high": 0
+      },
+      "screenshotCount": 9,
+      "embeddedImages": 6,
+      "reportBytes": 16456,
+      "reportSha256": "4BBBDEFC9713B80CE7C5DEAE1DBEA172C53B6DF383A47395B1D9060E07E65995",
+      "limitations": [
+        "Mock only; no production or payment proof",
+        "35 targeted service tests; no exhaustive concurrency audit or full suite",
+        "No actual screen-reader session, native zoom, or 767/768 breakpoint capture",
+        "Screens 07-09 use existing fixtures; native reservation uses labelled advanced-clock/service seeding",
+        "No deletion browser journey; targeted service deletion tests passed"
+      ]
+    },
+    {
+      "issue": 71,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 3,
+        "low": 2
+      },
+      "screenshotCount": 26,
+      "embeddedImages": 5,
+      "reportBytes": 16723,
+      "reportSha256": "A83AE58A65A71C8A5DD0CA422EB8138AC80C6419DAFB26F49082BD39BD3DF30E",
+      "limitations": [
+        "Mock-backed actual UI only; synthetic identity setup via centralized facade",
+        "Controlled harness used for transport error, unknown verification and held completion",
+        "No real delivery, production security or other-device revocation proof",
+        "No exhaustive identity/purpose/resend/project-return matrix or full suite",
+        "No native zoom, real mobile keyboard, screen reader, forced colors or motion timing",
+        "Locale and viewport coverage is targeted rather than Cartesian"
+      ]
+    },
+    {
+      "issue": 72,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "medium": 1,
+        "low": 1,
+        "high": 0
+      },
+      "screenshotCount": 7,
+      "embeddedImages": 7,
+      "reportBytes": 15413,
+      "reportSha256": "D010E435E79A467BB8473A14327D256D99FD654571A09D32497963FF03A2244E",
+      "limitations": [
+        "Fresh Chromium only; no physical audio or mobile device",
+        "No listening/timing/real interruption/production-rendering proof",
+        "767/768, 200 percent zoom, full EN/RU matrix and exhaustive states not run",
+        "Generation 002 native playback only; no UI revision handoff rerun"
+      ]
+    },
+    {
+      "issue": 73,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 2,
+        "low": 1
+      },
+      "screenshotCount": 10,
+      "embeddedImages": 8,
+      "reportBytes": 15439,
+      "reportSha256": "2DC87A115D7BADA37C976EA468781D713EBEDAE59B58D001613DB8DE7BDC63A7",
+      "limitations": [
+        "Nonvisual foundation reviewed through representative consumer screens; no standalone screen.",
+        "Six existing targeted service files passed 18 tests; no full suite or exhaustive race matrix.",
+        "Storage-open faults and unknown-delete responses are labelled injections; real browser quota not filled.",
+        "EN desktop and RU phone dominate; EN phone, RU desktop, 767/768, zoom and full focus/motion matrix not repeated.",
+        "No production, cross-device, physical-device or real-provider durability/security claim."
+      ]
+    },
+    {
+      "issue": 74,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 5,
+        "low": 1
+      },
+      "screenshotCount": 26,
+      "embeddedImages": 6,
+      "reportBytes": 21322,
+      "reportSha256": "71127634F0529B8002DBAF3509DDAB54F7B6D6F48FA96116BA107C1DF1B63763",
+      "limitations": [
+        "Mock only; no production worker/billing proof",
+        "Failure/zero-turn/unknown cancellation controlled harness scenarios",
+        "No native 200% zoom, AT, forced-colors, touch hardware, real mobile browser",
+        "No race/reload/accepted-take-lock exhaustive checks",
+        "No real retained draft preservation/deletion check; paid reprocessing not separately exercised",
+        "Primary cancellation and included-retry UI journey completed; fake microphone only"
+      ]
+    },
+    {
+      "issue": 75,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 4,
+        "low": 3
+      },
+      "screenshotCount": 32,
+      "embeddedImages": 7,
+      "reportBytes": 20109,
+      "reportSha256": "C79B3B3DD4A6CC9A6B5739B70688720B18EEE6217AB4A80EFE9587DCD602E928",
+      "limitations": [
+        "Native mock UI, facade-seeded registration/upload; synthetic mixed/error states labeled explicitly.",
+        "No full lifecycle/candidate/zero-turn/race/activity matrix or full suite.",
+        "No real backend, billing, media devices, true browser zoom, screen reader or physical phone verification."
+      ]
+    },
+    {
+      "issue": 77,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "medium": 3,
+        "low": 0,
+        "high": 0
+      },
+      "screenshotCount": 17,
+      "embeddedImages": 3,
+      "reportBytes": 17500,
+      "reportSha256": "EDC4F22590C85F360F4D9A3C024976DE0102BF0D2EC1D842F8B1A81987848C19",
+      "limitations": [
+        "Local mock Chromium and synthetic fake-device media only",
+        "No fault injection, final assembly or production durability proof",
+        "720x450 reflow approximation is not actual200% browser zoom",
+        "No full keyboard/screen-reader/physical-device audit",
+        "RU short desktop and RU dialog not captured"
+      ]
+    },
+    {
+      "issue": 78,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 2,
+        "low": 2
+      },
+      "screenshotCount": 20,
+      "embeddedImages": 5,
+      "reportBytes": 21544,
+      "reportSha256": "7B15073E56912AA3257151F8F099792D48D0025E2C6133EFEBF51101078949ED",
+      "limitations": [
+        "Local mock only; no production preference, email or support-delivery proof",
+        "720x450 reflow proxy, not native 200% browser zoom",
+        "No real mobile keyboard, assistive technology audit or full test suite",
+        "Shared-control failures/loading are existing synthetic harness fixtures",
+        "No fault-injected landing session/config/locale-write failure; no exhaustive consumer-state or motion verification"
+      ]
+    },
+    {
+      "issue": 79,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 1,
+        "medium": 5,
+        "low": 1
+      },
+      "screenshotCount": 24,
+      "embeddedImages": 8,
+      "reportBytes": 24977,
+      "reportSha256": "F6DBFB8AD80D98284C3281A450A3F510DA1CE387A2BCE176C51DB6F0B8BBBE66",
+      "limitations": [
+        "Fresh seeded actual-ResultScreen fixtures; no full-shell native owner journey or production integration.",
+        "No full suite, real rendering, real descriptor retention, checksum/OS-save validation or durable authorization/race acceptance.",
+        "No native 200% zoom, forced-colors, screen-reader output or reduced-motion timing audit."
+      ]
+    },
+    {
+      "issue": 80,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 3,
+        "low": 0
+      },
+      "screenshotCount": 25,
+      "embeddedImages": 5,
+      "reportBytes": 17594,
+      "reportSha256": "F77EFFA4BF521CDE80921DE0C0FE8DA6C3C925ED7C3441335805DB9E800C0151",
+      "limitations": [
+        "Mock only; production provider/security unverified",
+        "No fresh valid project return or comprehensive no-replay matrix",
+        "Reflow720x450 is not native browser200% zoom",
+        "No AT/password manager/physical phone keyboard; no full suite"
+      ]
+    },
+    {
+      "issue": 81,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 3,
+        "low": 2
+      },
+      "screenshotCount": 21,
+      "embeddedImages": 5,
+      "reportBytes": 19457,
+      "reportSha256": "E844B0CF52F2F39CEDDEB6DB6C2145E70257458D8641880EC958A7AB49C70E3E",
+      "limitations": [
+        "Mock/Chromium only; no production service proof",
+        "Processing-click/race/reload/replacement/payment return contracts not freshly executed",
+        "No actual 200% browser zoom, screen reader or physical phone checks",
+        "Upload-error supplementary harness capture timed out; pending-upload screenshot16 retained without DOM metrics; no product defect inferred"
+      ]
+    },
+    {
+      "issue": 82,
+      "model": "GPT-6.1 Sol",
+      "effort": "High",
+      "findings": {
+        "high": 0,
+        "medium": 4,
+        "low": 2
+      },
+      "screenshotCount": 23,
+      "embeddedImages": 7,
+      "reportBytes": 18227,
+      "reportSha256": "83A04B789230FBB009371F3585DE050E6017A1DB51468CC86132D61C8CC8E1A0",
+      "limitations": [
+        "Mock-only local UI;6 supplemental injected facade states",
+        "No real email/provider/backend or grant atomicity/session duration verification",
+        "No full suite; no fresh zoom/screen reader/physical keyboard/expiry cap matrix",
+        "No product fixes or Git/GitHub mutations"
+      ]
+    }
+  ],
+  "totalReviewedScreenshots": 401,
+  "findingsAcrossReports": {
+    "high": 4,
+    "medium": 58,
+    "low": 25
+  },
+  "complete": true
+}

@@ -1,0 +1,130 @@
+{
+  "pairVersion": "core-journey-ab-highfi-v1",
+  "date": "2026-10-28",
+  "timezone": "Asia/Qyzylorda",
+  "authoringSpan": "2026-10-27–28;earlier raw report dates retained",
+  "stage": "Ready for high-fi review;EDITS PAUSED",
+  "variants": {
+    "A": "core-journey-panel-highfi-v4",
+    "B": "core-journey-studio-highfi-v1"
+  },
+  "previews": {
+    "A": "http://127.0.0.1:5178",
+    "B": "http://127.0.0.1:5179"
+  },
+  "verification": {
+    "A": {
+      "journey-results.json": {
+        "cohorts": 3,
+        "sha256": "4cf487daecaac1dd126ebfea50fac534c69b64bc3ef8436c5927b0e7dee50e23"
+      },
+      "interaction-results.json": {
+        "cohorts": 7,
+        "sha256": "6ee667e0920ae4d8e5dc48134cfd7d8af30e902c861c37f604c881bdf67423c6"
+      },
+      "responsive-results.json": {
+        "cohorts": 27,
+        "sha256": "3ae8b0f40f5521ee16b9d64f30642022fd81aeba45c37fdfd1b0ed6a3405108a"
+      },
+      "final-visual-results.json": {
+        "cohorts": 3,
+        "sha256": "5cbeaf20e79edc05b6d92aa0359fde7283932887608f1f4af1c63d8533c79783"
+      },
+      "mic-font-results.json": {
+        "cohorts": 2,
+        "sha256": "c36aeb19dc13a02716fce4416917703d74327c7c1fe602acaf5b0b67ad9b7625"
+      },
+      "completion-results.json": {
+        "cohorts": 3,
+        "sha256": "7a508d5a28c1706a1c85d8aa1743dd60c870f0afb82c54e060702fffae1183a3"
+      }
+    },
+    "B": {
+      "journey-results.json": {
+        "cohorts": 3,
+        "sha256": "9c0c8daa9809d7c31e06d4f85df621c2fd4d96690be1d1751fa5fe822799334f"
+      },
+      "interaction-results.json": {
+        "cohorts": 7,
+        "sha256": "1d225356de2af0d54ffa50314f15ac64abd7aeb71025a0ff6f1b131483185793"
+      },
+      "responsive-results.json": {
+        "cohorts": 27,
+        "sha256": "1a7105c03903a2b83e8797ea4ca62a34b2ea19657170c166e17ba33a81174be8"
+      },
+      "final-visual-results.json": {
+        "cohorts": 3,
+        "sha256": "112445fbadb4efcdcc0ef775370df8ce7b64819fee9e2074ba3fbf30914d235c"
+      },
+      "mic-font-results.json": {
+        "cohorts": 2,
+        "sha256": "bd625cf90d86681b5d4f41414fe30ab3947a1c65b5a13c6af291a1cd5fc1f638"
+      },
+      "completion-results.json": {
+        "cohorts": 3,
+        "sha256": "7620edbc80f43ed43e8315907fcb33cfd61ffd4eb24435f13034f874ffc9ba3d"
+      }
+    },
+    "calibration-results.json": {
+      "count": 4,
+      "sha256": "acecf11ded5acc8cc1ba97abbdf640507c7db2607d3929db63bf9ef56580f55b"
+    },
+    "calibration-final-results.json": {
+      "count": 4,
+      "sha256": "976cd41923e147661f7277e5e590b61f595547b4cddb6642a7fdd3047c8703bb"
+    },
+    "parity-preservation-results.json": {
+      "count": 104,
+      "sha256": "746487321bd53328407017c9a3a85ad498793750928fbde0bc22a403359728bb"
+    }
+  },
+  "builds": {
+    "A": "PASS Vite7.3.7 index-D1OwJUB0.js",
+    "B": "PASS Vite7.3.7 index--2w9QIj_.js"
+  },
+  "previewHTTP": {
+    "5178": 200,
+    "5179": 200
+  },
+  "deltas": {
+    "A": {
+      "previousVersion": "core-journey-highfi-v3-owner-amendment-3",
+      "priorFingerprintCount": 54,
+      "changedPriorFiles": [
+        "BRIEF.md",
+        "index.html",
+        "src.js",
+        "ui.js",
+        "locale.js"
+      ],
+      "unchangedPriorFingerprints": 49
+    },
+    "B": {
+      "previousVersion": "core-journey-studio-lowfi-v6",
+      "priorFingerprintCount": 190,
+      "changedPriorFiles": [
+        "BRIEF.md",
+        "README.md",
+        "index.html",
+        "locale.js",
+        "result-player.js",
+        "src.js",
+        "ui.js"
+      ],
+      "unchangedPriorFingerprints": 183
+    }
+  },
+  "commonBehaviorSha256": "0c440efdd75a9cbe0651d74a7b13ce0598b81627355a656d95558992ac0ec913",
+  "commonUISha256": "353dc6d972a416fa3f407b2b22cd43c5d6290f55cdd76fc31e9b2f90aa6e2021",
+  "presentationRecipe": "Identical CSS text;A CRLF/B LF retained",
+  "ownerLowFiApproval": {
+    "version": "core-journey-studio-lowfi-v6",
+    "date": "2026-10-27",
+    "reply": "Короче я согласен с этим прототипом, но я хочу обе версии до конца развить что бы потом через A/B тестинг выбрать лучший",
+    "scope": "Whole current studio and Result custom player;develop both candidates,no winner"
+  },
+  "ownerHighFiCheckpoint": "PENDING for these two named versions",
+  "explicitProposal": "Existing primary Next slot becomes To result on already-accepted completed last line;earlier navigation/candidate acceptance unchanged;no automatic assembly on replacement acceptance.",
+  "scopeHold": "Both isolated design prototypes;HANDOFF approval/hold note only canonically;no integration/shared-contract sync/GitHub/commit/push/real experiment",
+  "limits": "Fixture playback/download actual;input/envelope/save/assembly simulated,synthetic takes/fixed illustrative output,LocalStorage only;no real mic/backend/render/concurrency/unknown-commit/SR speech/physical-mobile/font-portability/statistical winner proof."
+}

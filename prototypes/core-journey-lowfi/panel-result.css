@@ -1,0 +1,6 @@
+/* A retains its left project heading;Result media capabilities are shared. */
+main.result-workspace{padding:16px;max-width:954px}.result-workspace .project-header{width:100%}.result-workspace .result-stage,.result-workspace .result-bottom{width:100%;max-width:none}.result-workspace .result-bottom{gap:24px}
+@media(min-width:768px) and (max-height:700px){main.result-workspace{--result-min-width:480;padding-top:8px;padding-bottom:8px}.result-workspace .project-header{margin-bottom:8px}.result-workspace h1{font-size:24px;line-height:32px}.result-workspace .project-name{line-height:20px}.result-workspace .result-bottom{margin-top:16px}}
+@media(max-width:767px){main.result-workspace{width:auto;max-width:none;padding:16px}.result-workspace .result-bottom{display:block}.result-workspace .result-actions{margin-top:16px;justify-content:start}.result-workspace .result-actions .hf-button{min-height:48px}}
+
+@media(min-width:768px) and (max-height:700px){.result-workspace .result-bottom p{font-size:14px;line-height:20px}}

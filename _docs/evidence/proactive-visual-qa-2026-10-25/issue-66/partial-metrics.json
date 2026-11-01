@@ -1,0 +1,160 @@
+[
+  {
+    "name": "ru-phone-start",
+    "kind": "real mock; identity seeded via service",
+    "url": "/account-linking",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "scrollWidth": 390,
+    "height": 952,
+    "fontLoaded": true,
+    "text": "Перейти к содержимому\nDubbed\nКредиты\n120\nАккаунт\n\nАккаунт и безопасность\n\nПодключить способ входа\n\nПодтвердите текущий способ и способ, который хотите добавить. Связь появится только после обоих подтверждений.\n\nВ этой версии используются тестовые данные. Настоящие почта и аккаунт Google не затрагиваются.\n1\nДобавить почту и пароль\n\nТекущий способ входа: Google\n\nДобавляемый способ: Электронная почта и пароль\n\nНовый адрес электронной почты\nПароль для этого способа\n\nНе менее 8 символов.\n\nПродолжить",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Аккаунт",
+        "x": 16,
+        "y": 121,
+        "w": 83.1875,
+        "h": 40,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "line": "24px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "invalid": null,
+        "description": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "_r_3_",
+        "x": 33,
+        "y": 605,
+        "w": 324,
+        "h": 48,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "invalid": null,
+        "description": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "_r_4_",
+        "x": 33,
+        "y": 695,
+        "w": 324,
+        "h": 48,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "invalid": null,
+        "description": "_r_4_-hint"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Продолжить",
+        "x": 33,
+        "y": 785,
+        "w": 126.578125,
+        "h": 48,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "weight": "500",
+        "disabled": false,
+        "busy": null,
+        "invalid": null,
+        "description": null
+      }
+    ]
+  },
+  {
+    "name": "ru-phone-after-continue",
+    "kind": "diagnostic after Continue",
+    "url": "/account-linking",
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "scrollWidth": 390,
+    "height": 1018,
+    "fontLoaded": true,
+    "text": "Перейти к содержимому\nDubbed\nКредиты\n120\nАккаунт\n\nАккаунт и безопасность\n\nПодключить способ входа\n\nПодтвердите текущий способ и способ, который хотите добавить. Связь появится только после обоих подтверждений.\n\nВ этой версии используются тестовые данные. Настоящие почта и аккаунт Google не затрагиваются.\nСпособы входа изменились, пока был открыт запрос. Обновите аккаунт и начните заново.\n1\nДобавить почту и пароль\n\nТекущий способ входа: Google\n\nДобавляемый способ: Электронная почта и пароль\n\nНовый адрес электронной почты\nПароль для этого способа\n\nНе менее 8 символов.\n\nПродолжить",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Аккаунт",
+        "x": 16,
+        "y": 121,
+        "w": 83.1875,
+        "h": 40,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "14px",
+        "line": "24px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "invalid": null,
+        "description": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "_r_3_",
+        "x": 33,
+        "y": 671,
+        "w": 324,
+        "h": 48,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "invalid": null,
+        "description": null
+      },
+      {
+        "tag": "INPUT",
+        "text": "_r_4_",
+        "x": 33,
+        "y": 761,
+        "w": 324,
+        "h": 48,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "invalid": null,
+        "description": "_r_4_-hint"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Продолжить",
+        "x": 33,
+        "y": 851,
+        "w": 126.578125,
+        "h": 48,
+        "font": "\"Mabry Pro\", sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "weight": "500",
+        "disabled": false,
+        "busy": null,
+        "invalid": null,
+        "description": null
+      }
+    ]
+  }
+]

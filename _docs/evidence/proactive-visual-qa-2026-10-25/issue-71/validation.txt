@@ -1,0 +1,1 @@
+Evidence validation 2026-10-25: screenshot count26 matches summary; every absolute report image/source link resolves; frontend status empty; isolated Vite4371 stopped (no listener). The final shell returned1 only because Get-NetTCPConnection found no listener after successful shutdown.

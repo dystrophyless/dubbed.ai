@@ -1,0 +1,11 @@
+{
+  "activeId": "next",
+  "activeText": "\n  \n\nNext",
+  "outline": "solid",
+  "recordVisible": true,
+  "candidate": null,
+  "accepted": {
+    "id": 4
+  },
+  "destinationTitle": "My projects"
+}

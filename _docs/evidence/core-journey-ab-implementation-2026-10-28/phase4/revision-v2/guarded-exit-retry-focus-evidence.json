@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-28T17:48:55.398Z",
+  "browser": "Chrome 156.0.8078.49",
+  "nativeInput": "Chrome browser fake audio input; not a physical microphone",
+  "candidateId": "candidate:operation:8becf87b-b1a7-4d50-9a0a-e97eb1c0238a",
+  "acceptedBeforeRetry": {},
+  "acceptedAfterRetry": {
+    "sintel-turn-1": "candidate:operation:8becf87b-b1a7-4d50-9a0a-e97eb1c0238a"
+  },
+  "failureTrace": {
+    "calls": 1,
+    "stores": [
+      "operations"
+    ]
+  },
+  "successfulAcceptOperations": [
+    {
+      "id": "operation:5271fbab-61b8-48e9-b956-8ae39d49ab1d",
+      "kind": "accept-candidate",
+      "state": "committed",
+      "turnId": "sintel-turn-1",
+      "projectRevision": 3,
+      "navigationIntent": {
+        "kind": "exit"
+      },
+      "navigationCompleted": true,
+      "sha256": "8a4d69c9e8a95db9afe3ab03765b104fd5f44e28c531a0f4679e8cfdfd7a2fed"
+    }
+  ],
+  "focusBeforeToastExpiry": {
+    "focusedRetry": true,
+    "scrollY": 0
+  },
+  "retryFocusedAfterToastExpiry": true,
+  "boundaryReturnFocusedExit": true
+}

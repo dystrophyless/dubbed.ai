@@ -1,0 +1,2068 @@
+{
+  "mode": "native-chromium-cdp",
+  "source": {
+    "path": "frontend/public/media/portrait-long-source.mp4",
+    "sha256": "4ebe060311dfa4411f474ad45c8b2bfab3c9718e5813eea3db9c0dc6bf68d626",
+    "preview": {
+      "width": 540,
+      "height": 960,
+      "duration": 35.9591,
+      "muted": false
+    }
+  },
+  "quote": "Process for 36 credits",
+  "recordLineCount": 4,
+  "captures": {
+    "newDubCapture": {
+      "capture": "native-chromium-cdp-new-dub-portrait-quote",
+      "mode": "native-chromium-cdp",
+      "screenshot": {
+        "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native-chromium-cdp-new-dub-portrait-quote.png",
+        "sha256": "048083de41c9d134b3bf03652d747b439f34a190bee9f0096f7711a37821503e",
+        "bytes": 68893
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:4563/new",
+        "viewport": {
+          "innerWidth": 711,
+          "innerHeight": 432,
+          "outerWidth": 1440,
+          "outerHeight": 960
+        },
+        "devicePixelRatio": 2,
+        "bodyZoom": "1",
+        "documentWidth": 711,
+        "documentHeight": 1506,
+        "horizontalOverflow": false,
+        "scrollY": 0,
+        "language": "en",
+        "title": "Dubbed",
+        "recording": {
+          "line": null,
+          "dialogue": null,
+          "stage": null,
+          "lineHeader": null,
+          "dialogueBounds": null,
+          "timeline": null,
+          "panel": null,
+          "panelPosition": null,
+          "phonePanelFlow": null,
+          "dialogueAndTimelineClearOfPanel": false
+        },
+        "media": {
+          "width": 540,
+          "height": 960,
+          "duration": 35.9591,
+          "readyState": 4,
+          "currentSrc": "blob:http://127.0.0.1:4563/5cda1c13-87cd-4927-b57b-dea027d32bee"
+        },
+        "dialog": null,
+        "activeElement": {
+          "tagName": "BODY",
+          "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits120LanguageENRUSign outNew dubChoose a source video, review the selected section, and request its exact processing quote.1 of 2 project slots usedManage projectsValidated draft saved in this mock workspace.Saved sourceportrait-long-sourceportrait-long-source.mp435.959 · 540 × 960Replace videoVideo previewSelected sectionChoose one contiguous interval from the saved source. Only this interval proceeds to processing.Selection start0.000 sSelection end35.959 s0.000 s35.959 sStart (seconds)End (seconds)Selected duration: 35.959 secondsProcessing quoteCredits for this section36Run typeFirst processing runAvailable after reservations120In processing0Process for 36 credits",
+          "role": null,
+          "className": ""
+        },
+        "buttons": [
+          {
+            "label": "Sign out",
+            "variant": "ghost",
+            "size": "small",
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": false
+          },
+          {
+            "label": "Open navigation",
+            "variant": "ghost",
+            "size": "icon",
+            "width": 48,
+            "height": 48,
+            "top": 8,
+            "fontSize": "13px",
+            "lineHeight": "20px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Replace video",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 134.65,
+            "height": 48,
+            "top": 430,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Process for 36 credits",
+            "variant": "primary",
+            "size": "large",
+            "width": 679,
+            "height": 48,
+            "top": 1410.52,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          }
+        ],
+        "visibleRouteHeadings": [
+          "New dub",
+          "portrait-long-source",
+          "Video preview",
+          "Selected section",
+          "Processing quote"
+        ],
+        "cdp": {
+          "cssVisualViewport": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "pageX": 0,
+            "pageY": 0,
+            "clientWidth": 711,
+            "clientHeight": 432,
+            "scale": 1,
+            "zoom": 2
+          },
+          "cssLayoutViewport": {
+            "pageX": 0,
+            "pageY": 0,
+            "clientWidth": 711,
+            "clientHeight": 432
+          },
+          "cssContentSize": {
+            "x": 0,
+            "y": 0,
+            "width": 711,
+            "height": 1506
+          }
+        }
+      }
+    },
+    "line1": {
+      "capture": "native-chromium-cdp-record-line-1-en",
+      "mode": "native-chromium-cdp",
+      "screenshot": {
+        "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native-chromium-cdp-record-line-1-en.png",
+        "sha256": "8801007fe3110a1dcd2033f2782ccce5e10d23923a84450bf54161d62dd1c92d",
+        "bytes": 111496
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/record",
+        "viewport": {
+          "innerWidth": 711,
+          "innerHeight": 432,
+          "outerWidth": 1440,
+          "outerHeight": 960
+        },
+        "devicePixelRatio": 2,
+        "bodyZoom": "1",
+        "documentWidth": 711,
+        "documentHeight": 1426,
+        "horizontalOverflow": false,
+        "scrollY": 0,
+        "language": "en",
+        "title": "Dubbed",
+        "recording": {
+          "line": "Line 1 of 4I left the blue instrument beside the narrow glass panel. Tell me when the light reaches the small silver mark near the edge.Capture window: 0.95–9.23 sAccepted takes: 0 / 4",
+          "dialogue": "I left the blue instrument beside the narrow glass panel. Tell me when the light reaches the small silver mark near the edge.",
+          "stage": {
+            "x": 16,
+            "y": 225,
+            "width": 679,
+            "height": 381.94,
+            "top": 225,
+            "right": 695,
+            "bottom": 606.94
+          },
+          "lineHeader": {
+            "x": 35.5,
+            "y": 618.94,
+            "width": 640,
+            "height": 134,
+            "top": 618.94,
+            "right": 675.5,
+            "bottom": 752.94
+          },
+          "dialogueBounds": {
+            "x": 35.5,
+            "y": 648.94,
+            "width": 640,
+            "height": 48,
+            "top": 648.94,
+            "right": 675.5,
+            "bottom": 696.94
+          },
+          "timeline": {
+            "x": 35.5,
+            "y": 764.94,
+            "width": 640,
+            "height": 52,
+            "top": 764.94,
+            "right": 675.5,
+            "bottom": 816.94
+          },
+          "panel": {
+            "x": 16,
+            "y": 828.94,
+            "width": 679,
+            "height": 209,
+            "top": 828.94,
+            "right": 695,
+            "bottom": 1037.94
+          },
+          "panelPosition": "static",
+          "phonePanelFlow": "in-flow",
+          "dialogueAndTimelineClearOfPanel": true
+        },
+        "media": {
+          "width": 540,
+          "height": 960,
+          "duration": 35.9591,
+          "readyState": 4,
+          "currentSrc": "blob:http://127.0.0.1:4563/d6018c02-b5b1-40c7-a641-8d909872a5d9"
+        },
+        "dialog": null,
+        "activeElement": {
+          "tagName": "BODY",
+          "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits84LanguageENRUSign outRecord your voiceportrait-long-sourceRecordProgress savedProjectsLine 1 of 4I left the blue instrument beside the narrow glass panel. Tell me when the light reaches the small silver mark near the edge.Capture window: 0.95–9.23 sAccepted takes: 0 / 4OriginalMy recordingPlay0:00 / 0:08No saved recording is available for this line yet.Record linePrevious lineNext lineMicrophoneDecoding local audio for waveform preview…Original video volumeRecording statusThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.Process again",
+          "role": null,
+          "className": ""
+        },
+        "buttons": [
+          {
+            "label": "Sign out",
+            "variant": "ghost",
+            "size": "small",
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": false
+          },
+          {
+            "label": "Open navigation",
+            "variant": "ghost",
+            "size": "icon",
+            "width": 48,
+            "height": 48,
+            "top": 8,
+            "fontSize": "13px",
+            "lineHeight": "20px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Projects",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 120.57,
+            "height": 48,
+            "top": 165,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Play",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 48,
+            "height": 48,
+            "top": 839.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Record line",
+            "variant": "primary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 925.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Previous line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 925.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": true,
+            "visible": true
+          },
+          {
+            "label": "Next line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 981.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Microphone",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 981.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Process again",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 135.41,
+            "height": 48,
+            "top": 1329.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          }
+        ],
+        "visibleRouteHeadings": [
+          "Record your voice"
+        ],
+        "cdp": {
+          "cssVisualViewport": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "pageX": 0,
+            "pageY": 0,
+            "clientWidth": 711,
+            "clientHeight": 432,
+            "scale": 1,
+            "zoom": 2
+          },
+          "cssLayoutViewport": {
+            "pageX": 0,
+            "pageY": 0,
+            "clientWidth": 711,
+            "clientHeight": 432
+          },
+          "cssContentSize": {
+            "x": 0,
+            "y": 0,
+            "width": 711,
+            "height": 1426
+          }
+        }
+      }
+    },
+    "recordLine3Native": {
+      "capture": "native200-portrait-line3-en",
+      "mode": "native-chromium-cdp",
+      "screenshot": {
+        "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-portrait-line3-en.png",
+        "sha256": "9b5ce0b37e428ad0cb4e998173ed81ca57d69bb51891a83642bb851f0a07f33a",
+        "bytes": 81376
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/record",
+        "viewport": {
+          "innerWidth": 711,
+          "innerHeight": 432,
+          "outerWidth": 1440,
+          "outerHeight": 960
+        },
+        "devicePixelRatio": 2,
+        "bodyZoom": "1",
+        "documentWidth": 711,
+        "documentHeight": 1458,
+        "horizontalOverflow": false,
+        "scrollY": 0,
+        "language": "en",
+        "title": "Dubbed",
+        "recording": {
+          "line": "Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4",
+          "dialogue": "The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.",
+          "stage": {
+            "x": 16,
+            "y": 283,
+            "width": 679,
+            "height": 381.94,
+            "top": 283,
+            "right": 695,
+            "bottom": 664.94
+          },
+          "lineHeader": {
+            "x": 35.5,
+            "y": 676.94,
+            "width": 640,
+            "height": 134,
+            "top": 676.94,
+            "right": 675.5,
+            "bottom": 810.94
+          },
+          "dialogueBounds": {
+            "x": 35.5,
+            "y": 706.94,
+            "width": 640,
+            "height": 48,
+            "top": 706.94,
+            "right": 675.5,
+            "bottom": 754.94
+          },
+          "timeline": {
+            "x": 35.5,
+            "y": 822.94,
+            "width": 640,
+            "height": 48,
+            "top": 822.94,
+            "right": 675.5,
+            "bottom": 870.94
+          },
+          "panel": {
+            "x": 16,
+            "y": 882.94,
+            "width": 679,
+            "height": 209,
+            "top": 882.94,
+            "right": 695,
+            "bottom": 1091.94
+          },
+          "panelPosition": "static",
+          "phonePanelFlow": "in-flow",
+          "dialogueAndTimelineClearOfPanel": true
+        },
+        "media": {
+          "width": 540,
+          "height": 960,
+          "duration": 35.9591,
+          "readyState": 4,
+          "currentSrc": "blob:http://127.0.0.1:4563/d6018c02-b5b1-40c7-a641-8d909872a5d9"
+        },
+        "dialog": null,
+        "activeElement": {
+          "tagName": "BODY",
+          "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits84LanguageENRUSign outRecord your voiceportrait-long-sourceRecordProgress savedProjectsTake accepted.Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4OriginalMy recordingPlay0:00 / 0:09No saved recording is available for this line yet.Record linePrevious lineNext lineMicrophoneOriginal video volumeRecording statusThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.Process againProcessing again is permanently locked after the first accepted take. Deleting a take will not unlock it.",
+          "role": null,
+          "className": ""
+        },
+        "buttons": [
+          {
+            "label": "Sign out",
+            "variant": "ghost",
+            "size": "small",
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": false
+          },
+          {
+            "label": "Open navigation",
+            "variant": "ghost",
+            "size": "icon",
+            "width": 48,
+            "height": 48,
+            "top": 8,
+            "fontSize": "13px",
+            "lineHeight": "20px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Projects",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 120.57,
+            "height": 48,
+            "top": 165,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Play",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 48,
+            "height": 48,
+            "top": 893.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Record line",
+            "variant": "primary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 979.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Previous line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 979.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Next line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 1035.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Microphone",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 1035.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Process again",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 135.41,
+            "height": 48,
+            "top": 1315.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": true,
+            "visible": true
+          }
+        ],
+        "visibleRouteHeadings": [
+          "Record your voice"
+        ],
+        "cdp": {
+          "cssVisualViewport": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "pageX": 0,
+            "pageY": 0,
+            "clientWidth": 711,
+            "clientHeight": 432,
+            "scale": 1,
+            "zoom": 2
+          },
+          "cssLayoutViewport": {
+            "pageX": 0,
+            "pageY": 0,
+            "clientWidth": 711,
+            "clientHeight": 432
+          },
+          "cssContentSize": {
+            "x": 0,
+            "y": 0,
+            "width": 711,
+            "height": 1458
+          }
+        }
+      }
+    },
+    "recordLine3NativeCaption": {
+      "capture": "native200-portrait-line3-caption-en",
+      "mode": "native-chromium-cdp",
+      "screenshot": {
+        "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-portrait-line3-caption-en.png",
+        "sha256": "3eb18cd82425124f02709d33850b52897cb9e485f4e5d8fd1c3cb7bdd12a89be",
+        "bytes": 79641
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/record",
+        "viewport": {
+          "innerWidth": 711,
+          "innerHeight": 432,
+          "outerWidth": 1440,
+          "outerHeight": 960
+        },
+        "devicePixelRatio": 2,
+        "bodyZoom": "1",
+        "documentWidth": 711,
+        "documentHeight": 1349,
+        "horizontalOverflow": false,
+        "scrollY": 528,
+        "language": "en",
+        "title": "Dubbed",
+        "recording": {
+          "line": "Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4",
+          "dialogue": "The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.",
+          "stage": {
+            "x": 129.73,
+            "y": -245,
+            "width": 451.55,
+            "height": 253.99,
+            "top": -245,
+            "right": 581.27,
+            "bottom": 8.99
+          },
+          "lineHeader": {
+            "x": 35.5,
+            "y": 20.99,
+            "width": 640,
+            "height": 134,
+            "top": 20.99,
+            "right": 675.5,
+            "bottom": 154.99
+          },
+          "dialogueBounds": {
+            "x": 35.5,
+            "y": 50.99,
+            "width": 640,
+            "height": 48,
+            "top": 50.99,
+            "right": 675.5,
+            "bottom": 98.99
+          },
+          "timeline": {
+            "x": 35.5,
+            "y": 166.99,
+            "width": 640,
+            "height": 48,
+            "top": 166.99,
+            "right": 675.5,
+            "bottom": 214.99
+          },
+          "panel": {
+            "x": 0,
+            "y": 223,
+            "width": 711,
+            "height": 209,
+            "top": 223,
+            "right": 711,
+            "bottom": 432
+          },
+          "panelPosition": "fixed",
+          "phonePanelFlow": null,
+          "dialogueAndTimelineClearOfPanel": true
+        },
+        "media": {
+          "width": 540,
+          "height": 960,
+          "duration": 35.9591,
+          "readyState": 4,
+          "currentSrc": "blob:http://127.0.0.1:4563/d6018c02-b5b1-40c7-a641-8d909872a5d9"
+        },
+        "dialog": null,
+        "activeElement": {
+          "tagName": "BODY",
+          "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits84LanguageENRUSign outRecord your voiceportrait-long-sourceRecordProgress savedProjectsTake accepted.Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4OriginalMy recordingPlay0:00 / 0:09No saved recording is available for this line yet.Record linePrevious lineNext lineMicrophoneOriginal video volumeRecording statusThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.Process againProcessing again is permanently locked after the first accepted take. Deleting a take will not unlock it.",
+          "role": null,
+          "className": ""
+        },
+        "buttons": [
+          {
+            "label": "Sign out",
+            "variant": "ghost",
+            "size": "small",
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": false
+          },
+          {
+            "label": "Open navigation",
+            "variant": "ghost",
+            "size": "icon",
+            "width": 48,
+            "height": 48,
+            "top": -520,
+            "fontSize": "13px",
+            "lineHeight": "20px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Projects",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 120.57,
+            "height": 48,
+            "top": -363,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Play",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 48,
+            "height": 48,
+            "top": 234,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Record line",
+            "variant": "primary",
+            "size": "medium",
+            "width": 335.5,
+            "height": 48,
+            "top": 320,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Previous line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 335.5,
+            "height": 48,
+            "top": 320,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Next line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 335.5,
+            "height": 48,
+            "top": 376,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Microphone",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 335.5,
+            "height": 48,
+            "top": 376,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Process again",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 135.41,
+            "height": 48,
+            "top": 438.99,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": true,
+            "visible": true
+          }
+        ],
+        "visibleRouteHeadings": [
+          "Record your voice"
+        ],
+        "cdp": {
+          "cssVisualViewport": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "pageX": 0,
+            "pageY": 528,
+            "clientWidth": 711,
+            "clientHeight": 432,
+            "scale": 1,
+            "zoom": 2
+          },
+          "cssLayoutViewport": {
+            "pageX": 0,
+            "pageY": 528,
+            "clientWidth": 711,
+            "clientHeight": 432
+          },
+          "cssContentSize": {
+            "x": 0,
+            "y": 0,
+            "width": 711,
+            "height": 1349
+          }
+        }
+      }
+    },
+    "recordLine3NativeKeyboardTarget": {
+      "capture": "native200-portrait-line3-keyboard-record-reachable",
+      "mode": "native-chromium-cdp",
+      "screenshot": {
+        "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-portrait-line3-keyboard-record-reachable.png",
+        "sha256": "71dd62252b2ad9eb8931d71fea3809498d75b2b44b9c6ef1f46ebd30c6053ebf",
+        "bytes": 80958
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/record",
+        "viewport": {
+          "innerWidth": 711,
+          "innerHeight": 432,
+          "outerWidth": 1440,
+          "outerHeight": 960
+        },
+        "devicePixelRatio": 2,
+        "bodyZoom": "1",
+        "documentWidth": 711,
+        "documentHeight": 1450,
+        "horizontalOverflow": false,
+        "scrollY": 629.5,
+        "language": "en",
+        "title": "Dubbed",
+        "recording": {
+          "line": "Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4",
+          "dialogue": "The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.",
+          "stage": {
+            "x": 39.5,
+            "y": -346.5,
+            "width": 632,
+            "height": 355.5,
+            "top": -346.5,
+            "right": 671.5,
+            "bottom": 9
+          },
+          "lineHeader": {
+            "x": 35.5,
+            "y": 21,
+            "width": 640,
+            "height": 134,
+            "top": 21,
+            "right": 675.5,
+            "bottom": 155
+          },
+          "dialogueBounds": {
+            "x": 35.5,
+            "y": 51,
+            "width": 640,
+            "height": 48,
+            "top": 51,
+            "right": 675.5,
+            "bottom": 99
+          },
+          "timeline": {
+            "x": 35.5,
+            "y": 167,
+            "width": 640,
+            "height": 48,
+            "top": 167,
+            "right": 675.5,
+            "bottom": 215
+          },
+          "panel": {
+            "x": 0,
+            "y": 223,
+            "width": 711,
+            "height": 209,
+            "top": 223,
+            "right": 711,
+            "bottom": 432
+          },
+          "panelPosition": "fixed",
+          "phonePanelFlow": null,
+          "dialogueAndTimelineClearOfPanel": true
+        },
+        "media": {
+          "width": 540,
+          "height": 960,
+          "duration": 35.9591,
+          "readyState": 4,
+          "currentSrc": "blob:http://127.0.0.1:4563/d6018c02-b5b1-40c7-a641-8d909872a5d9"
+        },
+        "dialog": null,
+        "activeElement": {
+          "tagName": "BUTTON",
+          "label": "Record line",
+          "role": null,
+          "className": "ui-button ui-button--primary ui-button--medium"
+        },
+        "buttons": [
+          {
+            "label": "Sign out",
+            "variant": "ghost",
+            "size": "small",
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": false
+          },
+          {
+            "label": "Open navigation",
+            "variant": "ghost",
+            "size": "icon",
+            "width": 48,
+            "height": 48,
+            "top": -621.5,
+            "fontSize": "13px",
+            "lineHeight": "20px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Projects",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 120.57,
+            "height": 48,
+            "top": -464.5,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Play",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 48,
+            "height": 48,
+            "top": 234,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Record line",
+            "variant": "primary",
+            "size": "medium",
+            "width": 335.5,
+            "height": 48,
+            "top": 320,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": true,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Previous line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 335.5,
+            "height": 48,
+            "top": 320,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Next line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 335.5,
+            "height": 48,
+            "top": 376,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Microphone",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 335.5,
+            "height": 48,
+            "top": 376,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Process again",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 135.41,
+            "height": 48,
+            "top": 439,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": true,
+            "visible": true
+          }
+        ],
+        "visibleRouteHeadings": [
+          "Record your voice"
+        ],
+        "cdp": {
+          "cssVisualViewport": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "pageX": 0,
+            "pageY": 629.5,
+            "clientWidth": 711,
+            "clientHeight": 432,
+            "scale": 1,
+            "zoom": 2
+          },
+          "cssLayoutViewport": {
+            "pageX": 0,
+            "pageY": 630,
+            "clientWidth": 711,
+            "clientHeight": 431
+          },
+          "cssContentSize": {
+            "x": 0,
+            "y": 0,
+            "width": 711,
+            "height": 1450
+          }
+        }
+      }
+    },
+    "leaveDialog": {
+      "capture": "native200-record-leave-dialog",
+      "mode": "native-chromium-cdp",
+      "screenshot": {
+        "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-record-leave-dialog.png",
+        "sha256": "7bfec292b54aa3017b0f3287e3287cef1e301e9d480b7df7fb129c849c17ed70",
+        "bytes": 69618
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/record",
+        "viewport": {
+          "innerWidth": 711,
+          "innerHeight": 432,
+          "outerWidth": 1440,
+          "outerHeight": 960
+        },
+        "devicePixelRatio": 2,
+        "bodyZoom": "1",
+        "documentWidth": 711,
+        "documentHeight": 1471,
+        "horizontalOverflow": false,
+        "scrollY": 173,
+        "language": "en",
+        "title": "Dubbed",
+        "recording": {
+          "line": "Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4",
+          "dialogue": "The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.",
+          "stage": {
+            "x": 16,
+            "y": 52,
+            "width": 679,
+            "height": 381.94,
+            "top": 52,
+            "right": 695,
+            "bottom": 433.94
+          },
+          "lineHeader": {
+            "x": 35.5,
+            "y": 445.94,
+            "width": 640,
+            "height": 134,
+            "top": 445.94,
+            "right": 675.5,
+            "bottom": 579.94
+          },
+          "dialogueBounds": {
+            "x": 35.5,
+            "y": 475.94,
+            "width": 640,
+            "height": 48,
+            "top": 475.94,
+            "right": 675.5,
+            "bottom": 523.94
+          },
+          "timeline": {
+            "x": 35.5,
+            "y": 591.94,
+            "width": 640,
+            "height": 48,
+            "top": 591.94,
+            "right": 675.5,
+            "bottom": 639.94
+          },
+          "panel": {
+            "x": 16,
+            "y": 651.94,
+            "width": 679,
+            "height": 181,
+            "top": 651.94,
+            "right": 695,
+            "bottom": 832.94
+          },
+          "panelPosition": "static",
+          "phonePanelFlow": "in-flow",
+          "dialogueAndTimelineClearOfPanel": true
+        },
+        "media": {
+          "width": 540,
+          "height": 960,
+          "duration": 35.9591,
+          "readyState": 4,
+          "currentSrc": "blob:http://127.0.0.1:4563/d6018c02-b5b1-40c7-a641-8d909872a5d9"
+        },
+        "dialog": {
+          "title": "Leave recording?",
+          "x": 0,
+          "y": 159,
+          "width": 711,
+          "height": 273
+        },
+        "activeElement": {
+          "tagName": "BUTTON",
+          "label": "Stay here",
+          "role": null,
+          "className": "ui-button ui-button--ghost ui-button--medium"
+        },
+        "buttons": [
+          {
+            "label": "Sign out",
+            "variant": "ghost",
+            "size": "small",
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": false
+          },
+          {
+            "label": "Open navigation",
+            "variant": "ghost",
+            "size": "icon",
+            "width": 48,
+            "height": 48,
+            "top": -165,
+            "fontSize": "13px",
+            "lineHeight": "20px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Projects",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 120.57,
+            "height": 48,
+            "top": -8,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Play",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 48,
+            "height": 48,
+            "top": 662.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Record again",
+            "variant": "primary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 720.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Previous line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 720.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Next line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 776.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Microphone",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 776.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Process again",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 135.41,
+            "height": 48,
+            "top": 1155.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": true,
+            "visible": true
+          },
+          {
+            "label": "Save and leave",
+            "variant": "primary",
+            "size": "medium",
+            "width": 679,
+            "height": 48,
+            "top": 256,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Leave without saving",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 679,
+            "height": 48,
+            "top": 312,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Stay here",
+            "variant": "ghost",
+            "size": "medium",
+            "width": 679,
+            "height": 48,
+            "top": 368,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": true,
+            "disabled": false,
+            "visible": true
+          }
+        ],
+        "visibleRouteHeadings": [
+          "Record your voice",
+          "Current draft recording",
+          "Leave recording?"
+        ],
+        "cdp": {
+          "cssVisualViewport": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "pageX": 0,
+            "pageY": 173,
+            "clientWidth": 711,
+            "clientHeight": 432,
+            "scale": 1,
+            "zoom": 2
+          },
+          "cssLayoutViewport": {
+            "pageX": 0,
+            "pageY": 173,
+            "clientWidth": 711,
+            "clientHeight": 432
+          },
+          "cssContentSize": {
+            "x": 0,
+            "y": 0,
+            "width": 711,
+            "height": 1471
+          }
+        }
+      }
+    },
+    "leaveDialogKeyboardFocus": {
+      "capture": "native200-record-leave-dialog-keyboard-focus",
+      "mode": "native-chromium-cdp",
+      "screenshot": {
+        "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-record-leave-dialog-keyboard-focus.png",
+        "sha256": "ba12be5a77d7358bc88ed8bee12cb4ddb89df84cb1130f3597230f647d06be5d",
+        "bytes": 70799
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/record",
+        "viewport": {
+          "innerWidth": 711,
+          "innerHeight": 432,
+          "outerWidth": 1440,
+          "outerHeight": 960
+        },
+        "devicePixelRatio": 2,
+        "bodyZoom": "1",
+        "documentWidth": 711,
+        "documentHeight": 1471,
+        "horizontalOverflow": false,
+        "scrollY": 173,
+        "language": "en",
+        "title": "Dubbed",
+        "recording": {
+          "line": "Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4",
+          "dialogue": "The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.",
+          "stage": {
+            "x": 16,
+            "y": 52,
+            "width": 679,
+            "height": 381.94,
+            "top": 52,
+            "right": 695,
+            "bottom": 433.94
+          },
+          "lineHeader": {
+            "x": 35.5,
+            "y": 445.94,
+            "width": 640,
+            "height": 134,
+            "top": 445.94,
+            "right": 675.5,
+            "bottom": 579.94
+          },
+          "dialogueBounds": {
+            "x": 35.5,
+            "y": 475.94,
+            "width": 640,
+            "height": 48,
+            "top": 475.94,
+            "right": 675.5,
+            "bottom": 523.94
+          },
+          "timeline": {
+            "x": 35.5,
+            "y": 591.94,
+            "width": 640,
+            "height": 48,
+            "top": 591.94,
+            "right": 675.5,
+            "bottom": 639.94
+          },
+          "panel": {
+            "x": 16,
+            "y": 651.94,
+            "width": 679,
+            "height": 181,
+            "top": 651.94,
+            "right": 695,
+            "bottom": 832.94
+          },
+          "panelPosition": "static",
+          "phonePanelFlow": "in-flow",
+          "dialogueAndTimelineClearOfPanel": true
+        },
+        "media": {
+          "width": 540,
+          "height": 960,
+          "duration": 35.9591,
+          "readyState": 4,
+          "currentSrc": "blob:http://127.0.0.1:4563/d6018c02-b5b1-40c7-a641-8d909872a5d9"
+        },
+        "dialog": {
+          "title": "Leave recording?",
+          "x": 0,
+          "y": 159,
+          "width": 711,
+          "height": 273
+        },
+        "activeElement": {
+          "tagName": "BUTTON",
+          "label": "Save and leave",
+          "role": null,
+          "className": "ui-button ui-button--primary ui-button--medium"
+        },
+        "buttons": [
+          {
+            "label": "Sign out",
+            "variant": "ghost",
+            "size": "small",
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": false
+          },
+          {
+            "label": "Open navigation",
+            "variant": "ghost",
+            "size": "icon",
+            "width": 48,
+            "height": 48,
+            "top": -165,
+            "fontSize": "13px",
+            "lineHeight": "20px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Projects",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 120.57,
+            "height": 48,
+            "top": -8,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Play",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 48,
+            "height": 48,
+            "top": 662.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Record again",
+            "variant": "primary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 720.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Previous line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 720.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Next line",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 776.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Microphone",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 319.5,
+            "height": 48,
+            "top": 776.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Process again",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 135.41,
+            "height": 48,
+            "top": 1155.94,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": true,
+            "visible": true
+          },
+          {
+            "label": "Save and leave",
+            "variant": "primary",
+            "size": "medium",
+            "width": 679,
+            "height": 48,
+            "top": 256,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": true,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Leave without saving",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 679,
+            "height": 48,
+            "top": 312,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Stay here",
+            "variant": "ghost",
+            "size": "medium",
+            "width": 679,
+            "height": 48,
+            "top": 368,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          }
+        ],
+        "visibleRouteHeadings": [
+          "Record your voice",
+          "Current draft recording",
+          "Leave recording?"
+        ],
+        "cdp": {
+          "cssVisualViewport": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "pageX": 0,
+            "pageY": 173,
+            "clientWidth": 711,
+            "clientHeight": 432,
+            "scale": 1,
+            "zoom": 2
+          },
+          "cssLayoutViewport": {
+            "pageX": 0,
+            "pageY": 173,
+            "clientWidth": 711,
+            "clientHeight": 432
+          },
+          "cssContentSize": {
+            "x": 0,
+            "y": 0,
+            "width": 711,
+            "height": 1471
+          }
+        }
+      }
+    },
+    "resultNative": {
+      "capture": "native200-portrait-result-en",
+      "mode": "native-chromium-cdp",
+      "screenshot": {
+        "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-portrait-result-en.png",
+        "sha256": "b2c09453340dde148b43d12a3af36fa8f7a476d058a1e69447570933a37cdfd7",
+        "bytes": 98429
+      },
+      "metrics": {
+        "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/result",
+        "viewport": {
+          "innerWidth": 711,
+          "innerHeight": 432,
+          "outerWidth": 1440,
+          "outerHeight": 960
+        },
+        "devicePixelRatio": 2,
+        "bodyZoom": "1",
+        "documentWidth": 711,
+        "documentHeight": 669,
+        "horizontalOverflow": false,
+        "scrollY": 0,
+        "language": "en",
+        "title": "Dubbed",
+        "recording": {
+          "line": null,
+          "dialogue": null,
+          "stage": null,
+          "lineHeader": null,
+          "dialogueBounds": null,
+          "timeline": null,
+          "panel": null,
+          "panelPosition": null,
+          "phonePanelFlow": null,
+          "dialogueAndTimelineClearOfPanel": false
+        },
+        "media": {
+          "width": 540,
+          "height": 960,
+          "duration": 35.958433,
+          "readyState": 4,
+          "currentSrc": "http://127.0.0.1:4563/media/portrait-result-generation-001.mp4"
+        },
+        "dialog": null,
+        "activeElement": {
+          "tagName": "BODY",
+          "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits84LanguageENRUSign outYour resultportrait-long-sourceDisplayed generation: 1Synthetic fixture result; not rendered from accepted takes or a custom upload.Download MP4Return to recording",
+          "role": null,
+          "className": ""
+        },
+        "buttons": [
+          {
+            "label": "Sign out",
+            "variant": "ghost",
+            "size": "small",
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": false
+          },
+          {
+            "label": "Open navigation",
+            "variant": "ghost",
+            "size": "icon",
+            "width": 48,
+            "height": 48,
+            "top": 8,
+            "fontSize": "13px",
+            "lineHeight": "20px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Download MP4",
+            "variant": "primary",
+            "size": "large",
+            "width": 679,
+            "height": 48,
+            "top": 513.2,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          },
+          {
+            "label": "Return to recording",
+            "variant": "secondary",
+            "size": "medium",
+            "width": 679,
+            "height": 48,
+            "top": 573.2,
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "focused": false,
+            "disabled": false,
+            "visible": true
+          }
+        ],
+        "visibleRouteHeadings": [
+          "Your result"
+        ],
+        "cdp": {
+          "cssVisualViewport": {
+            "offsetX": 0,
+            "offsetY": 0,
+            "pageX": 0,
+            "pageY": 0,
+            "clientWidth": 711,
+            "clientHeight": 432,
+            "scale": 1,
+            "zoom": 2
+          },
+          "cssLayoutViewport": {
+            "pageX": 0,
+            "pageY": 0,
+            "clientWidth": 711,
+            "clientHeight": 432
+          },
+          "cssContentSize": {
+            "x": 0,
+            "y": 0,
+            "width": 711,
+            "height": 669
+          }
+        }
+      }
+    }
+  },
+  "returnedToRecord": {
+    "capture": "native200-result-return-to-record",
+    "mode": "native-chromium-cdp",
+    "screenshot": {
+      "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-result-return-to-record.png",
+      "sha256": "abcb57853f4bc28a85b856cdefc9859651480189cc16c32c8fd3d9524f063b62",
+      "bytes": 32685
+    },
+    "metrics": {
+      "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/record",
+      "viewport": {
+        "innerWidth": 711,
+        "innerHeight": 432,
+        "outerWidth": 1440,
+        "outerHeight": 960
+      },
+      "devicePixelRatio": 2,
+      "bodyZoom": "1",
+      "documentWidth": 711,
+      "documentHeight": 1622,
+      "horizontalOverflow": false,
+      "scrollY": 0,
+      "language": "en",
+      "title": "Dubbed",
+      "recording": {
+        "line": "Line 4 of 4All right, I have the last number. The blue mark is clear, the light has faded, and the panel looks exactly as it did when we started.Capture window: 24.50–34.61 sAccepted takes: 4 / 4",
+        "dialogue": "All right, I have the last number. The blue mark is clear, the light has faded, and the panel looks exactly as it did when we started.",
+        "stage": {
+          "x": 16,
+          "y": 225,
+          "width": 679,
+          "height": 381.94,
+          "top": 225,
+          "right": 695,
+          "bottom": 606.94
+        },
+        "lineHeader": {
+          "x": 35.5,
+          "y": 618.94,
+          "width": 640,
+          "height": 134,
+          "top": 618.94,
+          "right": 675.5,
+          "bottom": 752.94
+        },
+        "dialogueBounds": {
+          "x": 35.5,
+          "y": 648.94,
+          "width": 640,
+          "height": 48,
+          "top": 648.94,
+          "right": 675.5,
+          "bottom": 696.94
+        },
+        "timeline": {
+          "x": 35.5,
+          "y": 764.94,
+          "width": 640,
+          "height": 52,
+          "top": 764.94,
+          "right": 675.5,
+          "bottom": 816.94
+        },
+        "panel": {
+          "x": 16,
+          "y": 828.94,
+          "width": 679,
+          "height": 181,
+          "top": 828.94,
+          "right": 695,
+          "bottom": 1009.94
+        },
+        "panelPosition": "static",
+        "phonePanelFlow": "in-flow",
+        "dialogueAndTimelineClearOfPanel": true
+      },
+      "media": {
+        "width": 0,
+        "height": 0,
+        "duration": null,
+        "readyState": 0,
+        "currentSrc": "blob:http://127.0.0.1:4563/954fd37e-3a6c-484e-a8ee-67ddeb499971"
+      },
+      "dialog": null,
+      "activeElement": {
+        "tagName": "BODY",
+        "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits84LanguageENRUSign outRecord your voiceportrait-long-sourceRecordProgress savedProjectsLine 4 of 4All right, I have the last number. The blue mark is clear, the light has faded, and the panel looks exactly as it did when we started.Capture window: 24.50–34.61 sAccepted takes: 4 / 4OriginalMy recordingPlay0:00 / 0:10Record linePrevious lineNext lineMicrophoneDecoding local audio for waveform preview…Original video volumeRecording statusPreviously accepted takeAll lines have accepted takes.Assemble resultThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.Process againProcessing again is permanently locked after the first accepted take. Deleting a take will not unlock it.",
+        "role": null,
+        "className": ""
+      },
+      "buttons": [
+        {
+          "label": "Sign out",
+          "variant": "ghost",
+          "size": "small",
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "label": "Open navigation",
+          "variant": "ghost",
+          "size": "icon",
+          "width": 48,
+          "height": 48,
+          "top": 8,
+          "fontSize": "13px",
+          "lineHeight": "20px",
+          "focused": false,
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "label": "Projects",
+          "variant": "secondary",
+          "size": "medium",
+          "width": 120.57,
+          "height": 48,
+          "top": 165,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "label": "Play",
+          "variant": "secondary",
+          "size": "medium",
+          "width": 48,
+          "height": 48,
+          "top": 839.94,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "label": "Record line",
+          "variant": "primary",
+          "size": "medium",
+          "width": 319.5,
+          "height": 48,
+          "top": 897.94,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "label": "Previous line",
+          "variant": "secondary",
+          "size": "medium",
+          "width": 319.5,
+          "height": 48,
+          "top": 897.94,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "label": "Next line",
+          "variant": "secondary",
+          "size": "medium",
+          "width": 319.5,
+          "height": 48,
+          "top": 953.94,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": true,
+          "visible": true
+        },
+        {
+          "label": "Microphone",
+          "variant": "secondary",
+          "size": "medium",
+          "width": 319.5,
+          "height": 48,
+          "top": 953.94,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "label": "Assemble result",
+          "variant": "primary",
+          "size": "medium",
+          "width": 150.44,
+          "height": 48,
+          "top": 1355.94,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "label": "Process again",
+          "variant": "secondary",
+          "size": "medium",
+          "width": 135.41,
+          "height": 48,
+          "top": 1479.94,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "focused": false,
+          "disabled": true,
+          "visible": true
+        }
+      ],
+      "visibleRouteHeadings": [
+        "Record your voice",
+        "Previously accepted take"
+      ],
+      "cdp": {
+        "cssVisualViewport": {
+          "offsetX": 0,
+          "offsetY": 0,
+          "pageX": 0,
+          "pageY": 0,
+          "clientWidth": 711,
+          "clientHeight": 432,
+          "scale": 1,
+          "zoom": 2
+        },
+        "cssLayoutViewport": {
+          "pageX": 0,
+          "pageY": 0,
+          "clientWidth": 711,
+          "clientHeight": 432
+        },
+        "cssContentSize": {
+          "x": 0,
+          "y": 0,
+          "width": 711,
+          "height": 1622
+        }
+      }
+    }
+  },
+  "generation": 1,
+  "resultAsset": {
+    "path": "frontend/public/media/portrait-result-generation-001.mp4",
+    "sha256": "dcc9218f3fee9a54c18fa10a97413453d6f7411e527cf8920119f4a8382c9f1d",
+    "bytes": 868886
+  },
+  "stateBoundary": "Real current UI journey through the local mock adapter with fixture input and synthetic microphone; the result is a static registered fixture, not generated from accepted takes."
+}

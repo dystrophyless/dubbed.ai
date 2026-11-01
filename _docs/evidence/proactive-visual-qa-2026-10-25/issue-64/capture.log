@@ -1,0 +1,79 @@
+{
+  "outcome": "completed",
+  "browser": "156.0.8078.4",
+  "states": [
+    {
+      "name": "unsupported-en-desktop",
+      "overflow": false,
+      "qa": {
+        "mode": "noDevices",
+        "gumCalls": 0,
+        "recorderStarts": 0
+      }
+    },
+    {
+      "name": "recorder-unavailable-en-desktop",
+      "overflow": false,
+      "qa": {
+        "mode": "noRecorder",
+        "gumCalls": 1,
+        "recorderStarts": 0
+      }
+    },
+    {
+      "name": "unsupported-en-short",
+      "overflow": false,
+      "qa": {
+        "mode": "noDevices",
+        "gumCalls": 0,
+        "recorderStarts": 0
+      }
+    },
+    {
+      "name": "recorder-unavailable-en-short",
+      "overflow": false,
+      "qa": {
+        "mode": "noRecorder",
+        "gumCalls": 1,
+        "recorderStarts": 0
+      }
+    },
+    {
+      "name": "unsupported-ru-phone",
+      "overflow": false,
+      "qa": {
+        "mode": "noDevices",
+        "gumCalls": 0,
+        "recorderStarts": 0
+      }
+    },
+    {
+      "name": "recorder-unavailable-ru-phone",
+      "overflow": false,
+      "qa": {
+        "mode": "noRecorder",
+        "gumCalls": 1,
+        "recorderStarts": 0
+      }
+    },
+    {
+      "name": "unsupported-en-phone",
+      "overflow": false,
+      "qa": {
+        "mode": "noDevices",
+        "gumCalls": 0,
+        "recorderStarts": 0
+      }
+    },
+    {
+      "name": "recorder-unavailable-en-phone",
+      "overflow": false,
+      "qa": {
+        "mode": "noRecorder",
+        "gumCalls": 1,
+        "recorderStarts": 0
+      }
+    }
+  ],
+  "errors": []
+}

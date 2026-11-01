@@ -1,0 +1,238 @@
+{
+  "capture": "native200-portrait-line3-keyboard-record-reachable",
+  "mode": "native-chromium-cdp",
+  "screenshot": {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63/fresh-e2e-final/issue63-integration/native200-portrait-line3-keyboard-record-reachable.png",
+    "sha256": "71dd62252b2ad9eb8931d71fea3809498d75b2b44b9c6ef1f46ebd30c6053ebf",
+    "bytes": 80958
+  },
+  "metrics": {
+    "url": "http://127.0.0.1:4563/projects/95243716-1ffe-482b-b235-a52e0553049a/record",
+    "viewport": {
+      "innerWidth": 711,
+      "innerHeight": 432,
+      "outerWidth": 1440,
+      "outerHeight": 960
+    },
+    "devicePixelRatio": 2,
+    "bodyZoom": "1",
+    "documentWidth": 711,
+    "documentHeight": 1450,
+    "horizontalOverflow": false,
+    "scrollY": 629.5,
+    "language": "en",
+    "title": "Dubbed",
+    "recording": {
+      "line": "Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4",
+      "dialogue": "The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.",
+      "stage": {
+        "x": 39.5,
+        "y": -346.5,
+        "width": 632,
+        "height": 355.5,
+        "top": -346.5,
+        "right": 671.5,
+        "bottom": 9
+      },
+      "lineHeader": {
+        "x": 35.5,
+        "y": 21,
+        "width": 640,
+        "height": 134,
+        "top": 21,
+        "right": 675.5,
+        "bottom": 155
+      },
+      "dialogueBounds": {
+        "x": 35.5,
+        "y": 51,
+        "width": 640,
+        "height": 48,
+        "top": 51,
+        "right": 675.5,
+        "bottom": 99
+      },
+      "timeline": {
+        "x": 35.5,
+        "y": 167,
+        "width": 640,
+        "height": 48,
+        "top": 167,
+        "right": 675.5,
+        "bottom": 215
+      },
+      "panel": {
+        "x": 0,
+        "y": 223,
+        "width": 711,
+        "height": 209,
+        "top": 223,
+        "right": 711,
+        "bottom": 432
+      },
+      "panelPosition": "fixed",
+      "phonePanelFlow": null,
+      "dialogueAndTimelineClearOfPanel": true
+    },
+    "media": {
+      "width": 540,
+      "height": 960,
+      "duration": 35.9591,
+      "readyState": 4,
+      "currentSrc": "blob:http://127.0.0.1:4563/d6018c02-b5b1-40c7-a641-8d909872a5d9"
+    },
+    "dialog": null,
+    "activeElement": {
+      "tagName": "BUTTON",
+      "label": "Record line",
+      "role": null,
+      "className": "ui-button ui-button--primary ui-button--medium"
+    },
+    "buttons": [
+      {
+        "label": "Sign out",
+        "variant": "ghost",
+        "size": "small",
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": false
+      },
+      {
+        "label": "Open navigation",
+        "variant": "ghost",
+        "size": "icon",
+        "width": 48,
+        "height": 48,
+        "top": -621.5,
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Projects",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 120.57,
+        "height": 48,
+        "top": -464.5,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Play",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 48,
+        "height": 48,
+        "top": 234,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Record line",
+        "variant": "primary",
+        "size": "medium",
+        "width": 335.5,
+        "height": 48,
+        "top": 320,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": true,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Previous line",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 335.5,
+        "height": 48,
+        "top": 320,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Next line",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 335.5,
+        "height": 48,
+        "top": 376,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Microphone",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 335.5,
+        "height": 48,
+        "top": 376,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Process again",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 135.41,
+        "height": 48,
+        "top": 439,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": true,
+        "visible": true
+      }
+    ],
+    "visibleRouteHeadings": [
+      "Record your voice"
+    ],
+    "cdp": {
+      "cssVisualViewport": {
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 629.5,
+        "clientWidth": 711,
+        "clientHeight": 432,
+        "scale": 1,
+        "zoom": 2
+      },
+      "cssLayoutViewport": {
+        "pageX": 0,
+        "pageY": 630,
+        "clientWidth": 711,
+        "clientHeight": 431
+      },
+      "cssContentSize": {
+        "x": 0,
+        "y": 0,
+        "width": 711,
+        "height": 1450
+      }
+    }
+  }
+}

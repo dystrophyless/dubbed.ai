@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-28T19:13:40.614Z",
+  "browser": "Chrome 156.0.8078.49",
+  "sentence": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+  "source": "isolated in-memory read-port override for sintel-turn-3; production seed text unchanged",
+  "measurements": [
+    {
+      "layout": "A",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "media": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 351,
+        "bottom": 407
+      },
+      "panel": {
+        "x": 976,
+        "y": 56,
+        "width": 272,
+        "height": 331,
+        "bottom": 387
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 407,
+        "width": 624,
+        "height": 68,
+        "bottom": 475
+      },
+      "wave": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 32,
+        "bottom": 507
+      },
+      "documentHeight": 600,
+      "horizontalOverflow": false
+    },
+    {
+      "layout": "A",
+      "viewport": {
+        "width": 1366,
+        "height": 650
+      },
+      "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "media": {
+        "x": 328,
+        "y": 62.65625,
+        "width": 710,
+        "height": 399.375,
+        "bottom": 462.03125
+      },
+      "panel": {
+        "x": 1062,
+        "y": 62.65625,
+        "width": 272,
+        "height": 331,
+        "bottom": 393.65625
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 462.03125,
+        "width": 710,
+        "height": 74.65625,
+        "bottom": 536.6875
+      },
+      "wave": {
+        "x": 328,
+        "y": 536.6875,
+        "width": 710,
+        "height": 37.328125,
+        "bottom": 574.015625
+      },
+      "documentHeight": 650,
+      "horizontalOverflow": false
+    },
+    {
+      "layout": "A",
+      "viewport": {
+        "width": 390,
+        "height": 667
+      },
+      "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "media": {
+        "x": 16,
+        "y": 140,
+        "width": 358,
+        "height": 201.375,
+        "bottom": 341.375
+      },
+      "panel": {
+        "x": 16,
+        "y": 653.375,
+        "width": 358,
+        "height": 343,
+        "bottom": 996.375
+      },
+      "dialogue": {
+        "x": 16,
+        "y": 341.375,
+        "width": 358,
+        "height": 156,
+        "bottom": 497.375
+      },
+      "wave": {
+        "x": 16,
+        "y": 497.375,
+        "width": 358,
+        "height": 64,
+        "bottom": 561.375
+      },
+      "documentHeight": 1028,
+      "horizontalOverflow": false
+    },
+    {
+      "layout": "B",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "media": {
+        "x": 352,
+        "y": 56,
+        "width": 576,
+        "height": 324,
+        "bottom": 380
+      },
+      "panel": null,
+      "dialogue": {
+        "x": 352,
+        "y": 380,
+        "width": 576,
+        "height": 68,
+        "bottom": 448
+      },
+      "wave": {
+        "x": 352,
+        "y": 448,
+        "width": 576,
+        "height": 32,
+        "bottom": 480
+      },
+      "documentHeight": 600,
+      "horizontalOverflow": false
+    },
+    {
+      "layout": "B",
+      "viewport": {
+        "width": 1366,
+        "height": 650
+      },
+      "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "media": {
+        "x": 367.125,
+        "y": 62.65625,
+        "width": 631.75,
+        "height": 355.359375,
+        "bottom": 418.015625
+      },
+      "panel": null,
+      "dialogue": {
+        "x": 367.125,
+        "y": 418.015625,
+        "width": 631.75,
+        "height": 74.65625,
+        "bottom": 492.671875
+      },
+      "wave": {
+        "x": 367.125,
+        "y": 492.671875,
+        "width": 631.75,
+        "height": 37.328125,
+        "bottom": 530
+      },
+      "documentHeight": 650,
+      "horizontalOverflow": false
+    },
+    {
+      "layout": "B",
+      "viewport": {
+        "width": 390,
+        "height": 667
+      },
+      "text": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "media": {
+        "x": 16,
+        "y": 132,
+        "width": 358,
+        "height": 201.375,
+        "bottom": 333.375
+      },
+      "panel": null,
+      "dialogue": {
+        "x": 16,
+        "y": 333.375,
+        "width": 358,
+        "height": 156,
+        "bottom": 489.375
+      },
+      "wave": {
+        "x": 16,
+        "y": 489.375,
+        "width": 358,
+        "height": 64,
+        "bottom": 553.375
+      },
+      "documentHeight": 869,
+      "horizontalOverflow": false
+    }
+  ]
+}

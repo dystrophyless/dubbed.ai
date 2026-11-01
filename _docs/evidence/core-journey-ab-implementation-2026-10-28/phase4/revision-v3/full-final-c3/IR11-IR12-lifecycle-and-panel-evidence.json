@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-29T01:54:44.361Z",
+  "browser": "Chrome 156.0.8078.49",
+  "firstPartialCandidateId": "candidate:operation:90893750-5eaf-4fd3-8914-e29b0d965e90",
+  "latestPartialCandidateId": "candidate:operation:d4ccb896-e494-41ce-bacc-d1661b25e6d2",
+  "unusablePartialPreservedLatestCandidate": true,
+  "deniedPermissionPreservedLatestCandidate": true,
+  "preparingHiddenStoppedTracks": [
+    "ended"
+  ],
+  "preparingHiddenPreservedLatestCandidate": true,
+  "normal1440x900": {
+    "media": {
+      "x": 328,
+      "y": 96,
+      "width": 784,
+      "height": 441,
+      "top": 96,
+      "right": 1112,
+      "bottom": 537,
+      "left": 328
+    },
+    "panel": {
+      "x": 1136,
+      "y": 96,
+      "width": 272,
+      "height": 311,
+      "top": 96,
+      "right": 1408,
+      "bottom": 407,
+      "left": 1136
+    }
+  },
+  "saved1280x600": {
+    "media": {
+      "x": 328,
+      "y": 56,
+      "width": 624,
+      "height": 351,
+      "top": 56,
+      "right": 952,
+      "bottom": 407,
+      "left": 328
+    },
+    "panel": {
+      "x": 976,
+      "y": 56,
+      "width": 272,
+      "height": 399,
+      "top": 56,
+      "right": 1248,
+      "bottom": 455,
+      "left": 976
+    }
+  },
+  "apiCounters": {
+    "getUserMediaCalls": 4,
+    "recorderStarts": 2
+  },
+  "physicalMicrophoneOrDeviceBackgroundTested": false
+}

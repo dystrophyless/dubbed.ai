@@ -1,0 +1,54 @@
+{
+  "issue": "#75 and QA68-02 Projects consumer",
+  "date": "2026-10-25",
+  "model": "gpt-6-luna",
+  "effort": "max",
+  "base_head": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "files": [
+    "frontend/src/features/projects/ProjectsScreen.tsx",
+    "frontend/src/features/projects/ProjectsScreen.css",
+    "frontend/src/features/projects/ProjectsScreen.test.tsx",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-75/capture.cjs",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-75/rendered-metrics.json",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-75/screenshots/",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-75/completion.md",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-75/summary.json"
+  ],
+  "findings": [
+    { "id": "QA-75-01", "status": "fixed", "evidence": "100-character Latin/Cyrillic native mock titles; all requested viewport metrics have no horizontal overflow and retain full accessible titles and visible badges." },
+    { "id": "QA-75-02", "status": "fixed", "evidence": "Localized truthful Preview unavailable fallback; existing OwnedProject has no preview descriptor, so no fake image or new service was added." },
+    { "id": "QA-75-03", "status": "fixed", "evidence": "Preparing-state dialog warning is retained on unknown delete; focused test verifies no success/slot-release claim and no duplicate delete." },
+    { "id": "QA-75-04", "status": "fixed", "evidence": "Rename hit area measures 48x48 at 390px and 767px." },
+    { "id": "QA-75-05", "status": "fixed", "evidence": "Continue measures 40px desktop and 48px phone." },
+    { "id": "QA-75-06", "status": "fixed", "evidence": "Localized deliberate-delete capacity guidance; focused tests cover 2/2 and 10/10, synthetic visual list shows 6/6." },
+    { "id": "QA-75-07", "status": "fixed", "evidence": "Empty region contains only localized title and New dub action; EN/RU screenshot matrix captured." },
+    { "id": "QA-68-02", "status": "Projects consumer integrated", "evidence": "Typed retry metadata is retained; read/write contexts use serviceRecoveryAction; tests cover read retry, retry suppression, direct sign-in, same-operation retry, and unknown mutation reconciliation." }
+  ],
+  "tests": [
+    { "command": "node node_modules/vitest/vitest.mjs run src/features/projects/ProjectsScreen.test.tsx", "result": "PASS: 1 file, 21 tests" },
+    { "command": "npm.cmd run lint -- src/features/projects/ProjectsScreen.tsx src/features/projects/ProjectsScreen.css src/features/projects/ProjectsScreen.test.tsx", "result": "Exit 0; one existing react(set-state-in-effect) warning on list loading" },
+    { "command": "git diff --check -- frontend/src/features/projects/ProjectsScreen.tsx frontend/src/features/projects/ProjectsScreen.css frontend/src/features/projects/ProjectsScreen.test.tsx", "result": "PASS" },
+    { "command": "node --check _docs/evidence/visual-qa-fixes-2026-10-25/issue-75/capture.cjs", "result": "PASS" },
+    { "command": "node _docs/evidence/visual-qa-fixes-2026-10-25/issue-75/capture.cjs empty", "result": "PASS: 10 screenshots" },
+    { "command": "node _docs/evidence/visual-qa-fixes-2026-10-25/issue-75/capture.cjs dialogs", "result": "PASS: 16 screenshots refreshed" }
+  ],
+  "visual_evidence": {
+    "screenshot_count": 46,
+    "all_pngs_exist": true,
+    "all_opened_and_inspected": true,
+    "mabry_loaded_in_all": true,
+    "runtime_errors": 0,
+    "horizontal_overflow_captures": 0,
+    "full_title_labels": true,
+    "state_badges_in_viewport": true,
+    "matrix": ["en", "ru", "1440x900", "1440x700", "390x844", "767x844", "768x844"]
+  },
+  "limitations": [
+    "Application-wide TypeScript check failed at src/app/FeatureRoute.tsx:114 with shared ServiceRecoveryProblem typing; #68 owner is fixing it and root should rerun after that change.",
+    "No full test suite was run while other task owners were writing.",
+    "Active processing and unknown deletion visual states are synthetic harness evidence, not a real job or backend operation.",
+    "The existing project descriptor provides no thumbnail field; the truthful unavailable fallback is implemented without a new backend or fake photo.",
+    "No real adapter, billing provider, production behavior, native 10-slot account, 200% zoom, or assistive-technology session was tested.",
+    "No commit, push, GitHub update, or issue closure was performed."
+  ]
+}

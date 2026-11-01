@@ -1,0 +1,48 @@
+{
+  "issue": 63,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "5da49212520ad276da6f70dfb2d0aaa8fe1fb6acf296fadcde46fc1e637448a4",
+    "planned": "ba464c8e99a9438199b735a5aa14d28941c1866bc9593deb69c9e3d18f45edb0",
+    "readback": "ba464c8e99a9438199b735a5aa14d28941c1866bc9593deb69c9e3d18f45edb0"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Prove the complete frontend journey with no backend and honest media evidence",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Prove the complete frontend journey with no backend and honest media evidence",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-23T02:11:21.804Z",
+  "boundary": "Isolated build-passing pre-auth snapshot. Real browser capture uses fake microphone only; output muted. Test account seeded via facade helper; rendered result is an explicitly synthetic fixture, not this captured performance.",
+  "steps": [
+    {
+      "line": 1,
+      "during": {
+        "stopButtons": 0,
+        "video": {
+          "paused": false,
+          "currentTime": 0.934441,
+          "controls": true
+        }
+      },
+      "after": {
+        "text": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\n\nMicrophone access is requested only when you choose Record line.\n\nLine 1 of 3\n\nA blue light is on.\n\nCapture window: 0.75–3.18 s\n\nAccepted takes: 0 / 3\nOriginal video volume\nRecording status\nRecord line\nRecord again\nAccept take\nCurrent draft recording\nDraft saved. It has not been accepted as a take.\n\nRecorded audio frames were decoded. Listen, then accept this take when you are ready.\n\nPrevious line\nNext line\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.",
+        "media": [
+          {
+            "tag": "VIDEO",
+            "paused": true,
+            "currentTime": 3.372723
+          },
+          {
+            "tag": "AUDIO",
+            "paused": true,
+            "currentTime": 0
+          }
+        ]
+      }
+    }
+  ],
+  "pageErrors": [],
+  "outcome": "failed",
+  "failure": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Draft saved. It has not been accepted as a take.', { exact: true })\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Draft saved. It has not been accepted as a take.', { exact: true }) with timeout 10000ms\n  - waiting for getByText('Draft saved. It has not been accepted as a take.', { exact: true })\n",
+  "url": "http://127.0.0.1:4281/projects/9f4a11b5-c016-4c3d-8e8b-60f2ce14e7ed/record",
+  "main": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\nThe take could not be saved as a recoverable draft. The local recording remains available until you leave this screen.\n\nMicrophone access is requested only when you choose Record line.\n\nLine 2 of 3\n\nI hear it clearly.\n\nCapture window: 1.25–3.65 s\n\nAccepted takes: 0 / 3\nOriginal video volume\nRecording status\nRecord line\nRecord again\nAccept take\nCurrent draft recording\nThe take could not be saved as a recoverable draft. The local recording remains available until you leave this screen.\n\nRecorded audio frames were decoded. Listen, then accept this take when you are ready.\n\nPrevious line\nNext line\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.",
+  "dialogs": []
+}

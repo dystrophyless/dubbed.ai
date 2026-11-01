@@ -1,0 +1,1500 @@
+[
+  {
+    "check": "environment",
+    "observed": {
+      "browser": "156.0.8078.48",
+      "date": "2026-10-27",
+      "os": "Windows",
+      "DPR": 1,
+      "zoom": "100%",
+      "version": "core-journey-studio-lowfi-v2"
+    }
+  },
+  {
+    "check": "studio-v2-review-short-long-before",
+    "observed": {
+      "w": 1280,
+      "h": 600,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 318.21875,
+            "y": 52,
+            "width": 643.546875,
+            "height": 361.984375,
+            "top": 52,
+            "right": 961.765625,
+            "bottom": 413.984375,
+            "left": 318.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 359.515625,
+            "y": 347.984375,
+            "width": 560.953125,
+            "height": 64,
+            "top": 347.984375,
+            "right": 920.46875,
+            "bottom": 411.984375,
+            "left": 359.515625
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 413.984375,
+            "width": 960,
+            "height": 48,
+            "top": 413.984375,
+            "right": 1120,
+            "bottom": 461.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 850.859375,
+            "y": 499.984375,
+            "width": 104,
+            "height": 40,
+            "top": 499.984375,
+            "right": 954.859375,
+            "bottom": 539.984375,
+            "left": 850.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 325.50742187500003,
+      "captionClearance": 22.476953124999966
+    }
+  },
+  {
+    "check": "studio-v2-review-short-long-listening",
+    "observed": {
+      "w": 1280,
+      "h": 600,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 318.21875,
+            "y": 52,
+            "width": 643.546875,
+            "height": 361.984375,
+            "top": 52,
+            "right": 961.765625,
+            "bottom": 413.984375,
+            "left": 318.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 859.765625,
+            "y": 64,
+            "width": 90,
+            "height": 40,
+            "top": 64,
+            "right": 949.765625,
+            "bottom": 104,
+            "left": 859.765625
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 359.515625,
+            "y": 347.984375,
+            "width": 560.953125,
+            "height": 64,
+            "top": 347.984375,
+            "right": 920.46875,
+            "bottom": 411.984375,
+            "left": 359.515625
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 413.984375,
+            "width": 960,
+            "height": 48,
+            "top": 413.984375,
+            "right": 1120,
+            "bottom": 461.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 850.859375,
+            "y": 499.984375,
+            "width": 104,
+            "height": 40,
+            "top": 499.984375,
+            "right": 954.859375,
+            "bottom": 539.984375,
+            "left": 850.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 325.50742187500003,
+      "captionClearance": 22.476953124999966
+    }
+  },
+  {
+    "check": "studio-v2-review-short-long-paused",
+    "observed": {
+      "w": 1280,
+      "h": 600,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 318.21875,
+            "y": 52,
+            "width": 643.546875,
+            "height": 361.984375,
+            "top": 52,
+            "right": 961.765625,
+            "bottom": 413.984375,
+            "left": 318.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 816.75,
+            "y": 64,
+            "width": 133.015625,
+            "height": 40,
+            "top": 64,
+            "right": 949.765625,
+            "bottom": 104,
+            "left": 816.75
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 359.515625,
+            "y": 347.984375,
+            "width": 560.953125,
+            "height": 64,
+            "top": 347.984375,
+            "right": 920.46875,
+            "bottom": 411.984375,
+            "left": 359.515625
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 413.984375,
+            "width": 960,
+            "height": 48,
+            "top": 413.984375,
+            "right": 1120,
+            "bottom": 461.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 850.859375,
+            "y": 499.984375,
+            "width": 104,
+            "height": 40,
+            "top": 499.984375,
+            "right": 954.859375,
+            "bottom": 539.984375,
+            "left": 850.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 325.50742187500003,
+      "captionClearance": 22.476953124999966
+    }
+  },
+  {
+    "check": "studio-v2-review-short-long-capture",
+    "observed": {
+      "w": 1280,
+      "h": 600,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 318.21875,
+            "y": 52,
+            "width": 643.546875,
+            "height": 361.984375,
+            "top": 52,
+            "right": 961.765625,
+            "bottom": 413.984375,
+            "left": 318.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 359.515625,
+            "y": 347.984375,
+            "width": 560.953125,
+            "height": 64,
+            "top": 347.984375,
+            "right": 920.46875,
+            "bottom": 411.984375,
+            "left": 359.515625
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 413.984375,
+            "width": 960,
+            "height": 48,
+            "top": 413.984375,
+            "right": 1120,
+            "bottom": 461.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 850.859375,
+            "y": 499.984375,
+            "width": 104,
+            "height": 40,
+            "top": 499.984375,
+            "right": 954.859375,
+            "bottom": 539.984375,
+            "left": 850.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 325.50742187500003,
+      "captionClearance": 22.476953124999966
+    }
+  },
+  {
+    "check": "studio-v2-review-short-long-after",
+    "observed": {
+      "w": 1280,
+      "h": 600,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 318.21875,
+            "y": 52,
+            "width": 643.546875,
+            "height": 361.984375,
+            "top": 52,
+            "right": 961.765625,
+            "bottom": 413.984375,
+            "left": 318.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 359.515625,
+            "y": 347.984375,
+            "width": 560.953125,
+            "height": 64,
+            "top": 347.984375,
+            "right": 920.46875,
+            "bottom": 411.984375,
+            "left": 359.515625
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 413.984375,
+            "width": 960,
+            "height": 48,
+            "top": 413.984375,
+            "right": 1120,
+            "bottom": 461.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 854.5625,
+            "y": 499.984375,
+            "width": 104,
+            "height": 40,
+            "top": 499.984375,
+            "right": 958.5625,
+            "bottom": 539.984375,
+            "left": 854.5625
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 325.50742187500003,
+      "captionClearance": 22.476953124999966
+    }
+  },
+  {
+    "check": "studio-v2-review-short-long-audition",
+    "observed": {
+      "w": 1280,
+      "h": 600,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 318.21875,
+            "y": 52,
+            "width": 643.546875,
+            "height": 361.984375,
+            "top": 52,
+            "right": 961.765625,
+            "bottom": 413.984375,
+            "left": 318.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 859.765625,
+            "y": 64,
+            "width": 90,
+            "height": 40,
+            "top": 64,
+            "right": 949.765625,
+            "bottom": 104,
+            "left": 859.765625
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 359.515625,
+            "y": 347.984375,
+            "width": 560.953125,
+            "height": 64,
+            "top": 347.984375,
+            "right": 920.46875,
+            "bottom": 411.984375,
+            "left": 359.515625
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 413.984375,
+            "width": 960,
+            "height": 48,
+            "top": 413.984375,
+            "right": 1120,
+            "bottom": 461.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 854.5625,
+            "y": 499.984375,
+            "width": 104,
+            "height": 40,
+            "top": 499.984375,
+            "right": 958.5625,
+            "bottom": 539.984375,
+            "left": 854.5625
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 325.50742187500003,
+      "captionClearance": 22.476953124999966
+    }
+  },
+  {
+    "check": "studio-v2-review-resize-1366x650",
+    "observed": {
+      "w": 1366,
+      "h": 650,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 203,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 297.875,
+            "bottom": 48,
+            "left": 203
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 316.78125,
+            "y": 52,
+            "width": 732.4375,
+            "height": 411.984375,
+            "top": 52,
+            "right": 1049.21875,
+            "bottom": 463.984375,
+            "left": 316.78125
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 331.96875,
+            "y": 397.984375,
+            "width": 702.046875,
+            "height": 64,
+            "top": 397.984375,
+            "right": 1034.015625,
+            "bottom": 461.984375,
+            "left": 331.96875
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 203,
+            "y": 463.984375,
+            "width": 960,
+            "height": 48,
+            "top": 463.984375,
+            "right": 1163,
+            "bottom": 511.984375,
+            "left": 203
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 893.859375,
+            "y": 549.984375,
+            "width": 104,
+            "height": 40,
+            "top": 549.984375,
+            "right": 997.859375,
+            "bottom": 589.984375,
+            "left": 893.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 363.2859375,
+      "captionClearance": 34.69843750000001
+    }
+  },
+  {
+    "check": "studio-v2-review-resize-1440x900",
+    "observed": {
+      "w": 1440,
+      "h": 900,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 120,
+            "y": 40,
+            "width": 94.875,
+            "height": 40,
+            "top": 40,
+            "right": 214.875,
+            "bottom": 80,
+            "left": 120
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 309.328125,
+            "y": 116,
+            "width": 821.328125,
+            "height": 461.984375,
+            "top": 116,
+            "right": 1130.65625,
+            "bottom": 577.984375,
+            "left": 309.328125
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 220,
+            "y": 613.984375,
+            "width": 1000,
+            "height": 68,
+            "top": 613.984375,
+            "right": 1220,
+            "bottom": 681.984375,
+            "left": 220
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 120,
+            "y": 693.984375,
+            "width": 1200,
+            "height": 64,
+            "top": 693.984375,
+            "right": 1320,
+            "bottom": 757.984375,
+            "left": 120
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 934.859375,
+            "y": 801.984375,
+            "width": 112,
+            "height": 40,
+            "top": 801.984375,
+            "right": 1046.859375,
+            "bottom": 841.984375,
+            "left": 934.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 50%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 465.064453125,
+      "captionClearance": 148.919921875
+    }
+  },
+  {
+    "check": "studio-v2-review-resize-1280x700",
+    "observed": {
+      "w": 1280,
+      "h": 700,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 229.328125,
+            "y": 52,
+            "width": 821.328125,
+            "height": 461.984375,
+            "top": 52,
+            "right": 1050.65625,
+            "bottom": 513.984375,
+            "left": 229.328125
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 239.34375,
+            "y": 447.984375,
+            "width": 801.296875,
+            "height": 64,
+            "top": 447.984375,
+            "right": 1040.640625,
+            "bottom": 511.984375,
+            "left": 239.34375
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 513.984375,
+            "width": 960,
+            "height": 48,
+            "top": 513.984375,
+            "right": 1120,
+            "bottom": 561.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 850.859375,
+            "y": 599.984375,
+            "width": 104,
+            "height": 40,
+            "top": 599.984375,
+            "right": 954.859375,
+            "bottom": 639.984375,
+            "left": 850.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 401.064453125,
+      "captionClearance": 46.919921875
+    }
+  },
+  {
+    "check": "studio-v2-review-resize-1280x701",
+    "observed": {
+      "w": 1280,
+      "h": 701,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 40,
+            "y": 40,
+            "width": 94.875,
+            "height": 40,
+            "top": 40,
+            "right": 134.875,
+            "bottom": 80,
+            "left": 40
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 406.21875,
+            "y": 116,
+            "width": 467.546875,
+            "height": 262.984375,
+            "top": 116,
+            "right": 873.765625,
+            "bottom": 378.984375,
+            "left": 406.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 140,
+            "y": 414.984375,
+            "width": 1000,
+            "height": 68,
+            "top": 414.984375,
+            "right": 1140,
+            "bottom": 482.984375,
+            "left": 140
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 40,
+            "y": 494.984375,
+            "width": 1200,
+            "height": 64,
+            "top": 494.984375,
+            "right": 1240,
+            "bottom": 558.984375,
+            "left": 40
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 854.859375,
+            "y": 602.984375,
+            "width": 112,
+            "height": 40,
+            "top": 602.984375,
+            "right": 966.859375,
+            "bottom": 642.984375,
+            "left": 854.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 50%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 314.707421875,
+      "captionClearance": 100.27695312499998
+    }
+  },
+  {
+    "check": "studio-v2-review-resize-768x700",
+    "observed": {
+      "w": 768,
+      "h": 700,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 24,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 118.875,
+            "bottom": 48,
+            "left": 24
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 24,
+            "y": 52,
+            "width": 720,
+            "height": 405,
+            "top": 52,
+            "right": 744,
+            "bottom": 457,
+            "left": 24
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 32.96875,
+            "y": 391,
+            "width": 702.046875,
+            "height": 64,
+            "top": 391,
+            "right": 735.015625,
+            "bottom": 455,
+            "left": 32.96875
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 24,
+            "y": 457,
+            "width": 720,
+            "height": 48,
+            "top": 457,
+            "right": 744,
+            "bottom": 505,
+            "left": 24
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 594.859375,
+            "y": 543,
+            "width": 104,
+            "height": 40,
+            "top": 543,
+            "right": 698.859375,
+            "bottom": 583,
+            "left": 594.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 358.0,
+      "captionClearance": 33.0
+    }
+  },
+  {
+    "check": "studio-v2-review-resize-767x700",
+    "observed": {
+      "w": 767,
+      "h": 700,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 16,
+            "y": 40,
+            "width": 97,
+            "height": 48,
+            "top": 40,
+            "right": 113,
+            "bottom": 88,
+            "left": 16
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 156,
+            "width": 735,
+            "height": 413.4375,
+            "top": 156,
+            "right": 751,
+            "bottom": 569.4375,
+            "left": 16
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 16,
+            "y": 607.4375,
+            "width": 735,
+            "height": 64,
+            "top": 607.4375,
+            "right": 751,
+            "bottom": 671.4375,
+            "left": 16
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 16,
+            "y": 685.4375,
+            "width": 735,
+            "height": 64,
+            "top": 685.4375,
+            "right": 751,
+            "bottom": 749.4375,
+            "left": 16
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 529.765625,
+            "y": 865.4375,
+            "width": 221.234375,
+            "height": 48,
+            "top": 865.4375,
+            "right": 751,
+            "bottom": 913.4375,
+            "left": 529.765625
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 50%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 468.375,
+      "captionClearance": 139.0625
+    }
+  },
+  {
+    "check": "studio-v2-review-resize-1280x600",
+    "observed": {
+      "w": 1280,
+      "h": 600,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 318.21875,
+            "y": 52,
+            "width": 643.546875,
+            "height": 361.984375,
+            "top": 52,
+            "right": 961.765625,
+            "bottom": 413.984375,
+            "left": 318.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 359.515625,
+            "y": 347.984375,
+            "width": 560.953125,
+            "height": 64,
+            "top": 347.984375,
+            "right": 920.46875,
+            "bottom": 411.984375,
+            "left": 359.515625
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 413.984375,
+            "width": 960,
+            "height": 48,
+            "top": 413.984375,
+            "right": 1120,
+            "bottom": 461.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 850.859375,
+            "y": 499.984375,
+            "width": 104,
+            "height": 40,
+            "top": 499.984375,
+            "right": 954.859375,
+            "bottom": 539.984375,
+            "left": 850.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 325.50742187500003,
+      "captionClearance": 22.476953124999966
+    }
+  },
+  {
+    "check": "studio-v2-review-short-normal",
+    "observed": {
+      "w": 1280,
+      "h": 600,
+      "scroll": 0,
+      "items": [
+        {
+          "id": "exit",
+          "cls": "hf-button",
+          "rect": {
+            "x": 160,
+            "y": 8,
+            "width": 94.875,
+            "height": 40,
+            "top": 8,
+            "right": 254.875,
+            "bottom": 48,
+            "left": 160
+          }
+        },
+        {
+          "id": "scene",
+          "cls": "",
+          "rect": {
+            "x": 318.21875,
+            "y": 52,
+            "width": 643.546875,
+            "height": 361.984375,
+            "top": 52,
+            "right": 961.765625,
+            "bottom": 413.984375,
+            "left": 318.21875
+          }
+        },
+        {
+          "id": "pause",
+          "cls": "media-pause hf-button",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "dialogue",
+          "cls": "",
+          "rect": {
+            "x": 498.5625,
+            "y": 377.984375,
+            "width": 282.859375,
+            "height": 34,
+            "top": 377.984375,
+            "right": 781.421875,
+            "bottom": 411.984375,
+            "left": 498.5625
+          }
+        },
+        {
+          "id": "",
+          "cls": "wave",
+          "rect": {
+            "x": 160,
+            "y": 413.984375,
+            "width": 960,
+            "height": 48,
+            "top": 413.984375,
+            "right": 1120,
+            "bottom": 461.984375,
+            "left": 160
+          }
+        },
+        {
+          "id": "next",
+          "cls": "primary hf-button hf-primary",
+          "rect": {
+            "x": 850.859375,
+            "y": 499.984375,
+            "width": 104,
+            "height": 40,
+            "top": 499.984375,
+            "right": 954.859375,
+            "bottom": 539.984375,
+            "left": 850.859375
+          }
+        }
+      ],
+      "video": {
+        "w": 960,
+        "h": 408,
+        "position": "50% 0%",
+        "fit": "contain"
+      },
+      "pictureBottomTopAligned": 325.50742187500003,
+      "captionClearance": 52.476953124999966
+    }
+  },
+  {
+    "check": "Page errors",
+    "observed": []
+  },
+  {
+    "check": "Studio target hashes",
+    "observed": {
+      "BRIEF.md": true,
+      "icons.js": true,
+      "index.html": true,
+      "locale.js": true,
+      "package-lock.json": true,
+      "package.json": true,
+      "presentation.css": true,
+      "README.md": true,
+      "src.js": true,
+      "studio.css": true,
+      "toast.js": true,
+      "ui.js": true,
+      "waveform-data.js": true,
+      "public/media/example-dub.mp4": true,
+      "public/media/scene.mp4": true,
+      "public/media/take-0.wav": true,
+      "public/media/take-1.wav": true,
+      "public/media/take-2.wav": true,
+      "evidence/capture-v2-results.json": true,
+      "evidence/phone-completion-v2-results.json": true,
+      "evidence/preservation-v2-results.json": true,
+      "evidence/responsive-v2-results.json": true,
+      "evidence/self-check-v2-results.json": true,
+      "evidence/capture-v2-check.py": true,
+      "evidence/phone-completion-v2-check.py": true,
+      "evidence/self-check-v2.py": true,
+      "evidence/studio-v2-final-1280x600-en-after.png": true,
+      "evidence/studio-v2-final-1280x600-en-before.png": true,
+      "evidence/studio-v2-final-1280x600-en-during.png": true,
+      "evidence/studio-v2-final-1280x600-long-ru-after.png": true,
+      "evidence/studio-v2-final-1280x600-long-ru-before.png": true,
+      "evidence/studio-v2-final-1280x600-long-ru-during.png": true,
+      "evidence/studio-v2-final-1366x650-long-ru-after.png": true,
+      "evidence/studio-v2-final-1366x650-long-ru-before.png": true,
+      "evidence/studio-v2-final-1366x650-long-ru-during.png": true,
+      "evidence/studio-v2-final-1440x900-en-after.png": true,
+      "evidence/studio-v2-final-1440x900-en-before.png": true,
+      "evidence/studio-v2-final-1440x900-en-during.png": true,
+      "evidence/studio-v2-final-390x667-long-ru-after.png": true,
+      "evidence/studio-v2-final-390x667-long-ru-before.png": true,
+      "evidence/studio-v2-final-390x667-long-ru-during.png": true,
+      "evidence/comparison-baseline.json": true
+    }
+  },
+  {
+    "check": "Original comparison unchanged",
+    "observed": {
+      "files": 54,
+      "manifestUnchanged": true,
+      "mismatches": []
+    }
+  }
+]

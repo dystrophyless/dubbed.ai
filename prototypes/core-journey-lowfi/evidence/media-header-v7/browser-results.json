@@ -1,0 +1,4213 @@
+{
+  "version": "core-journey-panel-highfi-v7",
+  "date": "2026-10-28",
+  "browser": "156.0.8078.48",
+  "result": "PASS",
+  "checks": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 328,
+              "y": 96,
+              "w": 784,
+              "h": 441,
+              "right": 1112,
+              "bottom": 537
+            },
+            "panel": {
+              "x": 1136,
+              "y": 96,
+              "w": 272,
+              "h": 332,
+              "right": 1408,
+              "bottom": 428
+            },
+            "timeline": {
+              "x": 328,
+              "y": 644.984375,
+              "w": 784,
+              "h": 102,
+              "right": 1112,
+              "bottom": 746.984375
+            },
+            "script": {
+              "x": 328,
+              "y": 537,
+              "w": 784,
+              "h": 107.984375,
+              "right": 1112,
+              "bottom": 644.984375
+            },
+            "header": {
+              "x": 328,
+              "y": 20,
+              "w": 784,
+              "h": 64,
+              "right": 1112,
+              "bottom": 84
+            },
+            "exit": {
+              "x": 328,
+              "y": 20,
+              "w": 77.609375,
+              "h": 40,
+              "right": 405.609375,
+              "bottom": 60
+            },
+            "title": {
+              "x": 494.390625,
+              "y": 20,
+              "w": 451.203125,
+              "h": 28,
+              "right": 945.59375,
+              "bottom": 48
+            },
+            "dots": {
+              "x": 494.390625,
+              "y": 58,
+              "w": 451.203125,
+              "h": 6,
+              "right": 945.59375,
+              "bottom": 64
+            },
+            "dialogue": {
+              "x": 328,
+              "y": 549,
+              "w": 784,
+              "h": 34,
+              "right": 1112,
+              "bottom": 583
+            },
+            "wave": {
+              "x": 328,
+              "y": 644.984375,
+              "w": 784,
+              "h": 64,
+              "right": 1112,
+              "bottom": 708.984375
+            },
+            "gap": 61.984375,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 64,
+            "gap": 61.984375,
+            "titleY": 20,
+            "dotsY": 58
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 328,
+              "y": 96,
+              "w": 784,
+              "h": 441,
+              "right": 1112,
+              "bottom": 537
+            },
+            "panel": {
+              "x": 1136,
+              "y": 96,
+              "w": 272,
+              "h": 332,
+              "right": 1408,
+              "bottom": 428
+            },
+            "timeline": {
+              "x": 328,
+              "y": 644.984375,
+              "w": 784,
+              "h": 102,
+              "right": 1112,
+              "bottom": 746.984375
+            },
+            "script": {
+              "x": 328,
+              "y": 537,
+              "w": 784,
+              "h": 107.984375,
+              "right": 1112,
+              "bottom": 644.984375
+            },
+            "header": {
+              "x": 328,
+              "y": 20,
+              "w": 784,
+              "h": 64,
+              "right": 1112,
+              "bottom": 84
+            },
+            "exit": {
+              "x": 328,
+              "y": 20,
+              "w": 94.875,
+              "h": 40,
+              "right": 422.875,
+              "bottom": 60
+            },
+            "title": {
+              "x": 494.390625,
+              "y": 20,
+              "w": 451.203125,
+              "h": 28,
+              "right": 945.59375,
+              "bottom": 48
+            },
+            "dots": {
+              "x": 494.390625,
+              "y": 58,
+              "w": 451.203125,
+              "h": 6,
+              "right": 945.59375,
+              "bottom": 64
+            },
+            "dialogue": {
+              "x": 328,
+              "y": 549,
+              "w": 784,
+              "h": 68,
+              "right": 1112,
+              "bottom": 617
+            },
+            "wave": {
+              "x": 328,
+              "y": 644.984375,
+              "w": 784,
+              "h": 64,
+              "right": 1112,
+              "bottom": 708.984375
+            },
+            "gap": 27.984375,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 64,
+            "gap": 27.984375,
+            "titleY": 20,
+            "dotsY": 58
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 328,
+          "y": 96,
+          "w": 784,
+          "h": 441,
+          "right": 1112,
+          "bottom": 537
+        },
+        "panel": {
+          "x": 1136,
+          "y": 96,
+          "w": 272,
+          "h": 332,
+          "right": 1408,
+          "bottom": 428
+        },
+        "timeline": {
+          "x": 328,
+          "y": 644.984375,
+          "w": 784,
+          "h": 102,
+          "right": 1112,
+          "bottom": 746.984375
+        },
+        "script": {
+          "x": 328,
+          "y": 537,
+          "w": 784,
+          "h": 107.984375,
+          "right": 1112,
+          "bottom": 644.984375
+        },
+        "header": {
+          "x": 328,
+          "y": 20,
+          "w": 784,
+          "h": 64,
+          "right": 1112,
+          "bottom": 84
+        },
+        "exit": {
+          "x": 328,
+          "y": 20,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 60
+        },
+        "title": {
+          "x": 494.390625,
+          "y": 20,
+          "w": 451.203125,
+          "h": 28,
+          "right": 945.59375,
+          "bottom": 48
+        },
+        "dots": {
+          "x": 494.390625,
+          "y": 58,
+          "w": 451.203125,
+          "h": 6,
+          "right": 945.59375,
+          "bottom": 64
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 549,
+          "w": 784,
+          "h": 68,
+          "right": 1112,
+          "bottom": 617
+        },
+        "wave": {
+          "x": 328,
+          "y": 644.984375,
+          "w": 784,
+          "h": 64,
+          "right": 1112,
+          "bottom": 708.984375
+        },
+        "gap": 27.984375,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 328,
+          "y": 96,
+          "w": 784,
+          "h": 441,
+          "right": 1112,
+          "bottom": 537
+        },
+        "panel": {
+          "x": 1136,
+          "y": 96,
+          "w": 272,
+          "h": 332,
+          "right": 1408,
+          "bottom": 428
+        },
+        "timeline": {
+          "x": 328,
+          "y": 644.984375,
+          "w": 784,
+          "h": 102,
+          "right": 1112,
+          "bottom": 746.984375
+        },
+        "script": {
+          "x": 328,
+          "y": 537,
+          "w": 784,
+          "h": 107.984375,
+          "right": 1112,
+          "bottom": 644.984375
+        },
+        "header": {
+          "x": 328,
+          "y": 20,
+          "w": 784,
+          "h": 64,
+          "right": 1112,
+          "bottom": 84
+        },
+        "exit": {
+          "x": 328,
+          "y": 20,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 60
+        },
+        "title": {
+          "x": 494.390625,
+          "y": 20,
+          "w": 451.203125,
+          "h": 28,
+          "right": 945.59375,
+          "bottom": 48
+        },
+        "dots": {
+          "x": 494.390625,
+          "y": 58,
+          "w": 451.203125,
+          "h": 6,
+          "right": 945.59375,
+          "bottom": 64
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 549,
+          "w": 784,
+          "h": 68,
+          "right": 1112,
+          "bottom": 617
+        },
+        "wave": {
+          "x": 328,
+          "y": 644.984375,
+          "w": 784,
+          "h": 64,
+          "right": 1112,
+          "bottom": 708.984375
+        },
+        "gap": 27.984375,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 328,
+          "y": 96,
+          "w": 784,
+          "h": 441,
+          "right": 1112,
+          "bottom": 537
+        },
+        "panel": {
+          "x": 1136,
+          "y": 96,
+          "w": 272,
+          "h": 352,
+          "right": 1408,
+          "bottom": 448
+        },
+        "timeline": {
+          "x": 328,
+          "y": 644.984375,
+          "w": 784,
+          "h": 102,
+          "right": 1112,
+          "bottom": 746.984375
+        },
+        "script": {
+          "x": 328,
+          "y": 537,
+          "w": 784,
+          "h": 107.984375,
+          "right": 1112,
+          "bottom": 644.984375
+        },
+        "header": {
+          "x": 328,
+          "y": 20,
+          "w": 784,
+          "h": 64,
+          "right": 1112,
+          "bottom": 84
+        },
+        "exit": {
+          "x": 328,
+          "y": 20,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 60
+        },
+        "title": {
+          "x": 494.390625,
+          "y": 20,
+          "w": 451.203125,
+          "h": 28,
+          "right": 945.59375,
+          "bottom": 48
+        },
+        "dots": {
+          "x": 494.390625,
+          "y": 58,
+          "w": 451.203125,
+          "h": 6,
+          "right": 945.59375,
+          "bottom": 64
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 549,
+          "w": 784,
+          "h": 68,
+          "right": 1112,
+          "bottom": 617
+        },
+        "wave": {
+          "x": 328,
+          "y": 644.984375,
+          "w": 784,
+          "h": 64,
+          "right": 1112,
+          "bottom": 708.984375
+        },
+        "gap": 27.984375,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    },
+    {
+      "viewport": [
+        1920,
+        910
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 500,
+              "y": 96,
+              "w": 920,
+              "h": 517.5,
+              "right": 1420,
+              "bottom": 613.5
+            },
+            "panel": {
+              "x": 1444,
+              "y": 96,
+              "w": 272,
+              "h": 332,
+              "right": 1716,
+              "bottom": 428
+            },
+            "timeline": {
+              "x": 500,
+              "y": 721.5,
+              "w": 920,
+              "h": 102,
+              "right": 1420,
+              "bottom": 823.5
+            },
+            "script": {
+              "x": 500,
+              "y": 613.5,
+              "w": 920,
+              "h": 108,
+              "right": 1420,
+              "bottom": 721.5
+            },
+            "header": {
+              "x": 500,
+              "y": 20,
+              "w": 920,
+              "h": 64,
+              "right": 1420,
+              "bottom": 84
+            },
+            "exit": {
+              "x": 500,
+              "y": 20,
+              "w": 77.609375,
+              "h": 40,
+              "right": 577.609375,
+              "bottom": 60
+            },
+            "title": {
+              "x": 693.59375,
+              "y": 20,
+              "w": 532.796875,
+              "h": 28,
+              "right": 1226.390625,
+              "bottom": 48
+            },
+            "dots": {
+              "x": 693.59375,
+              "y": 58,
+              "w": 532.796875,
+              "h": 6,
+              "right": 1226.390625,
+              "bottom": 64
+            },
+            "dialogue": {
+              "x": 500,
+              "y": 625.5,
+              "w": 920,
+              "h": 34,
+              "right": 1420,
+              "bottom": 659.5
+            },
+            "wave": {
+              "x": 500,
+              "y": 721.5,
+              "w": 920,
+              "h": 64,
+              "right": 1420,
+              "bottom": 785.5
+            },
+            "gap": 62,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 64,
+            "gap": 62,
+            "titleY": 20,
+            "dotsY": 58
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 500,
+              "y": 96,
+              "w": 920,
+              "h": 517.5,
+              "right": 1420,
+              "bottom": 613.5
+            },
+            "panel": {
+              "x": 1444,
+              "y": 96,
+              "w": 272,
+              "h": 332,
+              "right": 1716,
+              "bottom": 428
+            },
+            "timeline": {
+              "x": 500,
+              "y": 721.5,
+              "w": 920,
+              "h": 102,
+              "right": 1420,
+              "bottom": 823.5
+            },
+            "script": {
+              "x": 500,
+              "y": 613.5,
+              "w": 920,
+              "h": 108,
+              "right": 1420,
+              "bottom": 721.5
+            },
+            "header": {
+              "x": 500,
+              "y": 20,
+              "w": 920,
+              "h": 64,
+              "right": 1420,
+              "bottom": 84
+            },
+            "exit": {
+              "x": 500,
+              "y": 20,
+              "w": 94.875,
+              "h": 40,
+              "right": 594.875,
+              "bottom": 60
+            },
+            "title": {
+              "x": 693.59375,
+              "y": 20,
+              "w": 532.796875,
+              "h": 28,
+              "right": 1226.390625,
+              "bottom": 48
+            },
+            "dots": {
+              "x": 693.59375,
+              "y": 58,
+              "w": 532.796875,
+              "h": 6,
+              "right": 1226.390625,
+              "bottom": 64
+            },
+            "dialogue": {
+              "x": 500,
+              "y": 625.5,
+              "w": 920,
+              "h": 68,
+              "right": 1420,
+              "bottom": 693.5
+            },
+            "wave": {
+              "x": 500,
+              "y": 721.5,
+              "w": 920,
+              "h": 64,
+              "right": 1420,
+              "bottom": 785.5
+            },
+            "gap": 28,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 64,
+            "gap": 28,
+            "titleY": 20,
+            "dotsY": 58
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 500,
+          "y": 96,
+          "w": 920,
+          "h": 517.5,
+          "right": 1420,
+          "bottom": 613.5
+        },
+        "panel": {
+          "x": 1444,
+          "y": 96,
+          "w": 272,
+          "h": 332,
+          "right": 1716,
+          "bottom": 428
+        },
+        "timeline": {
+          "x": 500,
+          "y": 721.5,
+          "w": 920,
+          "h": 102,
+          "right": 1420,
+          "bottom": 823.5
+        },
+        "script": {
+          "x": 500,
+          "y": 613.5,
+          "w": 920,
+          "h": 108,
+          "right": 1420,
+          "bottom": 721.5
+        },
+        "header": {
+          "x": 500,
+          "y": 20,
+          "w": 920,
+          "h": 64,
+          "right": 1420,
+          "bottom": 84
+        },
+        "exit": {
+          "x": 500,
+          "y": 20,
+          "w": 94.875,
+          "h": 40,
+          "right": 594.875,
+          "bottom": 60
+        },
+        "title": {
+          "x": 693.59375,
+          "y": 20,
+          "w": 532.796875,
+          "h": 28,
+          "right": 1226.390625,
+          "bottom": 48
+        },
+        "dots": {
+          "x": 693.59375,
+          "y": 58,
+          "w": 532.796875,
+          "h": 6,
+          "right": 1226.390625,
+          "bottom": 64
+        },
+        "dialogue": {
+          "x": 500,
+          "y": 625.5,
+          "w": 920,
+          "h": 68,
+          "right": 1420,
+          "bottom": 693.5
+        },
+        "wave": {
+          "x": 500,
+          "y": 721.5,
+          "w": 920,
+          "h": 64,
+          "right": 1420,
+          "bottom": 785.5
+        },
+        "gap": 28,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 500,
+          "y": 96,
+          "w": 920,
+          "h": 517.5,
+          "right": 1420,
+          "bottom": 613.5
+        },
+        "panel": {
+          "x": 1444,
+          "y": 96,
+          "w": 272,
+          "h": 332,
+          "right": 1716,
+          "bottom": 428
+        },
+        "timeline": {
+          "x": 500,
+          "y": 721.5,
+          "w": 920,
+          "h": 102,
+          "right": 1420,
+          "bottom": 823.5
+        },
+        "script": {
+          "x": 500,
+          "y": 613.5,
+          "w": 920,
+          "h": 108,
+          "right": 1420,
+          "bottom": 721.5
+        },
+        "header": {
+          "x": 500,
+          "y": 20,
+          "w": 920,
+          "h": 64,
+          "right": 1420,
+          "bottom": 84
+        },
+        "exit": {
+          "x": 500,
+          "y": 20,
+          "w": 94.875,
+          "h": 40,
+          "right": 594.875,
+          "bottom": 60
+        },
+        "title": {
+          "x": 693.59375,
+          "y": 20,
+          "w": 532.796875,
+          "h": 28,
+          "right": 1226.390625,
+          "bottom": 48
+        },
+        "dots": {
+          "x": 693.59375,
+          "y": 58,
+          "w": 532.796875,
+          "h": 6,
+          "right": 1226.390625,
+          "bottom": 64
+        },
+        "dialogue": {
+          "x": 500,
+          "y": 625.5,
+          "w": 920,
+          "h": 68,
+          "right": 1420,
+          "bottom": 693.5
+        },
+        "wave": {
+          "x": 500,
+          "y": 721.5,
+          "w": 920,
+          "h": 64,
+          "right": 1420,
+          "bottom": 785.5
+        },
+        "gap": 28,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 500,
+          "y": 96,
+          "w": 920,
+          "h": 517.5,
+          "right": 1420,
+          "bottom": 613.5
+        },
+        "panel": {
+          "x": 1444,
+          "y": 96,
+          "w": 272,
+          "h": 352,
+          "right": 1716,
+          "bottom": 448
+        },
+        "timeline": {
+          "x": 500,
+          "y": 721.5,
+          "w": 920,
+          "h": 102,
+          "right": 1420,
+          "bottom": 823.5
+        },
+        "script": {
+          "x": 500,
+          "y": 613.5,
+          "w": 920,
+          "h": 108,
+          "right": 1420,
+          "bottom": 721.5
+        },
+        "header": {
+          "x": 500,
+          "y": 20,
+          "w": 920,
+          "h": 64,
+          "right": 1420,
+          "bottom": 84
+        },
+        "exit": {
+          "x": 500,
+          "y": 20,
+          "w": 94.875,
+          "h": 40,
+          "right": 594.875,
+          "bottom": 60
+        },
+        "title": {
+          "x": 693.59375,
+          "y": 20,
+          "w": 532.796875,
+          "h": 28,
+          "right": 1226.390625,
+          "bottom": 48
+        },
+        "dots": {
+          "x": 693.59375,
+          "y": 58,
+          "w": 532.796875,
+          "h": 6,
+          "right": 1226.390625,
+          "bottom": 64
+        },
+        "dialogue": {
+          "x": 500,
+          "y": 625.5,
+          "w": 920,
+          "h": 68,
+          "right": 1420,
+          "bottom": 693.5
+        },
+        "wave": {
+          "x": 500,
+          "y": 721.5,
+          "w": 920,
+          "h": 64,
+          "right": 1420,
+          "bottom": 785.5
+        },
+        "gap": 28,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    },
+    {
+      "viewport": [
+        1280,
+        600
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 328,
+              "y": 56,
+              "w": 624,
+              "h": 351,
+              "right": 952,
+              "bottom": 407
+            },
+            "panel": {
+              "x": 976,
+              "y": 56,
+              "w": 272,
+              "h": 234,
+              "right": 1248,
+              "bottom": 290
+            },
+            "timeline": {
+              "x": 328,
+              "y": 475,
+              "w": 624,
+              "h": 62,
+              "right": 952,
+              "bottom": 537
+            },
+            "script": {
+              "x": 328,
+              "y": 407,
+              "w": 624,
+              "h": 68,
+              "right": 952,
+              "bottom": 475
+            },
+            "header": {
+              "x": 328,
+              "y": 12,
+              "w": 624,
+              "h": 40,
+              "right": 952,
+              "bottom": 52
+            },
+            "exit": {
+              "x": 328,
+              "y": 12,
+              "w": 77.609375,
+              "h": 40,
+              "right": 405.609375,
+              "bottom": 52
+            },
+            "title": {
+              "x": 480,
+              "y": 12,
+              "w": 320,
+              "h": 28,
+              "right": 800,
+              "bottom": 40
+            },
+            "dots": {
+              "x": 480,
+              "y": 44,
+              "w": 320,
+              "h": 6,
+              "right": 800,
+              "bottom": 50
+            },
+            "dialogue": {
+              "x": 328,
+              "y": 411,
+              "w": 624,
+              "h": 30,
+              "right": 952,
+              "bottom": 441
+            },
+            "wave": {
+              "x": 328,
+              "y": 475,
+              "w": 624,
+              "h": 32,
+              "right": 952,
+              "bottom": 507
+            },
+            "gap": 34,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 32,
+            "gap": 34,
+            "titleY": 12,
+            "dotsY": 44
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 328,
+              "y": 56,
+              "w": 624,
+              "h": 351,
+              "right": 952,
+              "bottom": 407
+            },
+            "panel": {
+              "x": 976,
+              "y": 56,
+              "w": 272,
+              "h": 254,
+              "right": 1248,
+              "bottom": 310
+            },
+            "timeline": {
+              "x": 328,
+              "y": 475,
+              "w": 624,
+              "h": 62,
+              "right": 952,
+              "bottom": 537
+            },
+            "script": {
+              "x": 328,
+              "y": 407,
+              "w": 624,
+              "h": 68,
+              "right": 952,
+              "bottom": 475
+            },
+            "header": {
+              "x": 328,
+              "y": 12,
+              "w": 624,
+              "h": 40,
+              "right": 952,
+              "bottom": 52
+            },
+            "exit": {
+              "x": 328,
+              "y": 12,
+              "w": 94.875,
+              "h": 40,
+              "right": 422.875,
+              "bottom": 52
+            },
+            "title": {
+              "x": 480,
+              "y": 12,
+              "w": 320,
+              "h": 28,
+              "right": 800,
+              "bottom": 40
+            },
+            "dots": {
+              "x": 480,
+              "y": 44,
+              "w": 320,
+              "h": 6,
+              "right": 800,
+              "bottom": 50
+            },
+            "dialogue": {
+              "x": 328,
+              "y": 411,
+              "w": 624,
+              "h": 60,
+              "right": 952,
+              "bottom": 471
+            },
+            "wave": {
+              "x": 328,
+              "y": 475,
+              "w": 624,
+              "h": 32,
+              "right": 952,
+              "bottom": 507
+            },
+            "gap": 4,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 32,
+            "gap": 4,
+            "titleY": 12,
+            "dotsY": 44
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 328,
+          "y": 56,
+          "w": 624,
+          "h": 351,
+          "right": 952,
+          "bottom": 407
+        },
+        "panel": {
+          "x": 976,
+          "y": 56,
+          "w": 272,
+          "h": 234,
+          "right": 1248,
+          "bottom": 290
+        },
+        "timeline": {
+          "x": 328,
+          "y": 475,
+          "w": 624,
+          "h": 62,
+          "right": 952,
+          "bottom": 537
+        },
+        "script": {
+          "x": 328,
+          "y": 407,
+          "w": 624,
+          "h": 68,
+          "right": 952,
+          "bottom": 475
+        },
+        "header": {
+          "x": 328,
+          "y": 12,
+          "w": 624,
+          "h": 40,
+          "right": 952,
+          "bottom": 52
+        },
+        "exit": {
+          "x": 328,
+          "y": 12,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 52
+        },
+        "title": {
+          "x": 480,
+          "y": 12,
+          "w": 320,
+          "h": 28,
+          "right": 800,
+          "bottom": 40
+        },
+        "dots": {
+          "x": 480,
+          "y": 44,
+          "w": 320,
+          "h": 6,
+          "right": 800,
+          "bottom": 50
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 411,
+          "w": 624,
+          "h": 60,
+          "right": 952,
+          "bottom": 471
+        },
+        "wave": {
+          "x": 328,
+          "y": 475,
+          "w": 624,
+          "h": 32,
+          "right": 952,
+          "bottom": 507
+        },
+        "gap": 4,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 328,
+          "y": 56,
+          "w": 624,
+          "h": 351,
+          "right": 952,
+          "bottom": 407
+        },
+        "panel": {
+          "x": 976,
+          "y": 56,
+          "w": 272,
+          "h": 234,
+          "right": 1248,
+          "bottom": 290
+        },
+        "timeline": {
+          "x": 328,
+          "y": 475,
+          "w": 624,
+          "h": 62,
+          "right": 952,
+          "bottom": 537
+        },
+        "script": {
+          "x": 328,
+          "y": 407,
+          "w": 624,
+          "h": 68,
+          "right": 952,
+          "bottom": 475
+        },
+        "header": {
+          "x": 328,
+          "y": 12,
+          "w": 624,
+          "h": 40,
+          "right": 952,
+          "bottom": 52
+        },
+        "exit": {
+          "x": 328,
+          "y": 12,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 52
+        },
+        "title": {
+          "x": 480,
+          "y": 12,
+          "w": 320,
+          "h": 28,
+          "right": 800,
+          "bottom": 40
+        },
+        "dots": {
+          "x": 480,
+          "y": 44,
+          "w": 320,
+          "h": 6,
+          "right": 800,
+          "bottom": 50
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 411,
+          "w": 624,
+          "h": 60,
+          "right": 952,
+          "bottom": 471
+        },
+        "wave": {
+          "x": 328,
+          "y": 475,
+          "w": 624,
+          "h": 32,
+          "right": 952,
+          "bottom": 507
+        },
+        "gap": 4,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 328,
+          "y": 56,
+          "w": 624,
+          "h": 351,
+          "right": 952,
+          "bottom": 407
+        },
+        "panel": {
+          "x": 976,
+          "y": 56,
+          "w": 272,
+          "h": 274,
+          "right": 1248,
+          "bottom": 330
+        },
+        "timeline": {
+          "x": 328,
+          "y": 475,
+          "w": 624,
+          "h": 62,
+          "right": 952,
+          "bottom": 537
+        },
+        "script": {
+          "x": 328,
+          "y": 407,
+          "w": 624,
+          "h": 68,
+          "right": 952,
+          "bottom": 475
+        },
+        "header": {
+          "x": 328,
+          "y": 12,
+          "w": 624,
+          "h": 40,
+          "right": 952,
+          "bottom": 52
+        },
+        "exit": {
+          "x": 328,
+          "y": 12,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 52
+        },
+        "title": {
+          "x": 480,
+          "y": 12,
+          "w": 320,
+          "h": 28,
+          "right": 800,
+          "bottom": 40
+        },
+        "dots": {
+          "x": 480,
+          "y": 44,
+          "w": 320,
+          "h": 6,
+          "right": 800,
+          "bottom": 50
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 411,
+          "w": 624,
+          "h": 60,
+          "right": 952,
+          "bottom": 471
+        },
+        "wave": {
+          "x": 328,
+          "y": 475,
+          "w": 624,
+          "h": 32,
+          "right": 952,
+          "bottom": 507
+        },
+        "gap": 4,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    },
+    {
+      "viewport": [
+        1366,
+        650
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 328,
+              "y": 62.65625,
+              "w": 710,
+              "h": 399.375,
+              "right": 1038,
+              "bottom": 462.03125
+            },
+            "panel": {
+              "x": 1062,
+              "y": 62.65625,
+              "w": 272,
+              "h": 234,
+              "right": 1334,
+              "bottom": 296.65625
+            },
+            "timeline": {
+              "x": 328,
+              "y": 536.6875,
+              "w": 710,
+              "h": 68.65625,
+              "right": 1038,
+              "bottom": 605.34375
+            },
+            "script": {
+              "x": 328,
+              "y": 462.03125,
+              "w": 710,
+              "h": 74.65625,
+              "right": 1038,
+              "bottom": 536.6875
+            },
+            "header": {
+              "x": 328,
+              "y": 13.328125,
+              "w": 710,
+              "h": 44,
+              "right": 1038,
+              "bottom": 57.328125
+            },
+            "exit": {
+              "x": 328,
+              "y": 13.328125,
+              "w": 77.609375,
+              "h": 40,
+              "right": 405.609375,
+              "bottom": 53.328125
+            },
+            "title": {
+              "x": 480,
+              "y": 13.328125,
+              "w": 406,
+              "h": 28,
+              "right": 886,
+              "bottom": 41.328125
+            },
+            "dots": {
+              "x": 480,
+              "y": 46.328125,
+              "w": 406,
+              "h": 6,
+              "right": 886,
+              "bottom": 52.328125
+            },
+            "dialogue": {
+              "x": 328,
+              "y": 467.359375,
+              "w": 710,
+              "h": 30.671875,
+              "right": 1038,
+              "bottom": 498.03125
+            },
+            "wave": {
+              "x": 328,
+              "y": 536.6875,
+              "w": 710,
+              "h": 37.328125,
+              "right": 1038,
+              "bottom": 574.015625
+            },
+            "gap": 38.65625,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 37.328125,
+            "gap": 38.65625,
+            "titleY": 13.328125,
+            "dotsY": 46.328125
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 328,
+              "y": 62.65625,
+              "w": 710,
+              "h": 399.375,
+              "right": 1038,
+              "bottom": 462.03125
+            },
+            "panel": {
+              "x": 1062,
+              "y": 62.65625,
+              "w": 272,
+              "h": 254,
+              "right": 1334,
+              "bottom": 316.65625
+            },
+            "timeline": {
+              "x": 328,
+              "y": 536.6875,
+              "w": 710,
+              "h": 68.65625,
+              "right": 1038,
+              "bottom": 605.34375
+            },
+            "script": {
+              "x": 328,
+              "y": 462.03125,
+              "w": 710,
+              "h": 74.65625,
+              "right": 1038,
+              "bottom": 536.6875
+            },
+            "header": {
+              "x": 328,
+              "y": 13.328125,
+              "w": 710,
+              "h": 44,
+              "right": 1038,
+              "bottom": 57.328125
+            },
+            "exit": {
+              "x": 328,
+              "y": 13.328125,
+              "w": 94.875,
+              "h": 40,
+              "right": 422.875,
+              "bottom": 53.328125
+            },
+            "title": {
+              "x": 480,
+              "y": 13.328125,
+              "w": 406,
+              "h": 28,
+              "right": 886,
+              "bottom": 41.328125
+            },
+            "dots": {
+              "x": 480,
+              "y": 46.328125,
+              "w": 406,
+              "h": 6,
+              "right": 886,
+              "bottom": 52.328125
+            },
+            "dialogue": {
+              "x": 328,
+              "y": 467.359375,
+              "w": 710,
+              "h": 61.34375,
+              "right": 1038,
+              "bottom": 528.703125
+            },
+            "wave": {
+              "x": 328,
+              "y": 536.6875,
+              "w": 710,
+              "h": 37.328125,
+              "right": 1038,
+              "bottom": 574.015625
+            },
+            "gap": 7.984375,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 37.328125,
+            "gap": 7.984375,
+            "titleY": 13.328125,
+            "dotsY": 46.328125
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 328,
+          "y": 62.65625,
+          "w": 710,
+          "h": 399.375,
+          "right": 1038,
+          "bottom": 462.03125
+        },
+        "panel": {
+          "x": 1062,
+          "y": 62.65625,
+          "w": 272,
+          "h": 234,
+          "right": 1334,
+          "bottom": 296.65625
+        },
+        "timeline": {
+          "x": 328,
+          "y": 536.6875,
+          "w": 710,
+          "h": 68.65625,
+          "right": 1038,
+          "bottom": 605.34375
+        },
+        "script": {
+          "x": 328,
+          "y": 462.03125,
+          "w": 710,
+          "h": 74.65625,
+          "right": 1038,
+          "bottom": 536.6875
+        },
+        "header": {
+          "x": 328,
+          "y": 13.328125,
+          "w": 710,
+          "h": 44,
+          "right": 1038,
+          "bottom": 57.328125
+        },
+        "exit": {
+          "x": 328,
+          "y": 13.328125,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 53.328125
+        },
+        "title": {
+          "x": 480,
+          "y": 13.328125,
+          "w": 406,
+          "h": 28,
+          "right": 886,
+          "bottom": 41.328125
+        },
+        "dots": {
+          "x": 480,
+          "y": 46.328125,
+          "w": 406,
+          "h": 6,
+          "right": 886,
+          "bottom": 52.328125
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 467.359375,
+          "w": 710,
+          "h": 61.34375,
+          "right": 1038,
+          "bottom": 528.703125
+        },
+        "wave": {
+          "x": 328,
+          "y": 536.6875,
+          "w": 710,
+          "h": 37.328125,
+          "right": 1038,
+          "bottom": 574.015625
+        },
+        "gap": 7.984375,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 328,
+          "y": 62.65625,
+          "w": 710,
+          "h": 399.375,
+          "right": 1038,
+          "bottom": 462.03125
+        },
+        "panel": {
+          "x": 1062,
+          "y": 62.65625,
+          "w": 272,
+          "h": 234,
+          "right": 1334,
+          "bottom": 296.65625
+        },
+        "timeline": {
+          "x": 328,
+          "y": 536.6875,
+          "w": 710,
+          "h": 68.65625,
+          "right": 1038,
+          "bottom": 605.34375
+        },
+        "script": {
+          "x": 328,
+          "y": 462.03125,
+          "w": 710,
+          "h": 74.65625,
+          "right": 1038,
+          "bottom": 536.6875
+        },
+        "header": {
+          "x": 328,
+          "y": 13.328125,
+          "w": 710,
+          "h": 44,
+          "right": 1038,
+          "bottom": 57.328125
+        },
+        "exit": {
+          "x": 328,
+          "y": 13.328125,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 53.328125
+        },
+        "title": {
+          "x": 480,
+          "y": 13.328125,
+          "w": 406,
+          "h": 28,
+          "right": 886,
+          "bottom": 41.328125
+        },
+        "dots": {
+          "x": 480,
+          "y": 46.328125,
+          "w": 406,
+          "h": 6,
+          "right": 886,
+          "bottom": 52.328125
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 467.359375,
+          "w": 710,
+          "h": 61.34375,
+          "right": 1038,
+          "bottom": 528.703125
+        },
+        "wave": {
+          "x": 328,
+          "y": 536.6875,
+          "w": 710,
+          "h": 37.328125,
+          "right": 1038,
+          "bottom": 574.015625
+        },
+        "gap": 7.984375,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 328,
+          "y": 62.65625,
+          "w": 710,
+          "h": 399.375,
+          "right": 1038,
+          "bottom": 462.03125
+        },
+        "panel": {
+          "x": 1062,
+          "y": 62.65625,
+          "w": 272,
+          "h": 274,
+          "right": 1334,
+          "bottom": 336.65625
+        },
+        "timeline": {
+          "x": 328,
+          "y": 536.6875,
+          "w": 710,
+          "h": 68.65625,
+          "right": 1038,
+          "bottom": 605.34375
+        },
+        "script": {
+          "x": 328,
+          "y": 462.03125,
+          "w": 710,
+          "h": 74.65625,
+          "right": 1038,
+          "bottom": 536.6875
+        },
+        "header": {
+          "x": 328,
+          "y": 13.328125,
+          "w": 710,
+          "h": 44,
+          "right": 1038,
+          "bottom": 57.328125
+        },
+        "exit": {
+          "x": 328,
+          "y": 13.328125,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 53.328125
+        },
+        "title": {
+          "x": 480,
+          "y": 13.328125,
+          "w": 406,
+          "h": 28,
+          "right": 886,
+          "bottom": 41.328125
+        },
+        "dots": {
+          "x": 480,
+          "y": 46.328125,
+          "w": 406,
+          "h": 6,
+          "right": 886,
+          "bottom": 52.328125
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 467.359375,
+          "w": 710,
+          "h": 61.34375,
+          "right": 1038,
+          "bottom": 528.703125
+        },
+        "wave": {
+          "x": 328,
+          "y": 536.6875,
+          "w": 710,
+          "h": 37.328125,
+          "right": 1038,
+          "bottom": 574.015625
+        },
+        "gap": 7.984375,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    },
+    {
+      "viewport": [
+        1247,
+        700
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 24,
+              "y": 69.3125,
+              "w": 1199,
+              "h": 674.4375,
+              "right": 1223,
+              "bottom": 743.75
+            },
+            "panel": {
+              "x": 24,
+              "y": 924.390625,
+              "w": 1199,
+              "h": 248,
+              "right": 1223,
+              "bottom": 1172.390625
+            },
+            "timeline": {
+              "x": 24,
+              "y": 825.078125,
+              "w": 1199,
+              "h": 75.3125,
+              "right": 1223,
+              "bottom": 900.390625
+            },
+            "script": {
+              "x": 24,
+              "y": 743.75,
+              "w": 1199,
+              "h": 81.328125,
+              "right": 1223,
+              "bottom": 825.078125
+            },
+            "header": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 1199,
+              "h": 48,
+              "right": 1223,
+              "bottom": 62.65625
+            },
+            "exit": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 77.609375,
+              "h": 40,
+              "right": 101.609375,
+              "bottom": 54.65625
+            },
+            "title": {
+              "x": 273.390625,
+              "y": 14.65625,
+              "w": 700.203125,
+              "h": 28,
+              "right": 973.59375,
+              "bottom": 42.65625
+            },
+            "dots": {
+              "x": 273.390625,
+              "y": 48.65625,
+              "w": 700.203125,
+              "h": 6,
+              "right": 973.59375,
+              "bottom": 54.65625
+            },
+            "dialogue": {
+              "x": 123.5,
+              "y": 750.40625,
+              "w": 1000,
+              "h": 31.328125,
+              "right": 1123.5,
+              "bottom": 781.734375
+            },
+            "wave": {
+              "x": 24,
+              "y": 825.078125,
+              "w": 1199,
+              "h": 42.65625,
+              "right": 1223,
+              "bottom": 867.734375
+            },
+            "gap": 43.34375,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 42.65625,
+            "gap": 43.34375,
+            "titleY": 14.65625,
+            "dotsY": 48.65625
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 24,
+              "y": 69.3125,
+              "w": 1199,
+              "h": 674.4375,
+              "right": 1223,
+              "bottom": 743.75
+            },
+            "panel": {
+              "x": 24,
+              "y": 924.390625,
+              "w": 1199,
+              "h": 248,
+              "right": 1223,
+              "bottom": 1172.390625
+            },
+            "timeline": {
+              "x": 24,
+              "y": 825.078125,
+              "w": 1199,
+              "h": 75.3125,
+              "right": 1223,
+              "bottom": 900.390625
+            },
+            "script": {
+              "x": 24,
+              "y": 743.75,
+              "w": 1199,
+              "h": 81.328125,
+              "right": 1223,
+              "bottom": 825.078125
+            },
+            "header": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 1199,
+              "h": 48,
+              "right": 1223,
+              "bottom": 62.65625
+            },
+            "exit": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 94.875,
+              "h": 40,
+              "right": 118.875,
+              "bottom": 54.65625
+            },
+            "title": {
+              "x": 273.390625,
+              "y": 14.65625,
+              "w": 700.203125,
+              "h": 28,
+              "right": 973.59375,
+              "bottom": 42.65625
+            },
+            "dots": {
+              "x": 273.390625,
+              "y": 48.65625,
+              "w": 700.203125,
+              "h": 6,
+              "right": 973.59375,
+              "bottom": 54.65625
+            },
+            "dialogue": {
+              "x": 123.5,
+              "y": 750.40625,
+              "w": 1000,
+              "h": 62.65625,
+              "right": 1123.5,
+              "bottom": 813.0625
+            },
+            "wave": {
+              "x": 24,
+              "y": 825.078125,
+              "w": 1199,
+              "h": 42.65625,
+              "right": 1223,
+              "bottom": 867.734375
+            },
+            "gap": 12.015625,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 42.65625,
+            "gap": 12.015625,
+            "titleY": 14.65625,
+            "dotsY": 48.65625
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 1199,
+          "h": 674.4375,
+          "right": 1223,
+          "bottom": 743.75
+        },
+        "panel": {
+          "x": 24,
+          "y": 924.390625,
+          "w": 1199,
+          "h": 248,
+          "right": 1223,
+          "bottom": 1172.390625
+        },
+        "timeline": {
+          "x": 24,
+          "y": 825.078125,
+          "w": 1199,
+          "h": 75.3125,
+          "right": 1223,
+          "bottom": 900.390625
+        },
+        "script": {
+          "x": 24,
+          "y": 743.75,
+          "w": 1199,
+          "h": 81.328125,
+          "right": 1223,
+          "bottom": 825.078125
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 1199,
+          "h": 48,
+          "right": 1223,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 273.390625,
+          "y": 14.65625,
+          "w": 700.203125,
+          "h": 28,
+          "right": 973.59375,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 273.390625,
+          "y": 48.65625,
+          "w": 700.203125,
+          "h": 6,
+          "right": 973.59375,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 123.5,
+          "y": 750.40625,
+          "w": 1000,
+          "h": 62.65625,
+          "right": 1123.5,
+          "bottom": 813.0625
+        },
+        "wave": {
+          "x": 24,
+          "y": 825.078125,
+          "w": 1199,
+          "h": 42.65625,
+          "right": 1223,
+          "bottom": 867.734375
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 1199,
+          "h": 674.4375,
+          "right": 1223,
+          "bottom": 743.75
+        },
+        "panel": {
+          "x": 24,
+          "y": 924.390625,
+          "w": 1199,
+          "h": 248,
+          "right": 1223,
+          "bottom": 1172.390625
+        },
+        "timeline": {
+          "x": 24,
+          "y": 825.078125,
+          "w": 1199,
+          "h": 75.3125,
+          "right": 1223,
+          "bottom": 900.390625
+        },
+        "script": {
+          "x": 24,
+          "y": 743.75,
+          "w": 1199,
+          "h": 81.328125,
+          "right": 1223,
+          "bottom": 825.078125
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 1199,
+          "h": 48,
+          "right": 1223,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 273.390625,
+          "y": 14.65625,
+          "w": 700.203125,
+          "h": 28,
+          "right": 973.59375,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 273.390625,
+          "y": 48.65625,
+          "w": 700.203125,
+          "h": 6,
+          "right": 973.59375,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 123.5,
+          "y": 750.40625,
+          "w": 1000,
+          "h": 62.65625,
+          "right": 1123.5,
+          "bottom": 813.0625
+        },
+        "wave": {
+          "x": 24,
+          "y": 825.078125,
+          "w": 1199,
+          "h": 42.65625,
+          "right": 1223,
+          "bottom": 867.734375
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 1199,
+          "h": 674.4375,
+          "right": 1223,
+          "bottom": 743.75
+        },
+        "panel": {
+          "x": 24,
+          "y": 924.390625,
+          "w": 1199,
+          "h": 248,
+          "right": 1223,
+          "bottom": 1172.390625
+        },
+        "timeline": {
+          "x": 24,
+          "y": 825.078125,
+          "w": 1199,
+          "h": 75.3125,
+          "right": 1223,
+          "bottom": 900.390625
+        },
+        "script": {
+          "x": 24,
+          "y": 743.75,
+          "w": 1199,
+          "h": 81.328125,
+          "right": 1223,
+          "bottom": 825.078125
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 1199,
+          "h": 48,
+          "right": 1223,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 273.390625,
+          "y": 14.65625,
+          "w": 700.203125,
+          "h": 28,
+          "right": 973.59375,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 273.390625,
+          "y": 48.65625,
+          "w": 700.203125,
+          "h": 6,
+          "right": 973.59375,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 123.5,
+          "y": 750.40625,
+          "w": 1000,
+          "h": 62.65625,
+          "right": 1123.5,
+          "bottom": 813.0625
+        },
+        "wave": {
+          "x": 24,
+          "y": 825.078125,
+          "w": 1199,
+          "h": 42.65625,
+          "right": 1223,
+          "bottom": 867.734375
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    },
+    {
+      "viewport": [
+        1248,
+        700
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 328,
+              "y": 69.3125,
+              "w": 592,
+              "h": 333,
+              "right": 920,
+              "bottom": 402.3125
+            },
+            "panel": {
+              "x": 944,
+              "y": 69.3125,
+              "w": 272,
+              "h": 234,
+              "right": 1216,
+              "bottom": 303.3125
+            },
+            "timeline": {
+              "x": 328,
+              "y": 483.640625,
+              "w": 592,
+              "h": 75.3125,
+              "right": 920,
+              "bottom": 558.953125
+            },
+            "script": {
+              "x": 328,
+              "y": 402.3125,
+              "w": 592,
+              "h": 81.328125,
+              "right": 920,
+              "bottom": 483.640625
+            },
+            "header": {
+              "x": 328,
+              "y": 14.65625,
+              "w": 592,
+              "h": 48,
+              "right": 920,
+              "bottom": 62.65625
+            },
+            "exit": {
+              "x": 328,
+              "y": 14.65625,
+              "w": 77.609375,
+              "h": 40,
+              "right": 405.609375,
+              "bottom": 54.65625
+            },
+            "title": {
+              "x": 480,
+              "y": 14.65625,
+              "w": 288,
+              "h": 28,
+              "right": 768,
+              "bottom": 42.65625
+            },
+            "dots": {
+              "x": 480,
+              "y": 48.65625,
+              "w": 288,
+              "h": 6,
+              "right": 768,
+              "bottom": 54.65625
+            },
+            "dialogue": {
+              "x": 328,
+              "y": 408.96875,
+              "w": 592,
+              "h": 31.328125,
+              "right": 920,
+              "bottom": 440.296875
+            },
+            "wave": {
+              "x": 328,
+              "y": 483.640625,
+              "w": 592,
+              "h": 42.65625,
+              "right": 920,
+              "bottom": 526.296875
+            },
+            "gap": 43.34375,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 42.65625,
+            "gap": 43.34375,
+            "titleY": 14.65625,
+            "dotsY": 48.65625
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 328,
+              "y": 69.3125,
+              "w": 592,
+              "h": 333,
+              "right": 920,
+              "bottom": 402.3125
+            },
+            "panel": {
+              "x": 944,
+              "y": 69.3125,
+              "w": 272,
+              "h": 254,
+              "right": 1216,
+              "bottom": 323.3125
+            },
+            "timeline": {
+              "x": 328,
+              "y": 483.640625,
+              "w": 592,
+              "h": 75.3125,
+              "right": 920,
+              "bottom": 558.953125
+            },
+            "script": {
+              "x": 328,
+              "y": 402.3125,
+              "w": 592,
+              "h": 81.328125,
+              "right": 920,
+              "bottom": 483.640625
+            },
+            "header": {
+              "x": 328,
+              "y": 14.65625,
+              "w": 592,
+              "h": 48,
+              "right": 920,
+              "bottom": 62.65625
+            },
+            "exit": {
+              "x": 328,
+              "y": 14.65625,
+              "w": 94.875,
+              "h": 40,
+              "right": 422.875,
+              "bottom": 54.65625
+            },
+            "title": {
+              "x": 480,
+              "y": 14.65625,
+              "w": 288,
+              "h": 28,
+              "right": 768,
+              "bottom": 42.65625
+            },
+            "dots": {
+              "x": 480,
+              "y": 48.65625,
+              "w": 288,
+              "h": 6,
+              "right": 768,
+              "bottom": 54.65625
+            },
+            "dialogue": {
+              "x": 328,
+              "y": 408.96875,
+              "w": 592,
+              "h": 62.65625,
+              "right": 920,
+              "bottom": 471.625
+            },
+            "wave": {
+              "x": 328,
+              "y": 483.640625,
+              "w": 592,
+              "h": 42.65625,
+              "right": 920,
+              "bottom": 526.296875
+            },
+            "gap": 12.015625,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 42.65625,
+            "gap": 12.015625,
+            "titleY": 14.65625,
+            "dotsY": 48.65625
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 328,
+          "y": 69.3125,
+          "w": 592,
+          "h": 333,
+          "right": 920,
+          "bottom": 402.3125
+        },
+        "panel": {
+          "x": 944,
+          "y": 69.3125,
+          "w": 272,
+          "h": 234,
+          "right": 1216,
+          "bottom": 303.3125
+        },
+        "timeline": {
+          "x": 328,
+          "y": 483.640625,
+          "w": 592,
+          "h": 75.3125,
+          "right": 920,
+          "bottom": 558.953125
+        },
+        "script": {
+          "x": 328,
+          "y": 402.3125,
+          "w": 592,
+          "h": 81.328125,
+          "right": 920,
+          "bottom": 483.640625
+        },
+        "header": {
+          "x": 328,
+          "y": 14.65625,
+          "w": 592,
+          "h": 48,
+          "right": 920,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 328,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 480,
+          "y": 14.65625,
+          "w": 288,
+          "h": 28,
+          "right": 768,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 480,
+          "y": 48.65625,
+          "w": 288,
+          "h": 6,
+          "right": 768,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 408.96875,
+          "w": 592,
+          "h": 62.65625,
+          "right": 920,
+          "bottom": 471.625
+        },
+        "wave": {
+          "x": 328,
+          "y": 483.640625,
+          "w": 592,
+          "h": 42.65625,
+          "right": 920,
+          "bottom": 526.296875
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 328,
+          "y": 69.3125,
+          "w": 592,
+          "h": 333,
+          "right": 920,
+          "bottom": 402.3125
+        },
+        "panel": {
+          "x": 944,
+          "y": 69.3125,
+          "w": 272,
+          "h": 234,
+          "right": 1216,
+          "bottom": 303.3125
+        },
+        "timeline": {
+          "x": 328,
+          "y": 483.640625,
+          "w": 592,
+          "h": 75.3125,
+          "right": 920,
+          "bottom": 558.953125
+        },
+        "script": {
+          "x": 328,
+          "y": 402.3125,
+          "w": 592,
+          "h": 81.328125,
+          "right": 920,
+          "bottom": 483.640625
+        },
+        "header": {
+          "x": 328,
+          "y": 14.65625,
+          "w": 592,
+          "h": 48,
+          "right": 920,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 328,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 480,
+          "y": 14.65625,
+          "w": 288,
+          "h": 28,
+          "right": 768,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 480,
+          "y": 48.65625,
+          "w": 288,
+          "h": 6,
+          "right": 768,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 408.96875,
+          "w": 592,
+          "h": 62.65625,
+          "right": 920,
+          "bottom": 471.625
+        },
+        "wave": {
+          "x": 328,
+          "y": 483.640625,
+          "w": 592,
+          "h": 42.65625,
+          "right": 920,
+          "bottom": 526.296875
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 328,
+          "y": 69.3125,
+          "w": 592,
+          "h": 333,
+          "right": 920,
+          "bottom": 402.3125
+        },
+        "panel": {
+          "x": 944,
+          "y": 69.3125,
+          "w": 272,
+          "h": 274,
+          "right": 1216,
+          "bottom": 343.3125
+        },
+        "timeline": {
+          "x": 328,
+          "y": 483.640625,
+          "w": 592,
+          "h": 75.3125,
+          "right": 920,
+          "bottom": 558.953125
+        },
+        "script": {
+          "x": 328,
+          "y": 402.3125,
+          "w": 592,
+          "h": 81.328125,
+          "right": 920,
+          "bottom": 483.640625
+        },
+        "header": {
+          "x": 328,
+          "y": 14.65625,
+          "w": 592,
+          "h": 48,
+          "right": 920,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 328,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 422.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 480,
+          "y": 14.65625,
+          "w": 288,
+          "h": 28,
+          "right": 768,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 480,
+          "y": 48.65625,
+          "w": 288,
+          "h": 6,
+          "right": 768,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 408.96875,
+          "w": 592,
+          "h": 62.65625,
+          "right": 920,
+          "bottom": 471.625
+        },
+        "wave": {
+          "x": 328,
+          "y": 483.640625,
+          "w": 592,
+          "h": 42.65625,
+          "right": 920,
+          "bottom": 526.296875
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    },
+    {
+      "viewport": [
+        1023,
+        700
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 24,
+              "y": 69.3125,
+              "w": 975,
+              "h": 548.4375,
+              "right": 999,
+              "bottom": 617.75
+            },
+            "panel": {
+              "x": 24,
+              "y": 798.390625,
+              "w": 975,
+              "h": 248,
+              "right": 999,
+              "bottom": 1046.390625
+            },
+            "timeline": {
+              "x": 24,
+              "y": 699.078125,
+              "w": 975,
+              "h": 75.3125,
+              "right": 999,
+              "bottom": 774.390625
+            },
+            "script": {
+              "x": 24,
+              "y": 617.75,
+              "w": 975,
+              "h": 81.328125,
+              "right": 999,
+              "bottom": 699.078125
+            },
+            "header": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 975,
+              "h": 48,
+              "right": 999,
+              "bottom": 62.65625
+            },
+            "exit": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 77.609375,
+              "h": 40,
+              "right": 101.609375,
+              "bottom": 54.65625
+            },
+            "title": {
+              "x": 228.59375,
+              "y": 14.65625,
+              "w": 565.796875,
+              "h": 28,
+              "right": 794.390625,
+              "bottom": 42.65625
+            },
+            "dots": {
+              "x": 228.59375,
+              "y": 48.65625,
+              "w": 565.796875,
+              "h": 6,
+              "right": 794.390625,
+              "bottom": 54.65625
+            },
+            "dialogue": {
+              "x": 24,
+              "y": 624.40625,
+              "w": 975,
+              "h": 31.328125,
+              "right": 999,
+              "bottom": 655.734375
+            },
+            "wave": {
+              "x": 24,
+              "y": 699.078125,
+              "w": 975,
+              "h": 42.65625,
+              "right": 999,
+              "bottom": 741.734375
+            },
+            "gap": 43.34375,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 42.65625,
+            "gap": 43.34375,
+            "titleY": 14.65625,
+            "dotsY": 48.65625
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 24,
+              "y": 69.3125,
+              "w": 975,
+              "h": 548.4375,
+              "right": 999,
+              "bottom": 617.75
+            },
+            "panel": {
+              "x": 24,
+              "y": 798.390625,
+              "w": 975,
+              "h": 248,
+              "right": 999,
+              "bottom": 1046.390625
+            },
+            "timeline": {
+              "x": 24,
+              "y": 699.078125,
+              "w": 975,
+              "h": 75.3125,
+              "right": 999,
+              "bottom": 774.390625
+            },
+            "script": {
+              "x": 24,
+              "y": 617.75,
+              "w": 975,
+              "h": 81.328125,
+              "right": 999,
+              "bottom": 699.078125
+            },
+            "header": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 975,
+              "h": 48,
+              "right": 999,
+              "bottom": 62.65625
+            },
+            "exit": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 94.875,
+              "h": 40,
+              "right": 118.875,
+              "bottom": 54.65625
+            },
+            "title": {
+              "x": 228.59375,
+              "y": 14.65625,
+              "w": 565.796875,
+              "h": 28,
+              "right": 794.390625,
+              "bottom": 42.65625
+            },
+            "dots": {
+              "x": 228.59375,
+              "y": 48.65625,
+              "w": 565.796875,
+              "h": 6,
+              "right": 794.390625,
+              "bottom": 54.65625
+            },
+            "dialogue": {
+              "x": 24,
+              "y": 624.40625,
+              "w": 975,
+              "h": 62.65625,
+              "right": 999,
+              "bottom": 687.0625
+            },
+            "wave": {
+              "x": 24,
+              "y": 699.078125,
+              "w": 975,
+              "h": 42.65625,
+              "right": 999,
+              "bottom": 741.734375
+            },
+            "gap": 12.015625,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 42.65625,
+            "gap": 12.015625,
+            "titleY": 14.65625,
+            "dotsY": 48.65625
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 975,
+          "h": 548.4375,
+          "right": 999,
+          "bottom": 617.75
+        },
+        "panel": {
+          "x": 24,
+          "y": 798.390625,
+          "w": 975,
+          "h": 248,
+          "right": 999,
+          "bottom": 1046.390625
+        },
+        "timeline": {
+          "x": 24,
+          "y": 699.078125,
+          "w": 975,
+          "h": 75.3125,
+          "right": 999,
+          "bottom": 774.390625
+        },
+        "script": {
+          "x": 24,
+          "y": 617.75,
+          "w": 975,
+          "h": 81.328125,
+          "right": 999,
+          "bottom": 699.078125
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 975,
+          "h": 48,
+          "right": 999,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 228.59375,
+          "y": 14.65625,
+          "w": 565.796875,
+          "h": 28,
+          "right": 794.390625,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 228.59375,
+          "y": 48.65625,
+          "w": 565.796875,
+          "h": 6,
+          "right": 794.390625,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 24,
+          "y": 624.40625,
+          "w": 975,
+          "h": 62.65625,
+          "right": 999,
+          "bottom": 687.0625
+        },
+        "wave": {
+          "x": 24,
+          "y": 699.078125,
+          "w": 975,
+          "h": 42.65625,
+          "right": 999,
+          "bottom": 741.734375
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 975,
+          "h": 548.4375,
+          "right": 999,
+          "bottom": 617.75
+        },
+        "panel": {
+          "x": 24,
+          "y": 798.390625,
+          "w": 975,
+          "h": 248,
+          "right": 999,
+          "bottom": 1046.390625
+        },
+        "timeline": {
+          "x": 24,
+          "y": 699.078125,
+          "w": 975,
+          "h": 75.3125,
+          "right": 999,
+          "bottom": 774.390625
+        },
+        "script": {
+          "x": 24,
+          "y": 617.75,
+          "w": 975,
+          "h": 81.328125,
+          "right": 999,
+          "bottom": 699.078125
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 975,
+          "h": 48,
+          "right": 999,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 228.59375,
+          "y": 14.65625,
+          "w": 565.796875,
+          "h": 28,
+          "right": 794.390625,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 228.59375,
+          "y": 48.65625,
+          "w": 565.796875,
+          "h": 6,
+          "right": 794.390625,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 24,
+          "y": 624.40625,
+          "w": 975,
+          "h": 62.65625,
+          "right": 999,
+          "bottom": 687.0625
+        },
+        "wave": {
+          "x": 24,
+          "y": 699.078125,
+          "w": 975,
+          "h": 42.65625,
+          "right": 999,
+          "bottom": 741.734375
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 975,
+          "h": 548.4375,
+          "right": 999,
+          "bottom": 617.75
+        },
+        "panel": {
+          "x": 24,
+          "y": 798.390625,
+          "w": 975,
+          "h": 248,
+          "right": 999,
+          "bottom": 1046.390625
+        },
+        "timeline": {
+          "x": 24,
+          "y": 699.078125,
+          "w": 975,
+          "h": 75.3125,
+          "right": 999,
+          "bottom": 774.390625
+        },
+        "script": {
+          "x": 24,
+          "y": 617.75,
+          "w": 975,
+          "h": 81.328125,
+          "right": 999,
+          "bottom": 699.078125
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 975,
+          "h": 48,
+          "right": 999,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 228.59375,
+          "y": 14.65625,
+          "w": 565.796875,
+          "h": 28,
+          "right": 794.390625,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 228.59375,
+          "y": 48.65625,
+          "w": 565.796875,
+          "h": 6,
+          "right": 794.390625,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 24,
+          "y": 624.40625,
+          "w": 975,
+          "h": 62.65625,
+          "right": 999,
+          "bottom": 687.0625
+        },
+        "wave": {
+          "x": 24,
+          "y": 699.078125,
+          "w": 975,
+          "h": 42.65625,
+          "right": 999,
+          "bottom": 741.734375
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    },
+    {
+      "viewport": [
+        1024,
+        700
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 24,
+              "y": 69.3125,
+              "w": 976,
+              "h": 549,
+              "right": 1000,
+              "bottom": 618.3125
+            },
+            "panel": {
+              "x": 24,
+              "y": 798.953125,
+              "w": 976,
+              "h": 248,
+              "right": 1000,
+              "bottom": 1046.953125
+            },
+            "timeline": {
+              "x": 24,
+              "y": 699.640625,
+              "w": 976,
+              "h": 75.3125,
+              "right": 1000,
+              "bottom": 774.953125
+            },
+            "script": {
+              "x": 24,
+              "y": 618.3125,
+              "w": 976,
+              "h": 81.328125,
+              "right": 1000,
+              "bottom": 699.640625
+            },
+            "header": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 976,
+              "h": 48,
+              "right": 1000,
+              "bottom": 62.65625
+            },
+            "exit": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 77.609375,
+              "h": 40,
+              "right": 101.609375,
+              "bottom": 54.65625
+            },
+            "title": {
+              "x": 228.796875,
+              "y": 14.65625,
+              "w": 566.390625,
+              "h": 28,
+              "right": 795.1875,
+              "bottom": 42.65625
+            },
+            "dots": {
+              "x": 228.796875,
+              "y": 48.65625,
+              "w": 566.390625,
+              "h": 6,
+              "right": 795.1875,
+              "bottom": 54.65625
+            },
+            "dialogue": {
+              "x": 24,
+              "y": 624.96875,
+              "w": 976,
+              "h": 31.328125,
+              "right": 1000,
+              "bottom": 656.296875
+            },
+            "wave": {
+              "x": 24,
+              "y": 699.640625,
+              "w": 976,
+              "h": 42.65625,
+              "right": 1000,
+              "bottom": 742.296875
+            },
+            "gap": 43.34375,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 42.65625,
+            "gap": 43.34375,
+            "titleY": 14.65625,
+            "dotsY": 48.65625
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 24,
+              "y": 69.3125,
+              "w": 976,
+              "h": 549,
+              "right": 1000,
+              "bottom": 618.3125
+            },
+            "panel": {
+              "x": 24,
+              "y": 798.953125,
+              "w": 976,
+              "h": 248,
+              "right": 1000,
+              "bottom": 1046.953125
+            },
+            "timeline": {
+              "x": 24,
+              "y": 699.640625,
+              "w": 976,
+              "h": 75.3125,
+              "right": 1000,
+              "bottom": 774.953125
+            },
+            "script": {
+              "x": 24,
+              "y": 618.3125,
+              "w": 976,
+              "h": 81.328125,
+              "right": 1000,
+              "bottom": 699.640625
+            },
+            "header": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 976,
+              "h": 48,
+              "right": 1000,
+              "bottom": 62.65625
+            },
+            "exit": {
+              "x": 24,
+              "y": 14.65625,
+              "w": 94.875,
+              "h": 40,
+              "right": 118.875,
+              "bottom": 54.65625
+            },
+            "title": {
+              "x": 228.796875,
+              "y": 14.65625,
+              "w": 566.390625,
+              "h": 28,
+              "right": 795.1875,
+              "bottom": 42.65625
+            },
+            "dots": {
+              "x": 228.796875,
+              "y": 48.65625,
+              "w": 566.390625,
+              "h": 6,
+              "right": 795.1875,
+              "bottom": 54.65625
+            },
+            "dialogue": {
+              "x": 24,
+              "y": 624.96875,
+              "w": 976,
+              "h": 62.65625,
+              "right": 1000,
+              "bottom": 687.625
+            },
+            "wave": {
+              "x": 24,
+              "y": 699.640625,
+              "w": 976,
+              "h": 42.65625,
+              "right": 1000,
+              "bottom": 742.296875
+            },
+            "gap": 12.015625,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 42.65625,
+            "gap": 12.015625,
+            "titleY": 14.65625,
+            "dotsY": 48.65625
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 976,
+          "h": 549,
+          "right": 1000,
+          "bottom": 618.3125
+        },
+        "panel": {
+          "x": 24,
+          "y": 798.953125,
+          "w": 976,
+          "h": 248,
+          "right": 1000,
+          "bottom": 1046.953125
+        },
+        "timeline": {
+          "x": 24,
+          "y": 699.640625,
+          "w": 976,
+          "h": 75.3125,
+          "right": 1000,
+          "bottom": 774.953125
+        },
+        "script": {
+          "x": 24,
+          "y": 618.3125,
+          "w": 976,
+          "h": 81.328125,
+          "right": 1000,
+          "bottom": 699.640625
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 976,
+          "h": 48,
+          "right": 1000,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 228.796875,
+          "y": 14.65625,
+          "w": 566.390625,
+          "h": 28,
+          "right": 795.1875,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 228.796875,
+          "y": 48.65625,
+          "w": 566.390625,
+          "h": 6,
+          "right": 795.1875,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 24,
+          "y": 624.96875,
+          "w": 976,
+          "h": 62.65625,
+          "right": 1000,
+          "bottom": 687.625
+        },
+        "wave": {
+          "x": 24,
+          "y": 699.640625,
+          "w": 976,
+          "h": 42.65625,
+          "right": 1000,
+          "bottom": 742.296875
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 976,
+          "h": 549,
+          "right": 1000,
+          "bottom": 618.3125
+        },
+        "panel": {
+          "x": 24,
+          "y": 798.953125,
+          "w": 976,
+          "h": 248,
+          "right": 1000,
+          "bottom": 1046.953125
+        },
+        "timeline": {
+          "x": 24,
+          "y": 699.640625,
+          "w": 976,
+          "h": 75.3125,
+          "right": 1000,
+          "bottom": 774.953125
+        },
+        "script": {
+          "x": 24,
+          "y": 618.3125,
+          "w": 976,
+          "h": 81.328125,
+          "right": 1000,
+          "bottom": 699.640625
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 976,
+          "h": 48,
+          "right": 1000,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 228.796875,
+          "y": 14.65625,
+          "w": 566.390625,
+          "h": 28,
+          "right": 795.1875,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 228.796875,
+          "y": 48.65625,
+          "w": 566.390625,
+          "h": 6,
+          "right": 795.1875,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 24,
+          "y": 624.96875,
+          "w": 976,
+          "h": 62.65625,
+          "right": 1000,
+          "bottom": 687.625
+        },
+        "wave": {
+          "x": 24,
+          "y": 699.640625,
+          "w": 976,
+          "h": 42.65625,
+          "right": 1000,
+          "bottom": 742.296875
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 24,
+          "y": 69.3125,
+          "w": 976,
+          "h": 549,
+          "right": 1000,
+          "bottom": 618.3125
+        },
+        "panel": {
+          "x": 24,
+          "y": 798.953125,
+          "w": 976,
+          "h": 248,
+          "right": 1000,
+          "bottom": 1046.953125
+        },
+        "timeline": {
+          "x": 24,
+          "y": 699.640625,
+          "w": 976,
+          "h": 75.3125,
+          "right": 1000,
+          "bottom": 774.953125
+        },
+        "script": {
+          "x": 24,
+          "y": 618.3125,
+          "w": 976,
+          "h": 81.328125,
+          "right": 1000,
+          "bottom": 699.640625
+        },
+        "header": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 976,
+          "h": 48,
+          "right": 1000,
+          "bottom": 62.65625
+        },
+        "exit": {
+          "x": 24,
+          "y": 14.65625,
+          "w": 94.875,
+          "h": 40,
+          "right": 118.875,
+          "bottom": 54.65625
+        },
+        "title": {
+          "x": 228.796875,
+          "y": 14.65625,
+          "w": 566.390625,
+          "h": 28,
+          "right": 795.1875,
+          "bottom": 42.65625
+        },
+        "dots": {
+          "x": 228.796875,
+          "y": 48.65625,
+          "w": 566.390625,
+          "h": 6,
+          "right": 795.1875,
+          "bottom": 54.65625
+        },
+        "dialogue": {
+          "x": 24,
+          "y": 624.96875,
+          "w": 976,
+          "h": 62.65625,
+          "right": 1000,
+          "bottom": 687.625
+        },
+        "wave": {
+          "x": 24,
+          "y": 699.640625,
+          "w": 976,
+          "h": 42.65625,
+          "right": 1000,
+          "bottom": 742.296875
+        },
+        "gap": 12.015625,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    },
+    {
+      "viewport": [
+        390,
+        667
+      ],
+      "result": "PASS",
+      "comparison": [
+        {
+          "longRU": false,
+          "A": {
+            "scene": {
+              "x": 16,
+              "y": 156,
+              "w": 358,
+              "h": 201.375,
+              "right": 374,
+              "bottom": 357.375
+            },
+            "panel": {
+              "x": 16,
+              "y": 595.375,
+              "w": 358,
+              "h": 224,
+              "right": 374,
+              "bottom": 819.375
+            },
+            "timeline": {
+              "x": 16,
+              "y": 449.375,
+              "w": 358,
+              "h": 126,
+              "right": 374,
+              "bottom": 575.375
+            },
+            "script": {
+              "x": 16,
+              "y": 357.375,
+              "w": 358,
+              "h": 92,
+              "right": 374,
+              "bottom": 449.375
+            },
+            "header": {
+              "x": 16,
+              "y": 40,
+              "w": 358,
+              "h": 100,
+              "right": 374,
+              "bottom": 140
+            },
+            "exit": {
+              "x": 16,
+              "y": 40,
+              "w": 77.265625,
+              "h": 48,
+              "right": 93.265625,
+              "bottom": 88
+            },
+            "title": {
+              "x": 16,
+              "y": 96,
+              "w": 358,
+              "h": 28,
+              "right": 374,
+              "bottom": 124
+            },
+            "dots": {
+              "x": 16,
+              "y": 134,
+              "w": 358,
+              "h": 6,
+              "right": 374,
+              "bottom": 140
+            },
+            "dialogue": {
+              "x": 16,
+              "y": 371.375,
+              "w": 358,
+              "h": 64,
+              "right": 374,
+              "bottom": 435.375
+            },
+            "wave": {
+              "x": 16,
+              "y": 449.375,
+              "w": 358,
+              "h": 64,
+              "right": 374,
+              "bottom": 513.375
+            },
+            "gap": 14,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 64,
+            "gap": 14,
+            "titleY": 96,
+            "dotsY": 134
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        },
+        {
+          "longRU": true,
+          "A": {
+            "scene": {
+              "x": 16,
+              "y": 156,
+              "w": 358,
+              "h": 201.375,
+              "right": 374,
+              "bottom": 357.375
+            },
+            "panel": {
+              "x": 16,
+              "y": 659.375,
+              "w": 358,
+              "h": 248,
+              "right": 374,
+              "bottom": 907.375
+            },
+            "timeline": {
+              "x": 16,
+              "y": 513.375,
+              "w": 358,
+              "h": 126,
+              "right": 374,
+              "bottom": 639.375
+            },
+            "script": {
+              "x": 16,
+              "y": 357.375,
+              "w": 358,
+              "h": 156,
+              "right": 374,
+              "bottom": 513.375
+            },
+            "header": {
+              "x": 16,
+              "y": 40,
+              "w": 358,
+              "h": 100,
+              "right": 374,
+              "bottom": 140
+            },
+            "exit": {
+              "x": 16,
+              "y": 40,
+              "w": 97,
+              "h": 48,
+              "right": 113,
+              "bottom": 88
+            },
+            "title": {
+              "x": 16,
+              "y": 96,
+              "w": 358,
+              "h": 28,
+              "right": 374,
+              "bottom": 124
+            },
+            "dots": {
+              "x": 16,
+              "y": 134,
+              "w": 358,
+              "h": 6,
+              "right": 374,
+              "bottom": 140
+            },
+            "dialogue": {
+              "x": 16,
+              "y": 371.375,
+              "w": 358,
+              "h": 128,
+              "right": 374,
+              "bottom": 499.375
+            },
+            "wave": {
+              "x": 16,
+              "y": 513.375,
+              "w": 358,
+              "h": 64,
+              "right": 374,
+              "bottom": 577.375
+            },
+            "gap": 14,
+            "dotCount": 3,
+            "currentDot": 0,
+            "interactiveDots": 0,
+            "overflow": false
+          },
+          "B": {
+            "waveHeight": 64,
+            "gap": 14,
+            "titleY": 96,
+            "dotsY": 134
+          },
+          "matchedWaveHeightAndTrueTextToWaveGap": true
+        }
+      ],
+      "capture": {
+        "scene": {
+          "x": 16,
+          "y": 156,
+          "w": 358,
+          "h": 201.375,
+          "right": 374,
+          "bottom": 357.375
+        },
+        "panel": {
+          "x": 16,
+          "y": 659.375,
+          "w": 358,
+          "h": 248,
+          "right": 374,
+          "bottom": 907.375
+        },
+        "timeline": {
+          "x": 16,
+          "y": 513.375,
+          "w": 358,
+          "h": 126,
+          "right": 374,
+          "bottom": 639.375
+        },
+        "script": {
+          "x": 16,
+          "y": 357.375,
+          "w": 358,
+          "h": 156,
+          "right": 374,
+          "bottom": 513.375
+        },
+        "header": {
+          "x": 16,
+          "y": 40,
+          "w": 358,
+          "h": 100,
+          "right": 374,
+          "bottom": 140
+        },
+        "exit": {
+          "x": 16,
+          "y": 40,
+          "w": 97,
+          "h": 48,
+          "right": 113,
+          "bottom": 88
+        },
+        "title": {
+          "x": 16,
+          "y": 96,
+          "w": 358,
+          "h": 28,
+          "right": 374,
+          "bottom": 124
+        },
+        "dots": {
+          "x": 16,
+          "y": 134,
+          "w": 358,
+          "h": 6,
+          "right": 374,
+          "bottom": 140
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 371.375,
+          "w": 358,
+          "h": 128,
+          "right": 374,
+          "bottom": 499.375
+        },
+        "wave": {
+          "x": 16,
+          "y": 513.375,
+          "w": 358,
+          "h": 64,
+          "right": 374,
+          "bottom": 577.375
+        },
+        "gap": 14,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "candidate": {
+        "scene": {
+          "x": 16,
+          "y": 156,
+          "w": 358,
+          "h": 201.375,
+          "right": 374,
+          "bottom": 357.375
+        },
+        "panel": {
+          "x": 16,
+          "y": 659.375,
+          "w": 358,
+          "h": 248,
+          "right": 374,
+          "bottom": 907.375
+        },
+        "timeline": {
+          "x": 16,
+          "y": 513.375,
+          "w": 358,
+          "h": 126,
+          "right": 374,
+          "bottom": 639.375
+        },
+        "script": {
+          "x": 16,
+          "y": 357.375,
+          "w": 358,
+          "h": 156,
+          "right": 374,
+          "bottom": 513.375
+        },
+        "header": {
+          "x": 16,
+          "y": 40,
+          "w": 358,
+          "h": 100,
+          "right": 374,
+          "bottom": 140
+        },
+        "exit": {
+          "x": 16,
+          "y": 40,
+          "w": 97,
+          "h": 48,
+          "right": 113,
+          "bottom": 88
+        },
+        "title": {
+          "x": 16,
+          "y": 96,
+          "w": 358,
+          "h": 28,
+          "right": 374,
+          "bottom": 124
+        },
+        "dots": {
+          "x": 16,
+          "y": 134,
+          "w": 358,
+          "h": 6,
+          "right": 374,
+          "bottom": 140
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 371.375,
+          "w": 358,
+          "h": 128,
+          "right": 374,
+          "bottom": 499.375
+        },
+        "wave": {
+          "x": 16,
+          "y": 513.375,
+          "w": 358,
+          "h": 64,
+          "right": 374,
+          "bottom": 577.375
+        },
+        "gap": 14,
+        "dotCount": 3,
+        "currentDot": 0,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "completed": {
+        "scene": {
+          "x": 16,
+          "y": 156,
+          "w": 358,
+          "h": 201.375,
+          "right": 374,
+          "bottom": 357.375
+        },
+        "panel": {
+          "x": 16,
+          "y": 659.375,
+          "w": 358,
+          "h": 268,
+          "right": 374,
+          "bottom": 927.375
+        },
+        "timeline": {
+          "x": 16,
+          "y": 513.375,
+          "w": 358,
+          "h": 126,
+          "right": 374,
+          "bottom": 639.375
+        },
+        "script": {
+          "x": 16,
+          "y": 357.375,
+          "w": 358,
+          "h": 156,
+          "right": 374,
+          "bottom": 513.375
+        },
+        "header": {
+          "x": 16,
+          "y": 40,
+          "w": 358,
+          "h": 100,
+          "right": 374,
+          "bottom": 140
+        },
+        "exit": {
+          "x": 16,
+          "y": 40,
+          "w": 97,
+          "h": 48,
+          "right": 113,
+          "bottom": 88
+        },
+        "title": {
+          "x": 16,
+          "y": 96,
+          "w": 358,
+          "h": 28,
+          "right": 374,
+          "bottom": 124
+        },
+        "dots": {
+          "x": 16,
+          "y": 134,
+          "w": 358,
+          "h": 6,
+          "right": 374,
+          "bottom": 140
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 371.375,
+          "w": 358,
+          "h": 128,
+          "right": 374,
+          "bottom": 499.375
+        },
+        "wave": {
+          "x": 16,
+          "y": 513.375,
+          "w": 358,
+          "h": 64,
+          "right": 374,
+          "bottom": 577.375
+        },
+        "gap": 14,
+        "dotCount": 3,
+        "currentDot": 2,
+        "interactiveDots": 0,
+        "overflow": false
+      },
+      "failedNextRetainsCurrentDotAndCandidate": true,
+      "retryThenPreviousProgress": true,
+      "resultReturnRetainsAccepted": true
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual Chrome/DPR1/100%,18 A/B matched viewport/content measurements;9 operated capture/audition/fail-save/progress/Result cohorts;completed layout fixture distinct from captured candidate."
+}

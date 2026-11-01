@@ -1,0 +1,119 @@
+{
+  "issue": 79,
+  "model": "gpt-6-luna",
+  "effort": "max",
+  "files": [
+    "frontend/src/features/result/ResultScreen.tsx",
+    "frontend/src/features/result/ResultScreen.css",
+    "frontend/src/features/result/ResultScreen.test.tsx",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-79/completion.md",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-79/capture-corrections.cjs",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-79/metrics.json",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-79/screenshot-manifest.json",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-79/evidence/"
+  ],
+  "findings": [
+    {
+      "id": "QA-79-01",
+      "status": "resolved",
+      "evidence": [
+        "evidence/descriptor-failure-en-desktop.png",
+        "evidence/descriptor-recovered-en-desktop.png",
+        "metrics.json",
+        "frontend/src/features/result/ResultScreen.test.tsx"
+      ]
+    },
+    {
+      "id": "QA-79-02",
+      "status": "resolved",
+      "evidence": [
+        "evidence/replacement-en-short.png",
+        "evidence/replacement-ru-phone.png",
+        "metrics.json"
+      ]
+    },
+    {
+      "id": "QA-79-03",
+      "status": "resolved",
+      "evidence": [
+        "evidence/unknown-download-ru-phone-error.png",
+        "metrics.json"
+      ]
+    },
+    {
+      "id": "QA-79-04",
+      "status": "resolved",
+      "evidence": [
+        "evidence/download-old-pending-watch-new-en-desktop.png",
+        "evidence/version2-displayed-version1-pending-en-desktop.png",
+        "evidence/old-download-failed-after-switch-en-desktop.png",
+        "evidence/exact-generation-retries-complete-en-desktop.png",
+        "metrics.json"
+      ]
+    },
+    {
+      "id": "QA-79-05",
+      "status": "resolved",
+      "evidence": [
+        "evidence/ready-en-desktop.png",
+        "evidence/ready-en-phone.png",
+        "metrics.json"
+      ]
+    },
+    {
+      "id": "QA-79-06",
+      "status": "shared-fix-validated",
+      "evidence": [
+        "Issue 78 shared sr-only utility",
+        "evidence/new-version-ready-while-playing-ru-phone.png",
+        "metrics.json"
+      ]
+    },
+    {
+      "id": "QA-79-07",
+      "status": "resolved",
+      "evidence": [
+        "evidence/initial-assembly-en-short.png",
+        "evidence/initial-assembly-ru-phone.png",
+        "evidence/replacement-en-short.png",
+        "evidence/retained-result-failure-en-short.png",
+        "metrics.json"
+      ]
+    },
+    {
+      "id": "FIX-R79-01",
+      "status": "resolved",
+      "evidence": [
+        "evidence/replacement-en-short.png",
+        "evidence/replacement-ru-phone.png",
+        "evidence/retained-result-failure-en-short.png",
+        "evidence/retained-result-failure-ru-phone.png",
+        "metrics.json",
+        "frontend/src/features/result/ResultScreen.test.tsx"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "command": "npm.cmd run test -- src/features/result/ResultScreen.test.tsx",
+      "result": "PASS: 1 file, 3 tests"
+    },
+    {
+      "command": "node _docs/evidence/visual-qa-fixes-2026-10-25/issue-79/capture-corrections.cjs",
+      "result": "PASS: 37 unique screenshots; controlled browser assertions passed; Chromium 156.0.8078.4; Vite at 127.0.0.1:4579 stopped after capture"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS: exit 0; LF/CRLF normalization warnings only"
+    },
+    {
+      "command": "npm.cmd run typecheck",
+      "result": "NOT GREEN at the captured parallel-source boundary: five TypeScript errors in out-of-scope frontend/src/features/auth/OtpInput.test.tsx lines 46, 53, 82, 88, 89. No Result screen diagnostics appeared. Root requested no rerun before parallel source freeze."
+    }
+  ],
+  "limitations": [
+    "Browser proof uses the existing controlled synthetic Result harness, not production services or real result media.",
+    "Browser download events prove request delivery in the controlled harness, not completed OS file saving.",
+    "Full test suite, native device testing, production integration, and manual owner acceptance were not run."
+  ]
+}

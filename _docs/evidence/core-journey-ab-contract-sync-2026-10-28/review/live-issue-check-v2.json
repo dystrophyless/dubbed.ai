@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-28",
+  "method": "Independent GitHub fetch_issue and fetch_issue_comments; no mutations",
+  "issues": [
+    {
+      "number": 77,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/77",
+      "title": "Record and durably accept a turn without losing protected media or navigation intent",
+      "state": "open",
+      "updated_at": "2026-10-25T10:40:25Z",
+      "comments": 0,
+      "scope": "Read-only live scope/AC/dependency review; full bodies remain GitHub-authoritative and are not duplicated here."
+    },
+    {
+      "number": 79,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/79",
+      "title": "Present and download the exact authorized result generation safely",
+      "state": "open",
+      "updated_at": "2026-10-25T10:40:56Z",
+      "comments": 0,
+      "scope": "Read-only live scope/AC/dependency review; full bodies remain GitHub-authoritative and are not duplicated here."
+    },
+    {
+      "number": 68,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/68",
+      "title": "Freeze and enforce one interchangeable frontend services boundary",
+      "state": "open",
+      "updated_at": "2026-10-25T10:37:06Z",
+      "comments": 0,
+      "scope": "Read-only live scope/AC/dependency review; full bodies remain GitHub-authoritative and are not duplicated here."
+    },
+    {
+      "number": 73,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/73",
+      "title": "Persist and reconcile an isolated mock workspace through the shared facade",
+      "state": "open",
+      "updated_at": "2026-10-25T10:39:20Z",
+      "comments": 0,
+      "scope": "Read-only live scope/AC/dependency review; full bodies remain GitHub-authoritative and are not duplicated here."
+    },
+    {
+      "number": 64,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/64",
+      "title": "Establish the supported browser media capability and timing evidence",
+      "state": "open",
+      "updated_at": "2026-10-25T10:35:55Z",
+      "comments": 0,
+      "scope": "Read-only live scope/AC/dependency review; full bodies remain GitHub-authoritative and are not duplicated here."
+    },
+    {
+      "number": 69,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/69",
+      "title": "Check the current device microphone without creating a project take",
+      "state": "open",
+      "updated_at": "2026-10-25T10:37:20Z",
+      "comments": 0,
+      "scope": "Read-only live scope/AC/dependency review; full bodies remain GitHub-authoritative and are not duplicated here."
+    },
+    {
+      "number": 63,
+      "url": "https://github.com/dystrophyless/dubbed.ai/issues/63",
+      "title": "Prove the complete frontend journey with no backend and honest media evidence",
+      "state": "open",
+      "updated_at": "2026-10-25T10:35:23Z",
+      "comments": 0,
+      "scope": "Read-only live scope/AC/dependency review; full bodies remain GitHub-authoritative and are not duplicated here."
+    }
+  ],
+  "limits": "Seven risk-selected issues freshly inspected independently; other ten readbacks in the author's packet were not independently refetched."
+}

@@ -1,0 +1,744 @@
+{
+  "baseline": "core-journey-contract-sync-v1",
+  "date": "2026-10-27",
+  "timezone": "Asia/Qyzylorda",
+  "command": "python _docs/evidence/core-journey-contract-sync-2026-10-27/verify_contract_sync.py",
+  "scope": "Static documentation synchronization; no runtime/browser/product acceptance claimed",
+  "changedFiles": [
+    {
+      "path": "_docs/HANDOFF.md",
+      "before": "8003bb08227878d7be5dad4c9e650089189811b81e5f4038fed6b63a84aa70cb",
+      "after": "2a7649880b653f3a3a7fc26cd9f2eabff50113fdd55e08b157db433f30627063"
+    },
+    {
+      "path": "_docs/frontend-flows/README.md",
+      "before": "8b65cf32358ecf8204fc3f7d814c9a5a14066df208be9465220be32a9977c37e",
+      "after": "95d9f478c550c9c949ccfbb94162871ee07f82261ddea90b2bec1f6be56eaf0f"
+    },
+    {
+      "path": "_docs/frontend-flows/00-shared-contract.md",
+      "before": "18f62599b88114e960bf06d2a2f863ec6dc2e4ed09f3c578898cb3d0403ee623",
+      "after": "6624ec9d26cf2c88938db16259a0a4a5f5fbe1f91119b58a5104f2c0c003d854"
+    },
+    {
+      "path": "_docs/frontend-flows/09-record.md",
+      "before": "2e67b66393a8714615926a0e072cf69070cb797ec37003c1c0dc6cb39954550a",
+      "after": "29237ab907ce4a8290d9d46248edb7a5d68217ee7c76e283e2ba4a4364164f0f"
+    },
+    {
+      "path": "_docs/frontend-flows/10-result.md",
+      "before": "496394472915069e88d6da34f2556ab9d8a643052c0dd6dad5a80ed8b89dc255",
+      "after": "c3c9aa09b711517bd563bf113e0a97c1fa8459e319ccb84d9c65d86ebd9a4e85"
+    },
+    {
+      "path": "_docs/frontend-implementation-contract.md",
+      "before": "f419620041462b73ea256f34d8721a2dbab70b49f73ea446b99cbc4686af4c45",
+      "after": "b6d91c2a21a785d8864cae96c1c4ad66b554a51f934a929a35b157f434a428a7"
+    },
+    {
+      "path": "_docs/frontend-flows/design-tokens.md",
+      "before": "1f94b7c708077f4858602681921cb111106ab2f180a323b8ea6f8ba96641fd59",
+      "after": "666926ea2372c145a72a99e843c45dcbdc3e100fbd71280b8dff16876044aded"
+    },
+    {
+      "path": "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+      "before": "8640df46906ae45082872625721311622078349b7901dddd80e536c9354d03c3",
+      "after": "f7c4d2452d83d07c992511ec7d398aaf1cefe965da6daf89eddaf955cac36722"
+    },
+    {
+      "path": "_docs/frontend-flows/affect-ui-workflow.md",
+      "before": "d0c7f448c863971f30251f0af2016bc3e67b45b99c44e60b4c513638eb216201",
+      "after": "c26ca3a1475b5d8f9cbf74c93e0118601f8f6a51c5cd2f7263169d121f1fa884"
+    },
+    {
+      "path": "_docs/frontend-flows/07-processing.md",
+      "before": "e920e2d81031f5f6abf32fa615eab2a2bec05adb7a81b5ea17f75ae410312879",
+      "after": "a159b5a7ac626acddcbfe8c7366c60849e948a7abe194f4fb03e90bd60042dfc"
+    }
+  ],
+  "introducedLinks": [
+    {
+      "source": "_docs/HANDOFF.md",
+      "target": "../prototypes/core-journey-lowfi/BRIEF.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/HANDOFF.md",
+      "target": "../prototypes/core-journey-lowfi/review/REVIEW-highfi-v3.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/HANDOFF.md",
+      "target": "evidence/core-journey-contract-sync-2026-10-27/baseline.json",
+      "exists": true
+    },
+    {
+      "source": "_docs/HANDOFF.md",
+      "target": "evidence/core-journey-contract-sync-2026-10-27/package-review.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/HANDOFF.md",
+      "target": "evidence/core-journey-contract-sync-2026-10-27/scoped-contract-diff.patch",
+      "exists": true
+    },
+    {
+      "source": "_docs/HANDOFF.md",
+      "target": "evidence/core-journey-contract-sync-2026-10-27/verification.json",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/00-shared-contract.md",
+      "target": "../../prototypes/core-journey-lowfi/BRIEF.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/00-shared-contract.md",
+      "target": "../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/00-shared-contract.md",
+      "target": "../../prototypes/core-journey-lowfi/review/REVIEW-highfi-v3.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/09-record.md",
+      "target": "../../prototypes/core-journey-lowfi/BRIEF.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/09-record.md",
+      "target": "../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/10-result.md",
+      "target": "../../prototypes/core-journey-lowfi/BRIEF.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-implementation-contract.md",
+      "target": "../prototypes/core-journey-lowfi/BRIEF.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-implementation-contract.md",
+      "target": "evidence/core-journey-contract-sync-2026-10-27/package-review.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/design-tokens.md",
+      "target": "../../prototypes/core-journey-lowfi/BRIEF.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/design-tokens.md",
+      "target": "../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+      "target": "../../prototypes/core-journey-lowfi/BRIEF.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+      "target": "../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/affect-ui-workflow.md",
+      "target": "../../prototypes/core-journey-lowfi/BRIEF.md",
+      "exists": true
+    },
+    {
+      "source": "_docs/frontend-flows/affect-ui-workflow.md",
+      "target": "../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "exists": true
+    }
+  ],
+  "prototypeFingerprints": 54,
+  "checks": [
+    {
+      "name": "line endings: AGENTS.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/HANDOFF.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-design-workflow.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/orchestration.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/README.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/00-shared-contract.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/09-record.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/10-result.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-implementation-contract.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/design-tokens.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/affect-ui-clean-light-adoption.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/affect-ui-workflow.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/07-processing.md",
+      "passed": true
+    },
+    {
+      "name": "line endings: _docs/frontend-flows/15-account.md",
+      "passed": true
+    },
+    {
+      "name": "untouched baseline: AGENTS.md",
+      "passed": true
+    },
+    {
+      "name": "untouched baseline: _docs/frontend-design-workflow.md",
+      "passed": true
+    },
+    {
+      "name": "untouched baseline: _docs/orchestration.md",
+      "passed": true
+    },
+    {
+      "name": "untouched baseline: _docs/frontend-flows/15-account.md",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ## 2. Entry, completion and scope",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.1 Loading the turn",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.3 Start capture",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.4 Fixed-window completion and interruption",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.5 Candidate review",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.6 Next: accept before advancing; do not skip unfinished turns",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.7 Rerecord",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.8 Back or leave with an unaccepted candidate",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.9 To result after revising a completed project",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 5.11 Exclusive recording access",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 6.1 Microphone permission or device failure before capture",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 6.2 Reference playback failure before or during capture",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 6.3 Interrupted take",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 6.5 Session/authentication or connectivity loss",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 6.6 Result-start failure after acceptance or `To result`",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ### 6.7 Recording access held elsewhere",
+      "passed": true
+    },
+    {
+      "name": "Record invariant: ## 10. Persistence, ownership and concurrency",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 5. State model and transitions",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 6. Generation, eligibility and owner-current invariants",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 7. Failure and recovery behavior",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 8. Download contract",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 9. Download-only distribution boundary",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 10. Logical service contract",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 11. Persistence, ownership and concurrency",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 12. Desktop, phone and input behavior",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 13. Visible language and localization",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 14. Acceptance criteria",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 15. Verification plan",
+      "passed": true
+    },
+    {
+      "name": "Result invariant: ## 16. Dependencies and cross-flow contracts",
+      "passed": true
+    },
+    {
+      "name": "Shared invariant: Unchanged product invariants",
+      "passed": true
+    },
+    {
+      "name": "Shared invariant: Unaccepted-draft lifetime",
+      "passed": true
+    },
+    {
+      "name": "Shared invariant: Account-deletion confirmation",
+      "passed": true
+    },
+    {
+      "name": "Shared invariant: One recording tab per project",
+      "passed": true
+    },
+    {
+      "name": "Shared invariant: Recording ownership recovery after disconnect",
+      "passed": true
+    },
+    {
+      "name": "Shared invariant: Explicit navigation wins at first complete recording set",
+      "passed": true
+    },
+    {
+      "name": "Shared invariant: Initial assembly after filling the final gap",
+      "passed": true
+    },
+    {
+      "name": "Shared invariant: Single-device project recording",
+      "passed": true
+    },
+    {
+      "name": "Processing invariant: ## 2. Confirmed invariants",
+      "passed": true
+    },
+    {
+      "name": "Processing invariant: ## 4. Attempt classes and billing outcomes",
+      "passed": true
+    },
+    {
+      "name": "Processing invariant: ## 5. Authoritative state model",
+      "passed": true
+    },
+    {
+      "name": "Processing invariant: ## 13. Logical frontend service boundary",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: index.html",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: src.js",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: style.css",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: highfi.css",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: presentation.css",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: ui.js",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: locale.js",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: icons.js",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: waveform-data.js",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: calibration.html",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: package.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: public/media/scene.mp4",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: public/media/example-dub.mp4",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: public/media/take-0.wav",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: public/media/take-1.wav",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: public/media/take-2.wav",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: public/calibration/InterVariable.woff2",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: public/calibration/LUCIDE-LICENSE.txt",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: toast.js",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-journey-results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-short-results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-retention-results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-toast-results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-visual-results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-destination-results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-completion-recovery-results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/calibration-v3-check-results.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/calibration-v3-reference-check.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-journey-check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-short-check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-retention-check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-toast-check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-visual-check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-destination-check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/highfi-v3-completion-recovery-check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/calibration-v3-check.py",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/lucide-assets.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/waveform-provenance.json",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-1882x902-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-1882x902-en-microphone-enter.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-1882x902-en-microphone-during.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-1882x902-en-microphone-exit.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-1882x902-en-microphone-after.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-1280x600-ru-save-during.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-1280x600-ru-save-after.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-390x667-ru-microphone-during.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-390x667-ru-microphone-after.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-390x667-ru-save-during.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/hf3-390x667-ru-save-after.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/calibration-v3-desktop.png",
+      "passed": true
+    },
+    {
+      "name": "frozen prototype: evidence/calibration-v3-phone.png",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/HANDOFF.md -> ../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/HANDOFF.md -> ../prototypes/core-journey-lowfi/review/REVIEW-highfi-v3.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/HANDOFF.md -> evidence/core-journey-contract-sync-2026-10-27/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/HANDOFF.md -> evidence/core-journey-contract-sync-2026-10-27/package-review.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/HANDOFF.md -> evidence/core-journey-contract-sync-2026-10-27/scoped-contract-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/HANDOFF.md -> evidence/core-journey-contract-sync-2026-10-27/verification.json",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/00-shared-contract.md -> ../../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/00-shared-contract.md -> ../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/00-shared-contract.md -> ../../prototypes/core-journey-lowfi/review/REVIEW-highfi-v3.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/09-record.md -> ../../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/09-record.md -> ../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/10-result.md -> ../../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-implementation-contract.md -> ../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-implementation-contract.md -> evidence/core-journey-contract-sync-2026-10-27/package-review.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/design-tokens.md -> ../../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/design-tokens.md -> ../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/affect-ui-clean-light-adoption.md -> ../../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/affect-ui-clean-light-adoption.md -> ../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/affect-ui-workflow.md -> ../../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "new relative link: _docs/frontend-flows/affect-ui-workflow.md -> ../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "packet relative link: ../../../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "packet relative link: ../../../prototypes/core-journey-lowfi/CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "packet relative link: ../../../prototypes/core-journey-lowfi/review/REVIEW-highfi-v3.md",
+      "passed": true
+    },
+    {
+      "name": "packet relative link: verification.json",
+      "passed": true
+    },
+    {
+      "name": "packet relative link: scoped-contract-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "packet relative link: verify_contract_sync.py",
+      "passed": true
+    },
+    {
+      "name": "HEAD unchanged",
+      "passed": true
+    },
+    {
+      "name": "production frontend still absent",
+      "passed": true
+    },
+    {
+      "name": "published task stubs unchanged versus HEAD",
+      "passed": true
+    },
+    {
+      "name": "git diff --check",
+      "passed": true,
+      "stderr": "warning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-app-layout.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-proof.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard.sha256', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-after.jsonl', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-rendered-metrics.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/10-result.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-clean-light-adoption.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-workflow.md', LF will be replaced by CRLF the next time Git touches it",
+      "stdout": ""
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "The patch uses temporary pre-sync dirty-worktree preimages, not HEAD; rerunning requires that recorded temporary file.",
+    "GitHub readback was read-only; publication/status/acceptance/delivery remain held.",
+    "No new frontend, real browser capture, mock durability or real pipeline was executed in this stage."
+  ]
+}

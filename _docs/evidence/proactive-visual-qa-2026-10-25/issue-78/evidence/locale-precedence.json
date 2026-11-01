@@ -1,0 +1,26 @@
+[
+  {
+    "browser": "ru-RU",
+    "expected": "ru",
+    "actual": "ru",
+    "passed": true,
+    "note": "existing harness synthetic account.setLocale resolves successfully; no backend preference proof"
+  },
+  {
+    "browser": "en-US",
+    "account": "ru",
+    "expected": "ru",
+    "actual": "ru",
+    "passed": true,
+    "note": "existing harness synthetic account.setLocale resolves successfully; no backend preference proof"
+  },
+  {
+    "browser": "ru-RU",
+    "account": "ru",
+    "stored": "en",
+    "expected": "en",
+    "actual": "en",
+    "passed": true,
+    "note": "existing harness synthetic account.setLocale resolves successfully; no backend preference proof"
+  }
+]

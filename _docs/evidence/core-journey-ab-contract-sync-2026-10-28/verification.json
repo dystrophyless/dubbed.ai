@@ -1,0 +1,4095 @@
+{
+  "version": "core-journey-ab-contract-sync-v2",
+  "date": "2026-10-28",
+  "timezone": "Asia/Qyzylorda",
+  "scope": "Static documentation/preservation/source-contract checks andcurrentasset prerequisites;not newapp/runtime/productacceptance",
+  "result": "PASS",
+  "assertions": 1006,
+  "changedFiles": [
+    {
+      "path": "_docs/HANDOFF.md",
+      "before": "3fe2a43605d9f7d691500706870b56792a4a6b53cf0b115d123b770aadf35456",
+      "after": "30dc5ed2ecf632d0534c15f71828a1ea67d7ea4e095292c67ec296c60ae66eb8"
+    },
+    {
+      "path": "_docs/frontend-flows/00-shared-contract.md",
+      "before": "83d5a55c9864d62dfda1e50e9721a98e963f74b259f7d2b8971935381a262833",
+      "after": "03cd5a4f1fed6953d51b9f62d33491c7a344e6144487c892ce8b288484646929"
+    },
+    {
+      "path": "_docs/frontend-flows/09-record.md",
+      "before": "c5261ab70929f133c64dd5410a3e47a56a3deb351c07313908974f376da7096c",
+      "after": "82a7090581c6469174c2c4dc72b29b5b3154d0712b11c39fdc71c31164fff5e6"
+    },
+    {
+      "path": "_docs/frontend-flows/10-result.md",
+      "before": "ede8a3f9e2a4af0cf32bac82be72b06f42103a2b37c2bcdc421210debc0345d1",
+      "after": "0f64bf6508c3dc998d5dec4cc40bd4293900959b7d95f873cd775c5ce29e5ac5"
+    },
+    {
+      "path": "_docs/frontend-flows/README.md",
+      "before": "b4582cbba7e08dc2b059d7d2ea304347282e6ac48349cad799f1e80838c1952b",
+      "after": "cf1310bb507fc0a62c707ea661560984d899370f5d3e13daef2b580afebe5291"
+    },
+    {
+      "path": "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+      "before": "f7c4d2452d83d07c992511ec7d398aaf1cefe965da6daf89eddaf955cac36722",
+      "after": "f964d5d3bd8db37672e3c6e3dfa91821cc492d5e0110fc68e1e12645df940421"
+    },
+    {
+      "path": "_docs/frontend-flows/affect-ui-workflow.md",
+      "before": "c26ca3a1475b5d8f9cbf74c93e0118601f8f6a51c5cd2f7263169d121f1fa884",
+      "after": "8a1cc9b60c5617e718638afb96d27bf849cd2f51aeaf342338e4def7602766ee"
+    },
+    {
+      "path": "_docs/frontend-flows/design-tokens.md",
+      "before": "666926ea2372c145a72a99e843c45dcbdc3e100fbd71280b8dff16876044aded",
+      "after": "66105db94c9e40e947ac514f346daa25463469d4c429772a5b407f94a0cf9416"
+    },
+    {
+      "path": "_docs/frontend-implementation-contract.md",
+      "before": "2d00f23da637acd5577b0dfd3c1c550e3707f97544497c7e92a0d169e91f2e41",
+      "after": "090b04d6b9404863091df2051764c70962c6ae60c9516bd256a1879f6b158648"
+    }
+  ],
+  "preservedPrototypeFingerprints": 841,
+  "checks": [
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-design-workflow.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-implementation-contract.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/HANDOFF.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/orchestration.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/PROJECT_BRAINSTORM.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/business-requirements/BR-001_custom_video_dubbing.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/business-requirements/README.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/00-shared-contract.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/01-landing.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/02-sign-in.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/03-registration.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/04-password-reset.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/05-account-linking.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/06-new-dub.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/07-processing.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/08-prepare.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/09-record.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/10-result.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/11-projects.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/12-credits.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/13-sharing.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/14-public-viewer.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/15-account.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/affect-ui-clean-light-adoption.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/affect-ui-clean-light-reference.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/affect-ui-workflow.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/design-tokens.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/frontend-flows/README.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/README.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/specifications/README.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/specifications/SPEC-001_dubbed_mvp.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/README.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/account_settings_signout_and_deletion.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/backend_free_browser_integration_gate.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/browser_media_capability_investigation.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/credits_purchase_history_and_return.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/explicit_login_method_linking.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/frontend_contract_decisions.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/frontend_runtime_and_test_harness.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/frontend_services_facade.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/microphone_check_and_device_readiness.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/mock_credit_accounting.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/password_reset_and_session_recovery.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/permitted_playable_media_fixtures.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/persistent_mock_workspace.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/preparation_progress_cancel_and_reprocess.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/project_library_resume_and_deletion.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/README.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/real_adapter_integration_followup.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/recording_capture_draft_acceptance.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/responsive_shell_tokens_and_locale.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/result_generation_playback_and_download.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/signin_sessions_and_protected_return.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/validated_upload_selection_and_quote.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/frontend-flows/verified_registration_and_identity_collisions.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/account_identity.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/backend_contracts_schema.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/backend_runtime.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/background_separation.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/browser_capture_adapter.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/credits_purchase_ui.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/credit_reservations.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/delivery_recovery_environment.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/demo_media_fixtures.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/dialogue_preparation.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/frontend_mock_integration_gate.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/frontend_real_adapter.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/frontend_runtime.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/frontend_service_contract.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/full_video_rendering.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/media_feasibility.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/mock_credit_accounting.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/mock_preparation_lifecycle.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/mock_result_lifecycle.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/mock_workspace_persistence.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/one_time_purchase_fulfillment.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/preparation_corrections.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/preparation_orchestration.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/processing_job_foundation.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/production_policy_baseline.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/project_media_upload.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/README.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/real_product_integration_gate.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/recording_commit_backend.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/recording_review_ui.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/release_acceptance_gate.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/results_projects_sharing_ui.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/sharing_project_deletion.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/turn_correction_ui.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/upload_preparation_ui.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/task-drafts/SPEC-001/visual_system_shell.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/guides/business-requirements-guide.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/guides/doc-conventions.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/guides/github-issues-workflow.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/guides/specifications-guide.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/guides/task-decomposition-guide.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/guides/versioning-guidelines.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/templates/business-requirements.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/templates/issue-evidence.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/templates/specification.md",
+      "passed": true
+    },
+    {
+      "name": "Unrelated active/stub unchanged: _docs/sdd/templates/task-issue.md",
+      "passed": true
+    },
+    {
+      "name": "Exactly nine bounded canonical files changed",
+      "passed": true,
+      "changed": [
+        "_docs/frontend-implementation-contract.md",
+        "_docs/HANDOFF.md",
+        "_docs/frontend-flows/00-shared-contract.md",
+        "_docs/frontend-flows/09-record.md",
+        "_docs/frontend-flows/10-result.md",
+        "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+        "_docs/frontend-flows/affect-ui-workflow.md",
+        "_docs/frontend-flows/design-tokens.md",
+        "_docs/frontend-flows/README.md"
+      ]
+    },
+    {
+      "name": "No product frontend created",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi manifest unchanged",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: AB-CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: README.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: ab-calibration.html",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: calibration.html",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: comparison-components.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: comparison-lab.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1280x600-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-1440x900-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-390x667-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-layout-1024x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-layout-1366x650-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-layout-1920x910-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-layout-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-layout-720x450-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-layout-768x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-final-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-final-1366x650.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-final-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-final-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-final-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-layout-1280x600-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-layout-1440x900-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-layout-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-layout-768x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-source-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/ab-A-result-source-loading.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/capture-nav-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/completion-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-mic-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1280x600-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-1440x900-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-candidate-controls.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-mic-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-A-390x667-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/final-visual-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/interaction-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/journey-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/mic-font-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/responsive-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/ab-highfi-v1/result-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/calibration-v3-check-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/calibration-v3-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/calibration-v3-desktop.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/calibration-v3-phone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/calibration-v3-reference-check.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1280x600-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-1440x900-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/ab-A-390x667-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/exit-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/exit-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1023x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1024x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1024x700-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1247x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1248x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1366x650-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-1920x910-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-A6-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-layout-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/final-layout-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/first-A6-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/first-A6-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/first-A6-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/first-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-1280x600-exit-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-1280x600-exit-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-1280x600-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-1440x900-exit-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-1440x900-exit-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-1440x900-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-390x667-exit-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-390x667-exit-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-390x667-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-A6-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1023x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1023x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1023x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1023x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1024x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1024x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1024x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1024x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1247x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1247x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1247x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1247x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1248x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1248x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1248x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1248x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1280x600-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1366x650-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1366x650-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1366x650-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1366x650-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1440x900-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1920x910-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1920x910-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1920x910-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-1920x910-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-390x667-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/focused-v6-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/geometry-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/journey-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/journey-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/preservation-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/focused-exit-v6/preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-1280x600-ru-save-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-1280x600-ru-save-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-1882x902-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-1882x902-en-microphone-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-1882x902-en-microphone-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-1882x902-en-microphone-enter.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-1882x902-en-microphone-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-390x667-ru-microphone-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-390x667-ru-microphone-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-390x667-ru-save-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/hf3-390x667-ru-save-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-completion-recovery-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-completion-recovery-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-destination-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-destination-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-journey-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-journey-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-retention-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-retention-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-short-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-short-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-toast-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-toast-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-visual-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/highfi-v3-visual-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/lucide-assets.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/ab-A-1280x600-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/browser-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1023x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1023x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1023x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1023x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1024x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1024x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1024x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1024x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1247x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1247x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1247x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1247x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1248x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1248x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1248x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1248x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1280x600-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1366x650-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1366x650-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1366x650-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1366x650-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1440x900-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1920x910-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1920x910-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1920x910-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-1920x910-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-390x667-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/center-v5-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1280x600-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1366x650-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1366x650-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1366x650-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1366x650-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1440x900-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1920x910-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1920x910-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1920x910-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-1920x910-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-390x667-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-A5-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-capture-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/final-capture-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/first-1023x700.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/first-1024x700.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/first-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/first-1366x650.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/first-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/first-1920x910.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/first-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/first-bounds.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/journey-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/preservation-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/video-center-v5/recovery-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/waveform-provenance.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: focused-exit.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: highfi.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: icons.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: index.html",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: locale.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: package.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: panel-responsive.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: panel-result.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: presentation.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: public/calibration/INTER-LICENSE.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: public/calibration/InterVariable.woff2",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: public/calibration/LUCIDE-LICENSE.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: public/media/example-dub.mp4",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: public/media/scene.mp4",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: public/media/take-0.wav",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: public/media/take-1.wav",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: public/media/take-2.wav",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: result-player.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: result-player.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: src.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: style.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: toast.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: ui.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: video-center.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: waveform-data.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1023x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1023x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1023x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1023x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1023x700-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1023x700-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1023x700-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1024x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1024x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1024x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1024x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1024x700-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1024x700-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1024x700-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1247x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1247x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1247x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1247x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1247x700-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1247x700-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1247x700-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1248x700-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1248x700-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1248x700-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1248x700-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1248x700-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1248x700-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1248x700-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1280x600-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1280x600-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1280x600-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1366x650-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1366x650-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1366x650-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1366x650-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1366x650-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1366x650-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1366x650-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1440x900-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1440x900-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1440x900-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1920x910-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1920x910-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1920x910-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1920x910-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1920x910-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1920x910-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-1920x910-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-390x667-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-390x667-result-ready.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/A7-390x667-saved-header.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1280x600-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-1440x900-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/ab-A-390x667-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/B-measured-baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/build-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/exit-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/exit-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/first-A7-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/first-A7-1366x650.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/first-A7-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/first-A7-1920x910.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/first-A7-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/first-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/first-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-1280x600-exit-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-1280x600-exit-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-1280x600-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-1440x900-exit-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-1440x900-exit-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-1440x900-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-390x667-exit-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-390x667-exit-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-390x667-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/focused-A7-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/geometry-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/header-result-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/header-result-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/journey-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/journey-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/measure-B.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/preservation-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/media-header-v7/preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/A-1440x900-en-record-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/A-1440x900-en-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/A-1440x900-ru-record-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/A-1440x900-ru-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/A-390x667-en-record-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/A-390x667-en-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/A-390x667-ru-record-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/A-390x667-ru-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/build-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/icon-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-lowfi frozen: evidence/exit-log-out-amendment/scope-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio manifest unchanged",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: COMPARISON.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: README.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: ab-calibration.html",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: comparison-components.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: comparison-lab.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1280x600-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-1440x900-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-assembly-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-completed-record.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-microphone.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-save-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-390x667-save-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-layout-1024x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-layout-1366x650-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-layout-1920x910-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-layout-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-layout-720x450-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-layout-768x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-final-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-final-1366x650.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-final-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-final-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-final-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-layout-1280x600-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-layout-1440x900-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-layout-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-layout-768x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-source-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/ab-B-result-source-loading.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-A-1440x1000-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-A-1440x1000.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-A-390x844-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-A-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-B-1440x1000-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-B-1440x1000.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-B-390x844-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-B-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-A-1440-source.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-A-1440-wave.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-A-1440x1000-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-A-1440x1000.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-A-390-source.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-A-390-wave.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-A-390x844-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-A-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-B-1440-source.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-B-1440-wave.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-B-1440x1000-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-B-1440x1000.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-B-390-source.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-B-390-wave.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-B-390x844-derivatives.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-B-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-final-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/calibration-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/capture-nav-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/completion-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/completion-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-mic-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1280x600-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-1440x900-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-accepted.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-assembly-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-assembly.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-candidate-controls.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-candidate.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-completed.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-guard.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-mic-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-mic-expired.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-normal.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-result-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-result-original.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-B-390x667-save-error.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-visual-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/final-visual-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/first-A-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/first-A-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/first-A-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/first-B-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/first-B-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/first-B-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/first-browser-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/first-browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/freeze-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/interaction-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/journey-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/journey-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/mic-font-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/mic-font-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/parity-preservation-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/parity-preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/probe-A-768x700.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/probe-B-768x700.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/responsive-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/responsive-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/result-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/ab-highfi-v1/tablet-probe.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/capture-v3-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/capture-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/capture-v5-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/capture-v5-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/final-journey-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/00-shared-contract-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/06-new-dub-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/07-processing-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/09-record-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/10-result-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/11-projects-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/12-credits-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/BR-001_custom_video_dubbing-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/README-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/SPEC-001_dubbed_mvp-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/affect-ui-clean-light-reference-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/brainstorm-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/doc-check-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/doc-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/frontend-implementation-contract-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/issue-readback.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/original-amended-1280x600-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/original-amended-1440x900-en.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/original-amended-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/original-browser-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/original-browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/preparation_progress_cancel_and_reprocess-before.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/scoped-doc-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/sync-crossflows.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/sync-removal.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v3/sync-requirements.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v4/AUDIT-v4.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v4/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v4/runtime-copy-check.mjs",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-removal-v4/runtime-copy-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/first-1280x600-False.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/first-1280x600-True.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/first-1440x900-False.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/first-390x667-True.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/freeze-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/original-browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/original-no-speaker-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/original-no-speaker-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/original-no-speaker-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/scoped-doc-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/owner-studio-v5/verify.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/phone-completion-v3-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/phone-completion-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/phone-completion-v5-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/phone-completion-v5-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/responsive-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/responsive-v5-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/responsive-v5-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/AUDIT.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/DESIGN.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/baseline.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/browser-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/completed-fixture-state.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/debug-short.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/final-visual-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/final-visual-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/initial-browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/interaction-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/interaction-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/preservation-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/preservation-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/previous-BRIEF-v5.md",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/previous-version-v5.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/record-regression-check.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/record-regression-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/reference-font-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-1366x650.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-390x844.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-fullscreen.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-mydub-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-mydub-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-mydub-1920x910.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-mydub-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-mydub-720x450.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-original-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-original-1440x900.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-original-1920x910.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-original-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-final-original-720x450.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-record-recovery-1280x600.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-record-recovery-390x667.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-result-1280x600-en.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-result-1366x650-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-result-1440x900-mydub.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-result-390x667-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-result-390x844-en.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-result-767x700-ru.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-result-768x700-en.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-source-failure.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-source-keyboard-focus.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/result-player-v6/studio-v6-source-loading.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/self-check-v3-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/self-check-v3.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/self-check-v5-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/self-check-v5.py",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1280x600-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1280x600-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1280x600-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1280x600-line2-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1280x600-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1280x600-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1280x600-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1366x650-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1366x650-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1366x650-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1440x900-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1440x900-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1440x900-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-1440x900-line2-capture.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-390x667-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-390x667-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v3-final-390x667-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1280x600-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1280x600-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1280x600-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1280x600-ru-long-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1280x600-ru-long-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1280x600-ru-long-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1366x650-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1366x650-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1366x650-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1440x900-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1440x900-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1440x900-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1920x910-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1920x910-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-1920x910-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x667-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x667-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x667-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x667-ru-long-reduced-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x667-ru-long-reduced-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x667-ru-long-reduced-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x844-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x844-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-390x844-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-desktop-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-desktop-save-failure-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-desktop-save-failure-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1280x600-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1280x600-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1280x600-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1280x600-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1280x600-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1280x600-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1366x650-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1366x650-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1366x650-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1440x900-en-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1440x900-en-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-1440x900-en-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-390x667-long-ru-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-390x667-long-ru-before.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-final-390x667-long-ru-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-phone-mic-failure-after.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-phone-mic-failure-during.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/studio-v5-phone-result.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: icons.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: index.html",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: locale.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: package.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: presentation.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: public/calibration/INTER-LICENSE.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: public/calibration/InterVariable.woff2",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: public/calibration/LUCIDE-LICENSE.txt",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: public/media/example-dub.mp4",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: public/media/scene.mp4",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: public/media/take-0.wav",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: public/media/take-1.wav",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: public/media/take-2.wav",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: result-player.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: result-player.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: src.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: studio-highfi.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: studio.css",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: toast.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: ui.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: waveform-data.js",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/B-1440x900-en-record-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/B-1440x900-en-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/B-1440x900-ru-record-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/B-1440x900-ru-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/B-390x667-en-record-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/B-390x667-en-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/B-390x667-ru-record-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/B-390x667-ru-result-exit.png",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/browser-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/build-results.json",
+      "passed": true
+    },
+    {
+      "name": "core-journey-studio frozen: evidence/exit-log-out-amendment/scope-results.json",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Recording turn navigation",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Audition of unaccepted replacement",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Back with an unaccepted recording",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Resuming unfinished recording",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## To result with an unaccepted candidate",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## One recording tab per project",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Release recording before device switch",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Recording ownership recovery after disconnect",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Initial assembly after filling the final gap",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Background completion does not steal navigation",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Millisecond source-section precision",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## Explicit navigation wins at first complete recording set",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## 5. State model and transitions",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## 6. Failure, interruption and recovery behavior",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## 6. Generation, eligibility and owner-current invariants",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## 8. Download contract",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## 10. Logical service contract",
+      "passed": true
+    },
+    {
+      "name": "Protected domain section: ## 11. Persistence, ownership and concurrency",
+      "passed": true
+    },
+    {
+      "name": "Both current named targets andLogOut amendment",
+      "passed": true
+    },
+    {
+      "name": "Direct continuation quoted;not fabricated checkpoint",
+      "passed": true
+    },
+    {
+      "name": "Navbar removal andexternalcaption",
+      "passed": true
+    },
+    {
+      "name": "Dots actual count,no jumping",
+      "passed": true
+    },
+    {
+      "name": "Explicit restart andlisteningResume",
+      "passed": true
+    },
+    {
+      "name": "Wave envelope/overlay/truegap",
+      "passed": true
+    },
+    {
+      "name": "A media center,rightpanel andstack",
+      "passed": true
+    },
+    {
+      "name": "Result source versusgeneration separate",
+      "passed": true
+    },
+    {
+      "name": "Download original preview pinned dub",
+      "passed": true
+    },
+    {
+      "name": "Original not fakefinishedasset",
+      "passed": true
+    },
+    {
+      "name": "Custom result AC synchronized",
+      "passed": true
+    },
+    {
+      "name": "Focus andscroll currentP3 covered",
+      "passed": true
+    },
+    {
+      "name": "Real capture,actualbytes,nofakeproduction",
+      "passed": true
+    },
+    {
+      "name": "Unknown reconcile/candidate/grant fences",
+      "passed": true
+    },
+    {
+      "name": "Shared controllers,noduplicatebusinesslogic",
+      "passed": true
+    },
+    {
+      "name": "FutureAB50/50 gated,noliveevents",
+      "passed": true
+    },
+    {
+      "name": "No live experimentprivacydefaults",
+      "passed": true
+    },
+    {
+      "name": "AllFour Luna phases andfinalindependentproof",
+      "passed": true
+    },
+    {
+      "name": "Remotehold/noacceptance explicit",
+      "passed": true
+    },
+    {
+      "name": "No current retiredfunctionpositiveUI",
+      "passed": true
+    },
+    {
+      "name": "New canonical link exists: evidence/core-journey-ab-contract-sync-2026-10-28/package-review.md",
+      "passed": true
+    },
+    {
+      "name": "New canonical link exists: ../evidence/core-journey-ab-contract-sync-2026-10-28/package-review.md",
+      "passed": true
+    },
+    {
+      "name": "New canonical link exists: ../evidence/core-journey-ab-contract-sync-2026-10-28/package-review.md",
+      "passed": true
+    },
+    {
+      "name": "New canonical link exists: evidence/core-journey-ab-contract-sync-2026-10-28/package-review.md",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../../../prototypes/core-journey-lowfi/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../../../prototypes/core-journey-lowfi/evidence/version.json",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../../../prototypes/core-journey-lowfi/AB-CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../../../prototypes/core-journey-studio/BRIEF.md",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../../../prototypes/core-journey-studio/evidence/version.json",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../../../prototypes/core-journey-studio/CALIBRATION.md",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../../../prototypes/core-journey-studio/review/REVIEW-ab-highfi-v1.md",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../../../prototypes/core-journey-studio/review/REVIEW-panel-v7.md",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: ../core-journey-contract-sync-2026-10-27/package-review.md",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: baseline.json",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: scoped-contract-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: verification.json",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: issue-readback.json",
+      "passed": true
+    },
+    {
+      "name": "Packet link exists: asset-prerequisites.json",
+      "passed": true
+    },
+    {
+      "name": "17 live issue readbacks;allcomments checked",
+      "passed": true
+    },
+    {
+      "name": "Real adapter remains blocked",
+      "passed": true
+    },
+    {
+      "name": "Current distinct equal-duration fixture assets",
+      "passed": true
+    },
+    {
+      "name": "git diff --check",
+      "passed": true
+    }
+  ],
+  "gitWarnings": "warning: in the working copy of '_docs/PROJECT_BRAINSTORM.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-app-layout.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-proof.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard.sha256', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-after.jsonl', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-rendered-metrics.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/10-result.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/11-projects.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-clean-light-adoption.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-clean-light-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-workflow.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/specifications/SPEC-001_dubbed_mvp.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/task-drafts/frontend-flows/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/task-drafts/frontend-flows/preparation_progress_cancel_and_reprocess.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'brainstorm.md', LF will be replaced by CRLF the next time Git touches it\n",
+  "limits": "No frontend exists;no newapp build,microphone,backend,mixing,persistence orliveAB verification. Liveissue17 read-only;GitHub/gitdeliveryheld."
+}

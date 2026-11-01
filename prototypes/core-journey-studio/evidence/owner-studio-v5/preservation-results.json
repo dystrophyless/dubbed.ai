@@ -1,0 +1,305 @@
+{
+  "version": "core-journey-studio-lowfi-v5",
+  "date": "2026-10-27",
+  "scope": "Scoped speaker capability correction and studio presentation; no pipeline/integration or remote mutations",
+  "changedCanonicalFiles": [
+    {
+      "path": "_docs/frontend-flows/00-shared-contract.md",
+      "before": "e31242a1e47ae418dee590c08c5ad99ed8682c50a2a381880e37815ff06409ac",
+      "after": "83d5a55c9864d62dfda1e50e9721a98e963f74b259f7d2b8971935381a262833"
+    },
+    {
+      "path": "_docs/frontend-flows/06-new-dub.md",
+      "before": "20ecf18adaaaa8699c8d515bfb237d947258318da6fd218ad21bcb0696842fa5",
+      "after": "75ca4bfe09cb509f7addc8a5552b2869b6f6f6e559f6950b1e4237726fe87692"
+    },
+    {
+      "path": "_docs/frontend-flows/09-record.md",
+      "before": "c413af2778a276427b0b8deb8577c7f80291a4bf8d62aefe3a1ceb186cdfec9b",
+      "after": "c5261ab70929f133c64dd5410a3e47a56a3deb351c07313908974f376da7096c"
+    },
+    {
+      "path": "_docs/frontend-implementation-contract.md",
+      "before": "4585fdafc244c0b86bd2c08ec3c668f81463e18cf9042f23024ffe37469ba70d",
+      "after": "2d00f23da637acd5577b0dfd3c1c550e3707f97544497c7e92a0d169e91f2e41"
+    },
+    {
+      "path": "_docs/business-requirements/BR-001_custom_video_dubbing.md",
+      "before": "66f367e775ea843c28efe87525e2134ce6ef58bfcf4bf0adaf8a9a718093023d",
+      "after": "38d36039300809b0b02440af9a916a08bddc0251916e7186bb476ea9fad63ee5"
+    },
+    {
+      "path": "_docs/specifications/SPEC-001_dubbed_mvp.md",
+      "before": "a7ea8651bf4aadc00925f7873ca32c3fee1305b955c55d1daa812237622ab706",
+      "after": "0ceea2e083119636a26be0d5629fed471b244f288cc1c5fae3536b4d81c46be9"
+    },
+    {
+      "path": "_docs/HANDOFF.md",
+      "before": "54b80d23a76584b4236ddcb9165f4b75312785a0959ef6f252adbef5aadbf817",
+      "after": "9248f63f3e0e064eeca0d02eb9cc817cb4ac4c3a85d46c747084532c019a568c"
+    },
+    {
+      "path": "_docs/PROJECT_BRAINSTORM.md",
+      "before": "025ae041d6dfbcda2e69eaebf990f0ff158a6654a6c35a75842f4bfe43eaec2b",
+      "after": "de07c33c553b49fd81933d0ad8ec896081ddcdaaddb801af394fbe285c845bbd"
+    },
+    {
+      "path": "brainstorm.md",
+      "before": "614d6cec2ae35b8f637ed928b64b191a50ff2274ad15a3f79b85b1b661931c71",
+      "after": "ca1952bbc5c84b0f060d190c38e7f13b3e296a21bc022eaac80d35f8ea677c3d"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Unchanged recording invariant: ### 5.1 Loading the turn",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.2 Replay and own-take audition",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.3 Start capture",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.4 Fixed-window completion and interruption",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.5 Candidate review",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.6 Next: accept before advancing; do not skip unfinished turns",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.7 Rerecord",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.8 Back or leave with an unaccepted candidate",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.9 To result after revising a completed project",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ### 5.11 Exclusive recording access",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ## 6. Failure, interruption and recovery behavior",
+      "passed": true
+    },
+    {
+      "name": "Unchanged recording invariant: ## 10. Persistence, ownership and concurrency",
+      "passed": true
+    },
+    {
+      "name": "Unchanged shared invariant: ## One recording tab per project",
+      "passed": true
+    },
+    {
+      "name": "Unchanged shared invariant: ## Explicit navigation wins at first complete recording set",
+      "passed": true
+    },
+    {
+      "name": "Unchanged shared invariant: ## Unaccepted-draft lifetime",
+      "passed": true
+    },
+    {
+      "name": "Unchanged shared invariant: ## Account-deletion confirmation",
+      "passed": true
+    },
+    {
+      "name": "No required speaker field in turn record",
+      "passed": true
+    },
+    {
+      "name": "Absence cannot reject valid preparation",
+      "passed": true
+    },
+    {
+      "name": "Transcript/timing remain required",
+      "passed": true
+    },
+    {
+      "name": "Only bounded amendment files: core-journey-studio",
+      "passed": true,
+      "changed": [
+        "BRIEF.md",
+        "index.html",
+        "README.md",
+        "src.js",
+        "studio.css"
+      ],
+      "previousFingerprintCount": 75
+    },
+    {
+      "name": "No fabricated speaker data/UI hooks: core-journey-studio",
+      "passed": true
+    },
+    {
+      "name": "Current locale unchanged: core-journey-studio",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/icons.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/index.html",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/locale.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/presentation.css",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/src.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/studio.css",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/toast.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/ui.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-studio/waveform-data.js",
+      "passed": true
+    },
+    {
+      "name": "Only bounded amendment files: core-journey-lowfi",
+      "passed": true,
+      "changed": [
+        "BRIEF.md",
+        "index.html",
+        "src.js",
+        "style.css"
+      ],
+      "previousFingerprintCount": 54
+    },
+    {
+      "name": "No fabricated speaker data/UI hooks: core-journey-lowfi",
+      "passed": true
+    },
+    {
+      "name": "Current locale unchanged: core-journey-lowfi",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/calibration.html",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/highfi.css",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/icons.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/index.html",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/locale.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/presentation.css",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/src.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/style.css",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/toast.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/ui.js",
+      "passed": true
+    },
+    {
+      "name": "Removed function remains absent: core-journey-lowfi/waveform-data.js",
+      "passed": true
+    },
+    {
+      "name": "Visible legend nodes removed",
+      "passed": true
+    },
+    {
+      "name": "Wave source descriptions retained",
+      "passed": true
+    },
+    {
+      "name": "Other removal contract unchanged: _docs/frontend-flows/07-processing.md",
+      "passed": true
+    },
+    {
+      "name": "Other removal contract unchanged: _docs/frontend-flows/10-result.md",
+      "passed": true
+    },
+    {
+      "name": "Other removal contract unchanged: _docs/frontend-flows/11-projects.md",
+      "passed": true
+    },
+    {
+      "name": "Other removal contract unchanged: _docs/frontend-flows/12-credits.md",
+      "passed": true
+    },
+    {
+      "name": "Other removal contract unchanged: _docs/frontend-flows/affect-ui-clean-light-reference.md",
+      "passed": true
+    },
+    {
+      "name": "Other removal contract unchanged: _docs/frontend-flows/README.md",
+      "passed": true
+    },
+    {
+      "name": "Other removal contract unchanged: _docs/task-drafts/frontend-flows/preparation_progress_cancel_and_reprocess.md",
+      "passed": true
+    },
+    {
+      "name": "Other removal contract unchanged: _docs/task-drafts/frontend-flows/README.md",
+      "passed": true
+    },
+    {
+      "name": "git diff --check",
+      "passed": true,
+      "output": "",
+      "stderr": "warning: in the working copy of '_docs/PROJECT_BRAINSTORM.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-app-layout.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-proof.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard.sha256', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-after.jsonl', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-rendered-metrics.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/10-result.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/11-projects.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-clean-light-adoption.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-clean-light-reference.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/frontend-flows/affect-ui-workflow.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/specifications/SPEC-001_dubbed_mvp.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/task-drafts/frontend-flows/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of '_docs/task-drafts/frontend-flows/preparation_progress_cancel_and_reprocess.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'brainstorm.md', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "name": "No production frontend recreated",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Static contract/source checks are separate from actual browser geometry/operation.",
+    "Historical snapshots/review/screenshots remain provenance.",
+    "External issue alignment and production media capabilities remain held/unproved."
+  ]
+}

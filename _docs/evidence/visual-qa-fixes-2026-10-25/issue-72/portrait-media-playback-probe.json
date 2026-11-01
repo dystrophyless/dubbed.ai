@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "issue": 72,
+  "command": "node tests/media/probe-portrait-fixtures.mjs",
+  "capturedAt": "2026-10-25T13:21:35.430Z",
+  "revision": "dirty worktree; see issue-72 completion.md boundary",
+  "server": "127.0.0.1:4572",
+  "environment": {
+    "engine": "Chromium",
+    "browserVersion": "156.0.8078.4",
+    "headless": true,
+    "viewport": {
+      "width": 740,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1,
+    "browserFlags": [
+      "--mute-audio",
+      "--use-fake-device-for-media-stream",
+      "--use-fake-ui-for-media-stream"
+    ],
+    "mediaElementsMuted": true,
+    "physicalMicrophoneUsed": false,
+    "speakersUsed": false
+  },
+  "assets": {
+    "portrait-long-source.mp4": {
+      "engine": "Chromium",
+      "browserVersion": "156.0.8078.4",
+      "metadataState": "loaded",
+      "durationSeconds": 35.9591,
+      "videoWidth": 540,
+      "videoHeight": 960,
+      "readyState": 4,
+      "playbackState": "ended",
+      "playbackElapsedMs": 9166.70000000298,
+      "playbackRate": 4,
+      "muted": true,
+      "encodedVideoTrackCount": 1,
+      "encodedAudioTrackCount": 1,
+      "encodedTracks": {
+        "containerBox": "isom",
+        "trackCount": 2,
+        "videoTrackCount": 1,
+        "audioTrackCount": 1,
+        "tracks": [
+          {
+            "handlerType": "soun",
+            "sampleEntry": "mp4a"
+          },
+          {
+            "handlerType": "vide",
+            "sampleEntry": "avc1"
+          }
+        ]
+      }
+    },
+    "portrait-timing-oracle.mp4": {
+      "engine": "Chromium",
+      "browserVersion": "156.0.8078.4",
+      "metadataState": "loaded",
+      "durationSeconds": 35.987533,
+      "videoWidth": 540,
+      "videoHeight": 960,
+      "readyState": 4,
+      "playbackState": "ended",
+      "playbackElapsedMs": 9093.79999999702,
+      "playbackRate": 4,
+      "muted": true,
+      "encodedVideoTrackCount": 1,
+      "encodedAudioTrackCount": 1,
+      "encodedTracks": {
+        "containerBox": "isom",
+        "trackCount": 2,
+        "videoTrackCount": 1,
+        "audioTrackCount": 1,
+        "tracks": [
+          {
+            "handlerType": "soun",
+            "sampleEntry": "mp4a"
+          },
+          {
+            "handlerType": "vide",
+            "sampleEntry": "avc1"
+          }
+        ]
+      }
+    },
+    "portrait-result-generation-001.mp4": {
+      "engine": "Chromium",
+      "browserVersion": "156.0.8078.4",
+      "metadataState": "loaded",
+      "durationSeconds": 35.958433,
+      "videoWidth": 540,
+      "videoHeight": 960,
+      "readyState": 4,
+      "playbackState": "ended",
+      "playbackElapsedMs": 9082.89999999106,
+      "playbackRate": 4,
+      "muted": true,
+      "encodedVideoTrackCount": 1,
+      "encodedAudioTrackCount": 1,
+      "encodedTracks": {
+        "containerBox": "isom",
+        "trackCount": 2,
+        "videoTrackCount": 1,
+        "audioTrackCount": 1,
+        "tracks": [
+          {
+            "handlerType": "soun",
+            "sampleEntry": "mp4a"
+          },
+          {
+            "handlerType": "vide",
+            "sampleEntry": "avc1"
+          }
+        ]
+      }
+    },
+    "portrait-result-generation-002.mp4": {
+      "engine": "Chromium",
+      "browserVersion": "156.0.8078.4",
+      "metadataState": "loaded",
+      "durationSeconds": 35.952133,
+      "videoWidth": 540,
+      "videoHeight": 960,
+      "readyState": 4,
+      "playbackState": "ended",
+      "playbackElapsedMs": 9093.59999999404,
+      "playbackRate": 4,
+      "muted": true,
+      "encodedVideoTrackCount": 1,
+      "encodedAudioTrackCount": 1,
+      "encodedTracks": {
+        "containerBox": "isom",
+        "trackCount": 2,
+        "videoTrackCount": 1,
+        "audioTrackCount": 1,
+        "tracks": [
+          {
+            "handlerType": "vide",
+            "sampleEntry": "avc1"
+          },
+          {
+            "handlerType": "soun",
+            "sampleEntry": "mp4a"
+          }
+        ]
+      }
+    }
+  },
+  "timingOracle": {
+    "sampleBasis": "Decoded requestVideoFrameCallback.mediaTime from the actual encoded portrait-timing-oracle.mp4; each pixel sample is from that decoded video frame.",
+    "pcmAnnotationBasis": "Exact sample-frame placement from portrait-long-source-master.wav and dialogueTimeline.sections.",
+    "samples": [
+      {
+        "id": "before-overlap",
+        "requestedMs": 5672.358276643991,
+        "actualEncodedFrameMediaTimeMs": 5672.367,
+        "frameDeltaMs": 0.008723356008886185,
+        "expectedTurnIdsAtEncodedFrame": [
+          "turn-mara-1"
+        ],
+        "maraChipPixel": [
+          0,
+          191,
+          163
+        ],
+        "eliChipPixel": [
+          36,
+          56,
+          72
+        ],
+        "overlapPillRedPixels": 0,
+        "clockLitPixels": 924,
+        "checks": "PASS"
+      },
+      {
+        "id": "inside-overlap",
+        "requestedMs": 6372.358276643991,
+        "actualEncodedFrameMediaTimeMs": 6373.267,
+        "frameDeltaMs": 0.9087233560085224,
+        "expectedTurnIdsAtEncodedFrame": [
+          "turn-mara-1",
+          "turn-eli-1"
+        ],
+        "maraChipPixel": [
+          0,
+          191,
+          163
+        ],
+        "eliChipPixel": [
+          246,
+          186,
+          79
+        ],
+        "overlapPillRedPixels": 2331,
+        "clockLitPixels": 914,
+        "checks": "PASS"
+      },
+      {
+        "id": "after-overlap",
+        "requestedMs": 9328.049886621315,
+        "actualEncodedFrameMediaTimeMs": 9372,
+        "frameDeltaMs": 43.95011337868527,
+        "expectedTurnIdsAtEncodedFrame": [
+          "turn-eli-1"
+        ],
+        "maraChipPixel": [
+          36,
+          59,
+          70
+        ],
+        "eliChipPixel": [
+          243,
+          181,
+          73
+        ],
+        "overlapPillRedPixels": 0,
+        "clockLitPixels": 912,
+        "checks": "PASS"
+      }
+    ],
+    "allSamplesPassed": true,
+    "limitations": [
+      "Canvas nominal draw clock and actual encoded frame mediaTime are separate values.",
+      "These video-frame marker checks do not measure inter-track audio/video synchronization quality.",
+      "Synthetic SAPI speech and vector mouth motion are not a natural performance or lip-sync reference."
+    ]
+  },
+  "hashCheck": {
+    "manifestMatchesAllFourMp4Assets": true,
+    "generation001And002BytesDiffer": true,
+    "fileHashes": {
+      "portrait-long-source.mp4": "4ebe060311dfa4411f474ad45c8b2bfab3c9718e5813eea3db9c0dc6bf68d626",
+      "portrait-timing-oracle.mp4": "f1b727e040dc0f27c887e08f370c9ee1b4abbce694d1f19f0fdfde6fc969f6f2",
+      "portrait-result-generation-001.mp4": "dcc9218f3fee9a54c18fa10a97413453d6f7411e527cf8920119f4a8382c9f1d",
+      "portrait-result-generation-002.mp4": "ac3cd36234efcdb4da245157293be0fe81f5bb27929308be380b28dd7d550ee0"
+    },
+    "actualMp4TrackSummaries": {
+      "portrait-long-source.mp4": {
+        "containerBox": "isom",
+        "trackCount": 2,
+        "videoTrackCount": 1,
+        "audioTrackCount": 1,
+        "tracks": [
+          {
+            "handlerType": "soun",
+            "sampleEntry": "mp4a"
+          },
+          {
+            "handlerType": "vide",
+            "sampleEntry": "avc1"
+          }
+        ]
+      },
+      "portrait-timing-oracle.mp4": {
+        "containerBox": "isom",
+        "trackCount": 2,
+        "videoTrackCount": 1,
+        "audioTrackCount": 1,
+        "tracks": [
+          {
+            "handlerType": "soun",
+            "sampleEntry": "mp4a"
+          },
+          {
+            "handlerType": "vide",
+            "sampleEntry": "avc1"
+          }
+        ]
+      },
+      "portrait-result-generation-001.mp4": {
+        "containerBox": "isom",
+        "trackCount": 2,
+        "videoTrackCount": 1,
+        "audioTrackCount": 1,
+        "tracks": [
+          {
+            "handlerType": "soun",
+            "sampleEntry": "mp4a"
+          },
+          {
+            "handlerType": "vide",
+            "sampleEntry": "avc1"
+          }
+        ]
+      },
+      "portrait-result-generation-002.mp4": {
+        "containerBox": "isom",
+        "trackCount": 2,
+        "videoTrackCount": 1,
+        "audioTrackCount": 1,
+        "tracks": [
+          {
+            "handlerType": "vide",
+            "sampleEntry": "avc1"
+          },
+          {
+            "handlerType": "soun",
+            "sampleEntry": "mp4a"
+          }
+        ]
+      }
+    }
+  },
+  "screenshots": [
+    "evidence/portrait-source-playback.png",
+    "evidence/portrait-oracle-before-overlap.png",
+    "evidence/portrait-oracle-inside-overlap.png",
+    "evidence/portrait-oracle-after-overlap.png",
+    "evidence/portrait-result-generation-001.png",
+    "evidence/portrait-result-generation-002.png"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": "core-journey-studio-lowfi-v3",
+  "result": "PASS",
+  "checks": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "result": "PASS",
+      "checked": "Final continuous-density source: long RU Record1/accept Next/Record2, exact dots, outside dialogue/coherent box and removed action",
+      "geometry": {
+        "scene": [
+          270.21875,
+          97,
+          899.546875,
+          505.984375,
+          602.984375
+        ],
+        "dialogue": [
+          602.984375,
+          710.96875
+        ],
+        "wave": [
+          270.21875,
+          899.546875
+        ],
+        "mainBottom": 899.9375,
+        "scrollY": 0
+      },
+      "pageErrors": []
+    },
+    {
+      "viewport": [
+        1280,
+        600
+      ],
+      "result": "PASS",
+      "checked": "Final continuous-density source: long RU Record1/accept Next/Record2, exact dots, outside dialogue/coherent box and removed action",
+      "geometry": {
+        "scene": [
+          336,
+          57,
+          608,
+          342,
+          399
+        ],
+        "dialogue": [
+          399,
+          467
+        ],
+        "wave": [
+          336,
+          608
+        ],
+        "mainBottom": 600,
+        "scrollY": 0
+      },
+      "pageErrors": []
+    }
+  ]
+}

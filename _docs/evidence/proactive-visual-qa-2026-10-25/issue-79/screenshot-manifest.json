@@ -1,0 +1,98 @@
+[
+  {
+    "file": "evidence/ready-en-desktop.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=ready"
+  },
+  {
+    "file": "evidence/ready-en-short.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=ready"
+  },
+  {
+    "file": "evidence/ready-en-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-desktop.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-short.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-767.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-768.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/replacement-en-short.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=replacement"
+  },
+  {
+    "file": "evidence/unavailable-en-short.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=unavailable"
+  },
+  {
+    "file": "evidence/descriptor-failure-en-desktop.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=descriptor-failure"
+  },
+  {
+    "file": "evidence/assembly-known-ru-phone.png",
+    "boundary": "Existing explicitly synthetic result-delivery-state harness: assembly-progress-known"
+  },
+  {
+    "file": "evidence/assembly-unknown-en-desktop.png",
+    "boundary": "Existing explicitly synthetic result-delivery-state harness: assembly-progress-untrusted"
+  },
+  {
+    "file": "evidence/assembly-failed-ru-short.png",
+    "boundary": "Existing explicitly synthetic result-delivery-state harness: assembly-retry-unknown"
+  },
+  {
+    "file": "evidence/playback-error-en-desktop.png",
+    "boundary": "Existing explicitly synthetic result-delivery-state harness: playback-network-error"
+  },
+  {
+    "file": "evidence/generation1-en-baseline.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=ready"
+  },
+  {
+    "file": "evidence/new-ready-download-pending-en-short.png",
+    "boundary": "Old generation playing; activation-time download generation1 pending; generation2 published by controlled fixture API."
+  },
+  {
+    "file": "evidence/download-failed-en-desktop.png",
+    "boundary": "Controlled first-download rejection; previous generation retained."
+  },
+  {
+    "file": "evidence/new-displayed-old-download-error-en-desktop.png",
+    "boundary": "Watch new selected generation2 paused; failed generation1 download remains separately retryable."
+  },
+  {
+    "file": "evidence/new-ready-ru-phone-baseline.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/new-ready-ru-phone.png",
+    "boundary": "Controlled generation2 arrival while generation1 playing; no active download."
+  },
+  {
+    "file": "evidence/watch-new-focus-ru-phone.png",
+    "boundary": "Keyboard focus explicitly placed on Watch new; seeded replacement fixture."
+  },
+  {
+    "file": "evidence/unknown-download-ru-phone-baseline.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=unknown-download"
+  },
+  {
+    "file": "evidence/unknown-download-ru-phone.png",
+    "boundary": "Fixture request returns unknown; resulting localized reconciliation action uses unmodified Result component and CSS."
+  }
+]

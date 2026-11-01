@@ -1,0 +1,132 @@
+[
+  {
+    "name": "known-en-desktop",
+    "scenario": "Controlled harness: running-known",
+    "path": "evidence/known-en-desktop.png"
+  },
+  {
+    "name": "unknown-en-short",
+    "scenario": "Controlled harness: running-unknown",
+    "path": "evidence/unknown-en-short.png"
+  },
+  {
+    "name": "queued-en-phone",
+    "scenario": "Controlled harness: queued",
+    "path": "evidence/queued-en-phone.png"
+  },
+  {
+    "name": "cancel-quote-en",
+    "scenario": "Controlled harness: cancellation-quote",
+    "path": "evidence/cancel-quote-en.png"
+  },
+  {
+    "name": "failure-en",
+    "scenario": "Controlled harness: retry-failure",
+    "path": "evidence/failure-en.png"
+  },
+  {
+    "name": "zero-prior-en",
+    "scenario": "Controlled harness: zero-turn-prior",
+    "path": "evidence/zero-prior-en.png"
+  },
+  {
+    "name": "known-ru-desktop",
+    "scenario": "Controlled harness: running-known",
+    "path": "evidence/known-ru-desktop.png"
+  },
+  {
+    "name": "unknown-ru-short",
+    "scenario": "Controlled harness: running-unknown",
+    "path": "evidence/unknown-ru-short.png"
+  },
+  {
+    "name": "queued-ru-phone",
+    "scenario": "Controlled harness: queued",
+    "path": "evidence/queued-ru-phone.png"
+  },
+  {
+    "name": "cancel-quote-ru",
+    "scenario": "Controlled harness: cancellation-quote",
+    "path": "evidence/cancel-quote-ru.png"
+  },
+  {
+    "name": "failure-ru",
+    "scenario": "Controlled harness: retry-failure",
+    "path": "evidence/failure-ru.png"
+  },
+  {
+    "name": "zero-prior-ru",
+    "scenario": "Controlled harness: zero-turn-prior",
+    "path": "evidence/zero-prior-ru.png"
+  },
+  {
+    "name": "zero-initial-ru-phone",
+    "scenario": "Controlled harness: zero-turn-initial",
+    "path": "evidence/zero-initial-ru-phone.png"
+  },
+  {
+    "name": "expired-en-short",
+    "scenario": "Controlled harness: cancellation-expired-refresh",
+    "path": "evidence/expired-en-short.png"
+  },
+  {
+    "name": "cancel-failed-en-short",
+    "scenario": "Controlled harness: cancellation-quote",
+    "path": "evidence/cancel-failed-en-short.png"
+  },
+  {
+    "name": "cancel-pending-ru-phone",
+    "scenario": "Controlled harness: cancellation-pending",
+    "path": "evidence/cancel-pending-ru-phone.png"
+  },
+  {
+    "name": "known-ru-767",
+    "scenario": "Controlled harness: running-known",
+    "path": "evidence/known-ru-767.png"
+  },
+  {
+    "name": "known-ru-768",
+    "scenario": "Controlled harness: running-known",
+    "path": "evidence/known-ru-768.png"
+  },
+  {
+    "name": "ui-journey-processing-en",
+    "scenario": "UI registration/upload/quote/start; no seeding",
+    "path": "evidence/ui-journey-processing-en.png"
+  },
+  {
+    "name": "ui-journey-ready-handoff-en",
+    "scenario": "UI journey automatic ready handoff; fake device only",
+    "path": "evidence/ui-journey-ready-handoff-en.png"
+  },
+  {
+    "name": "ui-queued-cancel-focus-en",
+    "scenario": "UI journey cancel while queued; keyboard focus",
+    "path": "evidence/ui-queued-cancel-focus-en.png"
+  },
+  {
+    "name": "ui-cancel-preserved-source-en",
+    "scenario": "UI journey confirmed cancellation returns durable source and section",
+    "path": "evidence/ui-cancel-preserved-source-en.png"
+  },
+  {
+    "name": "ui-reprocess-confirm-en",
+    "scenario": "UI journey included-retry reprocessing authorization; no accepted takes/drafts",
+    "path": "evidence/ui-reprocess-confirm-en.png"
+  },
+  {
+    "name": "ui-reprocess-processing-en",
+    "scenario": "UI journey accepted included retry postlaunch lifecycle",
+    "path": "evidence/ui-reprocess-processing-en.png"
+  },
+  {
+    "name": "ui-reprocess-handoff-en",
+    "scenario": "UI journey successful nonempty replacement handoff through microphone readiness",
+    "path": "evidence/ui-reprocess-handoff-en.png"
+  },
+  {
+    "name": "ui-reprocess-record-en",
+    "scenario": "UI journey replacement recording after fake microphone reconnect",
+    "path": "evidence/ui-reprocess-record-en.png"
+  }
+]

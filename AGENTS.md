@@ -23,6 +23,10 @@
 
 ## Execution
 
+- **Idle Orchestrator:** After dispatch, when no required independent work is ready, immediately use the native agent wait tool (up to 60 seconds), then wait again on unchanged timeout. Follow [low-activity waiting](_docs/orchestration.md#low-activity-waiting). Do not spend idle time reasoning repeatedly, polling files/status, rereading context, duplicating delegated work, or inventing tasks. Resume active work only for a handoff, concrete blocker/decision, user input or a required bounded independent task; keep necessary progress updates brief.
+
+- **Frontend stage discipline:** Follow the [explicit stage handoff](_docs/frontend-design-workflow.md#stage-handoff-and-orchestrator-restraint). While the lead authors/checks a prototype, Root coordinates and waits; it does not take over design or pre-spawn a reviewer. Launch/resume review only after receiving the author's explicit ready-for-review message for a named version with completed self-checks, preview, evidence, scope/limits and paused edits, then checking those inputs. Files, screenshots, a running preview, build PASS, agent silence or elapsed time do not establish readiness. Review a stable version; revisions require a new author handoff. Announce only the actual reported/verified stage, never inferred completion.
+
 - Work on the requested issue or local documentation assignment. Access to issues is not permission to implement every open issue.
 - Preserve unrelated files and local edits. Keep edits within the agreed scope; follow the available code-search tooling for locating implementation.
 - Resolve dependencies by issue references, not issue number order. An open dependency may be implemented but still awaiting acceptance; verify the actual prerequisite.

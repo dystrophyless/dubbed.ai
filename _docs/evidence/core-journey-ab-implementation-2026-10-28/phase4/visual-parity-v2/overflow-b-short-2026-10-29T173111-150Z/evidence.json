@@ -1,0 +1,133 @@
+{
+  "at": "2026-10-29T17:31:11.151Z",
+  "browserTempPath": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "rows": [
+    {
+      "target": "prototype",
+      "url": "http://127.0.0.1:5179/",
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        1280,
+        600
+      ],
+      "document": {
+        "width": 1280,
+        "height": 625
+      },
+      "html": {
+        "clientHeight": 600,
+        "scrollHeight": 625
+      },
+      "body": {
+        "tag": "BODY",
+        "id": "",
+        "className": "compact-studio-page",
+        "text": "Variant B · High-fi v1 · Prototype controlsReal scene. Simulated input, saves an",
+        "x": 0,
+        "y": 4,
+        "width": 1280,
+        "height": 595.984375,
+        "right": 1280,
+        "bottom": 599.984375,
+        "position": "static",
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "scrollHeight": 596
+      },
+      "root": {
+        "tag": "DIV",
+        "id": "product",
+        "className": "",
+        "text": "ExitSintel · The searchSintel · The searchLine 1 / 3\n\n Recording\n  \n  \n\nPause\n W",
+        "x": 0,
+        "y": 4,
+        "width": 1280,
+        "height": 595.984375,
+        "right": 1280,
+        "bottom": 599.984375,
+        "position": "static",
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible"
+      },
+      "overflowNodes": [
+        {
+          "tag": "DIV",
+          "id": "notification-announcement",
+          "className": "sr-only",
+          "text": "",
+          "x": 0,
+          "y": 623.984375,
+          "width": 1,
+          "height": 1,
+          "right": 1,
+          "bottom": 624.984375,
+          "position": "absolute",
+          "display": "block",
+          "visibility": "visible",
+          "overflow": "hidden"
+        }
+      ]
+    },
+    {
+      "target": "app",
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=B&locale=en",
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        1280,
+        600
+      ],
+      "document": {
+        "width": 1280,
+        "height": 604
+      },
+      "html": {
+        "clientHeight": 600,
+        "scrollHeight": 604
+      },
+      "body": {
+        "tag": "BODY",
+        "id": "",
+        "className": "compact-studio-page",
+        "text": "ExitSintel · The searchSintel · The searchLine 1 / 3Recording · 0:05 leftWhat br",
+        "x": 0,
+        "y": 4,
+        "width": 1280,
+        "height": 600,
+        "right": 1280,
+        "bottom": 604,
+        "position": "static",
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "scrollHeight": 600
+      },
+      "root": {
+        "tag": "DIV",
+        "id": "root",
+        "className": "",
+        "text": "ExitSintel · The searchSintel · The searchLine 1 / 3Recording · 0:05 leftWhat br",
+        "x": 0,
+        "y": 4,
+        "width": 1280,
+        "height": 595.984375,
+        "right": 1280,
+        "bottom": 599.984375,
+        "position": "static",
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible"
+      },
+      "overflowNodes": []
+    }
+  ],
+  "browser": "Chrome 156.0.8078.49",
+  "finishedAt": "2026-10-29T17:31:15.474Z"
+}

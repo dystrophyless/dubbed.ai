@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-23T02:16:59.747Z",
+  "boundary": "Isolated static mock build, actual upload and selection UI; no processing authorization.",
+  "pageErrors": [],
+  "outcome": "failed",
+  "error": "TimeoutError: locator.press: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Start (seconds)', exact: true })\u001b[22m\n",
+  "url": "http://127.0.0.1:4281/new",
+  "main": null
+}

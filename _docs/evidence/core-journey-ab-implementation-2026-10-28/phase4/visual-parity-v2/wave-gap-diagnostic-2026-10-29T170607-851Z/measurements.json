@@ -1,0 +1,476 @@
+{
+  "generatedAt": "2026-10-29T17:06:11.140Z",
+  "browser": "156.0.8078.49",
+  "rows": [
+    {
+      "target": "prototype-A",
+      "url": "http://127.0.0.1:5178/",
+      "viewport": [
+        1280,
+        600
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "docHeight": 600,
+      "nodes": {
+        "#main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 577,
+            "bottom": 577
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "12px 32px 40px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "577px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        "#record-view": {
+          "rect": {
+            "x": 328,
+            "y": 56,
+            "width": 624,
+            "height": 481,
+            "bottom": 537
+          },
+          "display": "grid",
+          "position": "static",
+          "margin": "0px 296px",
+          "padding": "0px",
+          "gap": "24px",
+          "rowGap": "24px",
+          "gridRowGap": "24px",
+          "minHeight": "0px",
+          "height": "481px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        ".rehearsal": {
+          "rect": {
+            "x": 328,
+            "y": 56,
+            "width": 624,
+            "height": 481,
+            "bottom": 537
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "auto",
+          "height": "481px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        ".scene": {
+          "rect": {
+            "x": 328,
+            "y": 56,
+            "width": 624,
+            "height": 351,
+            "bottom": 407
+          },
+          "display": "flex",
+          "position": "relative",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "351px",
+          "lineHeight": "24px",
+          "overflow": "hidden"
+        },
+        ".script": {
+          "rect": {
+            "x": 328,
+            "y": 407,
+            "width": 624,
+            "height": 68,
+            "bottom": 475
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "68px",
+          "height": "68px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        "#dialogue": {
+          "rect": {
+            "x": 328,
+            "y": 411,
+            "width": 624,
+            "height": 60,
+            "bottom": 471
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "60px",
+          "lineHeight": "30px",
+          "overflow": "visible"
+        },
+        ".timeline": {
+          "rect": {
+            "x": 328,
+            "y": 475,
+            "width": 624,
+            "height": 62,
+            "bottom": 537
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "62px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        ".wave": {
+          "rect": {
+            "x": 328,
+            "y": 475,
+            "width": 624,
+            "height": 32,
+            "bottom": 507
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px 0px -32px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "32px",
+          "lineHeight": "24px",
+          "overflow": "hidden"
+        },
+        "#scrub": {
+          "rect": {
+            "x": 328,
+            "y": 475,
+            "width": 624,
+            "height": 32,
+            "bottom": 507
+          },
+          "display": "inline-block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "32px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        ".timeline-meta": {
+          "rect": {
+            "x": 328,
+            "y": 513,
+            "width": 624,
+            "height": 24,
+            "bottom": 537
+          },
+          "display": "flex",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "rowGap": "16px",
+          "gridRowGap": "16px",
+          "minHeight": "0px",
+          "height": "24px",
+          "lineHeight": "20px",
+          "overflow": "visible"
+        },
+        ".performance": {
+          "rect": {
+            "x": 976,
+            "y": 56,
+            "width": 272,
+            "height": 234,
+            "bottom": 290
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "12px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "auto",
+          "height": "234px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        }
+      }
+    },
+    {
+      "target": "app-A",
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=en",
+      "viewport": [
+        1280,
+        600
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "docHeight": 600,
+      "nodes": {
+        "#main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 589,
+            "bottom": 589
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "12px 32px 40px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "589px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        "#record-view": {
+          "rect": {
+            "x": 328,
+            "y": 56,
+            "width": 624,
+            "height": 493,
+            "bottom": 549
+          },
+          "display": "grid",
+          "position": "relative",
+          "margin": "0px 296px",
+          "padding": "0px",
+          "gap": "24px",
+          "rowGap": "24px",
+          "gridRowGap": "24px",
+          "minHeight": "0px",
+          "height": "493px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        ".rehearsal": {
+          "rect": {
+            "x": 328,
+            "y": 56,
+            "width": 624,
+            "height": 493,
+            "bottom": 549
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "auto",
+          "height": "493px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        ".scene": {
+          "rect": {
+            "x": 328,
+            "y": 56,
+            "width": 624,
+            "height": 351,
+            "bottom": 407
+          },
+          "display": "flex",
+          "position": "relative",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "351px",
+          "lineHeight": "24px",
+          "overflow": "hidden"
+        },
+        ".script": {
+          "rect": {
+            "x": 328,
+            "y": 407,
+            "width": 624,
+            "height": 68,
+            "bottom": 475
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "68px",
+          "height": "68px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        "#dialogue": {
+          "rect": {
+            "x": 328,
+            "y": 411,
+            "width": 624,
+            "height": 60,
+            "bottom": 471
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "60px",
+          "lineHeight": "30px",
+          "overflow": "visible"
+        },
+        ".timeline": {
+          "rect": {
+            "x": 328,
+            "y": 487,
+            "width": 624,
+            "height": 62,
+            "bottom": 549
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "12px 0px 0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "62px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        ".wave": {
+          "rect": {
+            "x": 328,
+            "y": 487,
+            "width": 624,
+            "height": 32,
+            "bottom": 519
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px 0px -32px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "32px",
+          "lineHeight": "24px",
+          "overflow": "hidden"
+        },
+        "#scrub": {
+          "rect": {
+            "x": 328,
+            "y": 487,
+            "width": 624,
+            "height": 32,
+            "bottom": 519
+          },
+          "display": "inline-block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "0px",
+          "height": "32px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        },
+        ".timeline-meta": {
+          "rect": {
+            "x": 328,
+            "y": 525,
+            "width": 624,
+            "height": 24,
+            "bottom": 549
+          },
+          "display": "flex",
+          "position": "static",
+          "margin": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "rowGap": "16px",
+          "gridRowGap": "16px",
+          "minHeight": "0px",
+          "height": "24px",
+          "lineHeight": "20px",
+          "overflow": "visible"
+        },
+        ".performance": {
+          "rect": {
+            "x": 976,
+            "y": 56,
+            "width": 272,
+            "height": 226,
+            "bottom": 282
+          },
+          "display": "block",
+          "position": "static",
+          "margin": "0px",
+          "padding": "12px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "gridRowGap": "normal",
+          "minHeight": "auto",
+          "height": "226px",
+          "lineHeight": "24px",
+          "overflow": "visible"
+        }
+      }
+    }
+  ]
+}

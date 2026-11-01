@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-23T18:33:30.9462704Z",
+  "head": "15f2075621c11b438ee38734640114f80b8dc9cf",
+  "boundary": "Current dirty frontend; seven frozen service/test paths hashed after independent full unit and build runs. Test-only visual harness edits may continue separately.",
+  "commands": [
+    {
+      "command": "npm.cmd run test",
+      "exitCode": 0,
+      "files": 33,
+      "tests": 143,
+      "durationSeconds": 37.67
+    },
+    {
+      "command": "npm.cmd run build",
+      "exitCode": 0,
+      "bundle": "index-CZFNQw9h.js",
+      "javascriptKilobytes": 832.43,
+      "css": "index-GYmorhYm.css",
+      "cssKilobytes": 47.56,
+      "warning": "bundle exceeds500kB"
+    }
+  ],
+  "files": [
+    {
+      "path": "frontend/src/services/contracts.ts",
+      "sha256": "0A790784EE05F1FF8C197BA4009D3C6AA82568039ABB0046E873C7E9EAACD995"
+    },
+    {
+      "path": "frontend/src/services/mock-store.ts",
+      "sha256": "C2CDDEFCB4D424A495C947938EF23B0AB1333A10ADD81283B0791EE453EF3576"
+    },
+    {
+      "path": "frontend/src/services/mock-ledger.ts",
+      "sha256": "538BED6CA3EDC4C8C3D4AC24A55D3FEBB186A9791A789E6CC771AA8EDADC564E"
+    },
+    {
+      "path": "frontend/src/services/mock-preparation.ts",
+      "sha256": "5FB0E473088228B7A0D2634334516E5EF4981C88451DF9D151BDCC6184E769BF"
+    },
+    {
+      "path": "frontend/tests/services/preparation-recovery.test.ts",
+      "sha256": "D53C259B93B6A91DAF2BEB404A6A1A9B5A328295FBC2FDBBA40DDA6B5048D0A2"
+    },
+    {
+      "path": "frontend/tests/processing/ProcessingScreen.test.tsx",
+      "sha256": "94BCA57F26482644D173903781F0C7324A5AFF3EFED18A67494923ACF3F22731"
+    },
+    {
+      "path": "frontend/tests/app/locale.test.tsx",
+      "sha256": "44BCCBCE32C4C3E325E7A6EA31673F577D6E94D753CC084D7F2CA8B67554EE01"
+    }
+  ]
+}

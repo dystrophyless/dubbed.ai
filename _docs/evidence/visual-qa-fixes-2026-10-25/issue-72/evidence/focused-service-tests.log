@@ -1,0 +1,9 @@
+
+ RUN  v5.0.5 D:/Program/python/Dubbed/frontend
+
+
+ Test Files  3 passed (3)
+      Tests  17 passed (17)
+   Start at  18:25:32
+   Duration  5.20s (environment 67%, setup 13%, tests 12%, transform 5%, import 3%)
+

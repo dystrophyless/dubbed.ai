@@ -1,0 +1,1743 @@
+{
+  "version": "core-journey-lowfi-v5",
+  "browser": "156.0.8078.48",
+  "date": "2026-10-27",
+  "environment": "Windows, actual 100% browser viewport, DPR1, coordinate/DOM operation; PNGs are viewport captures except named phone workspace full-page",
+  "checks": [
+    {
+      "scenario": "v5-workspace-1882x902-normal",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1882,
+          902
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 333,
+            "y": 129,
+            "width": 1216,
+            "height": 40,
+            "right": 1549,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 333,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 605.15625,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1432.25,
+            "y": 129,
+            "width": 116.75,
+            "height": 40,
+            "right": 1549,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 333,
+            "y": 185,
+            "width": 920,
+            "height": 517.5,
+            "right": 1253,
+            "bottom": 702.5
+          },
+          ".script": {
+            "x": 333,
+            "y": 702.5,
+            "width": 920,
+            "height": 95,
+            "right": 1253,
+            "bottom": 797.5
+          },
+          ".wave": {
+            "x": 333,
+            "y": 797.5,
+            "width": 920,
+            "height": 32,
+            "right": 1253,
+            "bottom": 829.5
+          },
+          ".timeline": {
+            "x": 333,
+            "y": 797.5,
+            "width": 920,
+            "height": 82,
+            "right": 1253,
+            "bottom": 879.5
+          },
+          "#time": {
+            "x": 333,
+            "y": 851,
+            "width": 73.84375,
+            "height": 21,
+            "right": 406.84375,
+            "bottom": 872
+          },
+          "#volume": {
+            "x": 1171,
+            "y": 845.5,
+            "width": 80,
+            "height": 32,
+            "right": 1251,
+            "bottom": 877.5
+          },
+          ".performance": {
+            "x": 1277,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1549,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1882x902-long",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1882,
+          902
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 357.4375,
+            "y": 129,
+            "width": 1167.109375,
+            "height": 40,
+            "right": 1524.546875,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 357.4375,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 629.59375,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1407.796875,
+            "y": 129,
+            "width": 116.75,
+            "height": 40,
+            "right": 1524.546875,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 357.4375,
+            "y": 185,
+            "width": 871.109375,
+            "height": 489.984375,
+            "right": 1228.546875,
+            "bottom": 674.984375
+          },
+          ".script": {
+            "x": 357.4375,
+            "y": 674.984375,
+            "width": 871.109375,
+            "height": 129,
+            "right": 1228.546875,
+            "bottom": 803.984375
+          },
+          ".wave": {
+            "x": 357.4375,
+            "y": 803.984375,
+            "width": 871.109375,
+            "height": 32,
+            "right": 1228.546875,
+            "bottom": 835.984375
+          },
+          ".timeline": {
+            "x": 357.4375,
+            "y": 803.984375,
+            "width": 871.109375,
+            "height": 82,
+            "right": 1228.546875,
+            "bottom": 885.984375
+          },
+          "#time": {
+            "x": 357.4375,
+            "y": 857.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 431.28125,
+            "bottom": 878.484375
+          },
+          "#volume": {
+            "x": 1146.546875,
+            "y": 851.984375,
+            "width": 80,
+            "height": 32,
+            "right": 1226.546875,
+            "bottom": 883.984375
+          },
+          ".performance": {
+            "x": 1252.546875,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1524.546875,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1920x910-normal",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1920,
+          910
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 352,
+            "y": 129,
+            "width": 1216,
+            "height": 40,
+            "right": 1568,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 352,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 624.15625,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1451.25,
+            "y": 129,
+            "width": 116.75,
+            "height": 40,
+            "right": 1568,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 352,
+            "y": 185,
+            "width": 920,
+            "height": 517.5,
+            "right": 1272,
+            "bottom": 702.5
+          },
+          ".script": {
+            "x": 352,
+            "y": 702.5,
+            "width": 920,
+            "height": 95,
+            "right": 1272,
+            "bottom": 797.5
+          },
+          ".wave": {
+            "x": 352,
+            "y": 797.5,
+            "width": 920,
+            "height": 32,
+            "right": 1272,
+            "bottom": 829.5
+          },
+          ".timeline": {
+            "x": 352,
+            "y": 797.5,
+            "width": 920,
+            "height": 82,
+            "right": 1272,
+            "bottom": 879.5
+          },
+          "#time": {
+            "x": 352,
+            "y": 851,
+            "width": 73.84375,
+            "height": 21,
+            "right": 425.84375,
+            "bottom": 872
+          },
+          "#volume": {
+            "x": 1190,
+            "y": 845.5,
+            "width": 80,
+            "height": 32,
+            "right": 1270,
+            "bottom": 877.5
+          },
+          ".performance": {
+            "x": 1296,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1568,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1920x910-long",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1920,
+          910
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 369.328125,
+            "y": 129,
+            "width": 1181.328125,
+            "height": 40,
+            "right": 1550.65625,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 369.328125,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 641.484375,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1433.90625,
+            "y": 129,
+            "width": 116.75,
+            "height": 40,
+            "right": 1550.65625,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 369.328125,
+            "y": 185,
+            "width": 885.328125,
+            "height": 497.984375,
+            "right": 1254.65625,
+            "bottom": 682.984375
+          },
+          ".script": {
+            "x": 369.328125,
+            "y": 682.984375,
+            "width": 885.328125,
+            "height": 129,
+            "right": 1254.65625,
+            "bottom": 811.984375
+          },
+          ".wave": {
+            "x": 369.328125,
+            "y": 811.984375,
+            "width": 885.328125,
+            "height": 32,
+            "right": 1254.65625,
+            "bottom": 843.984375
+          },
+          ".timeline": {
+            "x": 369.328125,
+            "y": 811.984375,
+            "width": 885.328125,
+            "height": 82,
+            "right": 1254.65625,
+            "bottom": 893.984375
+          },
+          "#time": {
+            "x": 369.328125,
+            "y": 865.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 443.171875,
+            "bottom": 886.484375
+          },
+          "#volume": {
+            "x": 1172.65625,
+            "y": 859.984375,
+            "width": 80,
+            "height": 32,
+            "right": 1252.65625,
+            "bottom": 891.984375
+          },
+          ".performance": {
+            "x": 1278.65625,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1550.65625,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1440x900-normal",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 112,
+            "y": 129,
+            "width": 1216,
+            "height": 40,
+            "right": 1328,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 112,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 384.15625,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1211.25,
+            "y": 129,
+            "width": 116.75,
+            "height": 40,
+            "right": 1328,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 112,
+            "y": 185,
+            "width": 920,
+            "height": 517.5,
+            "right": 1032,
+            "bottom": 702.5
+          },
+          ".script": {
+            "x": 112,
+            "y": 702.5,
+            "width": 920,
+            "height": 95,
+            "right": 1032,
+            "bottom": 797.5
+          },
+          ".wave": {
+            "x": 112,
+            "y": 797.5,
+            "width": 920,
+            "height": 32,
+            "right": 1032,
+            "bottom": 829.5
+          },
+          ".timeline": {
+            "x": 112,
+            "y": 797.5,
+            "width": 920,
+            "height": 82,
+            "right": 1032,
+            "bottom": 879.5
+          },
+          "#time": {
+            "x": 112,
+            "y": 851,
+            "width": 73.84375,
+            "height": 21,
+            "right": 185.84375,
+            "bottom": 872
+          },
+          "#volume": {
+            "x": 950,
+            "y": 845.5,
+            "width": 80,
+            "height": 32,
+            "right": 1030,
+            "bottom": 877.5
+          },
+          ".performance": {
+            "x": 1056,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1328,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1440x900-long",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 138.21875,
+            "y": 129,
+            "width": 1163.546875,
+            "height": 40,
+            "right": 1301.765625,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 138.21875,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 410.375,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1185.015625,
+            "y": 129,
+            "width": 116.75,
+            "height": 40,
+            "right": 1301.765625,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 138.21875,
+            "y": 185,
+            "width": 867.546875,
+            "height": 487.984375,
+            "right": 1005.765625,
+            "bottom": 672.984375
+          },
+          ".script": {
+            "x": 138.21875,
+            "y": 672.984375,
+            "width": 867.546875,
+            "height": 129,
+            "right": 1005.765625,
+            "bottom": 801.984375
+          },
+          ".wave": {
+            "x": 138.21875,
+            "y": 801.984375,
+            "width": 867.546875,
+            "height": 32,
+            "right": 1005.765625,
+            "bottom": 833.984375
+          },
+          ".timeline": {
+            "x": 138.21875,
+            "y": 801.984375,
+            "width": 867.546875,
+            "height": 82,
+            "right": 1005.765625,
+            "bottom": 883.984375
+          },
+          "#time": {
+            "x": 138.21875,
+            "y": 855.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 212.0625,
+            "bottom": 876.484375
+          },
+          "#volume": {
+            "x": 923.765625,
+            "y": 849.984375,
+            "width": 80,
+            "height": 32,
+            "right": 1003.765625,
+            "bottom": 881.984375
+          },
+          ".performance": {
+            "x": 1029.765625,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1301.765625,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1366x650-normal",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1366,
+          650
+        ],
+        "scroll": 0,
+        "compact": true,
+        "items": {
+          ".project-header": {
+            "x": 145.671875,
+            "y": 109,
+            "width": 1074.65625,
+            "height": 40,
+            "right": 1220.328125,
+            "bottom": 149
+          },
+          "#heading": {
+            "x": 145.671875,
+            "y": 111,
+            "width": 238.140625,
+            "height": 36,
+            "right": 383.8125,
+            "bottom": 147
+          },
+          "#header-actions": {
+            "x": 1103.578125,
+            "y": 109,
+            "width": 116.75,
+            "height": 40,
+            "right": 1220.328125,
+            "bottom": 149
+          },
+          ".scene": {
+            "x": 145.671875,
+            "y": 165,
+            "width": 666.65625,
+            "height": 374.984375,
+            "right": 812.328125,
+            "bottom": 539.984375
+          },
+          ".script": {
+            "x": 852.328125,
+            "y": 214,
+            "width": 352,
+            "height": 64,
+            "right": 1204.328125,
+            "bottom": 278
+          },
+          ".wave": {
+            "x": 145.671875,
+            "y": 551.984375,
+            "width": 666.65625,
+            "height": 32,
+            "right": 812.328125,
+            "bottom": 583.984375
+          },
+          ".timeline": {
+            "x": 145.671875,
+            "y": 551.984375,
+            "width": 666.65625,
+            "height": 82,
+            "right": 812.328125,
+            "bottom": 633.984375
+          },
+          "#time": {
+            "x": 145.671875,
+            "y": 605.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 219.515625,
+            "bottom": 626.484375
+          },
+          "#volume": {
+            "x": 730.328125,
+            "y": 599.984375,
+            "width": 80,
+            "height": 32,
+            "right": 810.328125,
+            "bottom": 631.984375
+          },
+          ".performance": {
+            "x": 836.328125,
+            "y": 165,
+            "width": 384,
+            "height": 292,
+            "right": 1220.328125,
+            "bottom": 457
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1366x650-long",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1366,
+          650
+        ],
+        "scroll": 0,
+        "compact": true,
+        "items": {
+          ".project-header": {
+            "x": 145.671875,
+            "y": 109,
+            "width": 1074.65625,
+            "height": 40,
+            "right": 1220.328125,
+            "bottom": 149
+          },
+          "#heading": {
+            "x": 145.671875,
+            "y": 111,
+            "width": 238.140625,
+            "height": 36,
+            "right": 383.8125,
+            "bottom": 147
+          },
+          "#header-actions": {
+            "x": 1103.578125,
+            "y": 109,
+            "width": 116.75,
+            "height": 40,
+            "right": 1220.328125,
+            "bottom": 149
+          },
+          ".scene": {
+            "x": 145.671875,
+            "y": 165,
+            "width": 666.65625,
+            "height": 374.984375,
+            "right": 812.328125,
+            "bottom": 539.984375
+          },
+          ".script": {
+            "x": 852.328125,
+            "y": 214,
+            "width": 352,
+            "height": 128,
+            "right": 1204.328125,
+            "bottom": 342
+          },
+          ".wave": {
+            "x": 145.671875,
+            "y": 551.984375,
+            "width": 666.65625,
+            "height": 32,
+            "right": 812.328125,
+            "bottom": 583.984375
+          },
+          ".timeline": {
+            "x": 145.671875,
+            "y": 551.984375,
+            "width": 666.65625,
+            "height": 82,
+            "right": 812.328125,
+            "bottom": 633.984375
+          },
+          "#time": {
+            "x": 145.671875,
+            "y": 605.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 219.515625,
+            "bottom": 626.484375
+          },
+          "#volume": {
+            "x": 730.328125,
+            "y": 599.984375,
+            "width": 80,
+            "height": 32,
+            "right": 810.328125,
+            "bottom": 631.984375
+          },
+          ".performance": {
+            "x": 836.328125,
+            "y": 165,
+            "width": 384,
+            "height": 356,
+            "right": 1220.328125,
+            "bottom": 521
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1280x600-normal",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scroll": 0,
+        "compact": true,
+        "items": {
+          ".project-header": {
+            "x": 147.109375,
+            "y": 109,
+            "width": 985.765625,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          "#heading": {
+            "x": 147.109375,
+            "y": 111,
+            "width": 238.140625,
+            "height": 36,
+            "right": 385.25,
+            "bottom": 147
+          },
+          "#header-actions": {
+            "x": 1016.125,
+            "y": 109,
+            "width": 116.75,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          ".scene": {
+            "x": 147.109375,
+            "y": 165,
+            "width": 577.765625,
+            "height": 324.984375,
+            "right": 724.875,
+            "bottom": 489.984375
+          },
+          ".script": {
+            "x": 764.875,
+            "y": 214,
+            "width": 352,
+            "height": 64,
+            "right": 1116.875,
+            "bottom": 278
+          },
+          ".wave": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 32,
+            "right": 724.875,
+            "bottom": 533.984375
+          },
+          ".timeline": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 82,
+            "right": 724.875,
+            "bottom": 583.984375
+          },
+          "#time": {
+            "x": 147.109375,
+            "y": 555.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 220.953125,
+            "bottom": 576.484375
+          },
+          "#volume": {
+            "x": 642.875,
+            "y": 549.984375,
+            "width": 80,
+            "height": 32,
+            "right": 722.875,
+            "bottom": 581.984375
+          },
+          ".performance": {
+            "x": 748.875,
+            "y": 165,
+            "width": 384,
+            "height": 292,
+            "right": 1132.875,
+            "bottom": 457
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-workspace-1280x600-long",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scroll": 0,
+        "compact": true,
+        "items": {
+          ".project-header": {
+            "x": 147.109375,
+            "y": 109,
+            "width": 985.765625,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          "#heading": {
+            "x": 147.109375,
+            "y": 111,
+            "width": 238.140625,
+            "height": 36,
+            "right": 385.25,
+            "bottom": 147
+          },
+          "#header-actions": {
+            "x": 1016.125,
+            "y": 109,
+            "width": 116.75,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          ".scene": {
+            "x": 147.109375,
+            "y": 165,
+            "width": 577.765625,
+            "height": 324.984375,
+            "right": 724.875,
+            "bottom": 489.984375
+          },
+          ".script": {
+            "x": 764.875,
+            "y": 214,
+            "width": 352,
+            "height": 128,
+            "right": 1116.875,
+            "bottom": 342
+          },
+          ".wave": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 32,
+            "right": 724.875,
+            "bottom": 533.984375
+          },
+          ".timeline": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 82,
+            "right": 724.875,
+            "bottom": 583.984375
+          },
+          "#time": {
+            "x": 147.109375,
+            "y": 555.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 220.953125,
+            "bottom": 576.484375
+          },
+          "#volume": {
+            "x": 642.875,
+            "y": 549.984375,
+            "width": 80,
+            "height": 32,
+            "right": 722.875,
+            "bottom": 581.984375
+          },
+          ".performance": {
+            "x": 748.875,
+            "y": 165,
+            "width": 384,
+            "height": 356,
+            "right": 1132.875,
+            "bottom": 521
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-desktop-recording",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 112,
+            "y": 129,
+            "width": 1216,
+            "height": 40,
+            "right": 1328,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 112,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 384.15625,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1211.25,
+            "y": 129,
+            "width": 116.75,
+            "height": 40,
+            "right": 1328,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 112,
+            "y": 185,
+            "width": 920,
+            "height": 517.5,
+            "right": 1032,
+            "bottom": 702.5
+          },
+          ".script": {
+            "x": 112,
+            "y": 702.5,
+            "width": 920,
+            "height": 95,
+            "right": 1032,
+            "bottom": 797.5
+          },
+          ".wave": {
+            "x": 112,
+            "y": 797.5,
+            "width": 920,
+            "height": 32,
+            "right": 1032,
+            "bottom": 829.5
+          },
+          ".timeline": {
+            "x": 112,
+            "y": 797.5,
+            "width": 920,
+            "height": 82,
+            "right": 1032,
+            "bottom": 879.5
+          },
+          "#time": {
+            "x": 112,
+            "y": 851,
+            "width": 73.84375,
+            "height": 21,
+            "right": 185.84375,
+            "bottom": 872
+          },
+          "#volume": {
+            "x": 950,
+            "y": 845.5,
+            "width": 80,
+            "height": 32,
+            "right": 1030,
+            "bottom": 877.5
+          },
+          ".performance": {
+            "x": 1056,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1328,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-desktop-candidate",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 112,
+            "y": 129,
+            "width": 1216,
+            "height": 40,
+            "right": 1328,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 112,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 384.15625,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1211.25,
+            "y": 129,
+            "width": 116.75,
+            "height": 40,
+            "right": 1328,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 112,
+            "y": 185,
+            "width": 920,
+            "height": 517.5,
+            "right": 1032,
+            "bottom": 702.5
+          },
+          ".script": {
+            "x": 112,
+            "y": 702.5,
+            "width": 920,
+            "height": 95,
+            "right": 1032,
+            "bottom": 797.5
+          },
+          ".wave": {
+            "x": 112,
+            "y": 797.5,
+            "width": 920,
+            "height": 32,
+            "right": 1032,
+            "bottom": 829.5
+          },
+          ".timeline": {
+            "x": 112,
+            "y": 797.5,
+            "width": 920,
+            "height": 82,
+            "right": 1032,
+            "bottom": 879.5
+          },
+          "#time": {
+            "x": 112,
+            "y": 851,
+            "width": 73.203125,
+            "height": 21,
+            "right": 185.203125,
+            "bottom": 872
+          },
+          "#volume": {
+            "x": 950,
+            "y": 845.5,
+            "width": 80,
+            "height": 32,
+            "right": 1030,
+            "bottom": 877.5
+          },
+          ".performance": {
+            "x": 1056,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1328,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-desktop-saved",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 112,
+            "y": 129,
+            "width": 1216,
+            "height": 40,
+            "right": 1328,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 112,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 384.15625,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1328,
+            "y": 149,
+            "width": 0,
+            "height": 0,
+            "right": 1328,
+            "bottom": 149
+          },
+          ".scene": {
+            "x": 112,
+            "y": 185,
+            "width": 920,
+            "height": 517.5,
+            "right": 1032,
+            "bottom": 702.5
+          },
+          ".script": {
+            "x": 112,
+            "y": 702.5,
+            "width": 920,
+            "height": 95,
+            "right": 1032,
+            "bottom": 797.5
+          },
+          ".wave": {
+            "x": 112,
+            "y": 797.5,
+            "width": 920,
+            "height": 32,
+            "right": 1032,
+            "bottom": 829.5
+          },
+          ".timeline": {
+            "x": 112,
+            "y": 797.5,
+            "width": 920,
+            "height": 82,
+            "right": 1032,
+            "bottom": 879.5
+          },
+          "#time": {
+            "x": 112,
+            "y": 851,
+            "width": 73.84375,
+            "height": 21,
+            "right": 185.84375,
+            "bottom": 872
+          },
+          "#volume": {
+            "x": 950,
+            "y": 845.5,
+            "width": 80,
+            "height": 32,
+            "right": 1030,
+            "bottom": 877.5
+          },
+          ".performance": {
+            "x": 1056,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1328,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-desktop-completed",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1882,
+          902
+        ],
+        "scroll": 0,
+        "compact": false,
+        "items": {
+          ".project-header": {
+            "x": 333,
+            "y": 129,
+            "width": 1216,
+            "height": 40,
+            "right": 1549,
+            "bottom": 169
+          },
+          "#heading": {
+            "x": 333,
+            "y": 129,
+            "width": 272.15625,
+            "height": 40,
+            "right": 605.15625,
+            "bottom": 169
+          },
+          "#header-actions": {
+            "x": 1464.25,
+            "y": 129,
+            "width": 84.75,
+            "height": 40,
+            "right": 1549,
+            "bottom": 169
+          },
+          ".scene": {
+            "x": 333,
+            "y": 185,
+            "width": 920,
+            "height": 517.5,
+            "right": 1253,
+            "bottom": 702.5
+          },
+          ".script": {
+            "x": 333,
+            "y": 702.5,
+            "width": 920,
+            "height": 95,
+            "right": 1253,
+            "bottom": 797.5
+          },
+          ".wave": {
+            "x": 333,
+            "y": 797.5,
+            "width": 920,
+            "height": 32,
+            "right": 1253,
+            "bottom": 829.5
+          },
+          ".timeline": {
+            "x": 333,
+            "y": 797.5,
+            "width": 920,
+            "height": 82,
+            "right": 1253,
+            "bottom": 879.5
+          },
+          "#time": {
+            "x": 333,
+            "y": 851,
+            "width": 73.84375,
+            "height": 21,
+            "right": 406.84375,
+            "bottom": 872
+          },
+          "#volume": {
+            "x": 1171,
+            "y": 845.5,
+            "width": 80,
+            "height": 32,
+            "right": 1251,
+            "bottom": 877.5
+          },
+          ".performance": {
+            "x": 1277,
+            "y": 185,
+            "width": 272,
+            "height": 344,
+            "right": 1549,
+            "bottom": 529
+          },
+          "#to-result": {
+            "x": 1464.25,
+            "y": 129,
+            "width": 84.75,
+            "height": 40,
+            "right": 1549,
+            "bottom": 169
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-short-completed-long",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scroll": 0,
+        "compact": true,
+        "items": {
+          ".project-header": {
+            "x": 147.109375,
+            "y": 109,
+            "width": 985.765625,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          "#heading": {
+            "x": 147.109375,
+            "y": 111,
+            "width": 238.140625,
+            "height": 36,
+            "right": 385.25,
+            "bottom": 147
+          },
+          "#header-actions": {
+            "x": 1048.125,
+            "y": 109,
+            "width": 84.75,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          ".scene": {
+            "x": 147.109375,
+            "y": 165,
+            "width": 577.765625,
+            "height": 324.984375,
+            "right": 724.875,
+            "bottom": 489.984375
+          },
+          ".script": {
+            "x": 764.875,
+            "y": 214,
+            "width": 352,
+            "height": 128,
+            "right": 1116.875,
+            "bottom": 342
+          },
+          ".wave": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 32,
+            "right": 724.875,
+            "bottom": 533.984375
+          },
+          ".timeline": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 82,
+            "right": 724.875,
+            "bottom": 583.984375
+          },
+          "#time": {
+            "x": 147.109375,
+            "y": 555.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 220.953125,
+            "bottom": 576.484375
+          },
+          "#volume": {
+            "x": 642.875,
+            "y": 549.984375,
+            "width": 80,
+            "height": 32,
+            "right": 722.875,
+            "bottom": 581.984375
+          },
+          ".performance": {
+            "x": 748.875,
+            "y": 165,
+            "width": 384,
+            "height": 356,
+            "right": 1132.875,
+            "bottom": 521
+          },
+          "#to-result": {
+            "x": 1048.125,
+            "y": 109,
+            "width": 84.75,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-short-recording-long",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scroll": 0,
+        "compact": true,
+        "items": {
+          ".project-header": {
+            "x": 147.109375,
+            "y": 109,
+            "width": 985.765625,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          "#heading": {
+            "x": 147.109375,
+            "y": 111,
+            "width": 238.140625,
+            "height": 36,
+            "right": 385.25,
+            "bottom": 147
+          },
+          "#header-actions": {
+            "x": 1048.125,
+            "y": 109,
+            "width": 84.75,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          ".scene": {
+            "x": 147.109375,
+            "y": 165,
+            "width": 577.765625,
+            "height": 324.984375,
+            "right": 724.875,
+            "bottom": 489.984375
+          },
+          ".script": {
+            "x": 764.875,
+            "y": 214,
+            "width": 352,
+            "height": 128,
+            "right": 1116.875,
+            "bottom": 342
+          },
+          ".wave": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 32,
+            "right": 724.875,
+            "bottom": 533.984375
+          },
+          ".timeline": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 82,
+            "right": 724.875,
+            "bottom": 583.984375
+          },
+          "#time": {
+            "x": 147.109375,
+            "y": 555.484375,
+            "width": 73.84375,
+            "height": 21,
+            "right": 220.953125,
+            "bottom": 576.484375
+          },
+          "#volume": {
+            "x": 642.875,
+            "y": 549.984375,
+            "width": 80,
+            "height": 32,
+            "right": 722.875,
+            "bottom": 581.984375
+          },
+          ".performance": {
+            "x": 748.875,
+            "y": 165,
+            "width": 384,
+            "height": 356,
+            "right": 1132.875,
+            "bottom": 521
+          },
+          "#to-result": {
+            "x": 1048.125,
+            "y": 109,
+            "width": 84.75,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          }
+        }
+      }
+    },
+    {
+      "scenario": "v5-short-candidate-long",
+      "result": "PASS",
+      "geometry": {
+        "viewport": [
+          1280,
+          600
+        ],
+        "scroll": 0,
+        "compact": true,
+        "items": {
+          ".project-header": {
+            "x": 147.109375,
+            "y": 109,
+            "width": 985.765625,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          "#heading": {
+            "x": 147.109375,
+            "y": 111,
+            "width": 238.140625,
+            "height": 36,
+            "right": 385.25,
+            "bottom": 147
+          },
+          "#header-actions": {
+            "x": 1048.125,
+            "y": 109,
+            "width": 84.75,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          },
+          ".scene": {
+            "x": 147.109375,
+            "y": 165,
+            "width": 577.765625,
+            "height": 324.984375,
+            "right": 724.875,
+            "bottom": 489.984375
+          },
+          ".script": {
+            "x": 764.875,
+            "y": 214,
+            "width": 352,
+            "height": 128,
+            "right": 1116.875,
+            "bottom": 342
+          },
+          ".wave": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 32,
+            "right": 724.875,
+            "bottom": 533.984375
+          },
+          ".timeline": {
+            "x": 147.109375,
+            "y": 501.984375,
+            "width": 577.765625,
+            "height": 82,
+            "right": 724.875,
+            "bottom": 583.984375
+          },
+          "#time": {
+            "x": 147.109375,
+            "y": 555.484375,
+            "width": 73.203125,
+            "height": 21,
+            "right": 220.3125,
+            "bottom": 576.484375
+          },
+          "#volume": {
+            "x": 642.875,
+            "y": 549.984375,
+            "width": 80,
+            "height": 32,
+            "right": 722.875,
+            "bottom": 581.984375
+          },
+          ".performance": {
+            "x": 748.875,
+            "y": 165,
+            "width": 384,
+            "height": 356,
+            "right": 1132.875,
+            "bottom": 521
+          },
+          "#to-result": {
+            "x": 1048.125,
+            "y": 109,
+            "width": 84.75,
+            "height": 40,
+            "right": 1132.875,
+            "bottom": 149
+          }
+        }
+      }
+    }
+  ],
+  "pageErrors": []
+}

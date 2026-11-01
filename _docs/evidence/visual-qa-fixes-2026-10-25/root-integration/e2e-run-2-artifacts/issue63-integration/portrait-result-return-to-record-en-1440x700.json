@@ -1,0 +1,229 @@
+{
+  "capture": "portrait-result-return-to-record-en-1440x700",
+  "mode": "playwright-viewport",
+  "screenshot": {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/root-integration/e2e-run-2-artifacts/issue63-integration/portrait-result-return-to-record-en-1440x700.png",
+    "sha256": "d4e56a184ae94ad24f37bafb4ef252c1a50103686476cc7e6db6d8cd4843c617",
+    "bytes": 37596
+  },
+  "metrics": {
+    "url": "http://127.0.0.1:4563/projects/aa9d27ca-98f5-4c67-bfaa-9c83e2a14622/record",
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 700,
+      "outerWidth": 1440,
+      "outerHeight": 700
+    },
+    "devicePixelRatio": 1,
+    "bodyZoom": "1",
+    "documentWidth": 1440,
+    "documentHeight": 1208,
+    "horizontalOverflow": false,
+    "scrollY": 0,
+    "language": "en",
+    "title": "Dubbed",
+    "recording": {
+      "line": "Line 4 of 4All right, I have the last number. The blue mark is clear, the light has faded, and the panel looks exactly as it did when we started.Capture window: 24.50–34.61 sAccepted takes: 4 / 4",
+      "dialogue": "All right, I have the last number. The blue mark is clear, the light has faded, and the panel looks exactly as it did when we started.",
+      "stage": {
+        "x": 511.11,
+        "y": 189,
+        "width": 417.77,
+        "height": 234.98,
+        "top": 189,
+        "right": 928.88,
+        "bottom": 423.98
+      },
+      "lineHeader": {
+        "x": 400,
+        "y": 435.98,
+        "width": 640,
+        "height": 104,
+        "top": 435.98,
+        "right": 1040,
+        "bottom": 539.98
+      },
+      "dialogueBounds": {
+        "x": 400,
+        "y": 465.98,
+        "width": 545.66,
+        "height": 48,
+        "top": 465.98,
+        "right": 945.66,
+        "bottom": 513.98
+      },
+      "timeline": {
+        "x": 400,
+        "y": 551.98,
+        "width": 640,
+        "height": 52,
+        "top": 551.98,
+        "right": 1040,
+        "bottom": 603.98
+      },
+      "panel": {
+        "x": 400,
+        "y": 615.98,
+        "width": 640,
+        "height": 92,
+        "top": 615.98,
+        "right": 1040,
+        "bottom": 707.98
+      },
+      "panelPosition": "static",
+      "phonePanelFlow": null,
+      "dialogueAndTimelineClearOfPanel": true
+    },
+    "media": {
+      "width": 540,
+      "height": 960,
+      "duration": 35.9591,
+      "readyState": 1,
+      "currentSrc": "blob:http://127.0.0.1:4563/bbb122a5-7e57-4c1c-9549-15cb7fa14163"
+    },
+    "dialog": null,
+    "activeElement": {
+      "tagName": "BODY",
+      "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits84LanguageENRUSign outRecord your voiceportrait-long-sourceRecordProgress savedProjectsLine 4 of 4All right, I have the last number. The blue mark is clear, the light has faded, and the panel looks exactly as it did when we started.Capture window: 24.50–34.61 sAccepted takes: 4 / 4OriginalMy recordingPlay0:00 / 0:10Record linePrevious lineNext lineMicrophoneDecoding local audio for waveform preview…Original video volumeRecording statusPreviously accepted takeAll lines have accepted takes.Assemble resultThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.Process againProcessing again is permanently locked after the first accepted take. Deleting a take will not unlock it.",
+      "role": null,
+      "className": ""
+    },
+    "buttons": [
+      {
+        "label": "Sign out",
+        "variant": "ghost",
+        "size": "small",
+        "width": 75.55,
+        "height": 32,
+        "top": 16,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Open navigation",
+        "variant": "ghost",
+        "size": "icon",
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": false
+      },
+      {
+        "label": "Projects",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 108.75,
+        "height": 40,
+        "top": 113,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Play",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 80.7,
+        "height": 40,
+        "top": 617.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Record line",
+        "variant": "primary",
+        "size": "medium",
+        "width": 125.66,
+        "height": 40,
+        "top": 667.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Previous line",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 134.45,
+        "height": 40,
+        "top": 667.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Next line",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 110.33,
+        "height": 40,
+        "top": 667.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": true,
+        "visible": true
+      },
+      {
+        "label": "Microphone",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 131.31,
+        "height": 40,
+        "top": 667.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Assemble result",
+        "variant": "primary",
+        "size": "medium",
+        "width": 131.89,
+        "height": 40,
+        "top": 953.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Process again",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 118.75,
+        "height": 40,
+        "top": 1049.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": true,
+        "visible": true
+      }
+    ],
+    "visibleRouteHeadings": [
+      "Record your voice",
+      "Previously accepted take"
+    ],
+    "cdp": null
+  }
+}

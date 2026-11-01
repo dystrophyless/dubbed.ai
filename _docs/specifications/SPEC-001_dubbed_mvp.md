@@ -20,7 +20,7 @@ This specification covers the complete first-version product and shared contract
 
 - **Confirmed:** product behavior explicitly chosen in the chat or accepted in principle through the billing discussion. Described in §§3–5 and traced in §13.
 - **Proposed design:** architecture, operations, state names, data boundaries, and consistency rules in §§6–10. These make the draft reviewable; they are not claims about existing code or independently approved technical decisions.
-- **Open:** unresolved portions of D01–D13 in §15; D04/D05/D06/D13 product behavior is resolved. Do not substitute a guessed value or behavior. Related acceptance criteria remain blocked until resolved.
+- **Open:** unresolved portions of D01–D13 in §15; D04/D06 product behavior is resolved; D05/D13 were withdrawn by the2026-10-27 removal. Do not substitute a guessed value or behavior. Related acceptance criteria remain blocked until resolved.
 
 All requirements are intended contracts for this draft; none are evidence of implementation. A source conflict must be recorded and resolved. A later explicit user answer takes precedence over an earlier suggestion. In particular, video is hidden during recording and there is no countdown.
 
@@ -30,16 +30,16 @@ All requirements are intended contracts for this draft; none are evidence of imp
 |---|---|
 | Source | Uploaded original video and its audio, with an canonical selected-section timeline. |
 | Project | Account-owned source, preparation, corrections, takes, progress, and finished results. |
-| Preparation | AI-assisted transcript, speaker labels, timed turns, and separated background preview. |
+| Preparation | AI-assisted transcript/sound captions,timed turns and separated background. Speaker identity extraction is unavailable and is not required. |
 | Turn | One character's recording unit; may contain speech or a nonverbal performance. |
 | Performance interval | The detected/edited content positions within the source timeline. |
 | Recording window | Performance interval plus bounded margins, maximum capture interval; shorter performances are allowed. |
-| Speaker | A project-local voice label; not verified actor/character/face recognition. |
+| Speaker metadata | Unavailable optional external metadata, not a required product record or extraction output. Current UI renders no name/numbered identity and never fabricates one; absence is valid. |
 | Take | A user's microphone recording for one turn/window revision. |
 | Background | Processed music/effects with original character voices removed as well as separation permits. |
 | Finished result | A completed export of a particular project revision, distinct from pending edits. |
 | Share link | Unlisted public viewing capability for the project's current shared finished result. |
-| Preparation attempt | One user-authorized initial processing or reprocessing request. Internal worker retries are not new billable attempts. |
+| Preparation attempt | One authorized initial preparation or explicit recovery of a confirmed technical failure. Internal worker retries are not new billable attempts; unknown outcomes reconcile existing identity. Delivered preparation has no user rerun/reset. |
 
 ## 2. Scope and current repository state
 
@@ -47,12 +47,12 @@ All requirements are intended contracts for this draft; none are evidence of imp
 
 - Account entry and free-credit grant; public landing and signed-in New dub entry.
 - MP4/MOV/WebM uploads up to 10 minutes and 250 MB, with a selected section up to two minutes; mixed English/Russian preparation.
-- Full-video subtitled review; automatic speakers, timing, turn grouping, and background separation.
-- Text/speaker corrections, draggable window boundaries, and manually adding a missed line.
+- Full-video subtitled review; automatic timing,turn grouping and background separation; no extracted speaker identity.
+- Historical withdrawn scope: manual text/speaker corrections,draggable window editing and missed-line addition. No speaker UI/input is restored by these old examples.
 - Overlapping character turns and detected laughter/screams/gasps.
 - Fixed-window recording with original reference audio and hidden video, one safely replaceable take per turn.
 - Resumable projects, completed full-video playback, re-recording, download, unlisted sharing.
-- Duration-priced credits, one included preparation retry, non-expiring purchased packs, and project-slot upgrade after first purchase.
+- Duration-priced initial preparation, non-expiring purchased packs, and project-slot upgrade after first purchase.
 - Shared ownership, consistency, error recovery, evidence, and integration conditions needed for that journey.
 
 ### 2.2 Excluded
@@ -82,7 +82,7 @@ Proposed route responsibilities, not finalized URLs or wireframes:
 | Landing / sign-in | Explain value/trial; establish account identity. |
 | New dub | Select/upload source, understand limits, project capacity, and preparation quote. |
 | Processing | Show real job progress/state and a recoverable failure, without representing incomplete preparation as ready. |
-| Prepare | Full-video subtitles, highlighted selectable line list, background audition, corrections, allowed AI retry, Start dubbing. |
+| Prepare | Full-video subtitles, highlighted selectable line list, background audition, corrections, Start dubbing. |
 | Record | Current turn/reference audition, active take, review/retry/next, correction access. |
 | Result | Full completed playback, return to a turn, export/download/share. |
 | My projects | Find and resume account work; show honest preparation/recording/export state; delete chosen projects. |
@@ -99,31 +99,33 @@ Sign in before uploading. Target MP4, MOV and WebM containers, a maximum origina
 
 Target desktop Chrome/Edge/Firefox/Safari, Android Chrome and iPhone Safari for the full journey. Transcribe mixed English/Russian speech within one section. Exact browser versions, codec support, byte/timebase edge handling and actual device reliability require D01/D10 evidence.
 
-Before preparation show selected duration, exact credit cost, available balance, included-retry eligibility and project capacity. Buying a pack and starting preparation are separate explicit actions. Full capacity lets the user choose a project to delete. A slot is occupied after upload validation succeeds, before AI; failed AI keeps the resumable project and its slot. Free accounts have two slots; first successful purchase permanently upgrades to ten.
+Before preparation show selected duration, exact credit cost, available balance and project capacity. Buying a pack and starting preparation are separate explicit actions. Full capacity lets the user choose a project to delete. A slot is occupied after upload validation succeeds, before AI; failed AI keeps the resumable project and its slot. Free accounts have two slots; first successful purchase permanently upgrades to ten.
 
 Bind each quote to validated selected-source identity/duration and pricing-policy revision. Changed selection/expired or changed quote requires renewed confirmation, not a hidden price increase. Preserve source/selection context through checkout. Exact normalization/selection mechanics and remaining commercial policies stay explicit under D01–D04.
 
 ### 4.2 Preparation and segmentation
 
-Prepare transcript words, speakers, turn positions, and playable background. Include detected character laughter/screams/gasps with captions. Do not claim a label repair recovers words never transcribed.
+Owner2026-10-27 capability correction supersedes older speaker-label/correction examples: the current product cannot extract speaker identities. Transcription,timing,turn order,overlap preservation and media validity remain; diarization/voice-isolation research is unproven technical feasibility, not a required name/label field or a UI claim. No backend/model implementation is authorized by this correction.
 
-Group connected same-speaker speech, split at clear pauses or speaker changes, and retain a continuous 30-second speech as one turn. Do not segment simply at every punctuation mark. For overlap, retain independent turns with overlapping intervals; a single chronological list must not flatten simultaneous content into false exclusivity.
+Prepare transcript words/sound captions,turn positions and playable background. Speaker identity extraction is unavailable: no required label/name/voice-ID field or display; absence must not reject otherwise valid output. Include detected character laughter/screams/gasps with captions. Do not claim a label repair recovers words never transcribed.
+
+Group connected speech and split at clear pauses or audible performance changes, without requiring a speaker identity, and retain a continuous 30-second speech as one turn. Do not segment simply at every punctuation mark. For overlap, retain independent turns with overlapping intervals; a single chronological list must not flatten simultaneous content into false exclusivity.
 
 Provide small leading/trailing margins within source bounds. Exact margin/pause rules and detection evidence remain D10; 0.5 seconds is illustrative. Successful zero-dialogue detection is chargeable and permits manual line addition. Complete background-separation failure makes preparation fail without charge even if transcription succeeded; preserve the prior usable revision. Invalid artifacts cannot be activated.
 
-Model outputs are proposals until validated and activated. Keep machine output distinguishable from user corrections. Reprocessing cannot silently overwrite a current reviewed preparation before a valid new revision is available.
+Model outputs require validated activation against authorized source/selection/project revisions. Stale/deleted/superseded output cannot replace current protected state; charge settlement follows §4.7.
 
-Before eligible reprocessing, warn and obtain confirmation that successful replacement resets all prepared turns and manual text/speaker/timing corrections, including added turns (D13 resolved). Failure leaves the old preparation/edits active. Bind consent and activation to the expected edit revision; concurrent edits require reconciliation/new consent rather than silent loss. Charge settlement follows §4.7, not subjective preview approval.
+No user-requested rerun/reset of delivered preparation exists. Technical recovery cannot discard recording drafts or accepted media; candidate/operation/revision safety remains.
 
 ### 4.3 Preview and correction
 
 Play the full source with subtitles and highlight currently active lines in a selectable dialogue list; overlapping lines can both be active. Allow audition of the background before dubbing. Users decide whether separation quality is acceptable; faint residual dialogue/artifacts are a known possibility, not additional intended original-dialogue mixing.
 
-Edit text, assign speakers, drag start/end edges on a preview timeline, or add a missed turn with timing/text/speaker. Corrections are possible after recording begins. General split/merge is not launch scope. A missed `Come back!` must be addable even after five other takes are saved.
+Historical pre-withdrawal example only (not current UI/data requirements): Edit text, assign speakers, drag start/end edges on a preview timeline, or add a missed turn with timing/text/speaker. Corrections are possible after recording begins. General split/merge is not launch scope. A missed `Come back!` must be addable even after five other takes are saved.
 
-Whole-selected-section AI reprocessing is available only until the first take is successfully saved. Failed capture/save does not lock it. Once set, the project lock persists even after deleting all takes; no delete-all-and-reprocess action. One included retry per project; further runs use the normal disclosed preparation quote, never replenish the included retry, and remain subject to the permanent lock. Enforce the guard authoritatively, including concurrent recording/processing commands.
+User-initiated whole-section repeat preparation is removed by owner2026-10-27, before and after recording. No allowance, paid quote, first-save eligibility lock, reset confirmation or same-project bypass. Poor supplied segmentation is performed as-is or handled by a normal new project.
 
-Text or speaker-label edits without timing changes keep saved takes valid. Changing start/end invalidates the affected take for export and requires a new take, retaining the old recording until durable replacement. Added turns require their own takes. Preserve captured window/revisions; stale completions cannot silently attach to changed timing. General split/merge remains excluded; after lock use supported manual corrections/addition, not AI reset.
+Historical pre-withdrawal example only (not current UI/data requirements): Text or speaker-label edits without timing changes keep saved takes valid. Changing start/end invalidates the affected take for export and requires a new take, retaining the old recording until durable replacement. Added turns require their own takes. Preserve captured window/revisions; stale completions cannot silently attach to changed timing. General split/merge remains excluded; after lock use supported manual corrections/addition, not AI reset.
 
 ### 4.4 Recording
 
@@ -161,7 +163,7 @@ Preparation costs one credit per second of the selected section, rounded up once
 
 Manual corrections, performance retries, take replay, and reopening a prepared project have no preparation-credit charge. Download/share creation are included within declared limits, not a promise of unlimited hosting/rendering.
 
-Reserve the quote when the user authorizes processing and settle once complete preparation is delivered, before subjective user approval. Dissatisfaction is not failure/refund. System failure, including absent required background, releases the reservation and preserves previous preparation. Successful no-dialogue processing is delivered and charged; manual addition remains available. One included retry per project is consumed by successful replacement or deliberate user cancellation after it starts; system failure or queued cancellation preserves it. Later paid reprocessing uses the normal quote and grants no additional included retry.
+Reserve the exact quote at explicit initial-preparation authorization and settle complete delivery before subjective approval. Dissatisfaction is not failure/refund. System/required-background failure releases reservation and preserves protected work for technical recovery. Successful zero-dialogue delivery remains charged and offers another video, no manual addition or Record/Result. Internal worker retries/unknown-operation reconciliation cannot duplicate the charge; no project repeat allowance or paid rerun exists.
 
 Proposed consistency invariants: one account trial grant per eligible account, one credited pack per verified successful purchase, one permanent first-purchase upgrade, and at most one reservation/settlement for the same authorized attempt. Use server-verified payment identity/amount/currency; a browser redirect or client claim is not purchase proof. Payment duplicate/out-of-order delivery and pending/failed purchase must not create credit or slots twice. Trial abuse/cross-account policy remains D11.
 
@@ -208,7 +210,7 @@ These are logical responsibilities implemented within the selected stack; they d
 | Browser experience | Preview, corrections, microphone capture, local readiness, progress, explicit user commands | Authoritative balance, payment success, ownership, or job completion. |
 | Identity/access | Account/session and owner authorization; public-share capability checks | Viewer editing access or public access to source/takes. |
 | Project/media coordination | Source identity, project revisions, prepared-turn/correction references, current takes, export inputs, deletion state | Unresolved take invalidation or incomplete-export policy. |
-| Processing workers/adapters | Media inspection, transcription/alignment, speakers, background/voice separation, detected character sounds | Pricing, account grants, or accepting arbitrary model output as authoritative. |
+| Processing workers/adapters | Media inspection, transcription/alignment,timed-turn segmentation,background/voice-separation feasibility, detected character sounds | Pricing, account grants, or accepting arbitrary model output as authoritative. |
 | Recording persistence | Candidate media validation and current-take replacement against the captured revision | Replacing a take after a stale recording or declaring failed uploads successful. |
 | Credits/purchases | Quote, reservation, settlement/release, pack receipts, balance/slot entitlements | Trusting client purchase assertions or billing internal retries as new attempts. |
 | Export/publication | Full timeline render, validated result, current share-target switch | Publishing partial/stale/deleted project output. |
@@ -225,8 +227,8 @@ These records specify necessary information and ownership, not database tables o
 | Account | Stable identity, eligibility/grant provenance, current slot entitlement. |
 | Project | Owner, source identity/revision/duration, lifecycle/deletion state, preparation/current edit revision, recording-lock history, progress, finished-result/share associations. |
 | Source/asset | Owner/project association, type, validated media properties, duration/timebase mapping, identity/checksum, durable readiness and lifecycle. |
-| Preparation attempt/revision | Attempt identity, requested source/pricing/authorization revisions, initial/included/additional retry classification, job/stage state, validated artifacts, error and completion evidence. |
-| Turn/speaker/correction | Stable turn identity, text or sound caption, speaker label, source/window positions, origin machine/manual, revision and correction provenance. |
+| Preparation attempt/revision | Attempt identity, requested source/pricing/authorization revisions, initial authorization/technical-recovery outcome, job/stage state, validated artifacts, error and completion evidence. |
+| Recording turn | Stable turn identity,text or sound caption,source/window positions,timing/preparation revision and media compatibility. No required speaker identity field; missing optional external metadata is valid and is not shown. |
 | Take candidate/current take | Project/turn identity and revision, captured window, ready media/duration, upload state, current-association revision; previous current take retained until safe replacement. |
 | Export/result | Request identity, frozen inputs/current-take mapping/background/source versions, status, media validation, finished asset, publication generation. |
 | Quote/credit operation | Account/source/duration/policy identity, exact amount, authorization, attempt/purchase identity, reservation/terminal state and reconciliable accounting history. |
@@ -257,7 +259,7 @@ State names are proposed. Cancellation follows §4.7; its stage allocation and r
 - A replay of an identical authorized operation returns/reconciles its existing outcome; it does not spend twice, grant twice, create duplicate turns, or publish twice. Reusing an operation identity with different inputs is a conflict.
 - A retry of a user take is a new candidate, not permission to discard the old current take at capture start.
 - Detect stale edits/recording completion from another tab/device using expected revisions or equivalent protection. Return a recoverable conflict; do not silently overwrite unrelated newer work.
-- Before recording begins, a processing change and a recording start must not race into an inconsistent preparation. The first successfully saved take sets a permanent reprocessing lock; define compatible concurrent commands under D12; apply one authoritative guard for both.
+- Validate initial preparation before recording; stale, deleted or superseded technical completions cannot replace active source/turn/media revisions. Exclusive capture, candidate acceptance and immutable assembly authorization remain authoritative.
 - Partial queue/payment/storage success is reconciled by stable identity and durable records. API timeouts must not cause blind duplicate monetary or destructive actions.
 - Model/worker callbacks after deletion or superseded preparation/export cannot resurrect a project, expose files, replace newer output, or cause a second settlement.
 - A payment that really succeeded must remain reconcilable even if the browser closes; a project job failure must not roll back an unrelated credit purchase.
@@ -267,7 +269,7 @@ State names are proposed. Cancellation follows §4.7; its stage allocation and r
 | Condition | Required protection / draft disposition |
 |---|---|
 | Unsupported/corrupt/oversize/no-audio source | Reject safely with a recoverable explanation. Exact accepted-media and billing boundaries remain D01/D03. |
-| Invalid model timestamps, absent speaker, unusable stage output | Do not activate malformed references or mark complete from provider transport success. Preserve the existing usable revision on failed retry. D10 defines acceptable output/empty cases. |
+| Invalid model timestamps or unusable required media/text output | Do not activate malformed references or mark complete from provider transport success. Preserve the existing usable revision on failed retry. D10 defines acceptable output/empty cases. |
 | Queued job, timeout, worker crash or duplicate completion | Show truthful pending/failure state, reconcile attempt/reservation, resume/retry safely without duplicate charge. |
 | Mic denied/unavailable, playback unavailable, browser interruption | Explain inability to record; do not save a false successful take. Preserve old current take and prior saved project. |
 | Candidate upload completed but association failed | Reconcile operation before retry; previous current take remains until the candidate is valid and committed. |
@@ -299,11 +301,11 @@ All criteria below are unexecuted. D01–D13 references point to the current reg
 
 - [ ] **AC-01 Entry and ownership:** Google/password registration, email verification, reset and explicit verified linking preserve one account/library/balance/grant; bilingual navigation and owner authorization work on target browsers. Confirmed account deletion disables access/links and removes work.
 - [ ] **AC-02 Supported upload:** MP4/MOV/WebM originals up to 10 minutes/250 MB permit selecting at most 120 seconds; quote and canonical timeline refer to that section. Mixed EN/RU works; test boundaries/codecs and reject invalid input safely.
-- [ ] **AC-03 Preparation coverage:** representative speech, speaker turns, overlapping characters and detected laughter/screams/gasps produce valid timed/captioned turns and auditionable background; empty/partial cases follow D03/D10 rather than falsely passing.
-- [ ] **AC-04 Segmentation:** same-speaker connected sentences and an uninterrupted 30-second speech remain intact; clear pause/speaker boundaries and bounded margins follow the D10 rule, retaining simultaneous turns.
+- [ ] **AC-03 Preparation coverage:** representative speech,spoken turns and overlapping performances and detected laughter/screams/gasps produce valid timed/captioned turns and auditionable background; empty/partial cases follow D03/D10 rather than falsely passing.
+- [ ] **AC-04 Segmentation:** connected continuous speech and an uninterrupted 30-second speech remain intact; clear pause/audible-performance boundaries and bounded margins follow the D10 rule, retaining simultaneous turns.
 - [ ] **AC-05 Preview:** full-video subtitles and dialogue list track current playback including overlap; users can audition background before starting dubbing, without being promised perfect separation.
-- [ ] **AC-06 Correction:** users edit text/speaker, drag a valid time range, and add an entirely missed turn before and after saved takes; invalid ranges are rejected and D06 take-compatibility handling preserves work.
-- [ ] **AC-07 Reprocessing:** first successful take save permanently locks AI reset; failed first attempts do not, nor does later take deletion unlock. Pre-recording replacement warns/confirms reset of all turns/manual edits; failure/concurrent edits preserve current work.
+- [ ] **AC-06 Withdrawn correction UI:** no manual speaker/text/timing editor or missed-line input. Stable turn/timing revision compatibility and protected-media recovery remain; no speaker field is required.
+- [ ] **AC-07 No preparation reset:** no user-requested rerun action, service command, entitlement, quote or first-take lock. Technical failure recovery/reconciliation remains identity-bound and preserves protected media.
 - [ ] **AC-08 Bounded capture:** immediate/no-countdown hidden-video capture with target text, full original reference and independent volume; optional prior audition, early stop/short takes and auto-stop at maximum window within measured tolerance.
 - [ ] **AC-09 Review:** explicit Play my take/Retry/Next; use saved overlapping takes and original voices for unrecorded characters with one background. Allow audition/acceptance of imperfect isolation; label prior durable take during replacement and audition recoverable candidates separately.
 - [ ] **AC-10 Safe replacement:** retain previous take on failed/stale/unaccepted interrupted replacement; recoverable shorter attempts can be reviewed and safely saved without exceeding the window. Timing edits require re-recording; text/label edits preserve eligibility.
@@ -316,8 +318,8 @@ All criteria below are unexecuted. D01–D13 references point to the current reg
 - [ ] **AC-17 Deletion:** after warning and confirmation, a project and its link become unavailable as defined by D08; running/late jobs cannot restore them, and cleanup meets the declared retention/cache contract.
 - [ ] **AC-18 Upfront quote:** ceil(selected duration in seconds) at one credit/second, without complexity/runtime surcharges; 12.4 seconds costs 13 and 120 costs 120. Changed source/quote requires renewed consent.
 - [ ] **AC-19 Accounting safety:** no duplicate/negative spending; delivery charges before subjective approval, zero-turn success charges, required-background/system failure does not. Queued cancellation is free; running cancellation charges completed stages at disclosed cost. Successful processing after project deletion still settles without resurrection.
-- [ ] **AC-20 Included use:** exactly one included retry per project; failure/queued cancellation preserves it, running user cancellation consumes it. Additional eligible runs use normal quote without replenishment. Manual correction/recording/replay/reopen/download/share carry no extra preparation charge under declared limits.
-- [ ] **AC-21 Trial:** exactly 120 non-expiring one-time welcome credits per eligible verified account, with no duplicate grant from callback/link/replay; maximum 120-second preparation plus its one included retry is covered.
+- [ ] **AC-20 No repeat entitlement:** no included/paid preparation rerun. Internal worker retry and unknown-result reconciliation cannot duplicate accounting; recording/listening/reopen/download add no preparation charge.
+- [ ] **AC-21 Trial:** exactly120 non-expiring one-time welcome credits per eligible verified account, no duplicate grant; covers maximum120-second initial preparation. No repeat-preparation entitlement.
 - [ ] **AC-22 Packs:** verified one-time purchases credit the correct account/amount once, unlock slots once, and purchased credits do not expire. Pending/failed/forged/replayed callbacks and D03 reversals obey the chosen policy; no recurring/automatic purchase is created.
 - [ ] **AC-23 Media-job safety:** invalid model/media output, stage crashes, duplicate/stale callbacks, expired auth and project deletion cannot expose private assets, replace newer revisions, resurrect work or silently double-charge.
 - [ ] **AC-24 Performance evidence:** measure all stages needed for a usable preview against the approximately 60-second/two-minute target, under D10-defined timing/load/hardware conditions; report measured quality, correction burden, and cost without claiming an untested SLA.
@@ -332,10 +334,10 @@ No test commands exist yet; the checks below are proposed scenarios, not execute
 | AC-01 | Landing/sign-in/New dub and cross-account/anonymous mutations | Browser evidence plus server authorization checks; supported phone/desktop matrix. |
 | AC-02 | Valid EN/RU sources, duration edges, corrupt/no-audio/unsupported/oversize media | Exact D01 validation result, source mapping and D03 quote/charge outcome in isolated media pipeline. |
 | AC-03 | Dialogue, overlap, vocal sounds, empty and stage-partial outputs | Human-annotated source comparison plus validated preview assets; real candidate pipeline, not only model mocks. |
-| AC-04 | Connected sentences, clear pause, speaker change, 30-second monologue, source-edge margins | Expected intervals/grouping and unchanged overlap against D10 fixture annotations. |
+| AC-04 | Connected sentences,clear pause,audible performance change, 30-second monologue, source-edge margins | Expected intervals/grouping and unchanged overlap against D10 fixture annotations. |
 | AC-05 | Full preview, selection/highlights, simultaneous captions, background audition | Browser playback and listening proof against known source positions. |
-| AC-06 | Correct clipped word, speaker, text; add missed line after five saved takes; invalid/stale edits | User interaction, revision/take association and D06 outcome after reload. |
-| AC-07 | Attempt retry, capture/processing race, stale-tab lock bypass, failed and successful reprocessing after saved text/speaker/boundary corrections plus an added missed turn; concurrent edit during retry | D05 lock and D13 disposition/provenance/confirmation evidence at activation; unset policy or stale revision cannot silently replace edits. Settlement reconciles separately under D03. |
+| AC-06 | Verify no speaker/correction UI; preserve stable turn/timing revision and media compatibility on stale responses | No mandatory speaker field, fabricated identity or loss of protected media. |
+| AC-07 | Assert reset/rerun command, action and entitlement absence at every recording state; exercise technical-failure and unknown-result recovery | Existing operation/account/revision fences and charge/media safety; no duplicate work or reset side effect. |
 | AC-08 | Immediate record on actual devices; permission denial, playback readiness and interruption | Screen/audio timing measurements with D10 tolerance; hidden video, early Stop, independent reference volume and maximum-window auto-stop proven in browser. |
 | AC-09 | Complete a turn; playback/retry/next; overlap review; save/fail a replacement with and without an existing saved take | Video/audio evidence showing explicit controls and target identity: previous saved take while pending/failed, disabled if absent, new take only on next playback after commit; no automatic playback switch; saved-A/original-B then both-saved review mix with user-accepted artifacts. |
 | AC-10 | Failed candidate upload/association, dropped response, stale revision, successful replacement | Old take remains through failure; new current take durable exactly once; restore/export check. |
@@ -348,7 +350,7 @@ No test commands exist yet; the checks below are proposed scenarios, not execute
 | AC-17 | Delete while recording/upload/render/payment reconciliation is active; late callbacks/cache reads | No resurrection or link access under D08; cleanup proof distinct from logical invalidation. |
 | AC-18 | Different durations, quote changes, buy credits, worker slowdown/retry | Shown/accepted/settled amounts tied to source/policy; no hidden processing from purchase. |
 | AC-19 | Double-click, parallel account spend, duplicate job completion, unknown settlement result | Durable reservation/ledger reconciliation; no negative availability or conflicting terminal events. |
-| AC-20 | Initial preparation, included retry, additional retry and each included action | Exact entitlement usage and ledger differences before/after actions. |
+| AC-20 | Initial delivery, technical failure, internal retry, unknown reconciliation and recording/listening/download | Exact ledger/reservation transitions, no duplicate charge and no project repeat allowance. |
 | AC-21 | New-account grant replay/concurrency plus maximum-length trial project | D02 trial capacity and exactly-once eligible grant, exactly 120 non-expiring welcome credits without duplicate issuance. |
 | AC-22 | Provider test checkout, duplicate/forged/out-of-order/missing response, reversal per D03 | Server-verified receipts, one credit/slot effect, no subscription; real payment integration test mode. |
 | AC-23 | Malformed model references/media, stage crashes, stale completions and deletion/auth races | Failure-injection evidence at real boundaries; privacy, revision and money invariants maintained. |
@@ -370,7 +372,7 @@ Each BR requirement maps to shared contracts, project AC, and the published task
 | BR-001-R05 | §§4.2, 5 | AC-04 | [Produce validated timed speaker turns including overlap and character sounds](https://github.com/dystrophyless/dubbed.ai/issues/11); evidence not run |
 | BR-001-R06 | §4.3 | AC-05 | [Take a demo user from file selection and quote to a usable preview](https://github.com/dystrophyless/dubbed.ai/issues/48); [Correct prepared turns and add a missed line without losing saved work](https://github.com/dystrophyless/dubbed.ai/issues/46); evidence not run |
 | BR-001-R07 | §§4.3, 8–9 | AC-06, AC-12 | [Correct prepared turns and add a missed line without losing saved work](https://github.com/dystrophyless/dubbed.ai/issues/46); [Persist revision-safe turn corrections and manually added dialogue](https://github.com/dystrophyless/dubbed.ai/issues/25); evidence not run |
-| BR-001-R08 | §§4.3, 8.1 | AC-07 | [Exercise sample preparation and explicit correction disposition without AI](https://github.com/dystrophyless/dubbed.ai/issues/18); [Activate a complete preparation with correct credits and retry behavior](https://github.com/dystrophyless/dubbed.ai/issues/27); [Authorize recording and commit a compatible durable take safely](https://github.com/dystrophyless/dubbed.ai/issues/36); evidence not run |
+| BR-001-R08 | Owner2026-10-27 removal; no user preparation reset | AC-07 | Existing issue links remain live task authority; published scope alignment is held. Technical recovery/media safety remains under initial preparation/Record contracts. |
 | BR-001-R09 | §§4.2, 4.4–4.5, 5 | AC-03, AC-08, AC-11 | [Produce validated timed speaker turns including overlap and character sounds](https://github.com/dystrophyless/dubbed.ai/issues/11); [Record and safely review one durable take per turn](https://github.com/dystrophyless/dubbed.ai/issues/38); [Render a full source-timeline video using current recorded performances](https://github.com/dystrophyless/dubbed.ai/issues/16); evidence not run |
 | BR-001-R10 | §4.4 | AC-08, AC-09 | [Record and safely review one durable take per turn](https://github.com/dystrophyless/dubbed.ai/issues/38); evidence not run |
 | BR-001-R11 | §§4.4, 5 | AC-08 | [Capture a bounded local microphone take synchronized to reference audio](https://github.com/dystrophyless/dubbed.ai/issues/6); [Record and safely review one durable take per turn](https://github.com/dystrophyless/dubbed.ai/issues/38); [Authorize recording and commit a compatible durable take safely](https://github.com/dystrophyless/dubbed.ai/issues/36); evidence not run |
@@ -401,7 +403,7 @@ The user authorized publication of the reviewed task package, not implementation
 | Render the flat visual system and responsive public/account shell | Flat responsive visual foundations and navigation | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/50) |
 | Persist and restore the demo workspace through the shared facade | Durable local project and take state | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/21) |
 | Simulate credit quotes, reservations and one-time purchases consistently | Consistent simulated credits and purchases | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/17) |
-| Exercise sample preparation and explicit correction disposition without AI | Honest sample preparation and retry activation | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/18) |
+| Exercise sample preparation and explicit correction disposition without AI | Honest initial preparation and technical-failure recovery | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/18) |
 | Simulate finished generations and local share deletion honestly | Generation-safe local demo result lifecycle | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/19) |
 | Take a demo user from file selection and quote to a usable preview | Upload/quote-to-preview user journey | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/48) |
 | Correct prepared turns and add a missed line without losing saved work | Recoverable text/speaker/timing and missed-line edits | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/46) |
@@ -417,7 +419,7 @@ The user authorized publication of the reviewed task package, not implementation
 | Create resumable projects with validated durable source media | Durable validated source/project lifecycle | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/32) |
 | Maintain durable trial and preparation credit accounting | Transactional trial/preparation accounting | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/7) |
 | Deliver durable version-bound media jobs without duplicate publication | Recoverable version-bound media jobs | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/29) |
-| Produce validated timed speaker turns including overlap and character sounds | Validated speech/speaker/nonverbal turns | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/11) |
+| Produce validated timed speaker turns including overlap and character sounds | Validated speech/timing/nonverbal turns | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/11) |
 | Produce an auditionable music-and-effects background for a source | Source-aligned auditionable background | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/5) |
 | Activate a complete preparation with correct credits and retry behavior | Complete preview activation and correct charging | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/27) |
 | Persist revision-safe turn corrections and manually added dialogue | Revision-safe manual corrections and added lines | [Draft](https://github.com/dystrophyless/dubbed.ai/issues/25) |
@@ -448,9 +450,9 @@ Owner: the requesting project owner for observable product/commercial policy; im
 |---|---|---|---|
 | D01 | Partially resolved: 10-minute/250 MB MP4/MOV/WebM upload, selected section <=120 seconds, mixed EN/RU, named desktop/mobile browsers, MP4 <=720p/no upscale/orientation. Remaining: codec/encoding/browser-version validation, exact bytes/timebase boundaries and normalization. | BR OQ-03/OQ-07; brainstorm §17 | Media compatibility evidence, AC-02/AC-08/AC-11. |
 | D02 | Partially resolved: ceil(section seconds) at 1 credit/second, 120 one-time welcome credits, no expiry, USD one-time packs. Remaining: measured full costs, pack quantities/prices/margins and payment methods/provider. | OQ-01; brainstorm §17 | Commercial configuration/checkout; no arbitrary USD equivalence. |
-| D03 | Partially resolved: delivered preparation charged, no-turn success charged, system/required-background failure free; one retry/project with failure/cancel rules; completed-stage cancellation and success-after-project-deletion charging. Remaining: stage allocation/rounding, cancellation quote/completion races, reservation expiry, refunds/reversals and account-deletion balance treatment. | OQ-02; brainstorm §17 | Monetary edge mechanics and reversal/cancellation acceptance. |
+| D03 | Partially resolved: delivered preparation charged, no-turn success charged, system/required-background failure free; technical-failure recovery without a project rerun allowance; completed-stage cancellation and success-after-project-deletion charging. Remaining: stage allocation/rounding, cancellation quote/completion races, reservation expiry, refunds/reversals and account-deletion balance treatment. | OQ-02; brainstorm §17 | Monetary edge mechanics and reversal/cancellation acceptance. |
 | D04 | Resolved product policy: 2 free/10 after first purchase; occupy after upload validation, retain failed-preparation slot, release on project deletion; no inactivity expiry. Atomic capacity/cleanup mechanics remain technical work. Purchase reversal is D03. | OQ-01/OQ-03; brainstorm §17 | Not an unanswered slot-count/lifecycle decision. |
-| D05 | Resolved: first successfully saved take permanently locks AI reprocessing; failed attempt does not lock, deleting takes never unlocks. Enforce authoritative race guards. | Brainstorm §17 | Not an unanswered lock-event decision; concurrency verification still required. |
+| D05 | Withdrawn2026-10-27: former first-saved-take reset lock no longer applies because user-requested repeat preparation is removed. | Latest direct owner amendment | Initial-processing/capture/account/revision safety remains. |
 | D06 | Resolved: text/label edits preserve take validity, timing changes require replacement before export while retaining old media. Manual add/corrections remain after lock; no general split/merge. Safe revision/candidate mechanics require verification. | OQ-05; brainstorm §17 | Not an unanswered edit-compatibility decision. |
 | D07 | Resolved for nonempty projects: every turn needs a current valid saved take; shorter within-window takes are valid, no final original fallback. Remaining: export eligibility for a preparation still containing zero turns; users may manually add lines and continue. Next navigation must not imply recording completion. | OQ-04; brainstorm §17 | Zero-turn export case and integration proof. |
 | D08 | Partially resolved: same link off/on, previous finished result during rerender/failure, retain projects until project/account deletion; self-service account deletion included. Remaining: cleanup/backup/CDN/URL-reader lifetimes, generation mechanics and bounded delivery/render usage. | OQ-03/OQ-06; brainstorm §17 | Operational deletion/delivery evidence, not reopening agreed retention/link behavior. |
@@ -458,7 +460,7 @@ Owner: the requesting project owner for observable product/commercial policy; im
 | D10 | Real model/provider/version/quality/cost evidence, especially original-speaker isolation during overlap preview, mixed EN/RU/nonverbal detection, margins/pause rules, capture/acoustic tolerance and normalization. Define the 60-second target measurement boundaries, percentile/load/hardware. | OQ-07; brainstorm §17 | Feasibility/performance claims and provider selection; no claim of a tested SLA. |
 | D11 | Partially resolved: Google plus verified email/password, explicit verified linking, reset email and self-service account deletion. Remaining: trial abuse/eligibility after recreation, content permissions/report/removal/support/public-release policy, security and required retained records. | OQ-09; brainstorm §17 | Release/support controls; authentication and deletion launch scope are selected. |
 | D12 | Partially resolved: React + Zustand frontend and FastAPI + PostgreSQL + SQLAlchemy backend selected by the owner (§6.1). Remaining: versions/build/router/test tools, schemas/API/message units and compatibility, database driver/session/migrations, storage/job delivery, payment provider, transaction/coordination mechanics and deployment/recovery environment. | Owner stack decision, 2026-10-20; detailed architecture still open | Only the remaining architecture choices block their dependent implementation/infrastructure tasks; do not reopen the selected application stack without a new owner decision. |
-| D13 | Resolved: confirmed reprocessing resets all prepared lines and manual edits/additions only on successful replacement; warn/confirm before starting. Failure preserves old usable preparation; expected-revision protection prevents unconfirmed loss of concurrent edits. | Review DBR-002; brainstorm §17 | No remaining reset/carry/merge product decision; activation/race proof still required. |
+| D13 | Withdrawn2026-10-27: no same-project delivered-preparation replacement/reset consent or draft deletion feature remains. | Latest direct owner amendment | Technical callbacks and recovery must preserve protected media. |
 
 No hidden defaults for these decisions. A spec revision should record the owner/evidence, selected behavior and affected AC before dependent tasks become ready. Especially, choosing a price/slot count, silently clearing takes, exporting an incomplete dub, or promising a fixed SLA is not an autonomous technical detail.
 

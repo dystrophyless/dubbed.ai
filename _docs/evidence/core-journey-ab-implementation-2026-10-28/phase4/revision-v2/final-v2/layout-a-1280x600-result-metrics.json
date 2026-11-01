@@ -1,0 +1,59 @@
+{
+  "documentHeight": 802,
+  "title": {
+    "x": 308.8046875,
+    "y": 16,
+    "width": 662.390625,
+    "height": 28,
+    "bottom": 44
+  },
+  "player": {
+    "x": 180,
+    "y": 88,
+    "width": 920,
+    "height": 589.5,
+    "bottom": 677.5
+  },
+  "screen": {
+    "x": 180,
+    "y": 88,
+    "width": 920,
+    "height": 517.5,
+    "bottom": 605.5
+  },
+  "rail": {
+    "x": 180,
+    "y": 605.5,
+    "width": 920,
+    "height": 72,
+    "bottom": 677.5
+  },
+  "seek": {
+    "x": 192,
+    "y": 605.5,
+    "width": 896,
+    "height": 24,
+    "bottom": 629.5
+  },
+  "controls": {
+    "x": 192,
+    "y": 629.5,
+    "width": 896,
+    "height": 40,
+    "bottom": 669.5
+  },
+  "details": {
+    "x": 180,
+    "y": 693.5,
+    "width": 920,
+    "height": 92,
+    "bottom": 785.5
+  },
+  "actions": {
+    "x": 919.484375,
+    "y": 693.5,
+    "width": 180.515625,
+    "height": 92,
+    "bottom": 785.5
+  }
+}

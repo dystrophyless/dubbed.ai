@@ -1,0 +1,52 @@
+[
+  {
+    "file": "01-committed-en-desktop.png",
+    "bytes": 23431,
+    "sha256": "BE6522561728196AC44E647ABC35E0F7204E1686183D99143B7E511D5599F8EA"
+  },
+  {
+    "file": "02-reloaded-en-desktop.png",
+    "bytes": 23431,
+    "sha256": "BE6522561728196AC44E647ABC35E0F7204E1686183D99143B7E511D5599F8EA"
+  },
+  {
+    "file": "03-reloaded-en-short.png",
+    "bytes": 22036,
+    "sha256": "2B55BC6E81C62C0E92841AC0FAAE03E60D93BAD5F28FBD477F1FF7933452BDCE"
+  },
+  {
+    "file": "04-account-b-empty-en-desktop.png",
+    "bytes": 21756,
+    "sha256": "1130F150964C5D72E01BDB00BA92E3DFFBD5A049D9FDF50BDF3D192E8F4C72EB"
+  },
+  {
+    "file": "05-account-b-empty-ru-phone.png",
+    "bytes": 17318,
+    "sha256": "9DA88940B94F6F0059FF16AAF1D9E2EFE33CAC462011159E9E5442E59433B908"
+  },
+  {
+    "file": "06-storage-unavailable-en-desktop.png",
+    "bytes": 14960,
+    "sha256": "78B8D248575CC90A78676F120E7E35FD98AC54D9AAE907F1AEEE61EA14EB6F2D"
+  },
+  {
+    "file": "07-storage-unavailable-ru-phone.png",
+    "bytes": 12387,
+    "sha256": "E126746B99F3A6E13E823C8F60B3007F93B430BBBDDBB067D7B8F10120E8BD92"
+  },
+  {
+    "file": "08-injected-unknown-delete-ru-phone.png",
+    "bytes": 45975,
+    "sha256": "6DC173A469DBF4BC999C358B712ECEDBBD711595373CD33BC774831D7F1A86EE"
+  },
+  {
+    "file": "09-transient-open-retry-stuck-en-desktop.png",
+    "bytes": 15051,
+    "sha256": "6886D1F96A73ED79ACC27AAEC036627778D476CE8BDEDD07EAD65E6FD8C444FA"
+  },
+  {
+    "file": "10-transient-open-reload-recovers-en-desktop.png",
+    "bytes": 30130,
+    "sha256": "CB1CCF2A28903BDBF4CD96FFEDEAD4BDD5ED302A3069486EFB7F62517FF12284"
+  }
+]

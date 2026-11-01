@@ -1,0 +1,212 @@
+{
+  "issue": 63,
+  "attempt": 2,
+  "boundary": "Final E2E and Playwright configuration source boundary immediately before the second focused browser capture.",
+  "recordedAtUtc": "2026-10-25T13:45:57.0167856Z",
+  "gitHead": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "productSourceFreezeSha256": "9a0a9837c4efdf822b71a6a8651a392ded9a1277cd56e7f8f978491b8f518640",
+  "evidenceRoot": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-63",
+  "fileCount": 40,
+  "files": [
+    {
+      "path": "frontend/e2e-real/adapter-unavailable.spec.ts",
+      "bytes": 3110,
+      "sha256": "0b9495c4b459472ca3deca5ff3fb99fd0a5cac9ed571daab9d253eb9e37b4b5d"
+    },
+    {
+      "path": "frontend/e2e/auth-state-visual.spec.ts",
+      "bytes": 23049,
+      "sha256": "c59d05d196a0982a2ee24e8fa81b1b667d7b1e5293fcee2eebcf5031b94b3c08"
+    },
+    {
+      "path": "frontend/e2e/auth-viewport.spec.ts",
+      "bytes": 4867,
+      "sha256": "86c9c93d3bced582655955a05ec5021662a01fefc3ddb62e95fe01456b2bb06f"
+    },
+    {
+      "path": "frontend/e2e/full-journey.spec.ts",
+      "bytes": 18842,
+      "sha256": "45dbd55e33ea2450097a772c94de6577823f860f1d772a38321db3a6ea5b34aa"
+    },
+    {
+      "path": "frontend/e2e/harness/auth-state-visual.html",
+      "bytes": 322,
+      "sha256": "ec6f94ca5fb710409ce045bf895020d871da68e43714c1c4269695ebfc641b7f"
+    },
+    {
+      "path": "frontend/e2e/harness/auth-state-visual.tsx",
+      "bytes": 11622,
+      "sha256": "9f26e165b3989e0a187e0dee0c1644ce29a7af731596eedbc7861df701f6ce68"
+    },
+    {
+      "path": "frontend/e2e/harness/processing.html",
+      "bytes": 345,
+      "sha256": "2f6696f30507f5461658f0863bf2295d935cdfb9279cabcf1826db99940bdb20"
+    },
+    {
+      "path": "frontend/e2e/harness/processing.tsx",
+      "bytes": 12918,
+      "sha256": "958e01f7521a1d2c8c64b7946696d883bd2e1f43d688f26bc921bbebdcea5110"
+    },
+    {
+      "path": "frontend/e2e/harness/result-delivery-state.html",
+      "bytes": 341,
+      "sha256": "56c12a2de42c644aaf872fd50ab394ee29eabc72baa866d927050336a2eea24e"
+    },
+    {
+      "path": "frontend/e2e/harness/result-delivery-state.tsx",
+      "bytes": 9122,
+      "sha256": "bef47df1a1ec61efc1392f6581376205b0227b8375b13841f6565f98347bddf5"
+    },
+    {
+      "path": "frontend/e2e/harness/result.html",
+      "bytes": 333,
+      "sha256": "e46fde75d06447f1d701c943827bc559dc4883e7e3846d26d25502e0d6cdf719"
+    },
+    {
+      "path": "frontend/e2e/harness/result.tsx",
+      "bytes": 8631,
+      "sha256": "d61a659cf864fe745bb7aa61ceb82f625550d85ab28a82126482cd7c5d1b613d"
+    },
+    {
+      "path": "frontend/e2e/harness/shared-controls.css",
+      "bytes": 2332,
+      "sha256": "47b89778ece7a87c3cdad6284a85043ca94ca45ccb74227996aee01398763ea6"
+    },
+    {
+      "path": "frontend/e2e/harness/shared-controls.html",
+      "bytes": 338,
+      "sha256": "400f511324691d9b9fe6299e99eb54d784f3a19adffa72727517a5ef5756f177"
+    },
+    {
+      "path": "frontend/e2e/harness/shared-controls.tsx",
+      "bytes": 11472,
+      "sha256": "5e7e720f83e96f92bec517268dbf26a592e529cea18a1aacd7f38e2f80141bf6"
+    },
+    {
+      "path": "frontend/e2e/harness/workspace-state-visual.html",
+      "bytes": 344,
+      "sha256": "c6e73f4dd301a68d228adf6a10cf16c305b8a996faf5fb8e4a9a68ef773b31ec"
+    },
+    {
+      "path": "frontend/e2e/harness/workspace-state-visual.tsx",
+      "bytes": 15659,
+      "sha256": "d0158e637d583d05ace1ba391204931f60eead799054edb10605b565dc20edbe"
+    },
+    {
+      "path": "frontend/e2e/header-responsive.spec.ts",
+      "bytes": 4069,
+      "sha256": "be644a5b04acbdb4f66d9b7f2cee43c136d196e4bcf08a250978e8ecdf3878e0"
+    },
+    {
+      "path": "frontend/e2e/helpers/artifact-root.ts",
+      "bytes": 1309,
+      "sha256": "f2fb889c88d7f0a5579362856c5d489c85f269898d59288b57f2f1bb839da92d"
+    },
+    {
+      "path": "frontend/e2e/helpers/diagnostics.ts",
+      "bytes": 3000,
+      "sha256": "a73ceedafbbd2441fc9f56591ea145531a853d17652ef198ca5434848bc076ae"
+    },
+    {
+      "path": "frontend/e2e/helpers/identity.ts",
+      "bytes": 395,
+      "sha256": "3b6748ca5d32de24758133983fc21374cff05e8e00306e8c0057b1fb3c1d8c64"
+    },
+    {
+      "path": "frontend/e2e/helpers/journey.ts",
+      "bytes": 5756,
+      "sha256": "89fcdd49fb90a7dffc49515fed23ae67070ea9f5b944e8da16256fc78105a273"
+    },
+    {
+      "path": "frontend/e2e/helpers/locale.ts",
+      "bytes": 1040,
+      "sha256": "add4732d751321946c554fbf828e567093129d2ff9ec208887d8967d05d90141"
+    },
+    {
+      "path": "frontend/e2e/identity-account-journey.spec.ts",
+      "bytes": 19566,
+      "sha256": "f0968e34d1ebbb9f0fe94a6f94ec0d651315980f6a6831120d71dfbbc510bad9"
+    },
+    {
+      "path": "frontend/e2e/issue63-integration.spec.ts",
+      "bytes": 26010,
+      "sha256": "e9dc34c6d39d581a7d4ce01eb52829afdec770cb5e2956ef8baecf7e03760237"
+    },
+    {
+      "path": "frontend/e2e/media-visual.spec.ts",
+      "bytes": 31751,
+      "sha256": "64d2a5f0303e9d7a4507b1e77f1db696be2cea76f4ad43c40989f7a4c770e24d"
+    },
+    {
+      "path": "frontend/e2e/microphone-lifecycle.spec.ts",
+      "bytes": 17556,
+      "sha256": "da0ee63520688039f1384753fcb28e8961ce3f110c5ac52961292263a083a797"
+    },
+    {
+      "path": "frontend/e2e/new-dub-upload-boundary.spec.ts",
+      "bytes": 4403,
+      "sha256": "0519975b29867a0abeb44b5f27694b91fb43bc38437e0f198aaed37e56a72f28"
+    },
+    {
+      "path": "frontend/e2e/processing-visual.spec.ts",
+      "bytes": 38942,
+      "sha256": "d2e67fd6ede8b4f52bf6b5c5fa799fef9e34e4e7e01d1a9f50e0e286aabf6534"
+    },
+    {
+      "path": "frontend/e2e/record-leave-dialog.spec.ts",
+      "bytes": 10920,
+      "sha256": "4406dd2fc3796531cc7cae146652cfad935c73ddc8a9d353b9661a44591ead16"
+    },
+    {
+      "path": "frontend/e2e/recording-viewport.spec.ts",
+      "bytes": 43684,
+      "sha256": "dd1a60d1dca6eb2e2473eb9a0cdeb583e96513840800ea7f0ff61a57b468ce83"
+    },
+    {
+      "path": "frontend/e2e/registration-qa82.spec.ts",
+      "bytes": 16840,
+      "sha256": "6114b9e8a2933ff14c3ca19eecc8f74f2beb156b9c3430f98f181347bd395795"
+    },
+    {
+      "path": "frontend/e2e/result-delivery-state.spec.ts",
+      "bytes": 15527,
+      "sha256": "ea2b2114026d204a5f4086f1be874cdfe525a156bd68f8f9efac9492d2009c04"
+    },
+    {
+      "path": "frontend/e2e/result-generation.spec.ts",
+      "bytes": 8918,
+      "sha256": "9827f510c2a114dbf71909a1d16cd1f7722cfe8336b7118d58a45ee78764dafb"
+    },
+    {
+      "path": "frontend/e2e/runtime-smoke.spec.ts",
+      "bytes": 1315,
+      "sha256": "f4a894e1eb4547cf52839455f9b7bad56556fa0421fba5a79ec86b491a7b2a37"
+    },
+    {
+      "path": "frontend/e2e/runtime-storage-recovery.spec.ts",
+      "bytes": 13561,
+      "sha256": "28c434ac97f4c21009693c0ea093cf9082b1b4b702439b48f5be33df7d59d2d5"
+    },
+    {
+      "path": "frontend/e2e/shared-controls.spec.ts",
+      "bytes": 33420,
+      "sha256": "4bc2305264e17226af3141602e8a05a75cf7cca7a3bd68eeb216ffc5b1931266"
+    },
+    {
+      "path": "frontend/e2e/shell-evidence.spec.ts",
+      "bytes": 17656,
+      "sha256": "ad04678748e91480c0cff576896f0f1efa17f79dc34054cbabdc77747e166ab0"
+    },
+    {
+      "path": "frontend/e2e/workspace-state-visual.spec.ts",
+      "bytes": 32871,
+      "sha256": "0ae8814d958cc0afe728e8d64a1eef1c33a069963088ea7882dc27e18cb76051"
+    },
+    {
+      "path": "frontend/tests/e2e-artifact-root.test.ts",
+      "bytes": 1922,
+      "sha256": "28d43091ab05a5be4b1d85942c2c6e89de8d1136bda1519967ea257012746021"
+    }
+  ]
+}

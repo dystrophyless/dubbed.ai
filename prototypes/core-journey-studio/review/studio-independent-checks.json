@@ -1,0 +1,137 @@
+[
+  {
+    "check": "Environment",
+    "observed": {
+      "version": "core-journey-studio-lowfi-v1",
+      "browser": "156.0.8078.48",
+      "date": "2026-10-27",
+      "OS": "Windows",
+      "zoom": "100%",
+      "dpr": 1
+    }
+  },
+  {
+    "check": "Three read-only dots",
+    "observed": [
+      {
+        "current": "true",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "current": "false",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "current": "false",
+        "role": null,
+        "tabindex": null
+      }
+    ]
+  },
+  {
+    "check": "Continuous filled original remains; take grows during fixed capture and remains after",
+    "observed": {
+      "early": 0.19682549019607845,
+      "later": 0.45710549019607843,
+      "completed": 1.0,
+      "originalPathUnchanged": true
+    }
+  },
+  {
+    "check": "Exit failed save stays current with retained destination guidance",
+    "observed": "Not saved. Take kept here. Retry opens My projects."
+  },
+  {
+    "check": "Retry saves before Exit boundary",
+    "observed": "My projects\n\nThis neighboring screen is outside this recording prototype.\n\nBack to scene"
+  },
+  {
+    "check": "Final-gap Exit destination wins over assembly completion",
+    "observed": true
+  },
+  {
+    "check": "Result playback and Return restore first dot without capture",
+    "observed": true
+  },
+  {
+    "check": "Replacement failure/reload retain auditionable candidate and completed overlay",
+    "observed": "Not saved. Take kept here. Retry saves it, then continues."
+  },
+  {
+    "check": "Page errors",
+    "observed": []
+  },
+  {
+    "check": "Studio target fingerprints",
+    "observed": {
+      "BRIEF.md": true,
+      "icons.js": true,
+      "index.html": true,
+      "locale.js": true,
+      "package-lock.json": true,
+      "package.json": true,
+      "presentation.css": true,
+      "README.md": true,
+      "src.js": true,
+      "studio.css": true,
+      "toast.js": true,
+      "ui.js": true,
+      "waveform-data.js": true,
+      "public/media/example-dub.mp4": true,
+      "public/media/scene.mp4": true,
+      "public/media/take-0.wav": true,
+      "public/media/take-1.wav": true,
+      "public/media/take-2.wav": true,
+      "evidence/comparison-baseline.json": true,
+      "evidence/phone-completion-results.json": true,
+      "evidence/preservation-results.json": true,
+      "evidence/result-composition-results.json": true,
+      "evidence/self-check-results.json": true,
+      "evidence/phone-completion-check.py": true,
+      "evidence/self-check.py": true,
+      "evidence/studio-1280x600-en-after.png": true,
+      "evidence/studio-1280x600-en-before.png": true,
+      "evidence/studio-1280x600-en-during.png": true,
+      "evidence/studio-1280x600-ru-long-after.png": true,
+      "evidence/studio-1280x600-ru-long-before.png": true,
+      "evidence/studio-1280x600-ru-long-during.png": true,
+      "evidence/studio-1366x650-en-after.png": true,
+      "evidence/studio-1366x650-en-before.png": true,
+      "evidence/studio-1366x650-en-during.png": true,
+      "evidence/studio-1440x900-en-after.png": true,
+      "evidence/studio-1440x900-en-before.png": true,
+      "evidence/studio-1440x900-en-during.png": true,
+      "evidence/studio-1920x910-en-after.png": true,
+      "evidence/studio-1920x910-en-before.png": true,
+      "evidence/studio-1920x910-en-during.png": true,
+      "evidence/studio-390x667-en-after.png": true,
+      "evidence/studio-390x667-en-before.png": true,
+      "evidence/studio-390x667-en-during.png": true,
+      "evidence/studio-390x667-ru-long-reduced-after.png": true,
+      "evidence/studio-390x667-ru-long-reduced-before.png": true,
+      "evidence/studio-390x667-ru-long-reduced-during.png": true,
+      "evidence/studio-390x844-en-after.png": true,
+      "evidence/studio-390x844-en-before.png": true,
+      "evidence/studio-390x844-en-during.png": true,
+      "evidence/studio-desktop-result.png": true,
+      "evidence/studio-desktop-save-failure-after.png": true,
+      "evidence/studio-desktop-save-failure-during.png": true,
+      "evidence/studio-phone-mic-failure-after.png": true,
+      "evidence/studio-phone-mic-failure-during.png": true,
+      "evidence/studio-phone-result.png": true,
+      "evidence/owner-reference-original-envelope.png": true,
+      "evidence/owner-reference-studio.png": true,
+      "evidence/owner-reference-take-overlay.png": true
+    }
+  },
+  {
+    "check": "Original comparison preservation",
+    "observed": {
+      "manifestUnchanged": true,
+      "files": 54,
+      "mismatches": []
+    }
+  }
+]

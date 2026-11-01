@@ -1,0 +1,146 @@
+{
+  "checks": [
+    {
+      "name": "fresh-candidate-before-listen",
+      "value": {
+        "src": "blob:http://127.0.0.1:5180/9be4a951-2205-4d41-8813-5fdc8f579dcf",
+        "audioSrc": "blob:http://127.0.0.1:5180/9be4a951-2205-4d41-8813-5fdc8f579dcf",
+        "audioReady": 0,
+        "audioError": null,
+        "video": {
+          "time": 5.231528,
+          "volume": 1,
+          "paused": true
+        },
+        "helper": "Line 1 / 3New takeOriginalRecord againYour takeNext saves this take and continues.PreviousNext"
+      }
+    },
+    {
+      "name": "fresh-candidate-listen",
+      "value": {
+        "src": "blob:http://127.0.0.1:5180/9be4a951-2205-4d41-8813-5fdc8f579dcf",
+        "audioSrc": "blob:http://127.0.0.1:5180/9be4a951-2205-4d41-8813-5fdc8f579dcf",
+        "audioReady": 1,
+        "audioError": null,
+        "video": {
+          "time": 0.168209,
+          "volume": 1,
+          "paused": false
+        },
+        "helper": "Line 1 / 3New takeOriginalRecord againYour takeNext saves this take and continues.PreviousNext"
+      }
+    },
+    {
+      "name": "reloaded-candidate-before-listen",
+      "value": {
+        "src": "blob:http://127.0.0.1:5180/57c95744-dee9-4791-9687-d5a8d81c810a",
+        "audioSrc": "blob:http://127.0.0.1:5180/57c95744-dee9-4791-9687-d5a8d81c810a",
+        "audioReady": 1,
+        "audioError": null,
+        "video": {
+          "time": 0,
+          "volume": 1,
+          "paused": true
+        },
+        "helper": "Line 1 / 3New takeOriginalRecord againYour takeNext saves this take and continues.PreviousNext"
+      }
+    },
+    {
+      "name": "reloaded-candidate-listen",
+      "value": {
+        "src": "blob:http://127.0.0.1:5180/57c95744-dee9-4791-9687-d5a8d81c810a",
+        "audioSrc": "blob:http://127.0.0.1:5180/57c95744-dee9-4791-9687-d5a8d81c810a",
+        "audioReady": 4,
+        "audioError": null,
+        "video": {
+          "time": 0.25824,
+          "volume": 1,
+          "paused": false
+        },
+        "helper": "Line 1 / 3New takeOriginalRecord againYour takeNext saves this take and continues.PreviousNext",
+        "pauseHidden": false
+      }
+    },
+    {
+      "name": "fresh-direct-short-result",
+      "value": {
+        "height": 734,
+        "main": {
+          "x": 384,
+          "y": 8,
+          "width": 512,
+          "height": 726,
+          "top": 8,
+          "right": 896,
+          "bottom": 734,
+          "left": 384
+        },
+        "stage": {
+          "x": 400,
+          "y": 88,
+          "width": 480,
+          "height": 342,
+          "top": 88,
+          "right": 880,
+          "bottom": 430,
+          "left": 400
+        },
+        "bottom": {
+          "x": 400,
+          "y": 446,
+          "width": 480,
+          "height": 272,
+          "top": 446,
+          "right": 880,
+          "bottom": 718,
+          "left": 400
+        },
+        "actions": {
+          "x": 521.859375,
+          "y": 446,
+          "width": 358.140625,
+          "height": 40,
+          "top": 446,
+          "right": 880,
+          "bottom": 486,
+          "left": 521.859375
+        },
+        "volume": {
+          "input": "1",
+          "media": 1
+        },
+        "bodyFont": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+      }
+    },
+    {
+      "name": "selector-keyboard",
+      "value": "true"
+    },
+    {
+      "name": "IR13-retained",
+      "value": {
+        "error": null,
+        "disabled": false,
+        "source": "dub"
+      }
+    },
+    {
+      "name": "ended-transport",
+      "value": [
+        {
+          "id": "result-play",
+          "label": "Play"
+        },
+        {
+          "id": "",
+          "label": "Replay"
+        },
+        {
+          "id": "result-fullscreen",
+          "label": "Full screen"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

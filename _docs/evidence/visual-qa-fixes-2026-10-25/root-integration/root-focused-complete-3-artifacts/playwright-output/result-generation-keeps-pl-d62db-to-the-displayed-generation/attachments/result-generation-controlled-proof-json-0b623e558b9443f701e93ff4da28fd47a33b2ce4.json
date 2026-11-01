@@ -1,0 +1,58 @@
+{
+  "capturedAtUtc": "2026-10-25T16:07:13.222Z",
+  "scope": "Controlled local-mock ResultScreen browser proof. This does not exercise backend generation, native-device capture, Safari/iOS, or operating-system save confirmation.",
+  "browser": {
+    "engine": "Chromium",
+    "version": "156.0.8078.4"
+  },
+  "mediaOutput": {
+    "mutedLaunchArgumentConfigured": true,
+    "elementMuted": true,
+    "elementVolume": 0
+  },
+  "localFixtureOnly": true,
+  "generationIds": [
+    "controlled-generation-001",
+    "controlled-generation-002"
+  ],
+  "playback": {
+    "sourceDuringPendingDownload": "/media/result-generation-001.mp4",
+    "currentTimeBeforePublishSeconds": 0.351835,
+    "currentTimeDuringPendingDownloadSeconds": 0.44865,
+    "pausedDuringPendingDownload": false,
+    "sourceBeforeExplicitWatchNew": "/media/result-generation-001.mp4",
+    "sourceAfterWatchNew": "/media/result-generation-002.mp4",
+    "pausedAfterWatchNew": true,
+    "currentTimeAfterWatchNewSeconds": 0
+  },
+  "downloads": {
+    "calls": [
+      {
+        "projectId": "controlled-result-project",
+        "displayedGenerationId": "controlled-generation-001",
+        "operationId": "a250130f-917c-4ffd-9ca6-1611365c19c2"
+      },
+      {
+        "projectId": "controlled-result-project",
+        "displayedGenerationId": "controlled-generation-002",
+        "operationId": "f45fe7d7-5af0-4190-ad27-56bc9f839f71"
+      }
+    ],
+    "pendingOldGeneration": {
+      "fileName": "result-generation-001.mp4",
+      "bytes": 211221,
+      "sha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2"
+    },
+    "freshCurrentGeneration": {
+      "fileName": "result-generation-002.mp4",
+      "bytes": 211724,
+      "sha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042"
+    }
+  },
+  "sideEffects": {
+    "assemblyCalls": 0,
+    "creditCalls": [],
+    "operationCalls": [],
+    "unexpectedServiceCalls": []
+  }
+}

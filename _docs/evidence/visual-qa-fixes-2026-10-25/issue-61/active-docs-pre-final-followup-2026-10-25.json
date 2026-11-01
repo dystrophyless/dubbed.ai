@@ -1,0 +1,97 @@
+{
+  "captured_at": "2026-10-25",
+  "purpose": "Issue 61 final contract-seam follow-up baseline; prior active contract state before this bounded follow-up.",
+  "files": [
+    {
+      "path": "_docs/frontend-flows/00-shared-contract.md",
+      "sha256": "95949d54507effc1f32b5e0ca03963e4ecb91513c3deb00a46782f503e1debf2",
+      "bytes": 112465
+    },
+    {
+      "path": "_docs/frontend-flows/01-landing.md",
+      "sha256": "7f7905a5c1d2adb761f796efb52a23d7bd5c676e41f6296bbe0affff11b6afac",
+      "bytes": 42013
+    },
+    {
+      "path": "_docs/frontend-flows/02-sign-in.md",
+      "sha256": "4037c1428c26ebb2274cedd5cc7d04099ab75f2d275fd6db7db7442d70c6e00c",
+      "bytes": 55554
+    },
+    {
+      "path": "_docs/frontend-flows/03-registration.md",
+      "sha256": "6f3158219e0b434f61f333f8abd3b26e21fe1ee893df9730495deb9a8444298c",
+      "bytes": 63647
+    },
+    {
+      "path": "_docs/frontend-flows/04-password-reset.md",
+      "sha256": "5fe4c974610d7c98d1fd49bbfd5dba06d8a792d84d2dcf6da6e2895afd3923ad",
+      "bytes": 50974
+    },
+    {
+      "path": "_docs/frontend-flows/05-account-linking.md",
+      "sha256": "288ac7c445ad40c4f2aa0a66ed8e142cc0ba3983e7ff59f934f38d380d8e9174",
+      "bytes": 58307
+    },
+    {
+      "path": "_docs/frontend-flows/06-new-dub.md",
+      "sha256": "1946f4a5f88a62b3266f24aa09b328dd542344dab72dc0c9ef36083205a245c9",
+      "bytes": 109772
+    },
+    {
+      "path": "_docs/frontend-flows/07-processing.md",
+      "sha256": "dfb54a17e49bc6d1b74ad85960c03fcacdd35617ca13c292f2eb7b690205bc1f",
+      "bytes": 81631
+    },
+    {
+      "path": "_docs/frontend-flows/09-record.md",
+      "sha256": "7b84de6f6abe85a9ddc6f7c183bec36f21c8f575740cfcd70c4ca1ead0120b7d",
+      "bytes": 130082
+    },
+    {
+      "path": "_docs/frontend-flows/10-result.md",
+      "sha256": "248fa162c7a4c2276eda081d6e3251e78eac2090959b8bf23760d91698f9b6b4",
+      "bytes": 92554
+    },
+    {
+      "path": "_docs/frontend-flows/11-projects.md",
+      "sha256": "0d308a69c230dec5e557f36f993e97c3076c9d48c24dc3dda5586a064f1900ab",
+      "bytes": 111494
+    },
+    {
+      "path": "_docs/frontend-flows/12-credits.md",
+      "sha256": "de59785fd391ce054ea528068276e4334227fd3affcca2f71e1cb6c3f676d768",
+      "bytes": 88566
+    },
+    {
+      "path": "_docs/frontend-flows/15-account.md",
+      "sha256": "68ae39540dd689367af96445b344e24dcbc0ce4b77475fb4fec8ef95c343b13b",
+      "bytes": 49720
+    },
+    {
+      "path": "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+      "sha256": "d556344dee4cea2e3b69076bf3e608d4f9a8a38f37244722144e7c7898200942",
+      "bytes": 11858
+    },
+    {
+      "path": "_docs/frontend-flows/affect-ui-clean-light-reference.md",
+      "sha256": "183aad72819c669a3510d9fd952afef36948cae786ec94dc58e40bb5a17d4c11",
+      "bytes": 29127
+    },
+    {
+      "path": "_docs/frontend-flows/affect-ui-workflow.md",
+      "sha256": "2be273b7d77201ba7b15ae9e75c3ca158a3293336773f37719c1f2d9a4570e6c",
+      "bytes": 11208
+    },
+    {
+      "path": "_docs/frontend-flows/design-tokens.md",
+      "sha256": "2b89caeca58ec09fee9245852526c0b7d22cbf3c9a690d0ba0d72c70f8833db1",
+      "bytes": 22860
+    },
+    {
+      "path": "_docs/frontend-implementation-contract.md",
+      "sha256": "9e59c825b9a72ef129974c4931eb85e6a16b7b878eacf5b1075ca9b721bbadbc",
+      "bytes": 37787
+    }
+  ],
+  "local_only": "Original byte copies and helper remain local evidence and must be excluded from publication/commit."
+}

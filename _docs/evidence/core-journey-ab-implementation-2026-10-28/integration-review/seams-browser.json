@@ -1,0 +1,727 @@
+{
+  "checks": [
+    {
+      "name": "no-autocapture",
+      "value": {
+        "gum": 0,
+        "starts": 0
+      }
+    },
+    {
+      "name": "popup-shape",
+      "value": {
+        "text": "Microphone access was denied or interrupted. Recording did not begin; you can open the Settings boundary from here.",
+        "html": "Microphone access was denied or interrupted. Recording did not begin; you can open the Settings boundary from here.",
+        "rect": {
+          "x": 16,
+          "y": 756,
+          "width": 358,
+          "height": 84,
+          "top": 756,
+          "right": 374,
+          "bottom": 840,
+          "left": 16
+        },
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(36, 36, 36)",
+        "radius": "8px"
+      }
+    },
+    {
+      "name": "popup-expired-durable-guidance",
+      "toastCount": 0,
+      "notice": "Microphone access was denied or interrupted. Recording did not begin; you can open the Settings boundary from here.",
+      "settings": 0
+    },
+    {
+      "name": "native-capture-counts",
+      "value": {
+        "gum": 4,
+        "starts": 3
+      }
+    },
+    {
+      "name": "durable-media",
+      "value": {
+        "projects": [
+          {
+            "id": "sintel-prepared",
+            "accountId": "seeded-local-account",
+            "revision": 7,
+            "preparationRevision": "sintel-scene-v1",
+            "title": "Sintel · The Search",
+            "source": {
+              "url": "/media/scene.mp4",
+              "bytes": 886403,
+              "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+              "durationSeconds": 13.416667,
+              "width": 960,
+              "height": 408,
+              "rotationDegrees": 0,
+              "attribution": "Sintel · Blender Foundation",
+              "license": "CC BY 3.0"
+            },
+            "windows": [
+              {
+                "id": "sintel-turn-1",
+                "revision": 1,
+                "startMs": 0,
+                "endMs": 5100,
+                "text": {
+                  "en": "What brings you to the land of the gatekeepers?",
+                  "ru": "Что привело тебя в страну хранителей?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-2",
+                "revision": 1,
+                "startMs": 5100,
+                "endMs": 8500,
+                "text": {
+                  "en": "I’m searching for someone.",
+                  "ru": "Я ищу одного человека."
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              },
+              {
+                "id": "sintel-turn-3",
+                "revision": 1,
+                "startMs": 8500,
+                "endMs": 13400,
+                "text": {
+                  "en": "Someone very dear? A kindred spirit?",
+                  "ru": "Кого-то очень близкого? Родственную душу?"
+                },
+                "sourceWaveform": [],
+                "sourceWaveformProvenance": "Source waveform is decoded from the manifested source media by BrowserMediaPort."
+              }
+            ],
+            "draftCandidateByTurn": {},
+            "acceptedByTurn": {
+              "sintel-turn-1": "candidate:operation:7ce1316e-9464-416f-a711-64ec61e8b71d",
+              "sintel-turn-2": "candidate:operation:09f12697-cd50-4b35-ae84-485b593dfe9f",
+              "sintel-turn-3": "candidate:operation:b49b1e7f-76b5-4fce-8ab9-746c5952f7e1"
+            },
+            "acceptedProjectRevisionByTurn": {
+              "sintel-turn-1": 3,
+              "sintel-turn-2": 5,
+              "sintel-turn-3": 7
+            },
+            "acceptedOperationByTurn": {
+              "sintel-turn-1": "operation:68b64a78-5f6a-4486-9074-a15763e80e9a",
+              "sintel-turn-2": "operation:b5470e34-685d-4a0e-8ac3-200cb2197e0b",
+              "sintel-turn-3": "operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713"
+            },
+            "acceptedHistory": [
+              "candidate:operation:7ce1316e-9464-416f-a711-64ec61e8b71d",
+              "candidate:operation:09f12697-cd50-4b35-ae84-485b593dfe9f",
+              "candidate:operation:b49b1e7f-76b5-4fce-8ab9-746c5952f7e1"
+            ],
+            "tombstonedAt": null,
+            "initialResultSnapshotId": "snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "latestResultSnapshotId": "snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "latestResultGenerationId": "generation:snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713"
+          }
+        ],
+        "media": [
+          {
+            "id": "candidate:operation:09f12697-cd50-4b35-ae84-485b593dfe9f",
+            "turnId": "sintel-turn-2",
+            "byteSize": 47428,
+            "blobSize": 47428,
+            "sha256": "8bff371f99d4da027ca7d8a7b1e28e67430e9baacbe258813f57a63043e4f726",
+            "actualSha256": "8bff371f99d4da027ca7d8a7b1e28e67430e9baacbe258813f57a63043e4f726",
+            "probe": {
+              "mimeType": "audio/webm;codecs=opus",
+              "byteSize": 47428,
+              "durationSeconds": 3.42,
+              "decodedFrames": 164160,
+              "channelCount": 1,
+              "sampleRate": 48000,
+              "decodeStatus": "decoded",
+              "waveformPeaks": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1.018,
+                1.006,
+                0.025,
+                0.008,
+                0.003,
+                0.001,
+                0,
+                0,
+                0,
+                0.032,
+                1.002,
+                0.042,
+                0.01,
+                0.003,
+                0.001,
+                0,
+                0,
+                0,
+                0,
+                1.017,
+                0.973,
+                0.026,
+                0.01,
+                0.004,
+                0.001,
+                0,
+                0,
+                0,
+                1.025,
+                1.042,
+                0.022,
+                0.009,
+                0.003,
+                0.001,
+                0,
+                0,
+                0,
+                0.001,
+                1.014,
+                0.041,
+                0.012,
+                0.005,
+                0.001,
+                0,
+                0,
+                0,
+                0,
+                1.007,
+                0.173,
+                0.017,
+                0.007,
+                0.002,
+                0.001,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "candidate:operation:7ce1316e-9464-416f-a711-64ec61e8b71d",
+            "turnId": "sintel-turn-1",
+            "byteSize": 74476,
+            "blobSize": 74476,
+            "sha256": "c11a248cbdd8d47f4c9bcde76bee284630d0f8ea05c5dd842438982df07f1778",
+            "actualSha256": "c11a248cbdd8d47f4c9bcde76bee284630d0f8ea05c5dd842438982df07f1778",
+            "probe": {
+              "mimeType": "audio/webm;codecs=opus",
+              "byteSize": 74476,
+              "durationSeconds": 5.1,
+              "decodedFrames": 244800,
+              "channelCount": 1,
+              "sampleRate": 48000,
+              "decodeStatus": "decoded",
+              "waveformPeaks": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1.018,
+                0.066,
+                0.011,
+                0.002,
+                0,
+                0,
+                1.002,
+                0.983,
+                0.012,
+                0.002,
+                0,
+                0,
+                0.013,
+                1.038,
+                0.019,
+                0.004,
+                0.001,
+                0,
+                0,
+                1.023,
+                0.028,
+                0.006,
+                0.001,
+                0,
+                0,
+                1.014,
+                0.099,
+                0.011,
+                0.002,
+                0,
+                0,
+                1.007,
+                1.006,
+                0.015,
+                0.003,
+                0,
+                0,
+                0,
+                1.008,
+                0.023,
+                0.005,
+                0.001,
+                0,
+                0,
+                1.001,
+                0.112,
+                0.013,
+                0.002,
+                0.001,
+                0,
+                0.999,
+                0.997,
+                0.021,
+                0.004,
+                0.001,
+                0,
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "candidate:operation:b49b1e7f-76b5-4fce-8ab9-746c5952f7e1",
+            "turnId": "sintel-turn-3",
+            "byteSize": 71578,
+            "blobSize": 71578,
+            "sha256": "2224090058a1b7a3d00f518fb300ad1d5c7d6533500e93997d6f455dcebbbd87",
+            "actualSha256": "2224090058a1b7a3d00f518fb300ad1d5c7d6533500e93997d6f455dcebbbd87",
+            "probe": {
+              "mimeType": "audio/webm;codecs=opus",
+              "byteSize": 71578,
+              "durationSeconds": 4.92,
+              "decodedFrames": 236160,
+              "channelCount": 1,
+              "sampleRate": 48000,
+              "decodeStatus": "decoded",
+              "waveformPeaks": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1.018,
+                0.874,
+                0.016,
+                0.003,
+                0.001,
+                0,
+                0,
+                1.002,
+                0.029,
+                0.006,
+                0.001,
+                0,
+                0,
+                1.038,
+                1.007,
+                0.013,
+                0.003,
+                0,
+                0,
+                0,
+                1.023,
+                0.028,
+                0.006,
+                0.001,
+                0,
+                0,
+                1.014,
+                1.003,
+                0.014,
+                0.003,
+                0.001,
+                0,
+                0,
+                1.007,
+                0.028,
+                0.007,
+                0.001,
+                0,
+                0,
+                1.003,
+                0.999,
+                0.025,
+                0.005,
+                0.001,
+                0,
+                0,
+                1.001,
+                0.056,
+                0.013,
+                0.002,
+                0.001,
+                0,
+                0.999,
+                0.997,
+                0.025,
+                0.005,
+                0.001,
+                0
+              ]
+            }
+          }
+        ],
+        "operations": [
+          {
+            "id": "operation:09f12697-cd50-4b35-ae84-485b593dfe9f",
+            "actorId": "seeded-local-account",
+            "projectId": "sintel-prepared",
+            "kind": "save-candidate",
+            "turnId": "sintel-turn-2",
+            "fingerprint": "6e80ee815c57b2a0dc61ce4ed04cbce16d4f1d759f9e53ce2e4d8585be11f283",
+            "createdAt": 1793204766923,
+            "state": "committed",
+            "candidateId": "candidate:operation:09f12697-cd50-4b35-ae84-485b593dfe9f",
+            "projectRevision": 4,
+            "sha256": "8bff371f99d4da027ca7d8a7b1e28e67430e9baacbe258813f57a63043e4f726"
+          },
+          {
+            "id": "operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "actorId": "seeded-local-account",
+            "projectId": "sintel-prepared",
+            "kind": "accept-candidate",
+            "turnId": "sintel-turn-3",
+            "fingerprint": "d008d33a56b8cd3b0dabf47178ab3739bee788f2c4469279fcc5f6b428b85274",
+            "createdAt": 1793204773131,
+            "candidateId": "candidate:operation:b49b1e7f-76b5-4fce-8ab9-746c5952f7e1",
+            "navigationIntent": {
+              "kind": "result",
+              "snapshotId": "snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+              "layout": "B"
+            },
+            "navigationCompleted": true,
+            "state": "committed",
+            "projectRevision": 7,
+            "sha256": "2224090058a1b7a3d00f518fb300ad1d5c7d6533500e93997d6f455dcebbbd87",
+            "snapshotId": "snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713"
+          },
+          {
+            "id": "operation:68b64a78-5f6a-4486-9074-a15763e80e9a",
+            "actorId": "seeded-local-account",
+            "projectId": "sintel-prepared",
+            "kind": "accept-candidate",
+            "turnId": "sintel-turn-1",
+            "fingerprint": "1c0bbeee0d23ad375726a3bf1befd4e88a1c4dffde22f3e308d5454db3ed7510",
+            "createdAt": 1793204763336,
+            "candidateId": "candidate:operation:7ce1316e-9464-416f-a711-64ec61e8b71d",
+            "navigationIntent": {
+              "kind": "advance",
+              "targetTurnId": "sintel-turn-2",
+              "layout": "B"
+            },
+            "navigationCompleted": true,
+            "state": "committed",
+            "projectRevision": 3,
+            "sha256": "c11a248cbdd8d47f4c9bcde76bee284630d0f8ea05c5dd842438982df07f1778"
+          },
+          {
+            "id": "operation:7ce1316e-9464-416f-a711-64ec61e8b71d",
+            "actorId": "seeded-local-account",
+            "projectId": "sintel-prepared",
+            "kind": "save-candidate",
+            "turnId": "sintel-turn-1",
+            "fingerprint": "1326f4d3100ca0bee4770b7c7e3a6a07a293cd5b5b4b59e769fe411cb2d6c72b",
+            "createdAt": 1793204762913,
+            "state": "committed",
+            "candidateId": "candidate:operation:7ce1316e-9464-416f-a711-64ec61e8b71d",
+            "projectRevision": 2,
+            "sha256": "c11a248cbdd8d47f4c9bcde76bee284630d0f8ea05c5dd842438982df07f1778"
+          },
+          {
+            "id": "operation:b49b1e7f-76b5-4fce-8ab9-746c5952f7e1",
+            "actorId": "seeded-local-account",
+            "projectId": "sintel-prepared",
+            "kind": "save-candidate",
+            "turnId": "sintel-turn-3",
+            "fingerprint": "7a3f19854b109963db1f21c783fd5b0a6f1a65be873ef1650899f88879b8e5ac",
+            "createdAt": 1793204772523,
+            "state": "committed",
+            "candidateId": "candidate:operation:b49b1e7f-76b5-4fce-8ab9-746c5952f7e1",
+            "projectRevision": 6,
+            "sha256": "2224090058a1b7a3d00f518fb300ad1d5c7d6533500e93997d6f455dcebbbd87"
+          },
+          {
+            "id": "operation:b5470e34-685d-4a0e-8ac3-200cb2197e0b",
+            "actorId": "seeded-local-account",
+            "projectId": "sintel-prepared",
+            "kind": "accept-candidate",
+            "turnId": "sintel-turn-2",
+            "fingerprint": "2fa64ab7ec456da98072176b55e446c8256a299131cf5e0aee7ce68ce7787ce3",
+            "createdAt": 1793204767491,
+            "candidateId": "candidate:operation:09f12697-cd50-4b35-ae84-485b593dfe9f",
+            "navigationIntent": {
+              "kind": "advance",
+              "targetTurnId": "sintel-turn-3",
+              "layout": "B"
+            },
+            "navigationCompleted": true,
+            "state": "committed",
+            "projectRevision": 5,
+            "sha256": "8bff371f99d4da027ca7d8a7b1e28e67430e9baacbe258813f57a63043e4f726"
+          }
+        ],
+        "snapshots": [
+          {
+            "actorId": "seeded-local-account",
+            "projectId": "sintel-prepared",
+            "projectRevision": 7,
+            "preparationRevision": "sintel-scene-v1",
+            "authorizationOperationId": "operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "source": {
+              "url": "/media/scene.mp4",
+              "bytes": 886403,
+              "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+              "durationSeconds": 13.416667,
+              "width": 960,
+              "height": 408,
+              "rotationDegrees": 0,
+              "attribution": "Sintel · Blender Foundation",
+              "license": "CC BY 3.0"
+            },
+            "sourceSha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+            "selection": {
+              "sourceSha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+              "windows": [
+                {
+                  "turnId": "sintel-turn-1",
+                  "turnRevision": 1,
+                  "startMs": 0,
+                  "endMs": 5100
+                },
+                {
+                  "turnId": "sintel-turn-2",
+                  "turnRevision": 1,
+                  "startMs": 5100,
+                  "endMs": 8500
+                },
+                {
+                  "turnId": "sintel-turn-3",
+                  "turnRevision": 1,
+                  "startMs": 8500,
+                  "endMs": 13400
+                }
+              ]
+            },
+            "background": {
+              "kind": "source-audio-reference",
+              "sourceSha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+              "preparationRevision": "sintel-scene-v1",
+              "provenance": "Prepared source audio reference; no mix or user-derived render is produced by the local mock."
+            },
+            "takes": [
+              {
+                "turnId": "sintel-turn-1",
+                "turnRevision": 1,
+                "windowStartMs": 0,
+                "windowEndMs": 5100,
+                "acceptedCandidateId": "candidate:operation:7ce1316e-9464-416f-a711-64ec61e8b71d",
+                "candidateSha256": "c11a248cbdd8d47f4c9bcde76bee284630d0f8ea05c5dd842438982df07f1778",
+                "captureOperationId": "operation:7ce1316e-9464-416f-a711-64ec61e8b71d",
+                "acceptOperationId": "operation:68b64a78-5f6a-4486-9074-a15763e80e9a",
+                "acceptedProjectRevision": 3,
+                "byteSize": 74476,
+                "mimeType": "audio/webm;codecs=opus",
+                "capturedAt": 1793204762913,
+                "endReason": "fixed-window"
+              },
+              {
+                "turnId": "sintel-turn-2",
+                "turnRevision": 1,
+                "windowStartMs": 5100,
+                "windowEndMs": 8500,
+                "acceptedCandidateId": "candidate:operation:09f12697-cd50-4b35-ae84-485b593dfe9f",
+                "candidateSha256": "8bff371f99d4da027ca7d8a7b1e28e67430e9baacbe258813f57a63043e4f726",
+                "captureOperationId": "operation:09f12697-cd50-4b35-ae84-485b593dfe9f",
+                "acceptOperationId": "operation:b5470e34-685d-4a0e-8ac3-200cb2197e0b",
+                "acceptedProjectRevision": 5,
+                "byteSize": 47428,
+                "mimeType": "audio/webm;codecs=opus",
+                "capturedAt": 1793204766923,
+                "endReason": "fixed-window"
+              },
+              {
+                "turnId": "sintel-turn-3",
+                "turnRevision": 1,
+                "windowStartMs": 8500,
+                "windowEndMs": 13400,
+                "acceptedCandidateId": "candidate:operation:b49b1e7f-76b5-4fce-8ab9-746c5952f7e1",
+                "candidateSha256": "2224090058a1b7a3d00f518fb300ad1d5c7d6533500e93997d6f455dcebbbd87",
+                "captureOperationId": "operation:b49b1e7f-76b5-4fce-8ab9-746c5952f7e1",
+                "acceptOperationId": "operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+                "acceptedProjectRevision": 7,
+                "byteSize": 71578,
+                "mimeType": "audio/webm;codecs=opus",
+                "capturedAt": 1793204772523,
+                "endReason": "fixed-window"
+              }
+            ],
+            "authorization": "initial-completion",
+            "id": "snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "scope": {
+              "actorId": "seeded-local-account",
+              "projectId": "sintel-prepared"
+            },
+            "contentSha256": "4a3be90920c8242abf2b317b741d38c837726da63b47618692abd9981e134b77",
+            "createdAt": 1793204773131
+          }
+        ],
+        "jobs": [
+          {
+            "id": "generation:snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "scope": {
+              "actorId": "seeded-local-account",
+              "projectId": "sintel-prepared"
+            },
+            "projectRevision": 7,
+            "snapshotId": "snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "snapshotContentSha256": "4a3be90920c8242abf2b317b741d38c837726da63b47618692abd9981e134b77",
+            "authorizationOperationId": "operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "operationId": "result-start:snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "fixtureId": "illustrative-generation-001",
+            "mediaSha256": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9",
+            "productRendered": false,
+            "assembledFromAcceptedTakes": false,
+            "status": "ready",
+            "fixture": {
+              "id": "illustrative-generation-001",
+              "url": "/media/example-dub.mp4",
+              "bytes": 749601,
+              "sha256": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9",
+              "durationSeconds": 13.416667,
+              "width": 960,
+              "height": 408,
+              "rotationDegrees": 0,
+              "provenance": "Prototype example-dub sample made from the supplied synthetic takes; not a user recording or product render.",
+              "productRendered": false,
+              "assembledFromAcceptedTakes": false,
+              "filename": "example-dub.mp4",
+              "mimeType": "video/mp4"
+            },
+            "attempt": 1,
+            "automaticRetryCount": 0,
+            "manualRetryCount": 0,
+            "retryLineageId": "result-start:snapshot:operation:4791d495-d8f0-462f-80a2-7d8bfbcd9713",
+            "retryOperationIds": [],
+            "createdAt": 1793204773142,
+            "updatedAt": 1793204773177,
+            "readyAt": 1793204773177
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual-platform-font",
+      "value": {
+        "fonts": [
+          {
+            "familyName": "Mabry Pro",
+            "postScriptName": "MabryPro-Medium",
+            "isCustomFont": false,
+            "glyphCount": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "short-result-fit",
+      "value": {
+        "heading": {
+          "x": 308.796875,
+          "y": 20,
+          "width": 662.390625,
+          "height": 28,
+          "top": 20,
+          "right": 971.1875,
+          "bottom": 48,
+          "left": 308.796875
+        },
+        "player": {
+          "x": 180,
+          "y": 108,
+          "width": 920,
+          "height": 573.5,
+          "top": 108,
+          "right": 1100,
+          "bottom": 681.5,
+          "left": 180
+        },
+        "actions": {
+          "x": 767.859375,
+          "y": 701.5,
+          "width": 332.140625,
+          "height": 40,
+          "top": 701.5,
+          "right": 1100,
+          "bottom": 741.5,
+          "left": 767.859375
+        },
+        "viewportHeight": 600
+      }
+    },
+    {
+      "name": "phone-targets",
+      "value": {
+        ".result-player__seek": {
+          "x": 32,
+          "y": 431.375,
+          "width": 326,
+          "height": 24,
+          "top": 431.375,
+          "right": 358,
+          "bottom": 455.375,
+          "left": 32
+        },
+        ".result-player__volume input": {
+          "x": 52,
+          "y": 463.375,
+          "width": 120,
+          "height": 24,
+          "top": 463.375,
+          "right": 172,
+          "bottom": 487.375,
+          "left": 52
+        },
+        ".result-player__source-tabs button": {
+          "x": 28,
+          "y": 180,
+          "width": 78,
+          "height": 48,
+          "top": 180,
+          "right": 106,
+          "bottom": 228,
+          "left": 28
+        }
+      }
+    },
+    {
+      "name": "result-tab-arrow-right",
+      "value": [
+        "Original"
+      ]
+    },
+    {
+      "name": "tombstone-before-download-delivery",
+      "deleted": true,
+      "downloadOccurred": true,
+      "visibleResult": true
+    }
+  ],
+  "errors": [],
+  "physicalMicrophone": false
+}

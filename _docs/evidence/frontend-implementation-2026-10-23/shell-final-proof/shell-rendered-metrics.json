@@ -328,7 +328,7 @@
       "fontWeight": "500",
       "lineHeight": "24px",
       "color": "rgb(252, 252, 252)",
-      "backgroundColor": "rgba(0, 0, 0, 0.847)",
+      "backgroundColor": "rgba(0, 0, 0, 0.863)",
       "paddingLeft": "16px",
       "borderRadius": "6px",
       "transitionDuration": "0.14s, 0.14s, 0.14s, 0.14s, 0.16s",
@@ -1419,7 +1419,7 @@
       "scrollWidth": 390
     },
     "dialog": {
-      "x": 57.01349639892578,
+      "x": 57.01586151123047,
       "y": 0,
       "width": 343.1875,
       "height": 844

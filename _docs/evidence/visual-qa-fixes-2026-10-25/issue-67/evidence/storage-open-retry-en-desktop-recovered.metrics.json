@@ -1,0 +1,89 @@
+{
+  "capturedAt": "2026-10-25T11:45:13.085Z",
+  "locale": "en",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 1440,
+  "text": "Skip to content\nDubbed\nNew dub\nProjects\nCredits\nAccount\nCredits\n120\nLanguage\nEN\nRU\nSign out\nAccount\n\nManage your language, sign-in methods, and account access.\n\nqa67-1792928711847-6052@example.test\n\nThis preview uses simulated account data. Changes stay in this browser.\nLanguage\n\nChoose the language used across Dubbed.\n\nLanguage\nEnglish\nРусский\nSign-in methods\n\nThese methods are reported by your account. Email addresses are not used to infer a link.\n\nGoogle\n\nNot linked\n\nLink method\n@\nEmail and password\n\nqa67-1792928711847-6052@example.test\n\nVerified\n\nLinked\nChange password\nCurrent password\nNew password\n\nUse at least 8 characters. No character classes are required.\n\nSave password\nForgot password?\nSession\n\nSign out from this device.\n\nSign out\nDelete account\n\nThis action removes your access to account data and projects.\n\nDelete account",
+  "buttons": [
+    {
+      "label": "Sign out",
+      "width": 75.546875,
+      "height": 32,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 10px"
+    },
+    {
+      "label": "Open navigation",
+      "width": 0,
+      "height": 0,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "13px",
+      "lineHeight": "20px",
+      "padding": "0px"
+    },
+    {
+      "label": "Link method",
+      "width": 132.9375,
+      "height": 40,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 14px"
+    },
+    {
+      "label": "Save password",
+      "width": 124.859375,
+      "height": 40,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 14px"
+    },
+    {
+      "label": "Forgot password?",
+      "width": 170.15625,
+      "height": 40,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 14px"
+    },
+    {
+      "label": "Sign out",
+      "width": 107.546875,
+      "height": 40,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 14px"
+    },
+    {
+      "label": "Delete account",
+      "width": 151.9375,
+      "height": 40,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 14px"
+    }
+  ]
+}

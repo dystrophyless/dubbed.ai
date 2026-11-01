@@ -1,0 +1,47 @@
+[
+  {
+    "path": "evidence/01-credits-initial-en-desktop.png",
+    "sha256": "DA66AE458D46C629C3BE570F06A65D6D1F16BF1727C2A6D8B10554A3F71A3300",
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/02-credits-pending-en-desktop.png",
+    "sha256": "0FFCFEF6F559D6312C55BF3ADF252348DF361B46223194A5CF129DC2E0C8DAC7",
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/03-credits-verified-en-desktop.png",
+    "sha256": "C2524E4828832DE8C3016FBFC83D989FBFD78F2C8BE491F7FDF8E413FDE4E117",
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/04-credits-reserved-en-desktop.png",
+    "sha256": "02657C9026C411179E6BF1122CD94B51DE0495F501ABC63D4B0C466BCCF1C264",
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/05-credits-reserved-ru-phone.png",
+    "sha256": "99959151CDCCCA390B447BF2166F9E7F0D0BE3E851B6BC742819F1186D39F6D5",
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/06-credits-reserved-ru-short.png",
+    "sha256": "9CF4E7D3D5CA23B59E24FCA04A841BB716AB93CAFCBBF8A13377AC12F4B21438",
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/07-processing-system-failure-en-desktop.png",
+    "sha256": "ED42C4111D74FDEC6D3214612749F0C70D91AB1521557AB246A61431BD1126AC",
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/08-processing-cancellation-ru-phone.png",
+    "sha256": "4BC1EF6ABA3745F49DAADBDE20231E6027E930BB92FE8E20F4145E5B1F2069FF",
+    "visuallyInspected": true
+  },
+  {
+    "path": "evidence/09-cancellation-quote-dialog-ru-phone.png",
+    "sha256": "A583104609A379CBA7233E91979C4FBCEF897437F9AC3FF8AB1C966E61EC3AFA",
+    "visuallyInspected": true
+  }
+]

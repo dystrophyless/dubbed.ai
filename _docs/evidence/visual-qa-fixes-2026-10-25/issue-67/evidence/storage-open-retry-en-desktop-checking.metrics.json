@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-10-25T11:45:12.687Z",
+  "locale": "en",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "unloaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 1440,
+  "text": "Checking your session…",
+  "buttons": []
+}

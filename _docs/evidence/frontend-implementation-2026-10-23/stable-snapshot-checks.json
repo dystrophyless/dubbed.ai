@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-23T17:05:35.209Z",
+  "head": "2de6290b98ef9dd2b9cb923f4a12d3fb1fe610d4",
+  "snapshot": "C:\\Users\\roman\\AppData\\Local\\Temp\\dubbed-frontend-verify-7f3a51c232dd4446aee91955e1fb6f5b",
+  "sourceManifest": "stable-snapshot-source-manifest.json",
+  "checks": [
+    {
+      "command": "npm.cmd run build",
+      "result": "PASS exit0 TypeScript and Vite mock",
+      "note": "First attempt caught unused type import in new conformance test helper. Only that import was removed and file recopied; source manifest records correction."
+    },
+    {
+      "command": "npm.cmd run test",
+      "result": "PASS 130tests/31files exit0",
+      "durationSeconds": 69.75,
+      "note": "Test execution overlapped removal of unused type import in WORKSPACE; isolated tested executable code unchanged."
+    },
+    {
+      "command": "npm.cmd run test:media",
+      "result": "PASS3/3 exit0"
+    },
+    {
+      "command": "npm.cmd run test -- tests/services/compatible-previews.test.ts",
+      "result": "PASS4/4 exit0",
+      "durationSeconds": 2.11
+    },
+    {
+      "command": "npm.cmd run lint",
+      "result": "exit0 with warnings",
+      "note": "React hook/purity/effect and intentional control-regex/fast-refresh warnings remain; not a warning-free claim."
+    },
+    {
+      "command": "npm.cmd exec -- playwright test --config=verification.playwright.config.ts e2e/full-journey.spec.ts e2e/identity-account-journey.spec.ts e2e/runtime-smoke.spec.ts",
+      "result": "PASS7/7 exit0",
+      "durationSeconds": 39.4,
+      "environment": "Builtstatic4281; freshChromiumcontexts muted+fake microphone. Visibleemail/OTP/Googlemockregistration, pendingreload, selection0.123–8.623/ceil9,3takes/Result/downloadSHA/reload, reset/password/link/delete/re-reg, smoke."
+    },
+    {
+      "command": "npm.cmd run test:e2e:real",
+      "result": "PASS1/1 exit0",
+      "durationSeconds": 16.3,
+      "environment": "SeparatemockVite4174 explicitreal configuration unavailable; no externalservicecalls."
+    }
+  ],
+  "bundle": [
+    {
+      "path": "dist/assets/index-Bkghuaeo.js",
+      "bytes": 830062,
+      "sha256": "e6bdbe08447310efd53d59565304599f7dea98d4bad1ff8a36c6ca79ccb58917"
+    },
+    {
+      "path": "dist/assets/index-GYmorhYm.css",
+      "bytes": 47563,
+      "sha256": "6f261cfccd7e8c549b27411a01c193dd07ecb594a02723eecf9229e3fa52d889"
+    }
+  ],
+  "limits": [
+    "Existing JS chunk exceeds500kB warning; no correctness failure inferred.",
+    "No physical microphone/phone, real provider/backend/payment/rendering proof.",
+    "Post-snapshot mobile-sheet focus restoration is being fixed separately.",
+    "Controlled native generation1/2 transition fixture is later evidence outside thissnapshot; physicaldevice/realserviceproofremainabsent."
+  ]
+}

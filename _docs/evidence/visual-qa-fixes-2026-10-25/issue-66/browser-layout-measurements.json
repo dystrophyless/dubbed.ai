@@ -1,0 +1,1567 @@
+{
+  "origin": "http://127.0.0.1:4566",
+  "generatedAt": "2026-10-25T12:56:42.218Z",
+  "cases": [
+    {
+      "scene": "pending-en-desktop-1440",
+      "scenario": "link-candidate-pending",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\pending-en-desktop-1440.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "documentWidth": 1440,
+        "documentHeight": 1293,
+        "mabryLoaded": true,
+        "providerAction": {
+          "button": {
+            "x": 367,
+            "y": 671,
+            "right": 528.28125,
+            "width": 161.28125,
+            "height": 40
+          },
+          "form": {
+            "x": 325,
+            "y": 634,
+            "right": 1115,
+            "width": 790,
+            "height": 77
+          },
+          "rightWithinForm": true,
+          "text": "Confirm with Google"
+        },
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 319,
+            "y": 395,
+            "right": 1121,
+            "width": 802,
+            "height": 21,
+            "clientWidth": 802,
+            "scrollWidth": 802,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 300,
+            "y": 153,
+            "right": 387.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Confirm with Google",
+            "size": "medium",
+            "x": 367,
+            "y": 671,
+            "right": 528.28125,
+            "width": 161.28125,
+            "height": 40,
+            "rightWithinForm": true
+          },
+          {
+            "text": "Confirm email method",
+            "size": "medium",
+            "x": 367,
+            "y": 1036,
+            "right": 534.875,
+            "width": 167.875,
+            "height": 40
+          },
+          {
+            "text": "Send another code",
+            "size": "small",
+            "x": 546.875,
+            "y": 1040,
+            "right": 690,
+            "width": 143.125,
+            "height": 32
+          },
+          {
+            "text": "Cancel request",
+            "size": "small",
+            "x": 300,
+            "y": 1117,
+            "right": 419.78125,
+            "width": 119.78125,
+            "height": 32
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "body",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "main",
+            "clientWidth": 1264,
+            "scrollWidth": 1264
+          },
+          {
+            "name": "screen",
+            "clientWidth": 840,
+            "scrollWidth": 840
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    },
+    {
+      "scene": "pending-en-phone-390",
+      "scenario": "link-candidate-pending",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\pending-en-phone-390.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "documentHeight": 1378,
+        "mabryLoaded": true,
+        "providerAction": {
+          "button": {
+            "x": 33,
+            "y": 689,
+            "right": 217.03125,
+            "width": 184.03125,
+            "height": 48
+          },
+          "form": {
+            "x": 33,
+            "y": 631,
+            "right": 357,
+            "width": 324,
+            "height": 106
+          },
+          "rightWithinForm": true,
+          "text": "Confirm with Google"
+        },
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 31,
+            "y": 368,
+            "right": 359,
+            "width": 328,
+            "height": 21,
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 16,
+            "y": 121,
+            "right": 103.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Confirm with Google",
+            "size": "medium",
+            "x": 33,
+            "y": 689,
+            "right": 217.03125,
+            "width": 184.03125,
+            "height": 48,
+            "rightWithinForm": true
+          },
+          {
+            "text": "Confirm email method",
+            "size": "medium",
+            "x": 33,
+            "y": 1087,
+            "right": 357,
+            "width": 324,
+            "height": 48
+          },
+          {
+            "text": "Send another code",
+            "size": "small",
+            "x": 33,
+            "y": 1147,
+            "right": 357,
+            "width": 324,
+            "height": 48
+          },
+          {
+            "text": "Cancel request",
+            "size": "small",
+            "x": 16,
+            "y": 1230,
+            "right": 374,
+            "width": 358,
+            "height": 48
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "body",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "main",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "screen",
+            "clientWidth": 358,
+            "scrollWidth": 358
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    },
+    {
+      "scene": "pending-ru-desktop-1440",
+      "scenario": "link-candidate-pending",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\pending-ru-desktop-1440.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "ru",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "documentWidth": 1440,
+        "documentHeight": 1293,
+        "mabryLoaded": true,
+        "providerAction": {
+          "button": {
+            "x": 367,
+            "y": 671,
+            "right": 570.9375,
+            "width": 203.9375,
+            "height": 40
+          },
+          "form": {
+            "x": 325,
+            "y": 634,
+            "right": 1115,
+            "width": 790,
+            "height": 77
+          },
+          "rightWithinForm": true,
+          "text": "Подтвердить через Google"
+        },
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 319,
+            "y": 395,
+            "right": 1121,
+            "width": 802,
+            "height": 21,
+            "clientWidth": 802,
+            "scrollWidth": 802,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Аккаунт",
+            "size": null,
+            "x": 300,
+            "y": 153,
+            "right": 383.1875,
+            "width": 83.1875,
+            "height": 40
+          },
+          {
+            "text": "Подтвердить через Google",
+            "size": "medium",
+            "x": 367,
+            "y": 671,
+            "right": 570.9375,
+            "width": 203.9375,
+            "height": 40,
+            "rightWithinForm": true
+          },
+          {
+            "text": "Подтвердить почту",
+            "size": "medium",
+            "x": 367,
+            "y": 1036,
+            "right": 521.765625,
+            "width": 154.765625,
+            "height": 40
+          },
+          {
+            "text": "Отправить код ещё раз",
+            "size": "small",
+            "x": 533.765625,
+            "y": 1040,
+            "right": 706,
+            "width": 172.234375,
+            "height": 32
+          },
+          {
+            "text": "Отменить запрос",
+            "size": "small",
+            "x": 300,
+            "y": 1117,
+            "right": 434.96875,
+            "width": 134.96875,
+            "height": 32
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "body",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "main",
+            "clientWidth": 1264,
+            "scrollWidth": 1264
+          },
+          {
+            "name": "screen",
+            "clientWidth": 840,
+            "scrollWidth": 840
+          }
+        ],
+        "pageTitle": "Подключить способ входа"
+      },
+      "failures": []
+    },
+    {
+      "scene": "pending-ru-phone-390",
+      "scenario": "link-candidate-pending",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\pending-ru-phone-390.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "documentHeight": 1398,
+        "mabryLoaded": true,
+        "providerAction": {
+          "button": {
+            "x": 33,
+            "y": 709,
+            "right": 265.78125,
+            "width": 232.78125,
+            "height": 48
+          },
+          "form": {
+            "x": 33,
+            "y": 651,
+            "right": 357,
+            "width": 324,
+            "height": 106
+          },
+          "rightWithinForm": true,
+          "text": "Подтвердить через Google"
+        },
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 31,
+            "y": 368,
+            "right": 359,
+            "width": 328,
+            "height": 21,
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Аккаунт",
+            "size": null,
+            "x": 16,
+            "y": 121,
+            "right": 99.1875,
+            "width": 83.1875,
+            "height": 40
+          },
+          {
+            "text": "Подтвердить через Google",
+            "size": "medium",
+            "x": 33,
+            "y": 709,
+            "right": 265.78125,
+            "width": 232.78125,
+            "height": 48,
+            "rightWithinForm": true
+          },
+          {
+            "text": "Подтвердить почту",
+            "size": "medium",
+            "x": 33,
+            "y": 1107,
+            "right": 357,
+            "width": 324,
+            "height": 48
+          },
+          {
+            "text": "Отправить код ещё раз",
+            "size": "small",
+            "x": 33,
+            "y": 1167,
+            "right": 357,
+            "width": 324,
+            "height": 48
+          },
+          {
+            "text": "Отменить запрос",
+            "size": "small",
+            "x": 16,
+            "y": 1250,
+            "right": 374,
+            "width": 358,
+            "height": 48
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "body",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "main",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "screen",
+            "clientWidth": 358,
+            "scrollWidth": 358
+          }
+        ],
+        "pageTitle": "Подключить способ входа"
+      },
+      "failures": []
+    },
+    {
+      "scene": "pending-en-short-desktop-1280x640",
+      "scenario": "link-candidate-pending",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\pending-en-short-desktop-1280x640.png",
+      "fullPageScreenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\pending-en-short-desktop-1280x640-full.png",
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 1280,
+          "height": 640
+        },
+        "documentWidth": 1280,
+        "documentHeight": 1293,
+        "mabryLoaded": true,
+        "providerAction": {
+          "button": {
+            "x": 287,
+            "y": 671,
+            "right": 448.28125,
+            "width": 161.28125,
+            "height": 40
+          },
+          "form": {
+            "x": 245,
+            "y": 634,
+            "right": 1035,
+            "width": 790,
+            "height": 77
+          },
+          "rightWithinForm": true,
+          "text": "Confirm with Google"
+        },
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 239,
+            "y": 395,
+            "right": 1041,
+            "width": 802,
+            "height": 21,
+            "clientWidth": 802,
+            "scrollWidth": 802,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 220,
+            "y": 153,
+            "right": 307.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Confirm with Google",
+            "size": "medium",
+            "x": 287,
+            "y": 671,
+            "right": 448.28125,
+            "width": 161.28125,
+            "height": 40,
+            "rightWithinForm": true
+          },
+          {
+            "text": "Confirm email method",
+            "size": "medium",
+            "x": 287,
+            "y": 1036,
+            "right": 454.875,
+            "width": 167.875,
+            "height": 40
+          },
+          {
+            "text": "Send another code",
+            "size": "small",
+            "x": 466.875,
+            "y": 1040,
+            "right": 610,
+            "width": 143.125,
+            "height": 32
+          },
+          {
+            "text": "Cancel request",
+            "size": "small",
+            "x": 220,
+            "y": 1117,
+            "right": 339.78125,
+            "width": 119.78125,
+            "height": 32
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 1280,
+            "scrollWidth": 1280
+          },
+          {
+            "name": "body",
+            "clientWidth": 1280,
+            "scrollWidth": 1280
+          },
+          {
+            "name": "main",
+            "clientWidth": 1264,
+            "scrollWidth": 1264
+          },
+          {
+            "name": "screen",
+            "clientWidth": 840,
+            "scrollWidth": 840
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    },
+    {
+      "scene": "pending-en-breakpoint-767",
+      "scenario": "link-candidate-pending",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\pending-en-breakpoint-767.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 767,
+          "height": 900
+        },
+        "documentWidth": 767,
+        "documentHeight": 1197,
+        "mabryLoaded": true,
+        "providerAction": {
+          "button": {
+            "x": 33,
+            "y": 609,
+            "right": 217.03125,
+            "width": 184.03125,
+            "height": 48
+          },
+          "form": {
+            "x": 33,
+            "y": 572,
+            "right": 734,
+            "width": 701,
+            "height": 85
+          },
+          "rightWithinForm": true,
+          "text": "Confirm with Google"
+        },
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 31,
+            "y": 347,
+            "right": 736,
+            "width": 705,
+            "height": 21,
+            "clientWidth": 705,
+            "scrollWidth": 705,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 16,
+            "y": 121,
+            "right": 103.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Confirm with Google",
+            "size": "medium",
+            "x": 33,
+            "y": 609,
+            "right": 217.03125,
+            "width": 184.03125,
+            "height": 48,
+            "rightWithinForm": true
+          },
+          {
+            "text": "Confirm email method",
+            "size": "medium",
+            "x": 33,
+            "y": 966,
+            "right": 387.0625,
+            "width": 354.0625,
+            "height": 48
+          },
+          {
+            "text": "Send another code",
+            "size": "small",
+            "x": 399.0625,
+            "y": 966,
+            "right": 734,
+            "width": 334.9375,
+            "height": 48
+          },
+          {
+            "text": "Cancel request",
+            "size": "small",
+            "x": 16,
+            "y": 1049,
+            "right": 751,
+            "width": 735,
+            "height": 48
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 767,
+            "scrollWidth": 767
+          },
+          {
+            "name": "body",
+            "clientWidth": 767,
+            "scrollWidth": 767
+          },
+          {
+            "name": "main",
+            "clientWidth": 767,
+            "scrollWidth": 767
+          },
+          {
+            "name": "screen",
+            "clientWidth": 735,
+            "scrollWidth": 735
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    },
+    {
+      "scene": "pending-en-breakpoint-768",
+      "scenario": "link-candidate-pending",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\pending-en-breakpoint-768.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "documentWidth": 768,
+        "documentHeight": 1293,
+        "mabryLoaded": true,
+        "providerAction": {
+          "button": {
+            "x": 99,
+            "y": 671,
+            "right": 260.28125,
+            "width": 161.28125,
+            "height": 40
+          },
+          "form": {
+            "x": 57,
+            "y": 634,
+            "right": 711,
+            "width": 654,
+            "height": 77
+          },
+          "rightWithinForm": true,
+          "text": "Confirm with Google"
+        },
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 51,
+            "y": 395,
+            "right": 717,
+            "width": 666,
+            "height": 21,
+            "clientWidth": 666,
+            "scrollWidth": 666,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 32,
+            "y": 153,
+            "right": 119.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Confirm with Google",
+            "size": "medium",
+            "x": 99,
+            "y": 671,
+            "right": 260.28125,
+            "width": 161.28125,
+            "height": 40,
+            "rightWithinForm": true
+          },
+          {
+            "text": "Confirm email method",
+            "size": "medium",
+            "x": 99,
+            "y": 1036,
+            "right": 266.875,
+            "width": 167.875,
+            "height": 40
+          },
+          {
+            "text": "Send another code",
+            "size": "small",
+            "x": 278.875,
+            "y": 1040,
+            "right": 422,
+            "width": 143.125,
+            "height": 32
+          },
+          {
+            "text": "Cancel request",
+            "size": "small",
+            "x": 32,
+            "y": 1117,
+            "right": 151.78125,
+            "width": 119.78125,
+            "height": 32
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 768,
+            "scrollWidth": 768
+          },
+          {
+            "name": "body",
+            "clientWidth": 768,
+            "scrollWidth": 768
+          },
+          {
+            "name": "main",
+            "clientWidth": 768,
+            "scrollWidth": 768
+          },
+          {
+            "name": "screen",
+            "clientWidth": 704,
+            "scrollWidth": 704
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    },
+    {
+      "scene": "review-en-desktop-1440",
+      "scenario": "link-review-loading",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\review-en-desktop-1440.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "documentWidth": 1440,
+        "documentHeight": 1249,
+        "mabryLoaded": true,
+        "providerAction": null,
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 319,
+            "y": 395,
+            "right": 1121,
+            "width": 802,
+            "height": 21,
+            "clientWidth": 802,
+            "scrollWidth": 802,
+            "clipped": false
+          },
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 449.921875,
+            "y": 627,
+            "right": 1092,
+            "width": 642.078125,
+            "height": 18,
+            "clientWidth": 642,
+            "scrollWidth": 642,
+            "clipped": false
+          },
+          {
+            "text": "candidate@example.invalid",
+            "x": 449.921875,
+            "y": 762,
+            "right": 1092,
+            "width": 642.078125,
+            "height": 18,
+            "clientWidth": 642,
+            "scrollWidth": 642,
+            "clipped": false
+          },
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 415,
+            "y": 932.5,
+            "right": 1083,
+            "width": 668,
+            "height": 18,
+            "clientWidth": 668,
+            "scrollWidth": 668,
+            "clipped": false
+          },
+          {
+            "text": "candidate@example.invalid",
+            "x": 415,
+            "y": 992.5,
+            "right": 1083,
+            "width": 668,
+            "height": 18,
+            "clientWidth": 668,
+            "scrollWidth": 668,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 300,
+            "y": 153,
+            "right": 387.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Link methods",
+            "size": "large",
+            "x": 325,
+            "y": 1036,
+            "right": 456.78125,
+            "width": 131.78125,
+            "height": 44
+          },
+          {
+            "text": "Cancel request",
+            "size": "small",
+            "x": 468.78125,
+            "y": 1042,
+            "right": 588.5625,
+            "width": 119.78125,
+            "height": 32
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "body",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "main",
+            "clientWidth": 1264,
+            "scrollWidth": 1264
+          },
+          {
+            "name": "screen",
+            "clientWidth": 840,
+            "scrollWidth": 840
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    },
+    {
+      "scene": "review-ru-desktop-1440",
+      "scenario": "link-review-loading",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\review-ru-desktop-1440.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "ru",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "documentWidth": 1440,
+        "documentHeight": 1249,
+        "mabryLoaded": true,
+        "providerAction": null,
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 319,
+            "y": 395,
+            "right": 1121,
+            "width": 802,
+            "height": 21,
+            "clientWidth": 802,
+            "scrollWidth": 802,
+            "clipped": false
+          },
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 486.0625,
+            "y": 627,
+            "right": 1092,
+            "width": 605.9375,
+            "height": 18,
+            "clientWidth": 606,
+            "scrollWidth": 606,
+            "clipped": false
+          },
+          {
+            "text": "candidate@example.invalid",
+            "x": 486.0625,
+            "y": 762,
+            "right": 1092,
+            "width": 605.9375,
+            "height": 18,
+            "clientWidth": 606,
+            "scrollWidth": 606,
+            "clipped": false
+          },
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 415,
+            "y": 932.5,
+            "right": 1083,
+            "width": 668,
+            "height": 18,
+            "clientWidth": 668,
+            "scrollWidth": 668,
+            "clipped": false
+          },
+          {
+            "text": "candidate@example.invalid",
+            "x": 415,
+            "y": 992.5,
+            "right": 1083,
+            "width": 668,
+            "height": 18,
+            "clientWidth": 668,
+            "scrollWidth": 668,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Аккаунт",
+            "size": null,
+            "x": 300,
+            "y": 153,
+            "right": 383.1875,
+            "width": 83.1875,
+            "height": 40
+          },
+          {
+            "text": "Подключить способы",
+            "size": "large",
+            "x": 325,
+            "y": 1036,
+            "right": 519.890625,
+            "width": 194.890625,
+            "height": 44
+          },
+          {
+            "text": "Отменить запрос",
+            "size": "small",
+            "x": 531.890625,
+            "y": 1042,
+            "right": 666.859375,
+            "width": 134.96875,
+            "height": 32
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "body",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "main",
+            "clientWidth": 1264,
+            "scrollWidth": 1264
+          },
+          {
+            "name": "screen",
+            "clientWidth": 840,
+            "scrollWidth": 840
+          }
+        ],
+        "pageTitle": "Подключить способ входа"
+      },
+      "failures": []
+    },
+    {
+      "scene": "review-ru-phone-390",
+      "scenario": "link-review-loading",
+      "action": null,
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\review-ru-phone-390.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "documentHeight": 1354,
+        "mabryLoaded": true,
+        "providerAction": null,
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 31,
+            "y": 368,
+            "right": 359,
+            "width": 328,
+            "height": 21,
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "clipped": false
+          },
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 164.0625,
+            "y": 654,
+            "right": 330,
+            "width": 165.9375,
+            "height": 36,
+            "clientWidth": 166,
+            "scrollWidth": 166,
+            "clipped": false
+          },
+          {
+            "text": "candidate@example.invalid",
+            "x": 164.0625,
+            "y": 827,
+            "right": 330,
+            "width": 165.9375,
+            "height": 18,
+            "clientWidth": 166,
+            "scrollWidth": 166,
+            "clipped": false
+          },
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 81,
+            "y": 1027.5,
+            "right": 325,
+            "width": 244,
+            "height": 18,
+            "clientWidth": 244,
+            "scrollWidth": 244,
+            "clipped": false
+          },
+          {
+            "text": "candidate@example.invalid",
+            "x": 81,
+            "y": 1087.5,
+            "right": 325,
+            "width": 244,
+            "height": 18,
+            "clientWidth": 244,
+            "scrollWidth": 244,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Аккаунт",
+            "size": null,
+            "x": 16,
+            "y": 121,
+            "right": 99.1875,
+            "width": 83.1875,
+            "height": 40
+          },
+          {
+            "text": "Подключить способы",
+            "size": "large",
+            "x": 33,
+            "y": 1127,
+            "right": 357,
+            "width": 324,
+            "height": 48
+          },
+          {
+            "text": "Отменить запрос",
+            "size": "small",
+            "x": 33,
+            "y": 1187,
+            "right": 357,
+            "width": 324,
+            "height": 48
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "body",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "main",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "screen",
+            "clientWidth": 358,
+            "scrollWidth": 358
+          }
+        ],
+        "pageTitle": "Подключить способ входа"
+      },
+      "failures": []
+    },
+    {
+      "scene": "conflict-en-desktop-1440",
+      "scenario": "link-commit-conflict",
+      "action": "conflict",
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\conflict-en-desktop-1440.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "documentWidth": 1440,
+        "documentHeight": 960,
+        "mabryLoaded": true,
+        "providerAction": null,
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 319,
+            "y": 395,
+            "right": 1121,
+            "width": 802,
+            "height": 21,
+            "clientWidth": 802,
+            "scrollWidth": 802,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 300,
+            "y": 153,
+            "right": 387.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Refresh and restart",
+            "size": "medium",
+            "x": 933.859375,
+            "y": 554,
+            "right": 1090.96875,
+            "width": 157.109375,
+            "height": 40
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "body",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "main",
+            "clientWidth": 1264,
+            "scrollWidth": 1264
+          },
+          {
+            "name": "screen",
+            "clientWidth": 840,
+            "scrollWidth": 840
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    },
+    {
+      "scene": "conflict-ru-phone-390",
+      "scenario": "link-commit-conflict",
+      "action": "conflict",
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\conflict-ru-phone-390.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "ru",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "documentHeight": 844,
+        "mabryLoaded": true,
+        "providerAction": null,
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 31,
+            "y": 368,
+            "right": 359,
+            "width": 328,
+            "height": 21,
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Аккаунт",
+            "size": null,
+            "x": 16,
+            "y": 121,
+            "right": 99.1875,
+            "width": 83.1875,
+            "height": 40
+          },
+          {
+            "text": "Обновить аккаунт и начать заново",
+            "size": "medium",
+            "x": 33,
+            "y": 621,
+            "right": 321.078125,
+            "width": 288.078125,
+            "height": 48
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "body",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "main",
+            "clientWidth": 390,
+            "scrollWidth": 390
+          },
+          {
+            "name": "screen",
+            "clientWidth": 358,
+            "scrollWidth": 358
+          }
+        ],
+        "pageTitle": "Подключить способ входа"
+      },
+      "failures": []
+    },
+    {
+      "scene": "unknown-en-short-desktop-1280x640",
+      "scenario": "link-commit-unknown",
+      "action": "unknown",
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\unknown-en-short-desktop-1280x640.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 1280,
+          "height": 640
+        },
+        "documentWidth": 1280,
+        "documentHeight": 743,
+        "mabryLoaded": true,
+        "providerAction": null,
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 239,
+            "y": 292,
+            "right": 1041,
+            "width": 802,
+            "height": 21,
+            "clientWidth": 802,
+            "scrollWidth": 802,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 220,
+            "y": 50,
+            "right": 307.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Check status",
+            "size": "small",
+            "x": 641.9375,
+            "y": 451,
+            "right": 749.40625,
+            "width": 107.46875,
+            "height": 32
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 1280,
+            "scrollWidth": 1280
+          },
+          {
+            "name": "body",
+            "clientWidth": 1280,
+            "scrollWidth": 1280
+          },
+          {
+            "name": "main",
+            "clientWidth": 1264,
+            "scrollWidth": 1264
+          },
+          {
+            "name": "screen",
+            "clientWidth": 840,
+            "scrollWidth": 840
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    },
+    {
+      "scene": "success-en-desktop-1440",
+      "scenario": "link-review-loading",
+      "action": "success",
+      "screenshot": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-66\\success-en-desktop-1440.png",
+      "fullPageScreenshot": null,
+      "pageErrors": [],
+      "facts": {
+        "lang": "en",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "documentWidth": 1440,
+        "documentHeight": 960,
+        "mabryLoaded": true,
+        "providerAction": null,
+        "identities": [
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 319,
+            "y": 395,
+            "right": 1121,
+            "width": 802,
+            "height": 21,
+            "clientWidth": 802,
+            "scrollWidth": 802,
+            "clipped": false
+          },
+          {
+            "text": "visual-fixture@example.invalid",
+            "x": 407,
+            "y": 616.5,
+            "right": 1091,
+            "width": 684,
+            "height": 18,
+            "clientWidth": 684,
+            "scrollWidth": 684,
+            "clipped": false
+          },
+          {
+            "text": "candidate@example.invalid",
+            "x": 407,
+            "y": 676.5,
+            "right": 1091,
+            "width": 684,
+            "height": 18,
+            "clientWidth": 684,
+            "scrollWidth": 684,
+            "clipped": false
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Account",
+            "size": null,
+            "x": 300,
+            "y": 153,
+            "right": 387.671875,
+            "width": 87.671875,
+            "height": 40
+          },
+          {
+            "text": "Return to Account",
+            "size": "small",
+            "x": 317,
+            "y": 712,
+            "right": 1123,
+            "width": 806,
+            "height": 32
+          }
+        ],
+        "overflowElements": [
+          {
+            "name": "html",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "body",
+            "clientWidth": 1440,
+            "scrollWidth": 1440
+          },
+          {
+            "name": "main",
+            "clientWidth": 1264,
+            "scrollWidth": 1264
+          },
+          {
+            "name": "screen",
+            "clientWidth": 840,
+            "scrollWidth": 840
+          }
+        ],
+        "pageTitle": "Link a sign-in method"
+      },
+      "failures": []
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,110 @@
+{
+  "capture": "portrait-result-en-1440x700",
+  "mode": "playwright-viewport",
+  "screenshot": {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/root-integration/root-focused-complete-3-artifacts/issue63-integration/portrait-result-en-1440x700.png",
+    "sha256": "67d78c7a59c27bbebd799a43ceb00ee4ebebce734a5a873447eb558f10f984c5",
+    "bytes": 79759
+  },
+  "metrics": {
+    "url": "http://127.0.0.1:4563/projects/b2f226f8-e593-4305-a33f-c8d1b358a816/result",
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 700,
+      "outerWidth": 1440,
+      "outerHeight": 700
+    },
+    "devicePixelRatio": 1,
+    "bodyZoom": "1",
+    "documentWidth": 1440,
+    "documentHeight": 786,
+    "horizontalOverflow": false,
+    "scrollY": 0,
+    "language": "en",
+    "title": "Dubbed",
+    "recording": {
+      "line": null,
+      "dialogue": null,
+      "stage": null,
+      "lineHeader": null,
+      "dialogueBounds": null,
+      "timeline": null,
+      "panel": null,
+      "panelPosition": null,
+      "phonePanelFlow": null,
+      "dialogueAndTimelineClearOfPanel": false
+    },
+    "media": {
+      "width": 540,
+      "height": 960,
+      "duration": 35.958433,
+      "readyState": 4,
+      "currentSrc": "http://127.0.0.1:4563/media/portrait-result-generation-001.mp4"
+    },
+    "dialog": null,
+    "activeElement": {
+      "tagName": "BODY",
+      "label": "Skip to contentDubbedNew dubProjectsCreditsAccountCredits84LanguageENRUSign outYour resultportrait-long-sourceDisplayed generation: 1Synthetic fixture result; not rendered from accepted takes or a custom upload.Download MP4Return to recording",
+      "role": null,
+      "className": ""
+    },
+    "buttons": [
+      {
+        "label": "Sign out",
+        "variant": "ghost",
+        "size": "small",
+        "width": 75.55,
+        "height": 32,
+        "top": 16,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Open navigation",
+        "variant": "ghost",
+        "size": "icon",
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": false
+      },
+      {
+        "label": "Download MP4",
+        "variant": "primary",
+        "size": "large",
+        "width": 167.84,
+        "height": 44,
+        "top": 670,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Return to recording",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 182.52,
+        "height": 40,
+        "top": 672,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      }
+    ],
+    "visibleRouteHeadings": [
+      "Your result"
+    ],
+    "cdp": null
+  }
+}

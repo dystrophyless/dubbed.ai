@@ -1,0 +1,40 @@
+{
+  "focusMethod": "native Tab traversal from document body after blurring the disabled capture trigger",
+  "focusedByNativeTab": true,
+  "captureActive": true,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "volumeInputMetrics": {
+    "top": 653.38,
+    "bottom": 701.38,
+    "height": 48,
+    "width": 358,
+    "scrollY": 25,
+    "documentScrollTop": 25,
+    "appMainScrollTop": 0,
+    "documentScrollHeight": 1391,
+    "documentScrollClientHeight": 844,
+    "documentMaximumScrollTop": 547,
+    "appMainScrollHeight": 1326,
+    "documentPaddingBottom": "240px",
+    "bodyPaddingBottom": "auto",
+    "appMainPaddingBottom": "auto",
+    "inputScrollMarginBottom": "0px",
+    "focusedByNativeTab": true
+  },
+  "phonePanelMetrics": {
+    "top": 663,
+    "bottom": 844,
+    "height": 181,
+    "position": "fixed",
+    "viewportHeight": 844,
+    "scrollY": 60
+  },
+  "sourceHashes": {
+    "recordingScreen": "F20C18E2F970777C74AE3B7F41A313E2D2C98DBD885AEA847B0F2020517B8F6B",
+    "recordingStyles": "304348C6D2F2D65B933BC0D3F82147CF7807C46E982B4C4B21DB31DBBA5098D8",
+    "viewportSpec": "BA1C27ED33C8601C2628587D9839EF4E9586C056F96A7A39C872DB5BAC39FBB9"
+  }
+}

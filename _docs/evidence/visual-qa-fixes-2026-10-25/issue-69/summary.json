@@ -1,0 +1,65 @@
+{
+  "task": "original task 69",
+  "model": "gpt-6-luna",
+  "effort": "max",
+  "date": "2026-10-25",
+  "baseline": "9d286621177200fdb5f61ef963d0b6818ae76774",
+  "ownedPaths": [
+    "frontend/src/features/microphone/MicrophoneScreen.tsx",
+    "frontend/src/features/microphone/MicrophoneScreen.css",
+    "frontend/tests/microphone/MicrophoneScreen.test.tsx",
+    "_docs/evidence/visual-qa-fixes-2026-10-25/issue-69/"
+  ],
+  "findings": [
+    {
+      "id": "QA-69-01",
+      "status": "verified",
+      "result": "Consumes shared small 32px, medium 40px, and large 44px desktop roles; phone controls are 48px below 768px.",
+      "evidence": ["metrics.json", "screenshot-manifest.json"]
+    },
+    {
+      "id": "QA-69-02",
+      "status": "verified",
+      "result": "Continue follows readiness immediately and precedes the optional test; manual Stop is retained.",
+      "evidence": ["frontend/tests/microphone/MicrophoneScreen.test.tsx", "evidence/ready-en-short.png", "evidence/ready-ru-short.png"]
+    },
+    {
+      "id": "QA-69-03",
+      "status": "verified",
+      "result": "Denied permission no longer repeats the fresh-visit not-asked message; an explicit successful retry restores readiness.",
+      "evidence": ["frontend/tests/microphone/MicrophoneScreen.test.tsx", "evidence/denied-en-desktop.png", "evidence/denied-ru-390.png", "evidence/retry-en-desktop.png", "evidence/retry-ru-390.png"]
+    },
+    {
+      "id": "QA-64-01",
+      "status": "verified-consumer-fix",
+      "result": "Unsupported MediaRecorder shows localized browser-recording unavailability; recoverable media-invalid retains retry guidance; readiness and Continue remain independent of either optional-test result.",
+      "evidence": ["frontend/tests/microphone/MicrophoneScreen.test.tsx", "evidence/test-unsupported-en-desktop.png", "evidence/test-unsupported-ru-390-alert.png", "metrics.json"]
+    }
+  ],
+  "verification": [
+    {
+      "command": "npm.cmd test -- tests/microphone/MicrophoneScreen.test.tsx",
+      "workingDirectory": "frontend",
+      "result": "PASS: 1 file, 9 tests",
+      "date": "2026-10-25"
+    },
+    {
+      "command": "node _docs/evidence/visual-qa-fixes-2026-10-25/issue-69/capture.cjs",
+      "result": "PASS: 21 screenshots, 5 browser assertions, 0 page errors; Chromium 156.0.8078.4, DPR 1, port 4569, fake device/UI and muted audio",
+      "date": "2026-10-25"
+    },
+    {
+      "command": "git diff --check -- frontend/src/features/microphone/MicrophoneScreen.tsx frontend/src/features/microphone/MicrophoneScreen.css frontend/tests/microphone/MicrophoneScreen.test.tsx",
+      "result": "PASS; only LF-to-CRLF normalization warnings"
+    }
+  ],
+  "limitations": [
+    "No physical microphone or speakers, real browser permission UI, provider, backend, or production behavior was exercised.",
+    "Recoverable media-invalid browser fault injection was not performed; that distinction is covered by the focused unit test.",
+    "No full suite, typecheck, or build was run during concurrent writers.",
+    "No native-device, operating-system contention, screen-reader, forced-colors, native-zoom, or real-phone verification."
+  ],
+  "gitHubUpdated": false,
+  "committed": false,
+  "pushed": false
+}

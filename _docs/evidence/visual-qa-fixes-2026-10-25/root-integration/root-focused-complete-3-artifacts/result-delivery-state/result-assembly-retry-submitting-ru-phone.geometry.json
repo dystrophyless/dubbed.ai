@@ -1,0 +1,14 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "button": {
+    "x": 16,
+    "y": 270.6875,
+    "width": 358,
+    "height": 48
+  },
+  "fontSize": "16px",
+  "lineHeight": "24px"
+}

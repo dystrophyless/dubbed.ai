@@ -1,0 +1,75 @@
+{
+  "version": "core-journey-panel-highfi-v5",
+  "variant": "A",
+  "date": "2026-10-27",
+  "browser": "156.0.8078.48",
+  "result": "PASS",
+  "checks": [
+    {
+      "variant": "A",
+      "viewport": [
+        1280,
+        600
+      ],
+      "locale": "ru",
+      "longRU": true,
+      "result": "PASS",
+      "layout": {
+        "scene": {
+          "x": 328,
+          "y": 128,
+          "w": 624,
+          "h": 351,
+          "bottom": 479
+        },
+        "wave": {
+          "x": 328,
+          "y": 491,
+          "w": 624,
+          "h": 32,
+          "bottom": 523
+        },
+        "timeline": {
+          "x": 328,
+          "y": 491,
+          "w": 624,
+          "h": 82,
+          "bottom": 573
+        },
+        "panel": {
+          "x": 976,
+          "y": 128,
+          "w": 272,
+          "h": 400,
+          "bottom": 528
+        },
+        "script": {
+          "x": 988,
+          "y": 173,
+          "w": 248,
+          "h": 172,
+          "bottom": 345
+        },
+        "overflow": false,
+        "mainBorder": "0px",
+        "mainShadow": "none",
+        "mainBackground": "rgba(0, 0, 0, 0)",
+        "scriptParent": "compact-script-slot"
+      },
+      "overlayMidCapture": 0.19783823529411765,
+      "initialFinalGapExplicitLeave": false,
+      "replacementOld": {
+        "id": 1793131318776
+      },
+      "replacementRetried": {
+        "id": 1793131318778
+      },
+      "failedSaveDestination": "previous",
+      "focusAfterFailure": "next",
+      "timedExpiryStableFocusScroll": true,
+      "acceptedRetainedAcrossAssemblyFailureAndReload": true
+    }
+  ],
+  "pageErrors": [],
+  "limits": "Full-window fixture playback/capture envelope,synthetic takes and simulated saves/assembly. No microphone/backend/immutable-generation/concurrency/device proof."
+}

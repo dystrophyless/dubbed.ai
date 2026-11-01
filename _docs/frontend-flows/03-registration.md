@@ -14,6 +14,8 @@ It owns the confirmed direct New dub exit for successful registration. It does n
 
 ## 2. Confirmed product contract
 
+- Before registering a new user through email/password or first-time Google, complete the one-time microphone onboarding defined in [the shared contract](00-shared-contract.md#dedicated-microphone-check). This precedes account creation and is not repeated during ordinary sign-in, on another device or before dubbing. Later checks are available only in Settings (Flow 15). Direct registration entry must honor the same onboarding order; do not create an account as a side effect of the check. Test recording/listening remains optional.
+
 - Email/password registration uses one password field with show/hide, requires at least 8 characters, has no mandatory uppercase, digit, or special-character class, and has no repeat-password field. Registration, Flow 04 reset, and authenticated password change use the same authoritative minimum/composition policy source.
 - Registration verification uses exactly 6 decimal digits, valid for 10 minutes from the service-authoritative email send time; another code may be sent no earlier than 60 seconds after the latest send, with at most 5 total sends in a service-defined hour, and each newly sent code replaces the previous code.
 - Google authentication is available as an alternative to email/password registration.

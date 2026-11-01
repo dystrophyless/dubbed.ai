@@ -1,0 +1,204 @@
+{
+  "issue": 77,
+  "run": "Final focused Playwright Chromium run for FIX-R77-02 on 127.0.0.1:4577 with backend-free mock services, fake media, and full-dialogue/waveform clearance assertions",
+  "source": "evidence/qa77-recording-viewport-metrics.json",
+  "screenshotCount": 14,
+  "screenshots": [
+    {
+      "file": "qa77-en-desktop-ready-1440x900.png",
+      "sha256": "4F22001F4863A86C00B175F4D9145F634F3F98759B9BE49CEAFE20275D739A80",
+      "bytes": 61055,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Previously opened; current bytes and SHA-256 are unchanged after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-en-line1-capturing-1440x900.png",
+      "sha256": "56B43CB08450AF18D9C6A6E7ECF6650C5C4C4B1DD5FB89C468280C7ED4E82C0F",
+      "bytes": 61921,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Opened and visually reviewed after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-en-line2-capturing-1440x900.png",
+      "sha256": "1F9EB45E773D437D0D040D779E129BD2BC99A38EF1B977F42035B0CE1FDAAB15",
+      "bytes": 61653,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Opened and visually reviewed after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-en-line2-saved-candidate-1440x900.png",
+      "sha256": "417A5570AA7781D6B714101E92B41C44734AEA713B99EFEECE2C2D10E0109276",
+      "bytes": 61663,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Opened and visually reviewed after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-en-phone-ready-390x844.png",
+      "sha256": "881C1C83AC8010AE547A650EFC8AC273D223E74C40CE7D7069941E8CA2CA730B",
+      "bytes": 41723,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Previously opened; current bytes and SHA-256 are unchanged after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-en-short-desktop-ready-1440x700.png",
+      "sha256": "AB82B12F0BFFB32B14164BC30DB946893369C53C1C3422181BBA55F4BB1A0875",
+      "bytes": 49109,
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Previously opened; current bytes and SHA-256 are unchanged after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-ru-breakpoint-767x900.png",
+      "sha256": "42B808280D32842BD9B60C5EC5BC5DD33889836DDAB63A4D958A23740A76E145",
+      "bytes": 52398,
+      "viewport": {
+        "width": 767,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Opened and visually reviewed after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-ru-breakpoint-768x900.png",
+      "sha256": "C27AA591A067144191445519D2DE6CFC1D896AC846E45C1C9388E76057837709",
+      "bytes": 58054,
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Previously opened; current bytes and SHA-256 are unchanged after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-ru-desktop-ready-1440x900.png",
+      "sha256": "154835B1F8BF87A5F0669061C982EA50253528979625E78E2578F485CED1A82E",
+      "bytes": 61529,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Previously opened; current bytes and SHA-256 are unchanged after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-ru-longline-breakpoint-767x900.png",
+      "sha256": "5A33EE231EA21D3F8FCEC754E07A41F70FC67716EC1825DCA66210813437C7FD",
+      "bytes": 55721,
+      "viewport": {
+        "width": 767,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Opened and visually reviewed after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-ru-phone-ready-390x844.png",
+      "sha256": "715F04DF74E942641464D44E4A5A3BF78EDDF7AC50C09D1CE71F2D870D6E75ED",
+      "bytes": 44168,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Opened and visually reviewed after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-ru-short-desktop-ready-1440x700.png",
+      "sha256": "8FCACB0E20D17D833CB1F8596A2B1602216C9F677FDFD78B9B622ED995C0C2EE",
+      "bytes": 51177,
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Previously opened; current bytes and SHA-256 are unchanged after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-ru-short-phone-in-flow-767x600.png",
+      "sha256": "0EB7B272645E9ECD82903E427081592EA9A4150BA64112F1EAE959261467CB6D",
+      "bytes": 76625,
+      "viewport": {
+        "width": 767,
+        "height": 600
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Opened and visually reviewed after the final FIX-R77-02 browser run"
+      }
+    },
+    {
+      "file": "qa77-en-line2-back-guard-1440x900.png",
+      "sha256": "1007CB47935C50FD2DD6C4F9D367F70D2CB6B34031E28D130BC97D9BA5309A32",
+      "bytes": 62245,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "review": {
+        "openedInViewImage": true,
+        "date": "2026-10-25",
+        "note": "Opened and visually reviewed after the final FIX-R77-02 browser run"
+      }
+    }
+  ]
+}

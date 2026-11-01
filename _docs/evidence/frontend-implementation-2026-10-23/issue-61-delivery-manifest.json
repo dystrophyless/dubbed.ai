@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-23T16:47:41.760Z",
+  "repository": "dystrophyless/dubbed.ai",
+  "remote": "origin",
+  "branch": "main",
+  "baseCommit": "2f70ac94d059585f9608df39efbc96be555c3f98",
+  "issue": 61,
+  "acceptanceSource": "issue-61-acceptance.md; Root delegated acceptance under owner full-cycle goal and standing AGENTS/orchestration order",
+  "files": [
+    {
+      "path": "_docs/frontend-implementation-contract.md",
+      "sha256": "5420074c3b9deb75baced0b8a627ae44e281ef526006b69706740f8b9f58eb36"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-61-acceptance.md",
+      "sha256": "d03376759a38a49bf0db276289ccb8687b16237e216f3710ac6f5825565d8f96"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-61-final-document-audit.json",
+      "sha256": "066e8ee37e33de3f26fceb05a105f0f4c809da4df9b6f583ca27d70c7b5273fd"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-61-live-recheck.json",
+      "sha256": "a2ff5517f0018efc6bab1231719333646bae09940db1076bac59deed38e5a177"
+    }
+  ],
+  "scope": "Only bounded report and its self-contained criterion receipt/audit/live recheck. Referenced flow/source files remain local source identifiers and are outside this narrow delivery; no product implementation or source-policy acceptance.",
+  "state": "Prepared exact manifest; no Publisher dispatch or Git/GitHub mutation yet",
+  "deliveryOrder": [
+    "verify hashes and current index empty/branch/remote unchanged",
+    "publish verified open status/evidence via authorized Luna Publisher",
+    "commit only manifest accepted files",
+    "push normal origin main, no force",
+    "verify remote main contains commit",
+    "transfer Root closure decision for61 only with acceptance and delivery SHA"
+  ],
+  "closureDecision": "Root authorizes closing61 after all above delivery conditions; no dependent issue acceptance. Publisher transfers this decision mechanically.",
+  "forbidden": [
+    "unrelated dirty files",
+    "all frontend product paths",
+    "PR/merge/deploy",
+    "force push/reset/clean",
+    "changing other issues",
+    "changing accepted register"
+  ]
+}

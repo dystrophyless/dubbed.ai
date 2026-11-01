@@ -1,0 +1,158 @@
+[
+  {
+    "path": "frontend/.gitignore",
+    "sha256": "ac3a29667b58b80b265f2e0891e93636afd1556462f38dce5715da2a12c2a10d"
+  },
+  {
+    "path": "frontend/e2e/foundation.spec.ts",
+    "sha256": "e2be5ddf32e704420c9becc0a33cd6826a920f6a29a200a370be16f3c028ec55"
+  },
+  {
+    "path": "frontend/e2e/native-media.spec.ts",
+    "sha256": "71fedae47111086c53243d7bd990b3edf7f5615cb4f03a5227d2dedf0e32eecb"
+  },
+  {
+    "path": "frontend/e2e/phase4-visual.spec.ts",
+    "sha256": "78634b2500f0feb3dd480d6ed4f46847e21a5aa83d452d5ea3b338b7df0a2a4c"
+  },
+  {
+    "path": "frontend/e2e/record-journey.spec.ts",
+    "sha256": "06d72b5fd61d9ee3dc11c415aa11f2f5f13fe3b47249d3989b2cc70734e9c08f"
+  },
+  {
+    "path": "frontend/eslint.config.mjs",
+    "sha256": "2743942521eb30874fa9e77ea556303929487f5be4f5c838aa1b4533e3438d29"
+  },
+  {
+    "path": "frontend/index.html",
+    "sha256": "dbbe15a0dae9f843b481f30d89af7ab372ed034b604c28b65e1a0223bdc49153"
+  },
+  {
+    "path": "frontend/package-lock.json",
+    "sha256": "392935b96ec238405491b7504f2ed481d9d2c0c0156a7054735931aef208c130"
+  },
+  {
+    "path": "frontend/package.json",
+    "sha256": "a34834349ed3c1f5f0831ffa6c5354c175844a8971e823ae1a4433eb52565d26"
+  },
+  {
+    "path": "frontend/playwright.config.mjs",
+    "sha256": "393e0a498425a51d904e1e5543daab78df7522f4f62de3ebec6a0c6a21eb009e"
+  },
+  {
+    "path": "frontend/public/media/example-dub.mp4",
+    "sha256": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9"
+  },
+  {
+    "path": "frontend/public/media/result-generation-002.webm",
+    "sha256": "f3802515a6738409226b8c9c705d31671e7768f81043ada452302240bb146d93"
+  },
+  {
+    "path": "frontend/public/media/scene.mp4",
+    "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c"
+  },
+  {
+    "path": "frontend/README.md",
+    "sha256": "75f301f82f65376f74a250284e3b596c512505419db0b18cca186d22fe5f1e90"
+  },
+  {
+    "path": "frontend/src/app/App.tsx",
+    "sha256": "2ce7f0a78341e72592b898c0d15e0d0a925e0aa6f12ecf9bc138d61c4a0e2635"
+  },
+  {
+    "path": "frontend/src/app/state.ts",
+    "sha256": "b91f35b809c81bc46c70a09e61f73440e60dc108042b5661521ab397e7efa5c5"
+  },
+  {
+    "path": "frontend/src/features/record/FoundationRecordPage.tsx",
+    "sha256": "5fe79a2c56cb27c0512210613a3e06c15f086b883c19f1737658ee2729911764"
+  },
+  {
+    "path": "frontend/src/features/record/NativeMediaProofPage.tsx",
+    "sha256": "10c9d0a66933507a59d395d6811751c3399b0dba5aee2c176654bd2e0c8cd44e"
+  },
+  {
+    "path": "frontend/src/features/record/useRecordController.ts",
+    "sha256": "78cc501e703579b69fedc445d4cb9651c07ff2f6cd8c436df219db56254232a5"
+  },
+  {
+    "path": "frontend/src/features/result/FoundationResultPage.tsx",
+    "sha256": "acd83a9fa8a5266155f0c74c006e146e0d398f38c0050e185bd0fd66693bcab3"
+  },
+  {
+    "path": "frontend/src/main.tsx",
+    "sha256": "76012685146874bb2f50766f14994f0d2b3750a62b372e3496f275a375521189"
+  },
+  {
+    "path": "frontend/src/services/architecture.test.ts",
+    "sha256": "5963e9d5350e1128a83d6459fac416b3b04184308c06761e974479ca65b4d77e"
+  },
+  {
+    "path": "frontend/src/services/browser-capture/WebLockCaptureGrants.ts",
+    "sha256": "fe7e28e6ccacc4bc6f585db52e63c048c23598761d55d56fb8d4080a13156b8c"
+  },
+  {
+    "path": "frontend/src/services/browser-media/NativeBrowserMedia.ts",
+    "sha256": "dc7d62a827a58e4a1ad461b0ad367b4daf509e82ba7d262ed778398baca53501"
+  },
+  {
+    "path": "frontend/src/services/contracts.ts",
+    "sha256": "f7af88dadcb28f9d9ddef1d8fdb92650087d3a686fca569e1e2bb76190c71d80"
+  },
+  {
+    "path": "frontend/src/services/index.test.ts",
+    "sha256": "839b3999bd5013717a456b5b76778f31f5b0431516ac38e47cae8acf6b0f0c5f"
+  },
+  {
+    "path": "frontend/src/services/index.ts",
+    "sha256": "259b13a5f0b35836cef3b2b6cf772e56cf670606e74a967bd6c0c74396b6b636"
+  },
+  {
+    "path": "frontend/src/services/mock/fixture-data.json",
+    "sha256": "3a754a772b10ae122b70207261a20f90bcfda0803efcd6d0046c70a765f69eb5"
+  },
+  {
+    "path": "frontend/src/services/mock/fixtures.ts",
+    "sha256": "8631de3ddb247016cb3659f89efa8a324a7b1cb644ec450c80a35376717cab09"
+  },
+  {
+    "path": "frontend/src/services/mock/IndexedDbProjectStore.test.ts",
+    "sha256": "ddbf4b239ddc833c0679acbfb7ba312acc101b43ba57250bd8b6e7ea7990d7ef"
+  },
+  {
+    "path": "frontend/src/services/mock/IndexedDbProjectStore.ts",
+    "sha256": "2a8a7607caa0bd2204c8b603fbd775098f0e0eb1a4bdd7d9b606a849437c7494"
+  },
+  {
+    "path": "frontend/src/services/mock/IndexedDbResultPort.test.ts",
+    "sha256": "79fc8edc35d104d14740fff5d8434cb6cf0d79486995ac908f6b8dc6e2db6c20"
+  },
+  {
+    "path": "frontend/src/shared/i18n.ts",
+    "sha256": "5704a48cd757015c29df00216ec10598ffb92791bf81d318f45f04126866b7d6"
+  },
+  {
+    "path": "frontend/src/shared/ServicesContext.tsx",
+    "sha256": "6caeb047a39206382e1221ea5b26d84e6502ca1a3780b778653af4ccc594bfcb"
+  },
+  {
+    "path": "frontend/src/shared/ui.tsx",
+    "sha256": "9ab04328b4006582dfd97e83dbc00120b1b73672937140ddcbabfdb4defc908b"
+  },
+  {
+    "path": "frontend/src/styles/app.css",
+    "sha256": "ead1f0c638588a4ad43a56a3746179fc3d2f3bd4230a9138714d9a31a134919e"
+  },
+  {
+    "path": "frontend/src/styles/tokens.css",
+    "sha256": "9d81e19ccb9fc3ec92fddcef0368cc81a4dc17ffa584f1175169ad37337a58e6"
+  },
+  {
+    "path": "frontend/tsconfig.json",
+    "sha256": "860ba3b723097eb4082701471cf2f7c47bbc5c231dd88552ff9c1a08254e99b0"
+  },
+  {
+    "path": "frontend/vite.config.ts",
+    "sha256": "eadd0c25470bb624d05a6628be6f1e3c2f3683e7f1c22890cff8b416a3de9d7e"
+  }
+]

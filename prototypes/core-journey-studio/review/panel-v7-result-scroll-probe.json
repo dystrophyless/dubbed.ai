@@ -1,0 +1,62 @@
+[
+  {
+    "completedRevision": false,
+    "before": {
+      "scrollY": 19,
+      "height": 619
+    },
+    "after": {
+      "scrollY": 19,
+      "exit": {
+        "top": -3,
+        "bottom": 37,
+        "left": 366.21875
+      },
+      "heading": {
+        "top": -3,
+        "bottom": 25,
+        "left": 518.21875
+      },
+      "player": {
+        "top": 69,
+        "bottom": 448.984375,
+        "left": 366.21875
+      },
+      "footer": {
+        "top": 464.984375,
+        "bottom": 556.984375,
+        "left": 366.21875
+      }
+    }
+  },
+  {
+    "completedRevision": true,
+    "before": {
+      "scrollY": 19,
+      "height": 619
+    },
+    "after": {
+      "scrollY": 19,
+      "exit": {
+        "top": -3,
+        "bottom": 37,
+        "left": 366.21875
+      },
+      "heading": {
+        "top": -3,
+        "bottom": 25,
+        "left": 518.21875
+      },
+      "player": {
+        "top": 69,
+        "bottom": 448.984375,
+        "left": 366.21875
+      },
+      "footer": {
+        "top": 464.984375,
+        "bottom": 556.984375,
+        "left": 366.21875
+      }
+    }
+  }
+]

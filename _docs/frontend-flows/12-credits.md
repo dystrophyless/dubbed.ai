@@ -6,7 +6,7 @@ Mode: specifications only.
 
 ## 1. Authority and scope
 
-This flow is governed first by [00-shared-contract.md](00-shared-contract.md), including the owner's 2026-10-22 replacements. Unchanged credit, purchase, project-capacity, quote, reservation, and accounting rules come from BR-001 and SPEC-001. Where older documents still describe a Prepare/manual-editing stage or a different zero-turn outcome, the shared contract wins: processing proceeds directly to Record, manual correction is absent, and zero detected turns show `No dialogue found` with eligible reprocessing or another-video recovery without entering Record or Result.
+This flow is governed first by [00-shared-contract.md](00-shared-contract.md), including the owner's 2026-10-22 replacements. Unchanged credit, purchase, project-capacity, quote, reservation, and accounting rules come from BR-001 and SPEC-001. Where older documents still describe a Prepare/manual-editing stage or a different zero-turn outcome, the shared contract wins: processing proceeds directly to Record, manual correction is absent, and zero detected turns show `No dialogue found` with another-video recovery without entering Record or Result.
 
 This document specifies the authenticated Credits experience:
 
@@ -117,11 +117,10 @@ Flow 12 may render only accounting states and outcomes supplied by the authorita
 
 - an active reservation as separately labelled `In processing`, never as a posted charge;
 - authoritative preparation settlement and unused-reservation release;
-- included-retry accounting facts, including a zero-credit attempt where applicable;
 - queued cancellation at zero charge;
 - running cancellation at the authoritative completed-stage-only amount;
 - system-failure release/no-charge outcome;
-- later paid reprocessing settlement; and
+
 - purchase and welcome-credit grants.
 
 Flow 12 does not calculate available balance, reserved credits, a cancellation amount, or a final charge from client arithmetic, elapsed time, progress, or a local stage model. Exact production stage allocation and rounding remain unresolved. Project deletion does not itself refund completed processing, and a valid account-level settlement can survive project deletion without resurrecting the project.
@@ -768,7 +767,7 @@ No checks in this section have been run. Future evidence records must include sc
 
 ### 13.4 History/accounting verification
 
-- Verify one unified chronological feed with a welcome grant, pending purchase confirmation, verified purchase, final processing charge, credit return/refund, settlement, release, system-failure no-charge, queued cancellation, running-cancellation fixture, included retry, and paid reprocessing records.
+- Verify one unified chronological feed with welcome grant, pending/verified purchase, initial preparation reservation/settlement/release, credit return/refund, system-failure no-charge, queued cancellation and running-cancellation fixtures. Technical recovery never duplicates the original charge; no repeat-preparation allowance or paid rerun records are created.
 - Verify no mandatory Purchases/Credit activity split and no purchase-only history.
 - Seed more than 20 authoritative operations; verify initial load renders exactly the 20 most recent, `Show more` appends older service-ordered records without duplicates or loss, disappears when no older records remain, and preserves loaded records with retry when the older-page request fails.
 - Verify history exposes no filter, search, export, or download control.

@@ -1,0 +1,1493 @@
+{
+  "capturedAtUtc": "2026-10-25T14:54:44.545Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "scenario": "controlled workspace-state-visual New Dub default, English",
+  "base": "http://127.0.0.1:4581",
+  "evidence": {
+    "presentedMediaFrame": {
+      "mediaTime": 0.2597,
+      "presentedFrames": 2,
+      "width": 640,
+      "height": 360,
+      "readyState": 4
+    },
+    "initial": {
+      "range": {
+        "x": 16,
+        "y": 872.375,
+        "width": 358,
+        "height": 48
+      },
+      "track": {
+        "x": 26,
+        "y": 894.375,
+        "width": 338,
+        "height": 4
+      },
+      "trackPointerEvents": "auto",
+      "selectedBand": {
+        "x": 26,
+        "y": 894.375,
+        "width": 313.5,
+        "height": 4
+      },
+      "handles": [
+        {
+          "label": "Selection start",
+          "min": 0,
+          "max": 8625,
+          "step": 1,
+          "value": 0,
+          "valueText": "0.000 seconds",
+          "rect": {
+            "x": 16,
+            "y": 872.375,
+            "width": 358,
+            "height": 48
+          },
+          "pointerEvents": "none",
+          "thumb": {
+            "width": 358,
+            "height": 48,
+            "pointerEvents": "none"
+          },
+          "thumbCenter": {
+            "x": 195,
+            "y": 896.375
+          }
+        },
+        {
+          "label": "Selection end",
+          "min": 0,
+          "max": 8625,
+          "step": 1,
+          "value": 8000,
+          "valueText": "8.000 seconds",
+          "rect": {
+            "x": 16,
+            "y": 872.375,
+            "width": 358,
+            "height": 48
+          },
+          "pointerEvents": "none",
+          "thumb": {
+            "width": 358,
+            "height": 48,
+            "pointerEvents": "none"
+          },
+          "thumbCenter": {
+            "x": 195,
+            "y": 896.375
+          }
+        }
+      ],
+      "domainLabels": [
+        "0.000 s",
+        "8.625 s"
+      ],
+      "selectionFields": [
+        {
+          "label": "Start (seconds)",
+          "value": "0.000",
+          "min": "",
+          "max": "",
+          "step": "",
+          "rect": {
+            "x": 16,
+            "y": 1038.375,
+            "width": 358,
+            "height": 48
+          }
+        },
+        {
+          "label": "End (seconds)",
+          "value": "8.000",
+          "min": "",
+          "max": "",
+          "step": "",
+          "rect": {
+            "x": 16,
+            "y": 1124.375,
+            "width": 358,
+            "height": 48
+          }
+        }
+      ],
+      "document": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "lang": "en",
+        "scrollWidth": 390,
+        "horizontalOverflow": false
+      }
+    },
+    "startHitGrid": {
+      "label": "Selection start",
+      "inputRect": {
+        "x": 16,
+        "y": 872.375,
+        "width": 358,
+        "height": 48
+      },
+      "thumbCenter": {
+        "x": 195,
+        "y": 896.375
+      },
+      "offsets": [
+        -24,
+        -16,
+        -12,
+        -8,
+        0,
+        8,
+        12,
+        16,
+        24
+      ],
+      "cells": [
+        {
+          "dx": -24,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        }
+      ],
+      "inputCells": 0,
+      "insideInputCells": 81
+    },
+    "endHitGrid": {
+      "label": "Selection end",
+      "inputRect": {
+        "x": 16,
+        "y": 872.375,
+        "width": 358,
+        "height": 48
+      },
+      "thumbCenter": {
+        "x": 195,
+        "y": 896.375
+      },
+      "offsets": [
+        -24,
+        -16,
+        -12,
+        -8,
+        0,
+        8,
+        12,
+        16,
+        24
+      ],
+      "cells": [
+        {
+          "dx": -24,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": -8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 0,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 8,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 12,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 16,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -24,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -16,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -12,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": -8,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 0,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 8,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 12,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 16,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        },
+        {
+          "dx": 24,
+          "dy": 24,
+          "insideInputBox": true,
+          "target": null,
+          "targetPointerEvents": null,
+          "isRangeInput": false
+        }
+      ],
+      "inputCells": 0,
+      "insideInputCells": 81
+    },
+    "startThumbTouchDrag": {
+      "beforeMs": 0,
+      "afterMs": 0,
+      "pixelDelta": 27,
+      "changed": false
+    }
+  },
+  "error": {
+    "name": "AssertionError",
+    "message": "The start boundary must respond to a touch drag on its visible thumb.",
+    "stack": "AssertionError [ERR_ASSERTION]: The start boundary must respond to a touch drag on its visible thumb.\n    at probe (D:\\Program\\python\\Dubbed\\_docs\\evidence\\visual-qa-fixes-2026-10-25\\issue-81\\phone-hit-probe\\phone-hit-probe.cjs:235:12)"
+  }
+}

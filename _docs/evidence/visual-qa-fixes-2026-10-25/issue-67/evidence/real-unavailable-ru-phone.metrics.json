@@ -1,0 +1,12 @@
+{
+  "capturedAt": "2026-10-25T11:47:12.101Z",
+  "locale": "ru",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "fontStatus": "loaded",
+  "horizontalOverflow": false,
+  "pageScrollWidth": 390,
+  "text": "Этот режим сервиса недоступен\n\nВ этой сборке не подключён реальный адаптер сервиса. Для локальной имитации задайте VITE_SERVICE_ADAPTER=mock."
+}

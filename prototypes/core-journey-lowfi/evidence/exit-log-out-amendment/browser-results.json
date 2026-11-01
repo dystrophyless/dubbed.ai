@@ -1,0 +1,506 @@
+{
+  "amendment": "exit-log-out-2026-10-28",
+  "date": "2026-10-28",
+  "browser": "156.0.8078.48",
+  "result": "PASS",
+  "checks": [
+    {
+      "variant": "A",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "en",
+      "view": "record",
+      "result": "PASS",
+      "computed": {
+        "name": "Exit",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          77.609375,
+          40
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "A-1440x900-en-record-exit.png"
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "en",
+      "view": "result",
+      "result": "PASS",
+      "computed": {
+        "name": "Exit",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          77.609375,
+          40
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "A-1440x900-en-result-exit.png"
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "ru",
+      "view": "record",
+      "result": "PASS",
+      "computed": {
+        "name": "Выйти",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          94.875,
+          40
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "A-1440x900-ru-record-exit.png"
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "ru",
+      "view": "result",
+      "result": "PASS",
+      "computed": {
+        "name": "Выйти",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          94.875,
+          40
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "A-1440x900-ru-result-exit.png"
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "en",
+      "view": "record",
+      "result": "PASS",
+      "computed": {
+        "name": "Exit",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          77.265625,
+          48
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "A-390x667-en-record-exit.png"
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "en",
+      "view": "result",
+      "result": "PASS",
+      "computed": {
+        "name": "Exit",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          77.265625,
+          48
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "A-390x667-en-result-exit.png"
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "view": "record",
+      "result": "PASS",
+      "computed": {
+        "name": "Выйти",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          97,
+          48
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "A-390x667-ru-record-exit.png"
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "view": "result",
+      "result": "PASS",
+      "computed": {
+        "name": "Выйти",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          97,
+          48
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "A-390x667-ru-result-exit.png"
+    },
+    {
+      "variant": "B",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "en",
+      "view": "record",
+      "result": "PASS",
+      "computed": {
+        "name": "Exit",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          77.609375,
+          40
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "B-1440x900-en-record-exit.png"
+    },
+    {
+      "variant": "B",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "en",
+      "view": "result",
+      "result": "PASS",
+      "computed": {
+        "name": "Exit",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          77.609375,
+          40
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "B-1440x900-en-result-exit.png"
+    },
+    {
+      "variant": "B",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "ru",
+      "view": "record",
+      "result": "PASS",
+      "computed": {
+        "name": "Выйти",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          94.875,
+          40
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "B-1440x900-ru-record-exit.png"
+    },
+    {
+      "variant": "B",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "ru",
+      "view": "result",
+      "result": "PASS",
+      "computed": {
+        "name": "Выйти",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          94.875,
+          40
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "B-1440x900-ru-result-exit.png"
+    },
+    {
+      "variant": "B",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "en",
+      "view": "record",
+      "result": "PASS",
+      "computed": {
+        "name": "Exit",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          77.265625,
+          48
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "B-390x667-en-record-exit.png"
+    },
+    {
+      "variant": "B",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "en",
+      "view": "result",
+      "result": "PASS",
+      "computed": {
+        "name": "Exit",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          77.265625,
+          48
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "B-390x667-en-result-exit.png"
+    },
+    {
+      "variant": "B",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "view": "record",
+      "result": "PASS",
+      "computed": {
+        "name": "Выйти",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          97,
+          48
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "B-390x667-ru-record-exit.png"
+    },
+    {
+      "variant": "B",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "view": "result",
+      "result": "PASS",
+      "computed": {
+        "name": "Выйти",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "currentColor",
+        "strokeWidth": "1.1px",
+        "caps": "round",
+        "joins": "round",
+        "ariaHidden": "true",
+        "paths": [
+          "m16 17 5-5-5-5",
+          "M21 12H9",
+          "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        ],
+        "buttonSize": [
+          97,
+          48
+        ],
+        "color": "rgba(0, 0, 0, 0.447)"
+      },
+      "capture": "B-390x667-ru-result-exit.png"
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual Chrome;2variants×2viewports×2locales×Record/Result;accessible role/name and actualLogOutassetgeometry/computedstroke verified;Previous/Return icons unchanged. Completed fixture used to enter Result;no journey revalidation claimed."
+}

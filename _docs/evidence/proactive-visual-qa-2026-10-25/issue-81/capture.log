@@ -1,0 +1,26 @@
+CAPTURE 01-real-empty-en-desktop
+CAPTURE 02-real-short-source-error-en
+CAPTURE 03-real-validated-en-desktop
+CAPTURE 04-real-quote-en-full
+CAPTURE 05-real-short-en-top
+CAPTURE 06-real-short-en-selector
+CAPTURE 07-real-invalid-selection-en
+CAPTURE 08-seeded-ru-phone-top
+CAPTURE 09-seeded-ru-phone-full
+CAPTURE 10-seeded-insufficient-en
+CAPTURE 11-seeded-quote-error-en
+CAPTURE 12-seeded-preview-failure-en
+CAPTURE 13-seeded-en-767
+CAPTURE 14-seeded-en-768
+SUPPLEMENT_ERROR locator.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'Validate and save draft', exact: true })[22m
+
+    at D:\Program\python\Dubbed\_docs\evidence\proactive-visual-qa-2026-10-25\issue-81\supplement.cjs:7:242
+CAPTURE 15-seeded-capacity-full-en
+CAPTURE 18-seeded-preview-retry-error-en
+CAPTURE 19-seeded-preview-retry-ready-en
+CAPTURE 20-seeded-ru-short-full
+CAPTURE 21-seeded-en-phone-full
+CAPTURE 22-seeded-millisecond-focus-en
+CAPTURE 16-seeded-upload-pending-en: retained from first supplementary run before later error, visually inspected; DOM metrics not persisted for this image. All 21 review PNGs inspected with view_image.

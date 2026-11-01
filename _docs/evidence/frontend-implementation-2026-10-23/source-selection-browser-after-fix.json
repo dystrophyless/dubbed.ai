@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-23T02:27:56.767Z",
+  "boundary": "Isolated static mock build after event-value capture fix; actual upload and selection UI; no processing authorization.",
+  "consoleErrors": [],
+  "pageErrors": [],
+  "valid": "New dub\n\nChoose a source video, review the selected section, and request its exact processing quote.\n\n1 of 2 project slots used\nManage projects\n\nSection saved. Request a fresh quote before processing.\n\nSaved source\n\nsource-dialogue\n\nsource-dialogue.mp4\n\n8.625 · 640 × 360\n\nReplace video\nVideo preview\nSelected section\n\nChoose one contiguous interval from the saved source. Only this interval proceeds to processing.\n\nStart (seconds)\nEnd (seconds)\n\nSelected duration: 1.001 seconds\n\nProcessing quote\nCredits for this section\n2\nAvailable after reservations\n120\nIn processing\n0\nProcess for 2 credits",
+  "tooShort": "New dub\n\nChoose a source video, review the selected section, and request its exact processing quote.\n\n1 of 2 project slots used\nManage projects\n\nSection saved. Request a fresh quote before processing.\n\nSaved source\n\nsource-dialogue\n\nsource-dialogue.mp4\n\n8.625 · 640 × 360\n\nReplace video\nVideo preview\nSelected section\n\nChoose one contiguous interval from the saved source. Only this interval proceeds to processing.\n\nStart (seconds)\nEnd (seconds)\n\nSelected duration: 0.000 seconds\n\nProcessing quote\n\nRequest an exact processing quote for the saved section.\n\nGet exact quote",
+  "beyondSource": "New dub\n\nChoose a source video, review the selected section, and request its exact processing quote.\n\n1 of 2 project slots used\nManage projects\n\nSection saved. Request a fresh quote before processing.\n\nSaved source\n\nsource-dialogue\n\nsource-dialogue.mp4\n\n8.625 · 640 × 360\n\nReplace video\nVideo preview\nSelected section\n\nChoose one contiguous interval from the saved source. Only this interval proceeds to processing.\n\nStart (seconds)\nEnd (seconds)\n\nSelected duration: 0.000 seconds\n\nProcessing quote\n\nRequest an exact processing quote for the saved section.\n\nGet exact quote",
+  "outcome": "completed"
+}

@@ -1,0 +1,55 @@
+{
+  "issue": 61,
+  "issueUrl": "https://github.com/dystrophyless/dubbed.ai/issues/61",
+  "issueState": "closed",
+  "issueStateReason": "completed",
+  "workflowStatus": "accepted",
+  "acceptedScope": "Bounded frontend technical contract report only; AC-01 through AC-04.",
+  "acceptanceSource": "_docs/evidence/frontend-implementation-2026-10-23/issue-61-acceptance.md",
+  "acceptedArtifactPath": "_docs/frontend-implementation-contract.md",
+  "acceptedArtifactSha256": "5420074c3b9deb75baced0b8a627ae44e281ef526006b69706740f8b9f58eb36",
+  "manifestPath": "_docs/evidence/frontend-implementation-2026-10-23/issue-61-delivery-manifest.json",
+  "manifestFiles": [
+    {
+      "path": "_docs/frontend-implementation-contract.md",
+      "sha256": "5420074c3b9deb75baced0b8a627ae44e281ef526006b69706740f8b9f58eb36"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-61-acceptance.md",
+      "sha256": "d03376759a38a49bf0db276289ccb8687b16237e216f3710ac6f5825565d8f96"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-61-final-document-audit.json",
+      "sha256": "066e8ee37e33de3f26fceb05a105f0f4c809da4df9b6f583ca27d70c7b5273fd"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-61-live-recheck.json",
+      "sha256": "a2ff5517f0018efc6bab1231719333646bae09940db1076bac59deed38e5a177"
+    }
+  ],
+  "branch": "main",
+  "baseCommit": "2f70ac94d059585f9608df39efbc96be555c3f98",
+  "deliveryCommit": "2de6290b98ef9dd2b9cb923f4a12d3fb1fe610d4",
+  "commitSubject": "docs(frontend): deliver bounded technical contract",
+  "commitPaths": [
+    "_docs/evidence/frontend-implementation-2026-10-23/issue-61-acceptance.md",
+    "_docs/evidence/frontend-implementation-2026-10-23/issue-61-final-document-audit.json",
+    "_docs/evidence/frontend-implementation-2026-10-23/issue-61-live-recheck.json",
+    "_docs/frontend-implementation-contract.md"
+  ],
+  "remote": "origin",
+  "remoteRef": "refs/heads/main",
+  "pushCommand": "git push origin main (normal fast-forward; no force)",
+  "fetchCommand": "git fetch origin main",
+  "fetchedOriginMain": "2de6290b98ef9dd2b9cb923f4a12d3fb1fe610d4",
+  "liveLsRemoteMain": "2de6290b98ef9dd2b9cb923f4a12d3fb1fe610d4",
+  "remoteContainsCommit": true,
+  "remoteContainmentCommand": "git merge-base --is-ancestor <delivery-commit> <live-origin-main-sha>",
+  "unrelatedWorktreeChanges": "Preserved; none staged in the delivery commit.",
+  "verificationDate": "2026-10-23 21:54:06 +05:00",
+  "evidence": [
+    "issue-61-acceptance.md",
+    "issue-61-final-document-audit.json",
+    "issue-61-live-recheck.json"
+  ]
+}

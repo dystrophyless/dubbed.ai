@@ -10,7 +10,7 @@ The latest owner request replaces the former blue-primary palette, 8px controls 
 
 The superseded 2026-10-22 draft, old contrast calculations and migration check are not current token sources. Their blue/neutral/red scales and computed pairs do not validate the new alpha composites. Flow specifications consume the semantic roles below, not an arbitrary source shade or a default shadcn theme.
 
-Only Light is in scope, including when the OS prefers dark mode; expose no theme toggle and import no source `.dark` behavior. Keep Mabry Pro Regular and Medium and compact global navigation. The current product goal and checkpoint-approved low-fi determine recording hierarchy and responsive composition; preserve readable dialogue, usable phone/short-screen operation and all service/functional invariants. No style sample creates a product feature.
+Only Light is in scope, including when the OS prefers dark mode; expose no theme toggle and import no source `.dark` behavior. Keep Mabry Pro Regular and Medium;ordinary pages retain their navigation,while focused Record/Result omit the global navbar. The current product goal and checkpoint-approved low-fi determine recording hierarchy and responsive composition; preserve readable dialogue, usable phone/short-screen operation and all service/functional invariants. No style sample creates a product feature.
 
 Keep three roles distinct: **source visual recipes** define component shape, edge, shadow, local spacing and bounded feedback; **product/accessibility adaptations** retain Mabry, readable text, contrast, focus, service semantics and usable targets; **prototype candidate geometry** covers page hierarchy, columns and placement that still need design validation. This is the canonical token file; do not create a local second scale or silently promote a layout proposal into a token.
 
@@ -83,7 +83,7 @@ Source profile/filter panels use 10px radius. Mapped menus/popovers use the exac
 | Role | Contract |
 |---|---|
 | Typeface | Mabry Pro Regular / Medium only; no Bold or synthetic Bold |
-| Body / dialogue | Regular 16px / 24px |
+| Shared body / dialogue | Regular16px /24px; approved Record spoken-line exception in §9 |
 | Supporting caption | Regular 14px / 20px |
 | Field label | Medium 14px / 20px |
 | Desktop/phone heading | Medium 32px / 40px; phone Medium 24px / 32px |
@@ -99,7 +99,7 @@ Source profile/filter panels use 10px radius. Mapped menus/popovers use the exac
 | Responsive boundary | Phone below 768 CSS px; regular top navigation at/above 768px |
 | Working / auth-form maxima | Retained 1200px / 400px where applicable |
 
-Mabry Pro is the explicit font exception to source typography. Current Dubbed action sizes are the baseline role map, not immutable Affect identity; original source dimensions are not automatic replacement targets. Keep the defaults until approved calibration/prototype feedback is reflected here and affected flow quotations are synchronized before integration. Preserve mapped component state, shape, color, brand and suitable internal spacing/shadows; do not shrink recording dialogue or billing facts to match an original compact source control. Global navigation stays compact without a permanent navigation sidebar. A contextual Record performance panel is permitted as the owner-directed prototype direction; it does not approve final geometry. Do not add generic dashboard tiles, new form fields or copied source business content.
+Mabry Pro is the explicit font exception to source typography. Current Dubbed action sizes are the baseline role map, not immutable Affect identity; original source dimensions are not automatic replacement targets. Keep the defaults until approved calibration/prototype feedback is reflected here and affected flow quotations are synchronized before integration. Preserve mapped component state, shape, color, brand and suitable internal spacing/shadows; do not shrink recording dialogue or billing facts to match an original compact source control. Global navigation stays compact without a permanent navigation sidebar. The approved core Record workspace and its scoped geometry/type exceptions are in §9; other flows do not inherit them. Do not add generic dashboard tiles, new form fields or copied source business content.
 
 ### Exact component mapping and derived primitives
 
@@ -165,3 +165,29 @@ Required normal text targets at least 4.5:1; essential boundaries/meaningful ico
 6. Record command/check, environment/date, exact revision or dirty-worktree boundary, expected/actual result and evidence path. Missing runtime evidence stays not run.
 
 This docs-only correction runs no application or browser acceptance check. On 2026-10-25 the owner authorized correcting undersized action roles; the Orchestrator selected the exact numeric values below under delegated authority, not as separately human-approved pixel measurements. Desktop task40px, prominent/landing44px, secondary32px, navigation36px and medium-segmented40px roles; medium segmented phone controls and phone targets remain48px. Original source24/28/32px values and12/16,13/20 labels remain provenance in the reference catalog, not current Dubbed targets.
+
+## 9. Current paired core target roles - 2026-10-28
+
+Current targets:A panel-highfi-v7 and B studio-highfi-v1,both with exit-log-out-2026-10-28 amendment,as pinned in the shared contract/current package. Historical original A3 approval/calibration remains provenance. Latest direct owner instructions authorize local development of both;no unseen paired high-fi acceptance or production proof is asserted. Shared body/forms and unrelated pages are unchanged.
+
+| Slice role | Approved target |
+|---|---|
+| Record spoken dialogue | Mabry Regular;desktop font-size clamp(24px,24px+(viewportHeight−600px)×.006667,26px),line-height clamp(30px,30px+(viewportHeight−600px)×.013333,34px);phone24/32. No synthetic weight,clipping or shrinking to control text. |
+| Record workspace | A video center equals viewport center±1px;272px panel24px to its right inside≥32px gutter at≥1248px;stack below1248px. Media max920px and available-height fit,not combined-group centering. B keeps centered studio layout/actions. Both16:9 full-image contain;caption ALWAYS below picture,including blackbars/short/phone. Desktop targets1440×900,1920×910,1280×600,1366×650;phone ordinary scroll. |
+| Record grouping | A quiet black.03/radius10/padding16 performance panel remains;compact A panel12px. B common white canvas/no outer bordered card and centered controls. Both have coherent media/header/dialogue/wave edges. No globalnavbar,speaker identity or visible waveform legend. Phone48px targets;no mandatory pinning. |
+| Result section | Centered20/28 Medium project/Result heading;Exit aligned left content edge;heading/player/progress/footer share bounded content axes without decorative outer box. Custom Original/My dub selector inside player with contrast backing;explicit Download My dub/Return outside. Stage16:9contain;encoded orientation/dimensions unchanged. |
+| Message-only popup | Opaque#202020/radius10/existing PRO floating shadow; titleMedium14/20 #FCFCFC, bodyRegular14/20 #D4D4D4; outlined20px error icon #FF9C9F; gap12, padding14 vertical/16 horizontal. Max520px, viewport-minus32px, bottom16px or safe inset. No embedded button, art, badge, stack or close control. This inverse component does not change the Light application/theme. |
+| Popup timing |180ms opacity/8px entry,8 foreground read seconds after entry,140ms reverse exit; transform cubic-bezier(.22,1,.36,1). Reduced motion immediate, same read time. Deliberate hover may pause; stationary-pointer appearance must not freeze. New failure retriggers; ordinary render/reload does not. Listening/manual scrolling may exit early to keep the task clear. No command waits. |
+| Durable recovery | Ordinary associated text/actions outlive popup visibility. Keep issue/media/operation/target, known Retry save or reconciliation and Settings recovery. Preserve focus/scroll on expiry and critical waveform/action clearance without shrinking the stage. |
+
+The calibration records exact NOT/PRO/BTN/THK source pairs. Full-opacity contrast measured15.88 title/10.99 body/8.15 icon on charcoal and16.29 popup on white. Source NOT460/300ms and outgoing320/240ms40px/.98 recipes remain provenance, not the approved single-popup timing. These presentation exceptions do not select capture tolerances, save reconciliation, generation or production policy.
+
+### Paired title,position and waveform rhythm
+
+Focused header title is20/28 Medium,centered over the source. Exit uses actual Lucide LogOut geometry,currentColor/no fill/stroke1.1/roundcaps-joins/viewBox24×24;Previous remains chevron-left andReturn remains undo-2. Phone Exit target≥48px. One noninteractive6px dot per actual supplied turn,gap8px,active#202020,inactive#d4d4d4,quiet3px#0000000d halo. At desktop height600→900px,dot top margin clamps4→10px and header minimum40→64px;phone title/dots follow the first-row Exit. A's Line counter stays in the panel;B's stays upper-right. No jump/skip behavior.
+
+Wave height at desktop≥768px is clamp(32px,32px+(viewportHeight−600px)×.106667,64px);phone64px. Original continuous envelope fill#c5c5c5/stroke#7e7e7e,take overlay fill#59636a opacity.72/stroke#39434b,cursor#202020;non-scaling strokes. Capture reveals the take progressively;finalized candidate/accepted audition retains it. Actual integration computes take waveform from real captured media;fixture source envelope is labeled source data. No visible color legend;keep meaningful accessible source descriptions.
+
+The external script block minimum is clamp(68px,68px+(viewportHeight−600px)×.133333,108px),vertical padding clamp(4px,4px+(viewportHeight−600px)×.026667,12px),with no extra timeline top margin. Phone script has no minimum and14px vertical padding. Thus the TRUE text-bottom→wave-top gap includes unused block height:at900px normal/longRU approximately62/28px;600px34/4px;650px38.656/7.984px;phone14px for the current three-line fixture/content. Different wrapping must remain legible and external;do not enforce a magic gap by clipping text. Verify same viewport/content against frozen B and actual fonts. B keeps24px real separation after the full wave/time/volume region before its action row.
+
+These are bounded calibrated derivatives of the selected Affect BTN/SEG/NOT/PRO families and owner-directed composition,not new controls or font/palette choices. Normal/disabled/capturing/recovery/focus and reduced motion require rendered integrated evidence.

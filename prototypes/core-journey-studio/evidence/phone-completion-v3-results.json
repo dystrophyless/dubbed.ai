@@ -1,0 +1,21 @@
+{
+  "version": "core-journey-studio-lowfi-v3",
+  "browser": "156.0.8078.48",
+  "date": "2026-10-27",
+  "viewport": [
+    390,
+    667
+  ],
+  "locale": "ru",
+  "reducedMotion": true,
+  "result": "PASS",
+  "checked": [
+    "Keyboard held seek pauses; release plays",
+    "Your take restarts from ended fixed window with synchronized muted video and sample audio",
+    "All three recorded/accepted windows and exact three-dot position",
+    "Initial final-gap Save and leave preserves explicit My projects destination",
+    "Explicit To result after completion; grouped phone Result"
+  ],
+  "pageErrors": [],
+  "limits": "Simulated capture/save/assembly; synthetic sample and illustrative MP4, not actual user media render"
+}

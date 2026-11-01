@@ -1,0 +1,35 @@
+{
+  "capturedAt": "2026-10-25T14:14:30.305Z",
+  "locale": "en",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 1440,
+  "text": "This service mode is not available\n\nThe local workspace could not be opened or read. Check browser storage, then try loading it again.\n\nRetry",
+  "buttons": [
+    {
+      "label": "Retry",
+      "width": 66.6875,
+      "height": 40,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 14px"
+    }
+  ]
+}

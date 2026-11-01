@@ -1,0 +1,206 @@
+{
+  "pairVersion": "core-journey-ab-highfi-v1",
+  "date": "2026-10-28",
+  "targets": [
+    {
+      "variant": "A",
+      "version": "core-journey-panel-highfi-v4",
+      "manifestSha256": "fddcfbb6120846dd08991da3f061d73e391143226795a91e0de6b96257c60aac",
+      "entries": 158,
+      "priorFingerprintCount": 54,
+      "priorChanged": [
+        "BRIEF.md",
+        "index.html",
+        "src.js",
+        "ui.js",
+        "locale.js"
+      ],
+      "priorPreserved": 49
+    },
+    {
+      "variant": "B",
+      "version": "core-journey-studio-highfi-v1",
+      "manifestSha256": "5170ff3fd978894829bd00b6d54f02ee61e39d3ee397680d7c464e17c998ba70",
+      "entries": 340,
+      "priorFingerprintCount": 190,
+      "priorChanged": [
+        "BRIEF.md",
+        "README.md",
+        "index.html",
+        "locale.js",
+        "result-player.js",
+        "src.js",
+        "ui.js"
+      ],
+      "priorPreserved": 183
+    }
+  ],
+  "checks": [
+    {
+      "name": "A current manifest match",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "A bounded prior source changes",
+      "pass": true,
+      "detail": [
+        "BRIEF.md",
+        "index.html",
+        "src.js",
+        "ui.js",
+        "locale.js"
+      ]
+    },
+    {
+      "name": "A canonical preservation except exact checkpoint note",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "A removed preparation feature absent",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "A no fake speaker or legend hooks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "A fixed source dialogue/timing and mock delays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B current manifest match",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "B bounded prior source changes",
+      "pass": true,
+      "detail": [
+        "BRIEF.md",
+        "README.md",
+        "index.html",
+        "locale.js",
+        "result-player.js",
+        "src.js",
+        "ui.js"
+      ]
+    },
+    {
+      "name": "B canonical preservation except exact checkpoint note",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "B removed preparation feature absent",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "B no fake speaker or legend hooks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "B fixed source dialogue/timing and mock delays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical icons.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical ui.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical locale.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical toast.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical waveform-data.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical result-player.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical result-player.css",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical comparison-components.css",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared byte-identical comparison-lab.css",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shared presentation recipe with retained line endings",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Identical paired media scene.mp4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Identical paired media example-dub.mp4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Identical paired media take-0.wav",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Identical paired media take-1.wav",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Identical paired media take-2.wav",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected workflow equivalent acceptAndMove",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Protected workflow equivalent showResult",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Eight selected Clean/Light references pinned to portable source",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "pass": 30,
+  "total": 30
+}

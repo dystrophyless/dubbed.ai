@@ -1,0 +1,30 @@
+
+ RUN  v5.0.5 D:/Program/python/Dubbed/frontend
+
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > grants the single included retry after the first successful run even when an earlier initial run was cancelled 200ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > grants the retry on the first successful run after a failed initial attempt 44ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > settles an authorized initial quote when preparation completes successfully with zero turns 39ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > grants one included retry after initial zero turns, preserves it on queued cancel or system failure, then consumes it on success 76ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > releases a queued attempt without charge when the user confirms cancellation 20ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > rejects a stale running-cancellation quote after another stage completes 16ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > keeps an expired cancellation quote from changing the pending operation or reservation 16ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > offers one zero-credit retry after initial success and preserves it on queued cancellation 32ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > consumes an included retry on success without replenishing it for later paid reprocessing 39ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > consumes an included retry on authoritative running cancellation without charging it 30ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > preserves the prior preparation and unaccepted draft on synthetic system failure 46ms
+ ✓ tests/services/preparation-recovery.test.ts > preparation recovery and accounting > preserves the prior usable preparation and unaccepted draft on a zero-turn included replacement 35ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > observes pending work automatically and activates using the authoritative project revision 279ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > does not activate a zero-turn completion and offers reprocess or another-video recovery 303ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > preserves an older preparation after zero-turn replacement and clears only this project for another video 59ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > returns to the retained recording without activating the zero-turn candidate 62ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > suppresses a trusted zero-percent bar while the authoritative operation is queued 30ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > shows the stored per-run reservation alongside clearly labeled account totals and tolerates legacy missing amounts 76ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > persists an unknown cancellation operation, allows safe departure, and reconciles the same operation after reload 320ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > clears a restored cancellation pointer only after the service confirms it never started 70ms
+ ✓ tests/processing/ProcessingScreen.test.tsx > Processing screen status observation > ignores a completed observation after the user has left the matching processing route 24ms
+
+ Test Files  2 passed (2)
+      Tests  21 passed (21)
+   Start at  18:26:18
+   Duration  5.83s (environment 54%, tests 18%, setup 12%, transform 8%, import 7%)
+

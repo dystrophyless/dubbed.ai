@@ -1,0 +1,47 @@
+
+> dubbed-core-foundation@0.1.0 test:browser
+> playwright test --config playwright.config.mjs --grep Layout A records real browser fake input, recovers the candidate, and completes the accepted snapshot --output C:\Users\roman\AppData\Local\Temp\Dubbed-core-playwright-v4-20261029-123209
+
+
+Running 1 test using 1 worker
+
+(node:23376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 e2e\record-journey.spec.ts:664:3 › Layout A records real browser fake input, recovers the candidate, and completes the accepted snapshot (38.5s)
+
+
+  1) e2e\record-journey.spec.ts:664:3 › Layout A records real browser fake input, recovers the candidate, and completes the accepted snapshot 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Retry playback', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Retry playback', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Retry playback', exact: true })
+
+
+      1100 |       await page.getByRole('button', { name: 'Play', exact: true }).click();
+      1101 |       await expect(page.locator('.result-player__error')).toBeVisible();
+    > 1102 |       await expect(page.getByRole('button', { name: 'Retry playback', exact: true })).toBeVisible();
+           |                                                                                       ^
+      1103 |       await expect(page.locator('.result-player__transport-row button[aria-label="Play"]')).toBeDisabled();
+      1104 |       await page.screenshot({ path: path.join(evidenceDirectory, 'layout-a-result-current-play-failure.png') });
+      1105 |       await page.getByRole('button', { name: 'Retry playback', exact: true }).click();
+        at D:\Program\python\Dubbed\frontend\e2e\record-journey.spec.ts:1102:87
+
+    Error Context: C:\Users\roman\AppData\Local\Temp\Dubbed-core-playwright-v4-20261029-123209\record-journey-Layout-A-re-5e26f-letes-the-accepted-snapshot\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\roman\AppData\Local\Temp\Dubbed-core-playwright-v4-20261029-123209\record-journey-Layout-A-re-5e26f-letes-the-accepted-snapshot\trace.zip
+    Usage:
+
+        npx playwright show-trace C:\Users\roman\AppData\Local\Temp\Dubbed-core-playwright-v4-20261029-123209\record-journey-Layout-A-re-5e26f-letes-the-accepted-snapshot\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e\record-journey.spec.ts:664:3 › Layout A records real browser fake input, recovers the candidate, and completes the accepted snapshot 

@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-23T02:50:27.339Z",
+  "boundary": "Isolated npm build; synthetic account seeded through public facade. Chromium fake microphone and muted output; no physical microphone or real custom render claim.",
+  "steps": [
+    {
+      "line": 1,
+      "during": {
+        "paused": false,
+        "currentTime": 0.903007,
+        "controls": false,
+        "muted": true
+      },
+      "after": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\n\nMicrophone access is requested only when you choose Record line.\n\nLine 1 of 3\n\nA blue light is on.\n\nCapture window: 0.75–3.18 s\n\nAccepted takes: 0 / 3\nOriginal video volume\nRecording status\nRecord line\nRecord again\nCurrent draft recording\nDraft saved. It has not been accepted as a take.\n\nRecorded audio frames were decoded. Next line saves this take and continues.\n\nPrevious line\nNext line\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance."
+    },
+    {
+      "line": 2,
+      "during": {
+        "paused": false,
+        "currentTime": 1.39394,
+        "controls": false,
+        "muted": true
+      },
+      "after": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\n\nMicrophone access is requested only when you choose Record line.\n\nLine 2 of 3\n\nI hear it clearly.\n\nCapture window: 1.25–3.65 s\n\nAccepted takes: 1 / 3\nOriginal video volume\nRecording status\nRecord line\nRecord again\nCurrent draft recording\nDraft saved. It has not been accepted as a take.\n\nRecorded audio frames were decoded. Next line saves this take and continues.\n\nPrevious line\nNext line\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance."
+    },
+    {
+      "line": 3,
+      "during": {
+        "paused": false,
+        "currentTime": 4.891021,
+        "controls": false,
+        "muted": true
+      },
+      "after": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\n\nMicrophone access is requested only when you choose Record line.\n\nLine 3 of 3\n\nWe can begin now.\n\nCapture window: 4.75–6.96 s\n\nAccepted takes: 2 / 3\nOriginal video volume\nRecording status\nRecord line\nRecord again\nCurrent draft recording\nDraft saved. It has not been accepted as a take.\n\nRecorded audio frames were decoded. Next line saves this take and continues.\n\nPrevious line\nNext line\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance."
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "header": "Dubbed\nNew dub\nProjects\nCredits\nAccount\nCredits\nLoading\nLanguage\nEN\nRU\nSign out",
+  "outcome": "failed",
+  "failure": "TimeoutError: page.waitForURL: Timeout 20000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+  "main": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\nThe leave choice could not be saved. You can retry or stay on this screen.\nThis recording session is open elsewhere or unavailable. You can listen, but cannot record here.\n\nMicrophone access is requested only when you choose Record line.\n\nLine 3 of 3\n\nWe can begin now.\n\nCapture window: 4.75–6.96 s\n\nAccepted takes: 3 / 3\nOriginal video volume\nRecording status\nRecord line\nPreviously accepted take\nPrevious line\nNext line\n\nAll lines have accepted takes.\n\nAssemble result\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.",
+  "url": "http://127.0.0.1:4281/projects/ae7c8d9d-97e2-40db-9b3f-119ab21c0482/record"
+}

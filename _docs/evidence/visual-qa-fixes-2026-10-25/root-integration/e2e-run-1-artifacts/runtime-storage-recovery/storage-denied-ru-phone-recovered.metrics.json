@@ -1,0 +1,35 @@
+{
+  "capturedAt": "2026-10-25T14:14:29.113Z",
+  "locale": "ru",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 390,
+  "text": "Перейти к содержимому\nDubbed\nЯзык\nEN\nRU\nВойти\nОзвучьте свою сцену\n\nЗагрузите видео, выберите фрагмент до двух минут и озвучьте всех персонажей своим голосом.\n\nПолучите 120 бесплатных приветственных кредитов один раз для подходящего подтверждённого аккаунта.\n\nНачать озвучку\n\nВопрос по оплате или возврату?\n\nНаписать в поддержку\ndystrophyless@gmail.com",
+  "buttons": [
+    {
+      "label": "Начать озвучку",
+      "width": 358,
+      "height": 48,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "padding": "0px 16px"
+    }
+  ]
+}

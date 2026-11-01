@@ -1,0 +1,40 @@
+[
+  {
+    "saved": "B-prototype-initial",
+    "url": "http://127.0.0.1:5179/"
+  },
+  {
+    "saved": "B-prototype-candidate",
+    "url": "http://127.0.0.1:5179/"
+  },
+  {
+    "saved": "B-prototype-result-desktop",
+    "url": "http://127.0.0.1:5179/"
+  },
+  {
+    "saved": "B-prototype-result-phone",
+    "url": "http://127.0.0.1:5179/"
+  },
+  {
+    "layout": "B",
+    "stage": "result",
+    "title": "Putting your scene together"
+  },
+  {
+    "saved": "A-app-initial",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=en"
+  },
+  {
+    "saved": "A-app-candidate",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=en"
+  },
+  {
+    "layout": "A",
+    "stage": "candidate",
+    "waveformTake": 1
+  },
+  {
+    "error": "TimeoutError: page.waitForFunction: Timeout 20000ms exceeded.",
+    "stack": "page.waitForFunction: Timeout 20000ms exceeded.\n    at record (D:\\Program\\python\\Dubbed\\_docs\\evidence\\core-journey-ab-implementation-2026-10-28\\phase4\\visual-parity-v1\\run-states-retry-20261029T165717\\capture-states-baseline.mjs:8:747)\n    at async app (D:\\Program\\python\\Dubbed\\_docs\\evidence\\core-journey-ab-implementation-2026-10-28\\phase4\\visual-parity-v1\\run-states-retry-20261029T165717\\capture-states-baseline.mjs:8:1491)\n    at async file:///D:/Program/python/Dubbed/_docs/evidence/core-journey-ab-implementation-2026-10-28/phase4/visual-parity-v1/run-states-retry-20261029T165717/capture-states-baseline.mjs:9:20"
+  }
+]

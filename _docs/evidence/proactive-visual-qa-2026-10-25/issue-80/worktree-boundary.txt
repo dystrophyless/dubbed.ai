@@ -1,0 +1,281 @@
+ M AGENTS.md
+ M README.md
+ M _docs/HANDOFF.md
+ M _docs/business-requirements/BR-001_custom_video_dubbing.md
+ M _docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-app-layout.json
+ M _docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-screen-en-1440.png
+ M _docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-screen-en-390.png
+ M _docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-screen-ru-1440.png
+ M _docs/evidence/frontend-implementation-2026-10-23/account-shell-layout/account-screen-ru-390.png
+ M _docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/link-final-action-loading-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/link-invalid-current-proof-ru-phone.png
+ M _docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/reset-service-error-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/reset-unknown-verification-ru-phone.png
+ M _docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-session-unavailable-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/auth-state-ui/signin-submitting-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-en-1440.png
+ M _docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard-proof.json
+ M _docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/microphone-listen-keyboard.sha256
+ M _docs/evidence/frontend-implementation-2026-10-23/mic-icon-final-proof/record-transport-pause-en-1440.png
+ M _docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-after.jsonl
+ M _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-expired-recovered-ru-phone.png
+ M _docs/evidence/frontend-implementation-2026-10-23/result-state-ui/result-playback-network-recovered-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-mobile-menu-en-390.png
+ M _docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-password-reset-code-ru-390.png
+ M _docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-password-reset-code-ru-767.png
+ M _docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-password-reset-code-ru-768.png
+ M _docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/shell-rendered-metrics.json
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-balance-unavailable-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-history-older-failure-ru-phone.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-history-show-more-loading-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-packs-unavailable-ru-phone.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-pending-checkout-posted-and-pending-history-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/credits-unknown-checkout-ru-phone.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-compatible-preview-ready-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-compatible-preview-retryable-error-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-invalid-interval-ru-phone.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-quote-service-failure-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-replacement-failure-original-source-preserved-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/newdub-stale-quote-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-capacity-lifecycle-ru-767.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-capacity-lifecycle-ru-768.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-delete-known-failure-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-rename-save-error-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-rename-validation-en-desktop.png
+ M _docs/evidence/frontend-implementation-2026-10-23/workspace-state-ui/projects-row-menu-ru-767.png
+ M _docs/orchestration.md
+ M _docs/sdd/guides/github-issues-workflow.md
+ M _docs/sdd/guides/versioning-guidelines.md
+ M _docs/sdd/templates/task-issue.md
+ M _docs/specifications/README.md
+ M _docs/specifications/SPEC-001_dubbed_mvp.md
+ D _docs/specifications/SPEC-002_frontend.md
+ M _docs/task-drafts/README.md
+ M _docs/task-drafts/SPEC-001/README.md
+ M _docs/task-drafts/SPEC-001/account_identity.md
+ M _docs/task-drafts/SPEC-001/backend_contracts_schema.md
+ M _docs/task-drafts/SPEC-001/backend_runtime.md
+ M _docs/task-drafts/SPEC-001/background_separation.md
+ M _docs/task-drafts/SPEC-001/browser_capture_adapter.md
+ M _docs/task-drafts/SPEC-001/credit_reservations.md
+ M _docs/task-drafts/SPEC-001/credits_purchase_ui.md
+ M _docs/task-drafts/SPEC-001/delivery_recovery_environment.md
+ M _docs/task-drafts/SPEC-001/demo_media_fixtures.md
+ M _docs/task-drafts/SPEC-001/dialogue_preparation.md
+ M _docs/task-drafts/SPEC-001/frontend_mock_integration_gate.md
+ M _docs/task-drafts/SPEC-001/frontend_real_adapter.md
+ M _docs/task-drafts/SPEC-001/frontend_runtime.md
+ M _docs/task-drafts/SPEC-001/frontend_service_contract.md
+ M _docs/task-drafts/SPEC-001/full_video_rendering.md
+ M _docs/task-drafts/SPEC-001/media_feasibility.md
+ M _docs/task-drafts/SPEC-001/mock_credit_accounting.md
+ M _docs/task-drafts/SPEC-001/mock_preparation_lifecycle.md
+ M _docs/task-drafts/SPEC-001/mock_result_lifecycle.md
+ M _docs/task-drafts/SPEC-001/mock_workspace_persistence.md
+ M _docs/task-drafts/SPEC-001/one_time_purchase_fulfillment.md
+ M _docs/task-drafts/SPEC-001/preparation_corrections.md
+ M _docs/task-drafts/SPEC-001/preparation_orchestration.md
+ M _docs/task-drafts/SPEC-001/processing_job_foundation.md
+ M _docs/task-drafts/SPEC-001/production_policy_baseline.md
+ M _docs/task-drafts/SPEC-001/project_media_upload.md
+ M _docs/task-drafts/SPEC-001/real_product_integration_gate.md
+ M _docs/task-drafts/SPEC-001/recording_commit_backend.md
+ M _docs/task-drafts/SPEC-001/recording_review_ui.md
+ M _docs/task-drafts/SPEC-001/release_acceptance_gate.md
+ M _docs/task-drafts/SPEC-001/results_projects_sharing_ui.md
+ M _docs/task-drafts/SPEC-001/sharing_project_deletion.md
+ M _docs/task-drafts/SPEC-001/turn_correction_ui.md
+ M _docs/task-drafts/SPEC-001/upload_preparation_ui.md
+ M _docs/task-drafts/SPEC-001/visual_system_shell.md
+ M brainstorm.md
+?? .agents/skills/design-taste-frontend/
+?? .agents/skills/frontend-design/
+?? .serena/memories/
+?? .taste-skill/
+?? _docs/evidence/affect-ui-adoption-2026-10-23/
+?? _docs/evidence/affect-ui-clean-light/
+?? _docs/evidence/demo-fixtures.md
+?? _docs/evidence/design-refresh/
+?? _docs/evidence/frontend-accessibility.md
+?? _docs/evidence/frontend-final-policy-2026-10-25/delivery/candidate-inventory-draft.md
+?? _docs/evidence/frontend-final-policy-2026-10-25/delivery/post-closure-readback-2026-10-25.md
+?? _docs/evidence/frontend-final-policy-2026-10-25/delivery/post-push-receipt.md
+?? _docs/evidence/frontend-final-policy-2026-10-25/delivery/root-completion-audit.json
+?? _docs/evidence/frontend-gate.md
+?? _docs/evidence/frontend-implementation-2026-10-23/account-expiry-issue80-reconciliation/
+?? _docs/evidence/frontend-implementation-2026-10-23/account-integration-current.md
+?? _docs/evidence/frontend-implementation-2026-10-23/active-project-deletion-accounting-after-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/active-project-deletion-accounting-before-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/auth-initial-render-metrics.json
+?? _docs/evidence/frontend-implementation-2026-10-23/automatic-preparation-to-record-browser.json
+?? _docs/evidence/frontend-implementation-2026-10-23/blob-lifecycle-repro/
+?? _docs/evidence/frontend-implementation-2026-10-23/controlled-mount-regression.json
+?? _docs/evidence/frontend-implementation-2026-10-23/credits-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/credits-mock-browser-reconciliation.json
+?? _docs/evidence/frontend-implementation-2026-10-23/credits-mock-success-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/credits-ru-phone.png
+?? _docs/evidence/frontend-implementation-2026-10-23/facade-root-inventory.json
+?? _docs/evidence/frontend-implementation-2026-10-23/facade-workspace-criterion-review.md
+?? _docs/evidence/frontend-implementation-2026-10-23/flow-criterion-inventory.json
+?? _docs/evidence/frontend-implementation-2026-10-23/flow07-zero-turn-retry-decision.md
+?? _docs/evidence/frontend-implementation-2026-10-23/foundation-delivery-2026-10-24/foundation-push-remote-receipt-2026-10-24.md
+?? _docs/evidence/frontend-implementation-2026-10-23/foundation-delivery-2026-10-24/issue-readback-closed.json
+?? _docs/evidence/frontend-implementation-2026-10-23/foundation-delivery-2026-10-24/issue-readback-postpush.json
+?? _docs/evidence/frontend-implementation-2026-10-23/foundation-delivery-2026-10-24/root-closure-decision.json
+?? _docs/evidence/frontend-implementation-2026-10-23/foundation-delivery-audit.md
+?? _docs/evidence/frontend-implementation-2026-10-23/initial-issue-contracts.json
+?? _docs/evidence/frontend-implementation-2026-10-23/initial-issue-state-and-discussions.json
+?? _docs/evidence/frontend-implementation-2026-10-23/initial-worktree-boundary.json
+?? _docs/evidence/frontend-implementation-2026-10-23/isolated-pre-auth-bundle.json
+?? _docs/evidence/frontend-implementation-2026-10-23/isolated-processing-browser.json
+?? _docs/evidence/frontend-implementation-2026-10-23/issue-61-delivery-manifest.json
+?? _docs/evidence/frontend-implementation-2026-10-23/issue-61-delivery-receipt.json
+?? _docs/evidence/frontend-implementation-2026-10-23/issue-64-delivery-manifest.json
+?? _docs/evidence/frontend-implementation-2026-10-23/issue-64-delivery-receipt.json
+?? _docs/evidence/frontend-implementation-2026-10-23/issue-72-delivery-manifest.json
+?? _docs/evidence/frontend-implementation-2026-10-23/issue-72-delivery-receipt.json
+?? _docs/evidence/frontend-implementation-2026-10-23/landing-native-200-percent-full-viewport.png
+?? _docs/evidence/frontend-implementation-2026-10-23/landing-native-200-percent.png
+?? _docs/evidence/frontend-implementation-2026-10-23/landing-requested-200-unapplied.png
+?? _docs/evidence/frontend-implementation-2026-10-23/media-screen-criterion-evidence.md
+?? _docs/evidence/frontend-implementation-2026-10-23/media-ui/
+?? _docs/evidence/frontend-implementation-2026-10-23/media/ui-result-download.mp4
+?? _docs/evidence/frontend-implementation-2026-10-23/microphone-criterion-review.md
+?? _docs/evidence/frontend-implementation-2026-10-23/microphone-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/microphone-ru-phone.png
+?? _docs/evidence/frontend-implementation-2026-10-23/mock-delivery-readiness-audit.md
+?? _docs/evidence/frontend-implementation-2026-10-23/native-session-timeout-overflow-probe.json
+?? _docs/evidence/frontend-implementation-2026-10-23/native-zoom-cdp-layout.json
+?? _docs/evidence/frontend-implementation-2026-10-23/native-zoom-current/
+?? _docs/evidence/frontend-implementation-2026-10-23/native-zoom-pref-ignored-headless-shell.json
+?? _docs/evidence/frontend-implementation-2026-10-23/native-zoom-probe.json
+?? _docs/evidence/frontend-implementation-2026-10-23/orchestrator-checks.md
+?? _docs/evidence/frontend-implementation-2026-10-23/orchestrator-contract-review.md
+?? _docs/evidence/frontend-implementation-2026-10-23/orchestrator-register-audit.json
+?? _docs/evidence/frontend-implementation-2026-10-23/preparation-record-navigation.json
+?? _docs/evidence/frontend-implementation-2026-10-23/preparation-slice-root-checks.json
+?? _docs/evidence/frontend-implementation-2026-10-23/preparation-to-record-browser.json
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-start-navigation-failure.json
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/after-keyboard/
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/after-targeted/
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/baseline-overflow-repro/
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/baseline/
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/icon-probe/
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-after-keyboard.jsonl
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-after-targeted.jsonl
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-baseline-overflow-repro.jsonl
+?? _docs/evidence/frontend-implementation-2026-10-23/processing-ui/metrics-baseline.jsonl
+?? _docs/evidence/frontend-implementation-2026-10-23/progress-reconciliation/
+?? _docs/evidence/frontend-implementation-2026-10-23/projects-after-delete-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/projects-browser-mutations.json
+?? _docs/evidence/frontend-implementation-2026-10-23/projects-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/projects-invalid-title-failure.json
+?? _docs/evidence/frontend-implementation-2026-10-23/projects-ru-phone.png
+?? _docs/evidence/frontend-implementation-2026-10-23/record-initial-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/record-journey-after-fix.png
+?? _docs/evidence/frontend-implementation-2026-10-23/record-journey-final-state.png
+?? _docs/evidence/frontend-implementation-2026-10-23/record-journey-next-fix.png
+?? _docs/evidence/frontend-implementation-2026-10-23/record-redesign/
+?? _docs/evidence/frontend-implementation-2026-10-23/record-to-download-browser-after-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/record-to-download-browser-final-revision.json
+?? _docs/evidence/frontend-implementation-2026-10-23/record-to-download-browser-next-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/record-to-download-browser.json
+?? _docs/evidence/frontend-implementation-2026-10-23/record-to-result-final-revision.png
+?? _docs/evidence/frontend-implementation-2026-10-23/record-transport-retry-root-check.json
+?? _docs/evidence/frontend-implementation-2026-10-23/reference-integrity.json
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-client-binding-after-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-client-binding-before-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-client-binding-probe-setup-failure.json
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-code-en-phone.png
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-code-ru-phone.png
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-countdown-fixed-en390.png
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-countdown-fixed-ru390.png
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-countdown-fixed.json
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-ui-final.png
+?? _docs/evidence/frontend-implementation-2026-10-23/registration-ui-reload-verification.json
+?? _docs/evidence/frontend-implementation-2026-10-23/reset-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/reset-ru-phone.png
+?? _docs/evidence/frontend-implementation-2026-10-23/result-generation-controlled-root-proof.json
+?? _docs/evidence/frontend-implementation-2026-10-23/root-blob-lifecycle-repro.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-blob-lifetime-after.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-cohort-freeze-before.json
+?? _docs/evidence/frontend-implementation-2026-10-23/root-current-build.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-current-e2e.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-current-media.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-current-microphone-unit.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-current-unit.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-delete-active-after.cjs
+?? _docs/evidence/frontend-implementation-2026-10-23/root-delete-active.cjs
+?? _docs/evidence/frontend-implementation-2026-10-23/root-entry-gate-app-browser.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-entry-gate-build.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-entry-gate-lint.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-entry-gate-real-unavailable.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-entry-gate-unit.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-freeze-before.json
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-freeze-final-before.json
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-isolated-build.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-lint.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-media.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-real-unavailable.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-test-followups.json
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-transport-icons.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-typecheck.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-final-screen-unit.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-leave-dialog-after.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-native-timeout.cjs
+?? _docs/evidence/frontend-implementation-2026-10-23/root-record-blob-after-unit.log
+?? _docs/evidence/frontend-implementation-2026-10-23/root-registration-binding-after.cjs
+?? _docs/evidence/frontend-implementation-2026-10-23/root-registration-binding.cjs
+?? _docs/evidence/frontend-implementation-2026-10-23/root-session-reopen-after.cjs
+?? _docs/evidence/frontend-implementation-2026-10-23/root-zero-turn-check.cjs
+?? _docs/evidence/frontend-implementation-2026-10-23/run-checkpoint.md
+?? _docs/evidence/frontend-implementation-2026-10-23/runtime-shell-criterion-evidence.md
+?? _docs/evidence/frontend-implementation-2026-10-23/screen-cohort-delivery-2026-10-24/issue-closure-postverify.json
+?? _docs/evidence/frontend-implementation-2026-10-23/screen-cohort-delivery-2026-10-24/issue-closure-receipt.md
+?? _docs/evidence/frontend-implementation-2026-10-23/screen-cohort-delivery-2026-10-24/root-final-22-issue-readback.json
+?? _docs/evidence/frontend-implementation-2026-10-23/selection-event-crash-diagnostic.json
+?? _docs/evidence/frontend-implementation-2026-10-23/session-browser-reopen-after-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/session-browser-reopen-before-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/session-busy-media-root-checks.json
+?? _docs/evidence/frontend-implementation-2026-10-23/shared-button-busy-addendum.md
+?? _docs/evidence/frontend-implementation-2026-10-23/shared-button-visual-addendum.md
+?? _docs/evidence/frontend-implementation-2026-10-23/shared-controls/
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/test-results-final/
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/test-results-reviewed/
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-final-proof/test-results/
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-forced-colors-keyboard-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-keyboard-focus-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-landing-en-767.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-landing-en-768.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-landing-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-landing-ru-phone.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-mobile-menu-en-390.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-password-reset-code-ru-390.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-password-reset-code-ru-767.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-password-reset-code-ru-768.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-reduced-motion-ru-720.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-rendered-metrics.json
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-sign-in-ru-390.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-sign-in-ru-767.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-sign-in-ru-768.png
+?? _docs/evidence/frontend-implementation-2026-10-23/shell-source-mapping.md
+?? _docs/evidence/frontend-implementation-2026-10-23/signin-en-desktop.png
+?? _docs/evidence/frontend-implementation-2026-10-23/signin-ru-phone.png
+?? _docs/evidence/frontend-implementation-2026-10-23/source-selection-browser-after-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/source-selection-browser.json
+?? _docs/evidence/frontend-implementation-2026-10-23/stable-snapshot-checks.json
+?? _docs/evidence/frontend-implementation-2026-10-23/stable-snapshot-source-manifest.json
+?? _docs/evidence/frontend-implementation-2026-10-23/upload-quote-start-browser.json
+?? _docs/evidence/frontend-implementation-2026-10-23/workspace-initial-browser-metrics.json
+?? _docs/evidence/frontend-implementation-2026-10-23/zero-turn-charge-after-fix.json
+?? _docs/evidence/frontend-implementation-2026-10-23/zero-turn-charge-failure.json
+?? _docs/evidence/frontend-implementation.md
+?? _docs/evidence/frontend-issue-publication-2026-10-23/
+?? _docs/evidence/frontend-media.md
+?? _docs/evidence/frontend-screenshots/
+?? _docs/evidence/frontend-service-audit.md
+?? _docs/evidence/frontend-service-lifecycle-followup.md
+?? _docs/evidence/proactive-visual-qa-2026-10-25/
+?? _docs/frontend-flows/
+?? _docs/specifications/SPEC-001_issue_publication.md
+?? _docs/task-drafts/frontend-flows/

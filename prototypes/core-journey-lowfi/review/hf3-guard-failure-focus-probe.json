@@ -1,0 +1,13 @@
+{
+  "afterFailedGuardSave": {
+    "tag": "BODY",
+    "id": "",
+    "text": "High-fi v3\nReal scene. Simulated recording, saves and assembly. \u201cYour take\u201d uses synthetic sample au",
+    "inClosedGuard": false
+  },
+  "firstTab": {
+    "tag": "BUTTON",
+    "id": "next",
+    "text": "Retry save"
+  }
+}

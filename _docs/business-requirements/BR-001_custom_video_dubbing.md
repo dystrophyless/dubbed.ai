@@ -11,7 +11,7 @@ Approval: not approved; writing this draft does not constitute owner approval, i
 
 ## 1. Problem and job to be done
 
-Casual users want to perform scenes from their favorite movies, shows, games, or other videos using their own voices. Preparing a custom video for dubbing can require finding dialogue, transcribing words, setting boundaries, identifying speakers, and assembling the final audio. That preparation gets in the way of the enjoyable activity: listening, performing, retrying, and sharing.
+Casual users want to perform scenes from their favorite movies, shows, games, or other videos using their own voices. Preparing a custom video for dubbing can require finding dialogue, transcribing words, setting boundaries and assembling the final audio. That preparation gets in the way of the enjoyable activity: listening, performing, retrying, and sharing.
 
 **Job to be done:** When I have a short video I want to dub for fun, help me prepare its performances automatically, record every character in manageable turns, and get a full video with my voices replacing the originals, without first becoming a video or audio editor.
 
@@ -49,11 +49,11 @@ The IDs below are stable requirement references for future specifications. They 
 
 | ID | Requirement | Source |
 |---|---|---|
-| BR-001-R04 | Automatically propose timed recording turns containing transcribed words and speaker labels. Include detected character laughter, screams, and gasps with descriptive captions, not just spoken dialogue. Detection completeness remains subject to validation and correction. | §§2, 4–5 |
-| BR-001-R05 | Group connected same-speaker speech, splitting at clear pauses or speaker changes. Retain an uninterrupted 30-second speech as one take rather than forcing short chunks. Add small lead-in/ending margins; their amount is not yet defined. | §5 |
+| BR-001-R04 | Automatically propose timed recording turns containing transcribed words or sound captions. Speaker identity extraction is unavailable; no speaker label is required or shown, and absent metadata is valid. Include detected character laughter, screams, and gasps with descriptive captions, not just spoken dialogue. Detection completeness remains subject to validation and correction. | §§2, 4–5 |
+| BR-001-R05 | Group connected speech, splitting at clear pauses or audible performance changes; this does not require recognizing,naming or persisting a speaker identity. Retain an uninterrupted 30-second speech as one take rather than forcing short chunks. Add small lead-in/ending margins; their amount is not yet defined. | §5 |
 | BR-001-R06 | Provide a full-video subtitled preview with a selectable dialogue list highlighting the currently playing line. Let the user preview the processed background and decide whether its quality is acceptable before recording. | §4 |
-| BR-001-R07 | Allow text/speaker edits, draggable start/end adjustments and Add missed line before/after recording. Text/labels preserve takes; timing changes require replacement before export while retaining the old take until a new one saves. | Owner follow-up, brainstorm §17 |
-| BR-001-R08 | Reprocessing locks permanently after the first successfully saved take, not a failed attempt; deleting takes never unlocks. Before eligible reprocessing warn/confirm that successful replacement resets all prepared turns/manual edits/additions. Failure preserves old usable work; no general split/merge. | Owner follow-up, brainstorm §17 |
+| BR-001-R07 | Historical manual correction stage is withdrawn by current frontend scope. No speaker assignment/input/display or required identity field. Preserve stable turn/timing revisions and old take until durable compatible replacement. | Current shared scope and owner2026-10-27 capability correction |
+| BR-001-R08 | Owner2026-10-27 removed user-initiated whole-section repeat preparation entirely, including included/paid reruns and first-take eligibility/reset rules. Technical-failure recovery of initial preparation remains; never reset protected recordings. | Latest direct owner amendment |
 | BR-001-R09 | Keep overlapping character turns independent. Capture with full original reference and highlight the target. In review use saved takes for recorded characters and original voices for unrecorded characters, including overlap; user may preview imperfect isolation and continue if satisfied. Final export requires all turns recorded. | Owner follow-up, brainstorm §17 |
 
 ### Recording and result
@@ -79,8 +79,8 @@ The IDs below are stable requirement references for future specifications. They 
 
 | ID | Requirement | Source |
 |---|---|---|
-| BR-001-R19 | Quote ceil(selected-section seconds) credits at one credit per second, covering transcript/speakers/timing/background; 12.4 seconds costs 13, 120 seconds costs 120. No surcharge for worker latency, internal retries, language mix or speaker/overlap complexity. | Owner follow-up, brainstorm §17 |
-| BR-001-R20 | One included AI retry per project before the permanent first-save lock; later runs cost normal disclosed price without replenishing it. System failure/queued cancellation preserves allowance; successful replacement or running user cancellation consumes it. Corrections, recording/replay/reopen/download/share incur no extra preparation credits under declared limits. | Owner follow-up, brainstorm §17 |
+| BR-001-R19 | Quote ceil(selected-section seconds) credits at one credit per second, covering transcript/turn timing/background; 12.4 seconds costs 13, 120 seconds costs 120. No surcharge for worker latency, internal retries, language mix or speaker/overlap complexity. | Owner follow-up, brainstorm §17 |
+| BR-001-R20 | No repeat-preparation allowance or paid rerun exists. Technical failures retain existing charge/reservation/recovery protections; internal worker retries never create duplicate charges. Recording, listening, reopen and download incur no additional preparation credits under declared limits. | Latest direct owner amendment; existing billing safety |
 | BR-001-R21 | Grant 120 one-time non-expiring welcome credits per eligible verified account; purchased credits also never expire. Sell one-time USD packs, no recurring/automatic purchases. Measure complete processing/retry/export/storage/sharing/payment costs before setting pack quantities/prices/margins. | Owner follow-up, brainstorm §17 |
 | BR-001-R22 | Reserve quoted credits at authorized preparation start; settle delivered complete preparation before subjective approval, including successful no-dialogue output. System/required-background failure is free and preserves previous usable preparation. Allow queued free cancellation and running completed-stage-only charge shown before confirmation. Project deletion never refunds completed work; successful pending processing remains chargeable after deletion. Stage allocations/races/reservation expiry/reversals/account-deletion balance rules still need definition. | Owner follow-up, brainstorm §17 |
 
@@ -99,8 +99,8 @@ The IDs below are stable requirement references for future specifications. They 
 1. The visitor understands the service and trial from the landing page and selects Start dubbing.
 2. The user signs in, enters New dub, and selects/uploads a video.
 3. Before preparation, the user sees its duration, exact credit cost, and whether their balance is sufficient. Buying credits and starting processing are separate user actions.
-4. Preparation produces subtitles, speaker-labeled turns, timings/margins, and a playable processed background.
-5. The user reviews the full video, checks subtitles/speakers/boundaries, previews background quality, corrects mistakes, and optionally uses an allowed AI retry.
+4. Preparation produces transcribed text/sound captions, ordered timed turns with margins and a playable processed background. Speaker identity is not an extracted or required output.
+5. Validated usable initial preparation proceeds directly to recording under the current shared contract; no user-requested AI repeat or subjective preparation-approval gate.
 6. The user starts dubbing and works through the turns. For a four-second turn, Record captures at most four seconds, allowing early Stop while original audio plays and video is hidden. Text remains visible.
 7. After each take, the user can hear it in context, retry it, or continue. They may leave and resume saved work later.
 8. After saving compatible takes for every turn, the user watches the complete dubbed result and can return to a turn to improve it.
@@ -113,8 +113,8 @@ The IDs below are stable requirement references for future specifications. They 
 |---|---|
 | Insufficient credits | The user can buy a one-time pack without being enrolled in recurring billing. Preserving the upload/quote through purchase is a proposed interaction to finalize. |
 | Saved-project limit reached | The user chooses what to delete rather than having the service silently discard a selected existing project. Two free/ten upgraded slots are confirmed; occupy after upload validation and free on deletion. |
-| Wrong text, speaker, or clipped first word | Correct the affected text, assignment, or timeline boundary; whole-video reprocessing is not the only recovery option. |
-| Entirely missed line after recording began | Manually add its time range/text/speaker and record it. Do not unlock whole-video reprocessing implicitly. |
+| Wrong text, speaker, or clipped first word | Perform supplied turns as-is or start a normal new project; no manual correction, targeted repair or same-project reset. |
+| Entirely missed line after recording began | No manual addition or same-project preparation reset; ordinary new-project credit/slot rules apply. |
 | Bad grouping after recording began | No general split/merge tool was agreed; resolve the supported recovery behavior before claiming complete coverage. |
 | Processed music/effects are imperfect | Let the user listen and decide whether to proceed; do not guarantee studio-quality removal for arbitrary content. |
 | A replacement recording fails | Preserve the previous successful take. Define what counts as safely saved success during specification. |
@@ -131,7 +131,7 @@ No measured baseline, target conversion rate, accuracy threshold, or cost-per-vi
 |---|---|---|---|
 | First successful dub | Unknown | A new user completes a supported project from upload to playable/downloadable/shared result; conversion threshold to be decided after pilot evidence. | Observe a representative first-use pilot and measure funnel completion/drop-off. |
 | Preparation effort | Unknown | Automatic preparation removes most manual transcription/timing effort while corrections remain practical. No numeric reduction claimed. | Observe correction actions and time spent preparing versus recording; gather user feedback. |
-| Preparation wait | Unmeasured | Owner target: about 60 seconds or less for a two-minute supported video. Timing start/end, upload inclusion, hardware, load, and percentile must be defined before it becomes an acceptance metric. | Time the complete preparation needed for subtitle/speaker/turn/background preview on representative inputs. |
+| Preparation wait | Unmeasured | Owner target: about 60 seconds or less for a two-minute supported video. Timing start/end, upload inclusion, hardware, load, and percentile must be defined before it becomes an acceptance metric. | Time the complete preparation needed for transcript/timed-turn/background preparation on representative inputs. |
 | Audio usefulness | Unmeasured | Users can judge and accept the processed background and create a result they want to keep/share. No perfect-separation guarantee. | Listening tests covering speech, effects, music, overlap, and nonverbal sounds; record rejection/correction reasons. |
 | Recording usability | Unmeasured | Users complete fixed-window takes and judge them in context on supported phone/desktop browsers. Synchronization tolerance is not selected. | End-to-end device tests and observed recording/retry sessions. |
 | Credit predictability | No implemented billing | The shown quote governs the charge; included actions do not incur hidden preparation charges, and system failures are not charged. | Verify quoted versus actual credit changes and meaningful failure/retry scenarios. |
@@ -182,12 +182,12 @@ User-supplied movie/show/game examples do not establish content rights, permissi
 | Item | Status and provenance | Effect |
 |---|---|---|
 | Casual audience; short English/Russian videos; desktop/phone | Explicit owner answers, brainstorm §§1–2 | Defines initial audience and supported journey. |
-| Full-video preview and correction; add missing lines; AI retry locks after recording | Explicit owner answers, §§4–5 | Overrides the earlier no-manual-timing idea. |
+| Earlier preview/correction and AI-repeat discussion | Earlier owner answers, §§4–5 | Historical provenance only: current frontend removes Prepare/manual correction; owner2026-10-27 removes the user AI-repeat function and its old lock. |
 | Hidden-video recording, no countdown, original audio, exact stop, one safely replaced take | Explicit later owner answers, §6 | Overrides visible-video/countdown/multi-take alternatives. |
 | Full original timeline, all characters, separate overlapping turns | Explicit owner answers, §§5–7 | Not a compilation or one-character dubbing app. |
 | Best-effort separation accepted through preview | Explicit owner answer, §4 | No mandatory perfect-background guarantee. |
 | Sign-in, resume, project slots/upgrades, link behavior/deletion | Explicit owner answers, §§8–9 | Defines ownership and sharing direction. |
-| Duration pricing, included retry, failure protection, trial coverage | Assistant proposal accepted in principle by 'Ok, do that', §10 | Later owner answers select 1 credit/second rounded up, 120 welcome credits and explicit retry/failure/cancel rules; USD prices remain evidence-dependent. |
+| Duration pricing, failure protection, trial coverage | Earlier proposal/owner discussion | Current quote is1credit/second rounded up and120 welcome credits; included/paid reruns were removed2026-10-27. Failure/cancellation safety remains; USD packs remain evidence-dependent. |
 | Credit packs only | Explicit owner answer, §10 | No subscription at launch; non-expiring purchased credits follows the selected proposal. |
 | Separate Prepare/Record stages in one familiar workspace | Assistant recommendation used in discussion, §8 | Proposed information architecture, not final UI approval. |
 | Casual usage occurs in bursts and automation drives completion | Business hypotheses, §§1, 10 | Validate through usage and pilot observation. |
@@ -202,7 +202,7 @@ The project owner decides product/commercial policy. Technical investigation sup
 | OQ-02 | Delivery/failure/no-turn/retry/cancel/deletion charging is confirmed in R20/R22. Remaining: stage cost allocation/rounding, confirmation/completion races, reservation expiry, refunds/reversals and account-deletion balance/financial retention. | Owner plus technical proposal | Monetary edge cases and reversal lifecycle. |
 | OQ-03 | 10-minute/250 MB original, <=120-second selection, MP4/MOV/WebM, MP4 <=720p/no upscale and slot lifecycle confirmed. Remaining: validated codec/byte/timebase boundaries and bounded rendering/sharing usage. | Technical evidence and owner | Compatibility/delivery evidence. |
 | OQ-04 | All turns require valid saved takes for export; early-stopped shorter takes are valid. No final original fallback. Remaining: export of a still-zero-turn project; manually adding missed lines is supported. | Project owner | Zero-turn export edge only. |
-| OQ-05 | Text/speaker edits preserve takes; timing edits require replacement, preserving old audio; first successful save permanently locks AI. General split/merge excluded. Remaining: technical revision/concurrency and recoverable interrupted-candidate UX/durability. | Implementer with owner review where behavior remains open | Safe recovery evidence. |
+| OQ-05 | Latest frontend scope excludes manual corrections and user-requested preparation reset. Protected candidate/accepted-media revisions, interrupted-audio recovery and durability remain technical proof requirements. | Implementer; owner only for unresolved product changes | Safe recovery evidence, no restored reset feature. |
 | OQ-06 | Retention until project/account deletion, account deletion at launch, same-token off/on, previous result during rerender/failure are confirmed. Remaining: intermediate/backup/old-export/CDN/URL-reader lifetimes and cleanup mechanics. | Owner plus operational evidence | Physical deletion/delivery guarantees. |
 | OQ-07 | Actual model/overlap-original-speaker/nonverbal quality, margin/grouping parameters, full latency/cost and sync/acoustics. Target browser list is selected; precise supported versions need evidence. | Technical investigation; owner accepts tradeoffs | Feasibility/performance claims. |
 | OQ-08 | Optional listening, independent reference volume, early Stop, white/gray/blue flat UI and EN/RU switch confirmed. Remaining: exact tokens/layout/readiness/save/recoverable-candidate controls with rendered/device checks. | Owner and design evidence | Detailed UX acceptance. |
@@ -219,7 +219,7 @@ Proposed evidence-led sequence, not an authorized task plan:
 3. Use a bounded pilot to observe completion, corrections, abandonment, audio acceptance, and full cost. Exact cohort size, thresholds, and release date are not selected.
 4. Before public launch, establish pricing/limits, content and account policies, and understandable recovery/support for failed processing, missing credits, lost recording permission, project deletion, and broken share links.
 
-Explain the two-minute scope, best-effort preparation, credit quote/included retry, project limits, and sharing/deletion consequences at the relevant user actions. Headphones can be recommended to reduce reference-audio pickup, but were not made mandatory. Do not promise untested latency, unlimited storage, or flawless audio.
+Explain two-minute scope, best-effort preparation, exact credit quote, technical-failure recovery, project limits and deletion consequences at relevant actions. Headphones are recommended, not mandatory. No unlimited/perfect-audio/untested-latency promises or repeat-preparation entitlement.
 
 ## 11. Linked specifications
 

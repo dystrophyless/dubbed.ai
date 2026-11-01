@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-23T02:01:37.202Z",
+  "boundary": "Isolated preliminary bundle, manual observe calls while transport gap is pending; ten-second Record navigation check.",
+  "navigation": "timed-out",
+  "url": "http://127.0.0.1:4281/projects/1625de89-343f-426e-9659-303c149e015b/processing",
+  "main": "Preparing your scene\n\nLocal mock workflow. This screen reports the saved service state; it does not estimate completion time.\n\nCheck status\n\nPreparation is complete. Opening recording…\n\nCurrent stage\nPreparation complete\n100%",
+  "buttons": [
+    "Check status"
+  ],
+  "pageErrors": []
+}

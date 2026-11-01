@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-28T15:48:18.897Z",
+  "browser": "Chrome 156.0.8078.49",
+  "permission": "test harness rejected getUserMedia with NotAllowedError; browser permission UI was not exercised",
+  "nativeApiEvidence": {
+    "getUserMediaCalls": 1,
+    "recorderStarts": 0
+  },
+  "savedRecordingCount": 0,
+  "settingsBoundaryAvailable": true,
+  "recoveryToast": "message only and aria-hidden; 8 second read interval; deliberate hover pause; reduced motion; manual wheel dismissal; durable error retained"
+}

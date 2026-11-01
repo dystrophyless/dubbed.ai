@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-23T18:38:01.1334734Z",
+  "issue": 72,
+  "repository": "dystrophyless/dubbed.ai",
+  "branch": "main",
+  "remote": "origin",
+  "baseCommit": "15f2075621c11b438ee38734640114f80b8dc9cf",
+  "files": [
+    {
+      "path": "frontend/public/media/fixture-manifest.json",
+      "sha256": "eed87edc04cfe42c5706f8d4c7338618299482a9d07bc874632db337f4029f87"
+    },
+    {
+      "path": "frontend/src/media/fixtures.ts",
+      "sha256": "c3a6d06cd75d11c57cded790433e55d74fb6e917e9f3219a46e608b49edfc503"
+    },
+    {
+      "path": "frontend/tests/media/fixtures.test.mjs",
+      "sha256": "067887779759c0293f7e5e25819b70110b2cf48bdd509dbb6c3c4e0b44a9056e"
+    },
+    {
+      "path": "frontend/tests/media/generate-fixtures.mjs",
+      "sha256": "32e3964c796dc93e379154a8f4c2e17f831ff4abb6db91b5a2e13e25e20c14ba"
+    },
+    {
+      "path": "frontend/tests/media/generate-speech.ps1",
+      "sha256": "f34f03c093c873a3c338ecb2314c2b1c1fa8d0806c2260b2152ca18950f02066"
+    },
+    {
+      "path": "frontend/tests/media/probe-browsers.mjs",
+      "sha256": "1e936c0cc3364c89c03b80c35c4eb5cb9aa93a1e9d39537429f6304804696b74"
+    },
+    {
+      "path": "_docs/evidence/frontend-implementation-2026-10-23/issue-72-acceptance.md",
+      "sha256": "98a8a4dc06c5019bba3964fba52ce394ea8222aaa45debd22ca41e5bec2b311c"
+    },
+    {
+      "path": "frontend/public/media/source-dialogue.mp4",
+      "sha256": "36e996acf6eb710ed282cd154536314752be08aea9946a6955f7da8a719d4d9b"
+    },
+    {
+      "path": "frontend/public/media/source-dialogue-master.wav",
+      "sha256": "8d9d75bfe05eae312bfe163de2cc3dd9001d77b37a0ce40eb14eda6bb7cf2a71"
+    },
+    {
+      "path": "frontend/public/media/recording-take-a.wav",
+      "sha256": "81a906caa74e2dfa35183319785aef51ae1f8cb173054bd0618c83876ae403f7"
+    },
+    {
+      "path": "frontend/public/media/recording-take-b.wav",
+      "sha256": "bc19b727b38864790d8b399da24782d2bfe3b3dfec5ff9179f1ad78dd1c081b3"
+    },
+    {
+      "path": "frontend/public/media/result-generation-001-master.wav",
+      "sha256": "236e4601c586e456d1060721c8408d929a06086bcf09c8dc6b51146c470636c3"
+    },
+    {
+      "path": "frontend/public/media/result-generation-002-master.wav",
+      "sha256": "c0e5d2625027ace368f755782a290d878d5b06d8abf38ae4c5ace088662896a1"
+    },
+    {
+      "path": "frontend/public/media/result-generation-001.mp4",
+      "sha256": "af77d8889ab4675a7b70f28955930ee7cf094f2c9f07452b60da26522ddf87a2"
+    },
+    {
+      "path": "frontend/public/media/result-generation-002.mp4",
+      "sha256": "accdfdaf3bb4e81e805c51469a0231bcf6c53b4180a5cff7b980016393992042"
+    },
+    {
+      "path": "frontend/public/media/valid-silence.wav",
+      "sha256": "4f9feb6582c3db6707787d5f3baaf9d55f9fefca0a97bbbf1dcfaa20cca340ff"
+    },
+    {
+      "path": "frontend/public/media/valid-silence.mp4",
+      "sha256": "c13941482a1666e741ad46e96aa6eb89ec0752aadf6a460d8085e38bd0df3b06"
+    },
+    {
+      "path": "frontend/public/media/usable-partial.mp4",
+      "sha256": "b8c2d565e091fcabdf66f8db86a0738bd718f9854092360ec5ddcdcd32ec5857"
+    },
+    {
+      "path": "frontend/public/media/no-audio-track.mp4",
+      "sha256": "42cd5907978a4108aad012461fa67e38e9469875d4fe1b030044fbb30fac5538"
+    },
+    {
+      "path": "frontend/public/media/short-source.mp4",
+      "sha256": "bf9a8d81981e16d58b7935e7e5deabe8769015b5e09ba8ffc25910c6510bde20"
+    }
+  ],
+  "acceptance": "_docs/evidence/frontend-implementation-2026-10-23/issue-72-acceptance.md",
+  "scope": "Only20 explicit media corpus/module/scripts/test/acceptance files; no application implementation, runtime package or unrelated initial dirty files",
+  "closureDecision": "Root authorizes72only after verified -> recordedacceptance -> exactscopedcommit -> normalpush -> remoteverification -> completedclosure. Hash drift or failed delivery keeps open."
+}

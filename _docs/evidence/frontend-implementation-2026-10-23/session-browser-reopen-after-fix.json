@@ -1,0 +1,19 @@
+{
+  "capturedAtUtc": "2026-10-23T19:20:49.968Z",
+  "boundary": "Native Chromium persistent profile; public facade with isolated namespace, default client identity, local synthetic registration only.",
+  "profile": "C:\\Users\\roman\\AppData\\Local\\Temp\\dubbed-session-reopen-9FyQ2T",
+  "namespace": "root-session-reopen-1792783249968",
+  "before": {
+    "authenticated": true,
+    "expiresInMs": 2591999992,
+    "clientStoredInSessionStorage": false,
+    "clientStoredInLocalStorage": true
+  },
+  "after": {
+    "status": "ok",
+    "authenticated": true,
+    "clientStoredInSessionStorage": false,
+    "clientStoredInLocalStorage": true
+  },
+  "outcome": "passed"
+}

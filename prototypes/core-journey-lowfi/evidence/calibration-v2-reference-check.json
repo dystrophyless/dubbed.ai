@@ -1,0 +1,23 @@
+{
+  "version": "core-journey-highfi-v2",
+  "result": "PASS",
+  "selectedManifestHashes": {
+    "source/components/button/Clean/button-clean.md.txt": "87e82cd57239270f22c106c40e77d005e310f7aa7a6eddbfca0019568b9bd5e6",
+    "source/components/button/Clean/Light/01-initial.png": "11fdc40389e7a7c18bfa7be5f2afe7a08ce3486aa9cbe0199d3cec2d799881c6",
+    "source/components/button/Clean/Light/03-loading.png": "e19747332e2ca13bb86a4b9d22c3d372434c2a857eabd18775e3ad15b12c1d7a",
+    "source/components/profile-menu/Clean/profile-menu-clean.md.txt": "0bc1d998cee1f008dd6ff3c480ed42bf352cb0d5071b306e39ed51bd85a1dbb2",
+    "source/components/profile-menu/Clean/Light/01-initial.png": "702033f1c5ef3afcbd8753ba487c6fc6bf1faa850c2967b9c97825a50482dfce",
+    "source/components/notification-stack/Clean/notification-stack-clean.md.txt": "c2c61d0819011a9d1a699d4c5692e38b9d5bcb8d6eab1595841317961e4ac4cc",
+    "source/components/notification-stack/Clean/Light/01-initial.png": "9b133935b2162a3833d8a0a1db5e8531f467257c08f1ae6c253cf310491d978b",
+    "source/components/thinking-loader/Clean/thinking-loader-clean.md.txt": "3f555471cf29248f137ce42edf97e5c81e1283d49439b229554415d016210554",
+    "source/components/thinking-loader/Clean/Light/01-initial.png": "ca821ebb39bd21689fc83c00411ce7de4564d9522709a8166725533f86485713"
+  },
+  "sharedRecipeSha256": "45338168d138f3a0e08827250781abeab3481cda0357f96071335c2090a40973",
+  "notificationDerivative": "White NOT surface/radius10/exact small shadow;15/24 Medium title,14/20 product body, semantic icon only; no buttons inside, no timer/dismissal/entry motion; max520 and phone viewport-32 justified by actual content",
+  "contrast": {
+    "titleOnWhite": 21.0,
+    "bodyOnWhite": 5.967014760405726,
+    "semanticErrorIconOnWhite": 5.864109505498192
+  },
+  "scope": "bounded recalibration, not independent visual acceptance; prior v1 evidence preserved"
+}

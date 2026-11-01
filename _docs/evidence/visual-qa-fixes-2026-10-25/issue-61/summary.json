@@ -1,0 +1,128 @@
+{
+  "issue": 61,
+  "model": "gpt-6-luna",
+  "effort": "max",
+  "date": "2026-10-25",
+  "files": [
+    "_docs/frontend-flows/00-shared-contract.md",
+    "_docs/frontend-flows/01-landing.md",
+    "_docs/frontend-flows/02-sign-in.md",
+    "_docs/frontend-flows/03-registration.md",
+    "_docs/frontend-flows/04-password-reset.md",
+    "_docs/frontend-flows/05-account-linking.md",
+    "_docs/frontend-flows/06-new-dub.md",
+    "_docs/frontend-flows/07-processing.md",
+    "_docs/frontend-flows/09-record.md",
+    "_docs/frontend-flows/10-result.md",
+    "_docs/frontend-flows/11-projects.md",
+    "_docs/frontend-flows/12-credits.md",
+    "_docs/frontend-flows/15-account.md",
+    "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+    "_docs/frontend-flows/affect-ui-clean-light-reference.md",
+    "_docs/frontend-flows/affect-ui-workflow.md",
+    "_docs/frontend-flows/design-tokens.md",
+    "_docs/frontend-implementation-contract.md"
+  ],
+  "findings": [
+    {
+      "id": "QA-61-01",
+      "status": "fixed_in_active_documentation",
+      "evidence": [
+        "_docs/frontend-implementation-contract.md",
+        "_docs/frontend-flows/00-shared-contract.md",
+        "_docs/frontend-flows/09-record.md",
+        "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/active-docs-scoped.diff"
+      ],
+      "limitations": [
+        "No two-tab runtime/fencing check was run for this docs-only task."
+      ]
+    },
+    {
+      "id": "QA-61-02",
+      "status": "fixed_in_active_contract; rendered product proof pending implementation owners",
+      "evidence": [
+        "_docs/frontend-flows/design-tokens.md",
+        "_docs/frontend-flows/affect-ui-clean-light-adoption.md",
+        "_docs/frontend-flows/affect-ui-workflow.md",
+        "_docs/frontend-flows/01-landing.md",
+        "_docs/frontend-implementation-contract.md",
+        "_docs/frontend-flows/affect-ui-clean-light-reference.md"
+      ],
+      "limitations": [
+        "No app/browser run or new screenshot was produced; original source measurements are preserved as provenance, not current product targets."
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "name": "Hash-guarded active-document synchronization",
+      "command": "python _docs/evidence/visual-qa-fixes-2026-10-25/issue-61/sync_active_contracts.py",
+      "result": "PASS; transformed 18 scoped documents from hash-verified originals and wrote per-file before/after hashes plus small-context unified diff."
+    },
+    {
+      "name": "Static contract readback",
+      "result": "PASS; all twelve active screen flows contain the new role map; no stale normative compact-desktop rule remains in active flows/register; source button CSS inventory rows are byte-identical to their frozen copies; #65/#73 addenda are present."
+    },
+    {
+      "name": "Application/browser acceptance",
+      "result": "NOT RUN; docs-only issue owner scope."
+    },
+    {
+      "name": "Final contract seam static/hash readback",
+      "result": "PASS; corrected provenance/date and read back approved #71/#72/#74/#77/#64/#69/#65 clauses; all18 original copies match the frozen manifest and source catalog table rows remain byte-identical. Documentation verification only."
+    }
+  ],
+  "limitations": [
+    "No product code, browser session, screenshot, device hardware, real service, payment, or production behavior was exercised.",
+    "Frozen QA screenshots and recommendations remain historical; omitted human/device/real-service checks are not claimed as passing.",
+    "The corrected issue lifecycle is open/reopened with Workflow status in_progress; no code acceptance, commit, push, or closure was performed.",
+    "Original copies under issue-61/originals/ and the regeneration helper are local evidence only and must be excluded from publication/commit.",
+    "Final seam follow-up adds no Root acceptance, full-suite/typecheck/browser result, native #63 product journey, physical-device, real-service or production proof."
+  ],
+  "evidence": {
+    "before_manifest": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/active-docs-before.json",
+    "after_manifest": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/active-docs-after.json",
+    "scoped_diff": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/active-docs-scoped.diff",
+    "correction_addendum": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/correction-addendum-2026-10-25.md",
+    "lifecycle_ledger": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/issue-lifecycle-publication-ledger.json",
+    "lifecycle_reconciliation": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/issue-lifecycle-publication-reconciliation.md",
+    "followup_pre_followup_manifest": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/active-docs-pre-final-followup-2026-10-25.json",
+    "followup_diff": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/followup-scoped.diff",
+    "followup_receipt": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/followup-receipt-2026-10-25.json",
+    "account_density_followup": "account-density-followup-receipt-2026-10-25.json"
+  },
+  "followup": {
+    "date": "2026-10-25",
+    "scope": "Final active-contract synchronization only; no product code or GitHub mutation.",
+    "densityProvenance": "Owner authorized correcting undersized roles; exact numeric values were selected by the Orchestrator under delegated authority, not separately human-approved.",
+    "seams": [
+      "#71 transient password-reset completion notice",
+      "#72 exact-source synthetic portrait fixtures; #63 native product journey still pending",
+      "#74 optional original reservation amount projection",
+      "#77 constrained-height Record fallback and private actor-fenced discard",
+      "#64/#69 missing MediaRecorder guidance and local evidence boundary",
+      "#65 PurchaseHistorySnapshot type seam"
+    ],
+    "verification": "Static contract/hash readback only. Owner completion links are executor-local evidence; Root integrated verification and acceptance remain pending.",
+    "github": "No GitHub body/state/payload changes in this final follow-up; frozen lifecycle payloads and receipts remain unchanged.",
+    "evidence": {
+      "pre_followup_manifest": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/active-docs-pre-final-followup-2026-10-25.json",
+      "after_manifest": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/active-docs-after.json",
+      "followup_diff": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/followup-scoped.diff",
+      "correction_addendum": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/correction-addendum-2026-10-25.md",
+      "followup_receipt": "_docs/evidence/visual-qa-fixes-2026-10-25/issue-61/followup-receipt-2026-10-25.json"
+    }
+  },
+  "account_density_followup": {
+    "date": "2026-10-25",
+    "scope": "Four active documentation files only",
+    "receipt": "account-density-followup-receipt-2026-10-25.json",
+    "receipt_sha256": "450c426ea1afb97362b35cdc3e265a6aa414f22765a43a80b78ad20d133031be",
+    "addendum": "account-density-followup-2026-10-25.md",
+    "scoped_diff": "account-density-followup-scoped.diff",
+    "scoped_diff_sha256": "769021774d4d85bd92fa9720a501f36bb1af4e1a0ee6bd1728a5c0ef792624f3",
+    "after_manifest": "active-docs-after.json",
+    "after_manifest_sha256": "bb12530385f5c953553a484b69d8c20c916fa7acb28bc110fc1bcb080dc34041",
+    "verification": "Static/hash readback; no product, browser or issue mutation."
+  }
+}

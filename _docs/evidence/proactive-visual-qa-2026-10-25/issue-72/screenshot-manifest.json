@@ -1,0 +1,44 @@
+[
+  {
+    "file": "generations-native-probe.png",
+    "sha256": "43129E4FE206D91D39EA0DC06F6402C55C5933D8324817AF44AD6DFEE26F2055",
+    "capturedAt": "2026-10-25T08:37:48.1812282Z",
+    "visuallyInspected": true
+  },
+  {
+    "file": "record-en-desktop.png",
+    "sha256": "170D73CB97EB0116FFEE17681873EAF3E32A631859B0FEDD969A5B79B9A7F2CA",
+    "capturedAt": "2026-10-25T08:36:07.5619787Z",
+    "visuallyInspected": true
+  },
+  {
+    "file": "record-en-short.png",
+    "sha256": "F897F35015AE5165A3941C84C0AE16B6505C53233500D93DF5DE43C40A40A2BA",
+    "capturedAt": "2026-10-25T08:36:07.9905286Z",
+    "visuallyInspected": true
+  },
+  {
+    "file": "record-ru-phone.png",
+    "sha256": "AB980CF836349FF7B60EDCF262F6F92D18BCA90585EA5F1B935EB8EC6FD09E8A",
+    "capturedAt": "2026-10-25T08:36:08.7721048Z",
+    "visuallyInspected": true
+  },
+  {
+    "file": "result-en-desktop.png",
+    "sha256": "2BF5BDF6144DCFE1ECE8787247E486575C2CAD9543551B8C70A5D3BACF2732CF",
+    "capturedAt": "2026-10-25T08:36:19.3994903Z",
+    "visuallyInspected": true
+  },
+  {
+    "file": "result-ru-phone.png",
+    "sha256": "8A860AACFB171E621E2BE69A9ABF9AA9D74B0888D9404A72344E59699E80B542",
+    "capturedAt": "2026-10-25T08:36:20.5596687Z",
+    "visuallyInspected": true
+  },
+  {
+    "file": "source-en-desktop.png",
+    "sha256": "4DC79B5743196DB530F633ED179002CDBEDDF86F4100F93FD6670885C7D05F2E",
+    "capturedAt": "2026-10-25T08:36:02.9713780Z",
+    "visuallyInspected": true
+  }
+]

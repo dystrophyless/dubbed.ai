@@ -1,0 +1,751 @@
+[
+  {
+    "name": "01-en-desktop-failed-history",
+    "url": "http://127.0.0.1:4565/credits",
+    "language": "en",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "documentWidth": 1440,
+    "visibleButtons": [
+      {
+        "text": "Open projects",
+        "width": 110.34375,
+        "height": 24,
+        "fontSize": "14px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "4px"
+      },
+      {
+        "text": "Return to video",
+        "width": 129.90625,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Start mock checkout",
+        "width": 165.90625,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      }
+    ],
+    "historyRows": [
+      {
+        "text": "Purchase initiated\n20 credits · 0 MOCK units · Failed\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0",
+        "width": 960,
+        "height": 105,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "24px"
+      },
+      {
+        "text": "Welcome credits\nOct 25, 2026, 3:28 PM\nChange\n+120\nAvailable after\n120\nReserved after\n0",
+        "width": 960,
+        "height": 81,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "24px"
+      }
+    ],
+    "historyLabels": [
+      {
+        "text": "Change",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Available after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Reserved after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Change",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Available after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Reserved after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      }
+    ],
+    "pageText": "Credits\n\nAvailable\n2\n\nIn processing\n0\n\nProject capacity\n1 of 2 projects used\nOpen projects\nCredit packs\nReturn to video\n20 credits\n\nConfigured mock amount: 0 MOCK units. This is test currency, not a real price.\n\nLocal mock scenario only. No payment is collected and no payment provider is connected.\n\nStart mock checkout\n\nCheckout failed in this local scenario. No credits were added.\n\nCredit history\nPurchase initiated\n20 credits · 0 MOCK units · Failed\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0\nWelcome credits\nOct 25, 2026, 3:28 PM\nChange\n+120\nAvailable after\n120\nReserved after\n0"
+  },
+  {
+    "name": "02-en-desktop-pending-history",
+    "url": "http://127.0.0.1:4565/credits",
+    "language": "en",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "documentWidth": 1440,
+    "visibleButtons": [
+      {
+        "text": "Open projects",
+        "width": 110.34375,
+        "height": 24,
+        "fontSize": "14px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "4px"
+      },
+      {
+        "text": "Return to video",
+        "width": 129.90625,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Start mock checkout",
+        "width": 165.90625,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Keep pending",
+        "width": 115.875,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Simulate verified payment",
+        "width": 192.9375,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Simulate cancellation",
+        "width": 164.75,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Simulate failure",
+        "width": 128.4375,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Check payment status",
+        "width": 926,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      }
+    ],
+    "historyRows": [
+      {
+        "text": "Purchase initiated\n20 credits · 0 MOCK units · Awaiting confirmation\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0",
+        "width": 960,
+        "height": 105,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "24px"
+      },
+      {
+        "text": "Purchase initiated\n20 credits · 0 MOCK units · Failed\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0",
+        "width": 960,
+        "height": 105,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "24px"
+      },
+      {
+        "text": "Welcome credits\nOct 25, 2026, 3:28 PM\nChange\n+120\nAvailable after\n120\nReserved after\n0",
+        "width": 960,
+        "height": 81,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "24px"
+      }
+    ],
+    "historyLabels": [
+      {
+        "text": "Change",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Available after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Reserved after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Change",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Available after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Reserved after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Change",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Available after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Reserved after",
+        "width": 176.53125,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      }
+    ],
+    "pageText": "Credits\n\nAvailable\n2\n\nIn processing\n0\n\nProject capacity\n1 of 2 projects used\nOpen projects\nCredit packs\nReturn to video\n20 credits\n\nConfigured mock amount: 0 MOCK units. This is test currency, not a real price.\n\nLocal mock scenario only. No payment is collected and no payment provider is connected.\n\nStart mock checkout\n\nConfirming payment\n\nCredits and project capacity change only after a verified result.\n\nKeep pending\nSimulate verified payment\nSimulate cancellation\nSimulate failure\nCheck payment status\nCredit history\nPurchase initiated\n20 credits · 0 MOCK units · Awaiting confirmation\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0\nPurchase initiated\n20 credits · 0 MOCK units · Failed\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0\nWelcome credits\nOct 25, 2026, 3:28 PM\nChange\n+120\nAvailable after\n120\nReserved after\n0"
+  },
+  {
+    "name": "03-en-desktop-returned-source",
+    "url": "http://127.0.0.1:4565/new",
+    "language": "en",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "documentWidth": 1440,
+    "visibleButtons": [
+      {
+        "text": "Manage projects",
+        "width": 134.515625,
+        "height": 32,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "4px"
+      },
+      {
+        "text": "Replace video",
+        "width": 118.078125,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Get exact quote",
+        "width": 960,
+        "height": 40,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      }
+    ],
+    "historyRows": [],
+    "historyLabels": [],
+    "pageText": "New dub\n\nChoose a source video, review the selected section, and request its exact processing quote.\n\n1 of 2 project slots used\nManage projects\n\nSaved source\n\nsource-dialogue\n\nsource-dialogue.mp4\n\n8.625 · 640 × 360\n\nReplace video\nVideo preview\nSelected section\n\nChoose one contiguous interval from the saved source. Only this interval proceeds to processing.\n\nStart (seconds)\nEnd (seconds)\n\nSelected duration: 7.877 seconds\n\nProcessing quote\n\nRequest an exact processing quote for the saved section.\n\nGet exact quote"
+  },
+  {
+    "name": "04-en-phone-pending-history",
+    "url": "http://127.0.0.1:4565/credits",
+    "language": "en",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentWidth": 390,
+    "visibleButtons": [
+      {
+        "text": "Open projects",
+        "width": 110.34375,
+        "height": 48,
+        "fontSize": "14px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "4px"
+      },
+      {
+        "text": "Return to video",
+        "width": 148.171875,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Start mock checkout",
+        "width": 189.328125,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Keep pending",
+        "width": 132.140625,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Simulate verified payment",
+        "width": 220.21875,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Simulate cancellation",
+        "width": 188,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Simulate failure",
+        "width": 146.5,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Check payment status",
+        "width": 324,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      }
+    ],
+    "historyRows": [
+      {
+        "text": "Purchase initiated\n20 credits · 0 MOCK units · Awaiting confirmation\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0",
+        "width": 358,
+        "height": 225,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "12px"
+      },
+      {
+        "text": "Purchase initiated\n20 credits · 0 MOCK units · Failed\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0",
+        "width": 358,
+        "height": 225,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "12px"
+      },
+      {
+        "text": "Welcome credits\nOct 25, 2026, 3:28 PM\nChange\n+120\nAvailable after\n120\nReserved after\n0",
+        "width": 358,
+        "height": 201,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "12px"
+      }
+    ],
+    "historyLabels": [
+      {
+        "text": "Change",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Available after",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Reserved after",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Change",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Available after",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Reserved after",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Change",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Available after",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Reserved after",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      }
+    ],
+    "pageText": "Credits\n\nAvailable\n2\n\nIn processing\n0\n\nProject capacity\n1 of 2 projects used\nOpen projects\nCredit packs\nReturn to video\n20 credits\n\nConfigured mock amount: 0 MOCK units. This is test currency, not a real price.\n\nLocal mock scenario only. No payment is collected and no payment provider is connected.\n\nStart mock checkout\n\nConfirming payment\n\nCredits and project capacity change only after a verified result.\n\nKeep pending\nSimulate verified payment\nSimulate cancellation\nSimulate failure\nCheck payment status\nCredit history\nPurchase initiated\n20 credits · 0 MOCK units · Awaiting confirmation\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0\nPurchase initiated\n20 credits · 0 MOCK units · Failed\nOct 25, 2026, 3:28 PM\nChange\n—\nAvailable after\n—\nReserved after\n0\nWelcome credits\nOct 25, 2026, 3:28 PM\nChange\n+120\nAvailable after\n120\nReserved after\n0"
+  },
+  {
+    "name": "05-ru-phone-pending-history",
+    "url": "http://127.0.0.1:4565/credits",
+    "language": "ru",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentWidth": 390,
+    "visibleButtons": [
+      {
+        "text": "Открыть проекты",
+        "width": 131.15625,
+        "height": 48,
+        "fontSize": "14px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "4px"
+      },
+      {
+        "text": "Вернуться к видео",
+        "width": 172.421875,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Начать пробную покупку",
+        "width": 217.75,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Оставить в ожидании",
+        "width": 195.671875,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Имитировать подтверждение",
+        "width": 253.921875,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Имитировать отмену",
+        "width": 191.046875,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Имитировать ошибку",
+        "width": 194.09375,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      },
+      {
+        "text": "Проверить статус оплаты",
+        "width": 324,
+        "height": 48,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "8px"
+      }
+    ],
+    "historyRows": [
+      {
+        "text": "Покупка начата\n20 кредитов · 0 единиц MOCK · Ожидает подтверждения\n25 окт. 2026 г., 15:28\nИзменение\n—\nДоступно после\n—\nЗарезервировано после\n0",
+        "width": 358,
+        "height": 245,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "12px"
+      },
+      {
+        "text": "Покупка начата\n20 кредитов · 0 единиц MOCK · Не прошла\n25 окт. 2026 г., 15:28\nИзменение\n—\nДоступно после\n—\nЗарезервировано после\n0",
+        "width": 358,
+        "height": 225,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "12px"
+      },
+      {
+        "text": "Приветственные кредиты\n25 окт. 2026 г., 15:28\nИзменение\n+120\nДоступно после\n120\nЗарезервировано после\n0",
+        "width": 358,
+        "height": 201,
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "12px"
+      }
+    ],
+    "historyLabels": [
+      {
+        "text": "Изменение",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Доступно после",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Зарезервировано после",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Изменение",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Доступно после",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Зарезервировано после",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Изменение",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Доступно после",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      },
+      {
+        "text": "Зарезервировано после",
+        "width": 171,
+        "height": 20,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "fontFamily": "\"Mabry Pro\", sans-serif",
+        "gap": "normal"
+      }
+    ],
+    "pageText": "Кредиты\n\nЗагружаем данные…\n\nДоступно\n2\n\nВ обработке\n0\n\nМеста для проектов\nИспользовано проектов: 1 из 2\nОткрыть проекты\nПакеты кредитов\nВернуться к видео\n20 кредитов\n\nУсловная сумма: 0 единиц MOCK. Это тестовая валюта, а не реальная цена.\n\nТолько локальный сценарий имитации. Оплата не списывается, платёжный провайдер не подключён.\n\nНачать пробную покупку\n\nПроверяем оплату\n\nБаланс и места для проектов изменятся только после подтверждения оплаты.\n\nОставить в ожидании\nИмитировать подтверждение\nИмитировать отмену\nИмитировать ошибку\nПроверить статус оплаты\nИстория кредитов\nПокупка начата\n20 кредитов · 0 единиц MOCK · Ожидает подтверждения\n25 окт. 2026 г., 15:28\nИзменение\n—\nДоступно после\n—\nЗарезервировано после\n0\nПокупка начата\n20 кредитов · 0 единиц MOCK · Не прошла\n25 окт. 2026 г., 15:28\nИзменение\n—\nДоступно после\n—\nЗарезервировано после\n0\nПриветственные кредиты\n25 окт. 2026 г., 15:28\nИзменение\n+120\nДоступно после\n120\nЗарезервировано после\n0"
+  }
+]

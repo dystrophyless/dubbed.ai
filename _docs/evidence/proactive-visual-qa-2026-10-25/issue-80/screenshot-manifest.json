@@ -1,0 +1,259 @@
+[
+  {
+    "path": "evidence/en-account-before-expiry.png",
+    "bytes": 73652,
+    "sha256": "3634bdeb1843e214562fad08f63d06b45f1e08e4bba55a56236e823818b5b7a8",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "note": "Session journey desktop1440x900"
+  },
+  {
+    "path": "evidence/en-account-expiry-gate.png",
+    "bytes": 12751,
+    "sha256": "fa1908e609b04076d56b675ac5b6ee6f2dd36b3949e44fa110a62dc572ee9d8a",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "note": "Session journey desktop1440x900"
+  },
+  {
+    "path": "evidence/en-account-expiry-retry.png",
+    "bytes": 12751,
+    "sha256": "fa1908e609b04076d56b675ac5b6ee6f2dd36b3949e44fa110a62dc572ee9d8a",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "note": "Session journey desktop1440x900"
+  },
+  {
+    "path": "evidence/en-account-expiry-signin.png",
+    "bytes": 30356,
+    "sha256": "8cdcb074d05c6724031bb84a800b9d7331ebeac7addb38bc4184fb604e25f7ce",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "note": "Session journey desktop1440x900"
+  },
+  {
+    "path": "evidence/en-account-reauth-new-dub.png",
+    "bytes": 28216,
+    "sha256": "197eefe08c910300f474b9d1ff0e89463e6205effe88119b71b05e76af5f137f",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "note": "Session journey desktop1440x900"
+  },
+  {
+    "path": "evidence/en-desktop-empty.png",
+    "bytes": 30130,
+    "sha256": "cb1ccf2a28903bdbf4cd96ffedead4bdd5ed302a3069486efb7f62517ff12284",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  {
+    "path": "evidence/en-desktop-invalid-credentials.png",
+    "bytes": 36322,
+    "sha256": "1eb047650b610c01e2a6c2e0b7fd478f938b4d7a1897c804c2fbadb5ea593d77",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  {
+    "path": "evidence/en-desktop-keyboard-focus.png",
+    "bytes": 38663,
+    "sha256": "4ca79691b2f9ebba70fad5d9673420776b5b6f42dd5855e675e8b8a51263c183",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  {
+    "path": "evidence/en-desktop-password-visible.png",
+    "bytes": 37956,
+    "sha256": "2d66e9c633a3a195b0f9fc3a7b5bae4ec5544bdebc363b0d2ab418b61818f02e",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  {
+    "path": "evidence/en-phone-empty.png",
+    "bytes": 27008,
+    "sha256": "d3f87af7e8c9734d61b2f837dbef809f26dff84e0bd54a9efcdf86ea945ac4ee",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "path": "evidence/en-phone-validation.png",
+    "bytes": 32326,
+    "sha256": "c6f220fdaf6f579b139859c3f8ab5c0102b8bc90cafbd7c77aa3bf91dad71e0f",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "path": "evidence/en-short-empty.png",
+    "bytes": 29613,
+    "sha256": "ddd24d92947bc847e0b8288e3c62eb31dac7c03650e0375ed251808bf79c0df1",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    }
+  },
+  {
+    "path": "evidence/en-signin-success-new-dub.png",
+    "bytes": 28216,
+    "sha256": "197eefe08c910300f474b9d1ff0e89463e6205effe88119b71b05e76af5f137f",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "note": "Session journey desktop1440x900"
+  },
+  {
+    "path": "evidence/ru-boundary-767.png",
+    "bytes": 27131,
+    "sha256": "68e00fb02790a11174c7db95f68870b2b0cb849439c488750814a1a1cd332d28",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 767,
+      "height": 844
+    }
+  },
+  {
+    "path": "evidence/ru-boundary-768.png",
+    "bytes": 26225,
+    "sha256": "f3c1657d38e9dbf8bc5cf6260e8d7ca6708819e833992f4044369d6728bb5429",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 768,
+      "height": 844
+    }
+  },
+  {
+    "path": "evidence/ru-desktop-empty.png",
+    "bytes": 28975,
+    "sha256": "f759c6954ad91aa1a470de97b33c40a5cccbcc4904708d43d0a44e2297a35738",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  {
+    "path": "evidence/ru-phone-empty.png",
+    "bytes": 25503,
+    "sha256": "b1be73782d6e9cd11d97af0fba2023853fb7a06dad37711e074a6465499fa5b2",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "path": "evidence/ru-phone-validation.png",
+    "bytes": 30168,
+    "sha256": "62019b759dbc37f13bb2f463c7d5439e8129a9bed275b26ba905d1c9e6e5e6b0",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "path": "evidence/ru-protected-anonymous-signin.png",
+    "bytes": 25503,
+    "sha256": "b1be73782d6e9cd11d97af0fba2023853fb7a06dad37711e074a6465499fa5b2",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "note": "Phone390x844; session script context"
+  },
+  {
+    "path": "evidence/ru-reflow-720x450.png",
+    "bytes": 26922,
+    "sha256": "8df720357fe1cd610ed9aecc0dd5a51d657248cb74c7d746ef8df101fa64c12f",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 720,
+      "height": 450
+    }
+  },
+  {
+    "path": "evidence/ru-short-empty.png",
+    "bytes": 28574,
+    "sha256": "a83c77cacbfa33bde7bc1b24a67e6654e759c95243a52e538b04fcec7a79ecd8",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    }
+  },
+  {
+    "path": "evidence/signin-loading.png",
+    "bytes": 33097,
+    "sha256": "4a968f59445f470a8123ba94922aeba169c9361014dd3b31f746cdd77465b733",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  {
+    "path": "evidence/signin-provider-conflict.png",
+    "bytes": 30972,
+    "sha256": "52e4b92c5d4823cc5187ba303b117581fbf2ca82906cccc2604cbcff37a32457",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "path": "evidence/signin-service-error.png",
+    "bytes": 32594,
+    "sha256": "d56952ceb18a8e7705ebcfcb85d26de667311ca5ec1703c5e81c8b6a18fb5653",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "path": "evidence/signin-session-unavailable.png",
+    "bytes": 40632,
+    "sha256": "8d8b4df5419369f6b4e957d6eb2c044bc5107c048cfb4598ee81dfc2cc878970",
+    "visuallyOpened": true,
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    }
+  }
+]

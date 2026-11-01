@@ -1,0 +1,53 @@
+{
+  "capturedAt": "2026-10-25T11:45:16.924Z",
+  "locale": "ru",
+  "viewport": {
+    "width": 768,
+    "height": 900
+  },
+  "fontStatus": "loaded",
+  "fontFaces": [
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Mabry Pro",
+      "status": "loaded",
+      "weight": "500"
+    }
+  ],
+  "horizontalOverflow": false,
+  "pageScrollWidth": 768,
+  "text": "Перейти к содержимому\nDubbed\nЯзык\nEN\nRU\nВойти\nВойти\n\nПродолжите с помощью email и пароля.\n\nПродолжить с Google\n\nТолько локальная имитация. Подключения к Google нет.\n\nили\n\nЭлектронная почта\nПароль\nПоказать пароль\nВойти\nЗабыли пароль?\n\nВпервые в Dubbed? Создать аккаунт",
+  "buttons": [
+    {
+      "label": "Продолжить с Google",
+      "width": 350,
+      "height": 40,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 14px"
+    },
+    {
+      "label": "Показать пароль",
+      "width": 350,
+      "height": 32,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 10px"
+    },
+    {
+      "label": "Войти",
+      "width": 350,
+      "height": 40,
+      "fontFamily": "\"Mabry Pro\", sans-serif",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "padding": "0px 14px"
+    }
+  ]
+}

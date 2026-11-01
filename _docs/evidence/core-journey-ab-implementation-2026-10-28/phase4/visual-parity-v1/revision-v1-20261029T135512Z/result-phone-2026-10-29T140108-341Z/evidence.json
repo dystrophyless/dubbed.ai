@@ -1,0 +1,163 @@
+{
+  "startedAt": "2026-10-29T14:01:08.341Z",
+  "browserTempPath": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "nativeInput": "Chrome fake media input through real getUserMedia/MediaRecorder; not a physical microphone.",
+  "source": "One fresh three-window native-browser capture journey, reused for A and B Result phone screenshots.",
+  "resultProvenance": "Illustrative mock generation only; product rendered=false and assembledFromAcceptedTakes=false.",
+  "captures": [
+    {
+      "image": "B-result-phone-390x844.png",
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=B&snapshot=snapshot%3Aoperation%3A12731de5-9988-4889-8bd1-a5de61dea022&locale=en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scroll": {
+        "width": 390,
+        "height": 844,
+        "y": 0
+      },
+      "player": {
+        "x": 16,
+        "y": 168,
+        "width": 358,
+        "height": 201.375,
+        "gap": "normal",
+        "padding": "0px",
+        "display": "block"
+      },
+      "transport": {
+        "x": 16,
+        "y": 369.375,
+        "width": 358,
+        "height": 104,
+        "gap": "normal",
+        "padding": "0px 8px 8px",
+        "display": "block"
+      },
+      "details": {
+        "x": 16,
+        "y": 493.375,
+        "width": 358,
+        "height": 216,
+        "gap": "20px",
+        "padding": "0px",
+        "display": "flex"
+      },
+      "status": "Illustrative sample ready\n\nFixed example video; not rendered from accepted takes.",
+      "actions": {
+        "x": 16,
+        "y": 601.375,
+        "width": 358,
+        "height": 108,
+        "gap": "12px",
+        "padding": "0px",
+        "display": "flex"
+      },
+      "buttons": [
+        {
+          "label": "Download My dub",
+          "x": 16,
+          "y": 601.375,
+          "width": 177.859375,
+          "height": 48,
+          "padding": "12px"
+        },
+        {
+          "label": "Return to recording",
+          "x": 16,
+          "y": 661.375,
+          "width": 194.859375,
+          "height": 48,
+          "padding": "12px"
+        }
+      ],
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "duration": 13.416667,
+        "paused": true,
+        "source": "dub"
+      }
+    },
+    {
+      "image": "A-result-phone-390x844.png",
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=A&snapshot=snapshot%3Aoperation%3A12731de5-9988-4889-8bd1-a5de61dea022&locale=en",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scroll": {
+        "width": 390,
+        "height": 844,
+        "y": 0
+      },
+      "player": {
+        "x": 16,
+        "y": 164,
+        "width": 358,
+        "height": 201.375,
+        "gap": "normal",
+        "padding": "0px",
+        "display": "block"
+      },
+      "transport": {
+        "x": 16,
+        "y": 365.375,
+        "width": 358,
+        "height": 104,
+        "gap": "normal",
+        "padding": "0px 8px 8px",
+        "display": "block"
+      },
+      "details": {
+        "x": 16,
+        "y": 489.375,
+        "width": 358,
+        "height": 216,
+        "gap": "20px",
+        "padding": "0px",
+        "display": "flex"
+      },
+      "status": "Illustrative sample ready\n\nFixed example video; not rendered from accepted takes.",
+      "actions": {
+        "x": 16,
+        "y": 597.375,
+        "width": 358,
+        "height": 108,
+        "gap": "12px",
+        "padding": "0px",
+        "display": "flex"
+      },
+      "buttons": [
+        {
+          "label": "Download My dub",
+          "x": 16,
+          "y": 597.375,
+          "width": 177.859375,
+          "height": 48,
+          "padding": "12px"
+        },
+        {
+          "label": "Return to recording",
+          "x": 16,
+          "y": 657.375,
+          "width": 194.859375,
+          "height": 48,
+          "padding": "12px"
+        }
+      ],
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "duration": 13.416667,
+        "paused": true,
+        "source": "dub"
+      }
+    }
+  ],
+  "finishedAt": "2026-10-29T14:01:28.190Z",
+  "browser": "Chrome 156.0.8078.49"
+}

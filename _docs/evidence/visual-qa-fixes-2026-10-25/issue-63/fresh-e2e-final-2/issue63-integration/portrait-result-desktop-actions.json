@@ -1,0 +1,26 @@
+{
+  "route": "/projects/f201b0c6-ca36-4384-8ba6-1e4b1c4b51ce/result",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "actions": [
+    {
+      "label": "Download MP4",
+      "variant": "primary",
+      "size": "large",
+      "height": 44,
+      "fontSize": "16px",
+      "lineHeight": "24px"
+    },
+    {
+      "label": "Return to recording",
+      "variant": "secondary",
+      "size": "medium",
+      "height": 40,
+      "fontSize": "14px",
+      "lineHeight": "20px"
+    }
+  ],
+  "boundary": "Current Result UI with mock services and synthetic registered fixture; no production render claim."
+}

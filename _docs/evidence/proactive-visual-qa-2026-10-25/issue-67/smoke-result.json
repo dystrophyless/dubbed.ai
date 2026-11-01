@@ -1,0 +1,149 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Program\\python\\Dubbed\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "..\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\smoke.config.cjs"
+    ],
+    "configFile": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\smoke.config.cjs",
+    "rootDir": "D:/Program/python/Dubbed/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Program/python/Dubbed/_docs/evidence/proactive-visual-qa-2026-10-25/issue-67/smoke-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/Program/python/Dubbed/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "runtime-smoke.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67\\smoke-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "D:\\Program\\python\\Dubbed\\frontend\\e2e",
+        "snapshotDir": "D:\\Program\\python\\Dubbed\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "runtime-smoke.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4367",
+          "browserName": "chromium",
+          "launchOptions": {
+            "args": [
+              "--mute-audio",
+              "--use-fake-device-for-media-stream",
+              "--use-fake-ui-for-media-stream"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "D:\\Program\\python\\Dubbed\\_docs\\evidence\\proactive-visual-qa-2026-10-25\\issue-67/smoke-result.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "runtime-smoke.spec.ts",
+      "file": "runtime-smoke.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mock frontend renders the landing, follows start, and makes no external requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1383,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T08:30:36.263Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c616cbb8be6973442e96-832e043ba9c73b3d18b9",
+          "file": "runtime-smoke.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-25T08:30:35.329Z",
+    "duration": 2720.345,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

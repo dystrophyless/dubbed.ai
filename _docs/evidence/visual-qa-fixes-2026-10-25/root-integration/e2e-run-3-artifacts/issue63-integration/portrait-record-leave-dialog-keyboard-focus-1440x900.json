@@ -1,0 +1,262 @@
+{
+  "capture": "portrait-record-leave-dialog-keyboard-focus-1440x900",
+  "mode": "playwright-viewport",
+  "screenshot": {
+    "path": "_docs/evidence/visual-qa-fixes-2026-10-25/root-integration/e2e-run-3-artifacts/issue63-integration/portrait-record-leave-dialog-keyboard-focus-1440x900.png",
+    "sha256": "15dc5f16ba1fd088cfbc596617ea53a1723553ec9935c5551ef85f83d2be281a",
+    "bytes": 83778
+  },
+  "metrics": {
+    "url": "http://127.0.0.1:4563/projects/9dcf9123-79d3-4b1a-b059-b40e0b11c02c/record",
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "outerWidth": 1440,
+      "outerHeight": 900
+    },
+    "devicePixelRatio": 1,
+    "bodyZoom": "1",
+    "documentWidth": 1440,
+    "documentHeight": 1222,
+    "horizontalOverflow": false,
+    "scrollY": 12,
+    "language": "en",
+    "title": "Dubbed",
+    "recording": {
+      "line": "Line 3 of 4The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.Capture window: 14.76–24.35 sAccepted takes: 2 / 4",
+      "dialogue": "The reading on the left is steady, so keep that side in view while I move the case away from the doorway. Please do not touch the switches yet.",
+      "stage": {
+        "x": 400,
+        "y": 177,
+        "width": 639.98,
+        "height": 359.98,
+        "top": 177,
+        "right": 1039.98,
+        "bottom": 536.98
+      },
+      "lineHeader": {
+        "x": 400,
+        "y": 548.98,
+        "width": 640,
+        "height": 104,
+        "top": 548.98,
+        "right": 1040,
+        "bottom": 652.98
+      },
+      "dialogueBounds": {
+        "x": 400,
+        "y": 578.98,
+        "width": 545.61,
+        "height": 48,
+        "top": 578.98,
+        "right": 945.61,
+        "bottom": 626.98
+      },
+      "timeline": {
+        "x": 400,
+        "y": 664.98,
+        "width": 640,
+        "height": 48,
+        "top": 664.98,
+        "right": 1040,
+        "bottom": 712.98
+      },
+      "panel": {
+        "x": 400,
+        "y": 724.98,
+        "width": 640,
+        "height": 92,
+        "top": 724.98,
+        "right": 1040,
+        "bottom": 816.98
+      },
+      "panelPosition": "static",
+      "phonePanelFlow": null,
+      "dialogueAndTimelineClearOfPanel": true
+    },
+    "media": {
+      "width": 540,
+      "height": 960,
+      "duration": 35.9591,
+      "readyState": 4,
+      "currentSrc": "blob:http://127.0.0.1:4563/902203d4-5035-48bb-b8dc-38d3ffa05522"
+    },
+    "dialog": {
+      "title": "Leave recording?",
+      "x": 520,
+      "y": 305,
+      "width": 400,
+      "height": 290
+    },
+    "activeElement": {
+      "tagName": "BUTTON",
+      "label": "Save and leave",
+      "role": null,
+      "className": "ui-button ui-button--primary ui-button--medium"
+    },
+    "buttons": [
+      {
+        "label": "Sign out",
+        "variant": "ghost",
+        "size": "small",
+        "width": 75.55,
+        "height": 32,
+        "top": 4,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Open navigation",
+        "variant": "ghost",
+        "size": "icon",
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "fontSize": "13px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": false
+      },
+      {
+        "label": "Projects",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 108.75,
+        "height": 40,
+        "top": 101,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Play",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 80.7,
+        "height": 40,
+        "top": 726.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Record again",
+        "variant": "primary",
+        "size": "medium",
+        "width": 137.75,
+        "height": 40,
+        "top": 776.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Previous line",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 134.45,
+        "height": 40,
+        "top": 776.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Next line",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 110.33,
+        "height": 40,
+        "top": 776.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Microphone",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 131.31,
+        "height": 40,
+        "top": 776.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Process again",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 118.75,
+        "height": 40,
+        "top": 1051.98,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": true,
+        "visible": true
+      },
+      {
+        "label": "Save and leave",
+        "variant": "primary",
+        "size": "medium",
+        "width": 350,
+        "height": 40,
+        "top": 434,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": true,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Leave without saving",
+        "variant": "secondary",
+        "size": "medium",
+        "width": 350,
+        "height": 40,
+        "top": 482,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      },
+      {
+        "label": "Stay here",
+        "variant": "ghost",
+        "size": "medium",
+        "width": 350,
+        "height": 40,
+        "top": 530,
+        "fontSize": "14px",
+        "lineHeight": "20px",
+        "focused": false,
+        "disabled": false,
+        "visible": true
+      }
+    ],
+    "visibleRouteHeadings": [
+      "Record your voice",
+      "Current draft recording",
+      "Leave recording?"
+    ],
+    "cdp": null
+  }
+}

@@ -1,0 +1,2 @@
+/* Calibrated short-desktop density:keep the complete task feedback visible without shrinking dialogue. */
+@media(min-width:768px) and (max-height:700px){.compact-studio .studio-controls .hf-icon{display:none}}

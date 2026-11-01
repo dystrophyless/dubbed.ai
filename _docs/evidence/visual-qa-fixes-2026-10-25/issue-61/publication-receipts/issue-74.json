@@ -1,0 +1,48 @@
+{
+  "issue": 74,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "f6f8452cfbbca3f58337fd557fadb97792d696a14d6147cd2ecc4442f3508ea3",
+    "planned": "cb980edf401c7f37a7b37e8f959c80a9387492c205f95a90e4574eb669712c22",
+    "readback": "cb980edf401c7f37a7b37e8f959c80a9387492c205f95a90e4574eb669712c22"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Reconcile preparation progress, cancellation and safe reprocessing",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Reconcile preparation progress, cancellation and safe reprocessing",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

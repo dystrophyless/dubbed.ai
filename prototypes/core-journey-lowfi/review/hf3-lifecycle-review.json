@@ -1,0 +1,633 @@
+[
+  {
+    "check": "environment",
+    "observed": {
+      "version": "core-journey-highfi-v3",
+      "browser": "156.0.8078.48",
+      "os": "Windows",
+      "date": "2026-10-27",
+      "DPR": 1,
+      "zoom": "100%",
+      "clock": "actual performance.now/rAF; no fake timers"
+    }
+  },
+  {
+    "check": "hf3-review-1882x902-en-microphone during",
+    "observed": {
+      "state": {
+        "scroll": 81,
+        "focus": "record",
+        "helper": "Microphone unavailable. Open Settings, then try again.",
+        "phase": "open",
+        "hidden": false
+      },
+      "notice": {
+        "x": 681,
+        "y": 815,
+        "width": 520,
+        "height": 71
+      },
+      "action": {
+        "x": 1293,
+        "y": 309,
+        "width": 240,
+        "height": 40
+      },
+      "scene": {
+        "x": 333,
+        "y": 104,
+        "width": 920,
+        "height": 517.5
+      },
+      "stationaryHover": false,
+      "liveRegions": [
+        {
+          "id": "notification-announcement",
+          "role": "status",
+          "live": "polite",
+          "atomic": "true",
+          "text": "Microphone unavailable. Open Settings, then try again."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf3-review-1882x902-en-microphone deliberate hover pauses beyond eight seconds",
+    "observed": 8513.5
+  },
+  {
+    "check": "hf3-review-1882x902-en-microphone real elapsed lifecycle",
+    "observed": {
+      "elapsedMs": 16877.09999999404,
+      "hoverMs": 8513.5,
+      "entryPartialFrames": 10,
+      "exitPartialFrames": 7,
+      "entrySample": [
+        {
+          "t": 1117.8999999761581,
+          "hidden": false,
+          "phase": "open",
+          "o": 0.0844163,
+          "transform": "matrix(1, 0, 0, 1, -260, 4.98204)"
+        },
+        {
+          "t": 1134.3999999761581,
+          "hidden": false,
+          "phase": "open",
+          "o": 0.261886,
+          "transform": "matrix(1, 0, 0, 1, -260, 2.86451)"
+        }
+      ],
+      "exitSample": [
+        {
+          "t": 17849,
+          "hidden": false,
+          "phase": "exit",
+          "o": 0.875977,
+          "transform": "matrix(1, 0, 0, 1, -260, 3.675)"
+        },
+        {
+          "t": 17865.5,
+          "hidden": false,
+          "phase": "exit",
+          "o": 0.621922,
+          "transform": "matrix(1, 0, 0, 1, -260, 5.94116)"
+        }
+      ],
+      "after": {
+        "scroll": 81,
+        "focus": "record",
+        "helper": "Microphone unavailable. Open Settings, then try again.",
+        "phase": "hidden",
+        "hidden": true
+      },
+      "stateUnchanged": true
+    }
+  },
+  {
+    "check": "hf3-review-1882x902-en explicit new mic failure retriggers; listening exits popup only",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-1882x902-en reload restores durable mic recovery without replay",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-1882x902-en-save during",
+    "observed": {
+      "state": {
+        "scroll": 81,
+        "focus": "next",
+        "helper": "Not saved. Take kept here. Retry saves it, then continues.",
+        "phase": "open",
+        "hidden": false
+      },
+      "notice": {
+        "x": 681,
+        "y": 815,
+        "width": 520,
+        "height": 71
+      },
+      "action": {
+        "x": 1418,
+        "y": 380,
+        "width": 115,
+        "height": 40
+      },
+      "scene": {
+        "x": 333,
+        "y": 104,
+        "width": 920,
+        "height": 517.5
+      },
+      "stationaryHover": true,
+      "liveRegions": [
+        {
+          "id": "notification-announcement",
+          "role": "status",
+          "live": "polite",
+          "atomic": "true",
+          "text": "Not saved. Take kept here. Retry saves it, then continues."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf3-review-1882x902-en-save real elapsed lifecycle",
+    "observed": {
+      "elapsedMs": 8348.699999988079,
+      "hoverMs": 0,
+      "entryPartialFrames": 10,
+      "exitPartialFrames": 8,
+      "entrySample": [
+        {
+          "t": 6165.4000000059605,
+          "hidden": false,
+          "phase": "open",
+          "o": 0.0863529,
+          "transform": "matrix(1, 0, 0, 1, -260, 4.94523)"
+        },
+        {
+          "t": 6181.799999982119,
+          "hidden": false,
+          "phase": "open",
+          "o": 0.263612,
+          "transform": "matrix(1, 0, 0, 1, -260, 2.85063)"
+        }
+      ],
+      "exitSample": [
+        {
+          "t": 14364.09999999404,
+          "hidden": false,
+          "phase": "exit",
+          "o": 0.872264,
+          "transform": "matrix(1, 0, 0, 1, -260, 3.72814)"
+        },
+        {
+          "t": 14380.59999999404,
+          "hidden": false,
+          "phase": "exit",
+          "o": 0.618773,
+          "transform": "matrix(1, 0, 0, 1, -260, 5.96007)"
+        }
+      ],
+      "after": {
+        "scroll": 81,
+        "focus": "next",
+        "helper": "Not saved. Take kept here. Retry saves it, then continues.",
+        "phase": "hidden",
+        "hidden": true
+      },
+      "stateUnchanged": true
+    }
+  },
+  {
+    "check": "hf3-review-1882x902-en new save failure retriggers; manual scroll and reload do not replay it",
+    "observed": {
+      "scroll": 60,
+      "focus": "",
+      "helper": "Not saved. Take kept here. Retry saves it, then continues.",
+      "phase": "hidden",
+      "hidden": true
+    }
+  },
+  {
+    "check": "hf3-review-1882x902-en exact save retry resolves after timeout/reload",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-1882x902-en page errors",
+    "observed": []
+  },
+  {
+    "check": "hf3-review-1280x600-ru-microphone during",
+    "observed": {
+      "state": {
+        "scroll": 92,
+        "focus": "record",
+        "helper": "Микрофон недоступен. Откройте настройки и повторите запись.",
+        "phase": "open",
+        "hidden": false
+      },
+      "notice": {
+        "x": 380,
+        "y": 513.00048828125,
+        "width": 520,
+        "height": 71
+      },
+      "action": {
+        "x": 764.875,
+        "y": 318,
+        "width": 352,
+        "height": 40
+      },
+      "scene": {
+        "x": 147.109375,
+        "y": 73,
+        "width": 577.765625,
+        "height": 324.984375
+      },
+      "stationaryHover": false,
+      "liveRegions": [
+        {
+          "id": "notification-announcement",
+          "role": "status",
+          "live": "polite",
+          "atomic": "true",
+          "text": "Микрофон недоступен. Откройте настройки и повторите запись."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf3-review-1280x600-ru-microphone real elapsed lifecycle",
+    "observed": {
+      "elapsedMs": 8350.09999999404,
+      "hoverMs": 0,
+      "entryPartialFrames": 10,
+      "exitPartialFrames": 8,
+      "entrySample": [
+        {
+          "t": 661.5,
+          "hidden": false,
+          "phase": "open",
+          "o": 0.0845782,
+          "transform": "matrix(1, 0, 0, 1, -260, 4.97894)"
+        },
+        {
+          "t": 678.1999999880791,
+          "hidden": false,
+          "phase": "open",
+          "o": 0.263387,
+          "transform": "matrix(1, 0, 0, 1, -260, 2.85243)"
+        }
+      ],
+      "exitSample": [
+        {
+          "t": 8843.90000000596,
+          "hidden": false,
+          "phase": "exit",
+          "o": 0.872504,
+          "transform": "matrix(1, 0, 0, 1, -260, 3.72474)"
+        },
+        {
+          "t": 8860.59999999404,
+          "hidden": false,
+          "phase": "exit",
+          "o": 0.614268,
+          "transform": "matrix(1, 0, 0, 1, -260, 5.98692)"
+        }
+      ],
+      "after": {
+        "scroll": 92,
+        "focus": "record",
+        "helper": "Микрофон недоступен. Откройте настройки и повторите запись.",
+        "phase": "hidden",
+        "hidden": true
+      },
+      "stateUnchanged": true
+    }
+  },
+  {
+    "check": "hf3-review-1280x600-ru explicit new mic failure retriggers; listening exits popup only",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-1280x600-ru reload restores durable mic recovery without replay",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-1280x600-ru-save during",
+    "observed": {
+      "state": {
+        "scroll": 87,
+        "focus": "next",
+        "helper": "Дубль не сохранён и остаётся здесь. Повтор сохранит его и продолжит.",
+        "phase": "open",
+        "hidden": false
+      },
+      "notice": {
+        "x": 380,
+        "y": 513,
+        "width": 520,
+        "height": 71
+      },
+      "action": {
+        "x": 945.875,
+        "y": 394,
+        "width": 171,
+        "height": 60
+      },
+      "scene": {
+        "x": 147.109375,
+        "y": 78,
+        "width": 577.765625,
+        "height": 324.984375
+      },
+      "stationaryHover": false,
+      "liveRegions": [
+        {
+          "id": "notification-announcement",
+          "role": "status",
+          "live": "polite",
+          "atomic": "true",
+          "text": "Дубль не сохранён и остаётся здесь. Повтор сохранит его и продолжит."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf3-review-1280x600-ru-save real elapsed lifecycle",
+    "observed": {
+      "elapsedMs": 8345.09999999404,
+      "hoverMs": 0,
+      "entryPartialFrames": 10,
+      "exitPartialFrames": 8,
+      "entrySample": [
+        {
+          "t": 6301.299999982119,
+          "hidden": false,
+          "phase": "open",
+          "o": 0.0828534,
+          "transform": "matrix(1, 0, 0, 1, -260, 5.01219)"
+        },
+        {
+          "t": 6317.899999976158,
+          "hidden": false,
+          "phase": "open",
+          "o": 0.261961,
+          "transform": "matrix(1, 0, 0, 1, -260, 2.8639)"
+        }
+      ],
+      "exitSample": [
+        {
+          "t": 14500.199999988079,
+          "hidden": false,
+          "phase": "exit",
+          "o": 0.874915,
+          "transform": "matrix(1, 0, 0, 1, -260, 3.69031)"
+        },
+        {
+          "t": 14516.799999982119,
+          "hidden": false,
+          "phase": "exit",
+          "o": 0.618949,
+          "transform": "matrix(1, 0, 0, 1, -260, 5.95902)"
+        }
+      ],
+      "after": {
+        "scroll": 87,
+        "focus": "next",
+        "helper": "Дубль не сохранён и остаётся здесь. Повтор сохранит его и продолжит.",
+        "phase": "hidden",
+        "hidden": true
+      },
+      "stateUnchanged": true
+    }
+  },
+  {
+    "check": "hf3-review-1280x600-ru new save failure retriggers; manual scroll and reload do not replay it",
+    "observed": {
+      "scroll": 66,
+      "focus": "",
+      "helper": "Дубль не сохранён и остаётся здесь. Повтор сохранит его и продолжит.",
+      "phase": "hidden",
+      "hidden": true
+    }
+  },
+  {
+    "check": "hf3-review-1280x600-ru exact save retry resolves after timeout/reload",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-1280x600-ru page errors",
+    "observed": []
+  },
+  {
+    "check": "hf3-review-390x667-ru-microphone during",
+    "observed": {
+      "state": {
+        "scroll": 659,
+        "focus": "record",
+        "helper": "Микрофон недоступен. Откройте настройки и повторите запись.",
+        "phase": "open",
+        "hidden": false
+      },
+      "notice": {
+        "x": 16,
+        "y": 560,
+        "width": 358,
+        "height": 91
+      },
+      "action": {
+        "x": 32,
+        "y": 230.375,
+        "width": 326,
+        "height": 48
+      },
+      "scene": {
+        "x": 16,
+        "y": -415,
+        "width": 358,
+        "height": 201.375
+      },
+      "stationaryHover": false,
+      "liveRegions": [
+        {
+          "id": "notification-announcement",
+          "role": "status",
+          "live": "polite",
+          "atomic": "true",
+          "text": "Микрофон недоступен. Откройте настройки и повторите запись."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf3-review-390x667-ru-microphone real elapsed lifecycle",
+    "observed": {
+      "elapsedMs": 8015.9000000059605,
+      "hoverMs": 0,
+      "entryPartialFrames": 0,
+      "exitPartialFrames": 0,
+      "entrySample": [],
+      "exitSample": [],
+      "after": {
+        "scroll": 659,
+        "focus": "record",
+        "helper": "Микрофон недоступен. Откройте настройки и повторите запись.",
+        "phase": "hidden",
+        "hidden": true
+      },
+      "stateUnchanged": true
+    }
+  },
+  {
+    "check": "hf3-review-390x667-ru explicit new mic failure retriggers; listening exits popup only",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-390x667-ru reload restores durable mic recovery without replay",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-390x667-ru-save during",
+    "observed": {
+      "state": {
+        "scroll": 504,
+        "focus": "",
+        "helper": "Дубль не сохранён и остаётся здесь. Повтор вернёт к предыдущей реплике.",
+        "phase": "open",
+        "hidden": false
+      },
+      "notice": {
+        "x": 16,
+        "y": 560,
+        "width": 358,
+        "height": 91
+      },
+      "action": {
+        "x": 200,
+        "y": 456.375,
+        "width": 158,
+        "height": 72
+      },
+      "scene": {
+        "x": 16,
+        "y": -260,
+        "width": 358,
+        "height": 201.375
+      },
+      "stationaryHover": false,
+      "liveRegions": [
+        {
+          "id": "notification-announcement",
+          "role": "status",
+          "live": "polite",
+          "atomic": "true",
+          "text": "Дубль не сохранён и остаётся здесь. Повтор вернёт к предыдущей реплике."
+        }
+      ]
+    }
+  },
+  {
+    "check": "hf3-review-390x667-ru-save real elapsed lifecycle",
+    "observed": {
+      "elapsedMs": 8013.0,
+      "hoverMs": 0,
+      "entryPartialFrames": 0,
+      "exitPartialFrames": 0,
+      "entrySample": [],
+      "exitSample": [],
+      "after": {
+        "scroll": 504,
+        "focus": "",
+        "helper": "Дубль не сохранён и остаётся здесь. Повтор вернёт к предыдущей реплике.",
+        "phase": "hidden",
+        "hidden": true
+      },
+      "stateUnchanged": true
+    }
+  },
+  {
+    "check": "Previous destination is now named in persistent helper",
+    "observed": "Дубль не сохранён и остаётся здесь. Повтор вернёт к предыдущей реплике."
+  },
+  {
+    "check": "hf3-review-390x667-ru new save failure retriggers; manual scroll and reload do not replay it",
+    "observed": {
+      "scroll": 412,
+      "focus": "",
+      "helper": "Дубль не сохранён и остаётся здесь. Повтор вернёт к предыдущей реплике.",
+      "phase": "hidden",
+      "hidden": true
+    }
+  },
+  {
+    "check": "hf3-review-390x667-ru exact save retry resolves after timeout/reload",
+    "observed": true
+  },
+  {
+    "check": "hf3-review-390x667-ru page errors",
+    "observed": []
+  },
+  {
+    "check": "Stable target fingerprints",
+    "observed": {
+      "BRIEF.md": true,
+      "CALIBRATION.md": true,
+      "index.html": true,
+      "src.js": true,
+      "style.css": true,
+      "highfi.css": true,
+      "presentation.css": true,
+      "ui.js": true,
+      "locale.js": true,
+      "icons.js": true,
+      "waveform-data.js": true,
+      "calibration.html": true,
+      "package.json": true,
+      "package-lock.json": true,
+      "public/media/scene.mp4": true,
+      "public/media/example-dub.mp4": true,
+      "public/media/take-0.wav": true,
+      "public/media/take-1.wav": true,
+      "public/media/take-2.wav": true,
+      "public/calibration/InterVariable.woff2": true,
+      "public/calibration/LUCIDE-LICENSE.txt": true,
+      "toast.js": true,
+      "evidence/highfi-v3-journey-results.json": true,
+      "evidence/highfi-v3-short-results.json": true,
+      "evidence/highfi-v3-retention-results.json": true,
+      "evidence/highfi-v3-toast-results.json": true,
+      "evidence/highfi-v3-visual-results.json": true,
+      "evidence/highfi-v3-destination-results.json": true,
+      "evidence/highfi-v3-completion-recovery-results.json": true,
+      "evidence/calibration-v3-check-results.json": true,
+      "evidence/calibration-v3-reference-check.json": true,
+      "evidence/highfi-v3-journey-check.py": true,
+      "evidence/highfi-v3-short-check.py": true,
+      "evidence/highfi-v3-retention-check.py": true,
+      "evidence/highfi-v3-toast-check.py": true,
+      "evidence/highfi-v3-visual-check.py": true,
+      "evidence/highfi-v3-destination-check.py": true,
+      "evidence/highfi-v3-completion-recovery-check.py": true,
+      "evidence/calibration-v3-check.py": true,
+      "evidence/lucide-assets.json": true,
+      "evidence/waveform-provenance.json": true,
+      "evidence/hf3-1882x902-en-before.png": true,
+      "evidence/hf3-1882x902-en-microphone-enter.png": true,
+      "evidence/hf3-1882x902-en-microphone-during.png": true,
+      "evidence/hf3-1882x902-en-microphone-exit.png": true,
+      "evidence/hf3-1882x902-en-microphone-after.png": true,
+      "evidence/hf3-1280x600-ru-save-during.png": true,
+      "evidence/hf3-1280x600-ru-save-after.png": true,
+      "evidence/hf3-390x667-ru-microphone-during.png": true,
+      "evidence/hf3-390x667-ru-microphone-after.png": true,
+      "evidence/hf3-390x667-ru-save-during.png": true,
+      "evidence/hf3-390x667-ru-save-after.png": true,
+      "evidence/calibration-v3-desktop.png": true,
+      "evidence/calibration-v3-phone.png": true
+    }
+  }
+]

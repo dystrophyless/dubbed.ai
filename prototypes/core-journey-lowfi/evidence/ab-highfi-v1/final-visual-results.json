@@ -1,0 +1,103 @@
+{
+  "variant": "A",
+  "date": "2026-10-27",
+  "result": "PASS",
+  "checks": [
+    {
+      "variant": "A",
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "en",
+      "result": "PASS",
+      "advancingSourceSwitchPosition": 0.606716,
+      "styles": {
+        "dialogueFont": "26px / 34px \"Mabry Pro\", Arial, sans-serif",
+        "volumeHeight": 32,
+        "bodyFont": "\"Mabry Pro\", Arial, sans-serif",
+        "notice": "rgb(32, 32, 32)",
+        "mainBorder": "0px"
+      },
+      "frames": [
+        "normal",
+        "capture",
+        "candidate",
+        "accepted",
+        "completed",
+        "assembly",
+        "result-mydub",
+        "result-original",
+        "assembly-error",
+        "guard",
+        "save-error",
+        "mic-error"
+      ]
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        1280,
+        600
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "advancingSourceSwitchPosition": 0.617742,
+      "styles": {
+        "dialogueFont": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+        "volumeHeight": 32,
+        "bodyFont": "\"Mabry Pro\", Arial, sans-serif",
+        "notice": "rgb(32, 32, 32)",
+        "mainBorder": "0px"
+      },
+      "frames": [
+        "normal",
+        "capture",
+        "candidate",
+        "accepted",
+        "completed",
+        "assembly",
+        "result-mydub",
+        "result-original",
+        "assembly-error",
+        "guard",
+        "save-error",
+        "mic-error"
+      ]
+    },
+    {
+      "variant": "A",
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "advancingSourceSwitchPosition": 0.634009,
+      "styles": {
+        "dialogueFont": "24px / 32px \"Mabry Pro\", Arial, sans-serif",
+        "volumeHeight": 48,
+        "bodyFont": "\"Mabry Pro\", Arial, sans-serif",
+        "notice": "rgb(32, 32, 32)",
+        "mainBorder": "0px"
+      },
+      "frames": [
+        "normal",
+        "capture",
+        "candidate",
+        "accepted",
+        "completed",
+        "assembly",
+        "result-mydub",
+        "result-original",
+        "assembly-error",
+        "guard",
+        "save-error",
+        "mic-error"
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual Chrome100% DPR1;complete fixed-window input simulation and explicit actions;settled states220ms;current complete-set fixture used only for presentation,not operation proof.",
+  "limits": "No real microphone/backend/render;actual full connected/candidate/reload safety proof is in journey-results.json."
+}

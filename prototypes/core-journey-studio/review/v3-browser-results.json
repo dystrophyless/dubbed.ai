@@ -1,0 +1,1698 @@
+{
+  "version": "core-journey-studio-lowfi-v3",
+  "browser": "Chrome 156.0.8078.48",
+  "mode": "headless actual Chrome; DPR1; 100% CSS viewport",
+  "checks": [
+    {
+      "name": "1440x900 dialogue outside complete frame",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "scrollY": 0,
+        "scrollHeight": 962,
+        "scene": {
+          "x": 270.21875,
+          "y": 97,
+          "width": 899.546875,
+          "height": 505.984375,
+          "right": 1169.765625,
+          "bottom": 602.984375
+        },
+        "video": {
+          "x": 270.21875,
+          "y": 97,
+          "width": 899.546875,
+          "height": 505.984375,
+          "right": 1169.765625,
+          "bottom": 602.984375
+        },
+        "script": {
+          "x": 270.21875,
+          "y": 602.984375,
+          "width": 899.546875,
+          "height": 107.984375,
+          "right": 1169.765625,
+          "bottom": 710.96875
+        },
+        "dialogue": {
+          "x": 270.21875,
+          "y": 614.984375,
+          "width": 899.546875,
+          "height": 34,
+          "right": 1169.765625,
+          "bottom": 648.984375
+        },
+        "wave": {
+          "x": 270.21875,
+          "y": 710.96875,
+          "width": 899.546875,
+          "height": 64,
+          "right": 1169.765625,
+          "bottom": 774.96875
+        },
+        "controls": {
+          "x": 270.21875,
+          "y": 814.96875,
+          "width": 899.546875,
+          "height": 40,
+          "right": 1169.765625,
+          "bottom": 854.96875
+        },
+        "main": {
+          "x": 253.21875,
+          "y": 4,
+          "width": 933.546875,
+          "height": 895.9375,
+          "right": 1186.765625,
+          "bottom": 899.9375
+        },
+        "longRU": false
+      }
+    },
+    {
+      "name": "1440x900 shared scene-wave edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1440x900 whole 16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1440x900 task controls fit",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "scrollY": 0,
+        "scrollHeight": 962,
+        "scene": {
+          "x": 270.21875,
+          "y": 97,
+          "width": 899.546875,
+          "height": 505.984375,
+          "right": 1169.765625,
+          "bottom": 602.984375
+        },
+        "video": {
+          "x": 270.21875,
+          "y": 97,
+          "width": 899.546875,
+          "height": 505.984375,
+          "right": 1169.765625,
+          "bottom": 602.984375
+        },
+        "script": {
+          "x": 270.21875,
+          "y": 602.984375,
+          "width": 899.546875,
+          "height": 107.984375,
+          "right": 1169.765625,
+          "bottom": 710.96875
+        },
+        "dialogue": {
+          "x": 270.21875,
+          "y": 614.984375,
+          "width": 899.546875,
+          "height": 34,
+          "right": 1169.765625,
+          "bottom": 648.984375
+        },
+        "wave": {
+          "x": 270.21875,
+          "y": 710.96875,
+          "width": 899.546875,
+          "height": 64,
+          "right": 1169.765625,
+          "bottom": 774.96875
+        },
+        "controls": {
+          "x": 270.21875,
+          "y": 814.96875,
+          "width": 899.546875,
+          "height": 40,
+          "right": 1169.765625,
+          "bottom": 854.96875
+        },
+        "main": {
+          "x": 253.21875,
+          "y": 4,
+          "width": 933.546875,
+          "height": 895.9375,
+          "right": 1186.765625,
+          "bottom": 899.9375
+        },
+        "longRU": false
+      }
+    },
+    {
+      "name": "1366x650 dialogue outside complete frame",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1366,
+          "height": 650
+        },
+        "scrollY": 0,
+        "scrollHeight": 711,
+        "scene": {
+          "x": 355.28125,
+          "y": 63.65625,
+          "width": 655.421875,
+          "height": 368.671875,
+          "right": 1010.703125,
+          "bottom": 432.328125
+        },
+        "video": {
+          "x": 355.28125,
+          "y": 63.65625,
+          "width": 655.421875,
+          "height": 368.671875,
+          "right": 1010.703125,
+          "bottom": 432.328125
+        },
+        "script": {
+          "x": 355.28125,
+          "y": 432.328125,
+          "width": 655.421875,
+          "height": 74.65625,
+          "right": 1010.703125,
+          "bottom": 506.984375
+        },
+        "dialogue": {
+          "x": 355.28125,
+          "y": 437.65625,
+          "width": 655.421875,
+          "height": 61.34375,
+          "right": 1010.703125,
+          "bottom": 499
+        },
+        "wave": {
+          "x": 355.28125,
+          "y": 506.984375,
+          "width": 655.421875,
+          "height": 37.328125,
+          "right": 1010.703125,
+          "bottom": 544.3125
+        },
+        "controls": {
+          "x": 355.28125,
+          "y": 575.96875,
+          "width": 655.421875,
+          "height": 40,
+          "right": 1010.703125,
+          "bottom": 615.96875
+        },
+        "main": {
+          "x": 338.28125,
+          "y": 4,
+          "width": 689.421875,
+          "height": 645.28125,
+          "right": 1027.703125,
+          "bottom": 649.28125
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1366x650 shared scene-wave edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1366x650 whole 16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1366x650 task controls fit",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1366,
+          "height": 650
+        },
+        "scrollY": 0,
+        "scrollHeight": 711,
+        "scene": {
+          "x": 355.28125,
+          "y": 63.65625,
+          "width": 655.421875,
+          "height": 368.671875,
+          "right": 1010.703125,
+          "bottom": 432.328125
+        },
+        "video": {
+          "x": 355.28125,
+          "y": 63.65625,
+          "width": 655.421875,
+          "height": 368.671875,
+          "right": 1010.703125,
+          "bottom": 432.328125
+        },
+        "script": {
+          "x": 355.28125,
+          "y": 432.328125,
+          "width": 655.421875,
+          "height": 74.65625,
+          "right": 1010.703125,
+          "bottom": 506.984375
+        },
+        "dialogue": {
+          "x": 355.28125,
+          "y": 437.65625,
+          "width": 655.421875,
+          "height": 61.34375,
+          "right": 1010.703125,
+          "bottom": 499
+        },
+        "wave": {
+          "x": 355.28125,
+          "y": 506.984375,
+          "width": 655.421875,
+          "height": 37.328125,
+          "right": 1010.703125,
+          "bottom": 544.3125
+        },
+        "controls": {
+          "x": 355.28125,
+          "y": 575.96875,
+          "width": 655.421875,
+          "height": 40,
+          "right": 1010.703125,
+          "bottom": 615.96875
+        },
+        "main": {
+          "x": 338.28125,
+          "y": 4,
+          "width": 689.421875,
+          "height": 645.28125,
+          "right": 1027.703125,
+          "bottom": 649.28125
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1280x600 dialogue outside complete frame",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        },
+        "scrollY": 0,
+        "scrollHeight": 662,
+        "scene": {
+          "x": 336,
+          "y": 57,
+          "width": 608,
+          "height": 342,
+          "right": 944,
+          "bottom": 399
+        },
+        "video": {
+          "x": 336,
+          "y": 57,
+          "width": 608,
+          "height": 342,
+          "right": 944,
+          "bottom": 399
+        },
+        "script": {
+          "x": 336,
+          "y": 399,
+          "width": 608,
+          "height": 68,
+          "right": 944,
+          "bottom": 467
+        },
+        "dialogue": {
+          "x": 336,
+          "y": 403,
+          "width": 608,
+          "height": 60,
+          "right": 944,
+          "bottom": 463
+        },
+        "wave": {
+          "x": 336,
+          "y": 467,
+          "width": 608,
+          "height": 32,
+          "right": 944,
+          "bottom": 499
+        },
+        "controls": {
+          "x": 336,
+          "y": 529,
+          "width": 608,
+          "height": 40,
+          "right": 944,
+          "bottom": 569
+        },
+        "main": {
+          "x": 319,
+          "y": 4,
+          "width": 642,
+          "height": 596,
+          "right": 961,
+          "bottom": 600
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1280x600 shared scene-wave edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 whole 16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x600 task controls fit",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        },
+        "scrollY": 0,
+        "scrollHeight": 662,
+        "scene": {
+          "x": 336,
+          "y": 57,
+          "width": 608,
+          "height": 342,
+          "right": 944,
+          "bottom": 399
+        },
+        "video": {
+          "x": 336,
+          "y": 57,
+          "width": 608,
+          "height": 342,
+          "right": 944,
+          "bottom": 399
+        },
+        "script": {
+          "x": 336,
+          "y": 399,
+          "width": 608,
+          "height": 68,
+          "right": 944,
+          "bottom": 467
+        },
+        "dialogue": {
+          "x": 336,
+          "y": 403,
+          "width": 608,
+          "height": 60,
+          "right": 944,
+          "bottom": 463
+        },
+        "wave": {
+          "x": 336,
+          "y": 467,
+          "width": 608,
+          "height": 32,
+          "right": 944,
+          "bottom": 499
+        },
+        "controls": {
+          "x": 336,
+          "y": 529,
+          "width": 608,
+          "height": 40,
+          "right": 944,
+          "bottom": 569
+        },
+        "main": {
+          "x": 319,
+          "y": 4,
+          "width": 642,
+          "height": 596,
+          "right": 961,
+          "bottom": 600
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1280x699 dialogue outside complete frame",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1280,
+          "height": 699
+        },
+        "scrollY": 0,
+        "scrollHeight": 761,
+        "scene": {
+          "x": 287.515625,
+          "y": 70.15625,
+          "width": 704.953125,
+          "height": 396.53125,
+          "right": 992.46875,
+          "bottom": 466.6875
+        },
+        "video": {
+          "x": 287.515625,
+          "y": 70.15625,
+          "width": 704.953125,
+          "height": 396.53125,
+          "right": 992.46875,
+          "bottom": 466.6875
+        },
+        "script": {
+          "x": 287.515625,
+          "y": 466.6875,
+          "width": 704.953125,
+          "height": 81.1875,
+          "right": 992.46875,
+          "bottom": 547.875
+        },
+        "dialogue": {
+          "x": 287.515625,
+          "y": 473.3125,
+          "width": 704.953125,
+          "height": 62.625,
+          "right": 992.46875,
+          "bottom": 535.9375
+        },
+        "wave": {
+          "x": 287.515625,
+          "y": 547.875,
+          "width": 704.953125,
+          "height": 42.546875,
+          "right": 992.46875,
+          "bottom": 590.421875
+        },
+        "controls": {
+          "x": 287.515625,
+          "y": 623.703125,
+          "width": 704.953125,
+          "height": 40,
+          "right": 992.46875,
+          "bottom": 663.703125
+        },
+        "main": {
+          "x": 270.515625,
+          "y": 4,
+          "width": 738.953125,
+          "height": 695.3125,
+          "right": 1009.46875,
+          "bottom": 699.3125
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1280x699 shared scene-wave edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x699 whole 16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x699 task controls fit",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1280,
+          "height": 699
+        },
+        "scrollY": 0,
+        "scrollHeight": 761,
+        "scene": {
+          "x": 287.515625,
+          "y": 70.15625,
+          "width": 704.953125,
+          "height": 396.53125,
+          "right": 992.46875,
+          "bottom": 466.6875
+        },
+        "video": {
+          "x": 287.515625,
+          "y": 70.15625,
+          "width": 704.953125,
+          "height": 396.53125,
+          "right": 992.46875,
+          "bottom": 466.6875
+        },
+        "script": {
+          "x": 287.515625,
+          "y": 466.6875,
+          "width": 704.953125,
+          "height": 81.1875,
+          "right": 992.46875,
+          "bottom": 547.875
+        },
+        "dialogue": {
+          "x": 287.515625,
+          "y": 473.3125,
+          "width": 704.953125,
+          "height": 62.625,
+          "right": 992.46875,
+          "bottom": 535.9375
+        },
+        "wave": {
+          "x": 287.515625,
+          "y": 547.875,
+          "width": 704.953125,
+          "height": 42.546875,
+          "right": 992.46875,
+          "bottom": 590.421875
+        },
+        "controls": {
+          "x": 287.515625,
+          "y": 623.703125,
+          "width": 704.953125,
+          "height": 40,
+          "right": 992.46875,
+          "bottom": 663.703125
+        },
+        "main": {
+          "x": 270.515625,
+          "y": 4,
+          "width": 738.953125,
+          "height": 695.3125,
+          "right": 1009.46875,
+          "bottom": 699.3125
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1280x700 dialogue outside complete frame",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1280,
+          "height": 700
+        },
+        "scrollY": 0,
+        "scrollHeight": 763,
+        "scene": {
+          "x": 286.796875,
+          "y": 70.3125,
+          "width": 706.40625,
+          "height": 397.34375,
+          "right": 993.203125,
+          "bottom": 467.65625
+        },
+        "video": {
+          "x": 286.796875,
+          "y": 70.3125,
+          "width": 706.40625,
+          "height": 397.34375,
+          "right": 993.203125,
+          "bottom": 467.65625
+        },
+        "script": {
+          "x": 286.796875,
+          "y": 467.65625,
+          "width": 706.40625,
+          "height": 81.328125,
+          "right": 993.203125,
+          "bottom": 548.984375
+        },
+        "dialogue": {
+          "x": 286.796875,
+          "y": 474.3125,
+          "width": 706.40625,
+          "height": 62.65625,
+          "right": 993.203125,
+          "bottom": 536.96875
+        },
+        "wave": {
+          "x": 286.796875,
+          "y": 548.984375,
+          "width": 706.40625,
+          "height": 42.65625,
+          "right": 993.203125,
+          "bottom": 591.640625
+        },
+        "controls": {
+          "x": 286.796875,
+          "y": 624.953125,
+          "width": 706.40625,
+          "height": 40,
+          "right": 993.203125,
+          "bottom": 664.953125
+        },
+        "main": {
+          "x": 269.796875,
+          "y": 4,
+          "width": 740.40625,
+          "height": 696.609375,
+          "right": 1010.203125,
+          "bottom": 700.609375
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1280x700 shared scene-wave edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x700 whole 16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x700 task controls fit",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1280,
+          "height": 700
+        },
+        "scrollY": 0,
+        "scrollHeight": 763,
+        "scene": {
+          "x": 286.796875,
+          "y": 70.3125,
+          "width": 706.40625,
+          "height": 397.34375,
+          "right": 993.203125,
+          "bottom": 467.65625
+        },
+        "video": {
+          "x": 286.796875,
+          "y": 70.3125,
+          "width": 706.40625,
+          "height": 397.34375,
+          "right": 993.203125,
+          "bottom": 467.65625
+        },
+        "script": {
+          "x": 286.796875,
+          "y": 467.65625,
+          "width": 706.40625,
+          "height": 81.328125,
+          "right": 993.203125,
+          "bottom": 548.984375
+        },
+        "dialogue": {
+          "x": 286.796875,
+          "y": 474.3125,
+          "width": 706.40625,
+          "height": 62.65625,
+          "right": 993.203125,
+          "bottom": 536.96875
+        },
+        "wave": {
+          "x": 286.796875,
+          "y": 548.984375,
+          "width": 706.40625,
+          "height": 42.65625,
+          "right": 993.203125,
+          "bottom": 591.640625
+        },
+        "controls": {
+          "x": 286.796875,
+          "y": 624.953125,
+          "width": 706.40625,
+          "height": 40,
+          "right": 993.203125,
+          "bottom": 664.953125
+        },
+        "main": {
+          "x": 269.796875,
+          "y": 4,
+          "width": 740.40625,
+          "height": 696.609375,
+          "right": 1010.203125,
+          "bottom": 700.609375
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1280x701 dialogue outside complete frame",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1280,
+          "height": 701
+        },
+        "scrollY": 0,
+        "scrollHeight": 764,
+        "scene": {
+          "x": 286.0625,
+          "y": 70.453125,
+          "width": 707.875,
+          "height": 398.171875,
+          "right": 993.9375,
+          "bottom": 468.625
+        },
+        "video": {
+          "x": 286.0625,
+          "y": 70.453125,
+          "width": 707.875,
+          "height": 398.171875,
+          "right": 993.9375,
+          "bottom": 468.625
+        },
+        "script": {
+          "x": 286.0625,
+          "y": 468.625,
+          "width": 707.875,
+          "height": 81.453125,
+          "right": 993.9375,
+          "bottom": 550.078125
+        },
+        "dialogue": {
+          "x": 286.0625,
+          "y": 475.3125,
+          "width": 707.875,
+          "height": 62.6875,
+          "right": 993.9375,
+          "bottom": 538
+        },
+        "wave": {
+          "x": 286.0625,
+          "y": 550.078125,
+          "width": 707.875,
+          "height": 42.765625,
+          "right": 993.9375,
+          "bottom": 592.84375
+        },
+        "controls": {
+          "x": 286.0625,
+          "y": 626.203125,
+          "width": 707.875,
+          "height": 40,
+          "right": 993.9375,
+          "bottom": 666.203125
+        },
+        "main": {
+          "x": 269.0625,
+          "y": 4,
+          "width": 741.875,
+          "height": 697.90625,
+          "right": 1010.9375,
+          "bottom": 701.90625
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "1280x701 shared scene-wave edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x701 whole 16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "1280x701 task controls fit",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 1280,
+          "height": 701
+        },
+        "scrollY": 0,
+        "scrollHeight": 764,
+        "scene": {
+          "x": 286.0625,
+          "y": 70.453125,
+          "width": 707.875,
+          "height": 398.171875,
+          "right": 993.9375,
+          "bottom": 468.625
+        },
+        "video": {
+          "x": 286.0625,
+          "y": 70.453125,
+          "width": 707.875,
+          "height": 398.171875,
+          "right": 993.9375,
+          "bottom": 468.625
+        },
+        "script": {
+          "x": 286.0625,
+          "y": 468.625,
+          "width": 707.875,
+          "height": 81.453125,
+          "right": 993.9375,
+          "bottom": 550.078125
+        },
+        "dialogue": {
+          "x": 286.0625,
+          "y": 475.3125,
+          "width": 707.875,
+          "height": 62.6875,
+          "right": 993.9375,
+          "bottom": 538
+        },
+        "wave": {
+          "x": 286.0625,
+          "y": 550.078125,
+          "width": 707.875,
+          "height": 42.765625,
+          "right": 993.9375,
+          "bottom": 592.84375
+        },
+        "controls": {
+          "x": 286.0625,
+          "y": 626.203125,
+          "width": 707.875,
+          "height": 40,
+          "right": 993.9375,
+          "bottom": 666.203125
+        },
+        "main": {
+          "x": 269.0625,
+          "y": 4,
+          "width": 741.875,
+          "height": 697.90625,
+          "right": 1010.9375,
+          "bottom": 701.90625
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "390x667 dialogue outside complete frame",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 390,
+          "height": 667
+        },
+        "scrollY": 0,
+        "scrollHeight": 873,
+        "scene": {
+          "x": 16,
+          "y": 156,
+          "width": 358,
+          "height": 201.375,
+          "right": 374,
+          "bottom": 357.375
+        },
+        "video": {
+          "x": 16,
+          "y": 156,
+          "width": 358,
+          "height": 201.375,
+          "right": 374,
+          "bottom": 357.375
+        },
+        "script": {
+          "x": 16,
+          "y": 357.375,
+          "width": 358,
+          "height": 180,
+          "right": 374,
+          "bottom": 537.375
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 395.375,
+          "width": 358,
+          "height": 128,
+          "right": 374,
+          "bottom": 523.375
+        },
+        "wave": {
+          "x": 16,
+          "y": 537.375,
+          "width": 358,
+          "height": 64,
+          "right": 374,
+          "bottom": 601.375
+        },
+        "controls": {
+          "x": 16,
+          "y": 661.375,
+          "width": 358,
+          "height": 104,
+          "right": 374,
+          "bottom": 765.375
+        },
+        "main": {
+          "x": 0,
+          "y": 28,
+          "width": 390,
+          "height": 789.375,
+          "right": 390,
+          "bottom": 817.375
+        },
+        "longRU": true
+      }
+    },
+    {
+      "name": "390x667 shared scene-wave edges",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "390x667 whole 16:9 frame",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "699/700/701 continuous scene size",
+      "pass": true,
+      "detail": [
+        704.953125,
+        706.40625,
+        707.875
+      ]
+    },
+    {
+      "name": "Pause preserves listening time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Resume continues listening time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Held seek pauses playback",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Released seek plays",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Capture supersedes listening and locks scrub/Pause",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Take overlay grows while original stays fixed",
+      "pass": true,
+      "detail": [
+        "0.09493901960784314",
+        "0.24973392156862748"
+      ]
+    },
+    {
+      "name": "Capture completion preserves frame/dialogue box",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Completed overlay retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Exit with candidate has keep-take guard",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Failed Exit save preserves exact candidate/accepted/destination",
+      "pass": true,
+      "detail": {
+        "index": 0,
+        "candidates": [
+          {
+            "id": 1793111423229
+          },
+          null,
+          null
+        ],
+        "accepted": [
+          {
+            "id": 1793111423228
+          },
+          null,
+          null
+        ],
+        "completed": false,
+        "view": "record",
+        "locale": "ru",
+        "failureDestination": "My projects",
+        "failure": "Couldn’t save this take. It is still here on this browser; the previous saved take is unchanged. Retry before leaving."
+      }
+    },
+    {
+      "name": "Reload preserves failed candidate/accepted/destination",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Retained candidate audition plays synchronized sample",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Retry preserves Exit destination",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Sequential acceptance still reaches Result",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Result return restores recording",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "http://127.0.0.1:5179 no removed feature UI/handler nodes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "http://127.0.0.1:5179 no removed feature after acceptance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "http://127.0.0.1:5178 no removed feature UI/handler nodes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "http://127.0.0.1:5178 no removed feature after acceptance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Phone capture reorients scene/dialogue/time",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 390,
+          "height": 667
+        },
+        "scrollY": 42,
+        "scrollHeight": 873,
+        "scene": {
+          "x": 16,
+          "y": 114,
+          "width": 358,
+          "height": 201.375,
+          "right": 374,
+          "bottom": 315.375
+        },
+        "video": {
+          "x": 16,
+          "y": 114,
+          "width": 358,
+          "height": 201.375,
+          "right": 374,
+          "bottom": 315.375
+        },
+        "script": {
+          "x": 16,
+          "y": 315.375,
+          "width": 358,
+          "height": 180,
+          "right": 374,
+          "bottom": 495.375
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 353.375,
+          "width": 358,
+          "height": 128,
+          "right": 374,
+          "bottom": 481.375
+        },
+        "wave": {
+          "x": 16,
+          "y": 495.375,
+          "width": 358,
+          "height": 64,
+          "right": 374,
+          "bottom": 559.375
+        },
+        "controls": {
+          "x": 16,
+          "y": 619.375,
+          "width": 358,
+          "height": 104,
+          "right": 374,
+          "bottom": 723.375
+        },
+        "main": {
+          "x": 0,
+          "y": -14,
+          "width": 390,
+          "height": 789.375,
+          "right": 390,
+          "bottom": 775.375
+        }
+      }
+    },
+    {
+      "name": "Phone Next-to-record context survives",
+      "pass": true,
+      "detail": {
+        "viewport": {
+          "width": 390,
+          "height": 667
+        },
+        "scrollY": 140,
+        "scrollHeight": 873,
+        "scene": {
+          "x": 16,
+          "y": 16,
+          "width": 358,
+          "height": 201.375,
+          "right": 374,
+          "bottom": 217.375
+        },
+        "video": {
+          "x": 16,
+          "y": 16,
+          "width": 358,
+          "height": 201.375,
+          "right": 374,
+          "bottom": 217.375
+        },
+        "script": {
+          "x": 16,
+          "y": 217.375,
+          "width": 358,
+          "height": 180,
+          "right": 374,
+          "bottom": 397.375
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 255.375,
+          "width": 358,
+          "height": 128,
+          "right": 374,
+          "bottom": 383.375
+        },
+        "wave": {
+          "x": 16,
+          "y": 397.375,
+          "width": 358,
+          "height": 64,
+          "right": 374,
+          "bottom": 461.375
+        },
+        "controls": {
+          "x": 16,
+          "y": 521.375,
+          "width": 358,
+          "height": 104,
+          "right": 374,
+          "bottom": 625.375
+        },
+        "main": {
+          "x": 0,
+          "y": -112,
+          "width": 390,
+          "height": 789.375,
+          "right": 390,
+          "bottom": 677.375
+        }
+      }
+    }
+  ],
+  "geometry": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 0,
+      "scrollHeight": 962,
+      "scene": {
+        "x": 270.21875,
+        "y": 97,
+        "width": 899.546875,
+        "height": 505.984375,
+        "right": 1169.765625,
+        "bottom": 602.984375
+      },
+      "video": {
+        "x": 270.21875,
+        "y": 97,
+        "width": 899.546875,
+        "height": 505.984375,
+        "right": 1169.765625,
+        "bottom": 602.984375
+      },
+      "script": {
+        "x": 270.21875,
+        "y": 602.984375,
+        "width": 899.546875,
+        "height": 107.984375,
+        "right": 1169.765625,
+        "bottom": 710.96875
+      },
+      "dialogue": {
+        "x": 270.21875,
+        "y": 614.984375,
+        "width": 899.546875,
+        "height": 34,
+        "right": 1169.765625,
+        "bottom": 648.984375
+      },
+      "wave": {
+        "x": 270.21875,
+        "y": 710.96875,
+        "width": 899.546875,
+        "height": 64,
+        "right": 1169.765625,
+        "bottom": 774.96875
+      },
+      "controls": {
+        "x": 270.21875,
+        "y": 814.96875,
+        "width": 899.546875,
+        "height": 40,
+        "right": 1169.765625,
+        "bottom": 854.96875
+      },
+      "main": {
+        "x": 253.21875,
+        "y": 4,
+        "width": 933.546875,
+        "height": 895.9375,
+        "right": 1186.765625,
+        "bottom": 899.9375
+      },
+      "longRU": false
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 650
+      },
+      "scrollY": 0,
+      "scrollHeight": 711,
+      "scene": {
+        "x": 355.28125,
+        "y": 63.65625,
+        "width": 655.421875,
+        "height": 368.671875,
+        "right": 1010.703125,
+        "bottom": 432.328125
+      },
+      "video": {
+        "x": 355.28125,
+        "y": 63.65625,
+        "width": 655.421875,
+        "height": 368.671875,
+        "right": 1010.703125,
+        "bottom": 432.328125
+      },
+      "script": {
+        "x": 355.28125,
+        "y": 432.328125,
+        "width": 655.421875,
+        "height": 74.65625,
+        "right": 1010.703125,
+        "bottom": 506.984375
+      },
+      "dialogue": {
+        "x": 355.28125,
+        "y": 437.65625,
+        "width": 655.421875,
+        "height": 61.34375,
+        "right": 1010.703125,
+        "bottom": 499
+      },
+      "wave": {
+        "x": 355.28125,
+        "y": 506.984375,
+        "width": 655.421875,
+        "height": 37.328125,
+        "right": 1010.703125,
+        "bottom": 544.3125
+      },
+      "controls": {
+        "x": 355.28125,
+        "y": 575.96875,
+        "width": 655.421875,
+        "height": 40,
+        "right": 1010.703125,
+        "bottom": 615.96875
+      },
+      "main": {
+        "x": 338.28125,
+        "y": 4,
+        "width": 689.421875,
+        "height": 645.28125,
+        "right": 1027.703125,
+        "bottom": 649.28125
+      },
+      "longRU": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "scrollY": 0,
+      "scrollHeight": 662,
+      "scene": {
+        "x": 336,
+        "y": 57,
+        "width": 608,
+        "height": 342,
+        "right": 944,
+        "bottom": 399
+      },
+      "video": {
+        "x": 336,
+        "y": 57,
+        "width": 608,
+        "height": 342,
+        "right": 944,
+        "bottom": 399
+      },
+      "script": {
+        "x": 336,
+        "y": 399,
+        "width": 608,
+        "height": 68,
+        "right": 944,
+        "bottom": 467
+      },
+      "dialogue": {
+        "x": 336,
+        "y": 403,
+        "width": 608,
+        "height": 60,
+        "right": 944,
+        "bottom": 463
+      },
+      "wave": {
+        "x": 336,
+        "y": 467,
+        "width": 608,
+        "height": 32,
+        "right": 944,
+        "bottom": 499
+      },
+      "controls": {
+        "x": 336,
+        "y": 529,
+        "width": 608,
+        "height": 40,
+        "right": 944,
+        "bottom": 569
+      },
+      "main": {
+        "x": 319,
+        "y": 4,
+        "width": 642,
+        "height": 596,
+        "right": 961,
+        "bottom": 600
+      },
+      "longRU": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 699
+      },
+      "scrollY": 0,
+      "scrollHeight": 761,
+      "scene": {
+        "x": 287.515625,
+        "y": 70.15625,
+        "width": 704.953125,
+        "height": 396.53125,
+        "right": 992.46875,
+        "bottom": 466.6875
+      },
+      "video": {
+        "x": 287.515625,
+        "y": 70.15625,
+        "width": 704.953125,
+        "height": 396.53125,
+        "right": 992.46875,
+        "bottom": 466.6875
+      },
+      "script": {
+        "x": 287.515625,
+        "y": 466.6875,
+        "width": 704.953125,
+        "height": 81.1875,
+        "right": 992.46875,
+        "bottom": 547.875
+      },
+      "dialogue": {
+        "x": 287.515625,
+        "y": 473.3125,
+        "width": 704.953125,
+        "height": 62.625,
+        "right": 992.46875,
+        "bottom": 535.9375
+      },
+      "wave": {
+        "x": 287.515625,
+        "y": 547.875,
+        "width": 704.953125,
+        "height": 42.546875,
+        "right": 992.46875,
+        "bottom": 590.421875
+      },
+      "controls": {
+        "x": 287.515625,
+        "y": 623.703125,
+        "width": 704.953125,
+        "height": 40,
+        "right": 992.46875,
+        "bottom": 663.703125
+      },
+      "main": {
+        "x": 270.515625,
+        "y": 4,
+        "width": 738.953125,
+        "height": 695.3125,
+        "right": 1009.46875,
+        "bottom": 699.3125
+      },
+      "longRU": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 700
+      },
+      "scrollY": 0,
+      "scrollHeight": 763,
+      "scene": {
+        "x": 286.796875,
+        "y": 70.3125,
+        "width": 706.40625,
+        "height": 397.34375,
+        "right": 993.203125,
+        "bottom": 467.65625
+      },
+      "video": {
+        "x": 286.796875,
+        "y": 70.3125,
+        "width": 706.40625,
+        "height": 397.34375,
+        "right": 993.203125,
+        "bottom": 467.65625
+      },
+      "script": {
+        "x": 286.796875,
+        "y": 467.65625,
+        "width": 706.40625,
+        "height": 81.328125,
+        "right": 993.203125,
+        "bottom": 548.984375
+      },
+      "dialogue": {
+        "x": 286.796875,
+        "y": 474.3125,
+        "width": 706.40625,
+        "height": 62.65625,
+        "right": 993.203125,
+        "bottom": 536.96875
+      },
+      "wave": {
+        "x": 286.796875,
+        "y": 548.984375,
+        "width": 706.40625,
+        "height": 42.65625,
+        "right": 993.203125,
+        "bottom": 591.640625
+      },
+      "controls": {
+        "x": 286.796875,
+        "y": 624.953125,
+        "width": 706.40625,
+        "height": 40,
+        "right": 993.203125,
+        "bottom": 664.953125
+      },
+      "main": {
+        "x": 269.796875,
+        "y": 4,
+        "width": 740.40625,
+        "height": 696.609375,
+        "right": 1010.203125,
+        "bottom": 700.609375
+      },
+      "longRU": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 701
+      },
+      "scrollY": 0,
+      "scrollHeight": 764,
+      "scene": {
+        "x": 286.0625,
+        "y": 70.453125,
+        "width": 707.875,
+        "height": 398.171875,
+        "right": 993.9375,
+        "bottom": 468.625
+      },
+      "video": {
+        "x": 286.0625,
+        "y": 70.453125,
+        "width": 707.875,
+        "height": 398.171875,
+        "right": 993.9375,
+        "bottom": 468.625
+      },
+      "script": {
+        "x": 286.0625,
+        "y": 468.625,
+        "width": 707.875,
+        "height": 81.453125,
+        "right": 993.9375,
+        "bottom": 550.078125
+      },
+      "dialogue": {
+        "x": 286.0625,
+        "y": 475.3125,
+        "width": 707.875,
+        "height": 62.6875,
+        "right": 993.9375,
+        "bottom": 538
+      },
+      "wave": {
+        "x": 286.0625,
+        "y": 550.078125,
+        "width": 707.875,
+        "height": 42.765625,
+        "right": 993.9375,
+        "bottom": 592.84375
+      },
+      "controls": {
+        "x": 286.0625,
+        "y": 626.203125,
+        "width": 707.875,
+        "height": 40,
+        "right": 993.9375,
+        "bottom": 666.203125
+      },
+      "main": {
+        "x": 269.0625,
+        "y": 4,
+        "width": 741.875,
+        "height": 697.90625,
+        "right": 1010.9375,
+        "bottom": 701.90625
+      },
+      "longRU": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 667
+      },
+      "scrollY": 0,
+      "scrollHeight": 873,
+      "scene": {
+        "x": 16,
+        "y": 156,
+        "width": 358,
+        "height": 201.375,
+        "right": 374,
+        "bottom": 357.375
+      },
+      "video": {
+        "x": 16,
+        "y": 156,
+        "width": 358,
+        "height": 201.375,
+        "right": 374,
+        "bottom": 357.375
+      },
+      "script": {
+        "x": 16,
+        "y": 357.375,
+        "width": 358,
+        "height": 180,
+        "right": 374,
+        "bottom": 537.375
+      },
+      "dialogue": {
+        "x": 16,
+        "y": 395.375,
+        "width": 358,
+        "height": 128,
+        "right": 374,
+        "bottom": 523.375
+      },
+      "wave": {
+        "x": 16,
+        "y": 537.375,
+        "width": 358,
+        "height": 64,
+        "right": 374,
+        "bottom": 601.375
+      },
+      "controls": {
+        "x": 16,
+        "y": 661.375,
+        "width": 358,
+        "height": 104,
+        "right": 374,
+        "bottom": 765.375
+      },
+      "main": {
+        "x": 0,
+        "y": 28,
+        "width": 390,
+        "height": 789.375,
+        "right": 390,
+        "bottom": 817.375
+      },
+      "longRU": true
+    }
+  ],
+  "pass": 49,
+  "total": 49,
+  "date": "2026-10-27"
+}

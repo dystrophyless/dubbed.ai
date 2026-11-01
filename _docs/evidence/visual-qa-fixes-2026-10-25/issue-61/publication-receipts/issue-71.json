@@ -1,0 +1,48 @@
+{
+  "issue": 71,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "b5697c4d1d3b69e61eeda5a08314dd3cf38c6f299c53c53725bcd377e29d480e",
+    "planned": "b435e2226e54563d177f39754f8654be3bd75e5d122e3e586ebbcf186ebd277c",
+    "readback": "b435e2226e54563d177f39754f8654be3bd75e5d122e3e586ebbcf186ebd277c"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Reset a password with purpose-bound proof and recover the correct session",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Reset a password with purpose-bound proof and recover the correct session",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

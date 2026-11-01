@@ -1,0 +1,23 @@
+{
+  "capturedAtUtc": "2026-10-23T20:49:51.304Z",
+  "boundary": "Public mock facade, isolated namespace, two explicitly injected clients in native Chromium; no real identity provider or user data.",
+  "result": {
+    "requestId": "eb63b79c-4c6a-4bb8-b1f9-619d3b1a1a94",
+    "foreignResolve": {
+      "status": "ok",
+      "data": {
+        "state": "not-found"
+      },
+      "replayed": false
+    },
+    "foreignVerify": {
+      "status": "error",
+      "error": {
+        "code": "not-found",
+        "message": "Registration request was not found.",
+        "retry": "none"
+      }
+    }
+  },
+  "outcome": "foreign-client-rejected"
+}

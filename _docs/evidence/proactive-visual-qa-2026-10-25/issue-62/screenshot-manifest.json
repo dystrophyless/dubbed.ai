@@ -1,0 +1,122 @@
+[
+  {
+    "path": "evidence/01-account-en-desktop.png",
+    "sha256": "9a5d457b7d587af86443edd956f6fa305ae48e26105cbc1b378d4df5629378fd",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/02-account-en-full.png",
+    "sha256": "d82d2f29842e91d66de4471a0da34ca2690f37ebddacb6187a8865637467b8dc",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/03-password-error-en-desktop.png",
+    "sha256": "55b4e7dd594a809d729d4623a70a0181abb6e2b87702146a26e361a9a3e8776d",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/04-delete-en-dialog.png",
+    "sha256": "30380474dfeb545d5d54afea2a7c2665d80be392719510166d293e1a94bf9cff",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/05-account-en-short.png",
+    "sha256": "d70d0b67df84a1c29174e8e58bd9f8a8e078141fe32ab58feea55ec9e88bc576",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/06-delete-en-short.png",
+    "sha256": "e8b7eeb747ea915cddbbf6c7d499be7f4f5ff07e640f2db8b1d079d756e0e07c",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/07-account-en-phone.png",
+    "sha256": "1d13bb0d3dd93b3a342397465edcae1900219cefaa273612cc6c272e4b06f948",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/08-delete-en-phone.png",
+    "sha256": "c02277b46a6f84186e7a2332c59c7c999f43af9e341d2562b4999a343e79ffbe",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/09-account-ru-phone.png",
+    "sha256": "1f5d19c41b57dcb2db39ebf2b3450445c0b03f5836fe55d465277d8b2321a7ec",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/10-delete-ru-phone.png",
+    "sha256": "086adb792678eaf05fac047a79e8da38c90e2fc5ac0b98eb9e70c90b43ec9b3a",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/11-account-ru-desktop.png",
+    "sha256": "01037c339db2ab96076ff7ae2953b2ecdfbfe70ad51c0d828a664125d605aefb",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/12-account-ru-short.png",
+    "sha256": "3419c7ca6437bdb236c420f6e83f5295e08599aa9b30f95b47eac9b5f7f44098",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/13-delete-ru-short.png",
+    "sha256": "eccc8eef2ce062b78166f80d8d33c4b87705dea1041ac145bcd9500e43898a7c",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/14-account-ru-767.png",
+    "sha256": "e2ab4445de6689cb64488d7957f4652d9b1d5db0b858f83d922b8b9c44ca32cd",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/14-account-ru-768.png",
+    "sha256": "7bb016d31393bee663f49db97e89b566ca41034c8131cdac749f106b715ffc24",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/15-link-continuation-en.png",
+    "sha256": "6ed4cf594170ac65828314e2e27675b165a87afad6f3c3369110067ac6c5dd14",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/16-delete-storage-error.png",
+    "sha256": "09fa471aa9ea6145bc5412fcb29e41ac9d4333c92aa90c22a1416f6bf2894cd8",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/17-deletion-result.png",
+    "sha256": "91cb52b61df97fc12ced5a2c351e575a7f2f11dab0a86aa8facf3f85d3e34a75",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/18-fixture-account-delete-error.png",
+    "sha256": "eadc94d2b17e20d399ab61de2670b61b48350a3d3ba7cdee3f03e756e1fee378",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/18-fixture-account-delete-unknown.png",
+    "sha256": "1ef8bd4258da6fcafcb2302aaea173ed6e0aed3be0ee8c43ce7029cad5b6d5b0",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/18-fixture-account-locale-failure.png",
+    "sha256": "ab428e69f2e9a728b1f85939ec8d05797bba3b33e31004d2aba2dc1be2a38d02",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/18-fixture-account-locale-pending.png",
+    "sha256": "bba3cceb652f012e5412992968c74d6613fe6de379f0086011e10e1c91aaa763",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/19-signout-candidate-guard-en.png",
+    "sha256": "289570a445f82e10fbc47b65bae22b480b7728d7ff8679dc662a437e4d7b6dba",
+    "visuallyOpened": true
+  },
+  {
+    "path": "evidence/20-signout-success.png",
+    "sha256": "76d6cf05c5e0e0db58a9447230c9fb63deef60155fc59e1885d91f2817cf66a1",
+    "visuallyOpened": true
+  }
+]

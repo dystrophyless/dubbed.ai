@@ -1,0 +1,150 @@
+[
+  {
+    "file": "evidence/ready-en-desktop.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=ready"
+  },
+  {
+    "file": "evidence/ready-en-short.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=ready"
+  },
+  {
+    "file": "evidence/ready-en-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-desktop.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-short.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-767.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/ready-ru-768.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/assembly-unknown-en-desktop.png",
+    "boundary": "Existing synthetic result-delivery-state harness; locale=en; state=assembly-progress-untrusted"
+  },
+  {
+    "file": "evidence/initial-assembly-en-short.png",
+    "boundary": "Existing synthetic result-delivery-state harness; locale=en; state=assembly-progress-untrusted"
+  },
+  {
+    "file": "evidence/replacement-en-short.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=replacement"
+  },
+  {
+    "file": "evidence/replacement-failure-seed-en-short.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=replacement-failure"
+  },
+  {
+    "file": "evidence/retained-result-failure-en-short.png",
+    "boundary": "Assembly failure with generation 1 playing while generation 2 is current; prior player remains dominant."
+  },
+  {
+    "file": "evidence/initial-assembly-en-phone.png",
+    "boundary": "Existing synthetic result-delivery-state harness; locale=en; state=assembly-progress-untrusted"
+  },
+  {
+    "file": "evidence/replacement-en-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=replacement"
+  },
+  {
+    "file": "evidence/replacement-failure-seed-en-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=replacement-failure"
+  },
+  {
+    "file": "evidence/retained-result-failure-en-phone.png",
+    "boundary": "Assembly failure with generation 1 playing while generation 2 is current; prior player remains dominant."
+  },
+  {
+    "file": "evidence/initial-assembly-ru-short.png",
+    "boundary": "Existing synthetic result-delivery-state harness; locale=ru; state=assembly-progress-untrusted"
+  },
+  {
+    "file": "evidence/replacement-ru-short.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=replacement"
+  },
+  {
+    "file": "evidence/replacement-failure-seed-ru-short.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=replacement-failure"
+  },
+  {
+    "file": "evidence/retained-result-failure-ru-short.png",
+    "boundary": "Assembly failure with generation 1 playing while generation 2 is current; prior player remains dominant."
+  },
+  {
+    "file": "evidence/initial-assembly-ru-phone.png",
+    "boundary": "Existing synthetic result-delivery-state harness; locale=ru; state=assembly-progress-untrusted"
+  },
+  {
+    "file": "evidence/replacement-ru-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=replacement"
+  },
+  {
+    "file": "evidence/replacement-failure-seed-ru-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=replacement-failure"
+  },
+  {
+    "file": "evidence/retained-result-failure-ru-phone.png",
+    "boundary": "Assembly failure with generation 1 playing while generation 2 is current; prior player remains dominant."
+  },
+  {
+    "file": "evidence/assembly-failure-ru-short.png",
+    "boundary": "Existing synthetic result-delivery-state harness; locale=ru; state=assembly-retry-unknown"
+  },
+  {
+    "file": "evidence/descriptor-failure-en-desktop.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=descriptor-retry"
+  },
+  {
+    "file": "evidence/descriptor-recovered-en-desktop.png",
+    "boundary": "First descriptor request fails, then Retry playback reloads the same generation; controlled fixture only."
+  },
+  {
+    "file": "evidence/unknown-download-ru-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=unknown-download"
+  },
+  {
+    "file": "evidence/unknown-download-ru-phone-error.png",
+    "boundary": "Unknown download result from controlled service fixture; original generation stays displayed."
+  },
+  {
+    "file": "evidence/generation1-en-desktop.png",
+    "boundary": "Seeded controlled Result harness; locale=en; state=ready"
+  },
+  {
+    "file": "evidence/download-old-pending-watch-new-en-desktop.png",
+    "boundary": "Version 1 request is pending while version 2 becomes ready; exact activation-time request ID is retained."
+  },
+  {
+    "file": "evidence/version2-displayed-version1-pending-en-desktop.png",
+    "boundary": "Watch new switches the player while the generation-1 download remains pending."
+  },
+  {
+    "file": "evidence/old-download-failed-after-switch-en-desktop.png",
+    "boundary": "Generation-1 request failed after version 2 was displayed; retry retains version-1 identity."
+  },
+  {
+    "file": "evidence/exact-generation-retries-complete-en-desktop.png",
+    "boundary": "Generation-1 retry completes after generation 2 was downloaded; no render or credit operation."
+  },
+  {
+    "file": "evidence/new-ready-ru-phone.png",
+    "boundary": "Seeded controlled Result harness; locale=ru; state=ready"
+  },
+  {
+    "file": "evidence/new-version-ready-while-playing-ru-phone.png",
+    "boundary": "Generation 2 becomes ready while generation 1 is playing; shared sr-only utility contains the announcement."
+  }
+]

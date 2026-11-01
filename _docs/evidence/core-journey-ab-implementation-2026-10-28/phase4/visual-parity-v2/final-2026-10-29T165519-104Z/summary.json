@@ -1,0 +1,4985 @@
+{
+  "mode": "final",
+  "startedAt": "2026-10-29T16:55:19.104Z",
+  "finishedAt": "2026-10-29T16:55:55.193Z",
+  "workspaceHead": "9096925a4476e84ec9a6e5ef9bff50ae45ac0f67",
+  "browser": "Chrome 156.0.8078.49",
+  "browserTempPath": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "captureCount": 24,
+  "stageResults": [
+    {
+      "target": "prototype-A",
+      "result": "prototype synthetic candidate selected; not product media"
+    },
+    {
+      "target": "prototype-A",
+      "result": "screens captured",
+      "url": "http://127.0.0.1:5178/"
+    },
+    {
+      "target": "prototype-B",
+      "result": "prototype synthetic candidate selected; not product media"
+    },
+    {
+      "target": "prototype-B",
+      "result": "screens captured",
+      "url": "http://127.0.0.1:5179/"
+    },
+    {
+      "target": "app-A",
+      "result": "native browser Blob candidate captured, persisted and explicitly selected",
+      "details": {
+        "status": "New take",
+        "takePathCharacters": 1767,
+        "video": {
+          "currentTime": 5.160431,
+          "paused": true
+        },
+        "captureApi": true
+      }
+    },
+    {
+      "target": "app-A",
+      "result": "screens captured",
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=en"
+    },
+    {
+      "target": "app-B",
+      "result": "native browser Blob candidate captured, persisted and explicitly selected",
+      "details": {
+        "status": "New take",
+        "takePathCharacters": 1766,
+        "video": {
+          "currentTime": 5.211339,
+          "paused": true
+        },
+        "captureApi": true
+      }
+    },
+    {
+      "target": "app-B",
+      "result": "screens captured",
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=B&locale=en"
+    }
+  ],
+  "longRussianFixture": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+  "captureReadiness": {
+    "allFontsReady": true,
+    "allAtTop": true,
+    "allVideoReady": true,
+    "anyDocumentOverflow": [
+      {
+        "image": "A-prototype-initial-phone-390x844-long-ru.png",
+        "viewport": "phone-390x844",
+        "document": {
+          "width": 390,
+          "height": 888
+        }
+      },
+      {
+        "image": "A-prototype-candidate-your-take-phone-390x844-long-ru.png",
+        "viewport": "phone-390x844",
+        "document": {
+          "width": 390,
+          "height": 888
+        }
+      },
+      {
+        "image": "B-prototype-initial-desktop-1440x900.png",
+        "viewport": "desktop-1440x900",
+        "document": {
+          "width": 1440,
+          "height": 925
+        }
+      },
+      {
+        "image": "B-prototype-initial-short-1280x600-long-ru.png",
+        "viewport": "short-1280x600",
+        "document": {
+          "width": 1280,
+          "height": 625
+        }
+      },
+      {
+        "image": "B-prototype-candidate-your-take-desktop-1440x900.png",
+        "viewport": "desktop-1440x900",
+        "document": {
+          "width": 1440,
+          "height": 925
+        }
+      },
+      {
+        "image": "B-prototype-candidate-your-take-short-1280x600-long-ru.png",
+        "viewport": "short-1280x600",
+        "document": {
+          "width": 1280,
+          "height": 625
+        }
+      },
+      {
+        "image": "A-app-initial-phone-390x844-long-ru.png",
+        "viewport": "phone-390x844",
+        "document": {
+          "width": 390,
+          "height": 887
+        }
+      },
+      {
+        "image": "A-app-candidate-your-take-phone-390x844-long-ru.png",
+        "viewport": "phone-390x844",
+        "document": {
+          "width": 390,
+          "height": 887
+        }
+      },
+      {
+        "image": "B-app-initial-desktop-1440x900.png",
+        "viewport": "desktop-1440x900",
+        "document": {
+          "width": 1440,
+          "height": 904
+        }
+      },
+      {
+        "image": "B-app-initial-short-1280x600-long-ru.png",
+        "viewport": "short-1280x600",
+        "document": {
+          "width": 1280,
+          "height": 604
+        }
+      },
+      {
+        "image": "B-app-candidate-your-take-desktop-1440x900.png",
+        "viewport": "desktop-1440x900",
+        "document": {
+          "width": 1440,
+          "height": 904
+        }
+      },
+      {
+        "image": "B-app-candidate-your-take-short-1280x600-long-ru.png",
+        "viewport": "short-1280x600",
+        "document": {
+          "width": 1280,
+          "height": 604
+        }
+      }
+    ]
+  },
+  "pairs": [
+    {
+      "layout": "A",
+      "state": "initial",
+      "viewport": "desktop-1440x900",
+      "referenceImage": "A-prototype-initial-desktop-1440x900.png",
+      "implementationImage": "A-app-initial-desktop-1440x900.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 1440,
+          "height": 900
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "A",
+      "state": "initial",
+      "viewport": "short-1280x600",
+      "referenceImage": "A-prototype-initial-short-1280x600-long-ru.png",
+      "implementationImage": "A-app-initial-short-1280x600-long-ru.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 1280,
+          "height": 600
+        },
+        {
+          "width": 1280,
+          "height": 600
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": -8
+        },
+        "controlRow": {
+          "x": 0,
+          "y": -8,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "A",
+      "state": "initial",
+      "viewport": "phone-390x844",
+      "referenceImage": "A-prototype-initial-phone-390x844-long-ru.png",
+      "implementationImage": "A-app-initial-phone-390x844-long-ru.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 390,
+          "height": 888
+        },
+        {
+          "width": 390,
+          "height": 887
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "A",
+      "state": "candidate-your-take",
+      "viewport": "desktop-1440x900",
+      "referenceImage": "A-prototype-candidate-your-take-desktop-1440x900.png",
+      "implementationImage": "A-app-candidate-your-take-desktop-1440x900.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 1440,
+          "height": 900
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 34
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "A",
+      "state": "candidate-your-take",
+      "viewport": "short-1280x600",
+      "referenceImage": "A-prototype-candidate-your-take-short-1280x600-long-ru.png",
+      "implementationImage": "A-app-candidate-your-take-short-1280x600-long-ru.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 1280,
+          "height": 600
+        },
+        {
+          "width": 1280,
+          "height": 600
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 12,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": -8
+        },
+        "controlRow": {
+          "x": 0,
+          "y": -8,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "A",
+      "state": "candidate-your-take",
+      "viewport": "phone-390x844",
+      "referenceImage": "A-prototype-candidate-your-take-phone-390x844-long-ru.png",
+      "implementationImage": "A-app-candidate-your-take-phone-390x844-long-ru.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 390,
+          "height": 888
+        },
+        {
+          "width": 390,
+          "height": 887
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "B",
+      "state": "initial",
+      "viewport": "desktop-1440x900",
+      "referenceImage": "B-prototype-initial-desktop-1440x900.png",
+      "implementationImage": "B-app-initial-desktop-1440x900.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 1440,
+          "height": 925
+        },
+        {
+          "width": 1440,
+          "height": 904
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "B",
+      "state": "initial",
+      "viewport": "short-1280x600",
+      "referenceImage": "B-prototype-initial-short-1280x600-long-ru.png",
+      "implementationImage": "B-app-initial-short-1280x600-long-ru.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 1280,
+          "height": 625
+        },
+        {
+          "width": 1280,
+          "height": 604
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "B",
+      "state": "initial",
+      "viewport": "phone-390x844",
+      "referenceImage": "B-prototype-initial-phone-390x844-long-ru.png",
+      "implementationImage": "B-app-initial-phone-390x844-long-ru.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 390,
+          "height": 844
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "B",
+      "state": "candidate-your-take",
+      "viewport": "desktop-1440x900",
+      "referenceImage": "B-prototype-candidate-your-take-desktop-1440x900.png",
+      "implementationImage": "B-app-candidate-your-take-desktop-1440x900.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 1440,
+          "height": 925
+        },
+        {
+          "width": 1440,
+          "height": 904
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 34
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "B",
+      "state": "candidate-your-take",
+      "viewport": "short-1280x600",
+      "referenceImage": "B-prototype-candidate-your-take-short-1280x600-long-ru.png",
+      "implementationImage": "B-app-candidate-your-take-short-1280x600-long-ru.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 1280,
+          "height": 625
+        },
+        {
+          "width": 1280,
+          "height": 604
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    },
+    {
+      "layout": "B",
+      "state": "candidate-your-take",
+      "viewport": "phone-390x844",
+      "referenceImage": "B-prototype-candidate-your-take-phone-390x844-long-ru.png",
+      "implementationImage": "B-app-candidate-your-take-phone-390x844-long-ru.png",
+      "scroll": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "document": [
+        {
+          "width": 390,
+          "height": 844
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "geometryDelta": {
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "heading": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dots": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "exit": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "media": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "dialogueText": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveform": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "waveformMeta": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controls": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "controlRow": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      "readiness": {
+        "reference": [
+          true,
+          4,
+          960,
+          408
+        ],
+        "implementation": [
+          true,
+          4,
+          960,
+          408
+        ]
+      }
+    }
+  ],
+  "captures": [
+    {
+      "image": "A-prototype-initial-desktop-1440x900.png",
+      "target": "prototype-A",
+      "state": "initial",
+      "viewport": {
+        "name": "desktop-1440x900",
+        "width": 1440,
+        "height": 900,
+        "longRu": false
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": false,
+      "candidate": false,
+      "takeSelected": null,
+      "lineText": "What brings you to the land of the gatekeepers?",
+      "metrics": {
+        "title": {
+          "x": 328,
+          "y": 20,
+          "width": 784,
+          "height": 64,
+          "bottom": 84,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 494.390625,
+          "y": 20,
+          "width": 451.203125,
+          "height": 44,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 494.390625,
+          "y": 58,
+          "width": 451.203125,
+          "height": 6,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 328,
+          "y": 20,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 328,
+          "y": 96,
+          "width": 784,
+          "height": 441,
+          "bottom": 537,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 537,
+          "width": 784,
+          "height": 107.984375,
+          "bottom": 644.984375,
+          "radius": "0px",
+          "padding": "12px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 328,
+          "y": 549,
+          "width": 784,
+          "height": 34,
+          "bottom": 583
+        },
+        "waveform": {
+          "x": 328,
+          "y": 644.984375,
+          "width": 784,
+          "height": 64,
+          "bottom": 708.984375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 328,
+          "y": 714.984375,
+          "width": 784,
+          "height": 32,
+          "bottom": 746.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 1136,
+          "y": 96,
+          "width": 272,
+          "height": 332,
+          "bottom": 428,
+          "radius": "10px",
+          "padding": "16px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 1152,
+          "y": 149,
+          "width": 240,
+          "height": 140,
+          "bottom": 289,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "10px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-prototype-initial-short-1280x600-long-ru.png",
+      "target": "prototype-A",
+      "state": "initial",
+      "viewport": {
+        "name": "short-1280x600",
+        "width": 1280,
+        "height": 600,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1280,
+        "height": 600
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": false,
+      "takeSelected": null,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 328,
+          "y": 12,
+          "width": 624,
+          "height": 40,
+          "bottom": 52,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 480,
+          "y": 12,
+          "width": 320,
+          "height": 38,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 480,
+          "y": 44,
+          "width": 320,
+          "height": 6,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 328,
+          "y": 12,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 52,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 328,
+          "y": 56,
+          "width": 624,
+          "height": 351,
+          "bottom": 407,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 407,
+          "width": 624,
+          "height": 68,
+          "bottom": 475,
+          "radius": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 328,
+          "y": 411,
+          "width": 624,
+          "height": 60,
+          "bottom": 471
+        },
+        "waveform": {
+          "x": 328,
+          "y": 475,
+          "width": 624,
+          "height": 32,
+          "bottom": 507,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 328,
+          "y": 513,
+          "width": 624,
+          "height": 24,
+          "bottom": 537,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 976,
+          "y": 56,
+          "width": 272,
+          "height": 234,
+          "bottom": 290,
+          "radius": "10px",
+          "padding": "12px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 988,
+          "y": 97,
+          "width": 248,
+          "height": 86,
+          "bottom": 183,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "6px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-prototype-initial-phone-390x844-long-ru.png",
+      "target": "prototype-A",
+      "state": "initial",
+      "viewport": {
+        "name": "phone-390x844",
+        "width": 390,
+        "height": 844,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 390,
+        "height": 888
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": false,
+      "takeSelected": null,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 100,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px 16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 16,
+          "y": 68,
+          "width": 358,
+          "height": 44,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 6,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 16,
+          "y": 12,
+          "width": 77.265625,
+          "height": 48,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "12px",
+          "gap": "8px",
+          "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 16,
+          "y": 128,
+          "width": 358,
+          "height": 201.375,
+          "bottom": 329.375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 329.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 485.375,
+          "radius": "0px",
+          "padding": "14px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 16,
+          "y": 343.375,
+          "width": 358,
+          "height": 128,
+          "bottom": 471.375
+        },
+        "waveform": {
+          "x": 16,
+          "y": 485.375,
+          "width": 358,
+          "height": 64,
+          "bottom": 549.375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 16,
+          "y": 555.375,
+          "width": 358,
+          "height": 56,
+          "bottom": 611.375,
+          "radius": "0px",
+          "padding": "4px 0px 0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 16,
+          "y": 631.375,
+          "width": 358,
+          "height": 224,
+          "bottom": 855.375,
+          "radius": "10px",
+          "padding": "16px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 32,
+          "y": 680.375,
+          "width": 326,
+          "height": 48,
+          "bottom": 728.375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-prototype-candidate-your-take-desktop-1440x900.png",
+      "target": "prototype-A",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "desktop-1440x900",
+        "width": 1440,
+        "height": 900,
+        "longRu": false
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.177526,
+        "paused": true
+      },
+      "longRuInjected": false,
+      "candidate": true,
+      "takeSelected": null,
+      "lineText": "What brings you to the land of the gatekeepers?",
+      "metrics": {
+        "title": {
+          "x": 328,
+          "y": 20,
+          "width": 784,
+          "height": 64,
+          "bottom": 84,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 494.390625,
+          "y": 20,
+          "width": 451.203125,
+          "height": 44,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 494.390625,
+          "y": 58,
+          "width": 451.203125,
+          "height": 6,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 328,
+          "y": 20,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 328,
+          "y": 96,
+          "width": 784,
+          "height": 441,
+          "bottom": 537,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 537,
+          "width": 784,
+          "height": 107.984375,
+          "bottom": 644.984375,
+          "radius": "0px",
+          "padding": "12px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 328,
+          "y": 549,
+          "width": 784,
+          "height": 34,
+          "bottom": 583
+        },
+        "waveform": {
+          "x": 328,
+          "y": 644.984375,
+          "width": 784,
+          "height": 64,
+          "bottom": 708.984375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 328,
+          "y": 714.984375,
+          "width": 784,
+          "height": 32,
+          "bottom": 746.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 1136,
+          "y": 96,
+          "width": 272,
+          "height": 332,
+          "bottom": 428,
+          "radius": "10px",
+          "padding": "16px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 1152,
+          "y": 149,
+          "width": 240,
+          "height": 140,
+          "bottom": 289,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "10px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-prototype-candidate-your-take-short-1280x600-long-ru.png",
+      "target": "prototype-A",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "short-1280x600",
+        "width": 1280,
+        "height": 600,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1280,
+        "height": 600
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.177526,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": true,
+      "takeSelected": null,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 328,
+          "y": 12,
+          "width": 624,
+          "height": 40,
+          "bottom": 52,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 480,
+          "y": 12,
+          "width": 320,
+          "height": 38,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 480,
+          "y": 44,
+          "width": 320,
+          "height": 6,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 328,
+          "y": 12,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 52,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 328,
+          "y": 56,
+          "width": 624,
+          "height": 351,
+          "bottom": 407,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 407,
+          "width": 624,
+          "height": 68,
+          "bottom": 475,
+          "radius": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 328,
+          "y": 411,
+          "width": 624,
+          "height": 60,
+          "bottom": 471
+        },
+        "waveform": {
+          "x": 328,
+          "y": 475,
+          "width": 624,
+          "height": 32,
+          "bottom": 507,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 328,
+          "y": 513,
+          "width": 624,
+          "height": 24,
+          "bottom": 537,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 976,
+          "y": 56,
+          "width": 272,
+          "height": 234,
+          "bottom": 290,
+          "radius": "10px",
+          "padding": "12px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 988,
+          "y": 97,
+          "width": 248,
+          "height": 86,
+          "bottom": 183,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "6px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-prototype-candidate-your-take-phone-390x844-long-ru.png",
+      "target": "prototype-A",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "phone-390x844",
+        "width": 390,
+        "height": 844,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 390,
+        "height": 888
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.177526,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": true,
+      "takeSelected": null,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 100,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px 16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 16,
+          "y": 68,
+          "width": 358,
+          "height": 44,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 6,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 16,
+          "y": 12,
+          "width": 77.265625,
+          "height": 48,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "12px",
+          "gap": "8px",
+          "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 16,
+          "y": 128,
+          "width": 358,
+          "height": 201.375,
+          "bottom": 329.375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 329.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 485.375,
+          "radius": "0px",
+          "padding": "14px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 16,
+          "y": 343.375,
+          "width": 358,
+          "height": 128,
+          "bottom": 471.375
+        },
+        "waveform": {
+          "x": 16,
+          "y": 485.375,
+          "width": 358,
+          "height": 64,
+          "bottom": 549.375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 16,
+          "y": 555.375,
+          "width": 358,
+          "height": 56,
+          "bottom": 611.375,
+          "radius": "0px",
+          "padding": "4px 0px 0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 16,
+          "y": 631.375,
+          "width": 358,
+          "height": 224,
+          "bottom": 855.375,
+          "radius": "10px",
+          "padding": "16px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 32,
+          "y": 680.375,
+          "width": 326,
+          "height": 48,
+          "bottom": 728.375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-prototype-initial-desktop-1440x900.png",
+      "target": "prototype-B",
+      "state": "initial",
+      "viewport": {
+        "name": "desktop-1440x900",
+        "width": 1440,
+        "height": 900,
+        "longRu": false
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1440,
+        "height": 925
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": false,
+      "candidate": false,
+      "takeSelected": null,
+      "lineText": "What brings you to the land of the gatekeepers?",
+      "metrics": {
+        "title": {
+          "x": 282.671875,
+          "y": 20,
+          "width": 874.65625,
+          "height": 64,
+          "bottom": 84,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 467.203125,
+          "y": 20,
+          "width": 505.59375,
+          "height": 44,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 467.203125,
+          "y": 58,
+          "width": 505.59375,
+          "height": 6,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 282.671875,
+          "y": 20,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 282.671875,
+          "y": 96,
+          "width": 874.65625,
+          "height": 491.984375,
+          "bottom": 587.984375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 282.671875,
+          "y": 587.984375,
+          "width": 874.65625,
+          "height": 107.984375,
+          "bottom": 695.96875,
+          "radius": "0px",
+          "padding": "12px 0px",
+          "gap": "normal",
+          "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 282.671875,
+          "y": 599.984375,
+          "width": 874.65625,
+          "height": 34,
+          "bottom": 633.984375
+        },
+        "waveform": {
+          "x": 282.671875,
+          "y": 695.96875,
+          "width": 874.65625,
+          "height": 64,
+          "bottom": 759.96875,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 282.671875,
+          "y": 759.96875,
+          "width": 874.65625,
+          "height": 32,
+          "bottom": 791.96875,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 282.671875,
+          "y": 791.96875,
+          "width": 874.65625,
+          "height": 91.984375,
+          "bottom": 883.953125,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 282.671875,
+          "y": 815.96875,
+          "width": 874.65625,
+          "height": 40,
+          "bottom": 855.96875,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "11.9999px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-prototype-initial-short-1280x600-long-ru.png",
+      "target": "prototype-B",
+      "state": "initial",
+      "viewport": {
+        "name": "short-1280x600",
+        "width": 1280,
+        "height": 600,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1280,
+        "height": 625
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": false,
+      "takeSelected": null,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 350.21875,
+          "y": 12,
+          "width": 579.546875,
+          "height": 40,
+          "bottom": 52,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 475.71875,
+          "y": 12,
+          "width": 328.53125,
+          "height": 38,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 475.71875,
+          "y": 44,
+          "width": 328.53125,
+          "height": 6,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 350.21875,
+          "y": 12,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 52,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 350.21875,
+          "y": 56,
+          "width": 579.546875,
+          "height": 325.984375,
+          "bottom": 381.984375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 350.21875,
+          "y": 381.984375,
+          "width": 579.546875,
+          "height": 68,
+          "bottom": 449.984375,
+          "radius": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 350.21875,
+          "y": 385.984375,
+          "width": 579.546875,
+          "height": 60,
+          "bottom": 445.984375
+        },
+        "waveform": {
+          "x": 350.21875,
+          "y": 449.984375,
+          "width": 579.546875,
+          "height": 32,
+          "bottom": 481.984375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 350.21875,
+          "y": 481.984375,
+          "width": 579.546875,
+          "height": 24,
+          "bottom": 505.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 350.21875,
+          "y": 505.984375,
+          "width": 579.546875,
+          "height": 88,
+          "bottom": 593.984375,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 350.21875,
+          "y": 529.984375,
+          "width": 579.546875,
+          "height": 40,
+          "bottom": 569.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-prototype-initial-phone-390x844-long-ru.png",
+      "target": "prototype-B",
+      "state": "initial",
+      "viewport": {
+        "name": "phone-390x844",
+        "width": 390,
+        "height": 844,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": false,
+      "takeSelected": null,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 100,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px 16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 16,
+          "y": 68,
+          "width": 358,
+          "height": 44,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 6,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 16,
+          "y": 12,
+          "width": 77.265625,
+          "height": 48,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "12px",
+          "gap": "8px",
+          "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 16,
+          "y": 128,
+          "width": 358,
+          "height": 201.375,
+          "bottom": 329.375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 329.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 485.375,
+          "radius": "0px",
+          "padding": "14px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 16,
+          "y": 343.375,
+          "width": 358,
+          "height": 128,
+          "bottom": 471.375
+        },
+        "waveform": {
+          "x": 16,
+          "y": 485.375,
+          "width": 358,
+          "height": 64,
+          "bottom": 549.375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 16,
+          "y": 549.375,
+          "width": 358,
+          "height": 56,
+          "bottom": 605.375,
+          "radius": "0px",
+          "padding": "4px 0px 0px",
+          "gap": "0px 12px",
+          "font": ""
+        },
+        "controls": {
+          "x": 16,
+          "y": 605.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 761.375,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 16,
+          "y": 629.375,
+          "width": 358,
+          "height": 104,
+          "bottom": 733.375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-prototype-candidate-your-take-desktop-1440x900.png",
+      "target": "prototype-B",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "desktop-1440x900",
+        "width": 1440,
+        "height": 900,
+        "longRu": false
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1440,
+        "height": 925
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.177313,
+        "paused": true
+      },
+      "longRuInjected": false,
+      "candidate": true,
+      "takeSelected": null,
+      "lineText": "What brings you to the land of the gatekeepers?",
+      "metrics": {
+        "title": {
+          "x": 282.671875,
+          "y": 20,
+          "width": 874.65625,
+          "height": 64,
+          "bottom": 84,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 467.203125,
+          "y": 20,
+          "width": 505.59375,
+          "height": 44,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 467.203125,
+          "y": 58,
+          "width": 505.59375,
+          "height": 6,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 282.671875,
+          "y": 20,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 282.671875,
+          "y": 96,
+          "width": 874.65625,
+          "height": 491.984375,
+          "bottom": 587.984375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 282.671875,
+          "y": 587.984375,
+          "width": 874.65625,
+          "height": 107.984375,
+          "bottom": 695.96875,
+          "radius": "0px",
+          "padding": "12px 0px",
+          "gap": "normal",
+          "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 282.671875,
+          "y": 599.984375,
+          "width": 874.65625,
+          "height": 34,
+          "bottom": 633.984375
+        },
+        "waveform": {
+          "x": 282.671875,
+          "y": 695.96875,
+          "width": 874.65625,
+          "height": 64,
+          "bottom": 759.96875,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 282.671875,
+          "y": 759.96875,
+          "width": 874.65625,
+          "height": 32,
+          "bottom": 791.96875,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 282.671875,
+          "y": 791.96875,
+          "width": 874.65625,
+          "height": 91.984375,
+          "bottom": 883.953125,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 282.671875,
+          "y": 815.96875,
+          "width": 874.65625,
+          "height": 40,
+          "bottom": 855.96875,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "11.9999px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-prototype-candidate-your-take-short-1280x600-long-ru.png",
+      "target": "prototype-B",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "short-1280x600",
+        "width": 1280,
+        "height": 600,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1280,
+        "height": 625
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.177313,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": true,
+      "takeSelected": null,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 350.21875,
+          "y": 12,
+          "width": 579.546875,
+          "height": 40,
+          "bottom": 52,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 475.71875,
+          "y": 12,
+          "width": 328.53125,
+          "height": 38,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 475.71875,
+          "y": 44,
+          "width": 328.53125,
+          "height": 6,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 350.21875,
+          "y": 12,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 52,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 350.21875,
+          "y": 56,
+          "width": 579.546875,
+          "height": 325.984375,
+          "bottom": 381.984375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 350.21875,
+          "y": 381.984375,
+          "width": 579.546875,
+          "height": 68,
+          "bottom": 449.984375,
+          "radius": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 350.21875,
+          "y": 385.984375,
+          "width": 579.546875,
+          "height": 60,
+          "bottom": 445.984375
+        },
+        "waveform": {
+          "x": 350.21875,
+          "y": 449.984375,
+          "width": 579.546875,
+          "height": 32,
+          "bottom": 481.984375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 350.21875,
+          "y": 481.984375,
+          "width": 579.546875,
+          "height": 24,
+          "bottom": 505.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 350.21875,
+          "y": 505.984375,
+          "width": 579.546875,
+          "height": 88,
+          "bottom": 593.984375,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 350.21875,
+          "y": 529.984375,
+          "width": 579.546875,
+          "height": 40,
+          "bottom": 569.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-prototype-candidate-your-take-phone-390x844-long-ru.png",
+      "target": "prototype-B",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "phone-390x844",
+        "width": 390,
+        "height": 844,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.177313,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": true,
+      "takeSelected": null,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 100,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px 16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 16,
+          "y": 68,
+          "width": 358,
+          "height": 44,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 6,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 16,
+          "y": 12,
+          "width": 77.265625,
+          "height": 48,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "12px",
+          "gap": "8px",
+          "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 16,
+          "y": 128,
+          "width": 358,
+          "height": 201.375,
+          "bottom": 329.375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 329.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 485.375,
+          "radius": "0px",
+          "padding": "14px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 16,
+          "y": 343.375,
+          "width": 358,
+          "height": 128,
+          "bottom": 471.375
+        },
+        "waveform": {
+          "x": 16,
+          "y": 485.375,
+          "width": 358,
+          "height": 64,
+          "bottom": 549.375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 16,
+          "y": 549.375,
+          "width": 358,
+          "height": 56,
+          "bottom": 605.375,
+          "radius": "0px",
+          "padding": "4px 0px 0px",
+          "gap": "0px 12px",
+          "font": ""
+        },
+        "controls": {
+          "x": 16,
+          "y": 605.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 761.375,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 16,
+          "y": 629.375,
+          "width": 358,
+          "height": 104,
+          "bottom": 733.375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-app-initial-desktop-1440x900.png",
+      "target": "app-A",
+      "state": "initial",
+      "viewport": {
+        "name": "desktop-1440x900",
+        "width": 1440,
+        "height": 900,
+        "longRu": false
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": false,
+      "candidate": false,
+      "takeSelected": false,
+      "lineText": "What brings you to the land of the gatekeepers?",
+      "metrics": {
+        "title": {
+          "x": 328,
+          "y": 20,
+          "width": 784,
+          "height": 64,
+          "bottom": 84,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 494.390625,
+          "y": 20,
+          "width": 451.203125,
+          "height": 44,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 494.390625,
+          "y": 58,
+          "width": 451.203125,
+          "height": 6,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 328,
+          "y": 20,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 328,
+          "y": 96,
+          "width": 784,
+          "height": 441,
+          "bottom": 537,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 537,
+          "width": 784,
+          "height": 107.984375,
+          "bottom": 644.984375,
+          "radius": "0px",
+          "padding": "12px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 328,
+          "y": 549,
+          "width": 784,
+          "height": 34,
+          "bottom": 583
+        },
+        "waveform": {
+          "x": 328,
+          "y": 644.984375,
+          "width": 784,
+          "height": 64,
+          "bottom": 708.984375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 328,
+          "y": 714.984375,
+          "width": 784,
+          "height": 32,
+          "bottom": 746.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 1136,
+          "y": 96,
+          "width": 272,
+          "height": 332,
+          "bottom": 428,
+          "radius": "10px",
+          "padding": "16px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 1152,
+          "y": 149,
+          "width": 240,
+          "height": 140,
+          "bottom": 289,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "10px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-app-initial-short-1280x600-long-ru.png",
+      "target": "app-A",
+      "state": "initial",
+      "viewport": {
+        "name": "short-1280x600",
+        "width": 1280,
+        "height": 600,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1280,
+        "height": 600
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": false,
+      "takeSelected": false,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 328,
+          "y": 12,
+          "width": 624,
+          "height": 40,
+          "bottom": 52,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 480,
+          "y": 12,
+          "width": 320,
+          "height": 38,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 480,
+          "y": 44,
+          "width": 320,
+          "height": 6,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 328,
+          "y": 12,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 52,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 328,
+          "y": 56,
+          "width": 624,
+          "height": 351,
+          "bottom": 407,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 407,
+          "width": 624,
+          "height": 68,
+          "bottom": 475,
+          "radius": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 328,
+          "y": 411,
+          "width": 624,
+          "height": 60,
+          "bottom": 471
+        },
+        "waveform": {
+          "x": 328,
+          "y": 487,
+          "width": 624,
+          "height": 32,
+          "bottom": 519,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 328,
+          "y": 525,
+          "width": 624,
+          "height": 24,
+          "bottom": 549,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 976,
+          "y": 56,
+          "width": 272,
+          "height": 226,
+          "bottom": 282,
+          "radius": "10px",
+          "padding": "12px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 988,
+          "y": 89,
+          "width": 248,
+          "height": 86,
+          "bottom": 175,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "6px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-app-initial-phone-390x844-long-ru.png",
+      "target": "app-A",
+      "state": "initial",
+      "viewport": {
+        "name": "phone-390x844",
+        "width": 390,
+        "height": 844,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 390,
+        "height": 887
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": false,
+      "takeSelected": false,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 100,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px 16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 16,
+          "y": 68,
+          "width": 358,
+          "height": 44,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 6,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 16,
+          "y": 12,
+          "width": 77.265625,
+          "height": 48,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "12px",
+          "gap": "8px",
+          "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 16,
+          "y": 128,
+          "width": 358,
+          "height": 201.375,
+          "bottom": 329.375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 329.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 485.375,
+          "radius": "0px",
+          "padding": "14px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 16,
+          "y": 343.375,
+          "width": 358,
+          "height": 128,
+          "bottom": 471.375
+        },
+        "waveform": {
+          "x": 16,
+          "y": 485.375,
+          "width": 358,
+          "height": 64,
+          "bottom": 549.375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 16,
+          "y": 555.375,
+          "width": 358,
+          "height": 56,
+          "bottom": 611.375,
+          "radius": "0px",
+          "padding": "4px 0px 0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 16,
+          "y": 631.375,
+          "width": 358,
+          "height": 224,
+          "bottom": 855.375,
+          "radius": "10px",
+          "padding": "16px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 32,
+          "y": 680.375,
+          "width": 326,
+          "height": 48,
+          "bottom": 728.375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-app-candidate-your-take-desktop-1440x900.png",
+      "target": "app-A",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "desktop-1440x900",
+        "width": 1440,
+        "height": 900,
+        "longRu": false
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.230073,
+        "paused": true
+      },
+      "longRuInjected": false,
+      "candidate": true,
+      "takeSelected": true,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 328,
+          "y": 20,
+          "width": 784,
+          "height": 64,
+          "bottom": 84,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 494.390625,
+          "y": 20,
+          "width": 451.203125,
+          "height": 44,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 494.390625,
+          "y": 58,
+          "width": 451.203125,
+          "height": 6,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 328,
+          "y": 20,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 328,
+          "y": 96,
+          "width": 784,
+          "height": 441,
+          "bottom": 537,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 537,
+          "width": 784,
+          "height": 107.984375,
+          "bottom": 644.984375,
+          "radius": "0px",
+          "padding": "12px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 328,
+          "y": 549,
+          "width": 784,
+          "height": 68,
+          "bottom": 617
+        },
+        "waveform": {
+          "x": 328,
+          "y": 644.984375,
+          "width": 784,
+          "height": 64,
+          "bottom": 708.984375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 328,
+          "y": 714.984375,
+          "width": 784,
+          "height": 32,
+          "bottom": 746.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 1136,
+          "y": 96,
+          "width": 272,
+          "height": 332,
+          "bottom": 428,
+          "radius": "10px",
+          "padding": "16px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 1152,
+          "y": 149,
+          "width": 240,
+          "height": 140,
+          "bottom": 289,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "10px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-app-candidate-your-take-short-1280x600-long-ru.png",
+      "target": "app-A",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "short-1280x600",
+        "width": 1280,
+        "height": 600,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1280,
+        "height": 600
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.230073,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": true,
+      "takeSelected": true,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 328,
+          "y": 12,
+          "width": 624,
+          "height": 40,
+          "bottom": 52,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 480,
+          "y": 12,
+          "width": 320,
+          "height": 38,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 480,
+          "y": 44,
+          "width": 320,
+          "height": 6,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 328,
+          "y": 12,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 52,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 328,
+          "y": 56,
+          "width": 624,
+          "height": 351,
+          "bottom": 407,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 328,
+          "y": 407,
+          "width": 624,
+          "height": 68,
+          "bottom": 475,
+          "radius": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 328,
+          "y": 411,
+          "width": 624,
+          "height": 60,
+          "bottom": 471
+        },
+        "waveform": {
+          "x": 328,
+          "y": 487,
+          "width": 624,
+          "height": 32,
+          "bottom": 519,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 328,
+          "y": 525,
+          "width": 624,
+          "height": 24,
+          "bottom": 549,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 976,
+          "y": 56,
+          "width": 272,
+          "height": 226,
+          "bottom": 282,
+          "radius": "10px",
+          "padding": "12px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 988,
+          "y": 89,
+          "width": 248,
+          "height": 86,
+          "bottom": 175,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "6px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "A-app-candidate-your-take-phone-390x844-long-ru.png",
+      "target": "app-A",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "phone-390x844",
+        "width": 390,
+        "height": 844,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 390,
+        "height": 887
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.230073,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": true,
+      "takeSelected": true,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 100,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px 16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 16,
+          "y": 68,
+          "width": 358,
+          "height": 44,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 6,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 16,
+          "y": 12,
+          "width": 77.265625,
+          "height": 48,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "12px",
+          "gap": "8px",
+          "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 16,
+          "y": 128,
+          "width": 358,
+          "height": 201.375,
+          "bottom": 329.375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 329.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 485.375,
+          "radius": "0px",
+          "padding": "14px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 16,
+          "y": 343.375,
+          "width": 358,
+          "height": 128,
+          "bottom": 471.375
+        },
+        "waveform": {
+          "x": 16,
+          "y": 485.375,
+          "width": 358,
+          "height": 64,
+          "bottom": 549.375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 16,
+          "y": 555.375,
+          "width": 358,
+          "height": 56,
+          "bottom": 611.375,
+          "radius": "0px",
+          "padding": "4px 0px 0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 16,
+          "y": 631.375,
+          "width": 358,
+          "height": 224,
+          "bottom": 855.375,
+          "radius": "10px",
+          "padding": "16px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 32,
+          "y": 680.375,
+          "width": 326,
+          "height": 48,
+          "bottom": 728.375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-app-initial-desktop-1440x900.png",
+      "target": "app-B",
+      "state": "initial",
+      "viewport": {
+        "name": "desktop-1440x900",
+        "width": 1440,
+        "height": 900,
+        "longRu": false
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1440,
+        "height": 904
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": false,
+      "candidate": false,
+      "takeSelected": false,
+      "lineText": "What brings you to the land of the gatekeepers?",
+      "metrics": {
+        "title": {
+          "x": 282.671875,
+          "y": 20,
+          "width": 874.65625,
+          "height": 64,
+          "bottom": 84,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 467.203125,
+          "y": 20,
+          "width": 505.59375,
+          "height": 44,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 467.203125,
+          "y": 58,
+          "width": 505.59375,
+          "height": 6,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 282.671875,
+          "y": 20,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 282.671875,
+          "y": 96,
+          "width": 874.65625,
+          "height": 491.984375,
+          "bottom": 587.984375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 282.671875,
+          "y": 587.984375,
+          "width": 874.65625,
+          "height": 107.984375,
+          "bottom": 695.96875,
+          "radius": "0px",
+          "padding": "12px 0px",
+          "gap": "normal",
+          "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 282.671875,
+          "y": 599.984375,
+          "width": 874.65625,
+          "height": 34,
+          "bottom": 633.984375
+        },
+        "waveform": {
+          "x": 282.671875,
+          "y": 695.96875,
+          "width": 874.65625,
+          "height": 64,
+          "bottom": 759.96875,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 282.671875,
+          "y": 759.96875,
+          "width": 874.65625,
+          "height": 32,
+          "bottom": 791.96875,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 282.671875,
+          "y": 791.96875,
+          "width": 874.65625,
+          "height": 91.984375,
+          "bottom": 883.953125,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 282.671875,
+          "y": 815.96875,
+          "width": 874.65625,
+          "height": 40,
+          "bottom": 855.96875,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "11.9999px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-app-initial-short-1280x600-long-ru.png",
+      "target": "app-B",
+      "state": "initial",
+      "viewport": {
+        "name": "short-1280x600",
+        "width": 1280,
+        "height": 600,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1280,
+        "height": 604
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": false,
+      "takeSelected": false,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 350.21875,
+          "y": 12,
+          "width": 579.546875,
+          "height": 40,
+          "bottom": 52,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 475.71875,
+          "y": 12,
+          "width": 328.53125,
+          "height": 38,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 475.71875,
+          "y": 44,
+          "width": 328.53125,
+          "height": 6,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 350.21875,
+          "y": 12,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 52,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 350.21875,
+          "y": 56,
+          "width": 579.546875,
+          "height": 325.984375,
+          "bottom": 381.984375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 350.21875,
+          "y": 381.984375,
+          "width": 579.546875,
+          "height": 68,
+          "bottom": 449.984375,
+          "radius": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 350.21875,
+          "y": 385.984375,
+          "width": 579.546875,
+          "height": 60,
+          "bottom": 445.984375
+        },
+        "waveform": {
+          "x": 350.21875,
+          "y": 449.984375,
+          "width": 579.546875,
+          "height": 32,
+          "bottom": 481.984375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 350.21875,
+          "y": 481.984375,
+          "width": 579.546875,
+          "height": 24,
+          "bottom": 505.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 350.21875,
+          "y": 505.984375,
+          "width": 579.546875,
+          "height": 88,
+          "bottom": 593.984375,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 350.21875,
+          "y": 529.984375,
+          "width": 579.546875,
+          "height": 40,
+          "bottom": 569.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-app-initial-phone-390x844-long-ru.png",
+      "target": "app-B",
+      "state": "initial",
+      "viewport": {
+        "name": "phone-390x844",
+        "width": 390,
+        "height": 844,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": false,
+      "takeSelected": false,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 100,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px 16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 16,
+          "y": 68,
+          "width": 358,
+          "height": 44,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 6,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 16,
+          "y": 12,
+          "width": 77.265625,
+          "height": 48,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "12px",
+          "gap": "8px",
+          "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 16,
+          "y": 128,
+          "width": 358,
+          "height": 201.375,
+          "bottom": 329.375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 329.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 485.375,
+          "radius": "0px",
+          "padding": "14px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 16,
+          "y": 343.375,
+          "width": 358,
+          "height": 128,
+          "bottom": 471.375
+        },
+        "waveform": {
+          "x": 16,
+          "y": 485.375,
+          "width": 358,
+          "height": 64,
+          "bottom": 549.375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 16,
+          "y": 549.375,
+          "width": 358,
+          "height": 56,
+          "bottom": 605.375,
+          "radius": "0px",
+          "padding": "4px 0px 0px",
+          "gap": "0px 12px",
+          "font": ""
+        },
+        "controls": {
+          "x": 16,
+          "y": 605.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 761.375,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 16,
+          "y": 629.375,
+          "width": 358,
+          "height": 104,
+          "bottom": 733.375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-app-candidate-your-take-desktop-1440x900.png",
+      "target": "app-B",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "desktop-1440x900",
+        "width": 1440,
+        "height": 900,
+        "longRu": false
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1440,
+        "height": 904
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.227298,
+        "paused": true
+      },
+      "longRuInjected": false,
+      "candidate": true,
+      "takeSelected": true,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 282.671875,
+          "y": 20,
+          "width": 874.65625,
+          "height": 64,
+          "bottom": 84,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 467.203125,
+          "y": 20,
+          "width": 505.59375,
+          "height": 44,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 467.203125,
+          "y": 58,
+          "width": 505.59375,
+          "height": 6,
+          "bottom": 64,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 282.671875,
+          "y": 20,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 282.671875,
+          "y": 96,
+          "width": 874.65625,
+          "height": 491.984375,
+          "bottom": 587.984375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 282.671875,
+          "y": 587.984375,
+          "width": 874.65625,
+          "height": 107.984375,
+          "bottom": 695.96875,
+          "radius": "0px",
+          "padding": "12px 0px",
+          "gap": "normal",
+          "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 282.671875,
+          "y": 599.984375,
+          "width": 874.65625,
+          "height": 68,
+          "bottom": 667.984375
+        },
+        "waveform": {
+          "x": 282.671875,
+          "y": 695.96875,
+          "width": 874.65625,
+          "height": 64,
+          "bottom": 759.96875,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 282.671875,
+          "y": 759.96875,
+          "width": 874.65625,
+          "height": 32,
+          "bottom": 791.96875,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 282.671875,
+          "y": 791.96875,
+          "width": 874.65625,
+          "height": 91.984375,
+          "bottom": 883.953125,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 282.671875,
+          "y": 815.96875,
+          "width": 874.65625,
+          "height": 40,
+          "bottom": 855.96875,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "11.9999px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-app-candidate-your-take-short-1280x600-long-ru.png",
+      "target": "app-B",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "short-1280x600",
+        "width": 1280,
+        "height": 600,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 1280,
+        "height": 604
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.227298,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": true,
+      "takeSelected": true,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 350.21875,
+          "y": 12,
+          "width": 579.546875,
+          "height": 40,
+          "bottom": 52,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 475.71875,
+          "y": 12,
+          "width": 328.53125,
+          "height": 38,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 475.71875,
+          "y": 44,
+          "width": 328.53125,
+          "height": 6,
+          "bottom": 50,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 350.21875,
+          "y": 12,
+          "width": 77.609375,
+          "height": 40,
+          "bottom": 52,
+          "radius": "6px",
+          "padding": "10px 14px",
+          "gap": "8px",
+          "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 350.21875,
+          "y": 56,
+          "width": 579.546875,
+          "height": 325.984375,
+          "bottom": 381.984375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 350.21875,
+          "y": 381.984375,
+          "width": 579.546875,
+          "height": 68,
+          "bottom": 449.984375,
+          "radius": "0px",
+          "padding": "4px 0px",
+          "gap": "normal",
+          "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 350.21875,
+          "y": 385.984375,
+          "width": 579.546875,
+          "height": 60,
+          "bottom": 445.984375
+        },
+        "waveform": {
+          "x": 350.21875,
+          "y": 449.984375,
+          "width": 579.546875,
+          "height": 32,
+          "bottom": 481.984375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 350.21875,
+          "y": 481.984375,
+          "width": 579.546875,
+          "height": 24,
+          "bottom": 505.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "16px",
+          "font": ""
+        },
+        "controls": {
+          "x": 350.21875,
+          "y": 505.984375,
+          "width": 579.546875,
+          "height": 88,
+          "bottom": 593.984375,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 350.21875,
+          "y": 529.984375,
+          "width": 579.546875,
+          "height": 40,
+          "bottom": 569.984375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    },
+    {
+      "image": "B-app-candidate-your-take-phone-390x844-long-ru.png",
+      "target": "app-B",
+      "state": "candidate-your-take",
+      "viewport": {
+        "name": "phone-390x844",
+        "width": 390,
+        "height": 844,
+        "longRu": true
+      },
+      "scrollX": 0,
+      "scrollY": 0,
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "fontReady": true,
+      "video": {
+        "readyState": 4,
+        "width": 960,
+        "height": 408,
+        "currentTime": 0.227298,
+        "paused": true
+      },
+      "longRuInjected": true,
+      "candidate": true,
+      "takeSelected": true,
+      "lineText": "Я ищу того, кто мне очень дорог. Мы прошли такой долгий путь, и теперь я не могу повернуть назад.",
+      "metrics": {
+        "title": {
+          "x": 16,
+          "y": 12,
+          "width": 358,
+          "height": 100,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px 16px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "heading": {
+          "x": 16,
+          "y": 68,
+          "width": 358,
+          "height": 44,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dots": {
+          "x": 16,
+          "y": 106,
+          "width": 358,
+          "height": 6,
+          "bottom": 112,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "exit": {
+          "x": 16,
+          "y": 12,
+          "width": 77.265625,
+          "height": 48,
+          "bottom": 60,
+          "radius": "6px",
+          "padding": "12px",
+          "gap": "8px",
+          "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "media": {
+          "x": 16,
+          "y": 128,
+          "width": 358,
+          "height": 201.375,
+          "bottom": 329.375,
+          "radius": "4px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogue": {
+          "x": 16,
+          "y": 329.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 485.375,
+          "radius": "0px",
+          "padding": "14px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "dialogueText": {
+          "x": 16,
+          "y": 343.375,
+          "width": 358,
+          "height": 128,
+          "bottom": 471.375
+        },
+        "waveform": {
+          "x": 16,
+          "y": 485.375,
+          "width": 358,
+          "height": 64,
+          "bottom": 549.375,
+          "radius": "6px",
+          "padding": "0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "waveformMeta": {
+          "x": 16,
+          "y": 549.375,
+          "width": 358,
+          "height": 56,
+          "bottom": 605.375,
+          "radius": "0px",
+          "padding": "4px 0px 0px",
+          "gap": "0px 12px",
+          "font": ""
+        },
+        "controls": {
+          "x": 16,
+          "y": 605.375,
+          "width": 358,
+          "height": 156,
+          "bottom": 761.375,
+          "radius": "0px",
+          "padding": "24px 0px 0px",
+          "gap": "normal",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "controlRow": {
+          "x": 16,
+          "y": 629.375,
+          "width": 358,
+          "height": 104,
+          "bottom": 733.375,
+          "radius": "0px",
+          "padding": "0px",
+          "gap": "8px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        }
+      }
+    }
+  ]
+}

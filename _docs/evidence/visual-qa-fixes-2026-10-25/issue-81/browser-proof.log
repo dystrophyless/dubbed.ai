@@ -1,0 +1,17 @@
+CAPTURE 01-short-source-rejected-en
+CAPTURE 02-en-desktop-1440x900-current-quote
+CAPTURE 03-en-short-desktop-1440x700-current-quote
+CAPTURE 04-en-breakpoint-767-current-quote
+CAPTURE 04-en-breakpoint-768-current-quote
+CAPTURE 04-en-breakpoint-phone-390-current-quote
+CAPTURE 06-en-credits-checkout-pending-before-verify
+CAPTURE 07-en-native-verified-purchase-return-current-quote
+CAPTURE 08-en-failed-short-replacement-preserves-current-quote
+CONSOLE Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+CONSOLE Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+ERROR locator.click: Timeout 20000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'Запросить точную стоимость', exact: true })[22m
+[2m    - locator resolved to <button disabled type="button" data-slot="button" data-size="medium" data-variant="primary" class="ui-button ui-button--primary ui-button--medium">Запросить точную стоимость</button>[22m
+
+    at D:\Program\python\Dubbed\_docs\evidence\visual-qa-fixes-2026-10-25\issue-81\browser-proof.cjs:388:87

@@ -1,0 +1,75 @@
+{
+  "width": 390,
+  "documentWidth": 390,
+  "heading": "Check your email",
+  "codeDescriptionHeight": 120,
+  "codeDescriptionClientHeight": 120,
+  "codeDescriptionScrollHeight": 120,
+  "headingWeight": "500",
+  "headingSynthesis": "none",
+  "mabryLoaded": true,
+  "primary": null,
+  "passwordToggleHeight": null,
+  "primaryFontSize": null,
+  "primaryLineHeight": null,
+  "primaryFontWeight": null,
+  "authTextLinkHeight": null,
+  "authTextLinkFontSize": null,
+  "authTextLinkLineHeight": null,
+  "otpControlHeight": 48,
+  "otpGap": "8px",
+  "otpFocused": false,
+  "otpSelection": [
+    0,
+    0
+  ],
+  "otpInvalid": null,
+  "otpSelectedCellCount": 0,
+  "otpActiveCellIndex": -1,
+  "buttonsInViewport": true,
+  "otpCells": [
+    {
+      "width": 40,
+      "height": 44,
+      "fontSize": "15px",
+      "fontWeight": "500",
+      "lineHeight": "24px"
+    },
+    {
+      "width": 40,
+      "height": 44,
+      "fontSize": "15px",
+      "fontWeight": "500",
+      "lineHeight": "24px"
+    },
+    {
+      "width": 40,
+      "height": 44,
+      "fontSize": "15px",
+      "fontWeight": "500",
+      "lineHeight": "24px"
+    },
+    {
+      "width": 40,
+      "height": 44,
+      "fontSize": "15px",
+      "fontWeight": "500",
+      "lineHeight": "24px"
+    },
+    {
+      "width": 40,
+      "height": 44,
+      "fontSize": "15px",
+      "fontWeight": "500",
+      "lineHeight": "24px"
+    },
+    {
+      "width": 40,
+      "height": 44,
+      "fontSize": "15px",
+      "fontWeight": "500",
+      "lineHeight": "24px"
+    }
+  ],
+  "codeDescription": "Enter the six-digit verification code for averylonglocalpart.abcdefghijklmnopqrstuvwxyz0123456789@averylongsubdomain.abcdefghijklmnopqrstuvwxyz.example.invalid."
+}

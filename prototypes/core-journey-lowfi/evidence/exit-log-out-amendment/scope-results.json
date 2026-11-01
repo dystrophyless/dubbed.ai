@@ -1,0 +1,32 @@
+{
+  "amendment": "exit-log-out-2026-10-28",
+  "date": "2026-10-28",
+  "result": "PASS",
+  "checks": [
+    {
+      "variant": "A",
+      "result": "PASS",
+      "changedExistingFingerprints": [
+        "BRIEF.md",
+        "icons.js",
+        "src.js"
+      ],
+      "behaviorOnlyExitIconMappingChanged": true,
+      "allPreviousIconDefinitionsUnchanged": true
+    },
+    {
+      "variant": "B",
+      "result": "PASS",
+      "changedExistingFingerprints": [
+        "BRIEF.md",
+        "icons.js",
+        "src.js"
+      ],
+      "behaviorOnlyExitIconMappingChanged": true,
+      "allPreviousIconDefinitionsUnchanged": true
+    }
+  ],
+  "canonicalUnchanged": 9,
+  "gitDiffCheck": "PASS",
+  "limits": "No layout or behavior change;full journey matrix not repeated for icon-only replacement. Historical evidence untouched."
+}

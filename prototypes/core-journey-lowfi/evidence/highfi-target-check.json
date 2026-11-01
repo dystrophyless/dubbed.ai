@@ -1,0 +1,169 @@
+{
+  "version": "core-journey-highfi-v1",
+  "date": "2026-10-27",
+  "scope": "visible product global/main controls, excludes outside-product controls/credits and native video internals",
+  "checks": [
+    {
+      "lang": "en",
+      "viewport": [
+        390,
+        844
+      ],
+      "targets": [
+        {
+          "id": "brand",
+          "tag": "A",
+          "w": 79.453125,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "hf-button hf-ghost hf-navigation-role",
+          "tag": "BUTTON",
+          "w": 110.546875,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "scrub",
+          "tag": "INPUT",
+          "w": 358,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "volume",
+          "tag": "INPUT",
+          "w": 80,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "replay",
+          "tag": "BUTTON",
+          "w": 93.9375,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "record",
+          "tag": "BUTTON",
+          "w": 122.109375,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "take",
+          "tag": "BUTTON",
+          "w": 93.9375,
+          "h": 48,
+          "disabled": true
+        },
+        {
+          "id": "previous",
+          "tag": "BUTTON",
+          "w": 158,
+          "h": 48,
+          "disabled": true
+        },
+        {
+          "id": "next",
+          "tag": "BUTTON",
+          "w": 158,
+          "h": 48,
+          "disabled": true
+        },
+        {
+          "id": "process-again",
+          "tag": "BUTTON",
+          "w": 326,
+          "h": 48,
+          "disabled": false
+        }
+      ],
+      "minimum48High": "PASS",
+      "horizontalOverflow": false
+    },
+    {
+      "lang": "ru",
+      "viewport": [
+        390,
+        844
+      ],
+      "targets": [
+        {
+          "id": "brand",
+          "tag": "A",
+          "w": 79.453125,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "hf-button hf-ghost hf-navigation-role",
+          "tag": "BUTTON",
+          "w": 128.703125,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "scrub",
+          "tag": "INPUT",
+          "w": 358,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "volume",
+          "tag": "INPUT",
+          "w": 80,
+          "h": 48,
+          "disabled": false
+        },
+        {
+          "id": "replay",
+          "tag": "BUTTON",
+          "w": 95.1875,
+          "h": 72,
+          "disabled": false
+        },
+        {
+          "id": "record",
+          "tag": "BUTTON",
+          "w": 121.40625,
+          "h": 72,
+          "disabled": false
+        },
+        {
+          "id": "take",
+          "tag": "BUTTON",
+          "w": 93.40625,
+          "h": 72,
+          "disabled": true
+        },
+        {
+          "id": "previous",
+          "tag": "BUTTON",
+          "w": 158,
+          "h": 48,
+          "disabled": true
+        },
+        {
+          "id": "next",
+          "tag": "BUTTON",
+          "w": 158,
+          "h": 48,
+          "disabled": true
+        },
+        {
+          "id": "process-again",
+          "tag": "BUTTON",
+          "w": 326,
+          "h": 48,
+          "disabled": false
+        }
+      ],
+      "minimum48High": "PASS",
+      "horizontalOverflow": false
+    }
+  ]
+}

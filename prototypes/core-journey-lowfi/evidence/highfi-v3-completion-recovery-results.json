@@ -1,0 +1,10 @@
+{
+  "version": "core-journey-highfi-v3",
+  "date": "2026-10-27",
+  "result": "PASS",
+  "scenario": "Initial completion through Save and go does not replace unresolved microphone feedback with success; Result hides irrelevant notice and Return restores durable guidance without replaying the popup; new successful simulated capture resolves it",
+  "viewport": [
+    1280,
+    600
+  ]
+}

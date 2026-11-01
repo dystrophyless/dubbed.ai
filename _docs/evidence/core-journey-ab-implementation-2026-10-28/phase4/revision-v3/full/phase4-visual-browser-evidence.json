@@ -1,0 +1,2038 @@
+{
+  "timestamp": "2026-10-28T19:15:40.791Z",
+  "browser": "Chrome 156.0.8078.49",
+  "nativeCaptureRequested": false,
+  "forcedColorsAndReducedMotion": {
+    "forcedColors": true,
+    "reducedMotion": true,
+    "documentWidth": 640
+  },
+  "viewports": [
+    {
+      "layout": "A",
+      "width": 1440,
+      "height": 900,
+      "locale": "en",
+      "screenshot": "A-1440x900-en.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1440,
+      "documentHeight": 900,
+      "scrollY": 0,
+      "media": {
+        "x": 328,
+        "y": 96,
+        "top": 96,
+        "width": 784,
+        "height": 441,
+        "right": 1112,
+        "bottom": 537
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 549,
+        "top": 549,
+        "width": 784,
+        "height": 34,
+        "right": 1112,
+        "bottom": 583
+      },
+      "waveform": {
+        "x": 328,
+        "y": 644.984375,
+        "top": 644.984375,
+        "width": 784,
+        "height": 64,
+        "right": 1112,
+        "bottom": 708.984375
+      },
+      "panel": {
+        "x": 1136,
+        "y": 96,
+        "top": 96,
+        "width": 272,
+        "height": 311,
+        "right": 1408,
+        "bottom": 407
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 32,
+        "y": 96,
+        "top": 96,
+        "width": 1376,
+        "height": 648.984375,
+        "right": 1408,
+        "bottom": 744.984375
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 900,
+        "right": 1440,
+        "bottom": 900
+      },
+      "mediaWidthToken": "784px",
+      "controlButtons": [],
+      "exit": {
+        "x": 328,
+        "y": 20,
+        "top": 20,
+        "width": 77.609375,
+        "height": 40,
+        "right": 405.609375,
+        "bottom": 60
+      },
+      "lineCount": null,
+      "title": {
+        "x": 494.390625,
+        "y": 20,
+        "top": 20,
+        "width": 451.203125,
+        "height": 28,
+        "right": 945.59375,
+        "bottom": 48
+      },
+      "dots": {
+        "x": 494.390625,
+        "y": 58,
+        "top": 58,
+        "width": 451.203125,
+        "height": 6,
+        "right": 945.59375,
+        "bottom": 64
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "B",
+      "width": 1440,
+      "height": 900,
+      "locale": "en",
+      "screenshot": "B-1440x900-en.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1440,
+      "documentHeight": 900,
+      "scrollY": 0,
+      "media": {
+        "x": 295.09375,
+        "y": 96,
+        "top": 96,
+        "width": 849.796875,
+        "height": 478,
+        "right": 1144.890625,
+        "bottom": 574
+      },
+      "dialogue": {
+        "x": 295.09375,
+        "y": 586,
+        "top": 586,
+        "width": 849.796875,
+        "height": 34,
+        "right": 1144.890625,
+        "bottom": 620
+      },
+      "waveform": {
+        "x": 295.09375,
+        "y": 681.984375,
+        "top": 681.984375,
+        "width": 849.796875,
+        "height": 64,
+        "right": 1144.890625,
+        "bottom": 745.984375
+      },
+      "panel": null,
+      "controls": {
+        "x": 295.09375,
+        "y": 805.984375,
+        "top": 805.984375,
+        "width": 849.796875,
+        "height": 40,
+        "right": 1144.890625,
+        "bottom": 845.984375
+      },
+      "status": {
+        "x": 295.09375,
+        "y": 853.984375,
+        "top": 853.984375,
+        "width": 849.796875,
+        "height": 20,
+        "right": 1144.890625,
+        "bottom": 873.984375
+      },
+      "workspace": {
+        "x": 32,
+        "y": 96,
+        "top": 96,
+        "width": 1376,
+        "height": 777.984375,
+        "right": 1408,
+        "bottom": 873.984375
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 900,
+        "right": 1440,
+        "bottom": 900
+      },
+      "mediaWidthToken": "849.8057333333333px",
+      "controlButtons": [
+        {
+          "text": "Previous",
+          "x": 433.46875,
+          "y": 805.984375,
+          "width": 99.46875,
+          "height": 40,
+          "bottom": 845.984375
+        },
+        {
+          "text": "Original",
+          "x": 544.921875,
+          "y": 805.984375,
+          "width": 96,
+          "height": 40,
+          "bottom": 845.984375
+        },
+        {
+          "text": "Record",
+          "x": 652.90625,
+          "y": 805.984375,
+          "width": 128,
+          "height": 40,
+          "bottom": 845.984375
+        },
+        {
+          "text": "Your take",
+          "x": 792.890625,
+          "y": 805.984375,
+          "width": 105.640625,
+          "height": 40,
+          "bottom": 845.984375
+        },
+        {
+          "text": "Next",
+          "x": 910.515625,
+          "y": 805.984375,
+          "width": 96,
+          "height": 40,
+          "bottom": 845.984375
+        }
+      ],
+      "exit": {
+        "x": 295.09375,
+        "y": 20,
+        "top": 20,
+        "width": 77.609375,
+        "height": 40,
+        "right": 372.703125,
+        "bottom": 60
+      },
+      "lineCount": {
+        "x": 1087.28125,
+        "y": 20,
+        "top": 20,
+        "width": 57.59375,
+        "height": 30,
+        "right": 1144.875,
+        "bottom": 50
+      },
+      "title": {
+        "x": 474.640625,
+        "y": 20,
+        "top": 20,
+        "width": 490.6875,
+        "height": 28,
+        "right": 965.328125,
+        "bottom": 48
+      },
+      "dots": {
+        "x": 474.640625,
+        "y": 58,
+        "top": 58,
+        "width": 490.6875,
+        "height": 6,
+        "right": 965.328125,
+        "bottom": 64
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 1920,
+      "height": 910,
+      "locale": "en",
+      "screenshot": "A-1920x910-en.png",
+      "viewport": {
+        "width": 1920,
+        "height": 910
+      },
+      "documentWidth": 1920,
+      "documentHeight": 910,
+      "scrollY": 0,
+      "media": {
+        "x": 500,
+        "y": 96,
+        "top": 96,
+        "width": 920,
+        "height": 517.5,
+        "right": 1420,
+        "bottom": 613.5
+      },
+      "dialogue": {
+        "x": 500,
+        "y": 625.5,
+        "top": 625.5,
+        "width": 920,
+        "height": 34,
+        "right": 1420,
+        "bottom": 659.5
+      },
+      "waveform": {
+        "x": 500,
+        "y": 721.5,
+        "top": 721.5,
+        "width": 920,
+        "height": 64,
+        "right": 1420,
+        "bottom": 785.5
+      },
+      "panel": {
+        "x": 1444,
+        "y": 96,
+        "top": 96,
+        "width": 272,
+        "height": 311,
+        "right": 1716,
+        "bottom": 407
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 32,
+        "y": 96,
+        "top": 96,
+        "width": 1856,
+        "height": 725.5,
+        "right": 1888,
+        "bottom": 821.5
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 910,
+        "right": 1920,
+        "bottom": 910
+      },
+      "mediaWidthToken": "920px",
+      "controlButtons": [],
+      "exit": {
+        "x": 500,
+        "y": 20,
+        "top": 20,
+        "width": 77.609375,
+        "height": 40,
+        "right": 577.609375,
+        "bottom": 60
+      },
+      "lineCount": null,
+      "title": {
+        "x": 693.59375,
+        "y": 20,
+        "top": 20,
+        "width": 532.796875,
+        "height": 28,
+        "right": 1226.390625,
+        "bottom": 48
+      },
+      "dots": {
+        "x": 693.59375,
+        "y": 58,
+        "top": 58,
+        "width": 532.796875,
+        "height": 6,
+        "right": 1226.390625,
+        "bottom": 64
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "B",
+      "width": 1280,
+      "height": 600,
+      "locale": "ru",
+      "turn": "sintel-turn-3",
+      "screenshot": "B-1280x600-ru-long.png",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "documentWidth": 1280,
+      "documentHeight": 600,
+      "scrollY": 0,
+      "media": {
+        "x": 352,
+        "y": 56,
+        "top": 56,
+        "width": 576,
+        "height": 324,
+        "right": 928,
+        "bottom": 380
+      },
+      "dialogue": {
+        "x": 352,
+        "y": 384,
+        "top": 384,
+        "width": 576,
+        "height": 30,
+        "right": 928,
+        "bottom": 414
+      },
+      "waveform": {
+        "x": 352,
+        "y": 448,
+        "top": 448,
+        "width": 576,
+        "height": 32,
+        "right": 928,
+        "bottom": 480
+      },
+      "panel": null,
+      "controls": {
+        "x": 352,
+        "y": 532,
+        "top": 532,
+        "width": 576,
+        "height": 40,
+        "right": 928,
+        "bottom": 572
+      },
+      "status": {
+        "x": 352,
+        "y": 578,
+        "top": 578,
+        "width": 576,
+        "height": 20,
+        "right": 928,
+        "bottom": 598
+      },
+      "workspace": {
+        "x": 32,
+        "y": 56,
+        "top": 56,
+        "width": 1216,
+        "height": 542,
+        "right": 1248,
+        "bottom": 598
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 600,
+        "right": 1280,
+        "bottom": 600
+      },
+      "mediaWidthToken": "576px",
+      "controlButtons": [
+        {
+          "text": "Назад",
+          "x": 353.125,
+          "y": 532,
+          "width": 96,
+          "height": 40,
+          "bottom": 572
+        },
+        {
+          "text": "Оригинал",
+          "x": 457.125,
+          "y": 532,
+          "width": 108.546875,
+          "height": 40,
+          "bottom": 572
+        },
+        {
+          "text": "Записать",
+          "x": 573.671875,
+          "y": 532,
+          "width": 128,
+          "height": 40,
+          "bottom": 572
+        },
+        {
+          "text": "Ваш дубль",
+          "x": 709.671875,
+          "y": 532,
+          "width": 113.1875,
+          "height": 40,
+          "bottom": 572
+        },
+        {
+          "text": "Далее",
+          "x": 830.859375,
+          "y": 532,
+          "width": 96,
+          "height": 40,
+          "bottom": 572
+        }
+      ],
+      "exit": {
+        "x": 352,
+        "y": 12,
+        "top": 12,
+        "width": 94.140625,
+        "height": 40,
+        "right": 446.140625,
+        "bottom": 52
+      },
+      "lineCount": {
+        "x": 841.96875,
+        "y": 12,
+        "top": 12,
+        "width": 86.03125,
+        "height": 30,
+        "right": 928,
+        "bottom": 42
+      },
+      "title": {
+        "x": 476.796875,
+        "y": 12,
+        "top": 12,
+        "width": 326.390625,
+        "height": 28,
+        "right": 803.1875,
+        "bottom": 40
+      },
+      "dots": {
+        "x": 476.796875,
+        "y": 44,
+        "top": 44,
+        "width": 326.390625,
+        "height": 6,
+        "right": 803.1875,
+        "bottom": 50
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 1280,
+      "height": 600,
+      "locale": "en",
+      "screenshot": "A-1280x600-en.png",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "documentWidth": 1280,
+      "documentHeight": 600,
+      "scrollY": 0,
+      "media": {
+        "x": 328,
+        "y": 56,
+        "top": 56,
+        "width": 624,
+        "height": 351,
+        "right": 952,
+        "bottom": 407
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 411,
+        "top": 411,
+        "width": 624,
+        "height": 30,
+        "right": 952,
+        "bottom": 441
+      },
+      "waveform": {
+        "x": 328,
+        "y": 475,
+        "top": 475,
+        "width": 624,
+        "height": 32,
+        "right": 952,
+        "bottom": 507
+      },
+      "panel": {
+        "x": 976,
+        "y": 56,
+        "top": 56,
+        "width": 272,
+        "height": 311,
+        "right": 1248,
+        "bottom": 367
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 32,
+        "y": 56,
+        "top": 56,
+        "width": 1216,
+        "height": 487,
+        "right": 1248,
+        "bottom": 543
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1280,
+        "height": 600,
+        "right": 1280,
+        "bottom": 600
+      },
+      "mediaWidthToken": "624px",
+      "controlButtons": [],
+      "exit": {
+        "x": 328,
+        "y": 12,
+        "top": 12,
+        "width": 77.609375,
+        "height": 40,
+        "right": 405.609375,
+        "bottom": 52
+      },
+      "lineCount": null,
+      "title": {
+        "x": 462.390625,
+        "y": 12,
+        "top": 12,
+        "width": 355.203125,
+        "height": 28,
+        "right": 817.59375,
+        "bottom": 40
+      },
+      "dots": {
+        "x": 462.390625,
+        "y": 44,
+        "top": 44,
+        "width": 355.203125,
+        "height": 6,
+        "right": 817.59375,
+        "bottom": 50
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 1366,
+      "height": 650,
+      "locale": "ru",
+      "turn": "sintel-turn-3",
+      "screenshot": "A-1366x650-ru-long.png",
+      "viewport": {
+        "width": 1366,
+        "height": 650
+      },
+      "documentWidth": 1366,
+      "documentHeight": 650,
+      "scrollY": 0,
+      "media": {
+        "x": 328,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 710,
+        "height": 399.375,
+        "right": 1038,
+        "bottom": 462.03125
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 467.359375,
+        "top": 467.359375,
+        "width": 710,
+        "height": 30.671875,
+        "right": 1038,
+        "bottom": 498.03125
+      },
+      "waveform": {
+        "x": 328,
+        "y": 536.6875,
+        "top": 536.6875,
+        "width": 710,
+        "height": 37.328125,
+        "right": 1038,
+        "bottom": 574.015625
+      },
+      "panel": {
+        "x": 1062,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 272,
+        "height": 331,
+        "right": 1334,
+        "bottom": 393.65625
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 32,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 1302,
+        "height": 547.359375,
+        "right": 1334,
+        "bottom": 610.015625
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1366,
+        "height": 650,
+        "right": 1366,
+        "bottom": 650
+      },
+      "mediaWidthToken": "710px",
+      "controlButtons": [],
+      "exit": {
+        "x": 328,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 94.140625,
+        "height": 40,
+        "right": 422.140625,
+        "bottom": 53.328125
+      },
+      "lineCount": null,
+      "title": {
+        "x": 479.59375,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 406.796875,
+        "height": 28,
+        "right": 886.390625,
+        "bottom": 41.328125
+      },
+      "dots": {
+        "x": 479.59375,
+        "y": 46.328125,
+        "top": 46.328125,
+        "width": 406.796875,
+        "height": 6,
+        "right": 886.390625,
+        "bottom": 52.328125
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "B",
+      "width": 1366,
+      "height": 650,
+      "locale": "ru",
+      "turn": "sintel-turn-3",
+      "screenshot": "B-1366x650-ru-long.png",
+      "viewport": {
+        "width": 1366,
+        "height": 650
+      },
+      "documentWidth": 1366,
+      "documentHeight": 650,
+      "scrollY": 0,
+      "media": {
+        "x": 367.125,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 631.75,
+        "height": 355.359375,
+        "right": 998.875,
+        "bottom": 418.015625
+      },
+      "dialogue": {
+        "x": 367.125,
+        "y": 423.34375,
+        "top": 423.34375,
+        "width": 631.75,
+        "height": 30.671875,
+        "right": 998.875,
+        "bottom": 454.015625
+      },
+      "waveform": {
+        "x": 367.125,
+        "y": 492.671875,
+        "top": 492.671875,
+        "width": 631.75,
+        "height": 37.328125,
+        "right": 998.875,
+        "bottom": 530
+      },
+      "panel": null,
+      "controls": {
+        "x": 367.125,
+        "y": 582,
+        "top": 582,
+        "width": 631.75,
+        "height": 40,
+        "right": 998.875,
+        "bottom": 622
+      },
+      "status": {
+        "x": 367.125,
+        "y": 628,
+        "top": 628,
+        "width": 631.75,
+        "height": 20,
+        "right": 998.875,
+        "bottom": 648
+      },
+      "workspace": {
+        "x": 32,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 1302,
+        "height": 585.34375,
+        "right": 1334,
+        "bottom": 648
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1366,
+        "height": 650,
+        "right": 1366,
+        "bottom": 650
+      },
+      "mediaWidthToken": "631.75px",
+      "controlButtons": [
+        {
+          "text": "Назад",
+          "x": 394.8125,
+          "y": 582,
+          "width": 96,
+          "height": 40,
+          "bottom": 622
+        },
+        {
+          "text": "Оригинал",
+          "x": 499.46875,
+          "y": 582,
+          "width": 108.546875,
+          "height": 40,
+          "bottom": 622
+        },
+        {
+          "text": "Записать",
+          "x": 616.671875,
+          "y": 582,
+          "width": 128,
+          "height": 40,
+          "bottom": 622
+        },
+        {
+          "text": "Ваш дубль",
+          "x": 753.328125,
+          "y": 582,
+          "width": 113.1875,
+          "height": 40,
+          "bottom": 622
+        },
+        {
+          "text": "Далее",
+          "x": 875.171875,
+          "y": 582,
+          "width": 96,
+          "height": 40,
+          "bottom": 622
+        }
+      ],
+      "exit": {
+        "x": 367.125,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 94.140625,
+        "height": 40,
+        "right": 461.265625,
+        "bottom": 53.328125
+      },
+      "lineCount": {
+        "x": 912.828125,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 86.03125,
+        "height": 30,
+        "right": 998.859375,
+        "bottom": 43.328125
+      },
+      "title": {
+        "x": 503.0625,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 359.859375,
+        "height": 28,
+        "right": 862.921875,
+        "bottom": 41.328125
+      },
+      "dots": {
+        "x": 503.0625,
+        "y": 46.328125,
+        "top": 46.328125,
+        "width": 359.859375,
+        "height": 6,
+        "right": 862.921875,
+        "bottom": 52.328125
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 1248,
+      "height": 900,
+      "locale": "en",
+      "screenshot": "A-1248x900-en.png",
+      "viewport": {
+        "width": 1248,
+        "height": 900
+      },
+      "documentWidth": 1248,
+      "documentHeight": 900,
+      "scrollY": 0,
+      "media": {
+        "x": 328,
+        "y": 96,
+        "top": 96,
+        "width": 592,
+        "height": 333,
+        "right": 920,
+        "bottom": 429
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 441,
+        "top": 441,
+        "width": 592,
+        "height": 34,
+        "right": 920,
+        "bottom": 475
+      },
+      "waveform": {
+        "x": 328,
+        "y": 536.984375,
+        "top": 536.984375,
+        "width": 592,
+        "height": 64,
+        "right": 920,
+        "bottom": 600.984375
+      },
+      "panel": {
+        "x": 944,
+        "y": 96,
+        "top": 96,
+        "width": 272,
+        "height": 311,
+        "right": 1216,
+        "bottom": 407
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 32,
+        "y": 96,
+        "top": 96,
+        "width": 1184,
+        "height": 540.984375,
+        "right": 1216,
+        "bottom": 636.984375
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1248,
+        "height": 900,
+        "right": 1248,
+        "bottom": 900
+      },
+      "mediaWidthToken": "592px",
+      "controlButtons": [],
+      "exit": {
+        "x": 328,
+        "y": 20,
+        "top": 20,
+        "width": 77.609375,
+        "height": 40,
+        "right": 405.609375,
+        "bottom": 60
+      },
+      "lineCount": null,
+      "title": {
+        "x": 456,
+        "y": 20,
+        "top": 20,
+        "width": 336,
+        "height": 28,
+        "right": 792,
+        "bottom": 48
+      },
+      "dots": {
+        "x": 456,
+        "y": 58,
+        "top": 58,
+        "width": 336,
+        "height": 6,
+        "right": 792,
+        "bottom": 64
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 1247,
+      "height": 900,
+      "locale": "en",
+      "screenshot": "A-1247x900-en.png",
+      "viewport": {
+        "width": 1247,
+        "height": 900
+      },
+      "documentWidth": 1247,
+      "documentHeight": 1182,
+      "scrollY": 0,
+      "media": {
+        "x": 163.5,
+        "y": 96,
+        "top": 96,
+        "width": 920,
+        "height": 517.5,
+        "right": 1083.5,
+        "bottom": 613.5
+      },
+      "dialogue": {
+        "x": 163.5,
+        "y": 625.5,
+        "top": 625.5,
+        "width": 920,
+        "height": 34,
+        "right": 1083.5,
+        "bottom": 659.5
+      },
+      "waveform": {
+        "x": 163.5,
+        "y": 721.484375,
+        "top": 721.484375,
+        "width": 920,
+        "height": 64,
+        "right": 1083.5,
+        "bottom": 785.484375
+      },
+      "panel": {
+        "x": 163.5,
+        "y": 845.484375,
+        "top": 845.484375,
+        "width": 920,
+        "height": 311,
+        "right": 1083.5,
+        "bottom": 1156.484375
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 32,
+        "y": 96,
+        "top": 96,
+        "width": 1183,
+        "height": 1060.484375,
+        "right": 1215,
+        "bottom": 1156.484375
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1247,
+        "height": 1182.46875,
+        "right": 1247,
+        "bottom": 1182.46875
+      },
+      "mediaWidthToken": "min(920px, 100%)",
+      "controlButtons": [],
+      "exit": {
+        "x": 163.5,
+        "y": 20,
+        "top": 20,
+        "width": 77.609375,
+        "height": 40,
+        "right": 241.109375,
+        "bottom": 60
+      },
+      "lineCount": null,
+      "title": {
+        "x": 357.09375,
+        "y": 20,
+        "top": 20,
+        "width": 532.796875,
+        "height": 28,
+        "right": 889.890625,
+        "bottom": 48
+      },
+      "dots": {
+        "x": 357.09375,
+        "y": 58,
+        "top": 58,
+        "width": 532.796875,
+        "height": 6,
+        "right": 889.890625,
+        "bottom": 64
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 1024,
+      "height": 650,
+      "locale": "en",
+      "screenshot": "A-1024x650-en.png",
+      "viewport": {
+        "width": 1024,
+        "height": 650
+      },
+      "documentWidth": 1024,
+      "documentHeight": 1079,
+      "scrollY": 0,
+      "media": {
+        "x": 52,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 920,
+        "height": 517.5,
+        "right": 972,
+        "bottom": 580.15625
+      },
+      "dialogue": {
+        "x": 52,
+        "y": 585.484375,
+        "top": 585.484375,
+        "width": 920,
+        "height": 30.671875,
+        "right": 972,
+        "bottom": 616.15625
+      },
+      "waveform": {
+        "x": 52,
+        "y": 654.8125,
+        "top": 654.8125,
+        "width": 920,
+        "height": 37.328125,
+        "right": 972,
+        "bottom": 692.140625
+      },
+      "panel": {
+        "x": 52,
+        "y": 752.140625,
+        "top": 752.140625,
+        "width": 920,
+        "height": 311,
+        "right": 972,
+        "bottom": 1063.140625
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 32,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 960,
+        "height": 1000.484375,
+        "right": 992,
+        "bottom": 1063.140625
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 1079.140625,
+        "right": 1024,
+        "bottom": 1079.140625
+      },
+      "mediaWidthToken": "min(920px, 100%)",
+      "controlButtons": [],
+      "exit": {
+        "x": 52,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 77.609375,
+        "height": 40,
+        "right": 129.609375,
+        "bottom": 53.328125
+      },
+      "lineCount": null,
+      "title": {
+        "x": 245.59375,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 532.796875,
+        "height": 28,
+        "right": 778.390625,
+        "bottom": 41.328125
+      },
+      "dots": {
+        "x": 245.59375,
+        "y": 46.328125,
+        "top": 46.328125,
+        "width": 532.796875,
+        "height": 6,
+        "right": 778.390625,
+        "bottom": 52.328125
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 1023,
+      "height": 650,
+      "locale": "en",
+      "screenshot": "A-1023x650-en.png",
+      "viewport": {
+        "width": 1023,
+        "height": 650
+      },
+      "documentWidth": 1023,
+      "documentHeight": 1079,
+      "scrollY": 0,
+      "media": {
+        "x": 51.5,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 920,
+        "height": 517.5,
+        "right": 971.5,
+        "bottom": 580.15625
+      },
+      "dialogue": {
+        "x": 51.5,
+        "y": 585.484375,
+        "top": 585.484375,
+        "width": 920,
+        "height": 30.671875,
+        "right": 971.5,
+        "bottom": 616.15625
+      },
+      "waveform": {
+        "x": 51.5,
+        "y": 654.8125,
+        "top": 654.8125,
+        "width": 920,
+        "height": 37.328125,
+        "right": 971.5,
+        "bottom": 692.140625
+      },
+      "panel": {
+        "x": 51.5,
+        "y": 752.140625,
+        "top": 752.140625,
+        "width": 920,
+        "height": 311,
+        "right": 971.5,
+        "bottom": 1063.140625
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 32,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 959,
+        "height": 1000.484375,
+        "right": 991,
+        "bottom": 1063.140625
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1023,
+        "height": 1079.140625,
+        "right": 1023,
+        "bottom": 1079.140625
+      },
+      "mediaWidthToken": "min(920px, 100%)",
+      "controlButtons": [],
+      "exit": {
+        "x": 51.5,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 77.609375,
+        "height": 40,
+        "right": 129.109375,
+        "bottom": 53.328125
+      },
+      "lineCount": null,
+      "title": {
+        "x": 245.09375,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 532.796875,
+        "height": 28,
+        "right": 777.890625,
+        "bottom": 41.328125
+      },
+      "dots": {
+        "x": 245.09375,
+        "y": 46.328125,
+        "top": 46.328125,
+        "width": 532.796875,
+        "height": 6,
+        "right": 777.890625,
+        "bottom": 52.328125
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "B",
+      "width": 1024,
+      "height": 650,
+      "locale": "ru",
+      "screenshot": "B-1024x650-ru.png",
+      "viewport": {
+        "width": 1024,
+        "height": 650
+      },
+      "documentWidth": 1024,
+      "documentHeight": 650,
+      "scrollY": 0,
+      "media": {
+        "x": 196.125,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 631.75,
+        "height": 355.359375,
+        "right": 827.875,
+        "bottom": 418.015625
+      },
+      "dialogue": {
+        "x": 196.125,
+        "y": 423.34375,
+        "top": 423.34375,
+        "width": 631.75,
+        "height": 30.671875,
+        "right": 827.875,
+        "bottom": 454.015625
+      },
+      "waveform": {
+        "x": 196.125,
+        "y": 492.671875,
+        "top": 492.671875,
+        "width": 631.75,
+        "height": 37.328125,
+        "right": 827.875,
+        "bottom": 530
+      },
+      "panel": null,
+      "controls": {
+        "x": 196.125,
+        "y": 582,
+        "top": 582,
+        "width": 631.75,
+        "height": 40,
+        "right": 827.875,
+        "bottom": 622
+      },
+      "status": {
+        "x": 196.125,
+        "y": 628,
+        "top": 628,
+        "width": 631.75,
+        "height": 20,
+        "right": 827.875,
+        "bottom": 648
+      },
+      "workspace": {
+        "x": 32,
+        "y": 62.65625,
+        "top": 62.65625,
+        "width": 960,
+        "height": 585.34375,
+        "right": 992,
+        "bottom": 648
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 650,
+        "right": 1024,
+        "bottom": 650
+      },
+      "mediaWidthToken": "631.75px",
+      "controlButtons": [
+        {
+          "text": "Назад",
+          "x": 223.8125,
+          "y": 582,
+          "width": 96,
+          "height": 40,
+          "bottom": 622
+        },
+        {
+          "text": "Оригинал",
+          "x": 328.46875,
+          "y": 582,
+          "width": 108.546875,
+          "height": 40,
+          "bottom": 622
+        },
+        {
+          "text": "Записать",
+          "x": 445.671875,
+          "y": 582,
+          "width": 128,
+          "height": 40,
+          "bottom": 622
+        },
+        {
+          "text": "Ваш дубль",
+          "x": 582.328125,
+          "y": 582,
+          "width": 113.1875,
+          "height": 40,
+          "bottom": 622
+        },
+        {
+          "text": "Далее",
+          "x": 704.171875,
+          "y": 582,
+          "width": 96,
+          "height": 40,
+          "bottom": 622
+        }
+      ],
+      "exit": {
+        "x": 196.125,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 94.140625,
+        "height": 40,
+        "right": 290.265625,
+        "bottom": 53.328125
+      },
+      "lineCount": {
+        "x": 744.59375,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 83.265625,
+        "height": 30,
+        "right": 827.859375,
+        "bottom": 43.328125
+      },
+      "title": {
+        "x": 332.0625,
+        "y": 13.328125,
+        "top": 13.328125,
+        "width": 359.859375,
+        "height": 28,
+        "right": 691.921875,
+        "bottom": 41.328125
+      },
+      "dots": {
+        "x": 332.0625,
+        "y": 46.328125,
+        "top": 46.328125,
+        "width": 359.859375,
+        "height": 6,
+        "right": 691.921875,
+        "bottom": 52.328125
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 390,
+      "height": 667,
+      "locale": "ru",
+      "screenshot": "A-390x667-ru.png",
+      "viewport": {
+        "width": 390,
+        "height": 667
+      },
+      "documentWidth": 390,
+      "documentHeight": 964,
+      "scrollY": 0,
+      "media": {
+        "x": 16,
+        "y": 140,
+        "top": 140,
+        "width": 358,
+        "height": 201.375,
+        "right": 374,
+        "bottom": 341.375
+      },
+      "dialogue": {
+        "x": 16,
+        "y": 355.375,
+        "top": 355.375,
+        "width": 358,
+        "height": 64,
+        "right": 374,
+        "bottom": 419.375
+      },
+      "waveform": {
+        "x": 16,
+        "y": 433.375,
+        "top": 433.375,
+        "width": 358,
+        "height": 64,
+        "right": 374,
+        "bottom": 497.375
+      },
+      "panel": {
+        "x": 16,
+        "y": 589.375,
+        "top": 589.375,
+        "width": 358,
+        "height": 343,
+        "right": 374,
+        "bottom": 932.375
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 16,
+        "y": 140,
+        "top": 140,
+        "width": 358,
+        "height": 792.375,
+        "right": 374,
+        "bottom": 932.375
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 390,
+        "height": 964.375,
+        "right": 390,
+        "bottom": 964.375
+      },
+      "mediaWidthToken": "min(920px, 100%)",
+      "controlButtons": [],
+      "exit": {
+        "x": 16,
+        "y": 16,
+        "top": 16,
+        "width": 104.15625,
+        "height": 48,
+        "right": 120.15625,
+        "bottom": 64
+      },
+      "lineCount": null,
+      "title": {
+        "x": 66.125,
+        "y": 72,
+        "top": 72,
+        "width": 257.75,
+        "height": 28,
+        "right": 323.875,
+        "bottom": 100
+      },
+      "dots": {
+        "x": 16,
+        "y": 110,
+        "top": 110,
+        "width": 358,
+        "height": 6,
+        "right": 374,
+        "bottom": 116
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "B",
+      "width": 390,
+      "height": 667,
+      "locale": "ru",
+      "turn": "sintel-turn-3",
+      "screenshot": "B-390x667-ru-long.png",
+      "viewport": {
+        "width": 390,
+        "height": 667
+      },
+      "documentWidth": 390,
+      "documentHeight": 805,
+      "scrollY": 0,
+      "media": {
+        "x": 16,
+        "y": 132,
+        "top": 132,
+        "width": 358,
+        "height": 201.375,
+        "right": 374,
+        "bottom": 333.375
+      },
+      "dialogue": {
+        "x": 16,
+        "y": 347.375,
+        "top": 347.375,
+        "width": 358,
+        "height": 64,
+        "right": 374,
+        "bottom": 411.375
+      },
+      "waveform": {
+        "x": 16,
+        "y": 425.375,
+        "top": 425.375,
+        "width": 358,
+        "height": 64,
+        "right": 374,
+        "bottom": 489.375
+      },
+      "panel": null,
+      "controls": {
+        "x": 16,
+        "y": 585.375,
+        "top": 585.375,
+        "width": 358,
+        "height": 160,
+        "right": 374,
+        "bottom": 745.375
+      },
+      "status": {
+        "x": 16,
+        "y": 753.375,
+        "top": 753.375,
+        "width": 358,
+        "height": 20,
+        "right": 374,
+        "bottom": 773.375
+      },
+      "workspace": {
+        "x": 16,
+        "y": 132,
+        "top": 132,
+        "width": 358,
+        "height": 641.375,
+        "right": 374,
+        "bottom": 773.375
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 390,
+        "height": 805.375,
+        "right": 390,
+        "bottom": 805.375
+      },
+      "mediaWidthToken": "min(920px, 100%)",
+      "controlButtons": [
+        {
+          "text": "Назад",
+          "x": 16,
+          "y": 585.375,
+          "width": 175,
+          "height": 48,
+          "bottom": 633.375
+        },
+        {
+          "text": "Оригинал",
+          "x": 199,
+          "y": 585.375,
+          "width": 175,
+          "height": 48,
+          "bottom": 633.375
+        },
+        {
+          "text": "Записать",
+          "x": 16,
+          "y": 641.375,
+          "width": 358,
+          "height": 48,
+          "bottom": 689.375
+        },
+        {
+          "text": "Ваш дубль",
+          "x": 16,
+          "y": 697.375,
+          "width": 175,
+          "height": 48,
+          "bottom": 745.375
+        },
+        {
+          "text": "Далее",
+          "x": 199,
+          "y": 697.375,
+          "width": 175,
+          "height": 48,
+          "bottom": 745.375
+        }
+      ],
+      "exit": {
+        "x": 16,
+        "y": 16,
+        "top": 16,
+        "width": 104.15625,
+        "height": 48,
+        "right": 120.15625,
+        "bottom": 64
+      },
+      "lineCount": {
+        "x": 287.96875,
+        "y": 16,
+        "top": 16,
+        "width": 86.03125,
+        "height": 34,
+        "right": 374,
+        "bottom": 50
+      },
+      "title": {
+        "x": 66.125,
+        "y": 72,
+        "top": 72,
+        "width": 257.75,
+        "height": 28,
+        "right": 323.875,
+        "bottom": 100
+      },
+      "dots": {
+        "x": 16,
+        "y": 110,
+        "top": 110,
+        "width": 358,
+        "height": 6,
+        "right": 374,
+        "bottom": 116
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "B",
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "screenshot": "B-390x844-en.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "documentHeight": 844,
+      "scrollY": 0,
+      "media": {
+        "x": 16,
+        "y": 132,
+        "top": 132,
+        "width": 358,
+        "height": 201.375,
+        "right": 374,
+        "bottom": 333.375
+      },
+      "dialogue": {
+        "x": 16,
+        "y": 347.375,
+        "top": 347.375,
+        "width": 358,
+        "height": 64,
+        "right": 374,
+        "bottom": 411.375
+      },
+      "waveform": {
+        "x": 16,
+        "y": 425.375,
+        "top": 425.375,
+        "width": 358,
+        "height": 64,
+        "right": 374,
+        "bottom": 489.375
+      },
+      "panel": null,
+      "controls": {
+        "x": 16,
+        "y": 549.375,
+        "top": 549.375,
+        "width": 358,
+        "height": 160,
+        "right": 374,
+        "bottom": 709.375
+      },
+      "status": {
+        "x": 16,
+        "y": 717.375,
+        "top": 717.375,
+        "width": 358,
+        "height": 20,
+        "right": 374,
+        "bottom": 737.375
+      },
+      "workspace": {
+        "x": 16,
+        "y": 132,
+        "top": 132,
+        "width": 358,
+        "height": 605.375,
+        "right": 374,
+        "bottom": 737.375
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 390,
+        "height": 844,
+        "right": 390,
+        "bottom": 844
+      },
+      "mediaWidthToken": "min(920px, 100%)",
+      "controlButtons": [
+        {
+          "text": "Previous",
+          "x": 16,
+          "y": 549.375,
+          "width": 175,
+          "height": 48,
+          "bottom": 597.375
+        },
+        {
+          "text": "Original",
+          "x": 199,
+          "y": 549.375,
+          "width": 175,
+          "height": 48,
+          "bottom": 597.375
+        },
+        {
+          "text": "Record",
+          "x": 16,
+          "y": 605.375,
+          "width": 358,
+          "height": 48,
+          "bottom": 653.375
+        },
+        {
+          "text": "Your take",
+          "x": 16,
+          "y": 661.375,
+          "width": 175,
+          "height": 48,
+          "bottom": 709.375
+        },
+        {
+          "text": "Next",
+          "x": 199,
+          "y": 661.375,
+          "width": 175,
+          "height": 48,
+          "bottom": 709.375
+        }
+      ],
+      "exit": {
+        "x": 16,
+        "y": 16,
+        "top": 16,
+        "width": 85.265625,
+        "height": 48,
+        "right": 101.265625,
+        "bottom": 64
+      },
+      "lineCount": {
+        "x": 316.40625,
+        "y": 16,
+        "top": 16,
+        "width": 57.59375,
+        "height": 34,
+        "right": 374,
+        "bottom": 50
+      },
+      "title": {
+        "x": 66.125,
+        "y": 72,
+        "top": 72,
+        "width": 257.75,
+        "height": 28,
+        "right": 323.875,
+        "bottom": 100
+      },
+      "dots": {
+        "x": 16,
+        "y": 110,
+        "top": 110,
+        "width": 358,
+        "height": 6,
+        "right": 374,
+        "bottom": 116
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    },
+    {
+      "layout": "A",
+      "width": 640,
+      "height": 900,
+      "locale": "en",
+      "screenshot": "A-640x900-reflow.png",
+      "viewport": {
+        "width": 640,
+        "height": 900
+      },
+      "documentWidth": 640,
+      "documentHeight": 1037,
+      "scrollY": 0,
+      "media": {
+        "x": 16,
+        "y": 140,
+        "top": 140,
+        "width": 608,
+        "height": 342,
+        "right": 624,
+        "bottom": 482
+      },
+      "dialogue": {
+        "x": 16,
+        "y": 496,
+        "top": 496,
+        "width": 608,
+        "height": 32,
+        "right": 624,
+        "bottom": 528
+      },
+      "waveform": {
+        "x": 16,
+        "y": 542,
+        "top": 542,
+        "width": 608,
+        "height": 64,
+        "right": 624,
+        "bottom": 606
+      },
+      "panel": {
+        "x": 16,
+        "y": 662,
+        "top": 662,
+        "width": 608,
+        "height": 343,
+        "right": 624,
+        "bottom": 1005
+      },
+      "controls": null,
+      "status": null,
+      "workspace": {
+        "x": 16,
+        "y": 140,
+        "top": 140,
+        "width": 608,
+        "height": 865,
+        "right": 624,
+        "bottom": 1005
+      },
+      "recordPage": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "width": 640,
+        "height": 1037,
+        "right": 640,
+        "bottom": 1037
+      },
+      "mediaWidthToken": "min(920px, 100%)",
+      "controlButtons": [],
+      "exit": {
+        "x": 16,
+        "y": 16,
+        "top": 16,
+        "width": 85.265625,
+        "height": 48,
+        "right": 101.265625,
+        "bottom": 64
+      },
+      "lineCount": null,
+      "title": {
+        "x": 190,
+        "y": 72,
+        "top": 72,
+        "width": 260,
+        "height": 28,
+        "right": 450,
+        "bottom": 100
+      },
+      "dots": {
+        "x": 16,
+        "y": 110,
+        "top": 110,
+        "width": 608,
+        "height": 6,
+        "right": 624,
+        "bottom": 116
+      },
+      "localeControlCount": 0,
+      "sourceWaveformStatus": "decoded",
+      "sourceEnvelopeSpan": 51.599999999999994,
+      "dialogueFont": "\"Mabry Pro\", Arial, sans-serif",
+      "mabryLoaded": true
+    }
+  ]
+}

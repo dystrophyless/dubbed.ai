@@ -1,0 +1,48 @@
+{
+  "issue": 75,
+  "status": "published_readback_pass",
+  "updateError": false,
+  "preGuard": {
+    "bodyExactFrozen": true,
+    "bodyHashMatchesFrozen": true,
+    "stateMatchesFrozen": true,
+    "stateReasonMatchesFrozen": true,
+    "titleMatchesFrozen": true,
+    "labelsMatchFrozen": true,
+    "assigneesMatchFrozen": true
+  },
+  "verification": {
+    "bodyExact": true,
+    "bodyHashMatchesPlanned": true,
+    "stateOpen": true,
+    "stateReasonReopened": true,
+    "workflowInProgress": true,
+    "titleUnchanged": true,
+    "labelsUnchanged": true,
+    "assigneesUnchanged": true
+  },
+  "hashes": {
+    "before": "aec3328abaa5491a4078670220cebf342e65317d20345796722f5d89b3c370e4",
+    "planned": "0dc5a0fc441f27b7935cb4f18430f80d01424b41a2587ab1a25218aa562fff22",
+    "readback": "0dc5a0fc441f27b7935cb4f18430f80d01424b41a2587ab1a25218aa562fff22"
+  },
+  "before": {
+    "state": "closed",
+    "state_reason": "completed",
+    "title": "Resume and manage account-owned projects without losing lifecycle truth",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": []
+  },
+  "after": {
+    "state": "open",
+    "state_reason": "reopened",
+    "title": "Resume and manage account-owned projects without losing lifecycle truth",
+    "labels": [
+      "frontend"
+    ],
+    "assignees": [],
+    "workflow": "in_progress"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-29T07:35:21.508Z",
+  "browser": "Chrome 156.0.8078.49",
+  "sourceUrl": "/media/scene.mp4",
+  "requestTrace": [
+    {
+      "fault": "late-abort",
+      "source": "original",
+      "requestedAt": 2866.800000000745,
+      "rejectedAt": 3331.800000000745,
+      "connectedAtRejection": false,
+      "sourceAtRejection": "original"
+    },
+    {
+      "fault": "late-abort",
+      "source": "original",
+      "requestedAt": 3932.800000000745,
+      "rejectedAt": 4398,
+      "connectedAtRejection": false,
+      "sourceAtRejection": "original"
+    },
+    {
+      "fault": "late-abort",
+      "source": "original",
+      "requestedAt": 4812.800000000745,
+      "rejectedAt": 5280.10000000149,
+      "connectedAtRejection": true,
+      "sourceAtRejection": "original"
+    },
+    {
+      "fault": "not-supported",
+      "source": "original",
+      "requestedAt": 5417.300000000745,
+      "rejectedAt": 5417.300000000745,
+      "connectedAtRejection": true,
+      "sourceAtRejection": "original"
+    }
+  ],
+  "checks": [
+    "delayed stale rejection after Original-to-My-dub switch",
+    "A-to-B-to-A rapid switch with a stale Original request",
+    "same-source pause cancels a late AbortError without disabling playback",
+    "current NotSupportedError remains visible and Reload sample recovers"
+  ]
+}

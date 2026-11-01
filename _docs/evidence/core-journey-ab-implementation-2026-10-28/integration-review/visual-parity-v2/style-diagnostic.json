@@ -1,0 +1,221 @@
+{
+  "temp": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "pages": [
+    {
+      "url": "http://127.0.0.1:5178/",
+      "values": {
+        "#record": {
+          "fonts": [
+            {
+              "familyName": "Mabry Pro",
+              "postScriptName": "MabryPro-Medium",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ],
+          "paddingRules": [
+            {
+              "selector": "button, .button",
+              "value": "8px 14px",
+              "source": "",
+              "line": 1,
+              "media": []
+            },
+            {
+              "selector": ".performance-actions button, button, .button",
+              "value": "8px 12px",
+              "source": "",
+              "line": 1,
+              "media": [
+                {
+                  "text": "(max-width: 767px)",
+                  "source": "mediaRule",
+                  "sourceURL": "http://127.0.0.1:5178/",
+                  "range": {
+                    "startLine": 0,
+                    "startColumn": 6180,
+                    "endLine": 0,
+                    "endColumn": 6197
+                  },
+                  "styleSheetId": "style-sheet-26872-6",
+                  "mediaList": [
+                    {
+                      "expressions": [
+                        {
+                          "value": 767,
+                          "unit": "px",
+                          "feature": "max-width",
+                          "computedLength": 767
+                        }
+                      ],
+                      "active": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "selector": ".hf-button",
+              "value": "10px 14px",
+              "source": "",
+              "line": 35,
+              "media": []
+            },
+            {
+              "selector": ".hf-button",
+              "value": "12px",
+              "source": "",
+              "line": 78,
+              "media": [
+                {
+                  "text": "(max-width: 767px)",
+                  "source": "mediaRule",
+                  "sourceURL": "http://127.0.0.1:5178/",
+                  "range": {
+                    "startLine": 77,
+                    "startColumn": 6,
+                    "endLine": 77,
+                    "endColumn": 23
+                  },
+                  "styleSheetId": "style-sheet-26872-6",
+                  "mediaList": [
+                    {
+                      "expressions": [
+                        {
+                          "value": 767,
+                          "unit": "px",
+                          "feature": "max-width",
+                          "computedLength": 767
+                        }
+                      ],
+                      "active": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "#dialogue": {
+          "fonts": [
+            {
+              "familyName": "Mabry Pro",
+              "postScriptName": "MabryPro-Regular",
+              "isCustomFont": false,
+              "glyphCount": 46
+            }
+          ],
+          "paddingRules": []
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=ru",
+      "values": {
+        "#record": {
+          "fonts": [
+            {
+              "familyName": "Mabry Pro",
+              "postScriptName": "MabryPro-Medium",
+              "isCustomFont": false,
+              "glyphCount": 8
+            }
+          ],
+          "paddingRules": [
+            {
+              "selector": "button, .button",
+              "value": "8px 14px",
+              "source": "",
+              "line": 3,
+              "media": []
+            },
+            {
+              "selector": ".hf-button",
+              "value": "10px 14px",
+              "source": "",
+              "line": 4,
+              "media": []
+            },
+            {
+              "selector": ".hf-button",
+              "value": "12px",
+              "source": "",
+              "line": 47,
+              "media": [
+                {
+                  "text": "(max-width: 767px)",
+                  "source": "mediaRule",
+                  "sourceURL": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=ru",
+                  "range": {
+                    "startLine": 46,
+                    "startColumn": 6,
+                    "endLine": 46,
+                    "endColumn": 23
+                  },
+                  "styleSheetId": "style-sheet-6580-7",
+                  "mediaList": [
+                    {
+                      "expressions": [
+                        {
+                          "value": 767,
+                          "unit": "px",
+                          "feature": "max-width",
+                          "computedLength": 767
+                        }
+                      ],
+                      "active": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "selector": ".performance-actions button, button, .button",
+              "value": "8px 12px",
+              "source": "",
+              "line": 3,
+              "media": [
+                {
+                  "text": "(max-width: 767px)",
+                  "source": "mediaRule",
+                  "sourceURL": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&locale=ru",
+                  "range": {
+                    "startLine": 2,
+                    "startColumn": 6165,
+                    "endLine": 2,
+                    "endColumn": 6182
+                  },
+                  "styleSheetId": "style-sheet-6580-1",
+                  "mediaList": [
+                    {
+                      "expressions": [
+                        {
+                          "value": 767,
+                          "unit": "px",
+                          "feature": "max-width",
+                          "computedLength": 767
+                        }
+                      ],
+                      "active": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "#dialogue": {
+          "fonts": [
+            {
+              "familyName": "Mabry Pro",
+              "postScriptName": "MabryPro-Regular",
+              "isCustomFont": false,
+              "glyphCount": 36
+            }
+          ],
+          "paddingRules": []
+        }
+      }
+    }
+  ]
+}

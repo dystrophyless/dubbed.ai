@@ -1,0 +1,60 @@
+{
+  "references": {
+    "source/components/button/Clean/button-clean.md.txt": true,
+    "source/components/button/Clean/Light/01-initial.png": true,
+    "source/components/button/Clean/Light/03-loading.png": true,
+    "source/components/profile-menu/Clean/profile-menu-clean.md.txt": true,
+    "source/components/profile-menu/Clean/Light/01-initial.png": true,
+    "source/components/notification-stack/Clean/notification-stack-clean.md.txt": true,
+    "source/components/notification-stack/Clean/Light/01-initial.png": true,
+    "source/components/thinking-loader/Clean/thinking-loader-clean.md.txt": true,
+    "source/components/thinking-loader/Clean/Light/01-initial.png": true
+  },
+  "notice": {
+    "background": "rgb(32, 32, 32)",
+    "radius": "10px",
+    "padding": "14px 16px",
+    "gap": "12px",
+    "shadow": "rgba(0, 0, 0, 0.08) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.16) 0px 12px 28px -10px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+    "title": {
+      "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+      "color": "rgb(252, 252, 252)"
+    },
+    "body": {
+      "font": "14px / 20px \"Mabry Pro\", Arial, sans-serif",
+      "color": "rgb(212, 212, 212)"
+    },
+    "icon": {
+      "color": "rgb(255, 156, 159)",
+      "width": "20px"
+    },
+    "buttons": 0
+  },
+  "fonts": {
+    ".hf-notice-title": {
+      "fonts": [
+        {
+          "familyName": "Mabry Pro",
+          "postScriptName": "MabryPro-Medium",
+          "isCustomFont": false,
+          "glyphCount": 23
+        }
+      ]
+    },
+    ".hf-notice-copy": {
+      "fonts": [
+        {
+          "familyName": "Mabry Pro",
+          "postScriptName": "MabryPro-Regular",
+          "isCustomFont": false,
+          "glyphCount": 41
+        }
+      ]
+    }
+  },
+  "contrast": {
+    "title": 15.881195678099926,
+    "body": 10.9921255119302,
+    "icon": 8.152855918349934
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "issue": 71,
+  "capturedAt": "2026-10-25T12:48:32.874Z",
+  "origin": "http://127.0.0.1:4571",
+  "mode": "Vite mock; Playwright Chromium; muted audio and fake-media flags",
+  "count": 33,
+  "screenshots": [
+    {
+      "name": "en-desktop-request",
+      "scenario": "native mock request form",
+      "path": "evidence\\en-desktop-request.png",
+      "sha256": "B72C644EDEBD0A1B6FA185EB4E6FAA208F4844C74716422394A3B26E16B60929",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "en-desktop-code",
+      "scenario": "native mock code entry",
+      "path": "evidence\\en-desktop-code.png",
+      "sha256": "3216ADB9965FBFB6024645EF2CFEB550408AE3F023264A65DABB4E60F428B406",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "en-desktop-invalid-code",
+      "scenario": "native mock invalid code; corrected value is retained and selected",
+      "path": "evidence\\en-desktop-invalid-code.png",
+      "sha256": "72EADDFB90C570F44E3B5914E3B7C70FA02107D792210746296AD618573385E8",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "en-desktop-password-visible",
+      "scenario": "both independent password values are visible",
+      "path": "evidence\\en-desktop-password-visible.png",
+      "sha256": "9E293C20061052F8A0B4AA4068DE80BC2FA8EA40FC70299D491108A522451F65",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "en-desktop-password",
+      "scenario": "native mock password form with independent hidden controls",
+      "path": "evidence\\en-desktop-password.png",
+      "sha256": "8C6E75DE48FFA76FFD6AA52F210A41802974EF9D2E753D38B289A8A672DE6DFB",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "en-desktop-mismatch",
+      "scenario": "native mock mismatch feedback",
+      "path": "evidence\\en-desktop-mismatch.png",
+      "sha256": "EF7921EE3EB4FD64D70AAC1BF4FFDCA7D95BDB038AC63B44CA2AA0B5466CB20E",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "en-desktop-success-destination",
+      "scenario": "native mock reset completion on the existing New dub destination",
+      "path": "evidence\\en-desktop-success-destination.png",
+      "sha256": "F5EB888B2EB2C2BD039134AF38C7D897E181389902C61D8D9D156E55D74B4833",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "en-short-request",
+      "scenario": "native mock request form",
+      "path": "evidence\\en-short-request.png",
+      "sha256": "612D703A413316393BA8253A0DC1876C29AD4661BE09C78D55B83FB67473F6B6",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 700
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "en-short-code",
+      "scenario": "native mock code entry",
+      "path": "evidence\\en-short-code.png",
+      "sha256": "524AA172F095A0F8A17624F0B0AE2468ABB4A47B652F804384722A972821C0BE",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 763
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "en-short-invalid-code",
+      "scenario": "native mock invalid code; corrected value is retained and selected",
+      "path": "evidence\\en-short-invalid-code.png",
+      "sha256": "997BB7488976A6502D2A13FB2DFDEFCCCA41952B75ED7F13F174DF8BB9CC87E5",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 819
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "en-short-password-visible",
+      "scenario": "both independent password values are visible",
+      "path": "evidence\\en-short-password-visible.png",
+      "sha256": "AD61F9198C9288621EC3926B1A037A64AACB61ADFF805993FD75EF2ED5983754",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 839
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "en-short-password",
+      "scenario": "native mock password form with independent hidden controls",
+      "path": "evidence\\en-short-password.png",
+      "sha256": "CE5C3EC0DAA9C0C738508F1DA99427F5A5D3E4A5048512FC616F00E707FC411E",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 839
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "en-short-mismatch",
+      "scenario": "native mock mismatch feedback",
+      "path": "evidence\\en-short-mismatch.png",
+      "sha256": "64ACFBD9C35AA77EADB6B71E74219EAAF3FEF3FFEC89E4ED4688781A58DCA952",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 865
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "en-short-success-destination",
+      "scenario": "native mock reset completion on the existing New dub destination",
+      "path": "evidence\\en-short-success-destination.png",
+      "sha256": "F5674A48030BE17A42C46FD90CBA39C408DA0C871078838A0F0DA73EF1623ACB",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 700
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "ru-desktop-request",
+      "scenario": "native mock request form",
+      "path": "evidence\\ru-desktop-request.png",
+      "sha256": "74F452411CE46C9B3EE9DDF893C8B3CD44C5BE2C5A3A6BA625985EFC13E923DC",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-desktop-code",
+      "scenario": "native mock code entry",
+      "path": "evidence\\ru-desktop-code.png",
+      "sha256": "D60BE371C59BAF64A2D2568E6019C07C9F7CA99B3B102EE10F1C2A64EDDC343E",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-desktop-invalid-code",
+      "scenario": "native mock invalid code; corrected value is retained and selected",
+      "path": "evidence\\ru-desktop-invalid-code.png",
+      "sha256": "D16EB115C535773618D667ED34E8D444D9F35847D801246DC79BAA5DFBD0BDC5",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-desktop-password-visible",
+      "scenario": "both independent password values are visible",
+      "path": "evidence\\ru-desktop-password-visible.png",
+      "sha256": "D7AE3CE1CCBB31529ECFBD9971A4357CB724A67DEAD6580DCD0A7F86FBC2EB93",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-desktop-password",
+      "scenario": "native mock password form with independent hidden controls",
+      "path": "evidence\\ru-desktop-password.png",
+      "sha256": "1F06B2289F6677867B8AB3BD1BA35071EAD2070E190A99ADCAC22B31D68E49A7",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-desktop-mismatch",
+      "scenario": "native mock mismatch feedback",
+      "path": "evidence\\ru-desktop-mismatch.png",
+      "sha256": "E5802357CB799CE5ECDDC7790B0D5AE28B4E8131DA3B60626326681E8F22AE93",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-desktop-success-destination",
+      "scenario": "native mock reset completion on the existing New dub destination",
+      "path": "evidence\\ru-desktop-success-destination.png",
+      "sha256": "EF0C9D1EEC6881176AECE26686220344C15BC146FA3AD75CA6ED3180128E4032",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "page": {
+        "width": 1440,
+        "height": 900
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-phone390-request",
+      "scenario": "native mock request form",
+      "path": "evidence\\ru-phone390-request.png",
+      "sha256": "C74D1510FE4ED946B0F4681B34E675B7743E762DFC66F08032B8466833F03E38",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-phone390-code",
+      "scenario": "native mock code entry",
+      "path": "evidence\\ru-phone390-code.png",
+      "sha256": "50C003DFE7C387298A9BDD62AEBAA13E6C39F59267AE284C1FBB0D7BBC53E040",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "ru-phone390-invalid-code",
+      "scenario": "native mock invalid code; corrected value is retained and selected",
+      "path": "evidence\\ru-phone390-invalid-code.png",
+      "sha256": "7EF51B9A903CC2D356DA75882F0BAACE2B5023BCA44197BF17C7682E3F1332BF",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "ru-phone390-password-visible",
+      "scenario": "both independent password values are visible",
+      "path": "evidence\\ru-phone390-password-visible.png",
+      "sha256": "0E90A8977C29F630FDC35AB1EF3F55AD5DADBF587FAFB518A289115616502AD6",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 863
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "ru-phone390-password",
+      "scenario": "native mock password form with independent hidden controls",
+      "path": "evidence\\ru-phone390-password.png",
+      "sha256": "1BF04A7E81FB714550639E55965E22657A5EB81B57D5A20833F456BB8D11FB48",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 863
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-phone390-mismatch",
+      "scenario": "native mock mismatch feedback",
+      "path": "evidence\\ru-phone390-mismatch.png",
+      "sha256": "5B54FCD50FDDAF937ED1A2018484ECC54EAF4FE46D2A01F497D54BC9C9232765",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 889
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": false
+    },
+    {
+      "name": "ru-phone390-success-destination",
+      "scenario": "native mock reset completion on the existing New dub destination",
+      "path": "evidence\\ru-phone390-success-destination.png",
+      "sha256": "2E2A157585B5A595C27EBEC0BAE12865CE4EAD94C9EC86AABBDDCB9A42846575",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "code-en-767",
+      "scenario": "native mock code screen at responsive breakpoint",
+      "path": "evidence\\code-en-767.png",
+      "sha256": "70172EC6B5560CAD28E32DC8B45D52B701C69A8E34C2E16830DE8BD64D9555E3",
+      "viewport": {
+        "width": 767,
+        "height": 844
+      },
+      "page": {
+        "width": 767,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "code-en-768",
+      "scenario": "native mock code screen at responsive breakpoint",
+      "path": "evidence\\code-en-768.png",
+      "sha256": "CABD063261F43CE2FBABB9916DE73F23D0E715F9562C26C93FEF2BAAAD685AB6",
+      "viewport": {
+        "width": 768,
+        "height": 844
+      },
+      "page": {
+        "width": 768,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "controlled-request-error-en-short",
+      "scenario": "controlled harness fault: reset-service-error",
+      "path": "evidence\\controlled-request-error-en-short.png",
+      "sha256": "D6F06AEA4C3FA916B34A82F932BEEB347C2747D589B7A356EC63A2F36759212E",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 700
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "controlled-unknown-code-ru-phone390",
+      "scenario": "controlled harness fault: reset-unknown-code",
+      "path": "evidence\\controlled-unknown-code-ru-phone390.png",
+      "sha256": "85D168E1124627389A60E6BC1F8B672CE40A30C9B5C1BC2BA36B027F459EC832",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": {
+        "width": 390,
+        "height": 844
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    },
+    {
+      "name": "controlled-completion-loading-en-short",
+      "scenario": "controlled harness fault: reset-complete-loading",
+      "path": "evidence\\controlled-completion-loading-en-short.png",
+      "sha256": "B66FBEE5501FC5BE3E3A0FA598BD06C0F65A521C65A2CB975FFA353BAB5471F7",
+      "viewport": {
+        "width": 1440,
+        "height": 700
+      },
+      "page": {
+        "width": 1440,
+        "height": 777
+      },
+      "horizontalOverflow": false,
+      "manuallyOpened": true
+    }
+  ]
+}

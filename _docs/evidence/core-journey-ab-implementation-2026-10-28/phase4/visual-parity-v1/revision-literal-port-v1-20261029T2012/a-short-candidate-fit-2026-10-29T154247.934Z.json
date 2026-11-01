@@ -1,0 +1,823 @@
+{
+  "at": "2026-10-29T15:42:48.470Z",
+  "browser": "156.0.8078.49",
+  "temp": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "runs": [
+    {
+      "kind": "prototype",
+      "label": "candidate source with original text",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "activeElement": "pause",
+      "mainClass": "compact-desktop",
+      "customProperties": {
+        "mediaWidth": "624px",
+        "workspaceWidth": "624px",
+        "panelWidth": "272px"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 577,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px 32px 40px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "rehearsal": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 481,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "scene": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 351,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "script": {
+        "x": 328,
+        "y": 407,
+        "width": 624,
+        "height": 68,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "4px 0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "68px"
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 411,
+        "width": 624,
+        "height": 30,
+        "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "30px",
+        "minHeight": "0px"
+      },
+      "timeline": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 62,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "wave": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px -32px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "scrub": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "meta": {
+        "x": 328,
+        "y": 513,
+        "width": 624,
+        "height": 24,
+        "font": "",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "20px",
+        "minHeight": "0px"
+      },
+      "panel": {
+        "x": 976,
+        "y": 56,
+        "width": 272,
+        "height": 234,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "controls": {
+        "x": 988,
+        "y": 97,
+        "width": 248,
+        "height": 86,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      }
+    },
+    {
+      "kind": "prototype",
+      "label": "candidate long text before resize",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "activeElement": "pause",
+      "mainClass": "compact-desktop",
+      "customProperties": {
+        "mediaWidth": "624px",
+        "workspaceWidth": "624px",
+        "panelWidth": "272px"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 577,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px 32px 40px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "rehearsal": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 481,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "scene": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 351,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "script": {
+        "x": 328,
+        "y": 407,
+        "width": 624,
+        "height": 68,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "4px 0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "68px"
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 411,
+        "width": 624,
+        "height": 60,
+        "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "30px",
+        "minHeight": "0px"
+      },
+      "timeline": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 62,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "wave": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px -32px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "scrub": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "meta": {
+        "x": 328,
+        "y": 513,
+        "width": 624,
+        "height": 24,
+        "font": "",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "20px",
+        "minHeight": "0px"
+      },
+      "panel": {
+        "x": 976,
+        "y": 56,
+        "width": 272,
+        "height": 234,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "controls": {
+        "x": 988,
+        "y": 97,
+        "width": 248,
+        "height": 86,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      }
+    },
+    {
+      "kind": "prototype",
+      "label": "candidate long text after resize fit",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "activeElement": "pause",
+      "mainClass": "compact-desktop",
+      "customProperties": {
+        "mediaWidth": "624px",
+        "workspaceWidth": "624px",
+        "panelWidth": "272px"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 577,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px 32px 40px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "rehearsal": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 481,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "scene": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 351,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "script": {
+        "x": 328,
+        "y": 407,
+        "width": 624,
+        "height": 68,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "4px 0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "68px"
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 411,
+        "width": 624,
+        "height": 60,
+        "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "30px",
+        "minHeight": "0px"
+      },
+      "timeline": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 62,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "wave": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px -32px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "scrub": {
+        "x": 328,
+        "y": 475,
+        "width": 624,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "meta": {
+        "x": 328,
+        "y": 513,
+        "width": 624,
+        "height": 24,
+        "font": "",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "20px",
+        "minHeight": "0px"
+      },
+      "panel": {
+        "x": 976,
+        "y": 56,
+        "width": 272,
+        "height": 234,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "controls": {
+        "x": 988,
+        "y": 97,
+        "width": 248,
+        "height": 86,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      }
+    },
+    {
+      "kind": "app",
+      "label": "candidate source with original text",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "activeElement": "pause",
+      "mainClass": "compact-desktop",
+      "customProperties": {
+        "mediaWidth": "504.8888888888889px",
+        "workspaceWidth": "504.8888888888889px",
+        "panelWidth": "272px"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 515.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px 32px 40px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "rehearsal": {
+        "x": 387.5625,
+        "y": 56,
+        "width": 504.875,
+        "height": 419.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "scene": {
+        "x": 387.5625,
+        "y": 56,
+        "width": 504.875,
+        "height": 283.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "script": {
+        "x": 387.5625,
+        "y": 339.984375,
+        "width": 504.875,
+        "height": 68,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "4px 0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "68px"
+      },
+      "dialogue": {
+        "x": 387.5625,
+        "y": 343.984375,
+        "width": 504.875,
+        "height": 60,
+        "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "30px",
+        "minHeight": "0px"
+      },
+      "timeline": {
+        "x": 387.5625,
+        "y": 419.984375,
+        "width": 504.875,
+        "height": 56,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "12px 0px 0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "wave": {
+        "x": 387.5625,
+        "y": 419.984375,
+        "width": 504.875,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px -32px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "scrub": {
+        "x": 387.5625,
+        "y": 419.984375,
+        "width": 504.875,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "meta": {
+        "x": 387.5625,
+        "y": 451.984375,
+        "width": 504.875,
+        "height": 24,
+        "font": "",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "20px",
+        "minHeight": "0px"
+      },
+      "panel": {
+        "x": 916.4375,
+        "y": 56,
+        "width": 272,
+        "height": 226,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "controls": {
+        "x": 928.4375,
+        "y": 89,
+        "width": 248,
+        "height": 86,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      }
+    },
+    {
+      "kind": "app",
+      "label": "candidate long text before resize",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "activeElement": "pause",
+      "mainClass": "compact-desktop",
+      "customProperties": {
+        "mediaWidth": "504.8888888888889px",
+        "workspaceWidth": "504.8888888888889px",
+        "panelWidth": "272px"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 545.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px 32px 40px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "rehearsal": {
+        "x": 387.5625,
+        "y": 56,
+        "width": 504.875,
+        "height": 449.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "scene": {
+        "x": 387.5625,
+        "y": 56,
+        "width": 504.875,
+        "height": 283.984375,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "script": {
+        "x": 387.5625,
+        "y": 339.984375,
+        "width": 504.875,
+        "height": 98,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "4px 0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "68px"
+      },
+      "dialogue": {
+        "x": 387.5625,
+        "y": 343.984375,
+        "width": 504.875,
+        "height": 90,
+        "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "30px",
+        "minHeight": "0px"
+      },
+      "timeline": {
+        "x": 387.5625,
+        "y": 449.984375,
+        "width": 504.875,
+        "height": 56,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "12px 0px 0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "wave": {
+        "x": 387.5625,
+        "y": 449.984375,
+        "width": 504.875,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px -32px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "scrub": {
+        "x": 387.5625,
+        "y": 449.984375,
+        "width": 504.875,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "meta": {
+        "x": 387.5625,
+        "y": 481.984375,
+        "width": 504.875,
+        "height": 24,
+        "font": "",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "20px",
+        "minHeight": "0px"
+      },
+      "panel": {
+        "x": 916.4375,
+        "y": 56,
+        "width": 272,
+        "height": 226,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "controls": {
+        "x": 928.4375,
+        "y": 89,
+        "width": 248,
+        "height": 86,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      }
+    },
+    {
+      "kind": "app",
+      "label": "candidate long text after resize fit",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "activeElement": "pause",
+      "mainClass": "compact-desktop",
+      "customProperties": {
+        "mediaWidth": "624px",
+        "workspaceWidth": "624px",
+        "panelWidth": "272px"
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 583,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px 32px 40px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "rehearsal": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 487,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "scene": {
+        "x": 328,
+        "y": 56,
+        "width": 624,
+        "height": 351,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "script": {
+        "x": 328,
+        "y": 407,
+        "width": 624,
+        "height": 68,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "4px 0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "68px"
+      },
+      "dialogue": {
+        "x": 328,
+        "y": 411,
+        "width": 624,
+        "height": 60,
+        "font": "24px / 30px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "30px",
+        "minHeight": "0px"
+      },
+      "timeline": {
+        "x": 328,
+        "y": 487,
+        "width": 624,
+        "height": 56,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "12px 0px 0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "wave": {
+        "x": 328,
+        "y": 487,
+        "width": 624,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px 0px -32px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "scrub": {
+        "x": 328,
+        "y": 487,
+        "width": 624,
+        "height": 32,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      },
+      "meta": {
+        "x": 328,
+        "y": 519,
+        "width": 624,
+        "height": 24,
+        "font": "",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "20px",
+        "minHeight": "0px"
+      },
+      "panel": {
+        "x": 976,
+        "y": 56,
+        "width": 272,
+        "height": 226,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "12px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "auto"
+      },
+      "controls": {
+        "x": 988,
+        "y": 89,
+        "width": 248,
+        "height": 86,
+        "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif",
+        "padding": "0px",
+        "margin": "0px",
+        "lineHeight": "24px",
+        "minHeight": "0px"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+SHOT source-en-desktop
+SHOT record-en-desktop
+SHOT record-en-short
+SHOT record-ru-phone
+RESULTBODY Skip to content
+Dubbed
+New dub
+Projects
+Credits
+Account
+Credits
+111
+Language
+EN
+RU
+Sign out
+Your result
+
+source-dialogue
+
+Return to recording
+Displayed generation: 1
+Synthetic fixture result; not rendered from accepted takes or a custom upload.
+Download MP4
+SHOT result-en-desktop
+SHOT result-ru-phone
+PROBE source { status: 'ended', duration: 8.6254, w: 640, h: 360, muted: true }
+PROBE resultGeneration1 { status: 'ended', duration: 8.6157, w: 640, h: 360, muted: true }
+PROBE resultGeneration2 { status: 'ended', duration: 8.649867, w: 640, h: 360, muted: true }
+PROBE validSilence { status: 'ended', duration: 1.992233, w: 320, h: 180, muted: true }
+PROBE usablePartial { status: 'ended', duration: 2.7989, w: 320, h: 180, muted: true }
+PROBE noAudioTrack { status: 'ended', duration: 1.194133, w: 320, h: 180, muted: true }
+PROBE shortSource { status: 'ended', duration: 0.646867, w: 320, h: 180, muted: true }

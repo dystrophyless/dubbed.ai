@@ -1,0 +1,611 @@
+{
+  "date": "2026-10-29T19:19:34.611Z",
+  "temp": "C:\\Users\\roman\\AppData\\Local\\Temp",
+  "pairs": [
+    {
+      "layout": "A",
+      "vp": {
+        "width": 1280,
+        "height": 600
+      },
+      "app": {
+        "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=A&snapshot=snapshot%3Aoperation%3A03bb6e90-f526-49eb-85d4-8d9c6ff608dd&locale=en",
+        "viewport": [
+          1280,
+          600
+        ],
+        "selector": {
+          "rect": {
+            "x": 378.21875,
+            "y": 100,
+            "width": 160.28125,
+            "height": 44,
+            "top": 100,
+            "right": 538.5,
+            "bottom": 144,
+            "left": 378.21875
+          },
+          "padding": "2px",
+          "border": "0px none rgb(252, 252, 252)",
+          "backdrop": "none",
+          "minWidth": "0px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "buttons": [
+          {
+            "rect": {
+              "x": 380.21875,
+              "y": 102,
+              "width": 78.609375,
+              "height": 40,
+              "top": 102,
+              "right": 458.828125,
+              "bottom": 142,
+              "left": 380.21875
+            },
+            "padding": "8px 14px",
+            "border": "0px none rgb(252, 252, 252)",
+            "backdrop": "none",
+            "minWidth": "0px",
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+          },
+          {
+            "rect": {
+              "x": 460.828125,
+              "y": 102,
+              "width": 75.671875,
+              "height": 40,
+              "top": 102,
+              "right": 536.5,
+              "bottom": 142,
+              "left": 460.828125
+            },
+            "padding": "8px 14px",
+            "border": "0px none rgb(32, 32, 32)",
+            "backdrop": "none",
+            "minWidth": "0px",
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+          }
+        ],
+        "stage": {
+          "x": 366.21875,
+          "y": 88,
+          "width": 547.546875,
+          "height": 379.984375,
+          "top": 88,
+          "right": 913.765625,
+          "bottom": 467.984375,
+          "left": 366.21875
+        },
+        "overflow": false
+      },
+      "ref": {
+        "url": "http://127.0.0.1:5178/",
+        "viewport": [
+          1280,
+          600
+        ],
+        "selector": {
+          "rect": {
+            "x": 378.21875,
+            "y": 100,
+            "width": 160.28125,
+            "height": 44,
+            "top": 100,
+            "right": 538.5,
+            "bottom": 144,
+            "left": 378.21875
+          },
+          "padding": "2px",
+          "border": "0px none rgb(252, 252, 252)",
+          "backdrop": "none",
+          "minWidth": "0px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "buttons": [
+          {
+            "rect": {
+              "x": 380.21875,
+              "y": 102,
+              "width": 78.609375,
+              "height": 40,
+              "top": 102,
+              "right": 458.828125,
+              "bottom": 142,
+              "left": 380.21875
+            },
+            "padding": "8px 14px",
+            "border": "0px none rgb(252, 252, 252)",
+            "backdrop": "none",
+            "minWidth": "auto",
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+          },
+          {
+            "rect": {
+              "x": 460.828125,
+              "y": 102,
+              "width": 75.671875,
+              "height": 40,
+              "top": 102,
+              "right": 536.5,
+              "bottom": 142,
+              "left": 460.828125
+            },
+            "padding": "8px 14px",
+            "border": "0px none rgb(32, 32, 32)",
+            "backdrop": "none",
+            "minWidth": "auto",
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+          }
+        ],
+        "stage": {
+          "x": 366.21875,
+          "y": 88,
+          "width": 547.546875,
+          "height": 379.984375,
+          "top": 88,
+          "right": 913.765625,
+          "bottom": 467.984375,
+          "left": 366.21875
+        },
+        "overflow": false
+      },
+      "diff": [],
+      "pass": true
+    },
+    {
+      "layout": "A",
+      "vp": {
+        "width": 390,
+        "height": 844
+      },
+      "app": {
+        "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=A&snapshot=snapshot%3Aoperation%3A03bb6e90-f526-49eb-85d4-8d9c6ff608dd&locale=en",
+        "viewport": [
+          390,
+          844
+        ],
+        "selector": {
+          "rect": {
+            "x": 24,
+            "y": 144,
+            "width": 166.3125,
+            "height": 52,
+            "top": 144,
+            "right": 190.3125,
+            "bottom": 196,
+            "left": 24
+          },
+          "padding": "2px",
+          "border": "0px none rgb(252, 252, 252)",
+          "backdrop": "none",
+          "minWidth": "0px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "buttons": [
+          {
+            "rect": {
+              "x": 26,
+              "y": 146,
+              "width": 81.84375,
+              "height": 48,
+              "top": 146,
+              "right": 107.84375,
+              "bottom": 194,
+              "left": 26
+            },
+            "padding": "8px 12px",
+            "border": "0px none rgb(252, 252, 252)",
+            "backdrop": "none",
+            "minWidth": "0px",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+          },
+          {
+            "rect": {
+              "x": 109.84375,
+              "y": 146,
+              "width": 78.46875,
+              "height": 48,
+              "top": 146,
+              "right": 188.3125,
+              "bottom": 194,
+              "left": 109.84375
+            },
+            "padding": "8px 12px",
+            "border": "0px none rgb(32, 32, 32)",
+            "backdrop": "none",
+            "minWidth": "0px",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+          }
+        ],
+        "stage": {
+          "x": 16,
+          "y": 136,
+          "width": 358,
+          "height": 305.375,
+          "top": 136,
+          "right": 374,
+          "bottom": 441.375,
+          "left": 16
+        },
+        "overflow": false
+      },
+      "ref": {
+        "url": "http://127.0.0.1:5178/",
+        "viewport": [
+          390,
+          844
+        ],
+        "selector": {
+          "rect": {
+            "x": 24,
+            "y": 144,
+            "width": 166.3125,
+            "height": 52,
+            "top": 144,
+            "right": 190.3125,
+            "bottom": 196,
+            "left": 24
+          },
+          "padding": "2px",
+          "border": "0px none rgb(252, 252, 252)",
+          "backdrop": "none",
+          "minWidth": "0px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "buttons": [
+          {
+            "rect": {
+              "x": 26,
+              "y": 146,
+              "width": 81.84375,
+              "height": 48,
+              "top": 146,
+              "right": 107.84375,
+              "bottom": 194,
+              "left": 26
+            },
+            "padding": "8px 12px",
+            "border": "0px none rgb(252, 252, 252)",
+            "backdrop": "none",
+            "minWidth": "auto",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+          },
+          {
+            "rect": {
+              "x": 109.84375,
+              "y": 146,
+              "width": 78.46875,
+              "height": 48,
+              "top": 146,
+              "right": 188.3125,
+              "bottom": 194,
+              "left": 109.84375
+            },
+            "padding": "8px 12px",
+            "border": "0px none rgb(32, 32, 32)",
+            "backdrop": "none",
+            "minWidth": "auto",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+          }
+        ],
+        "stage": {
+          "x": 16,
+          "y": 136,
+          "width": 358,
+          "height": 305.375,
+          "top": 136,
+          "right": 374,
+          "bottom": 441.375,
+          "left": 16
+        },
+        "overflow": false
+      },
+      "diff": [],
+      "pass": true
+    },
+    {
+      "layout": "B",
+      "vp": {
+        "width": 1280,
+        "height": 600
+      },
+      "app": {
+        "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=B&snapshot=snapshot%3Aoperation%3A89d97c26-f3ca-45ba-a99f-4ee80a777c1e&locale=en",
+        "viewport": [
+          1280,
+          600
+        ],
+        "selector": {
+          "rect": {
+            "x": 371.109375,
+            "y": 92,
+            "width": 160.28125,
+            "height": 44,
+            "top": 92,
+            "right": 531.390625,
+            "bottom": 136,
+            "left": 371.109375
+          },
+          "padding": "2px",
+          "border": "0px none rgb(252, 252, 252)",
+          "backdrop": "none",
+          "minWidth": "0px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "buttons": [
+          {
+            "rect": {
+              "x": 373.109375,
+              "y": 94,
+              "width": 78.609375,
+              "height": 40,
+              "top": 94,
+              "right": 451.71875,
+              "bottom": 134,
+              "left": 373.109375
+            },
+            "padding": "8px 14px",
+            "border": "0px none rgb(252, 252, 252)",
+            "backdrop": "none",
+            "minWidth": "0px",
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+          },
+          {
+            "rect": {
+              "x": 453.71875,
+              "y": 94,
+              "width": 75.671875,
+              "height": 40,
+              "top": 94,
+              "right": 529.390625,
+              "bottom": 134,
+              "left": 453.71875
+            },
+            "padding": "8px 14px",
+            "border": "0px none rgb(32, 32, 32)",
+            "backdrop": "none",
+            "minWidth": "0px",
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+          }
+        ],
+        "stage": {
+          "x": 359.109375,
+          "y": 80,
+          "width": 561.765625,
+          "height": 387.984375,
+          "top": 80,
+          "right": 920.875,
+          "bottom": 467.984375,
+          "left": 359.109375
+        },
+        "overflow": false
+      },
+      "ref": {
+        "url": "http://127.0.0.1:5179/",
+        "viewport": [
+          1280,
+          600
+        ],
+        "selector": {
+          "rect": {
+            "x": 371.109375,
+            "y": 92,
+            "width": 160.28125,
+            "height": 44,
+            "top": 92,
+            "right": 531.390625,
+            "bottom": 136,
+            "left": 371.109375
+          },
+          "padding": "2px",
+          "border": "0px none rgb(252, 252, 252)",
+          "backdrop": "none",
+          "minWidth": "0px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "buttons": [
+          {
+            "rect": {
+              "x": 373.109375,
+              "y": 94,
+              "width": 78.609375,
+              "height": 40,
+              "top": 94,
+              "right": 451.71875,
+              "bottom": 134,
+              "left": 373.109375
+            },
+            "padding": "8px 14px",
+            "border": "0px none rgb(252, 252, 252)",
+            "backdrop": "none",
+            "minWidth": "auto",
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+          },
+          {
+            "rect": {
+              "x": 453.71875,
+              "y": 94,
+              "width": 75.671875,
+              "height": 40,
+              "top": 94,
+              "right": 529.390625,
+              "bottom": 134,
+              "left": 453.71875
+            },
+            "padding": "8px 14px",
+            "border": "0px none rgb(32, 32, 32)",
+            "backdrop": "none",
+            "minWidth": "auto",
+            "font": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif"
+          }
+        ],
+        "stage": {
+          "x": 359.109375,
+          "y": 80,
+          "width": 561.765625,
+          "height": 387.984375,
+          "top": 80,
+          "right": 920.875,
+          "bottom": 467.984375,
+          "left": 359.109375
+        },
+        "overflow": false
+      },
+      "diff": [],
+      "pass": true
+    },
+    {
+      "layout": "B",
+      "vp": {
+        "width": 390,
+        "height": 844
+      },
+      "app": {
+        "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=B&snapshot=snapshot%3Aoperation%3A89d97c26-f3ca-45ba-a99f-4ee80a777c1e&locale=en",
+        "viewport": [
+          390,
+          844
+        ],
+        "selector": {
+          "rect": {
+            "x": 24,
+            "y": 148,
+            "width": 166.3125,
+            "height": 52,
+            "top": 148,
+            "right": 190.3125,
+            "bottom": 200,
+            "left": 24
+          },
+          "padding": "2px",
+          "border": "0px none rgb(252, 252, 252)",
+          "backdrop": "none",
+          "minWidth": "0px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "buttons": [
+          {
+            "rect": {
+              "x": 26,
+              "y": 150,
+              "width": 81.84375,
+              "height": 48,
+              "top": 150,
+              "right": 107.84375,
+              "bottom": 198,
+              "left": 26
+            },
+            "padding": "8px 12px",
+            "border": "0px none rgb(252, 252, 252)",
+            "backdrop": "none",
+            "minWidth": "0px",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+          },
+          {
+            "rect": {
+              "x": 109.84375,
+              "y": 150,
+              "width": 78.46875,
+              "height": 48,
+              "top": 150,
+              "right": 188.3125,
+              "bottom": 198,
+              "left": 109.84375
+            },
+            "padding": "8px 12px",
+            "border": "0px none rgb(32, 32, 32)",
+            "backdrop": "none",
+            "minWidth": "0px",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+          }
+        ],
+        "stage": {
+          "x": 16,
+          "y": 140,
+          "width": 358,
+          "height": 305.375,
+          "top": 140,
+          "right": 374,
+          "bottom": 445.375,
+          "left": 16
+        },
+        "overflow": false
+      },
+      "ref": {
+        "url": "http://127.0.0.1:5179/",
+        "viewport": [
+          390,
+          844
+        ],
+        "selector": {
+          "rect": {
+            "x": 24,
+            "y": 148,
+            "width": 166.3125,
+            "height": 52,
+            "top": 148,
+            "right": 190.3125,
+            "bottom": 200,
+            "left": 24
+          },
+          "padding": "2px",
+          "border": "0px none rgb(252, 252, 252)",
+          "backdrop": "none",
+          "minWidth": "0px",
+          "font": "16px / 24px \"Mabry Pro\", Arial, sans-serif"
+        },
+        "buttons": [
+          {
+            "rect": {
+              "x": 26,
+              "y": 150,
+              "width": 81.84375,
+              "height": 48,
+              "top": 150,
+              "right": 107.84375,
+              "bottom": 198,
+              "left": 26
+            },
+            "padding": "8px 12px",
+            "border": "0px none rgb(252, 252, 252)",
+            "backdrop": "none",
+            "minWidth": "auto",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+          },
+          {
+            "rect": {
+              "x": 109.84375,
+              "y": 150,
+              "width": 78.46875,
+              "height": 48,
+              "top": 150,
+              "right": 188.3125,
+              "bottom": 198,
+              "left": 109.84375
+            },
+            "padding": "8px 12px",
+            "border": "0px none rgb(32, 32, 32)",
+            "backdrop": "none",
+            "minWidth": "auto",
+            "font": "500 16px / 24px \"Mabry Pro\", Arial, sans-serif"
+          }
+        ],
+        "stage": {
+          "x": 16,
+          "y": 140,
+          "width": 358,
+          "height": 305.375,
+          "top": 140,
+          "right": 374,
+          "bottom": 445.375,
+          "left": 16
+        },
+        "overflow": false
+      },
+      "diff": [],
+      "pass": true
+    }
+  ],
+  "errors": []
+}

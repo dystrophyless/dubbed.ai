@@ -1,0 +1,45 @@
+from pathlib import Path
+import json,hashlib
+from playwright.sync_api import sync_playwright,expect
+out=Path(__file__).parent;studio=out.parents[1];saved=(Path(__file__).resolve().parents[4]/'prototypes/core-journey-studio/evidence/result-player-v6/completed-fixture-state.json').read_text(encoding='utf-8');checks=[];errors=[]
+def seed(ctx):ctx.add_init_script('localStorage.setItem("dubbed-lowfi-v1",'+json.dumps(saved)+')')
+def current(pg):return '#result' if pg.locator('#result-player').get_attribute('data-source')=='dub' else '#result-original'
+with sync_playwright() as p:
+ b=p.chromium.launch(channel='chrome',headless=True)
+ for w,h,ru in [(1440,900,False),(1280,600,False),(1366,650,True),(390,667,True),(390,844,False)]:
+  ctx=b.new_context(viewport={'width':w,'height':h},device_scale_factor=1,has_touch=w<768,reduced_motion='reduce' if ru else 'no-preference');seed(ctx);pg=ctx.new_page();pg.on('pageerror',lambda e:errors.append(str(e)));pg.goto('http://127.0.0.1:5178');pg.wait_for_function('!document.querySelector("#result-play").disabled');pg.evaluate('document.fonts.ready')
+  if ru:pg.locator('.lab summary').click();pg.locator('#locale').select_option('ru');pg.locator('.lab summary').click()
+  assert pg.locator('#result').evaluate('(v)=>v.paused && v.currentTime==0 && !v.controls')
+  assert pg.locator('#result-original').evaluate('(v)=>!v.controls')
+  pg.locator('#result-play').click();pg.wait_for_timeout(500);pg.locator('#result-play').click();position=pg.locator('#result').evaluate('(v)=>v.currentTime')
+  pg.locator('#source-original').click();pg.wait_for_timeout(100);assert pg.locator('#result-original').evaluate('(v)=>v.paused');assert abs(pg.locator('#result-original').evaluate('(v)=>v.currentTime')-position)<.1
+  # Explicit keyboard seeking holds without playing and starts only on release.
+  pg.locator('#result-seek').focus();pg.keyboard.down('ArrowRight');pg.wait_for_timeout(150);assert pg.locator(current(pg)).evaluate('(v)=>v.paused');pg.keyboard.up('ArrowRight');pg.wait_for_timeout(180);assert pg.locator(current(pg)).evaluate('(v)=>!v.paused')
+  pg.locator('#result-play').click();pg.locator('#result-seek').focus();pg.keyboard.down('End');assert pg.locator(current(pg)).evaluate('(v)=>v.paused');pg.keyboard.up('End');pg.wait_for_timeout(150);assert pg.locator(current(pg)).evaluate('(v)=>v.paused && v.currentTime>=v.duration-.05')
+  assert pg.locator('#result-play').get_attribute('aria-label')==('Сначала' if ru else 'Replay');pg.locator('#source-dub').click();pg.wait_for_timeout(100);assert pg.locator('#result').evaluate('(v)=>v.paused && v.currentTime>=v.duration-.05')
+  pg.locator('#result-play').click();pg.wait_for_timeout(220);assert pg.locator('#result').evaluate('(v)=>!v.paused && v.currentTime<1')
+  # Actual held pointer/touch-region seek; no mid-drag playback.
+  r=pg.locator('#result-seek').bounding_box();pg.mouse.move(r['x']+r['width']*.3,r['y']+r['height']/2);pg.mouse.down();pg.mouse.move(r['x']+r['width']*.6,r['y']+r['height']/2);pg.wait_for_timeout(120);assert pg.locator('#result').evaluate('(v)=>v.paused');pg.mouse.up();pg.wait_for_timeout(200);assert pg.locator('#result').evaluate('(v)=>!v.paused')
+  if w<768:pg.locator('#result-play').tap();assert pg.locator('#result').evaluate('(v)=>v.paused');pg.locator('#source-original').tap()
+  else:pg.locator('#result-play').click();pg.locator('#source-original').click()
+  pg.locator('#result-volume').focus();pg.keyboard.press('ArrowLeft');assert pg.locator('#result').evaluate('(v)=>Math.abs(v.volume-.6)<.01') and pg.locator('#result-original').evaluate('(v)=>Math.abs(v.volume-.6)<.01')
+  pg.locator('#result-fullscreen').click();pg.wait_for_function('!!document.fullscreenElement');assert pg.locator('#result-player').evaluate('(e)=>document.fullscreenElement===e');pg.locator('#source-dub').click();pg.locator('#result-fullscreen').click();pg.wait_for_function('!document.fullscreenElement')
+  pg.locator('#source-original').focus();pg.keyboard.press('ArrowRight');assert pg.locator('#source-dub').evaluate('(e)=>document.activeElement===e');assert pg.locator('#source-dub').get_attribute('aria-pressed')=='true';assert pg.locator('#source-dub').evaluate('(e)=>getComputedStyle(e).outlineStyle')=='solid'
+  pg.locator('#source-original').click();assert pg.locator('#download').get_attribute('href')=='/media/example-dub.mp4'
+  with pg.expect_download() as info:pg.locator('#download').click()
+  download=info.value;assert download.suggested_filename=='sintel-example-dub.mp4';assert hashlib.sha256(Path(download.path()).read_bytes()).hexdigest()==hashlib.sha256((studio/'public/media/example-dub.mp4').read_bytes()).hexdigest()
+  before=pg.evaluate('JSON.parse(localStorage.getItem("dubbed-lowfi-v1")).accepted');pg.locator('#return').click();assert pg.locator('#record-view').is_visible();assert pg.locator('#result').evaluate('(v)=>v.paused') and pg.locator('#result-original').evaluate('(v)=>v.paused');assert pg.evaluate('JSON.parse(localStorage.getItem("dubbed-lowfi-v1")).accepted')==before
+  assert not pg.locator('.wave-key,#speaker,#panel-speaker').count();assert pg.locator('.performance').is_visible()
+  pg.locator('#to-result').click();pg.wait_for_function('!document.querySelector("#result-player").hidden');assert pg.locator('#result').evaluate('(v)=>v.paused && v.currentTime==0');assert pg.locator('#result-player').get_attribute('data-source')=='dub'
+  pg.evaluate('scrollTo(0,0)');pg.screenshot(path=str(out/f'ab-A-result-final-{w}x{h}.png'))
+  if w>=768:assert pg.locator('.result-bottom').bounding_box()['y']+pg.locator('.result-bottom').bounding_box()['height']<=h,pg.locator('.result-bottom').bounding_box()
+  checks.append({'scenario':'source/paused/ended/replay/pointer+keyboard seek/volume/fullscreen/actual download/return/reentry','viewport':[w,h],'locale':'ru' if ru else 'en','result':'PASS'});ctx.close()
+ # Delayed original metadata arrives after owner has already switched back to My dub.
+ ctx=b.new_context();seed(ctx);pg=ctx.new_page();pending=[];pg.route('**/media/scene.mp4',lambda route:pending.append(route));pg.goto('http://127.0.0.1:5178',wait_until='domcontentloaded');pg.wait_for_function('!document.querySelector("#result-play").disabled');pg.locator('#result-play').click();pg.wait_for_timeout(500);old=pg.locator('#result').evaluate('(v)=>v.currentTime');pg.locator('#source-original').click();expect(pg.locator('#result-media-status')).to_be_visible();pg.screenshot(path=str(out/'ab-A-result-source-loading.png'));pg.locator('#source-dub').click();pg.wait_for_timeout(150)
+ for route in pending:route.fulfill(status=200,content_type='video/mp4',body=(studio/'public/media/scene.mp4').read_bytes())
+ pg.wait_for_timeout(500);assert pg.locator('#result').evaluate('(v)=>!v.paused') and pg.locator('#result-original').evaluate('(v)=>v.paused');assert pg.locator('#result').evaluate('(v)=>v.currentTime')>=old;assert pg.locator('#result-player').get_attribute('data-source')=='dub';checks.append({'scenario':'late metadata cannot overwrite latest source,playhead or playback intent','result':'PASS'});ctx.close()
+ # Real network failure/readiness then explicit alternate source and retry; no fake failure UI.
+ ctx=b.new_context();seed(ctx);pg=ctx.new_page();pg.route('**/media/example-dub.mp4',lambda route:route.abort());pg.goto('http://127.0.0.1:5178');pg.wait_for_function('document.querySelector("#result-play").getAttribute("aria-label")==="Retry loading"');expect(pg.locator('#result-media-status')).to_be_visible();pg.screenshot(path=str(out/'ab-A-result-source-failure.png'));pg.locator('#source-original').click();pg.wait_for_function('!document.querySelector("#result-play").disabled');assert pg.locator('#result-original').evaluate('(v)=>v.paused');pg.locator('#source-dub').click();pg.wait_for_function('document.querySelector("#result-play").getAttribute("aria-label")==="Retry loading"');pg.unroute('**/media/example-dub.mp4');pg.locator('#result-play').click();pg.wait_for_function('document.querySelector("#result-play").getAttribute("aria-label")==="Play" && !document.querySelector("#result-play").disabled');assert pg.locator('#result').evaluate('(v)=>v.paused');checks.append({'scenario':'actual failed asset,alternate source,explicit successful retry stays paused','result':'PASS'});ctx.close()
+ assert not errors,errors
+ (out/'interaction-results.json').write_text(json.dumps({'version':'core-journey-panel-highfi-v4','date':'2026-10-27','browser':b.version,'result':'PASS','checks':checks,'pageErrors':errors,'fixtures':{'original':'scene.mp4','dub':'example-dub.mp4','durationSecondsEach':13.416667},'limits':'Actual Chrome/synthetic fixtures/network interception; no real render/backend,microphone,physical mobile or SR speech proof.'},indent=2)+'\n',encoding='utf-8');b.close()
+print('PASS v6 Result transport/comparison/download/fullscreen/races/readiness/return matrix')

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-24T23:17:49.046Z",
+  "seed": "Direct mock registration.start/verify/signOut only, disposable isolated browser context. Expiry injected by changing one mock session expiresAt; all entry sign-in performed through UI.",
+  "seedResult": {
+    "status": "ok",
+    "note": "synthetic mock account"
+  },
+  "successUrl": "http://127.0.0.1:4380/new",
+  "before": {
+    "id": "a01491c0-f249-45f9-a285-5cc0d80cd16e",
+    "accountId": "8865472c-7ff5-4a7d-afb1-5ef190c8e62a",
+    "expiresAt": 1795475870059,
+    "revision": 0
+  },
+  "afterReload": {
+    "id": "a01491c0-f249-45f9-a285-5cc0d80cd16e",
+    "accountId": "8865472c-7ff5-4a7d-afb1-5ef190c8e62a",
+    "expiresAt": 1795475870059,
+    "revision": 0
+  },
+  "remainingMs": 2591999441,
+  "expiredAccountUrl": "http://127.0.0.1:4380/account",
+  "expiredAccountText": "This request expired. Start again.\n\nRetry",
+  "expiredRetryUrl": "http://127.0.0.1:4380/account",
+  "expiredRetryText": "This request expired. Start again.\n\nRetry",
+  "expiredUrl": "http://127.0.0.1:4380/sign-in",
+  "reauthUrl": "http://127.0.0.1:4380/new",
+  "anonymousProtectedText": "Войти\n\nПродолжите с помощью email и пароля.\n\nПродолжить с Google\n\nТолько локальная имитация. Подключения к Google нет.\n\nили\n\nЭлектронная почта\nПароль\nПоказать пароль\nВойти\nЗабыли пароль?\n\nВпервые в Dubbed? Создать аккаунт",
+  "anonymousProtectedUrl": "http://127.0.0.1:4380/sign-in"
+}

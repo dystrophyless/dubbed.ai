@@ -1,0 +1,173 @@
+{
+  "errors": [],
+  "native": [],
+  "checks": [
+    {
+      "name": "capture-before-source-start",
+      "value": {
+        "native": {
+          "gum": [
+            721.8000000119209
+          ],
+          "starts": [
+            742.3000000119209
+          ],
+          "videoPlay": [],
+          "delayVideo": false
+        },
+        "videoTime": 0,
+        "videoPaused": true,
+        "button": "Recording"
+      }
+    },
+    {
+      "name": "capture-finished-1",
+      "value": {
+        "native": {
+          "gum": [
+            721.8000000119209
+          ],
+          "starts": [
+            742.3000000119209
+          ],
+          "videoPlay": [
+            1965.7000000476837
+          ],
+          "delayVideo": false
+        },
+        "videoTime": 3.955466,
+        "videoPaused": true
+      }
+    },
+    {
+      "name": "capture-finished-2",
+      "value": {
+        "native": {
+          "gum": [
+            721.8000000119209,
+            6509.400000035763
+          ],
+          "starts": [
+            742.3000000119209,
+            6537.300000011921
+          ],
+          "videoPlay": [
+            1965.7000000476837
+          ],
+          "delayVideo": false
+        },
+        "videoTime": 8.477887,
+        "videoPaused": true
+      }
+    },
+    {
+      "name": "capture-finished-3",
+      "value": {
+        "native": {
+          "gum": [
+            721.8000000119209,
+            6509.400000035763,
+            10729.100000023842
+          ],
+          "starts": [
+            742.3000000119209,
+            6537.300000011921,
+            10777
+          ],
+          "videoPlay": [
+            1965.7000000476837
+          ],
+          "delayVideo": false
+        },
+        "videoTime": 13.397117,
+        "videoPaused": true
+      }
+    },
+    {
+      "name": "result-entry",
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=A&snapshot=snapshot%3Aoperation%3A15e8aa80-a3a1-4664-ba87-c52e51d7acb0&locale=en",
+      "value": {
+        "scrollY": 0,
+        "heading": {
+          "x": 388.796875,
+          "y": 20,
+          "width": 662.390625,
+          "height": 28,
+          "top": 20,
+          "right": 1051.1875,
+          "bottom": 48,
+          "left": 388.796875
+        },
+        "video": {
+          "paused": true,
+          "time": 0,
+          "duration": "13.416667"
+        },
+        "buttons": [
+          {
+            "text": "Exit",
+            "label": "Exit"
+          },
+          {
+            "text": "Original",
+            "label": null
+          },
+          {
+            "text": "My dub",
+            "label": null
+          },
+          {
+            "text": "",
+            "label": "Play"
+          },
+          {
+            "text": "",
+            "label": "Full screen"
+          },
+          {
+            "text": "Download My dub",
+            "label": null
+          },
+          {
+            "text": "Return to recording",
+            "label": null
+          },
+          {
+            "text": "Close",
+            "label": "Close"
+          }
+        ]
+      }
+    },
+    {
+      "name": "paused-seek-release",
+      "value": {
+        "paused": true,
+        "time": 0.1,
+        "duration": 13.416667
+      }
+    },
+    {
+      "name": "download-while-original",
+      "filename": "example-dub.mp4",
+      "sha256": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9"
+    },
+    {
+      "name": "completed-last-line-controls",
+      "value": [
+        "Exit",
+        "Original",
+        "Record",
+        "Your take",
+        "Previous",
+        "Next",
+        "To result"
+      ]
+    },
+    {
+      "name": "completed-last-line-primary-click",
+      "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=A&turn=sintel-turn-3&locale=en",
+      "text": "Someone very dear? A kindred spirit?Position in dialogue window0:00 / 0:04Reference volumeLine 3 / 3OriginalRecordYour takeAll dialogue windows have accepted takes. Choose “To result” to authorize a frozen snapshot.PreviousNextTo result"
+    }
+  ]
+}

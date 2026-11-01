@@ -1,0 +1,67 @@
+{
+  "version": "core-journey-ab-contract-sync-v2",
+  "date": "2026-10-28",
+  "timezone": "Asia/Qyzylorda",
+  "stage": "Ready for contract/package review; EDITS PAUSED",
+  "base": "9096925a4476e84ec9a6e5ef9bff50ae45ac0f67",
+  "branch": "main",
+  "scope": "Both local prepared-video→real-browser Record→Result layouts;canonical contracts/package only;no product source authored",
+  "ownerAuthorization": "Окей. Ну тогда продолжи разработку",
+  "authorizationInterpretation": "Root-directed full local slice through review/implementation/verification/fixes/final connected proof;not wholeMVP,backendrender,liveAB orremote delivery",
+  "holds": [
+    "GitHub mutations",
+    "commit",
+    "push",
+    "deployment",
+    "live experiment/telemetry"
+  ],
+  "canonicalSha256": {
+    "_docs/HANDOFF.md": "30dc5ed2ecf632d0534c15f71828a1ea67d7ea4e095292c67ec296c60ae66eb8",
+    "_docs/frontend-flows/00-shared-contract.md": "03cd5a4f1fed6953d51b9f62d33491c7a344e6144487c892ce8b288484646929",
+    "_docs/frontend-flows/09-record.md": "82a7090581c6469174c2c4dc72b29b5b3154d0712b11c39fdc71c31164fff5e6",
+    "_docs/frontend-flows/10-result.md": "0f64bf6508c3dc998d5dec4cc40bd4293900959b7d95f873cd775c5ce29e5ac5",
+    "_docs/frontend-flows/README.md": "cf1310bb507fc0a62c707ea661560984d899370f5d3e13daef2b580afebe5291",
+    "_docs/frontend-flows/affect-ui-clean-light-adoption.md": "f964d5d3bd8db37672e3c6e3dfa91821cc492d5e0110fc68e1e12645df940421",
+    "_docs/frontend-flows/affect-ui-workflow.md": "8a1cc9b60c5617e718638afb96d27bf849cd2f51aeaf342338e4def7602766ee",
+    "_docs/frontend-flows/design-tokens.md": "66105db94c9e40e947ac514f346daa25463469d4c429772a5b407f94a0cf9416",
+    "_docs/frontend-implementation-contract.md": "090b04d6b9404863091df2051764c70962c6ae60c9516bd256a1879f6b158648"
+  },
+  "artifactsSha256": {
+    "asset-prerequisites.json": "0aa6f25549218c9114f13c4eb26c299ef413d1825e535defdf150c1f00c56963",
+    "baseline.json": "3ae1c9801cb52a350ecfa66a0711c95553e49be4fc7fa3fa705f08662cda4168",
+    "inspect-assets.py": "8c81588751a5e7293ba774bbacdf0d32a12df071908e4cc8f3cb6b72c34c50ce",
+    "issue-readback.json": "92e93e312ba0bacfb238751550fb2c5e2807e43cffc28f239a63f37c1e07a63a",
+    "package-review.md": "861b6384f338593dc1948ae941eaee7dbf472f7f6da143a4a5a8b885163ac964",
+    "scoped-contract-diff.patch": "933d0ee5b643070b7608f2fb346dc5387dbfd12cf23c10c710723e6cd930c7d7",
+    "sources-before/_docs/frontend-flows/00-shared-contract.md": "83d5a55c9864d62dfda1e50e9721a98e963f74b259f7d2b8971935381a262833",
+    "sources-before/_docs/frontend-flows/09-record.md": "c5261ab70929f133c64dd5410a3e47a56a3deb351c07313908974f376da7096c",
+    "sources-before/_docs/frontend-flows/10-result.md": "ede8a3f9e2a4af0cf32bac82be72b06f42103a2b37c2bcdc421210debc0345d1",
+    "sources-before/_docs/frontend-flows/affect-ui-clean-light-adoption.md": "f7c4d2452d83d07c992511ec7d398aaf1cefe965da6daf89eddaf955cac36722",
+    "sources-before/_docs/frontend-flows/affect-ui-workflow.md": "c26ca3a1475b5d8f9cbf74c93e0118601f8f6a51c5cd2f7263169d121f1fa884",
+    "sources-before/_docs/frontend-flows/design-tokens.md": "666926ea2372c145a72a99e843c45dcbdc3e100fbd71280b8dff16876044aded",
+    "sources-before/_docs/frontend-flows/README.md": "b4582cbba7e08dc2b059d7d2ea304347282e6ac48349cad799f1e80838c1952b",
+    "sources-before/_docs/frontend-implementation-contract.md": "2d00f23da637acd5577b0dfd3c1c550e3707f97544497c7e92a0d169e91f2e41",
+    "sources-before/_docs/HANDOFF.md": "3fe2a43605d9f7d691500706870b56792a4a6b53cf0b115d123b770aadf35456",
+    "sync-contracts.py": "db8d0bbd9859276a3c38741616c95fc8a7fd20e64e8b29d9a8fab711c6da4bdb",
+    "sync-supporting-contracts.py": "98a59d8a72d8baf6c025f0b6984014e3b7994b4e00a2eeed19d02c50d3ae7630",
+    "verification.json": "c9e26bd3e833564b7692c32ae1d4795e4b2369d38f38090f55fc8c9057862764",
+    "verify-package.py": "0ed87024f2a7a6104ac721b77d32ba759c878a04cfcfa018a8c923a9e6b7b608"
+  },
+  "frozenPrototypeManifests": {
+    "core-journey-lowfi": "969061d34e48ffb2be3884fda3bc1bda3fb6a609dcf66526c7829949a70510fe",
+    "core-journey-studio": "04991d3a4c991829ef6d58f46ccb57cc876fff14cfcf7e801ae41fd09b150c98"
+  },
+  "verification": {
+    "result": "PASS",
+    "assertions": 1006,
+    "otherActiveStubDocsUnchanged": 92,
+    "protectedDomainSections": 18,
+    "prototypeFingerprintsUnchanged": 841,
+    "liveIssuesReadOnly": 17,
+    "frontendPresent": false,
+    "runtimeChecks": "NOT RUN:newapp absent;only existingfixturemetadata inspected inChrome",
+    "next": "Independent package review,then Root bounded gpt-6-luna/max execution if accepted"
+  },
+  "openDecisions": "No unresolved core product decision;futureexperiment identity/privacy/consent/denominator/window/retention/collection andrealservice/media/lease/render/font distribution remain gated outside local core",
+  "limits": "Static author checks do not establish independent review,implementation orproductacceptance. LocalfixtureResult is not derivedfromcapturedtakes."
+}

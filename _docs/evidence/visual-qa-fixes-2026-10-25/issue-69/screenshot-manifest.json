@@ -1,0 +1,317 @@
+[
+  {
+    "name": "not-asked-en-desktop",
+    "path": "evidence/not-asked-en-desktop.png",
+    "locale": "en",
+    "state": "fresh visit, permission not requested",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "not-asked-ru-desktop",
+    "path": "evidence/not-asked-ru-desktop.png",
+    "locale": "ru",
+    "state": "fresh visit, permission not requested",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-en-desktop",
+    "path": "evidence/ready-en-desktop.png",
+    "locale": "en",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-en-short",
+    "path": "evidence/ready-en-short.png",
+    "locale": "en",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 700
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-en-390",
+    "path": "evidence/ready-en-390.png",
+    "locale": "en",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screenshotPixels": {
+      "width": 390,
+      "height": 844
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-en-767",
+    "path": "evidence/ready-en-767.png",
+    "locale": "en",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 767,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 767,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-en-768",
+    "path": "evidence/ready-en-768.png",
+    "locale": "en",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 768,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 768,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-ru-desktop",
+    "path": "evidence/ready-ru-desktop.png",
+    "locale": "ru",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-ru-short",
+    "path": "evidence/ready-ru-short.png",
+    "locale": "ru",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 1440,
+      "height": 700
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 700
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-ru-390",
+    "path": "evidence/ready-ru-390.png",
+    "locale": "ru",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screenshotPixels": {
+      "width": 390,
+      "height": 844
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-ru-767",
+    "path": "evidence/ready-ru-767.png",
+    "locale": "ru",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 767,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 767,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "ready-ru-768",
+    "path": "evidence/ready-ru-768.png",
+    "locale": "ru",
+    "state": "connected, optional test not started",
+    "viewport": {
+      "width": 768,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 768,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "denied-en-desktop",
+    "path": "evidence/denied-en-desktop.png",
+    "locale": "en",
+    "state": "injected NotAllowedError; no microphone track",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "denied-ru-390",
+    "path": "evidence/denied-ru-390.png",
+    "locale": "ru",
+    "state": "injected NotAllowedError; no microphone track",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screenshotPixels": {
+      "width": 390,
+      "height": 844
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "retry-en-desktop",
+    "path": "evidence/retry-en-desktop.png",
+    "locale": "en",
+    "state": "explicit retry succeeds with fake track",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "retry-ru-390",
+    "path": "evidence/retry-ru-390.png",
+    "locale": "ru",
+    "state": "explicit retry succeeds with fake track",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screenshotPixels": {
+      "width": 390,
+      "height": 844
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "lost-en-desktop",
+    "path": "evidence/lost-en-desktop.png",
+    "locale": "en",
+    "state": "synthetic ended event on fake track",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "lost-ru-390",
+    "path": "evidence/lost-ru-390.png",
+    "locale": "ru",
+    "state": "synthetic ended event on fake track",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screenshotPixels": {
+      "width": 390,
+      "height": 844
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "test-unsupported-en-desktop",
+    "path": "evidence/test-unsupported-en-desktop.png",
+    "locale": "en",
+    "state": "fake live track; MediaRecorder API unavailable",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshotPixels": {
+      "width": 1440,
+      "height": 900
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "test-unsupported-ru-390",
+    "path": "evidence/test-unsupported-ru-390.png",
+    "locale": "ru",
+    "state": "fake live track; MediaRecorder API unavailable",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screenshotPixels": {
+      "width": 390,
+      "height": 844
+    },
+    "openedForVisualInspection": true
+  },
+  {
+    "name": "test-unsupported-ru-390-alert",
+    "path": "evidence/test-unsupported-ru-390-alert.png",
+    "locale": "ru",
+    "state": "fake live track; localized unavailable message scrolled into view",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screenshotPixels": {
+      "width": 390,
+      "height": 844
+    },
+    "openedForVisualInspection": true
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-28T19:16:10.495Z",
+  "browser": "Chrome 156.0.8078.49",
+  "scenario": "First accepted take preserved after a known pre-write quota failure. Retry saved the exact captured Blob without re-recording.",
+  "physicalMicrophone": false,
+  "nativeApiEvidence": {
+    "getUserMediaCalls": 2,
+    "recorderStarts": 2
+  },
+  "acceptedCandidateBeforeFailure": "candidate:operation:4efe3800-35d8-478d-9a36-8d86cb6b236a",
+  "failedAttempt": {
+    "calls": 1,
+    "stores": [
+      "operations"
+    ]
+  },
+  "recoveryToast": {
+    "background": "rgb(32, 32, 32)",
+    "borderRadius": "10px",
+    "bottom": "16px",
+    "width": 520,
+    "padding": "14px 16px",
+    "boxShadow": "rgba(0, 0, 0, 0.08) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.16) 0px 12px 28px -10px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+    "iconColor": "rgb(255, 156, 159)",
+    "titleFont": "500 14px / 20px \"Mabry Pro\", Arial, sans-serif",
+    "bodyFont": "14px / 20px \"Mabry Pro\", Arial, sans-serif"
+  },
+  "capturedBlobBeforePersistence": {
+    "captures": 1,
+    "byteSize": 75442,
+    "mimeType": "audio/webm;codecs=opus",
+    "sha256": "4440e1b0b5c3093ce2a765f8fbfaa2e403ef0b89fdb7e47013cb16e1034c26bb"
+  },
+  "retry": {
+    "captures": 1,
+    "byteSize": 75442,
+    "mimeType": "audio/webm;codecs=opus",
+    "sha256": "4440e1b0b5c3093ce2a765f8fbfaa2e403ef0b89fdb7e47013cb16e1034c26bb"
+  },
+  "finalProject": {
+    "revision": 4,
+    "draftCandidateByTurn": {
+      "sintel-turn-1": "candidate:operation:57eec21c-d28e-4a63-a086-b2aaa1201482"
+    },
+    "acceptedByTurn": {
+      "sintel-turn-1": "candidate:operation:4efe3800-35d8-478d-9a36-8d86cb6b236a"
+    },
+    "tombstonedAt": null
+  },
+  "retriedCandidate": {
+    "id": "candidate:operation:57eec21c-d28e-4a63-a086-b2aaa1201482",
+    "purpose": "recording",
+    "turnId": "sintel-turn-1",
+    "byteSize": 75442,
+    "sha256": "4440e1b0b5c3093ce2a765f8fbfaa2e403ef0b89fdb7e47013cb16e1034c26bb",
+    "mimeType": "audio/webm;codecs=opus",
+    "endReason": "fixed-window",
+    "probe": {
+      "mimeType": "audio/webm;codecs=opus",
+      "byteSize": 75442,
+      "durationSeconds": 5.16,
+      "decodedFrames": 247680,
+      "channelCount": 1,
+      "sampleRate": 48000,
+      "decodeStatus": "decoded",
+      "waveformPeaks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.018,
+        0.055,
+        0.008,
+        0.001,
+        0,
+        0,
+        1.002,
+        0.167,
+        0.01,
+        0.002,
+        0,
+        0,
+        1.021,
+        1.038,
+        0.014,
+        0.003,
+        0,
+        0,
+        0.006,
+        1.023,
+        0.019,
+        0.004,
+        0.001,
+        0,
+        0,
+        1.014,
+        0.027,
+        0.006,
+        0.001,
+        0,
+        0,
+        1.007,
+        0.05,
+        0.008,
+        0.001,
+        0,
+        0,
+        1.008,
+        0.173,
+        0.011,
+        0.002,
+        0,
+        0,
+        1.009,
+        0.993,
+        0.021,
+        0.004,
+        0.001,
+        0,
+        0,
+        1.026,
+        0.02,
+        0.003,
+        0,
+        0,
+        0,
+        1.032,
+        0.029
+      ]
+    },
+    "blobSize": 75442
+  }
+}

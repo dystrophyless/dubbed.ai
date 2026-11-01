@@ -1,0 +1,58 @@
+[
+  {
+    "saved": "B-app-record-initial",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=B&locale=en"
+  },
+  {
+    "turn": 1,
+    "notice": "Take saved as a recoverable candidate. It has not been accepted.",
+    "takeCount": 1
+  },
+  {
+    "saved": "B-app-record-candidate",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/record?layout=B&locale=en"
+  },
+  {
+    "turn": 2,
+    "notice": "Take saved as a recoverable candidate. It has not been accepted.",
+    "takeCount": 1
+  },
+  {
+    "turn": 3,
+    "notice": "Take saved as a recoverable candidate. It has not been accepted.",
+    "takeCount": 1
+  },
+  {
+    "saved": "B-app-result-desktop",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=B&snapshot=snapshot%3Aoperation%3Ac8f460f7-f305-4620-be09-02ba32b770b1&locale=en"
+  },
+  {
+    "resultStatus": "Illustrative sample ready\n\nFixed example video; not rendered from accepted takes.",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=B&snapshot=snapshot%3Aoperation%3Ac8f460f7-f305-4620-be09-02ba32b770b1&locale=en"
+  },
+  {
+    "saved": "A-app-result-desktop",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=A&snapshot=snapshot%3Aoperation%3Ac8f460f7-f305-4620-be09-02ba32b770b1&locale=en"
+  },
+  {
+    "saved": "A-app-result-short",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=A&snapshot=snapshot%3Aoperation%3Ac8f460f7-f305-4620-be09-02ba32b770b1&locale=en"
+  },
+  {
+    "saved": "B-app-result-short",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=B&snapshot=snapshot%3Aoperation%3Ac8f460f7-f305-4620-be09-02ba32b770b1&locale=en"
+  },
+  {
+    "saved": "A-app-result-phone",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=A&snapshot=snapshot%3Aoperation%3Ac8f460f7-f305-4620-be09-02ba32b770b1&locale=en"
+  },
+  {
+    "saved": "B-app-result-phone",
+    "url": "http://127.0.0.1:5180/projects/sintel-prepared/result?layout=B&snapshot=snapshot%3Aoperation%3Ac8f460f7-f305-4620-be09-02ba32b770b1&locale=en"
+  },
+  {
+    "browser": "156.0.8078.49",
+    "input": "Chrome browser-supplied fake audio; not a physical microphone",
+    "physicalMicrophone": false
+  }
+]

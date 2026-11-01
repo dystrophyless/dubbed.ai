@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23T02:06:58.699Z",
+  "boundary": "Isolated npm-build-passing snapshot; synthetic account seeded before UI upload/quote/start. Automatic processing observation/activation; Chromium muted/fake microphone, no capture yet.",
+  "url": "http://127.0.0.1:4281/projects/e5dab32e-b864-4495-8e4c-f948cba47747/record",
+  "main": "Record your voice\n\nKeep the original scene in view. Each line records for its timed window and stops automatically.\n\nProjects\n\nMicrophone access is requested only when you choose Record line.\n\nLine 1 of 3\n\nA blue light is on.\n\nCapture window: 0.75–3.18 s\n\nAccepted takes: 0 / 3\nOriginal video volume\nRecording status\nRecord line\nPrevious line\nNext line\n\nThis prototype saves draft and take state through its local mock workspace. It does not produce a custom rendered performance.",
+  "buttons": [
+    "Projects",
+    "Record line",
+    "Previous line",
+    "Next line"
+  ],
+  "pageErrors": []
+}

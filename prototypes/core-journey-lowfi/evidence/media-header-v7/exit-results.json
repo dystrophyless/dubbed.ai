@@ -1,0 +1,66 @@
+{
+  "version": "core-journey-panel-highfi-v7",
+  "date": "2026-10-28",
+  "result": "PASS",
+  "checks": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "locale": "en",
+      "result": "PASS",
+      "resultExitPausesBothSourcesAndPreservesAccepted": true,
+      "destinationCloseReturnsLogicalFocus": true,
+      "candidateEscapeStayAndDiscard": true,
+      "exactFailedSaveRetainedMyProjectsRetryAfterReload": true,
+      "settingsOnlyContextualFailure": true,
+      "oldAccepted": {
+        "id": 1793119472518
+      },
+      "savedCandidate": {
+        "id": 1793133733696
+      }
+    },
+    {
+      "viewport": [
+        1280,
+        600
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "resultExitPausesBothSourcesAndPreservesAccepted": true,
+      "destinationCloseReturnsLogicalFocus": true,
+      "candidateEscapeStayAndDiscard": true,
+      "exactFailedSaveRetainedMyProjectsRetryAfterReload": true,
+      "settingsOnlyContextualFailure": true,
+      "oldAccepted": {
+        "id": 1793119472518
+      },
+      "savedCandidate": {
+        "id": 1793133752608
+      }
+    },
+    {
+      "viewport": [
+        390,
+        667
+      ],
+      "locale": "ru",
+      "result": "PASS",
+      "resultExitPausesBothSourcesAndPreservesAccepted": true,
+      "destinationCloseReturnsLogicalFocus": true,
+      "candidateEscapeStayAndDiscard": true,
+      "exactFailedSaveRetainedMyProjectsRetryAfterReload": true,
+      "settingsOnlyContextualFailure": true,
+      "oldAccepted": {
+        "id": 1793119472518
+      },
+      "savedCandidate": {
+        "id": 1793133767849
+      }
+    }
+  ],
+  "pageErrors": [],
+  "method": "Actual Chrome/DPR1/100% EN/RU/phone,reduced motion,actual fixed-window fixture takes and source playback;browser-local boundary dialogs."
+}
