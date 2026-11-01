@@ -1,1 +1,0 @@
-179: | [07 Processing](07-processing.md) | PGR stage/bar/check appearance, THK controlled status, BTN cancel/retry | No source checklist toggles/autoplay/fake progress; backend cancellation/cost/race/reprocessing rules remain authoritative |

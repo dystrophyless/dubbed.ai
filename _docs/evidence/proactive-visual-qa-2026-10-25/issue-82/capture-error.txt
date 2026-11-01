@@ -1,5 +1,0 @@
-locator.fill: Timeout 30000ms exceeded.
-Call log:
-[2m  - waiting for getByLabel('Email', { exact: true })[22m
-
-    at D:\Program\python\Dubbed\_docs\evidence\proactive-visual-qa-2026-10-25\issue-82\capture.cjs:8:137

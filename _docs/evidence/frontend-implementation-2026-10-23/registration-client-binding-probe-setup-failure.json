@@ -1,6 +1,0 @@
-{
-  "capturedAtUtc": "2026-10-23T19:43:07.226Z",
-  "boundary": "Public mock facade, isolated namespace, two explicitly injected clients in native Chromium; no real identity provider or user data.",
-  "outcome": "execution-failed",
-  "failure": "Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'resolve')\n    at eval (eval at evaluate (:370:30), <anonymous>:11:50)\n    at async <anonymous>:396:30"
-}

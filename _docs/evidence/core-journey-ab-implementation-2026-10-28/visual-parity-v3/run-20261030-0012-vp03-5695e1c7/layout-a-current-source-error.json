@@ -1,7 +1,0 @@
-{
-  "event": "synthetic-current-media-error",
-  "src": "blob:http://127.0.0.1:5180/dbc81e74-535c-4e3e-a38a-7e3a66514dff",
-  "generationId": "generation:snapshot:operation:020bb1e3-47bc-4ea0-b55e-46dd67257962",
-  "retryPlaying": true,
-  "videoWidth": 960
-}

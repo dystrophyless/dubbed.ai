@@ -1,9 +1,0 @@
-{
-  "date": "2026-10-25T08:09:54.656Z",
-  "platform": "win32",
-  "node": "v22.23.1",
-  "chromium": "156.0.8078.4",
-  "dpr": 1,
-  "zoom": 1,
-  "headless": true
-}

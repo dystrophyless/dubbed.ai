@@ -1,2 +1,0 @@
-/* Preserve A's grouped panel;use its existing stacked pattern when two columns leave too little video. */
-@media(min-width:768px) and (max-width:1023px){main:not(.result-workspace){padding:24px;max-width:100%}#record-view{grid-template-columns:1fr}.script{min-height:0;padding:16px 0}.performance{padding:16px}.performance-actions{grid-template-columns:repeat(3,minmax(0,1fr))}.performance-actions .hf-button{min-height:48px;padding-inline:8px}.line-context{margin-bottom:16px}.navigation{margin-top:16px;padding-top:16px}.navigation .hf-button{min-height:48px}}

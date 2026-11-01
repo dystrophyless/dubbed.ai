@@ -1,2 +1,0 @@
-const {chromium}=require('D:/Program/python/Dubbed/frontend/node_modules/playwright');
-(async()=>{const b=await chromium.launch({headless:true,args:['--mute-audio','--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']}); const p=await b.newPage({viewport:{width:1440,height:900}});await p.goto('http://127.0.0.1:4372/');await p.waitForTimeout(500);console.log(await p.locator('body').innerText());await b.close()})();

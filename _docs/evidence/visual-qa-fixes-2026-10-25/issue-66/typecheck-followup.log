@@ -1,7 +1,0 @@
-Command: npm.cmd run typecheck --prefix frontend
-Date: 2026-10-25
-Result: Exit code 1. No AccountLinkingScreen.tsx or AccountLinkingScreen.test.tsx diagnostics remain.
-
-Remaining diagnostic, outside issue #66 ownership:
-src/features/processing/ProcessingScreen.tsx(864,19): error TS2345: Argument of type '(current: PreparationSnapshot | null) => PreparationSnapshot | { operation: { state: "not-started"; operationId: OperationId; safeToRetrySameId: true; } | OperationSnapshot<...>; ... 12 more ...; reservationCredits?: number | undefined; } | null' is not assignable to parameter of type 'SetStateAction<PreparationSnapshot | null>'.
-The updater can return an operation in the not-started shape, while PreparationSnapshot.operation requires OperationSnapshot<unknown> fields id, accountId, kind, revision, and updatedAt.

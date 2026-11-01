@@ -1,9 +1,0 @@
-{
-  "capturedAtUtc": "2026-10-23T19:09:02.922Z",
-  "browser": "156.0.8078.4",
-  "result": {
-    "delayRequestedMs": 2592000000,
-    "observedAfterMs": 104.80000001192093,
-    "fired": true
-  }
-}

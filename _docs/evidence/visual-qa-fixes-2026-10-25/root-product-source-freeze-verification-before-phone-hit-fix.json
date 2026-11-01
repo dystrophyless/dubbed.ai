@@ -1,8 +1,0 @@
-{
-  "verifiedAtUtc": "2026-10-25T14:04:21.442381+00:00",
-  "snapshotSha256": "9a0a9837c4efdf822b71a6a8651a392ded9a1277cd56e7f8f978491b8f518640",
-  "files": 125,
-  "status": "PASS",
-  "boundary": "Product source/public/build inputs only; the separate final test-source boundary is recorded after issue63 edits.",
-  "errors": []
-}

@@ -1,7 +1,0 @@
-from pathlib import Path
-from playwright.sync_api import sync_playwright
-import json
-out=Path(__file__).parent
-seed={'index':2,'accepted':[{'id':1},{'id':2},None],'candidates':[None,None,{'id':4}],'completed':False,'view':'record','locale':'ru'}
-with sync_playwright() as p:
- b=p.chromium.launch(channel='chrome',headless=True);c=b.new_context(viewport={'width':390,'height':667});c.add_init_script('localStorage.setItem("dubbed-lowfi-v1",'+json.dumps(json.dumps(seed))+')');page=c.new_page();page.goto('http://127.0.0.1:5178');page.wait_for_function('document.querySelector("#scene").readyState>=3');page.locator('.lab summary').click();page.locator('#long-line').check();page.locator('.lab summary').click();page.mouse.move(200,550);page.mouse.wheel(0,700);page.wait_for_timeout(200);before=page.evaluate('({scrollY,height:document.documentElement.scrollHeight})');page.locator('#next').click();page.wait_for_function('!document.querySelector("#result-player").hidden');after=page.evaluate('''()=>{let r=s=>{let v=document.querySelector(s).getBoundingClientRect();return {top:v.top,bottom:v.bottom}};return {scrollY,exit:r('#exit'),heading:r('#heading'),player:r('#result-player'),footer:r('.result-bottom')}}''');result={'before':before,'after':after};page.screenshot(path=str(out/'panel-v7-review-phone-result-from-next.png'));(out/'panel-v7-phone-result-scroll.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2));b.close()

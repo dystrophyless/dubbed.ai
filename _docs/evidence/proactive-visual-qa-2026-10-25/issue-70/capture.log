@@ -1,7 +1,0 @@
-2026-10-25 Windows local review at HEAD9d286621177200fdb5f61ef963d0b6818ae76774.
-Fresh browser capture: node capture.cjs; exit0;8PNGs; metrics.json; browser errors[].
-Fresh additional capture: node additional.cjs; exit0;1PNG; dialog-metrics.json, history-semantics.json.
-All9PNGs visually opened via view_image.
-Targeted vitest run1: credit-reservation-concurrency,credits-activity,checkout-simulation,preparation-recovery:4files20tests passed; duration2.54s.
-Targeted vitest run2: core-services,active-project-deletion,identity-google:3files15tests passed; duration2.18s.
-git diff --name-only -- frontend: empty. HEAD unchanged.

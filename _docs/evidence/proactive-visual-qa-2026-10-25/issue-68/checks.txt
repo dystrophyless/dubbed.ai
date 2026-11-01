@@ -1,6 +1,0 @@
-2026-10-25 local Windows, baseline 9d286621177200fdb5f61ef963d0b6818ae76774, existing dirty docs/evidence boundary preserved.
-Initial bounded command with --reporter=basic failed before tests: installed Vitest 5 could not load Reporter basic.
-Corrected command, cwd frontend:
-node node_modules/vitest/vitest.mjs run tests/services/adapter-contract.test.ts tests/services/core-services.test.ts tests/services/title-and-boundary.test.ts
-Exit 0; Test Files 3 passed (3); Tests 9 passed (9); Duration 27.86s.
-No full suite, build, lint, dependency changes, real adapter or production transaction check was run.

@@ -1,9 +1,0 @@
-{
-  "date": "2026-10-23T01:29:21.355Z",
-  "boundary": "Current mock rename invalid101graphemes directpublicservicecall after UIinputhung; failure notacceptance.",
-  "settled": "rejected",
-  "error": {
-    "name": "ServiceFault",
-    "message": "Project titles may contain at most 100 visible characters."
-  }
-}
