@@ -1,6 +1,6 @@
 # Dubbed — product brief
 
-The product input for `$speckit-specify`. It states **what the product must do and the rules it follows** — not how any
+The product input for `/speckit-specify`. It states **what the product must do and the rules it follows** — not how any
 screen looks. Screen layouts are designed from scratch through the design-system work in `BOOTSTRAP.md`.
 Later explicit owner answers override this brief.
 
@@ -85,7 +85,7 @@ Translation, generated or cloned voices, performance scoring, public sharing / g
 multi-take history, continuous multi-turn recording, video editing, manual split / merge, subscriptions,
 guaranteed clean separation of any audio.
 
-## 5. Open questions (carry into `$speckit-clarify` when the related feature is specified)
+## 5. Open questions (carry into `/speckit-clarify` when the related feature is specified)
 
 1. Exact credit packs and USD prices — pending cost measurements.
 2. Export of a project with zero turns.

@@ -1,11 +1,11 @@
-# Dubbed — agent instructions
+# Dubbed
 
 Dubbed is a browser app for dubbing short video scenes with your own voice (see `PRODUCT_BRIEF.md`).
 
 ## Current phase: bootstrap
 
-Follow `BOOTSTRAP.md` **phase by phase**. Each phase ends with an owner gate ("утверждаю" in chat after looking at
-localhost); do not start the next phase before the gate. No product features before Gates 1–3.
+Follow `BOOTSTRAP.md` **phase by phase**. Each phase after Phase 0 ends with an owner gate ("утверждаю" in chat after
+looking at localhost); do not start the next phase before its gate. No product features before Gates 1–3.
 
 ## Sources of truth
 
@@ -17,7 +17,8 @@ localhost); do not start the next phase before the gate. No product features bef
 - Workflow reference: `D:\Program\python\Novio` (structure and process only — it uses the Classic variant) and
   `D:\Program\affect-ui-project-playbook.md`.
 - `_carryover/` is non-visual input material, not authority.
-- **Never use git tags/branches `archive/*` or `attempt/*` as design input.** All screens are designed from scratch.
+- **Never use git tags/branches `archive/*`, `attempt/*` or `restart` (another agent's work in progress) as input.**
+  All screens are designed from scratch.
 
 ## Owner decisions so far
 
@@ -29,11 +30,13 @@ localhost); do not start the next phase before the gate. No product features bef
 - Two distinct recording-studio designs are wanted for a future A/B test.
 - In the studio, moving to the next turn requires a take for the current one.
 
-## Models and roles
+## Agents and models
 
-- `ui-designer`, `design-qa`, `design-architect`: **gpt-6.1-sol, xhigh**. `ui-builder`: **gpt-6-luna, max**.
-- Roles are Codex custom agents (`.codex/agents/<role>.toml`) with instructions in `.agents/skills/role-<role>/`.
-- During `$speckit-implement`, tasks marked `(ui-builder)` go to the `ui-builder` agent; other tasks stay in the main session.
+- Subagents in `.claude/agents/` (as in Novio): `ui-designer`, `ui-builder`, `design-qa` on **Sonnet**;
+  `design-architect` on **Opus** — used for new archetypes (Phase 4 concepts, above all the studio) and for critique
+  after the owner rejects the same point twice.
+- During `/speckit-implement`, tasks marked `(ui-builder)` go to the `ui-builder` agent; other tasks stay in the main session.
+- Spawn agents only where the workflow calls for them.
 
 ## Working rules
 
@@ -44,4 +47,5 @@ localhost); do not start the next phase before the gate. No product features bef
 - Never print or commit secrets (`.env`); demo data never contains the owner's real email or IDs.
 - Commit only when asked; push only when asked.
 - Repository documents in English; chat with the owner in Russian; product UI in English and Russian.
-- Superpowers skills are disabled for this project (`.codex/config.toml`).
+- This folder is a git worktree of `D:\Program\python\Dubbed` on branch `restart-claude`; do not switch branches here and
+  do not touch the main `Dubbed` folder. Use port **5174** for the dev server (5173 may be used by the other run).

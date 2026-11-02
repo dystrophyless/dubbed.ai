@@ -8,27 +8,27 @@ Clean), then the working example `D:\Program\python\Novio` (`design-system/`, `.
 `.specify/`, `CLAUDE.md`, `frontend/`). Novio uses the **Classic** variant — copy its structure and process, never its
 visual values.
 
-**Do not look at the git tags or branches `archive/*` and `attempt/*` for anything visual.** Dubbed's screens are
+**Do not look at the git tags or branches `archive/*`, `attempt/*` or `restart` for anything.** Dubbed's screens are
 designed from scratch.
 
 ---
 
 ## Phase 0 — Workflow and tooling (no gate)
 
-1. **SpecKit for Codex**: `specify init --here`, Codex integration, PowerShell scripts, sequential numbering. Copy Novio's
-   `.specify/extensions.yml` (after_plan → `speckit.design`, before_tasks → `speckit.design.gate`, after_implement →
-   `speckit.design.qa`) and `.specify/templates/ui-spec-template.md`.
-2. **Roles** as Codex custom agents (`.codex/agents/<role>.toml`, model and reasoning effort pinned) with their
-   instructions in role skills (`.agents/skills/role-<role>/SKILL.md`):
-   - `ui-designer`, `design-qa`, `design-architect` → **gpt-6.1-sol, xhigh**;
-   - `ui-builder` → **gpt-6-luna, max**.
+1. **SpecKit for Claude Code**: `specify init --here`, Claude integration, PowerShell scripts, sequential numbering
+   (commands become `/speckit-*`). Copy Novio's `.specify/extensions.yml` (after_plan → `speckit.design`, before_tasks →
+   `speckit.design.gate`, after_implement → `speckit.design.qa`) and `.specify/templates/ui-spec-template.md`.
+2. **Agents and skills** — port from Novio and rewrite for Dubbed / Clean:
+   - `.claude/agents/`: `ui-designer`, `ui-builder`, `design-qa` (Sonnet), `design-architect` (Opus);
+   - `.claude/skills/`: `speckit-design`, `speckit-design-gate`, `speckit-design-qa`, and a `dubbed-design-system` skill
+     (the short version of the rules, preloaded by the agents).
 
-   Port the three design skills (`speckit-design`, `speckit-design-gate`, `speckit-design-qa`) and a
-   `dubbed-design-system` skill from Novio. Write `.specify/memory/constitution.md` (Novio's five principles, Clean,
-   Inter, Dubbed stack, EN+RU) and complete `AGENTS.md`.
+   Write `.specify/memory/constitution.md` (Novio's five principles, Clean, Inter, Dubbed stack, EN+RU) and complete
+   `CLAUDE.md`.
 3. **Frontend scaffold** with the owner-confirmed stack (`PRODUCT_BRIEF.md` §6): Vite + React 19 + TS, React Router,
    TanStack Query, Zustand, CSS Modules, Lucide, Playwright + axe, Stylelint tokens-only, oxlint, screenshot script at
-   1440 × 900 and 390 × 844. Routes: `/styleguide`, `/styleguide/templates/<id>?state=`, `/prototypes/<feature>/<screen>?state=`.
+   1440 × 900 and 390 × 844. Dev server on port **5174**. Routes: `/styleguide`, `/styleguide/templates/<id>?state=`,
+   `/prototypes/<feature>/<screen>?state=`.
 
 ## Phase 1 — Adopt affect-ui Clean → **Gate 1: styleguide approved**
 
@@ -82,7 +82,7 @@ For `new-dub`, `processing`, `studio` and `result` (in that order of importance:
 3. **High-fi** of the chosen concepts from the approved kit, with every state, EN/RU, 1440 and 390.
 4. Owner review rounds → **Gate 4**.
 
-This is design-architect work (gpt-6.1-sol, xhigh). Do not jump to high-fi before the owner has picked a concept.
+This is design-architect work (Opus). Do not jump to high-fi before the owner has picked a concept.
 
 ## Phase 5 — Commit, then the first feature
 
