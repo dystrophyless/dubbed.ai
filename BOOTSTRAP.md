@@ -1,93 +1,111 @@
-# Bootstrap plan — restart with a design system and a light SpecKit workflow (Codex / ChatGPT)
+# Bootstrap — build the design system first, then the pages
 
-The restart reuses the workflow proven in `D:\Program\python\Novio` (built with Claude Code), adapted for Codex.
-Read first:
+How to set Dubbed up before any product feature. Work through the phases **in order**; each phase ends with a **gate**
+that only the owner can pass by writing "утверждаю" in chat after looking at it on localhost.
 
-1. `PRODUCT_BRIEF.md` — what Dubbed is (decisions in force).
-2. `D:\Program\affect-ui-project-playbook.md` — the full playbook: steps, rules learned from review rounds, pitfalls,
-   what to copy from Novio. Its section 4 "Classic → Clean" applies here.
-3. `D:\Program\python\Novio` — the working example: `design-system/`, `.claude/agents/`, `.claude/skills/`,
-   `.specify/extensions.yml`, `.specify/templates/ui-spec-template.md`, `.specify/memory/constitution.md`, `CLAUDE.md`,
-   `frontend/` (tokens, kit, layout, styleguide, reference templates, prototypes, quality gates).
-4. `_carryover/README.md` — what is reusable from the archived Dubbed version.
+Read first: `PRODUCT_BRIEF.md`, then `D:\Program\affect-ui-project-playbook.md` (sections 3–5 and 7–9; section 4 =
+Clean), then the working example `D:\Program\python\Novio` (`design-system/`, `.claude/agents/`, `.claude/skills/`,
+`.specify/`, `CLAUDE.md`, `frontend/`). Novio uses the **Classic** variant — copy its structure and process, never its
+visual values.
 
-## Why the previous attempt's design failed (do not repeat)
+**Do not look at the git tags or branches `archive/*` and `attempt/*` for anything visual.** Dubbed's screens are
+designed from scratch.
 
-- Process outweighed product: ~1.3 MB of process/evidence docs, 100 KB+ per screen spec, issue-lifecycle ceremony,
-  A/B candidates, layered owner corrections. Agents spent effort on procedure, not on design.
-- No design system as **parts**: rules and measurements existed, but no shared kit, no tokens-only lint, no page
-  archetypes or reference templates. Every screen was a bespoke HTML/CSS prototype later copied into React, so the style
-  was re-invented per screen and drifted.
+---
 
-## Target workflow (same as Novio)
+## Phase 0 — Workflow and tooling (no gate)
 
-```
-$speckit-specify → $speckit-clarify → $speckit-plan
-   └ after_plan  (mandatory) → $speckit-design        ui-designer role: ui-spec + prototype + screenshots → owner review on localhost → "approve"
-$speckit-tasks
-   └ before_tasks (mandatory) → $speckit-design-gate  no tasks until ui-spec is Approved (or the feature has no UI)
-$speckit-implement                                     backend in the main session; tasks marked (ui-builder) → ui-builder role
-   └ after_implement (mandatory) → $speckit-design-qa design-qa role: checklist + screenshot comparison → report → fixes
-```
+1. **SpecKit for Codex**: `specify init --here`, Codex integration, PowerShell scripts, sequential numbering. Copy Novio's
+   `.specify/extensions.yml` (after_plan → `speckit.design`, before_tasks → `speckit.design.gate`, after_implement →
+   `speckit.design.qa`) and `.specify/templates/ui-spec-template.md`.
+2. **Roles** as Codex custom agents (`.codex/agents/<role>.toml`, model and reasoning effort pinned) with their
+   instructions in role skills (`.agents/skills/role-<role>/SKILL.md`):
+   - `ui-designer`, `design-qa`, `design-architect` → **gpt-6.1-sol, xhigh**;
+   - `ui-builder` → **gpt-6-luna, max**.
 
-No GitHub issue lifecycle, no evidence packets, no A/B tracks. SpecKit files in `specs/<NNN>/` are the only planning
-documents; git history is the record.
+   Port the three design skills (`speckit-design`, `speckit-design-gate`, `speckit-design-qa`) and a
+   `dubbed-design-system` skill from Novio. Write `.specify/memory/constitution.md` (Novio's five principles, Clean,
+   Inter, Dubbed stack, EN+RU) and complete `AGENTS.md`.
+3. **Frontend scaffold** with the owner-confirmed stack (`PRODUCT_BRIEF.md` §6): Vite + React 19 + TS, React Router,
+   TanStack Query, Zustand, CSS Modules, Lucide, Playwright + axe, Stylelint tokens-only, oxlint, screenshot script at
+   1440 × 900 and 390 × 844. Routes: `/styleguide`, `/styleguide/templates/<id>?state=`, `/prototypes/<feature>/<screen>?state=`.
 
-## Claude Code → Codex mapping
+## Phase 1 — Adopt affect-ui Clean → **Gate 1: styleguide approved**
 
-| Novio (Claude Code) | Dubbed (Codex) |
-|---|---|
-| `CLAUDE.md` | `AGENTS.md` |
-| `.claude/skills/<name>/SKILL.md` | `.agents/skills/<name>/SKILL.md`, invoked as `$<name>` |
-| `.claude/agents/<role>.md` (subagents with a model) | role skills `.agents/skills/role-ui-designer`, `role-ui-builder`, `role-design-qa`, `role-design-architect`; the orchestrator spawns a Codex subagent and tells it to follow the role skill. **Check in Codex how to pin a model per subagent** (the archive used GPT-6.1 Sol for planning/review and GPT-6 Luna for execution). |
-| SpecKit `--ai claude`, commands `/speckit-*` | SpecKit initialised for Codex (`specify init --here`, choose the Codex integration, PowerShell scripts, sequential numbering); commands become `$speckit-*` |
-| `.specify/extensions.yml` hooks | identical — the SpecKit command text reads the file and runs the hook commands itself, so it works in Codex |
-| `/model` switch to Sonnet before implement | use the execution model (e.g. GPT-6 Luna) for `$speckit-implement`; the planning model (e.g. GPT-6.1 Sol) for specify / plan / tasks and escalations |
-| `.codex/config.toml` | kept: Superpowers stays disabled for this project |
+The goal: every building block exists in the Clean style and the owner has approved how it looks **before** any page is
+designed.
 
-## Bootstrap steps for Dubbed
+1. **Audit** `D:\Program\frontend\affect-ui\affectui-free` — **Clean / Light only**: all 17 components, motion, icons,
+   type, colours, shadows, radii, spacing, touch rules. Every value goes into `design-system/audit.md` with its source
+   file and line. Open the Light PNGs and compare by eye.
+2. **Tokens** (`frontend/src/styles/tokens.css`) from the audit only.
+3. **Port every Clean component** that has a use in Dubbed, deterministically (colours/shadows/easing/fonts → tokens;
+   sizes untouched). Ports are never edited afterwards; a necessary deviation is a documented patch the owner approves.
+4. **Build the rest of the kit in the Clean language** — only from Clean's own shapes, edges, shadows, type and motion:
+   - **base:** text field, password, textarea, select / listbox (no native pickers), checkbox / radio / switch, dialog,
+     toast, alert, empty state, skeleton, progress, tooltip, menus, tags / badges, avatar, pagination;
+   - **media (Dubbed-specific; affect has none, so design them with extra care):** video stage (any aspect ratio, poster,
+     loading / error), play / pause and scrubber, waveform, timeline with turn segments and a playhead, a **record
+     control** with its idle / recording / saved states, a level meter, a volume control, turn navigation, upload
+     drop-zone, section-range selector on a timeline, a credit-cost button.
+5. **Layout primitives** (stack, cluster, grid, container, section, two-column, sticky bar, show-at-breakpoint) and the
+   app shells: the ordinary shell with top navigation, and the **focused shell** (no global navigation, only Exit).
+6. **`/styleguide`** shows every component in every state (hover, focus, disabled, loading, error), EN and RU, desktop and
+   phone. Every control works.
+7. **Owner review rounds** on the styleguide with screenshots. Each remark becomes a general rule in `design-system/`.
+   → **Gate 1**: owner writes "утверждаю" for the styleguide.
 
-1. **SpecKit**: initialise for Codex; copy Novio's `.specify/extensions.yml` and `.specify/templates/ui-spec-template.md`.
-2. **Stack** (confirm with the owner): SPA — Vite + React 19 + TypeScript, React Router, TanStack Query (server data),
-   Zustand (client state only), CSS Modules + design tokens (no Tailwind, no shadcn), Lucide icons via an `<Icon name>`
-   wrapper, Playwright + axe, Stylelint tokens-only, oxlint. Backend later: FastAPI + PostgreSQL + SQLAlchemy.
-3. **Research the pack (Clean only)**: components, icons (Lucide, stroke recipe), font (owner question: Mabry Pro vs
-   Inter), motion, shadows, radii. Measure from `affectui-free\components\*\Clean\` and record every value in
-   `design-system/audit.md` (start from `_carryover/affect-ui-clean/design-tokens.md`, re-verify each value).
-4. **`design-system/`** — the ten documents as in Novio (README with golden rules, ia, templates, components, patterns,
-   foundations, content, quality, process, audit), written for Dubbed. Put the playbook's "review-round rules" into
-   `patterns.md` from day one.
-5. **IA** (`design-system/ia.md`) from `PRODUCT_BRIEF.md`: routes, ordinary pages with the top navigation vs focused
-   Record / Result pages with Exit only, flows, glossary (turn, take, candidate, accepted take, credits, slot).
-6. **Frontend foundation**: tokens.css, ported Clean components (button, OTP, segmented control, profile menu, filter
-   menu, notification stack, progress tracker, tips panel, thinking loader…), our own kit in the same style (fields,
-   select/listbox, dialog, toast, upload/drop zone, progress, menus), layout primitives, `/styleguide`, `/prototypes`
-   with `?state=`.
-7. **Page archetypes and reference templates for Dubbed** (each with loading / empty / error / success states):
-   - `auth` (sign in, sign up, verify code, reset) — like Novio's;
-   - `onboarding` (microphone check step) — wizard;
-   - `new-dub` (upload → preview → section selector → quote button) — **new**, design first;
-   - `processing` (progress with cancel) — status page;
-   - `studio` (Record: video stage, current line, waveform, Replay / Record / Your take, Previous / Next, Exit) —
-     **new and the most important; design and approve it before anything else**. Owner question: start fresh or from
-     archived layout A / B;
-   - `player` (Result: playback, new-version notice, Download, back to turns);
-   - `browse-list` (My projects), `ledger` (Credits: balance, packs, history), `settings` (Account, microphone),
-     `landing`.
-   New archetypes (new-dub, studio) are where the strongest model is worth using (design-architect role).
-8. **Quality gates**: Stylelint tokens-only, oxlint, Playwright + axe (no-horizontal-scroll check against the viewport
-   width at 390 px), screenshot scripts at 1440 / 390.
-9. **Roles, skills, constitution**: port Novio's four agent definitions into role skills, the three design skills
-   (`speckit-design`, `speckit-design-gate`, `speckit-design-qa`) and the design-system skill; write
-   `.specify/memory/constitution.md` (five principles as in Novio, Clean, Dubbed stack) and complete `AGENTS.md`.
-10. **Review rounds**: the owner reviews every reference template on localhost with screenshots; each remark becomes a
-    general rule. Commit the design system.
-11. **First feature through the pipeline**: authentication (as Novio 001) or — if the owner prefers to prove the core
-    first — the Record → Result slice on the mock services, reusing `_carryover/frontend-services/`.
+## Phase 2 — Design-system documents and IA → **Gate 2: IA approved**
 
-## Ground rules during bootstrap
+1. `design-system/` — the ten documents as in Novio (README with golden rules, ia, templates, components, patterns,
+   foundations, content, quality, process, audit), written for Dubbed and Clean. Include the page-quality rules below.
+2. `design-system/ia.md` from `PRODUCT_BRIEF.md`: routes, which pages use the ordinary vs the focused shell, flows,
+   glossary (turn, take, unaccepted take, accepted take, credits, reservation, slot).
+   → **Gate 2**: owner approves the IA.
 
-- No product feature code before the design system and reference templates are approved by the owner.
-- affect-ui ports are not edited; any unavoidable deviation is a documented "patch" with its reason, approved by the owner.
-- Never print or commit `.env` contents; demo data never uses the owner's real email.
-- Every "done" comes with real command output (build, lint, lint:css, e2e).
+## Phase 3 — Calibrate on simple pages → **Gate 3: simple templates approved**
+
+Reference templates with every state (loading, empty, error, success), built **only** from the approved kit:
+`auth` (sign in, sign up, verification code, reset), `projects` (list), `settings` (account, microphone), `credits`
+(balance, packs, history). These show whether the Clean style holds on whole pages — fix the kit, not the page, when it
+does not. Owner review rounds → **Gate 3**.
+
+## Phase 4 — New archetypes through design exploration → **Gate 4 per archetype**
+
+For `new-dub`, `processing`, `studio` and `result` (in that order of importance: **studio** first):
+
+1. **Design brief from the user's goal**, not from any previous screen. For the studio: the user follows the moving
+   scene, reads the line, sees when it is spoken and how long it lasts, hears the original, records, hears the take in
+   the scene and moves on — on a laptop and on a phone, with headphones or without.
+2. **3–4 genuinely different concepts** as quick low-fi wireframes (structure and hierarchy only). Each concept states
+   its idea in one sentence and its trade-offs. The owner picks — for the studio, **two** for the future A/B test.
+3. **High-fi** of the chosen concepts from the approved kit, with every state, EN/RU, 1440 and 390.
+4. Owner review rounds → **Gate 4**.
+
+This is design-architect work (gpt-6.1-sol, xhigh). Do not jump to high-fi before the owner has picked a concept.
+
+## Phase 5 — Commit, then the first feature
+
+Commit the design system after the gates (only when the owner asks). First feature through the SpecKit pipeline:
+authentication, or — if the owner prefers to prove the core first — the recording flow on the mock services, reusing
+`_carryover/frontend-services/`.
+
+---
+
+## Page-quality rules (from earlier review rounds — apply from day one)
+
+- **One primary action per view**, unmistakable; the most frequent action (e.g. Record) is never a pale or tiny control.
+- **No duplicated information** on one screen (the same counter, status or hint twice).
+- **Key actions are visible without scrolling** at 1440 × 900 and 390 × 844.
+- Buttons in one row have the same size; controls in one toolbar have the same height.
+- Every control works; no native browser pickers; neighbouring sections share their header shape.
+- Navigation actions (previous / next) look like actions, not like disabled text.
+- Media is shown at its own aspect ratio without heavy letterbox frames or labels covering the picture.
+- Phone: no horizontal scroll; touch targets per the Clean touch rules; text readable without zoom.
+
+## Ground rules
+
+- No product feature code before Gates 1–3; no studio high-fi before its concept is picked.
+- Never print or commit `.env` contents; demo data never contains the owner's real email or IDs.
+- Every "done" comes with real command output (build, lint, lint:css, e2e); what was not run is said plainly.
+- Approval is only the owner's explicit "утверждаю" in chat after looking at localhost — passing checks is not approval.
