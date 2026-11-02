@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router";
-import { Icon } from "@/components/icons";
+import { Icon, type IconName } from "@/components/icons";
 import { cx } from "./cx";
 import s from "./Misc.module.css";
 
@@ -81,5 +81,14 @@ export function BackLink({ to, children }: { to: string; children: ReactNode }) 
       <Icon name="back" />
       {children}
     </RouterLink>
+  );
+}
+
+/** A 32px tinted tile with one icon — gives a row or a panel its kind at a glance (history kinds, settings rows). */
+export function IconTile({ icon, tone = "neutral", size = 32 }: { icon: IconName; tone?: "neutral" | "accent" | "success" | "warning" | "danger"; size?: 32 | 40 }) {
+  return (
+    <span className={cx(s.tile, s[`tile-${tone}`])} data-size={size} aria-hidden="true">
+      <Icon name={icon} size={size === 40 ? 20 : 16} />
+    </span>
   );
 }

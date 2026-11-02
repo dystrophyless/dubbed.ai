@@ -71,7 +71,7 @@ export function UploadDropzone({
 export function RangeSelector({
   duration, start, end, max = 120, onChange,
 }: { duration: number; start: number; end: number; max?: number; onChange: (start: number, end: number) => void }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const track = useRef<HTMLDivElement>(null);
   const drag = useRef<{ mode: "start" | "end" | "move"; x0: number; s0: number; e0: number } | null>(null);
   const pct = (v: number) => `${(v / duration) * 100}%`;
@@ -116,7 +116,7 @@ export function RangeSelector({
       <div className={s.rangeHead}>
         <span className={s.rangeTitle}>{t("media.range.label")}</span>
         <span className={s.rangeValue}>
-          {formatTime(start)} – {formatTime(end)} · {t("media.range.seconds", { s: formatSeconds(len) })}
+          {formatTime(start)} – {formatTime(end)} · {t("media.range.seconds", { s: formatSeconds(len, i18n.resolvedLanguage) })}
         </span>
       </div>
       <div ref={track} className={s.rangeTrack}>

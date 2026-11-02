@@ -148,7 +148,8 @@
 }
 
 .placeholder {
-  color: var(--color-faint);
+  /* real text (not ::placeholder), so it must meet 4.5:1 — muted, not faint */
+  color: var(--color-muted);
 }
 
 .chevron {

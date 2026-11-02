@@ -49,6 +49,10 @@ the actions: «Удалить «Сцена на кухне»?» · [Отмена
 "Record a take to continue" / «Запишите дубль, чтобы продолжить» · "Up to 4.4 s" / «До 4,4 с» · "1.5 s left" / «Осталось 1,5 с».
 Sound captions stay in brackets and are shown quieter: "[laughs]" / «[смеётся]».
 
+**No technical codes as the message** (owner, 2026-11-03): never "404", "500", "Error 0x…" as a title or tag — say what
+happened in plain words. A support code may appear only as a copyable detail on the error page.
+**No abstract metaphors as illustrations** (e.g. a "silent" waveform for not found): use a plain, recognisable icon.
+
 **Never** show speaker names or numbers ("Speaker 1", «Голос 2»).
 
 ## Glossary

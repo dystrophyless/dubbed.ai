@@ -1,0 +1,173 @@
+/*
+ * List rows — the Clean row language: 13/20 title, 12/16 muted line, hairline separators.
+ * Hover is the WHOLE row edge to edge (incl. its ⋯), a soft wash; the title turns accent; nothing moves.
+ */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  transition: background-color var(--duration-fast) ease;
+}
+
+.group {
+  padding: var(--space-3) var(--space-4) var(--space-1);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-muted);
+}
+
+.list[data-dividers="off"] .row::before {
+  display: none;
+}
+
+.row + .row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: var(--space-4);
+  left: var(--space-4);
+  border-top: var(--hairline);
+}
+
+/* rows at the card's edge take the card's corners, so the hover wash never pokes out */
+.list:first-child > .row:first-child {
+  border-top-right-radius: var(--radius-card);
+  border-top-left-radius: var(--radius-card);
+}
+
+.list:last-child > .row:last-child {
+  border-bottom-right-radius: var(--radius-card);
+  border-bottom-left-radius: var(--radius-card);
+}
+
+.row:has(.interactive:hover) {
+  background: var(--color-wash);
+}
+
+.row:has(.interactive:hover)::before,
+.row:has(.interactive:hover) + .row::before {
+  border-top-color: transparent;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  min-height: 60px;
+  padding: var(--space-2_5) var(--space-4);
+  margin: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+.row:has(.actions) .main {
+  padding-right: 0;
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+.interactive:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -2px;
+}
+
+.leading {
+  display: grid;
+  flex: none;
+  place-items: center;
+  color: var(--color-icon);
+}
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-0_5);
+  min-width: 0;
+}
+
+.title {
+  overflow: hidden;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color var(--duration-fast) ease;
+}
+
+.interactive:hover .title {
+  color: var(--color-accent);
+}
+
+.subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-1_5);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted);
+}
+
+.trailing {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.chevron {
+  display: grid;
+  flex: none;
+  place-items: center;
+  color: var(--color-faint);
+  transition: color var(--duration-fast) ease;
+}
+
+.interactive:hover .chevron {
+  color: var(--color-accent);
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  padding: 0 var(--space-3) 0 var(--space-1);
+}
+
+@media (pointer: coarse) {
+  .main {
+    min-height: 64px;
+  }
+}
+
+/* on phones a row with its own actions drops the chevron: the whole row is still the link */
+@media (max-width: 1023.98px) {
+  .row:has(.actions) .chevron {
+    display: none;
+  }
+}

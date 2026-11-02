@@ -6,6 +6,10 @@
   box-shadow: var(--shadow-card);
 }
 
+.pad-lg {
+  padding: var(--space-6);
+}
+
 .pad-md {
   padding: var(--space-4);
 }
@@ -49,9 +53,10 @@
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-3);
+  gap: var(--space-2) var(--space-3);
   padding: var(--space-2_5) var(--space-4);
   border-top: var(--hairline);
   font-size: var(--text-md);
@@ -64,4 +69,11 @@
   margin: 0;
   border: 0;
   border-top: var(--hairline);
+}
+
+/* phones: the footer's action takes the full width under its note */
+@media (max-width: 1023.98px) {
+  .footer > :global(.ui-buttonc) {
+    width: 100%;
+  }
 }

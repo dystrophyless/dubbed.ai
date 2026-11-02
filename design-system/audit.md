@@ -38,8 +38,8 @@ compact 13px type, neutral greys as alpha-black, one blue accent used sparingly.
 | `--color-hover-text` | `rgba(0,0,0,0.75)` | M | segmented option hover | `segmented-control-clean.md:535` |
 | `--color-on-solid` | `#fcfcfc` | M | text on the dark primary | `on-solid` ×7, e.g. `button-clean.md:296` |
 
-`muted`, `icon` and `faint` are below WCAG AA contrast on white — kept 1:1 (owner decision; axe `color-contrast` is a
-documented exception).
+`muted`, `icon` and `faint` are below WCAG AA contrast on white as measured. **Superseded at runtime by DUBBED PATCH 3**
+(see the end of this file).
 
 ## 3. Lines, fills and washes
 
@@ -221,3 +221,28 @@ Screenshots reviewed by eye (Light): all `01-initial.png`, plus the state PNGs o
 
 Motion pack: `shimmer-loader` (**ported** — skeletons), `number-ticker` (**ported** — credit balance), `text-reveal`
 and `grid-background` (not ported; no current use).
+
+---
+
+## Patch 3 — contrast (owner decision, 2026-11-02)
+
+The owner found the measured palette too low in contrast. The measured values above remain the record; runtime values
+are overridden in the second `:root` block of `tokens.css`. Ratios on white (canvas #f4f4f5 in brackets), approximate:
+
+| Token | Measured → runtime | Ratio |
+|---|---|---|
+| `--color-canvas` | #fafafa → #f4f4f5 | white cards stand out from the page |
+| `--color-text` | .61 → .68 alpha black | 7.4:1 (6.8) |
+| `--color-muted` | .45 → .58 | 5.3:1 (4.9) |
+| `--color-icon` | .447 → .56 | 4.9:1 |
+| `--color-faint` | .27 → .45 | 3.3:1 — only `::placeholder` and disabled hints |
+| `--color-line` / `--color-fill-strong` | .06 / .10 → .10 / .16 | hairlines and the original waveform read clearly |
+| `--color-ring` / `--color-box-ring` | .20 / .22 → .42 / .45 | radio and checkbox outlines >= 3:1 |
+| `--color-accent` | rgba(0,96,226,.765) → #0057cc | 6.2:1 (also on its soft tint) |
+| `--color-danger` | #e5484d → #c4262c | 5.6:1; white on it 5.6:1 (record disc, destructive text) |
+| `--color-success` | #1a9a52 → #137a41 | 5.3:1 |
+| `--color-warning-text` | #b47a06 → #8f5f00 | 5.6:1 |
+| `--color-badge` | #e11d48 → #be123c | 6.1:1 |
+| `--shadow-card` / `-hover` / `--shadow-pop` rings | .06 / .10 / .08 → .12 / .18 / .14 | card edges visible on the canvas |
+
+Verified by axe `color-contrast` in every e2e screen (styleguide, shells, all template states, desktop and phone).

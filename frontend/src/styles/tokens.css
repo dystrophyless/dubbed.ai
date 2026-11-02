@@ -170,3 +170,55 @@
   --container-form: 400px;
   --topbar-height: 56px;
 }
+
+/*
+ * DUBBED PATCH 3 — contrast (owner decision 2026-11-02: "контраст слишком низкий").
+ * The measured affect-ui values above stay as the record (scripts/port-affect.py maps the ports by them — the first
+ * definition wins there). At runtime these overrides win, so ports and kit both get the higher contrast.
+ * Target: WCAG 2.2 AA — text >= 4.5:1, UI boundaries >= 3:1, on both white and the canvas. Checked by axe
+ * (color-contrast is no longer disabled). Values and ratios: design-system/audit.md -> "Patch 3".
+ */
+:root {
+  --color-canvas: #f4f4f5;
+  --color-text: rgba(0, 0, 0, 0.68);
+  --color-muted: rgba(0, 0, 0, 0.58);
+  --color-icon: rgba(0, 0, 0, 0.56);
+  --color-faint: rgba(0, 0, 0, 0.45);
+  --color-line: rgba(0, 0, 0, 0.1);
+  --color-fill-strong: rgba(0, 0, 0, 0.16);
+  --color-track: rgba(0, 0, 0, 0.06);
+  --color-wash: rgba(0, 0, 0, 0.045);
+  --color-ring: rgba(0, 0, 0, 0.42);
+  --color-box-ring: rgba(0, 0, 0, 0.45);
+  --color-accent: #0057cc;
+  --color-accent-soft: rgba(0, 87, 204, 0.08);
+  --color-focus: rgba(0, 96, 226, 0.5);
+  --color-danger: #c4262c;
+  --color-danger-soft: rgba(196, 38, 44, 0.08);
+  --color-danger-soft-hover: rgba(196, 38, 44, 0.13);
+  --color-success: #137a41;
+  --color-success-soft: rgba(19, 122, 65, 0.1);
+  --color-warning-text: #8f5f00;
+  --color-badge: #be123c;
+  --color-skeleton-text: #737373;
+  --shadow-card: 0 0 0 0.5px rgba(0, 0, 0, 0.12), 0 1px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 0 0 0.5px rgba(0, 0, 0, 0.18), 0 1px 1px -1px rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  --shadow-pop: 0 0 0 0.5px rgba(0, 0, 0, 0.14), 0 12px 28px -10px rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/*
+ * DUBBED PATCH 4 — one accent colour (owner decision 2026-11-03: "нет акцентного цвета; чёрный — не Primary").
+ * The accent is the pack's own second colour: Clean `alt` #5b5bd6 (smart-recommendation-clean.md:300,
+ * tool-call-card-clean.md:699). It becomes the primary button (the ports' --color-solid), selection, progress,
+ * checkboxes, links and the focus ring. Red stays for recording and destruction; green for success.
+ * Contrast: white on #5b5bd6 5.4:1; #5b5bd6 on its 10% tint 4.7:1; on the canvas 4.9:1 (AA).
+ */
+:root {
+  --color-solid: #5b5bd6;
+  --color-solid-hover: #5151cd;
+  --color-accent: #5b5bd6;
+  --color-accent-strong: #4b4bc8;
+  --color-accent-soft: rgba(91, 91, 214, 0.1);
+  --color-accent-wash: rgba(91, 91, 214, 0.06);
+  --color-focus: rgba(91, 91, 214, 0.45);
+}

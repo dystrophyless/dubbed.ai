@@ -32,7 +32,7 @@
 }
 
 .tag-neutral { --tag-bg: var(--color-line); --tag-fg: var(--color-ink); }
-.tag-accent { --tag-bg: var(--color-accent-soft); --tag-fg: var(--color-accent); }
+.tag-accent { --tag-bg: var(--color-accent-soft); --tag-fg: var(--color-accent-strong); }
 .tag-success { --tag-bg: var(--color-success-soft); --tag-fg: var(--color-success); }
 .tag-warning { --tag-bg: var(--color-warning-soft); --tag-fg: var(--color-warning-text); }
 .tag-danger { --tag-bg: var(--color-danger-soft); --tag-fg: var(--color-danger); }
@@ -132,9 +132,9 @@
 .link {
   border-radius: var(--radius-xs);
   font-weight: var(--weight-medium);
-  color: var(--color-ink);
+  color: var(--color-accent);
   text-decoration: underline;
-  text-decoration-color: var(--color-fill-strong);
+  text-decoration-color: var(--color-accent-soft);
   text-underline-offset: 3px;
   transition: text-decoration-color var(--duration-fast) ease;
 }
@@ -179,3 +179,27 @@
     height: var(--control-touch);
   }
 }
+
+/* IconTile — tinted 32/40px tile (radius 8 = the segmented track radius) */
+.tile {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-segment);
+  background: var(--tile-bg);
+  color: var(--tile-fg);
+}
+
+.tile[data-size="40"] {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-card);
+}
+
+.tile-neutral { --tile-bg: var(--color-track); --tile-fg: var(--color-icon); }
+.tile-accent { --tile-bg: var(--color-accent-soft); --tile-fg: var(--color-accent-strong); }
+.tile-success { --tile-bg: var(--color-success-soft); --tile-fg: var(--color-success); }
+.tile-warning { --tile-bg: var(--color-warning-soft); --tile-fg: var(--color-warning-text); }
+.tile-danger { --tile-bg: var(--color-danger-soft); --tile-fg: var(--color-danger); }

@@ -42,8 +42,8 @@ when in doubt, open the doc. Product rules: `PRODUCT_BRIEF.md` and the feature's
 12. Copy: EN + RU for every string through i18n keys; sentence case; verbs on buttons; glossary terms from `content.md`
     (turn, take, credits…). Never show speaker names or numbered speakers.
 13. E2E-ready: roles + labels first, `data-testid` as in `quality.md`; views get data and state via props.
-14. Light theme only. Fidelity: affect-ui colours 1:1 — never "fix" contrast by changing colours (axe `color-contrast`
-    is a documented exception).
+14. Light theme only. Contrast: WCAG AA through the tokens (DUBBED PATCH 3, owner 2026-11-02) — text >= 4.5:1,
+    UI boundaries >= 3:1; axe `color-contrast` is ON. Never hard-code a lighter grey to look "more Clean".
 15. Shells: ordinary pages use the shell with top navigation; the recording studio uses the focused shell (only Exit).
 
 ## Feature code layout

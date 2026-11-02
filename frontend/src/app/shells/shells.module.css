@@ -14,7 +14,7 @@
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
-  background: var(--color-surface);
+  background: var(--color-canvas);
   border-bottom: var(--hairline);
 }
 
@@ -108,7 +108,7 @@
   align-items: center;
   gap: var(--space-1_5);
   height: var(--control-md);
-  padding: 0 var(--space-2_5);
+  padding: 0 var(--space-2);
   border-radius: var(--radius-control);
   font-size: var(--text-md);
   line-height: var(--leading-md);
@@ -116,12 +116,11 @@
   font-variant-numeric: tabular-nums;
   color: var(--color-ink);
   text-decoration: none;
-  box-shadow: var(--shadow-card);
-  background: var(--color-surface);
+  transition: background-color var(--duration-fast) ease;
 }
 
 .credits:hover {
-  box-shadow: var(--shadow-card-hover);
+  background: var(--color-wash);
 }
 
 .credits:focus-visible {
@@ -151,6 +150,8 @@
 .accountPopover {
   position: fixed;
   z-index: var(--z-popover);
+  /* the profile-menu card fills its parent: a fixed box has no width of its own, so give it the reference width */
+  width: min(296px, calc(100vw - 2 * var(--space-2)));
 }
 
 .main {
@@ -179,6 +180,29 @@
   line-height: var(--leading-lg);
   color: var(--color-ink);
   text-decoration: none;
+}
+
+.sheetLink:is(button) {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: var(--text-input);
+  text-align: left;
+  cursor: pointer;
+}
+
+.sheetUser {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .sheetLink[aria-current="page"] {

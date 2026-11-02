@@ -2,13 +2,12 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, type Page } from "@playwright/test";
 
 /**
- * Fails on any WCAG 2.x A/AA violation except colour contrast — the affect-ui Clean palette
- * is kept 1:1 on purpose (design-system/quality.md). The dev-only state switcher is excluded.
+ * Fails on any WCAG 2.x A/AA violation, colour contrast included (DUBBED PATCH 3, owner 2026-11-02).
+ * The dev-only state switcher is excluded.
  */
 export async function expectNoA11yViolations(page: Page) {
   const results = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
-    .disableRules(["color-contrast"])
     .exclude("[data-testid=state-switcher]")
     .analyze();
   const summary = results.violations.map((v) => `${v.id} (${v.nodes.length}): ${v.help}\n    ${v.nodes.slice(0, 3).map((n) => n.target.join(" ")).join("\n    ")}`);

@@ -2,9 +2,10 @@
 
 ## Accessibility (target: WCAG 2.2 AA, with one deliberate exception)
 
-- **Exception — colour contrast:** the palette is affect-ui Clean 1:1; `--color-muted`, `--color-icon`, `--color-faint`
-  are below 4.5:1. Accepted by the owner. axe runs with `color-contrast` disabled (`e2e/support/a11y.ts`). Do not change
-  colours to fix it; do not put essential information only in muted text.
+- **Colour contrast is checked** (owner, 2026-11-02): text >= 4.5:1, large text and UI boundaries (inputs, checkboxes,
+  card edges) >= 3:1, on white and on the canvas. The values come from DUBBED PATCH 3 in `tokens.css`; axe runs with
+  `color-contrast` ON. A visual "real text" placeholder (e.g. a Select with nothing chosen) uses `--color-muted`, not
+  `--color-faint` (`--color-faint` is only for `::placeholder` and disabled hints).
 - Semantic HTML first: `button` for actions, `a` for navigation, `form` + `label`, one `h1` per page, headings in order.
 - Every control has an accessible name. Icon-only buttons: `aria-label`. Avatar / initials buttons: name from `sr-only`
   text, never an `aria-label` that contradicts visible text (axe `label-content-name-mismatch`).
@@ -60,5 +61,5 @@ no-horizontal-scroll check against `page.viewportSize().width` (never the docume
 6. 1440, 1024, 390 look right; no horizontal scroll; key actions above the fold.
 7. One primary action per view; red only for recording / destructive; destructive confirmed.
 8. Page-quality rules from `README.md` (no duplicated info, equal button sizes per row, navigation looks like actions).
-9. a11y: axe clean (except contrast), keyboard path works, focus visible.
+9. a11y: axe clean (contrast included), keyboard path works, focus visible.
 10. Screenshots match the approved ones; differences listed with `file:line` fixes.

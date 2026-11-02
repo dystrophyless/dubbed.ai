@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useRef, useState, type ReactNode, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import { Icon, type IconName } from "@/components/icons";
 import { Container } from "@/components/layout";
 import { Avatar, Button, ProfileMenu, Toaster } from "@/components/ui";
@@ -11,18 +11,22 @@ import s from "./shells.module.css";
 
 export type NavItem = { to: string; label: string; icon: IconName };
 export type ShellUser = { name: string; email: string };
+/** Where the shell's own links go (real routes in the app; template routes in the styleguide). */
+export type ShellLinks = { home: string; credits: string; settings: string };
+const APP_LINKS: ShellLinks = { home: "/projects", credits: "/credits", settings: "/settings" };
 
-function Brand() {
+export function Brand({ to }: { to: string }) {
   return (
-    <Link to="/" className={s.brand} aria-label="Dubbed">
+    <Link to={to} className={s.brand} aria-label="Dubbed">
       <span className={s.brandMark} aria-hidden="true"><span className={s.brandDot} /></span>
       <span>Dubbed</span>
     </Link>
   );
 }
 
-function Account({ user, onSignOut }: { user: ShellUser; onSignOut?: () => void }) {
+function Account({ user, links, onSignOut }: { user: ShellUser; links: ShellLinks; onSignOut?: () => void }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const anchor = useRef<HTMLButtonElement>(null);
   const pop = useRef<HTMLDivElement>(null);
@@ -44,8 +48,8 @@ function Account({ user, onSignOut }: { user: ShellUser; onSignOut?: () => void 
               email={user.email}
               avatar={<Avatar name={user.name} size={32} />}
               items={[
-                { id: "settings", label: t("shell.settings"), icon: <Icon name="settings" />, onSelect: close },
-                { id: "credits", label: t("shell.credits"), icon: <Icon name="credits" />, onSelect: close },
+                { id: "settings", label: t("shell.settings"), icon: <Icon name="settings" />, onSelect: () => { close(); navigate(links.settings); } },
+                { id: "credits", label: t("shell.credits"), icon: <Icon name="credits" />, onSelect: () => { close(); navigate(links.credits); } },
                 { id: "signout", label: t("shell.signOut"), icon: <Icon name="signOut" />, onSelect: () => { close(); onSignOut?.(); } },
               ]}
             />
@@ -60,7 +64,13 @@ function Account({ user, onSignOut }: { user: ShellUser; onSignOut?: () => void 
  * AppShell — every ordinary page. Desktop: brand · navigation (tray) · spacer · credits · EN/RU · account.
  * Phone (< 1024px): brand · credits · menu button; the menu opens a sheet with the navigation, language and account.
  */
-export function AppShell({ nav, credits, user, children }: { nav: NavItem[]; credits: number; user: ShellUser; children: ReactNode }) {
+export function AppShell({
+  nav, credits, user, children, links = APP_LINKS, onSignOut, hideCredits,
+}: {
+  nav: NavItem[]; credits: number; user: ShellUser; children: ReactNode; links?: ShellLinks; onSignOut?: () => void;
+  /** the Credits page shows the balance itself — no duplicate in the bar */
+  hideCredits?: boolean;
+}) {
   const { t, i18n } = useTranslation();
   const [sheet, setSheet] = useState(false);
   const fmt = new Intl.NumberFormat(i18n.resolvedLanguage);
@@ -69,7 +79,7 @@ export function AppShell({ nav, credits, user, children }: { nav: NavItem[]; cre
       <header className={s.topbar}>
         <Container>
           <div className={s.topbarInner}>
-            <Brand />
+            <Brand to={links.home} />
             <nav className={`${s.nav} ${s.desktopOnly}`} aria-label={t("shell.mainNav")}>
               {nav.map((n) => (
                 <NavLink key={n.to} to={n.to} className={s.navLink} end>
@@ -78,12 +88,15 @@ export function AppShell({ nav, credits, user, children }: { nav: NavItem[]; cre
               ))}
             </nav>
             <span className={s.spacer} />
-            <Link to="#credits" className={s.credits} aria-label={t("shell.creditsBalance", { count: credits })}>
+            {!hideCredits && (
+            <Link to={links.credits} className={s.credits}>
               <Icon name="credits" />
               {fmt.format(credits)}
+              <span className="sr-only"> {t("shell.creditsUnit", { count: credits })}</span>
             </Link>
+            )}
             <span className={s.desktopOnly}><LanguageSwitch /></span>
-            <span className={s.desktopOnly}><Account user={user} /></span>
+            <span className={s.desktopOnly}><Account user={user} links={links} onSignOut={onSignOut} /></span>
             <span className={s.phoneOnly}>
               <Button
                 variant="ghost"
@@ -105,9 +118,20 @@ export function AppShell({ nav, credits, user, children }: { nav: NavItem[]; cre
                 {n.label}
               </NavLink>
             ))}
+            <NavLink to={links.settings} className={s.sheetLink} end onClick={() => setSheet(false)}>
+              <Icon name="settings" />
+              {t("shell.settings")}
+            </NavLink>
+            <button type="button" className={s.sheetLink} onClick={() => { setSheet(false); onSignOut?.(); }}>
+              <Icon name="signOut" />
+              {t("shell.signOut")}
+            </button>
             <div className={s.sheetFoot}>
               <LanguageSwitch />
-              <Avatar name={user.name} size={32} />
+              <span className={s.sheetUser}>
+                <Avatar name={user.name} size={32} decorative />
+                <span>{user.email}</span>
+              </span>
             </div>
           </nav>
         )}

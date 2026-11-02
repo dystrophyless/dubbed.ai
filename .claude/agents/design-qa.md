@@ -27,5 +27,5 @@ You do not fix code; you report precisely so the builder can.
    - differences from the approved screenshots, most visible first.
 6. Return the verdict and the top 5 fixes.
 
-Be specific and evidence-based: every finding cites a screenshot or a file:line. Do not flag affect-ui's own low-contrast
-greys — axe `color-contrast` is a documented exception.
+Be specific and evidence-based: every finding cites a screenshot or a file:line. Colour contrast is checked: text
+>= 4.5:1, UI boundaries >= 3:1 (DUBBED PATCH 3, owner 2026-11-02) — flag every miss.

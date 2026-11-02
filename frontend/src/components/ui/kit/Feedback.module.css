@@ -144,7 +144,7 @@
 }
 
 /* ---------- Tones (alert, toast icon, empty state icon) ---------- */
-.tone-info { --tone: var(--color-accent); --tone-bg: var(--color-accent-wash); }
+.tone-info { --tone: var(--color-accent-strong); --tone-bg: var(--color-accent-soft); }
 .tone-success { --tone: var(--color-success); --tone-bg: var(--color-success-soft); }
 .tone-warning { --tone: var(--color-warning); --tone-bg: var(--color-warning-soft); }
 .tone-danger { --tone: var(--color-danger); --tone-bg: var(--color-danger-soft); }
@@ -207,6 +207,11 @@
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
   color: var(--tone);
+}
+
+.empty:not(.tone-neutral) .emptyIcon {
+  background: var(--tone-bg);
+  box-shadow: none;
 }
 
 .emptyTitle {
@@ -273,6 +278,43 @@
 .bar[data-indeterminate] .barFill {
   width: 30%;
   animation: indeterminate 1.4s var(--ease-in-out) infinite;
+}
+
+/* ---------- Skeleton text: a bar inside a line-height box ---------- */
+.skeletonLine {
+  display: flex;
+  align-items: center;
+  height: var(--leading-md);
+}
+
+.skeletonLine[data-size="sm"] {
+  height: var(--leading-sm);
+}
+
+.skeletonLine[data-size="lg"] {
+  height: var(--leading-lg);
+}
+
+.skeletonBar {
+  display: block;
+  max-width: 100%;
+  height: 60%;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-skeleton);
+  background-image: linear-gradient(100deg, transparent 30%, var(--color-skeleton-glow) 50%, transparent 70%);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  animation: skeleton-sweep var(--duration-shimmer) linear infinite;
+}
+
+@keyframes skeleton-sweep {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: 0% 0;
+  }
 }
 
 /* ---------- Spinner (button-clean spinner) ---------- */
@@ -348,5 +390,9 @@
   .spinner,
   .bar[data-indeterminate] .barFill {
     animation-duration: 3s;
+  }
+
+  .skeletonBar {
+    animation: none;
   }
 }

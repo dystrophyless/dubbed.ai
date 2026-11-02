@@ -10,8 +10,7 @@ Values live in `frontend/src/styles/tokens.css`; where each comes from is in `au
 | Surface | `--color-surface` | cards, popovers, fields, the audio track |
 | Text | `--color-strong` titles · `--color-ink` body · `--color-text` secondary · `--color-muted` meta · `--color-faint` placeholders | never put essential information only in muted / faint |
 | Lines and fills | `--color-line` dividers, chips, tracks · `--color-wash` hover · `--color-track` segmented track · `--color-fill-strong` stronger fill, original waveform | |
-| Primary | `--color-solid` (dark chip) + `--color-on-solid` | the one primary action |
-| Accent (blue) | `--color-accent`, `-soft`, `-wash`, `--color-focus` | state: checked, progress, focus ring, saved take |
+| Primary + accent (indigo #5b5bd6, PATCH 4) | `--color-solid` / `--color-accent` (+ `-strong` for text on tints, `-soft`, `-wash`, `--color-focus`) | the one primary action; checked, selected, progress, links, focus ring, saved take |
 | Danger (red) | `--color-danger`, `-soft` | **recording** and destructive actions, errors |
 | Success / warning | `--color-success(-soft)`, `--color-warning(-soft, -text)` | small signals only (saved, low balance) |
 
@@ -21,7 +20,7 @@ Neutral first: colour is a signal, never decoration. Light theme only.
 
 | Token | Size / line | Weight | Use |
 |---|---|---|---|
-| `--text-display` | 28 / 36, −0.02em | 500 | landing hero only |
+| `--text-display` | 28 / 36, −0.02em | 500 | landing hero, balance numbers |
 | `--text-h1` | 22 / 30, −0.015em | 500 | page title (one per page) |
 | `--text-h2` | 18 / 26, −0.01em | 500 | section titles on long pages; the turn's line in the studio |
 | `--text-lg` | 15 / 24 | 500 | card titles, dialog titles |

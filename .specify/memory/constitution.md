@@ -25,8 +25,8 @@ tasks until `ui-spec.md` is Approved. The approved views are implemented as-is; 
 ### IV. Every state designed, every screen e2e-ready, in two languages
 Each screen has loading, empty, error (with retry) and success states driven by data, semantic roles and labels, and
 the test ids in `design-system/quality.md`. Every user-visible string exists in English and Russian. Each user story
-with UI ships with a Playwright test (happy path, error/empty states, axe). Accessibility targets WCAG 2.2 AA except the
-documented affect-ui colour-contrast exception. Desktop and phone browsers are first-class.
+with UI ships with a Playwright test (happy path, error/empty states, axe). Accessibility targets WCAG 2.2 AA, colour contrast included
+(the earlier affect-ui contrast exception was withdrawn by the owner on 2026-11-02). Desktop and phone browsers are first-class.
 
 ### V. Verify, then claim
 Work is done when `npm run build`, `npm run lint`, `npm run lint:css`, the e2e tests and design QA pass — with real

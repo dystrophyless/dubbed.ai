@@ -4,12 +4,13 @@ import s from "./Card.module.css";
 
 type CardProps = {
   as?: ElementType;
-  padding?: "none" | "sm" | "md";
+  padding?: "none" | "sm" | "md" | "lg";
   interactive?: boolean;
   className?: string;
   children?: ReactNode;
   "data-testid"?: string;
   "aria-labelledby"?: string;
+  "aria-busy"?: boolean;
 };
 
 /** The one surface of the system. No card-in-card: inner groups use dividers or a wash. */

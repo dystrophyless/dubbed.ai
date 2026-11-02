@@ -20,7 +20,7 @@ export type RecordState = "idle" | "recording" | "saving" | "saved";
 export function RecordControl({
   state, window: win, elapsed = 0, onRecord, onStop, disabled,
 }: { state: RecordState; window: number; elapsed?: number; onRecord: () => void; onStop: () => void; disabled?: boolean }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const left = Math.max(0, win - elapsed);
   const progress = win > 0 ? Math.min(1, elapsed / win) : 0;
   const label =
@@ -51,24 +51,25 @@ export function RecordControl({
         <span className={s.recordLabel}>{label}</span>
         <span className={s.recordMeta} aria-live="polite">
           {state === "recording"
-            ? t("media.record.left", { s: formatSeconds(left) })
+            ? t("media.record.left", { s: formatSeconds(left, i18n.resolvedLanguage) })
             : state === "saved"
               ? <span className={s.saved}><Icon name="success" size={14} />{t("media.record.saved")}</span>
-              : t("media.record.window", { s: formatSeconds(win) })}
+              : t("media.record.window", { s: formatSeconds(win, i18n.resolvedLanguage) })}
         </span>
       </div>
     </div>
   );
 }
 
-/** Microphone level: 20 segments; green, amber near the top, red when clipping. role="meter". */
+/**
+ * Microphone level — a thin 6px bar in the pack's progress language (progress-tracker bar), not a block meter.
+ * Green while healthy, amber when loud, red when clipping. Only in the microphone check (sign-up, Settings). role="meter".
+ */
 export function LevelMeter({ level, label }: { level: number; label: string }) {
-  const lit = Math.round(Math.min(1, Math.max(0, level)) * 20);
+  const v = Math.min(1, Math.max(0, level));
   return (
-    <div className={s.meter} role="meter" aria-label={label} aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(level * 100)}>
-      {Array.from({ length: 20 }, (_, i) => (
-        <span key={i} className={s.meterSeg} data-on={i < lit ? (i >= 18 ? "clip" : i >= 14 ? "hot" : "ok") : undefined} />
-      ))}
+    <div className={s.meter} role="meter" aria-label={label} aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(v * 100)}>
+      <span className={s.meterFill} data-zone={v >= 0.9 ? "clip" : v >= 0.7 ? "hot" : "ok"} style={{ width: `${v * 100}%` }} />
     </div>
   );
 }

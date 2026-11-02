@@ -349,26 +349,25 @@
   color: var(--color-success);
 }
 
-/* ---------- Level meter ---------- */
+/* ---------- Level meter: one thin bar ---------- */
 .meter {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  height: 12px;
-}
-
-.meterSeg {
-  flex: 1;
-  height: 100%;
-  min-width: 3px;
-  border-radius: var(--radius-xs);
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-full);
   background: var(--color-line);
-  transition: background-color 60ms linear;
 }
 
-.meterSeg[data-on="ok"] { background: var(--color-success); }
-.meterSeg[data-on="hot"] { background: var(--color-warning); }
-.meterSeg[data-on="clip"] { background: var(--color-danger); }
+.meterFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+  background: var(--color-success);
+  transition: width 80ms linear, background-color var(--duration-fast) ease;
+}
+
+.meterFill[data-zone="hot"] { background: var(--color-warning); }
+.meterFill[data-zone="clip"] { background: var(--color-danger); }
 
 /* ---------- Volume ---------- */
 .volume {

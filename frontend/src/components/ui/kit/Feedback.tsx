@@ -197,3 +197,17 @@ export function Spinner({ size = 16, label }: { size?: 14 | 16 | 20 | 24; label?
     </svg>
   );
 }
+
+/* ---------------- Skeleton text ---------------- */
+
+/**
+ * A skeleton for one line of text: the block sits inside a box as tall as the real line (13/20 or 12/16), so stacked
+ * skeleton lines keep the text's rhythm and never touch each other.
+ */
+export function SkeletonText({ width = "60%", size = "md" }: { width?: number | string; size?: "md" | "sm" | "lg" }) {
+  return (
+    <span className={s.skeletonLine} data-size={size} aria-hidden="true">
+      <span className={s.skeletonBar} style={{ width: typeof width === "number" ? `${width}px` : width }} />
+    </span>
+  );
+}

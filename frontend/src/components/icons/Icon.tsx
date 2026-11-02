@@ -1,5 +1,5 @@
 import {
-  ArrowLeft, ArrowRight, AudioLines, Check, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, CircleAlert, CircleCheck,
+  ArrowLeft, ArrowRight, AudioLines, Check, Copy, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, CircleAlert, CircleCheck,
   CircleHelp, Clapperboard, Clock, Coins, CreditCard, Download, Ellipsis, Eye, EyeOff, FileVideo, FolderOpen, Globe,
   Headphones, History, House, ImageOff, Info, Languages, LoaderCircle, Lock, LogOut, Mail, Menu, Mic, MicOff, Minus,
   Pause, Pencil, Play, Plus, RefreshCw, RotateCcw, Scissors, Search, Settings, SkipBack, SkipForward, Sparkles, Square,
@@ -17,7 +17,7 @@ export const ICONS = {
   close: X, menu: Menu, more: Ellipsis, home: House, exit: ArrowLeft,
   // actions
   add: Plus, edit: Pencil, delete: Trash2, download: Download, upload: Upload, search: Search, retry: RotateCcw,
-  refresh: RefreshCw, check: Check, minus: Minus, show: Eye, hide: EyeOff, trim: Scissors,
+  refresh: RefreshCw, check: Check, copy: Copy, minus: Minus, show: Eye, hide: EyeOff, trim: Scissors,
   // media & recording
   play: Play, pause: Pause, record: Mic, micOff: MicOff, stop: Square, rewind: SkipBack, skip: SkipForward,
   volume: Volume2, volumeLow: Volume1, mute: VolumeX, headphones: Headphones, waveform: AudioLines, video: FileVideo,

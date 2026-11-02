@@ -25,8 +25,10 @@ looking at localhost); do not start the next phase before its gate. No product f
 - Stack: React 19 + TypeScript + Vite, React Router, TanStack Query, Zustand (client state only), CSS Modules + tokens,
   Lucide; Playwright + axe, Stylelint tokens-only, oxlint. No Tailwind, no shadcn. Backend later (FastAPI, PostgreSQL).
 - Font: Inter. Light theme only. UI in English and Russian.
-- affect-ui's own low-contrast colours are kept; axe `color-contrast` is a documented exception — do not change source
-  colours to silence it.
+- Contrast: WCAG AA (owner, 2026-11-02 — "контраст слишком низкий"). The measured affect-ui colours stay as the record;
+  higher-contrast runtime values live in DUBBED PATCH 3 (`tokens.css`); axe `color-contrast` is ON.
+- Accent colour (owner, 2026-11-03 — "нет акцентного цвета; чёрный — не Primary"): the pack's own indigo #5b5bd6
+  is the primary button, selection, progress, links and focus (DUBBED PATCH 4). Red = recording / destructive.
 - One recording-studio design — no A/B test (withdrawn 2026-11-02). Studio layout decisions: `design-system/studio-brief.md`.
 - In the studio, moving to the next turn requires a take for the current one.
 

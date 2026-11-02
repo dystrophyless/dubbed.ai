@@ -84,6 +84,8 @@ Never a full-page spinner. Never block the top bar. Independent blocks load and 
 - Only the studio (the recording itself) uses the focused shell: only Exit (which may ask about an unsaved take).
   The result page is in the ordinary shell.
 - URLs carry the place: the studio turn is in the path (`/turns/:n`), list filters in the query.
+- A page that shows a shell value itself hides the shell's copy (the Credits page hides the balance pill —
+  `AppShell hideCredits`): no duplicated information on one screen.
 
 ## 9. Responsive
 
@@ -96,6 +98,24 @@ Never a full-page spinner. Never block the top bar. Independent blocks load and 
 
 - Sections side by side share their header shape (all with a description, or none).
 - Buttons in one row share one size; controls in one toolbar share one height.
+- Cards in one row with an action each keep the actions on one line: the action sits at the bottom of the card
+  (`margin-top: auto`); optional tags go into the title row, never above the button.
+
+## 10a. Lists — hover, order, loading (owner review 2026-11-03)
+
+- Row hover = a soft wash across the WHOLE row edge to edge (incl. its `⋯`), the title turns accent; nothing moves.
+- Lists of the user's items are ordered by **most recently changed first** by default; offer a sort menu when > 1 item.
+- Skeleton text lines use `SkeletonText` (a bar inside a line-high box) — never bare 12–14px bars that touch each other.
+- History-like lists group by day (`ListGroup`: Today · Yesterday · date) and show the kind with an `IconTile`.
+  Rows inside one day have **no hairlines** (`List dividers={false}`) — the day labels already separate the groups.
+- Popovers that host a card component (the account `ProfileMenu`) get an explicit width: a fixed box has none of its own
+  and the card collapses (regression covered by e2e).
+- Numbers in copy follow the UI language (`Intl.NumberFormat`): "1.8 s" / «1,8 с».
+
+## 10b. Review states must look different
+
+Every `?state=` of a template must be visibly different from `default` (a busy dialog, locked options, a note). Templates
+are remounted on every state change, so local demo state is seeded from the state they open in.
 
 ## 11. Every control does something
 

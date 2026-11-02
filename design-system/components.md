@@ -35,6 +35,10 @@ smart-recommendation, tool-call-card, text-reveal, grid-background.
 | DUBBED PATCH 1 | **approved by the owner 2026-11-02** | Button on `(pointer: coarse)`: md / lg → 36px, sm → 32px | `button-clean` has no touch rule; every other Clean component grows its buttons to 34–36px on touch (`notification-stack-clean.md:469`, `decision-inbox-clean.md:437`, `tips-panel-clean.md:390`) | `src/components/ui/affect-patches.css` (overrides the port's own `--h`/`--px` from outside) |
 | DUBBED PATCH 2 | **approved by the owner 2026-11-02** | Optional `labels` prop on otp-input, filter-menu, profile-menu, notification-stack; defaults = the original English | these ports print fixed English text (e.g. "Didn't get a code?", "Clear all", "Dismiss …") that no prop can change; the UI must be EN + RU | `port-affect.py` → `LABELS`; localised wrappers in `src/components/ui/kit/Localized.tsx` (exported as the public names) |
 
+| DUBBED PATCH 3 | **owner decision 2026-11-02** ("контраст слишком низкий") | Higher-contrast runtime values for text, icon, line, ring, accent, danger, success, warning-text, badge, canvas and the card/pop shadow rings (WCAG AA) | the measured Clean greys are 1.9–3.8:1 on white | a second `:root` block at the end of `tokens.css`; the measured block above stays as the record (the port script maps by it) |
+
+| DUBBED PATCH 4 | **owner decision 2026-11-03** ("нет акцентного цвета; чёрный — не Primary") | One accent: the pack's own indigo `alt` #5b5bd6 becomes `--color-solid` (primary buttons in every port) and `--color-accent` (selection, progress, links, focus) | the dark chip read as secondary; the UI had no colour identity | a third `:root` block at the end of `tokens.css`; contrast white-on 5.4:1, on its tint 4.7:1 |
+
 If the owner rejects a patch: remove its entry from the script / CSS and re-run `python scripts/port-affect.py`.
 
 ## 3. Kit in the Clean language — `src/components/ui/kit/*`
@@ -52,6 +56,11 @@ If the owner rejects a patch: remove its entry from the script / CSS and re-run 
 | `Toaster` + `toast()` | Zustand store; bottom-right desktop, bottom-centre phone; max 3 |
 | `Alert`, `EmptyState`, `ProgressBar`, `Spinner` | tones info / success / warning / danger / neutral |
 | `Tag`, `Avatar`, `Pagination`, `TextLink`, `BackLink` | |
+| `OptionCards` | choose one of 2–4 rich options (credit packs): radio cards, accent ring + wash + check when chosen; one primary elsewhere acts on it; compact rows on phones |
+| `IconTile` | 32/40px tinted tile with one icon (neutral / accent / success / warning / danger) — the kind of a row or panel at a glance |
+| `SkeletonText` | one skeleton line inside a box as tall as the real line — stacked lines keep the text rhythm |
+| `ListGroup` | a quiet group label inside a List ("Today", "31 October"); use with `List dividers={false}` |
+| `List`, `ListItem` | rows inside a card (profile-menu row language): leading · title + muted line · trailing · actions; a row with `to`/`onClick` is one link; `⋯` sits outside it |
 
 Popovers (`usePopover.ts`): fixed position in a portal, flip above when there is no room, clamped 8px inside the
 viewport; focus moves in only after positioning.
@@ -65,7 +74,7 @@ viewport; focus moves in only after positioning.
 | `SceneColumn`, `TurnLine` | studio centre column: video, the turn's line, the audio track — all as wide as the picture (owner 2026-11-02, `studio-brief.md`) |
 | `AudioTrack` (+ `demoPeaks`) | outlined box as wide as the video; original grey; the take drawn over it — red while recording, blue when saved; playhead |
 | `RecordControl` | 56px red disc (64 touch); idle / recording (ring = time left, stops by itself) / saving / saved / disabled; no countdown |
-| `LevelMeter`, `VolumeControl` | level meter **only in the microphone check** (onboarding, Settings), never in the studio; volume = original voice, listening only |
+| `LevelMeter`, `VolumeControl` | level meter = one thin 6px bar (green → amber → red), **only in the microphone check** (onboarding, Settings), never in the studio; volume = original voice, listening only |
 | `TurnNav` | Previous / "Turn n of N" / Next; Next disabled with a written reason when the turn has no take |
 | `UploadDropzone` | idle / drag-over / uploading / error / done |
 | `RangeSelector` | section window ≤ 120 s, draggable handles, keyboard ±1 s / ±5 s |

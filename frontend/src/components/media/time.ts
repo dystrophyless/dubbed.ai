@@ -5,10 +5,10 @@ export function formatTime(seconds: number): string {
   return `${m}:${String(s % 60).padStart(2, "0")}`;
 }
 
-/** 1.4 → "1.4 s"; whole seconds without decimals. */
-export function formatSeconds(seconds: number): string {
+/** 1.4 → "1.4" (EN) / "1,4" (RU); whole seconds without decimals. Pass the UI language. */
+export function formatSeconds(seconds: number, lang?: string): string {
   const r = Math.round(seconds * 10) / 10;
-  return Number.isInteger(r) ? `${r}` : r.toFixed(1);
+  return new Intl.NumberFormat(lang, { maximumFractionDigits: 1, minimumFractionDigits: Number.isInteger(r) ? 0 : 1 }).format(r);
 }
 
 /** Credits are 1 per started second (brief §3): 12.4 s → 13. */
