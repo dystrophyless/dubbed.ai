@@ -78,7 +78,8 @@ For `new-dub`, `processing`, `studio` and `result` (in that order of importance:
    scene, reads the line, sees when it is spoken and how long it lasts, hears the original, records, hears the take in
    the scene and moves on — on a laptop and on a phone, with headphones or without.
 2. **3–4 genuinely different concepts** as quick low-fi wireframes (structure and hierarchy only). Each concept states
-   its idea in one sentence and its trade-offs. The owner picks — for the studio, **two** for the future A/B test.
+   its idea in one sentence and its trade-offs. The owner picks one. For the studio the owner has already fixed the
+   layout (`design-system/studio-brief.md`); concepts there cover only what the brief leaves open.
 3. **High-fi** of the chosen concepts from the approved kit, with every state, EN/RU, 1440 and 390.
 4. Owner review rounds → **Gate 4**.
 

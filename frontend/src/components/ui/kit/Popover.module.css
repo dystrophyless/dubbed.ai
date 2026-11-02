@@ -1,0 +1,206 @@
+/* Popover surface = profile-menu card: white, 10px radius, pop shadow, 4px inner padding, 32px rows (audit §6, §7). */
+.surface {
+  position: fixed;
+  z-index: var(--z-popover);
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  max-width: min(320px, calc(100vw - 16px));
+  padding: var(--space-1);
+  overflow-y: auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-pop);
+  outline: none;
+  animation: pop-in var(--duration-medium) var(--ease-out) both;
+}
+
+.surface[data-side="top"] {
+  animation-name: pop-in-top;
+}
+
+.measuring {
+  visibility: hidden;
+  animation: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2_5);
+  width: 100%;
+  min-height: var(--control-lg);
+  padding: 0 var(--space-2);
+  margin: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  font: inherit;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-ink);
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) ease;
+}
+
+.item[data-active] {
+  background: var(--color-wash);
+}
+
+.item[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.item[data-tone="danger"] {
+  color: var(--color-danger);
+}
+
+.itemIcon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  color: var(--color-icon);
+}
+
+.item[data-tone="danger"] .itemIcon {
+  color: var(--color-danger);
+}
+
+.itemLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.check {
+  display: grid;
+  flex: none;
+  place-items: center;
+  color: var(--color-accent);
+}
+
+.separator {
+  height: 0;
+  margin: var(--space-1) calc(-1 * var(--space-1));
+  border: 0;
+  border-top: var(--hairline);
+}
+
+.tooltip {
+  position: fixed;
+  z-index: var(--z-popover);
+  width: max-content;
+  max-width: min(240px, calc(100vw - 16px));
+  padding: var(--space-0_5) var(--space-2);
+  background: var(--color-surface);
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-pop);
+  font-size: var(--text-sm);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  pointer-events: none;
+  animation: tip-in var(--duration-fast) ease both;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  height: var(--control-lg);
+  padding: 0 var(--space-2) 0 var(--space-2_5);
+  margin: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-field);
+  font: inherit;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-ink);
+  text-align: left;
+  cursor: pointer;
+  transition: box-shadow var(--duration-fast) ease;
+}
+
+.trigger:hover:not(:disabled) {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.trigger:focus-visible,
+.trigger[aria-expanded="true"] {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.trigger[data-invalid] {
+  box-shadow: var(--shadow-invalid);
+}
+
+.trigger:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.placeholder {
+  color: var(--color-faint);
+}
+
+.chevron {
+  display: grid;
+  margin-left: auto;
+  color: var(--color-icon);
+  transition: transform var(--duration-medium) var(--ease-out);
+}
+
+.trigger[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+}
+
+@keyframes pop-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
+  }
+}
+
+@keyframes tip-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+}
+
+@media (pointer: coarse) {
+  .item {
+    min-height: var(--row-touch);
+  }
+
+  .trigger {
+    height: var(--control-touch);
+    font-size: var(--text-input);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surface,
+  .tooltip {
+    animation: none;
+  }
+
+  .chevron {
+    transition-duration: 1ms;
+  }
+}

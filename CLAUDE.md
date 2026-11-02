@@ -27,7 +27,7 @@ looking at localhost); do not start the next phase before its gate. No product f
 - Font: Inter. Light theme only. UI in English and Russian.
 - affect-ui's own low-contrast colours are kept; axe `color-contrast` is a documented exception — do not change source
   colours to silence it.
-- Two distinct recording-studio designs are wanted for a future A/B test.
+- One recording-studio design — no A/B test (withdrawn 2026-11-02). Studio layout decisions: `design-system/studio-brief.md`.
 - In the studio, moving to the next turn requires a take for the current one.
 
 ## Layout

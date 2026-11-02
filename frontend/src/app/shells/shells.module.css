@@ -1,0 +1,255 @@
+/*
+ * App shells (design-system/templates.md → Shells). Canvas #fafafa; the top bar is a white strip with a hairline
+ * bottom edge; 56px tall. Ordinary shell = brand + navigation + credits + language + account. Focused shell = Exit,
+ * the page's own title and an optional right slot — no global navigation (used by the recording studio).
+ */
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: var(--color-canvas);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background: var(--color-surface);
+  border-bottom: var(--hairline);
+}
+
+.topbarInner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  height: var(--topbar-height);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-control);
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+  text-decoration: none;
+}
+
+.brand:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-control);
+  background: var(--color-solid);
+  color: var(--color-on-solid);
+}
+
+.brandDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-danger);
+}
+
+/* Navigation: the segmented "tray" language — grey track, the active item is the white raised pill. */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-0_5);
+  padding: var(--space-0_5);
+  border-radius: var(--radius-segment);
+  background: var(--color-track);
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1_5);
+  height: var(--control-md);
+  padding: 0 var(--space-2_5);
+  border-radius: var(--radius-control);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease, background-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.navLink:hover {
+  color: var(--color-hover-text);
+}
+
+.navLink[aria-current="page"] {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  color: var(--color-strong);
+}
+
+.navLink:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.credits {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1_5);
+  height: var(--control-md);
+  padding: 0 var(--space-2_5);
+  border-radius: var(--radius-control);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+  text-decoration: none;
+  box-shadow: var(--shadow-card);
+  background: var(--color-surface);
+}
+
+.credits:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.credits:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.credits svg {
+  color: var(--color-icon);
+}
+
+.avatarButton {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  cursor: pointer;
+}
+
+.avatarButton:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.accountPopover {
+  position: fixed;
+  z-index: var(--z-popover);
+}
+
+.main {
+  flex: 1;
+  padding-block: var(--space-8) var(--space-16);
+}
+
+/* Phone navigation: a sheet under the top bar. */
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0_5);
+  padding: var(--space-2) var(--space-4) var(--space-4);
+  border-top: var(--hairline);
+  background: var(--color-surface);
+}
+
+.sheetLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2_5);
+  min-height: var(--row-touch);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-control);
+  font-size: var(--text-input);
+  line-height: var(--leading-lg);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.sheetLink[aria-current="page"] {
+  background: var(--color-wash);
+  font-weight: var(--weight-medium);
+}
+
+.sheetLink svg {
+  color: var(--color-icon);
+}
+
+.sheetFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: var(--hairline);
+}
+
+/* ---------- Focused shell ---------- */
+.focused {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: var(--color-canvas);
+}
+
+.focusedBar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-3);
+  height: var(--topbar-height);
+}
+
+.focusedTitle {
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.focusedRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.focusedMain {
+  flex: 1;
+  padding-block: var(--space-2) var(--space-8);
+}
+
+@media (max-width: 1023.98px) {
+  .desktopOnly {
+    display: none !important;
+  }
+
+  .main {
+    padding-block: var(--space-6) var(--space-12);
+  }
+}
+
+@media (min-width: 1024px) {
+  .phoneOnly {
+    display: none !important;
+  }
+}

@@ -18,7 +18,8 @@ You extend the Dubbed design system so routine designers (Sonnet) can keep compo
 2. Confirm no existing archetype + pattern combination works. If one does, explain how and stop.
 3. **Concepts first.** Produce 3–4 genuinely different low-fi wireframes (structure and hierarchy only, greyboxes from
    layout primitives) at `/prototypes/concepts/<page>/<concept>`. Each states its idea in one sentence and its
-   trade-offs (laptop / phone, headphones / speakers). Stop and report — the owner picks (for the studio: two, for an A/B test).
+   trade-offs (laptop / phone, headphones / speakers). Stop and report — the owner picks one. For the studio, start from the owner's fixed layout in
+   `design-system/studio-brief.md` and explore only what it leaves open.
 4. **High-fi** of the picked concept(s) only after the pick: built from the approved kit, every state, EN/RU, 1440 and 390.
    Deliver a reference template `frontend/src/pages/styleguide/templates/<id>.tsx` (all states via `?state=`, registered in
    the registry), a section in `design-system/templates.md` (purpose, ASCII structure, states, responsive), decision-tree

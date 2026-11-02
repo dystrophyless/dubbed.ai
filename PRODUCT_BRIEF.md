@@ -77,7 +77,8 @@ microphone, and gets the full video back with their voices replacing the origina
   Chrome, iPhone Safari — real recording support to be verified per browser).
 - **Light only**, no dark mode or theme toggle.
 - Visual source: **affect-ui, Clean variant, Light**, font **Inter** (owner decisions). Recording / destructive actions are red.
-- The owner wants **two distinct recording-studio designs** to compare later in an A/B test.
+- One recording-studio design (the earlier A/B-test requirement was withdrawn by the owner on 2026-11-02). Its layout
+  is fixed by the owner in `design-system/studio-brief.md`.
 
 ## 4. Out of scope (first version)
 

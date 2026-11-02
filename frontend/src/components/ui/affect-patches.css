@@ -1,0 +1,22 @@
+/*
+ * DUBBED PATCHES — documented deviations from the affect-ui ports (design-system/components.md → Patches).
+ * The port files are never edited; each patch overrides a port's own custom properties from outside.
+ *
+ * DUBBED PATCH 1 (approved by the owner 2026-11-02) — Button touch size.
+ *   Why: button-clean has no (pointer: coarse) rule, so 28px buttons stay 28px on phones. Every other Clean
+ *   component grows its buttons to 34–36px on touch (notification-stack-clean.md:469, decision-inbox-clean.md:437,
+ *   tips-panel-clean.md:390). This applies the same rule to the button: md / lg → 36px, sm → 32px.
+ *   Desktop is unchanged.
+ */
+@media (pointer: coarse) {
+  .ui-buttonc[data-size="md"],
+  .ui-buttonc[data-size="lg"] {
+    --h: var(--control-touch);
+    --px: var(--space-3_5);
+  }
+
+  .ui-buttonc[data-size="sm"] {
+    --h: var(--control-lg);
+    --px: var(--space-2_5);
+  }
+}

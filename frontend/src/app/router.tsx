@@ -1,4 +1,5 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
+import { AppShellDemo, FocusedShellDemo } from "@/pages/styleguide/ShellDemos";
 import { StyleguidePage } from "@/pages/styleguide/StyleguidePage";
 import { TemplatesRoute } from "@/pages/styleguide/TemplatesRoute";
 import { PrototypeRoute } from "@/prototypes/prototype-route";
@@ -13,6 +14,8 @@ import { PrototypeRoute } from "@/prototypes/prototype-route";
 const router = createBrowserRouter([
   { path: "/", element: <Navigate to="/styleguide" replace /> },
   { path: "/styleguide", element: <StyleguidePage /> },
+  { path: "/styleguide/shells/app/*", element: <AppShellDemo /> },
+  { path: "/styleguide/shells/focused", element: <FocusedShellDemo /> },
   { path: "/styleguide/templates", element: <TemplatesRoute /> },
   { path: "/styleguide/templates/:id", element: <TemplatesRoute /> },
   { path: "/prototypes", element: <PrototypeRoute /> },
