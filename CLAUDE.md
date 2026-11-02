@@ -30,6 +30,23 @@ looking at localhost); do not start the next phase before its gate. No product f
 - Two distinct recording-studio designs are wanted for a future A/B test.
 - In the studio, moving to the next turn requires a take for the current one.
 
+## Layout
+
+- `frontend/` — Vite + React 19 SPA (`npm run dev` → http://localhost:5174). Routes: `/styleguide`,
+  `/styleguide/templates/<id>?state=`, `/prototypes/<feature>/<screen>?state=`. i18n: react-i18next, EN + RU.
+- Workflow: SpecKit 1.2.5 (`.specify/`, skills `/speckit-*`), constitution in `.specify/memory/constitution.md`,
+  hooks in `.specify/extensions.yml` (after_plan → `/speckit-design`, before_tasks → `/speckit-design-gate`,
+  after_implement → `/speckit-design-qa`).
+
+## UI work — always
+
+Any frontend design or code follows `design-system/` (start with `design-system/README.md`; the `dubbed-design-system`
+skill is the short version). Feature UI goes through `/speckit-design` (ui-spec + prototype + owner approval) before it is
+implemented.
+
+Verify with real output: `cd frontend && npm run build && npm run lint && npm run lint:css && npm run test:e2e`;
+screenshots: `npm run snap` (1440 × 900 and 390 × 844).
+
 ## Agents and models
 
 - Subagents in `.claude/agents/` (as in Novio): `ui-designer`, `ui-builder`, `design-qa` on **Sonnet**;

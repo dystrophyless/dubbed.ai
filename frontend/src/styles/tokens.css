@@ -1,0 +1,8 @@
+/*
+ * Design tokens — affect-ui Clean / Light.
+ * Phase 0 placeholder: only the owner-decided font. Every other value is added in Phase 1 from
+ * design-system/audit.md (measured in D:\Program\frontend\affect-ui\affectui-free), with its source noted there.
+ */
+:root {
+  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
+}
