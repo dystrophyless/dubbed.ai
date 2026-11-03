@@ -182,9 +182,26 @@
   color: var(--color-text);
 }
 
+/* links inside a tinted alert use the stronger accent (#5b5bd6 on the amber / red wash is below 4.5:1) */
+.alertText a {
+  color: var(--color-accent-strong);
+}
+
 .alertAction {
   flex: none;
   align-self: center;
+}
+
+/* phones: the action drops under the text (aligned with it), so the text keeps the full width */
+@media (max-width: 480px) {
+  .alert:has(.alertAction) {
+    flex-wrap: wrap;
+  }
+
+  .alertAction {
+    flex-basis: 100%;
+    padding-left: calc(var(--space-4) + var(--space-2_5));
+  }
 }
 
 /* ---------- Empty state ---------- */

@@ -112,6 +112,86 @@
   flex: 1;
 }
 
+/* ---------- Player (result): the screen that goes full screen + the controls row ---------- */
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.screenStage {
+  position: relative;
+}
+
+.screenHit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* a quiet play badge in the middle while paused (the studio's idle ▷) */
+.screenPlay {
+  display: grid;
+  place-items: center;
+  width: var(--space-12);
+  height: var(--space-12);
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-pop);
+  transition: transform var(--duration-base) var(--ease-out), background-color var(--duration-fast) ease;
+  backdrop-filter: blur(6px);
+}
+
+.screenHit:hover .screenPlay {
+  background: var(--color-surface);
+  transform: scale(1.06);
+}
+
+.playerControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+/* full screen: black, the picture as large as it fits at its own shape, the white controls row at the bottom */
+.screen:fullscreen {
+  width: 100%;
+  height: 100%;
+  background: var(--color-strong);
+}
+
+.screen:fullscreen .screenStage {
+  flex: 1;
+  min-height: 0;
+}
+
+.screen:fullscreen .screenStage figure {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: var(--color-strong);
+  box-shadow: none;
+}
+
+.screen:fullscreen .screenStage video {
+  background: var(--color-strong);
+}
+
+.screen:fullscreen > .playerControls {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+}
+
 .slider {
   position: relative;
   display: flex;
@@ -441,7 +521,15 @@
   color: var(--color-icon);
 }
 
-.drop[data-state="error"] .dropIcon {
+.dropIcon[data-tone="accent"] {
+  background: var(--color-accent-soft);
+  box-shadow: none;
+  color: var(--color-accent-strong);
+}
+
+.dropIcon[data-tone="danger"] {
+  background: var(--color-danger-soft);
+  box-shadow: none;
   color: var(--color-danger);
 }
 
@@ -455,6 +543,7 @@
 
 .dropTitle {
   max-width: 100%;
+  margin: 0;
   overflow: hidden;
   font-size: var(--text-lg);
   line-height: var(--leading-lg);
@@ -470,9 +559,41 @@
   color: var(--color-text);
 }
 
-.drop[data-state="uploading"] .dropBody {
+.dropHint[data-tone="danger"] {
+  color: var(--color-danger);
+}
+
+.dropHint[data-quiet] {
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+.drop[data-state="uploading"] .dropBody,
+.drop[data-state="checking"] .dropBody {
   align-items: stretch;
   gap: var(--space-3);
+}
+
+.drop[data-state="uploading"] .dropActions,
+.drop[data-state="checking"] .dropActions {
+  align-self: center;
+  margin-top: 0;
+}
+
+/* desktop says "Drop a video here"; touch and narrow screens (no drag and drop) say "Choose a video to dub" */
+.pointerCoarse {
+  display: none;
+}
+
+@media (pointer: coarse), (max-width: 1023.98px) {
+  .pointerFine {
+    display: none;
+  }
+
+  .pointerCoarse {
+    display: inline;
+  }
 }
 
 .dropActions {
@@ -570,23 +691,63 @@
   outline-offset: 1px;
 }
 
+/* where "Play section" is — a thin ink line inside the window */
+.rangePlayhead {
+  position: absolute;
+  top: var(--space-1);
+  bottom: var(--space-1);
+  width: 2px;
+  margin-left: -1px;
+  border-radius: var(--radius-full);
+  background: var(--color-ink);
+  pointer-events: none;
+}
+
+/* the scale's middle label: "up to 120 s", or the reason when the window reached the limit */
+.rangeLimit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.range[data-limit] .rangeLimit {
+  color: var(--color-warning-text);
+  font-weight: var(--weight-medium);
+}
+
+.range[data-limit] .rangeHandle::after {
+  background: var(--color-warning-text);
+}
+
+.range[data-disabled] .rangeWindow,
+.range[data-disabled] .rangeHandle {
+  cursor: default;
+}
+
+.range[data-disabled] .rangeTrack {
+  opacity: 0.6;
+}
+
 /* ---------- Cost button ---------- */
 .cost {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1_5);
+}
+
+.costActions {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2) var(--space-3);
+  justify-content: flex-end;
+  gap: var(--space-2);
 }
 
 .costNote {
   font-size: var(--text-md);
   line-height: var(--leading-md);
   font-variant-numeric: tabular-nums;
-  color: var(--color-muted);
-}
-
-.costNote[data-short] {
-  color: var(--color-danger);
+  color: var(--color-text);
 }
 
 @keyframes sweep {
@@ -647,6 +808,32 @@
   .turnNav > :global(.ui-buttonc) {
     width: 100%;
   }
+
+  /* phone: Start, the shortfall right under it, then Buy credits — all full width */
+  .cost {
+    align-items: stretch;
+  }
+
+  .costActions {
+    display: contents;
+  }
+
+  .costActions > :global(.ui-buttonc) {
+    width: 100%;
+  }
+
+  .costStart {
+    order: 1;
+  }
+
+  .costNote {
+    order: 2;
+    text-align: center;
+  }
+
+  .costBuy {
+    order: 3;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -655,7 +842,14 @@
   }
 
   .recordRing circle,
-  .sliderThumb {
+  .sliderThumb,
+  .drop {
     transition-duration: 1ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screenPlay {
+    transition: none;
   }
 }

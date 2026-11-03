@@ -20,3 +20,22 @@
     --px: var(--space-2_5);
   }
 }
+
+/*
+ * DUBBED PATCH 5 (owner decision 2026-11-03, studio-brief.md 14; pending Gate 4) — record buttons.
+ *   Why: Record is the most frequent action and red means recording (README rule 6), but button-clean has no red
+ *   solid (its "destructive" is a pale red fill). Used only through <RecordButton> (components/media), never by hand.
+ *   data-record="solid"   Record / Stop — the primary variant with a red fill
+ *   data-record="outline" Record again — the secondary variant with a red label, icon and 1px red outline
+ */
+.ui-buttonc[data-record="solid"] {
+  --ui-btnc-solid: var(--color-danger);
+  --ui-btnc-solid-hover: var(--color-danger-hover);
+}
+
+.ui-buttonc[data-record="outline"] {
+  --ui-btnc-title: var(--color-danger);
+  --ui-btnc-icon: var(--color-danger);
+  --ui-btnc-shadow: var(--shadow-outline-danger), var(--shadow-lift);
+  --ui-btnc-shadow-hover: var(--shadow-outline-danger), var(--shadow-card-hover);
+}

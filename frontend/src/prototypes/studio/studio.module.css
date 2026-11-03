@@ -1,0 +1,277 @@
+/*
+ * Recording studio (Phase 4 high-fi). The column, header and height budget come from StudioShell; this file lays out
+ * the scene (slide between turns), the stage overlays, the action row and the bottom notice. Tokens only.
+ */
+
+/* ---------- Scene: slides in from the side we moved to (studio-brief 15) ---------- */
+.scene[data-dir="next"] {
+  animation: scene-next var(--duration-slow) var(--ease-out);
+}
+
+.scene[data-dir="prev"] {
+  animation: scene-prev var(--duration-slow) var(--ease-out);
+}
+
+@keyframes scene-next {
+  from {
+    opacity: 0;
+    transform: translateX(var(--space-8));
+  }
+}
+
+@keyframes scene-prev {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-1 * var(--space-8)));
+  }
+}
+
+/* ---------- Stage ---------- */
+.stage {
+  position: relative;
+}
+
+/* the dark stage behind the picture while the first frame decodes */
+.stage figure {
+  background: var(--color-strong);
+}
+
+/*
+ * The stage is always 2.35:1 (owner 2026-11-03). A scope clip fills it. A narrower clip (16:9, 9:16) gets
+ * black bars: the clip sits centred at the stage's full height, the sides are dark (owner's final choice after trying
+ * a blurred copy and a light tray).
+ */
+.stage video {
+  position: relative;
+  z-index: 1;
+  background: var(--color-strong);
+}
+
+.scene[data-clip="16x9"] .stage figure,
+.scene[data-clip="portrait"] .stage figure {
+  background: var(--color-strong);
+}
+
+/* prototype only: a 16:9 / 9:16 clip is simulated by cropping the scope demo to that shape */
+.scene[data-clip="16x9"] .stage video,
+.scene[data-clip="portrait"] .stage video {
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+  object-fit: cover;
+}
+
+.scene[data-clip="16x9"] .stage video {
+  aspect-ratio: 16 / 9;
+}
+
+.scene[data-clip="portrait"] .stage video {
+  aspect-ratio: 9 / 16;
+}
+
+.playOverlay {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: var(--space-12);
+  height: var(--space-12);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-pop);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform var(--duration-base) var(--ease-out), background-color var(--duration-fast) ease;
+  backdrop-filter: blur(6px);
+}
+
+.playOverlay:hover {
+  background: var(--color-surface);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+/* a quiet tag in the corner: what you hear right now (muted while recording · your voice) */
+.chip {
+  z-index: 1;
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-0_5) var(--space-2) var(--space-0_5) var(--space-1_5);
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--color-strong) 72%, transparent);
+  color: var(--color-on-solid);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-weight: var(--weight-medium);
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+}
+
+/* as tall as one line of the turn's text; the bar centred like the text */
+.lineSkeleton {
+  display: flex;
+  align-items: center;
+  height: var(--leading-h2);
+}
+
+.lineSkeleton > * {
+  justify-content: center;
+  width: 100%;
+}
+
+/* ---------- Bottom notice (microphone blocked): fixed, so the studio never shifts when it appears ---------- */
+.notice {
+  position: fixed;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  left: var(--space-4);
+  z-index: calc(var(--z-toast) + 1); /* above the dev state switcher, which shares the bottom-left corner */
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  border-radius: var(--radius-card);
+  background: var(--color-surface); /* the alert's amber wash is translucent: nothing behind may show through */
+  box-shadow: var(--shadow-pop);
+  animation: notice-in var(--duration-slow) var(--ease-out);
+}
+
+@keyframes notice-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-4));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notice {
+    animation: none;
+  }
+}
+
+
+/* ---------- Actions ---------- */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* owner 2026-11-03: one centred group — Original and Record side by side */
+  gap: var(--space-2);
+}
+
+.group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cell {
+  display: flex;
+}
+
+/* ‹ only from turn 2 (no empty slot on turn 1) */
+.backCell {
+  flex: none;
+  width: var(--control-lg);
+}
+
+.keep {
+  display: flex;
+}
+
+/* hidden, but the slot stays so nothing around it moves */
+.keep[data-hidden] {
+  visibility: hidden;
+}
+
+/* the time hint (recording / saving only) sits in the top-right corner of the audio track */
+.trackWrap {
+  position: relative;
+}
+
+.hint {
+  position: absolute;
+  top: var(--space-1_5);
+  right: var(--space-2);
+  padding: 0 var(--space-1_5);
+  border-radius: var(--radius-chip);
+  background: var(--color-surface);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hint[data-tone="recording"] {
+  font-weight: var(--weight-medium);
+  color: var(--color-danger);
+}
+
+.dialogText {
+  margin: 0;
+}
+
+@media (pointer: coarse) {
+  .backCell {
+    width: var(--control-touch);
+  }
+}
+
+/*
+ * phone (owner 2026-11-03): Original and Record share the first row.
+ *   row 1: [‹] [Original] [Record]   (‹ only from turn 2; Original and Record split the rest equally)
+ *   row 2: [My take] [Next]          (halves, only with a take)
+ */
+@media (max-width: 480px) {
+  .actions {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .group {
+    display: contents;
+  }
+
+  /* forced line break between the two rows */
+  .actions::after {
+    order: 3;
+    flex-basis: 100%;
+    height: 0;
+    content: "";
+  }
+
+  .backCell { order: 0; }
+  .origCell { order: 1; flex: 1 1 0; min-width: 0; }
+  .recCell { order: 2; flex: 1 1 0; min-width: 0; }
+  .takeCell { order: 4; flex: 1 1 0; min-width: 0; }
+  .nextCell { order: 6; flex: 1 1 0; min-width: 0; }
+
+  .cell > :global(.ui-buttonc),
+  .keep > :global(.ui-buttonc),
+  .cell > :global(.ui-shm) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .nextSkeleton {
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene {
+    animation: none !important;
+  }
+
+  .playOverlay {
+    transition: none;
+  }
+}

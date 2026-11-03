@@ -39,6 +39,8 @@ smart-recommendation, tool-call-card, text-reveal, grid-background.
 
 | DUBBED PATCH 4 | **owner decision 2026-11-03** ("нет акцентного цвета; чёрный — не Primary") | One accent: the pack's own indigo `alt` #5b5bd6 becomes `--color-solid` (primary buttons in every port) and `--color-accent` (selection, progress, links, focus) | the dark chip read as secondary; the UI had no colour identity | a third `:root` block at the end of `tokens.css`; contrast white-on 5.4:1, on its tint 4.7:1 |
 
+| DUBBED PATCH 5 | **owner decision 2026-11-03** (studio-brief 14: Record solid red, "Record again" red outline) — **approved at Gate 4 (studio), 2026-11-03** | Record buttons: `data-record="solid"` themes the primary variant red (`--color-danger`, hover `--color-danger-hover`); `data-record="outline"` gives the secondary variant a red label, icon and 1px red outline | Record is the most frequent action and red means recording, but button-clean has no red solid (its `destructive` is a pale red fill) | `src/components/ui/affect-patches.css` (the port's own `--ui-btnc-*` properties, from outside) + one token in a fourth `:root` block of `tokens.css`; used only through `RecordButton` (`components/media`). White on #c4262c 5.6:1 |
+
 If the owner rejects a patch: remove its entry from the script / CSS and re-run `python scripts/port-affect.py`.
 
 ## 3. Kit in the Clean language — `src/components/ui/kit/*`
@@ -54,8 +56,9 @@ If the owner rejects a patch: remove its entry from the script / CSS and re-run 
 | `Tooltip` | Clean white tip; hover after 380ms or keyboard focus; never the only label |
 | `Dialog` | focus trap, Escape, focus return; destructive action last |
 | `Toaster` + `toast()` | Zustand store; bottom-right desktop, bottom-centre phone; max 3 |
-| `Alert`, `EmptyState`, `ProgressBar`, `Spinner` | tones info / success / warning / danger / neutral |
+| `Alert`, `EmptyState`, `ProgressBar`, `Spinner` | tones info / success / warning / danger / neutral ; links inside an Alert use `--color-accent-strong` (AA on the tinted wash) |
 | `Tag`, `Avatar`, `Pagination`, `TextLink`, `BackLink` | |
+| `StepProgress` | (Phase 4, processing) multi-step server work in one block: the `ThinkingLoader` pill names the running step and rolls to the next (spinner → check when `done`), a quiet meta line beside it ("Step 2 of 3 · About a minute left"; the slot is always reserved, so nothing moves when it appears or wraps on phones), and one 6px segment per step that fill one after another (`fraction` = the running step's estimate; 0 = boundaries only). The segments are one `progressbar` (`label`, `valueText` "Step 2 of 3: Finding the lines"); the pill announces each step politely. Fill glides; no motion under `prefers-reduced-motion`. Specimen: `/styleguide#feedback` |
 | `OptionCards` | choose one of 2–4 rich options (credit packs): radio cards, accent ring + wash + check when chosen; one primary elsewhere acts on it; compact rows on phones |
 | `IconTile` | 32/40px tinted tile with one icon (neutral / accent / success / warning / danger) — the kind of a row or panel at a glance |
 | `SkeletonText` | one skeleton line inside a box as tall as the real line — stacked lines keep the text rhythm |
@@ -71,24 +74,35 @@ viewport; focus moves in only after positioning.
 |---|---|
 | `VideoStage`, `Transport`, `VideoPlayer` | own aspect ratio, no letterbox, nothing over the picture; loading shimmer; error + retry |
 | `Slider` | role="slider"; used by scrubber and volume |
+| `PlayerScreen`, `PlayerControls` (+ `useFullscreen`, `usePlayerKeys`, `usePlayback`, `togglePlay`) | (Phase 4, result) the result player. `PlayerScreen` = the element that goes full screen: the stage (children) and the controls row together; click on the picture plays / pauses, double-click toggles full screen (pointer shortcuts, `aria-hidden`; keyboard users have the buttons), a quiet ▷ badge in the middle while paused. `PlayerControls` = `[▷] 0:04 / 0:13 [scrubber] [⛶]`, all 32px (36 touch), secondary icon buttons with tooltips ("Play · Space", "Full screen · F"); the full-screen button is labelled "Full screen" / "Exit full screen" and left out when the browser has no way to go full screen. `useFullscreen(screenRef, videoRef)` = the Fullscreen API on the screen element, iOS Safari falls back to `video.webkitEnterFullscreen()`. `usePlayerKeys` = F full screen, Space / K play-pause (ignored in fields, sliders, dialogs; Space on a button keeps its meaning). In full screen: black, the picture as large as it fits at its own shape, the white controls row under it — never over the picture. `Transport` stays for simple players without full screen. Icons `fullscreen` / `exitFullscreen`. Specimen: /styleguide → Media |
 | `SceneColumn`, `TurnLine` | studio centre column: video, the turn's line, the audio track — all as wide as the picture (owner 2026-11-02, `studio-brief.md`) |
 | `AudioTrack` (+ `demoPeaks`) | outlined box as wide as the video; original grey; the take drawn over it — red while recording, blue when saved; playhead |
 | `RecordControl` | 56px red disc (64 touch); idle / recording (ring = time left, stops by itself) / saving / saved / disabled; no countdown |
 | `LevelMeter`, `VolumeControl` | level meter = one thin 6px bar (green → amber → red), **only in the microphone check** (onboarding, Settings), never in the studio; volume = original voice, listening only |
-| `TurnNav` | Previous / "Turn n of N" / Next; Next disabled with a written reason when the turn has no take |
-| `UploadDropzone` | idle / drag-over / uploading / error / done |
-| `RangeSelector` | section window ≤ 120 s, draggable handles, keyboard ±1 s / ±5 s |
-| `CostButton` | names the exact cost (1 credit per started second); disabled with the shortfall when credits are short |
+| `TurnNav` | Previous / "Turn n of N" / Next; Next disabled with a written reason when the turn has no take — **not used by the studio** (it has `TurnDots` and the action row, studio-brief 11–14) |
+| `RecordButton` | the studio's record action in the Clean button (DUBBED PATCH 5): `record` (solid red, mic) · `stop` (solid red, a 16px ring that fills as the window runs out around a stop square; `loading` while saving) · `again` (red outline); same height as its row |
+| `TurnDots` | studio progress (studio-brief 13): one dot per turn — saved accent, ahead grey, current a pill that grows out of its dot (width transition), the number rolls in the direction of travel; `sm` dots above 16 turns, `xs` above 32; dots and count `aria-hidden`, one sr-only "Turn 3 of 12" |
+| `VolumeButton` | ghost icon button (volume / low / mute icon) → popover with `VolumeControl`; the slider takes focus; Escape / Tab / outside click close. Original voice only — real code drives a Web Audio gain on the original-voice stem |
+| `UploadDropzone` | idle / drag-over / uploading (progress + "Cancel upload") / checking (server check, indeterminate bar + Cancel) / error (reason in red + the format hint + **primary** "Choose another video") / done. Title "Drop a video here" only with a fine pointer on wide screens; touch and < 1024px say "Choose a video to dub" (Phase 4 new dub). `className` gives every state one shared box so nothing jumps; the hidden file input is `aria-hidden` (`data-testid="upload-input"`) |
+| `RangeSelector` | section window 1–120 s, draggable handles, keyboard ±1 s / ±5 s; value in seconds ("0:30 – 1:42 · 72 s"), never credits. At the limit the scale's middle label turns into the reason, amber, announced politely: "That's the limit — 120 s" (Phase 4). `playhead` draws section playback; `disabled` locks it |
+| `PlaySectionButton` + `useSectionPlayback` | (Phase 4, new dub) plays only the selected section of a `<video>`, then returns to its start; Pause keeps the place; changing the section stops and shows its first frame; `pos` feeds `RangeSelector playhead`. Secondary lg button "Play section" / "Pause". `toMedia` maps section time to media time (prototypes loop a short demo clip; real pages omit it) |
+| `CostButton` | names the exact cost (1 credit per started second) — **the only place the price appears** (owner 2026-11-03); never repeats the balance (the old "You have N credits" note is removed). Short of credits: disabled, "32 more credits needed" under it, and with `onBuy` a secondary "Buy credits" beside it (patterns §7). < 1024px: full-width stack — Start, the shortfall, Buy credits |
 
 ## 5. Layout and shells
 
 `src/components/layout`: `Stack`, `Cluster`, `Grid`, `Container`, `Section`, `TwoColumn`, `StickyBar`, `Show`
 (one breakpoint: 1024px). `src/app/shells`: `AppShell` (brand · tray navigation · credits · EN/RU · account; phone →
-menu sheet) and `FocusedShell` (Exit · title · right slot; no global navigation). Demos: `/styleguide/shells/app`,
-`/styleguide/shells/focused`.
+menu sheet), `FocusedShell` (Exit · title · right slot; no global navigation) and **`StudioShell`** — the focused shell's
+studio variant (studio-brief 11–12): one centred column as wide as the picture (min 480px on wide screens, full width on
+phones); its only chrome is the header row above the video — ✕ Exit (icon, tooltip) · title + `TurnDots` centred ·
+right slot (`VolumeButton`); `--video-h` = the viewport minus the header, line, track and action row (`notice` reserves room
+for an inline Alert), so the actions stay above the fold. Demos: `/styleguide/shells/app`, `/styleguide/shells/focused`;
+the studio shell is shown by `/prototypes/studio/turn`.
 
 ## 6. Icons
 
 `<Icon name>` from `src/components/icons` — Lucide through a semantic dictionary, 16px (14px small), absolute 1.3px stroke.
+
+Phase 4 additions: `notify` (Bell) and `notifyOff` (BellOff) — the processing page's "Notify me when it's ready" control.
 
 Removed on the owner's decision (2026-11-02): the turn **Timeline** and the standalone **Waveform** (replaced by `AudioTrack`).

@@ -3,8 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "@/components/icons";
 import { Cluster, Stack } from "@/components/layout";
 import {
-  AudioTrack, CostButton, LevelMeter, RangeSelector, RecordControl, SceneColumn, TurnLine, TurnNav, UploadDropzone, VideoPlayer,
-  VideoStage, VolumeControl, demoPeaks, type DropState, type RecordState,
+  AudioTrack, CostButton, LevelMeter, PlaySectionButton, PlayerControls, PlayerScreen, RangeSelector, RecordButton, RecordControl, SceneColumn, TurnDots, TurnLine, TurnNav,
+  UploadDropzone, VideoPlayer, VideoStage, VolumeButton, VolumeControl, demoPeaks, useFullscreen, usePlayback, useSectionPlayback,
+  type DropState, type RecordState,
 } from "@/components/media";
 import { Button, SegmentedControl, Text } from "@/components/ui";
 import { Row, SgSection, Specimen } from "../Specimen";
@@ -46,16 +47,36 @@ function useTrackDemo() {
   };
 }
 
+/** The result player: PlayerScreen (goes full screen with its controls) + PlayerControls (keys are page-level only). */
+function FullscreenPlayerDemo() {
+  const { t } = useTranslation();
+  const video = useRef<HTMLVideoElement>(null);
+  const screen = useRef<HTMLDivElement>(null);
+  const fullscreen = useFullscreen(screen, video);
+  const { playing } = usePlayback(video);
+  return (
+    <PlayerScreen screenRef={screen} videoRef={video} fullscreen={fullscreen} playing={playing}
+      controls={<PlayerControls videoRef={video} fullscreen={fullscreen} />}>
+      <VideoStage src={SCENE} label={t("sg.media.scene")} ratio={960 / 408} maxHeight="40vh" videoRef={video} />
+    </PlayerScreen>
+  );
+}
+
 export function MediaSection() {
   const { t } = useTranslation();
   const demo = useTrackDemo();
   const [ratio, setRatio] = useState(16 / 9);
   const [volume, setVolume] = useState(0.6);
   const [turn, setTurn] = useState(2);
+  const [dots, setDots] = useState(2);
+  const [dotsDir, setDotsDir] = useState<"next" | "prev" | "none">("none");
   const [drop, setDrop] = useState<DropState>("idle");
   const [file, setFile] = useState<string>();
   const [upload, setUpload] = useState(0);
   const [range, setRange] = useState<[number, number]>([30, 150]);
+  const sectionVideo = useRef<HTMLVideoElement>(null);
+  const [section, setSection] = useState<[number, number]>([2, 9]);
+  const sectionPlay = useSectionPlayback(sectionVideo, section[0], section[1]);
   useEffect(() => {
     if (drop !== "uploading") return;
     const id = window.setInterval(() => setUpload((p) => {
@@ -100,6 +121,9 @@ export function MediaSection() {
       <Specimen title={t("sg.media.player")} wide note={t("sg.media.playerNote")}>
         <VideoPlayer src={SCENE} label={t("sg.media.scene")} maxHeight="40vh" />
       </Specimen>
+      <Specimen title={t("sg.media.playerControls")} wide note={t("sg.media.playerControlsNote")}>
+        <FullscreenPlayerDemo />
+      </Specimen>
       <Specimen title={t("sg.media.stageLoading")}>
         <VideoStage label={t("sg.media.scene")} state="loading" ratio={16 / 9} />
       </Specimen>
@@ -119,6 +143,30 @@ export function MediaSection() {
           ))}
           <RecordControl state="idle" window={WINDOW} disabled onRecord={() => {}} onStop={() => {}} />
         </Row>
+      </Specimen>
+
+      <Specimen title={t("sg.media.recordButton")} wide note={t("sg.media.recordButtonNote")}>
+        <Row>
+          <RecordButton mode="record" />
+          <RecordButton mode="stop" progress={0.65} />
+          <RecordButton mode="stop" loading />
+          <RecordButton mode="again" />
+          <RecordButton mode="record" disabled />
+        </Row>
+      </Specimen>
+      <Specimen title={t("sg.media.turnDots")} wide note={t("sg.media.turnDotsNote")}>
+        <Stack gap={12}>
+          <Cluster gap={12} justify="center">
+            <Button variant="secondary" size="sm" icon={<Icon name="prev" size={14} />} aria-label={t("sg.media.dotsPrev")} disabled={dots === 0} onClick={() => { setDotsDir("prev"); setDots((i) => i - 1); }} />
+            <TurnDots total={12} index={dots} dir={dotsDir} done={(i) => i < dots} />
+            <Button variant="secondary" size="sm" icon={<Icon name="next" size={14} />} aria-label={t("sg.media.dotsNext")} disabled={dots === 11} onClick={() => { setDotsDir("next"); setDots((i) => i + 1); }} />
+          </Cluster>
+          <Cluster gap={12} justify="center"><TurnDots total={24} index={17} done={(i) => i < 17} /></Cluster>
+          <Cluster gap={12} justify="center"><TurnDots total={48} index={30} done={(i) => i < 30} /></Cluster>
+        </Stack>
+      </Specimen>
+      <Specimen title={t("sg.media.volumeButton")} note={t("sg.media.volumeButtonNote")}>
+        <VolumeButton label={t("sg.media.originalVolume")} value={volume} onChange={setVolume} />
       </Specimen>
 
       <Specimen title={t("sg.media.meter")} note={t("sg.media.meterNote")}>
@@ -147,7 +195,7 @@ export function MediaSection() {
           variant="tray"
           value={drop}
           onChange={(v) => { setDrop(v); setFile(v === "idle" ? undefined : file ?? "scene.mp4"); setUpload(v === "uploading" ? 20 : 0); }}
-          options={(["idle", "uploading", "error", "done"] as const).map((v) => ({ value: v, label: t(`sg.state.${v}`) }))}
+          options={(["idle", "uploading", "checking", "error", "done"] as const).map((v) => ({ value: v, label: t(`sg.state.${v}`) }))}
         />
         </div>
         <UploadDropzone
@@ -156,6 +204,7 @@ export function MediaSection() {
           fileName={file}
           error={t("sg.media.uploadError")}
           onFile={(f) => { setFile(f.name); setUpload(0); setDrop("uploading"); }}
+          onCancel={() => { setDrop("idle"); setFile(undefined); }}
         />
       </Specimen>
 
@@ -163,11 +212,19 @@ export function MediaSection() {
         <RangeSelector duration={600} start={range[0]} end={range[1]} onChange={(a, b) => setRange([a, b])} />
       </Specimen>
 
+      <Specimen title={t("sg.media.section")} wide note={t("sg.media.sectionNote")}>
+        <Stack gap={12}>
+          <VideoStage src={SCENE} ratio={960 / 408} videoRef={sectionVideo} label={t("sg.media.sectionVideo")} maxHeight="240px" />
+          <RangeSelector duration={13.4} start={section[0]} end={section[1]} max={120} playhead={sectionPlay.pos} onChange={(a, b) => setSection([a, b])} />
+          <div><PlaySectionButton playing={sectionPlay.playing} onToggle={sectionPlay.toggle} /></div>
+        </Stack>
+      </Specimen>
+
       <Specimen title={t("sg.media.cost")} wide note={t("sg.media.costNote")}>
         <Stack gap={12}>
           <CostButton seconds={range[1] - range[0]} balance={480} onStart={() => {}} />
           <CostButton seconds={12.4} balance={120} onStart={() => {}} />
-          <CostButton seconds={12.4} balance={5} onStart={() => {}} />
+          <CostButton seconds={12.4} balance={5} onStart={() => {}} onBuy={() => {}} />
           <CostButton seconds={12.4} balance={120} loading onStart={() => {}} />
           <Text size="sm" tone="muted">{t("sg.media.costRule")}</Text>
         </Stack>

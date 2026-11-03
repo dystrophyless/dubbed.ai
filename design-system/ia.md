@@ -47,8 +47,9 @@ done → `/result`. Unknown or deleted project → `/projects` with a toast.
 - **Ordinary shell** (built: `AppShell`): brand (→ `/projects`) · tray navigation **My projects · New dub** *(owner, 2026-11-02)* ·
   spacer · credit balance (link → `/credits`) · EN/RU · account menu (Settings, Credits, Sign out).
   Below 1024px: brand · balance · menu button → sheet with the navigation, EN/RU and account.
-- **Focused shell** (built: `FocusedShell`) — the studio only: Exit · page title · right slot ("Turn 3 of 12" and the
-  original-voice volume). Exit with an unsaved take asks: Save and leave / Leave without saving / Stay.
+- **Focused shell** — the studio only, as **`StudioShell`** (Phase 4, studio-brief 11–13): no bar; a header row above
+  the video inside its width — ✕ Exit · title + progress dots "3 of 12" · original-voice volume. Exit with an unsaved
+  take asks: Save and leave / Leave without saving / Stay.
 - **Public bar** (landing only) *(owner, 2026-11-02)*: brand · EN/RU · Sign in · "Start dubbing" (primary → `/sign-up`).
 - **Auth pages:** no bar — brand above the form, EN/RU switch in the corner.
 - No sidebar: the app has ≤ 4 sections.

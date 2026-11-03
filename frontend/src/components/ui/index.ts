@@ -32,3 +32,4 @@ export { Alert, Dialog, EmptyState, ProgressBar, SkeletonText, Spinner, Toaster,
 export { Avatar, BackLink, IconTile, Pagination, Tag, TextLink, type TagTone } from "./kit/Misc";
 export { List, ListGroup, ListItem } from "./kit/List";
 export { OptionCards, type OptionCard } from "./kit/OptionCards";
+export { StepProgress } from "./kit/StepProgress";

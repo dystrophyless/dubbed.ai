@@ -1,0 +1,425 @@
+/*
+ * Result concepts (Phase 4, low-fi). The stage is the processing / new-dub stage: always 2.35:1, edge to edge in its card,
+ * the column as wide as the stage can be while Download stays above the fold. One card keeps its shape in every state —
+ * stage · middle (progress, failure or player) · footer — so nothing jumps while it assembles or a new version arrives.
+ * Grids here are concept sketches; the picked concept gets proper parts in high-fi.
+ */
+.page {
+  --video-h: max(160px, calc(100dvh - 446px));
+
+  padding-bottom: var(--space-4);
+}
+
+.page[data-layout="strip"] {
+  --video-h: max(150px, calc(100dvh - 560px));
+}
+
+.column {
+  width: min(100%, max(640px, calc(var(--video-h) * 2.35)));
+  margin-inline: auto;
+}
+
+.card {
+  overflow: hidden;
+}
+
+/* ---------- The stage (as in processing): dimmed until the first version is assembled ---------- */
+.stage {
+  position: relative;
+}
+
+.stage figure {
+  border-radius: 0;
+  background: var(--color-strong);
+  box-shadow: none;
+}
+
+.stage video {
+  background: var(--color-strong);
+  filter: saturate(0.5);
+  transition: filter var(--duration-morph) var(--ease-out);
+}
+
+.dim {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--color-strong) 40%, transparent);
+  pointer-events: none;
+  transition: opacity var(--duration-morph) var(--ease-out);
+}
+
+.stage[data-lit] video {
+  filter: none;
+}
+
+.stage[data-lit] .dim {
+  opacity: 0;
+}
+
+/* ---------- Card middle and footer ---------- */
+
+/* the body follows the stage, not a card header: a full top padding */
+.card .body,
+.card .bBody {
+  padding-top: var(--space-4);
+}
+
+/* as tall as the tallest middle (the progress block / the failure), so the footer never moves */
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(var(--control-lg) + var(--leading-md) + 6px + var(--space-3) + 2 * var(--space-4));
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-4);
+  min-height: calc(var(--control-lg) + 2 * var(--space-3));
+  padding-block: var(--space-3);
+}
+
+.meta {
+  min-width: 0;
+}
+
+.notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  min-width: 0;
+  flex: 1;
+}
+
+.notice > p {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.ok {
+  display: inline-flex;
+  color: var(--color-success);
+}
+
+.warn {
+  display: inline-flex;
+  color: var(--color-warning-text);
+}
+
+.ending {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.endingText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.endingTitle {
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+/* ---------- A · The script ---------- */
+.aGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: start;
+  gap: var(--space-6);
+}
+
+/* the script is as tall as the player card and scrolls inside it */
+.aAside {
+  position: relative;
+  align-self: stretch;
+}
+
+.aScript {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.aList {
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+  padding: 0 var(--space-2) var(--space-2);
+  overflow-y: auto;
+  list-style: none;
+}
+
+.aRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  border-radius: var(--radius-control);
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.aRow:hover,
+.aRow[data-active] {
+  background: var(--color-wash);
+}
+
+.aRow[data-active] {
+  background: var(--color-accent-wash);
+}
+
+.aLine {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.aLine:disabled {
+  cursor: default;
+}
+
+.aLine:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.aNum,
+.aTime {
+  font-size: var(--text-sm);
+  line-height: var(--leading-md);
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.aText {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-ink);
+}
+
+.aRow[data-active] .aNum,
+.aRow[data-active] .aText {
+  color: var(--color-accent-strong);
+  font-weight: var(--weight-medium);
+}
+
+/* ---------- B · The strip ---------- */
+.bBody {
+  min-height: calc(2 * var(--control-lg) + var(--leading-h2) + var(--leading-sm) + var(--space-4) + 2 * var(--space-4));
+}
+
+.bPlayer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bClock {
+  flex: none;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+/* the scene's timeline: one block per turn at its moment; the blocks are the way to a turn */
+.bTrack {
+  position: relative;
+  flex: 1;
+  height: var(--control-lg);
+  border-radius: var(--radius-control);
+  background: var(--color-wash);
+  box-shadow: var(--shadow-hairline-inset);
+  cursor: pointer;
+}
+
+.bBlock {
+  position: absolute;
+  top: var(--space-1);
+  bottom: var(--space-1);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-fill-strong);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.bBlock:hover {
+  background: var(--color-muted);
+}
+
+.bBlock[data-current] {
+  background: var(--color-accent);
+}
+
+.bTrack:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.bHead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: var(--radius-xs);
+  background: var(--color-strong);
+  pointer-events: none;
+}
+
+.bTurn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-4);
+}
+
+.bTurnText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+  min-height: calc(var(--leading-sm) + var(--space-1) + var(--leading-h2));
+}
+
+.bTurnText > p:last-child {
+  text-align: left;
+}
+
+.bTurnActions {
+  display: flex;
+  flex: none;
+  gap: var(--space-2);
+}
+
+/* ---------- C · Watch, then fix ---------- */
+.cStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1_5);
+}
+
+/* ---------- Note card (same shape as the other concepts) ---------- */
+.noteWrap {
+  width: 100%;
+  max-width: calc(var(--container-narrow) + 2 * var(--space-8));
+  margin: var(--space-16) auto 0;
+  padding-inline: var(--space-4);
+}
+
+.tradeoffs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.tradeoff {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+}
+
+.tradeoff dt {
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.tradeoff dd {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.statePicker {
+  width: min(100%, 280px);
+}
+
+.others {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage video,
+  .dim,
+  .aRow,
+  .bBlock {
+    transition: none;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .column {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer > :global(.ui-buttonc),
+  .notice > :global(.ui-buttonc) {
+    width: 100%;
+  }
+
+  /* A: the script goes under the player and grows with its turns */
+  .aGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .aScript {
+    position: static;
+  }
+
+  .aList {
+    overflow: visible;
+  }
+
+  /* A: Re-record is an icon on phones (its name stays in the label and the tooltip) */
+  .aRerecordLabel {
+    display: none;
+  }
+
+  /* B: Re-record takes the row; Previous / Next keep their icons beside it */
+  .bTurn {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bTurnActions > :last-child {
+    flex: 1;
+  }
+
+  .tradeoff {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}

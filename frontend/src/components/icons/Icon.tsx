@@ -1,7 +1,7 @@
 import {
-  ArrowLeft, ArrowRight, AudioLines, Check, Copy, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, CircleAlert, CircleCheck,
+  ArrowLeft, ArrowRight, AudioLines, Bell, BellOff, Check, Copy, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, CircleAlert, CircleCheck,
   CircleHelp, Clapperboard, Clock, Coins, CreditCard, Download, Ellipsis, Eye, EyeOff, FileVideo, FolderOpen, Globe,
-  Headphones, History, House, ImageOff, Info, Languages, LoaderCircle, Lock, LogOut, Mail, Menu, Mic, MicOff, Minus,
+  Headphones, History, House, ImageOff, Info, Languages, LoaderCircle, Lock, LogOut, Mail, Maximize, Menu, Mic, MicOff, Minimize, Minus,
   Pause, Pencil, Play, Plus, RefreshCw, RotateCcw, Scissors, Search, Settings, SkipBack, SkipForward, Sparkles, Square,
   Trash2, TriangleAlert, Upload, User, Volume1, Volume2, VolumeX, Wallet, X, type LucideIcon,
 } from "lucide-react";
@@ -21,10 +21,11 @@ export const ICONS = {
   // media & recording
   play: Play, pause: Pause, record: Mic, micOff: MicOff, stop: Square, rewind: SkipBack, skip: SkipForward,
   volume: Volume2, volumeLow: Volume1, mute: VolumeX, headphones: Headphones, waveform: AudioLines, video: FileVideo,
+  fullscreen: Maximize, exitFullscreen: Minimize,
   scene: Clapperboard, noPoster: ImageOff,
   // domain
   credits: Coins, purchase: CreditCard, wallet: Wallet, history: History, projects: FolderOpen, duration: Clock,
-  magic: Sparkles,
+  magic: Sparkles, notify: Bell, notifyOff: BellOff,
   // account
   user: User, settings: Settings, signOut: LogOut, email: Mail, password: Lock, language: Languages, globe: Globe,
   // status

@@ -1,0 +1,453 @@
+/*
+ * Concept A reworked (Phase 4, low-fi): one centred column — header row, video, line, audio track, actions — with the
+ * same side padding. --video-h is the height budget: the viewport minus everything that must stay above the fold
+ * (header, line, track, action row), so the actions never fall below 900 / 844 px.
+ * The three variants differ only in where Previous lives (data-back = top | row | sides).
+ */
+.page {
+  --video-h: max(160px, calc(100dvh - 330px));
+  --side: 44px; /* ≥ 44px arrow targets (a-back-sides) */
+
+  min-height: 100dvh;
+  padding: var(--space-4) var(--space-4) var(--space-12);
+  background: var(--color-canvas);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-inline: var(--space-8);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: min(100%, var(--container-content), max(480px, calc(var(--video-h) * var(--ratio))));
+  margin-inline: auto;
+}
+
+/* ---------- Header row (directly above the video, same width; nothing sticks out past the video's edges) ---------- */
+/* exit · title + progress centred over the video · volume; the two icon buttons are the same size, so the middle is truly centred */
+.head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.headMid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  overflow: hidden;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: var(--container-form);
+  min-height: var(--control-sm);
+}
+
+/* a-back-top: the ‹ slot is always reserved, so the strip never jumps on turn 1 */
+.backSlot {
+  display: flex;
+  flex: none;
+  width: var(--control-sm);
+  margin-left: calc(-1 * var(--space-1));
+}
+
+.count {
+  display: inline-flex;
+  flex: none;
+  gap: 0.25em;
+  overflow: hidden;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.countNum {
+  display: inline-block;
+  min-width: 2ch;
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  text-align: right;
+}
+
+.countNum[data-dir="next"] {
+  animation: num-next var(--duration-slow) var(--ease-out);
+}
+
+.countNum[data-dir="prev"] {
+  animation: num-prev var(--duration-slow) var(--ease-out);
+}
+
+@keyframes num-next {
+  from {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+}
+
+@keyframes num-prev {
+  from {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+}
+
+.countOf {
+  color: var(--color-muted);
+}
+
+/*
+ * Progress dots: a page-control row — done = accent dot, ahead = grey dot, current = a pill that grows out of
+ * its dot (width animates; neighbours slide aside). Dots shrink a little when there are many turns.
+ */
+.dots {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1_5);
+  min-width: 0;
+  height: var(--space-3);
+}
+
+.dot {
+  flex: none;
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-fill-strong);
+  transition:
+    width var(--duration-morph) var(--ease-out),
+    background-color var(--duration-slow) var(--ease-out);
+}
+
+.dot[data-s="done"] {
+  background: var(--color-accent);
+}
+
+.dot[data-s="current"] {
+  width: var(--space-6);
+  background: var(--color-accent-strong);
+}
+
+/* long scenes (more than 16 turns): smaller dots so 40 still fit a phone */
+.dots[data-many] {
+  gap: var(--space-1);
+}
+
+.dots[data-many] .dot {
+  width: var(--space-1_5);
+  height: var(--space-1_5);
+}
+
+.dots[data-many] .dot[data-s="current"] {
+  width: var(--space-4);
+}
+
+/* the scene (video · line · track) slides in from the side we moved to */
+.turnIn[data-dir="next"] {
+  animation: turn-next var(--duration-slow) var(--ease-out);
+}
+
+.turnIn[data-dir="prev"] {
+  animation: turn-prev var(--duration-slow) var(--ease-out);
+}
+
+@keyframes turn-next {
+  from {
+    opacity: 0;
+    transform: translateX(var(--space-8));
+  }
+}
+
+@keyframes turn-prev {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-1 * var(--space-8)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    transition: none;
+  }
+
+  .countNum,
+  .turnIn {
+    animation: none !important;
+  }
+}
+
+.volumePanel {
+  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-1);
+}
+
+/* ---------- Video ---------- */
+.videoWrap {
+  position: relative;
+}
+
+.videoLabel {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* a-back-sides: arrows outside the frame on wide screens */
+.page[data-back="sides"] .column {
+  width: min(100% - 2 * (var(--side) + var(--space-4)), var(--container-content), max(480px, calc(var(--video-h) * var(--ratio))));
+}
+
+.side {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  transform: translateY(-50%);
+}
+
+.side[data-side="prev"] {
+  right: calc(100% + var(--space-4));
+}
+
+.side[data-side="next"] {
+  left: calc(100% + var(--space-4));
+}
+
+.side > :global(.ui-buttonc)[data-size] {
+  --h: var(--side);
+  --radius: var(--radius-full);
+}
+
+/* ---------- Actions ---------- */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cell {
+  display: flex;
+}
+
+.backCell {
+  flex: none;
+  width: var(--control-lg);
+}
+
+/* Next and the time hint stacked in one cell: the cell is always as wide as Next */
+.nextCell {
+  position: relative;
+  display: grid;
+}
+
+.nextCell > * {
+  grid-area: 1 / 1;
+}
+
+.keep {
+  display: flex;
+}
+
+/* hidden while recording, but the slot stays so nothing around it moves */
+.keep[data-hidden] {
+  visibility: hidden;
+}
+
+/* wide: the hint never widens the slot (it may run past it to the right) */
+.hint {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.hint[data-recording] {
+  font-weight: var(--weight-medium);
+  color: var(--color-danger);
+}
+
+/* Record = the red primary (concept-only theming through the button's own custom properties; high-fi needs a kit variant) */
+.recBtn:global(.ui-buttonc) {
+  --ui-btnc-solid: var(--color-danger);
+  --ui-btnc-solid-hover: color-mix(in srgb, var(--color-danger) 88%, var(--color-ink));
+}
+
+/* Record again = red outline, not solid: it is no longer the next step */
+.againBtn:global(.ui-buttonc) {
+  --ui-btnc-title: var(--color-danger);
+  --ui-btnc-icon: var(--color-danger);
+  --ui-btnc-shadow: var(--shadow-outline-danger);
+  --ui-btnc-shadow-hover: var(--shadow-outline-danger), var(--shadow-card-hover);
+}
+
+.dialogText {
+  margin: 0;
+}
+
+/* ---------- Note card ---------- */
+.noteWrap {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin: var(--space-16) auto 0;
+}
+
+.tradeoffs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.tradeoff {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+}
+
+.tradeoff dt {
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.tradeoff dd {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.pickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+}
+
+.others {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-4);
+}
+
+@media (pointer: coarse) {
+  .backSlot {
+    width: var(--control-lg);
+  }
+
+  .backCell {
+    width: var(--control-touch);
+  }
+}
+
+/* phones and narrow tablets: no room beside the video — the arrows sit on its edges, translucent */
+@media (max-width: 767.98px) {
+  .page[data-back="sides"] .column {
+    width: 100%;
+  }
+
+  .side[data-side="prev"] {
+    right: auto;
+    left: var(--space-2);
+  }
+
+  .side[data-side="next"] {
+    right: var(--space-2);
+    left: auto;
+  }
+
+  .side > :global(.ui-buttonc)[data-size] {
+    --ui-btnc-surface: color-mix(in srgb, var(--color-surface) 80%, transparent);
+
+    backdrop-filter: blur(6px);
+  }
+
+  .tradeoff {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}
+
+/* phone: two rows — [‹] [Original] [Record] / [ ] [My take] [Next]; Next bottom-right in the thumb zone */
+@media (max-width: 480px) {
+  .actions {
+    display: grid;
+    grid-template-areas:
+      "orig rec"
+      "take next";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+  }
+
+  .actions[data-back="row"] {
+    grid-template-areas:
+      "back orig rec"
+      ". take next";
+    grid-template-columns: auto repeat(2, minmax(0, 1fr));
+  }
+
+  .left,
+  .right {
+    display: contents;
+  }
+
+  .backCell { grid-area: back; }
+  .origCell { grid-area: orig; }
+  .takeCell { grid-area: take; }
+  .recCell { grid-area: rec; }
+  .nextCell { grid-area: next; }
+
+  .hint {
+    position: static;
+    justify-self: center;
+    transform: none;
+  }
+
+  .cell > :global(.ui-buttonc),
+  .keep > :global(.ui-buttonc) {
+    flex: 1;
+    min-width: 0;
+  }
+}

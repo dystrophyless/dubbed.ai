@@ -1,0 +1,231 @@
+/*
+ * Result — high-fi (concept C "watch, then fix", the video as large as the page allows).
+ * The column is as wide as a 2.35:1 stage can be while Download stays above the fold: --video-h = the viewport minus
+ * everything else on the page (bar, title, controls, footer), the column = that height × 2.35, never wider than the
+ * content width (1120) and never narrower than 640px. Phones: width-bound, with the same side margins as New dub and Processing (owner 2026-11-04: consistency).
+ * One card keeps its shape in every state — the stage, the middle (progress / failure / the controls), the footer.
+ */
+.page {
+  --video-h: max(160px, calc(100dvh - 344px));
+  --middle-h: calc(var(--control-lg) + var(--space-3) + 6px + 2 * var(--space-4));
+}
+
+.column {
+  width: min(100%, max(640px, calc(var(--video-h) * 2.35)));
+  margin-inline: auto;
+}
+
+.name {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card {
+  overflow: hidden;
+}
+
+/* ---------- The stage: edge to edge, always 2.35:1; dimmed until the first version is assembled ---------- */
+.stage {
+  position: relative;
+}
+
+.stage figure {
+  border-radius: 0;
+  background: var(--color-strong);
+  box-shadow: none;
+}
+
+.stage video {
+  background: var(--color-strong);
+  filter: saturate(0.5);
+  transition: filter var(--duration-morph) var(--ease-out);
+}
+
+.dim {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--color-strong) 40%, transparent);
+  pointer-events: none;
+  transition: opacity var(--duration-morph) var(--ease-out);
+}
+
+.stage[data-lit] video {
+  filter: none;
+}
+
+.stage[data-lit] .dim {
+  opacity: 0;
+}
+
+/* full screen: the stage fills the screen above the controls row */
+.screen:fullscreen .stage {
+  height: 100%;
+}
+
+/* prototype only: a 16:9 / 9:16 clip is simulated by cropping the scope demo to that shape (as in New dub) */
+.stage[data-clip="16x9"] video,
+.stage[data-clip="portrait"] video {
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+  object-fit: cover;
+}
+
+.stage[data-clip="16x9"] video {
+  aspect-ratio: 16 / 9;
+}
+
+.stage[data-clip="portrait"] video {
+  aspect-ratio: 9 / 16;
+}
+
+/* ---------- The middle: progress / failure, or the player's controls — the same height, so the footer never moves ---------- */
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: var(--middle-h);
+}
+
+/* the body follows the stage, not a card header: a full top padding */
+.card .middle {
+  padding-top: var(--space-4);
+}
+
+/* phones reserve less here than the progress needs when its meta wraps: a quiet row, not an empty band (the footer may
+   rise once, when the video becomes ready) */
+.controls {
+  min-height: var(--controls-h, var(--middle-h));
+  padding-inline: var(--space-4);
+}
+
+:fullscreen .controls {
+  min-height: 0;
+}
+
+.ending {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.endingText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.endingTitle {
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+/* ---------- Footer: Re-record a turn · Download (the one primary), or the state's own content ---------- */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-4);
+  min-height: calc(var(--control-lg) + 2 * var(--space-3));
+  padding-block: var(--space-3);
+}
+
+/* the disabled Re-record a turn + its reason, side by side (stacked on phones) */
+.rerecord {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1_5) var(--space-3);
+  min-width: 0;
+}
+
+.reason {
+  min-width: 0;
+}
+
+.leave {
+  text-align: center;
+}
+
+/* ---------- The status line under the title (versions live here) ---------- */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1_5);
+}
+
+.status > :first-child:not(:only-child) {
+  flex: none;
+}
+
+.ok {
+  display: inline-flex;
+  color: var(--color-success);
+}
+
+.warn {
+  display: inline-flex;
+  color: var(--color-warning-text);
+}
+
+.headerAction {
+  flex: none;
+}
+
+/* the chooser's list: long scenes scroll inside the dialog */
+.turnList {
+  min-width: 0;
+}
+
+@media (max-width: 1023.98px) {
+  .column {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer > :global(.ui-buttonc),
+  .rerecord > :global(.ui-buttonc) {
+    width: 100%;
+  }
+
+  .rerecord {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* the empty placeholder beside Try again is not needed when stacked */
+  .footer > span[aria-hidden="true"]:empty {
+    display: none;
+  }
+}
+
+/* phones: the meta wraps under the waiting pill; the picture gets the screen's full width (owner: as large as possible) */
+@media (max-width: 639.98px) {
+  .page {
+    --controls-h: calc(var(--control-lg) + var(--space-3) + 6px + 2 * var(--space-4));
+    --middle-h: calc(var(--control-lg) + var(--space-2) + var(--leading-md) + var(--space-3) + 6px + 2 * var(--space-4));
+  }
+
+  .headerAction {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage video,
+  .dim {
+    transition: none;
+  }
+}

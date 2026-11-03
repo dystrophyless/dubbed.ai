@@ -21,6 +21,7 @@ const router = createBrowserRouter([
   { path: "/prototypes", element: <PrototypeRoute /> },
   { path: "/prototypes/:feature", element: <PrototypeRoute /> },
   { path: "/prototypes/:feature/:screen", element: <PrototypeRoute /> },
+  { path: "/prototypes/:feature/:screen/:sub", element: <PrototypeRoute /> },
 ]);
 
 export function AppRouter() {

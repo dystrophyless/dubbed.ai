@@ -39,6 +39,17 @@ Casual users having fun with favourite scenes — friendly, short, encouraging. 
 **Money** — always name the exact cost and what happens: "Start dubbing · 13 credits"; cancel while preparing:
 "2 of 3 stages are done — 9 credits will be charged."
 
+**New dub** — "New dub" / «Новая озвучка» · "Drop a video here" (wide, fine pointer) / «Перетащите видео сюда» ·
+"Choose a video to dub" (touch, narrow) / «Выберите видео для озвучки» · "Choose a video" / «Выбрать видео» ·
+"Uploading" / «Загрузка» · "Checking the video" / «Проверяем видео» · "Cancel upload" / «Отменить загрузку» ·
+"Section to dub" / «Отрезок для озвучки» · "0:30 – 1:42 · 72 s" (seconds, never credits) · "That's the limit — 120 s" /
+«Это максимум — 120 с» · "Play section" / «Смотреть отрезок» · "Replace video" / «Заменить видео» ·
+"Start dubbing · 72 credits" / «Начать озвучку · 72 кредита» (the only price) · "32 more credits needed" /
+«Не хватает 32 кредитов» · "Buy credits" / «Купить кредиты» · "No free project slot" / «Нет свободного места для проекта»
+· "Open My projects" / «Открыть мои проекты». Errors: no sound — "This video has no sound, so there is nothing to dub.
+Choose a video with voices."; unreadable — "We couldn't read this file — it may be damaged. Export it again or choose
+another video." (RU in `ru.ts` → `newDub.errors`).
+
 **Confirmations** (Dialog): the title is the question with the object; the body names the consequence; buttons name
 the actions: «Удалить «Сцена на кухне»?» · [Отмена] [Удалить проект].
 
@@ -46,7 +57,12 @@ the actions: «Удалить «Сцена на кухне»?» · [Отмена
 
 **Studio** — "Turn 3 of 12" / «Реплика 3 из 12» · "Record" / «Записать» · "Stop" / «Стоп» · "Record again" /
 «Записать заново» · "Original" / «Оригинал» · "My take" / «Мой дубль» · "Previous" / «Назад» · "Next" / «Дальше» ·
-"Record a take to continue" / «Запишите дубль, чтобы продолжить» · "Up to 4.4 s" / «До 4,4 с» · "1.5 s left" / «Осталось 1,5 с».
+"Build the result" / «Собрать результат» (Next on the last turn) · "3 of 12" / «3 из 12» next to the dots ·
+"Sound off" / «Без звука» (stage tag while recording) · "Your voice" / «Ваш голос» (stage tag while My take plays) ·
+"Exit studio" / «Выйти из студии» · "Original voice volume" / «Громкость оригинального голоса» · "Up to 4.4 s" / «До 4,4 с» ·
+"1.5 s left" / «Осталось 1,5 с» · microphone blocked: "Your microphone is blocked" / «Микрофон заблокирован» + how to
+allow it + "Check the microphone in Settings" / «Проверить микрофон в настройках». Tooltips name the shortcut:
+"Record · R" / «Записать · R». "Record a take to continue" is no longer shown (Next appears only with a take).
 Sound captions stay in brackets and are shown quieter: "[laughs]" / «[смеётся]».
 
 **No technical codes as the message** (owner, 2026-11-03): never "404", "500", "Error 0x…" as a title or tag — say what

@@ -42,7 +42,7 @@ How to solve recurring UX problems with the kit. Each pattern names the componen
 | Page / list first load | `Skeleton`s in the exact shape of the content (same card, same count up to 3) |
 | Button action | `Button loading` (label stays readable) |
 | Re-fetch with data on screen | keep the data; no skeletons |
-| Multi-stage server work (preparing a project) | stage list + `ProgressBar` / `ThinkingLoader` with real stage names |
+| Multi-stage server work (preparing a project) | `StepProgress` — the waiting pill with the real step name + one segment per step + "Step 2 of 3 · About a minute left" (rounded to minutes; no time while queued) |
 | < 300 ms | nothing |
 
 Never a full-page spinner. Never block the top bar. Independent blocks load and fail independently.
@@ -62,19 +62,49 @@ Never a full-page spinner. Never block the top bar. Independent blocks load and 
   = shimmer surface; error = calm message + "Try again".
 - **Recording** is red and immediate: no countdown; the record control shows the window ("Up to 4.4 s") and, while
   recording, the time left and a filling ring; it stops by itself at the end of the window.
-- **After a take:** no autoplay, no auto-advance. The user chooses: listen (the fragment with their voice), record again,
-  or Next.
-- **Next requires a saved take** — Next is disabled with the reason written next to it ("Record a take to continue").
-  Previous always works.
+- **Arrival on a turn without a take** (owner, 2026-11-03 — overrides "no autoplay"): the fragment plays once by itself
+  with the original voice. **After a take:** no autoplay, no auto-advance. The user chooses: listen (the fragment with
+  their voice), record again, or Next.
+- **While recording the scene plays muted** (owner, 2026-11-03): only the user's voice is heard; the stage shows a quiet
+  "Sound off" tag. Only Stop is visible; every other button is hidden in its kept slot.
+- **Buttons appear step by step and keep their place** (studio-brief 14): `[‹] [Original] [Record]` + "Up to 4.4 s" →
+  `[Stop]` + "1.5 s left" → `[‹] [Original] [My take] … [Record again] [Next →]`. **Next does not exist until there is a
+  saved take** (no disabled Next, no "Record a take to continue"); on the last turn it reads "Build the result".
+  Previous always works (a fixed icon slot at the left of the row, empty on turn 1).
+- **Moving between turns** (studio-brief 15): the current dot's pill slides, the number rolls, the scene slides in from
+  the side we moved to; all off under `prefers-reduced-motion`.
+- **Studio keyboard** (shown in the tooltips): Space = play / pause the original · R = record / stop · ← / → = previous /
+  next turn (only when allowed). Ignored in fields, sliders and while a dialog or popover is open; Space on a focused
+  button keeps its native meaning.
 - **Audio track** (`AudioTrack`): original grey; the take drawn over it (red while recording, blue when saved).
 - **Level meter** only in the microphone check (sign-up step, Settings) — never in the studio.
-- **Microphone failure in the studio:** an Alert pointing to Settings → Microphone; no device setup in the studio.
+- **Microphone failure in the studio:** an amber Alert above the action row — what happened, how to allow it in the
+  browser, [Try again] and a link to the microphone check in Settings; Record stays visible but disabled and is described
+  by the Alert. No device setup in the studio.
 - **Original volume** is a listening control only — never affects the recording or the output.
+
+- **Re-record mode** (owner, 2026-11-04 — opened from the result's "Re-record a turn"): every turn already has a take;
+  ‹ / › move between turns; once a turn has a new take the primary is **"Build the new version"** instead of Next →
+  the result with the new version assembling (free). Exit → the result, unchanged.
+
+### Watching the result (Phase 4, `result-brief.md`)
+
+- **The picture is as large as the page allows** (2.35:1 stage, up to the full content width, Download above the fold)
+  and opens **full screen**: the button in the player controls, double-click on the picture, F; Esc leaves. The stage and
+  its controls go full screen together (`PlayerScreen`); iOS Safari uses the video's own full-screen player.
+- **Versions live in one place** — the status line under the title: assembling (keep watching this one) → ready ("Watch
+  version 2" beside the title) → after switching, the new version plays **from 0:00** and the old one is gone. A failed
+  new version leaves the current one untouched (Try again, free).
+- **Nothing is offered that cannot be done yet:** while a version assembles, "Re-record a turn" is disabled with the
+  reason written next to it (not only a tooltip).
+- **Download is instant** and takes the version on screen; the file is named after the project.
 
 ## 7. Money and cost
 
 - Every paid action names the exact cost on its button: "Start dubbing · 13 credits" (`CostButton`); no second confirmation.
-- Not enough credits → the button is disabled and says how many are missing; "Buy credits" sits beside it.
+- The price appears once, on that button; the balance is not repeated next to it (the top bar shows it).
+- Not enough credits → the button is disabled, the shortfall is written under it ("32 more credits needed"), and
+  "Buy credits" sits beside it; buying returns to the same page with the work kept (`ia.md` flow 6).
 - Cancelling paid work shows what will be charged **before** confirming.
 
 ## 8. Navigation

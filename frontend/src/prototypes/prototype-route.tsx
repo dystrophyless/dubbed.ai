@@ -2,12 +2,13 @@ import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router";
 import { PROTOTYPES } from "./registry";
 
-/* Renders /prototypes, /prototypes/:feature and /prototypes/:feature/:screen. Phase 0: unstyled index. */
+/* Renders /prototypes, /prototypes/:feature, /prototypes/:feature/:screen and /prototypes/:feature/:screen/:sub
+ * (nested screens such as concepts/studio/<concept>). Phase 0: unstyled index. */
 export function PrototypeRoute() {
   const { t } = useTranslation();
-  const { feature, screen } = useParams();
+  const { feature, screen, sub } = useParams();
   const entry = PROTOTYPES.find((p) => p.id === feature);
-  const target = entry && screen ? entry.screens[screen] : undefined;
+  const target = entry && screen ? entry.screens[sub ? `${screen}/${sub}` : screen] : undefined;
   if (target) return <target.Component />;
 
   const list = entry ? [entry] : PROTOTYPES;

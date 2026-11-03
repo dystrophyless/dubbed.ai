@@ -1,10 +1,10 @@
-import { useCallback, useMemo, useRef, useState, type ReactNode, type RefObject } from "react";
+import { useCallback, useMemo, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink, useNavigate } from "react-router";
 import { Icon, type IconName } from "@/components/icons";
 import { Container } from "@/components/layout";
-import { Avatar, Button, ProfileMenu, Toaster } from "@/components/ui";
+import { Avatar, Button, ProfileMenu, Toaster, Tooltip } from "@/components/ui";
 import { useAnchoredPosition, useDismiss } from "@/components/ui/kit/usePopover";
 import { LanguageSwitch } from "./LanguageSwitch";
 import s from "./shells.module.css";
@@ -165,6 +165,52 @@ export function FocusedShell({ title, onExit, right, children }: { title: ReactN
       <main className={s.focusedMain} id="main">
         {children}
       </main>
+      <Toaster />
+    </div>
+  );
+}
+
+/*
+ * StudioShell — the focused shell's studio variant (studio-brief.md 11–12; the only screen in the focused shell).
+ * One centred column with one side padding; its width follows the scene's picture. The only chrome is the header row
+ * directly above the video and inside its width: ✕ Exit (left) · title with the progress, centred · `right` (volume).
+ * Nothing sticks out past the column. The page below (video · line · track · actions) is the children.
+ *
+ * Height budget: --video-h is the viewport minus everything that must stay above the fold (header, line, track, action
+ * row; plus an inline notice when `notice` is set), so the actions are visible at 1440 × 900 and 390 × 844 for a
+ * landscape or a portrait clip. Children pass `var(--video-h)` to SceneColumn / VideoStage as their maxHeight.
+ * Exit may be intercepted by the page (the unsaved-take dialog) — onExit decides.
+ */
+export function StudioShell({
+  title, progress, onExit, exitLabel, right, ratio, notice, busy, children, "data-testid": testId,
+}: {
+  title: ReactNode; progress?: ReactNode; onExit: () => void; exitLabel: string; right?: ReactNode;
+  /** the clip's aspect ratio (width / height) */
+  ratio: number;
+  /** an inline notice sits above the actions — the video gives up some height for it */
+  notice?: boolean;
+  /** aria-busy on the main region (loading) */
+  busy?: boolean;
+  children: ReactNode;
+  "data-testid"?: string;
+}) {
+  return (
+    <div className={s.studio} style={{ "--ratio": ratio } as CSSProperties} data-notice={notice || undefined} data-testid={testId}>
+      <div className={s.studioColumn}>
+        <header className={s.studioHead}>
+          <Tooltip content={exitLabel}>
+            <Button variant="ghost" size="lg" icon={<Icon name="close" />} aria-label={exitLabel} onClick={onExit} data-testid="studio-exit" />
+          </Tooltip>
+          <div className={s.studioTitle}>
+            <h1 className={s.studioH1}>{title}</h1>
+            {progress}
+          </div>
+          <div className={s.studioRight}>{right}</div>
+        </header>
+        <main className={s.studioMain} id="main" aria-busy={busy || undefined}>
+          {children}
+        </main>
+      </div>
       <Toaster />
     </div>
   );

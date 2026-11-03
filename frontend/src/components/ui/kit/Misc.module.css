@@ -145,6 +145,7 @@
 
 .backLink {
   display: inline-flex;
+  align-self: flex-start; /* never stretched by a flex-column parent: the hover area hugs the label */
   align-items: center;
   gap: var(--space-1);
   height: var(--control-md);

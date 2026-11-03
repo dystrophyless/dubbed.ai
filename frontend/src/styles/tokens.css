@@ -222,3 +222,12 @@
   --color-accent-wash: rgba(91, 91, 214, 0.06);
   --color-focus: rgba(91, 91, 214, 0.45);
 }
+
+/*
+ * DUBBED PATCH 5 — red record buttons (studio high-fi, Phase 4; owner decision 2026-11-03, studio-brief.md 14:
+ * "Record" / "Stop" solid red, "Record again" a red outline). The Clean button has no red solid; the patch themes the
+ * port's own custom properties from outside (ui/affect-patches.css). White on #c4262c 5.6:1; hover #a91f25 6.9:1.
+ */
+:root {
+  --color-danger-hover: #a91f25;
+}

@@ -4,7 +4,7 @@ import { Icon } from "@/components/icons";
 import { Stack } from "@/components/layout";
 import {
   Alert, Button, Card, CardBody, CardFooter, CardHeader, Dialog, EmptyState, ProgressBar, ShimmerText, Skeleton, Spinner,
-  Text, ThinkingLoader, toast,
+  StepProgress, Text, ThinkingLoader, toast,
 } from "@/components/ui";
 import { Row, SgSection, Specimen } from "../Specimen";
 
@@ -13,6 +13,7 @@ export function Feedback() {
   const [dialog, setDialog] = useState<"none" | "plain" | "danger">("none");
   const [deleting, setDeleting] = useState(false);
   const [progress, setProgress] = useState(42);
+  const [step, setStep] = useState(2);
   return (
     <SgSection id="feedback" title={t("sg.feedback.title")} description={t("sg.feedback.description")}>
       <Specimen title={t("sg.feedback.alerts")} wide>
@@ -95,6 +96,24 @@ export function Feedback() {
             <Text tone="text">{t("media.loading")}</Text>
           </Row>
           <ThinkingLoader phases={[t("sg.feedback.phase1"), t("sg.feedback.phase2"), t("sg.feedback.phase3")]} interval={1800} loop />
+        </Stack>
+      </Specimen>
+      <Specimen title={t("sg.feedback.stepProgress")} wide note={t("sg.feedback.stepProgressNote")}>
+        <Stack gap={16}>
+          <StepProgress
+            label={t("sg.feedback.preparing")}
+            steps={[t("sg.feedback.phase1"), t("sg.feedback.phase2"), t("sg.feedback.phase3")]}
+            current={Math.min(step, 3)}
+            fraction={step > 0 && step <= 3 ? 0.4 : 0}
+            waitingLabel={t("sg.feedback.stepWaiting")}
+            done={step > 3}
+            doneLabel={t("sg.feedback.stepDone")}
+            meta={step > 0 && step <= 3 ? t("sg.feedback.stepMeta", { n: step }) : undefined}
+          />
+          <Row>
+            <Button size="sm" variant="secondary" onClick={() => setStep((n) => Math.min(4, n + 1))} disabled={step > 3}>{t("sg.feedback.stepNext")}</Button>
+            <Button size="sm" variant="ghost" onClick={() => setStep(0)}>{t("sg.feedback.stepReset")}</Button>
+          </Row>
         </Stack>
       </Specimen>
       <Specimen title={t("sg.feedback.skeleton")} note={t("sg.feedback.skeletonNote")}>
