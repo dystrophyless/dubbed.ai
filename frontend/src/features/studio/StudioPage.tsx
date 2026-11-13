@@ -205,23 +205,31 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
   };
 
   const record = async () => {
-    if (busy || block) return;
+    if (busy || block || abortRec.current) return; // a start already in progress
+    // set before the first await: closing the studio during start-up cancels it
+    const abort = new AbortController();
+    abortRec.current = abort;
     setActed(true);
     setClip("none");
     // a blocked microphone is the more useful thing to tell: it wins over the lock notice (D2)
     const mic = await navigator.permissions?.query({ name: "microphone" as PermissionName }).catch(() => null);
+    if (abort.signal.aborted) return;
     if (mic?.state === "denied") {
+      abortRec.current = null;
       setBlock("microphone");
       return;
     }
     const lease = await services.studio.acquireCapture(project.id);
     if (!lease.ok) {
+      abortRec.current = null;
       setBlock("other-tab");
       return;
     }
-    const abort = new AbortController();
+    if (abort.signal.aborted) {
+      await lease.value.release(); // the studio was closed: let go of the lock, don't record
+      return;
+    }
     const stop = new AbortController();
-    abortRec.current = abort;
     stopRec.current = stop;
     setFirstTake(!hasTake);
     setSession("recording");

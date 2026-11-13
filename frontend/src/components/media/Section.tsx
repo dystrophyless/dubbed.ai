@@ -50,9 +50,12 @@ export function useSectionPlayback(
     const v = videoRef.current;
     const from = resume.current ?? start;
     const t0 = performance.now();
+    let cancelled = false;
     if (v) {
       seek(v, map.current(from));
-      v.play().catch(() => {
+      v.play().catch((e: unknown) => {
+        // paused before playback started: the browser cancels play() — that is not a refusal of sound
+        if (cancelled || (e instanceof DOMException && e.name !== "NotAllowedError")) return;
         // the browser refused sound: play the picture silently rather than not at all
         v.muted = true;
         return v.play().catch(() => undefined);
@@ -79,6 +82,7 @@ export function useSectionPlayback(
     };
     raf = requestAnimationFrame(tick);
     return () => {
+      cancelled = true;
       cancelAnimationFrame(raf);
       v?.pause();
     };

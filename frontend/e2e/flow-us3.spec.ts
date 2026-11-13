@@ -140,6 +140,35 @@ test.describe("US3 — re-record a turn", () => {
     await openRerecord(page, 2);
     await expect(build(page)).toHaveCount(0);
 
+    // Record pressed while the microphone permission check is still pending, then Exit: the studio is closed, so the
+    // late start must neither replace the saved take nor keep the recording lock
+    const takes = () => page.evaluate(async () => {
+      const db = await new Promise<IDBDatabase>((res, rej) => { const r = indexedDB.open("dubbed-mock"); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
+      const all = await new Promise<{ n: number; blob?: Blob }[]>((res) => { const r = db.transaction("takes").objectStore("takes").getAll(); r.onsuccess = () => res(r.result); });
+      db.close();
+      return all.map((t) => JSON.stringify({ ...t, blob: t.blob?.size }));
+    });
+    const takesBefore = await takes();
+    await page.evaluate(() => {
+      const w = window as Window & { __releaseMic?: () => void };
+      const hung = new Promise<void>((res) => { w.__releaseMic = res; });
+      navigator.permissions.query = () => hung.then(() => ({ state: "granted" }) as PermissionStatus);
+      const c = window as Window & { __micAsks?: number };
+      c.__micAsks = 0;
+      const getUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+      navigator.mediaDevices.getUserMedia = (constraints) => { c.__micAsks = (c.__micAsks ?? 0) + 1; return getUserMedia(constraints); };
+    });
+    await page.locator('button[aria-keyshortcuts="R"]').click();
+    await page.getByTestId("studio-exit").click();
+    await expect(page).toHaveURL(/\/result$/);
+    await page.evaluate(() => (window as Window & { __releaseMic?: () => void }).__releaseMic?.());
+    await page.waitForTimeout(500);
+    expect(await page.evaluate(() => (window as Window & { __micAsks?: number }).__micAsks)).toBe(0);
+    expect(await takes()).toEqual(takesBefore);
+    await expect.poll(() => page.evaluate(async () => (await navigator.locks.query()).held?.filter((l) => l.name?.startsWith("dubbed:record:")).length)).toBe(0);
+    await expect(result(page)).toHaveAttribute("data-newer", "none");
+
+    await openRerecord(page, 2);
     // nothing new yet: Exit goes straight back to the Result
     await page.getByTestId("studio-exit").click();
     await expect(page).toHaveURL(/\/result$/);

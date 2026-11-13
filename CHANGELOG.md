@@ -4,6 +4,17 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.4] — 2026-11-13
+
+Fix from the fourth Codex review of PR #83, and one found by the test run.
+
+### Fixed
+
+- Leaving the studio while a recording is still starting (microphone or lock check pending) cancels it: the closed
+  studio no longer turns the microphone on or replaces a saved take, and a double click on Record starts only once.
+- Pause pressed right after "Play section" on New dub stops the video; before, it could keep playing silently while
+  the button already showed it stopped.
+
 ## [0.1.3] — 2026-11-13
 
 Fixes from the third Codex review of PR #83 and a sweep for the same kinds of bugs.
@@ -83,6 +94,7 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.4]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.4
 [0.1.3]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.3
 [0.1.2]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.2
 [0.1.1]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.1
