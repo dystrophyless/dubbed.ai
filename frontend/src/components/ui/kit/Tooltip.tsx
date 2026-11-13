@@ -17,9 +17,15 @@ type Child = ReactElement<{
  * Tooltip — the Clean white tip above a control (message-actions-clean.md:821): after a beat on mouse hover,
  * at once on keyboard focus, hidden on Escape. Supplementary only: never the sole label, never needed on touch.
  */
-export function Tooltip({ content, children }: { content: string; children: Child }) {
+export function Tooltip({ content, children, closeOn }: { content: string; children: Child; closeOn?: unknown }) {
   const id = useId();
   const [open, setOpen] = useState(false);
+  // `closeOn`: when this value changes the tip closes (e.g. the control changed its meaning and focus stays on it)
+  const [seen, setSeen] = useState(closeOn);
+  if (seen !== closeOn) {
+    setSeen(closeOn);
+    setOpen(false);
+  }
   const anchor = useRef<HTMLElement | null>(null);
   const tip = useRef<HTMLDivElement>(null);
   const timer = useRef<number | undefined>(undefined);

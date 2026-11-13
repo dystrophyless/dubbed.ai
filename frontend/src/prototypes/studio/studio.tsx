@@ -1,17 +1,11 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router";
-import { StudioShell } from "@/app/shells/Shells";
 import { StateSwitcher } from "@/components/dev/StateSwitcher";
 import { useViewState } from "@/components/dev/view-state";
-import { Icon } from "@/components/icons";
-import {
-  AudioTrack, RecordButton, SceneColumn, TurnDots, TurnLine, VideoStage, VolumeButton, demoPeaks, formatSeconds,
-  type RecordState, type TurnDir,
-} from "@/components/media";
-import { Alert, Button, Dialog, Skeleton, SkeletonText, TextLink, Tooltip } from "@/components/ui";
-import { cx } from "@/components/ui/kit/cx";
-import s from "./studio.module.css";
+import { demoPeaks, type RecordState, type TurnDir } from "@/components/media";
+import type { ClipShape } from "@/features/recording-flow-mock/views/NewDubView";
+import { StudioView, type Playing } from "@/features/recording-flow-mock/views/StudioView";
 
 /*
  * Phase 4 — recording studio, HIGH-FI prototype (concept A, Previous in the action row; studio-brief.md 11–16).
@@ -28,18 +22,11 @@ import s from "./studio.module.css";
  * Real page: /projects/:id/turns/:n in StudioShell; the demo clock, takes and microphone become real hooks.
  */
 export const STUDIO_STATES = [
-  "no-take", "arrival", "recording", "saving", "saved", "playing-take", "last", "exit-unsaved", "mic-blocked", "loading",
+  "no-take", "arrival", "recording", "saving", "saved", "playing-take", "last", "exit-unsaved", "mic-blocked", "recording-elsewhere", "loading",
 ] as const;
 type Preview = (typeof STUDIO_STATES)[number];
-type Playing = "none" | "original" | "take";
 
 const CLIP = "/media/scene.mp4";
-/*
- * owner 2026-11-03: the stage is always 2.35:1 ("scope", the demo clip's own shape). A narrower clip (16:9, 9:16) fills
- * the stage's height, centred, with black bars at the sides.
- */
-const STAGE_RATIO = 960 / 408;
-type ClipShape = "scope" | "16x9" | "portrait";
 /* each turn's fragment inside the demo clip: where it starts and how long the turn's window is (seconds) */
 const FRAGMENTS = [
   { start: 0.4, window: 3.2 }, { start: 3.8, window: 2.6 }, { start: 6.6, window: 4.4 },
@@ -99,6 +86,9 @@ function useStudioDemo(preview: Preview, turn: number, total: number, onBuild: (
   const [live, setLive] = useState(false);
   const [ask, setAsk] = useState(preview === "exit-unsaved");
   const [micBlocked, setMicBlocked] = useState(preview === "mic-blocked");
+  // feature 001 delta: the single recording lock is held by another tab (same bottom notice, own copy)
+  const [lockedElsewhere, setLockedElsewhere] = useState(preview === "recording-elsewhere");
+  const noRecord = micBlocked || lockedElsewhere;
   const frag = FRAGMENTS[index % FRAGMENTS.length];
   const win = frag.window;
 
@@ -157,11 +147,11 @@ function useStudioDemo(preview: Preview, turn: number, total: number, onBuild: (
   };
 
   return {
-    index, total, dir, takes, rec, elapsed, playing, live, ask, micBlocked, frag, win, hasTake, busy, last, canPrev, canNext,
+    index, total, dir, takes, rec, elapsed, playing, live, ask, micBlocked, lockedElsewhere, noRecord, frag, win, hasTake, busy, last, canPrev, canNext,
     rerecord, fresh, build,
     lineKey: LINES[index % LINES.length],
     record: () => {
-      if (micBlocked || busy) return;
+      if (noRecord || busy) return;
       setLive(true);
       setPlaying("none");
       setElapsed(0);
@@ -194,6 +184,7 @@ function useStudioDemo(preview: Preview, turn: number, total: number, onBuild: (
       if (rec === "recording") setRec("saving");
     },
     retryMic: () => setMicBlocked(false),
+    retryLock: () => setLockedElsewhere(false),
   };
 }
 
@@ -213,96 +204,64 @@ function StudioTurn({ preview, turn, total, shape, rerecord }: { preview: Previe
   // re-record mode: leaving with new takes that are not built yet asks first (owner 2026-11-04, result-brief)
   const [askBuild, setAskBuild] = useState(false);
   const [volume, setVolume] = useState(0.8);
-  const loading = preview === "loading";
-  const ratio = STAGE_RATIO;
-
-  useStudioKeys(st, loading);
+  const videoRef = useDemoVideo(st, volume);
+  const original = useMemo(() => demoPeaks(160, 7 + st.index * 3), [st.index]);
+  const take = useMemo(() => demoPeaks(160, 31 + st.index * 5), [st.index]);
 
   return (
-    <StudioShell
+    <StudioView
+      loading={preview === "loading"}
       title={t("studio.project")}
-      exitLabel={t("studio.exit")}
+      index={st.index}
+      total={st.total}
+      dir={st.dir}
+      isDone={(i) => st.takes.has(i)}
+      lineText={t(`studio.lines.${st.lineKey}`)}
+      rec={st.rec}
+      elapsed={st.elapsed}
+      windowSeconds={st.win}
+      playing={st.playing}
+      hasTake={st.hasTake}
+      live={st.live}
+      rerecord={st.rerecord}
+      freshCount={st.fresh.size}
+      canPrev={st.canPrev}
+      canNext={st.canNext}
+      originalPeaks={original}
+      takePeaks={take}
+      videoSrc={`${CLIP}#t=${st.frag.start}`}
+      videoRef={videoRef}
+      shape={shape}
+      volume={volume}
+      onVolume={setVolume}
+      recordBlock={st.micBlocked ? "microphone" : st.lockedElsewhere ? "other-tab" : null}
+      onRetryRecordBlock={st.micBlocked ? st.retryMic : st.retryLock}
+      // prototype stand-in for /settings (Microphone)
+      settingsHref="/styleguide/templates/settings"
+      askLeave={st.ask}
+      askBuild={askBuild}
       onExit={() => st.exit(leave, () => setAskBuild(true))}
-      ratio={ratio}
-      busy={loading}
-      data-testid="studio"
-      progress={<TurnDots total={st.total} index={st.index} done={(i) => st.takes.has(i)} dir={st.dir} />}
-      right={<VolumeButton label={t("studio.volume")} value={volume} onChange={setVolume} />}
-    >
-      {loading ? (
-        <LoadingScene ratio={ratio} />
-      ) : (
-        <div key={st.index} className={s.scene} data-dir={st.dir} data-clip={shape}>
-          <SceneColumn ratio={ratio} maxHeight="var(--video-h)">
-            <Stage st={st} ratio={ratio} volume={volume} />
-            <div data-testid="turn-line"><TurnLine text={t(`studio.lines.${st.lineKey}`)} /></div>
-            <div className={s.trackWrap} data-testid="audio-track" data-mode={st.rec === "recording" ? "recording" : st.hasTake ? "saved" : "original"}>
-              <Track st={st} />
-              <TrackHint st={st} />
-            </div>
-          </SceneColumn>
-        </div>
-      )}
-
-      {st.micBlocked && !loading && <BottomNotice>
-          {/* owner 2026-11-03: a notification pinned to the bottom, outside the layout — nothing on the page moves when it appears.
-              Amber, not red: red is kept for recording (README rule 6). */}
-          <Alert
-            tone="warning"
-            title={t("studio.mic.title")}
-            action={<Button variant="secondary" size="sm" icon={<Icon name="retry" size={14} />} onClick={st.retryMic}>{t("studio.mic.retry")}</Button>}
-          >
-            <span id="studio-mic-reason">{t("studio.mic.text")}</span>{" "}
-            {/* prototype stand-in for /settings (Microphone) */}
-            <TextLink to="/styleguide/templates/settings">{t("studio.mic.settings")}</TextLink>
-          </Alert>
-      </BottomNotice>}
-
-      {loading ? <LoadingActions /> : <Actions st={st} />}
-
-      <Dialog
-        open={st.ask}
-        onClose={st.stay}
-        title={t("studio.leave.title")}
-        data-testid="leave-dialog"
-        footer={
-          <>
-            <Button variant="ghost" onClick={st.stay}>{t("studio.leave.stay")}</Button>
-            <Button variant="secondary" onClick={leave}>{t("studio.leave.noSave")}</Button>
-            <Button onClick={leave}>{t("studio.leave.save")}</Button>
-          </>
-        }
-      >
-        <p className={s.dialogText}>{t("studio.leave.text", { n: st.index + 1 })}</p>
-      </Dialog>
-
-      <Dialog
-        open={askBuild}
-        onClose={() => setAskBuild(false)}
-        title={t("studio.rerecord.leaveTitle")}
-        data-testid="leave-build-dialog"
-        footer={
-          <>
-            <Button variant="ghost" onClick={() => setAskBuild(false)}>{t("studio.leave.stay")}</Button>
-            <Button variant="secondary" onClick={leave}>{t("studio.rerecord.leaveNoBuild")}</Button>
-            <Button onClick={st.build}>{t("studio.rerecord.leaveBuild")}</Button>
-          </>
-        }
-      >
-        <p className={s.dialogText}>{t("studio.rerecord.leaveText", { count: st.fresh.size })}</p>
-      </Dialog>
-    </StudioShell>
+      onStay={st.stay}
+      onLeaveNoSave={leave}
+      onLeaveSave={leave}
+      onCloseAskBuild={() => setAskBuild(false)}
+      onLeaveNoBuild={leave}
+      onBuild={st.build}
+      onRecord={st.record}
+      onStop={st.stop}
+      onPlay={st.play}
+      onPrev={st.prev}
+      onNext={st.next}
+    />
   );
 }
 
 /*
- * The video: the turn's fragment of the clip at its own shape. Follows the demo clock — plays with the original voice,
- * plays MUTED while recording (studio-brief 16) and with "your voice" for My take (the prototype has no take audio, so
- * the picture plays silently; the real studio mixes the take in through Web Audio). Idle: the fragment's first frame
- * with a quiet play button (pointer shortcut for Original; keyboard users have Original / Space).
+ * The demo stands in for the media session: the video follows the demo clock — plays with the original voice, plays MUTED
+ * while recording (studio-brief 16) and silently for My take (the prototype has no take audio; the real studio plays the
+ * saved take). Idle: the fragment's first frame.
  */
-function Stage({ st, ratio, volume }: { st: Demo; ratio: number; volume: number }) {
-  const { t } = useTranslation();
+function useDemoVideo(st: Demo, volume: number) {
   const video = useRef<HTMLVideoElement>(null);
   const recording = st.rec === "recording";
   const running = st.live && !st.ask && (recording || st.playing !== "none");
@@ -327,288 +286,13 @@ function Stage({ st, ratio, volume }: { st: Demo; ratio: number; volume: number 
       v.muted = true;
       return v.play().catch(() => undefined);
     });
-  }, [running, start, frozenAt, st.playing, st.rec]);
+  }, [video, running, start, frozenAt, st.playing, st.rec, st.index]);
 
   useEffect(() => {
     const v = video.current;
     if (!v) return;
     v.muted = st.playing !== "original" || recording;
     v.volume = volume;
-  }, [st.playing, recording, volume]);
-
-  const idle = !recording && st.rec !== "saving" && st.playing === "none";
-  return (
-    <div className={s.stage} data-testid="studio-stage" data-playing={st.playing} data-recording={recording || undefined}>
-      <VideoStage
-        src={`${CLIP}#t=${start}`}
-        ratio={ratio}
-        maxHeight="var(--video-h)"
-        videoRef={video}
-        muted
-        label={recording ? t("studio.videoMuted") : t("studio.video")}
-      >
-        {idle && (
-          // pointer-only shortcut for "Original"; hidden from assistive tech, which has the Original button
-          <button type="button" className={s.playOverlay} tabIndex={-1} aria-hidden="true" onClick={() => st.play("original")}>
-            <Icon name="play" size={20} />
-          </button>
-        )}
-        {recording && (
-          <span className={s.chip} data-testid="stage-muted">
-            <Icon name="mute" size={14} />
-            {t("studio.muted")}
-          </span>
-        )}
-        {st.playing === "take" && (
-          <span className={s.chip} data-testid="stage-take">
-            <Icon name="waveform" size={14} />
-            {t("studio.yourVoice")}
-          </span>
-        )}
-      </VideoStage>
-    </div>
-  );
-}
-
-function Track({ st }: { st: Demo }) {
-  const { t } = useTranslation();
-  const original = useMemo(() => demoPeaks(160, 7 + st.index * 3), [st.index]);
-  const take = useMemo(() => demoPeaks(160, 31 + st.index * 5), [st.index]);
-  const recording = st.rec === "recording";
-  return (
-    <AudioTrack
-      label={t("studio.track")}
-      original={original}
-      take={recording || st.rec === "saving" || st.hasTake ? take : undefined}
-      takeProgress={recording ? st.elapsed / st.win : 1}
-      mode={recording ? "recording" : st.playing !== "none" ? "playing" : "idle"}
-      progress={st.elapsed / st.win}
-    />
-  );
-}
-
-/*
- * The action row (studio-brief 11, 14). A button that stays keeps its position; slots are kept while hidden.
- *   wide:  [‹] [Original] [My take] ··· [Record] [Next | time hint]
- *   phone: [‹] [Original] [Record]  /  [My take] [Next | time hint]   (Next bottom-right)
- * Recording: only Stop (+ "1.5 s left"); everything else hidden in its slot.
- */
-/** "1.5 s left" / "Saving take…" in the corner of the audio track, next to the take being drawn (owner 2026-11-03). */
-function TrackHint({ st }: { st: Demo }) {
-  const { t, i18n } = useTranslation();
-  const recording = st.rec === "recording";
-  const hint =
-    recording ? t("media.record.left", { s: formatSeconds(Math.max(0, st.win - st.elapsed), i18n.resolvedLanguage) })
-    : st.rec === "saving" ? t("media.record.saving")
-    : null;
-  if (!hint || st.micBlocked) return null;
-  return (
-    <span className={s.hint} data-tone={recording ? "recording" : undefined} data-testid="record-hint">
-      {hint}
-    </span>
-  );
-}
-
-function Actions({ st }: { st: Demo }) {
-  const { t } = useTranslation();
-  const recording = st.rec === "recording";
-  const saving = st.rec === "saving";
-  const saved = st.hasTake && !st.busy;
-  const status = recording ? t("studio.status.recording") : saving ? t("media.record.saving") : saved && st.live ? t("studio.status.saved") : "";
-  const origOn = st.playing === "original";
-  const takeOn = st.playing === "take";
-  return (
-    <div className={s.actions} data-testid="studio-actions" data-state={st.rec}>
-      <div className={s.group}>
-        {/* owner 2026-11-03: no empty slot on turn 1 — ‹ exists only when there is somewhere to go back to.
-            Owner 2026-11-03: while recording / saving every button stays where it is, disabled — the row keeps its shape. */}
-        {st.index > 0 && (
-          <span className={cx(s.cell, s.backCell)}>
-            <Tooltip content={t("studio.tip.prev")}>
-              <Button variant="secondary" size="lg" icon={<Icon name="prev" />} aria-label={t("studio.prev")} aria-keyshortcuts="ArrowLeft" disabled={st.busy} onClick={st.prev} />
-            </Tooltip>
-          </span>
-        )}
-        {st.rerecord && !st.last && (
-          <span className={cx(s.cell, s.backCell)}>
-            <Tooltip content={t("studio.rerecord.tipNext")}>
-              <Button variant="secondary" size="lg" icon={<Icon name="next" />} aria-label={t("studio.rerecord.next")} aria-keyshortcuts="ArrowRight" disabled={st.busy} onClick={st.next} data-testid="studio-forward" />
-            </Tooltip>
-          </span>
-        )}
-        <span className={cx(s.cell, s.origCell)}>
-          <Tooltip content={origOn ? t("studio.tip.pause") : t("studio.tip.original")}>
-            <Button variant="secondary" size="lg" icon={<Icon name={origOn ? "pause" : "play"} />} aria-pressed={origOn} aria-keyshortcuts="Space" disabled={st.busy} onClick={() => st.play("original")}>
-              {t("studio.original")}
-            </Button>
-          </Tooltip>
-        </span>
-        {st.hasTake && (
-          <span className={cx(s.cell, s.takeCell)}>
-            <Tooltip content={t("studio.tip.myTake")}>
-              <Button variant="secondary" size="lg" icon={<Icon name={takeOn ? "pause" : "waveform"} />} aria-pressed={takeOn} disabled={st.busy} onClick={() => st.play("take")}>
-                {t("studio.myTake")}
-              </Button>
-            </Tooltip>
-          </span>
-        )}
-      </div>
-      <div className={s.group}>
-        <span className={cx(s.cell, s.recCell)}>
-          {st.micBlocked && !st.busy ? (
-            // disabled; the reason is the bottom notice (linked for screen readers), not a tooltip
-            <RecordButton mode={st.hasTake ? "again" : "record"} disabled aria-describedby="studio-mic-reason" />
-          ) : (
-            <Tooltip content={st.busy ? t("studio.tip.stop") : st.hasTake ? t("studio.tip.again") : t("studio.tip.record")}>
-              <RecordButton
-                mode={st.busy ? "stop" : st.hasTake ? "again" : "record"}
-                progress={recording ? st.elapsed / st.win : 1}
-                loading={saving}
-                aria-keyshortcuts="R"
-                onClick={st.busy ? st.stop : st.record}
-              />
-            </Tooltip>
-          )}
-        </span>
-        {st.rerecord ? (
-          // re-record mode: "Build the new version" exists once a turn has a new take (no Next — › moves on)
-          st.fresh.size > 0 && (
-            <span className={cx(s.cell, s.nextCell)}>
-              <Tooltip content={t("studio.rerecord.tipBuild")}>
-                <Button variant="primary" size="lg" disabled={st.busy} onClick={st.build} data-testid="studio-build">
-                  {t("studio.buildNew")}
-                </Button>
-              </Tooltip>
-            </span>
-          )
-        ) : st.hasTake && (
-          <span className={cx(s.cell, s.nextCell)}>
-            <Tooltip content={st.last ? t("studio.tip.build") : t("studio.tip.next")}>
-              <Button
-                variant="primary"
-                size="lg"
-                // "Build the result" has no arrow: it ends the studio (and fits the phone cell in RU)
-                iconRight={st.last ? undefined : <Icon name="forward" />}
-                aria-keyshortcuts={st.last ? undefined : "ArrowRight"}
-                disabled={st.busy}
-                onClick={st.next}
-                data-testid="studio-next"
-              >
-                {st.last ? t("studio.build") : t("studio.next")}
-              </Button>
-            </Tooltip>
-          </span>
-        )}
-      </div>
-      <span className="sr-only" role="status">{status}</span>
-    </div>
-  );
-}
-
-/* Loading the turn's fragment: skeletons in the shape of the scene and the action row. */
-function LoadingScene({ ratio }: { ratio: number }) {
-  const { t } = useTranslation();
-  return (
-    <SceneColumn ratio={ratio} maxHeight="var(--video-h)">
-      <VideoStage state="loading" ratio={ratio} maxHeight="var(--video-h)" label={t("studio.loading")} />
-      <div className={s.lineSkeleton}>
-        <SkeletonText size="lg" width="60%" />
-      </div>
-      <Skeleton height={72} radius="var(--radius-card)" />
-    </SceneColumn>
-  );
-}
-
-function LoadingActions() {
-  const bar = (width: number) => <Skeleton width={width} height="var(--control-lg)" radius="var(--radius-control)" />;
-  return (
-    <div className={s.actions} aria-hidden="true" data-testid="studio-actions-loading">
-      <div className={s.group}>
-        <span className={cx(s.cell, s.backCell)}>{bar(32)}</span>
-        <span className={cx(s.cell, s.origCell)}>{bar(96)}</span>
-      </div>
-      <div className={s.group}>
-        <span className={cx(s.cell, s.recCell)}>{bar(92)}</span>
-        <span className={cx(s.cell, s.nextCell, s.nextSkeleton)}>{bar(72)}</span>
-      </div>
-    </div>
-  );
-}
-
-/*
- * Keyboard (shown in the tooltips): Space = play / pause the original, R = record / stop, ← / → = previous / next turn
- * (only when allowed). Ignored while a dialog or popover is open, in text fields and sliders; Space on a focused button
- * keeps its native meaning (press that button).
- */
-function useStudioKeys(st: Demo, off: boolean) {
-  const ref = useRef(st);
-  useEffect(() => {
-    ref.current = st;
-  });
-  useEffect(() => {
-    if (off) return;
-    const onKey = (e: KeyboardEvent) => {
-      const d = ref.current;
-      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || e.repeat) return;
-      if (d.ask || document.querySelector("[role=dialog], [role=menu]")) return;
-      const el = e.target instanceof HTMLElement ? e.target : null;
-      if (el?.closest("input, textarea, select, [contenteditable=true], [role=slider]")) return;
-      if (e.key === " ") {
-        if (el?.closest("button, a")) return;
-        e.preventDefault();
-        if (!d.busy) d.play("original");
-      } else if (e.code === "KeyR") {
-        e.preventDefault();
-        if (d.rec === "recording") d.stop();
-        else d.record();
-      } else if (e.key === "ArrowLeft" && d.canPrev) {
-        e.preventDefault();
-        d.prev();
-      } else if (e.key === "ArrowRight" && d.canNext && !d.last) {
-        e.preventDefault();
-        d.next();
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [off]);
-}
-
-/*
- * A notification pinned to the bottom (owner 2026-11-03). It sits outside the layout, so nothing jumps when it appears;
- * when it would cover the action row, the studio frees exactly that much room: the picture gets shorter by that amount,
- * its top stays where it was (the extra bottom padding and the shorter picture cancel out in the centring).
- */
-function BottomNotice({ children }: { children: ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null);
-  useLayoutEffect(() => {
-    const root = ref.current?.closest<HTMLElement>('[data-testid="studio"]');
-    if (!root) return;
-    const fit = () => {
-      const notice = ref.current;
-      const actions = root.querySelector('[data-testid="studio-actions"]');
-      if (!notice || !actions) return;
-      const gap = 16;
-      const current = Number.parseFloat(root.style.getPropertyValue("--notice-room")) || 0;
-      // the notice's resting top (ignores its slide-in transform): viewport bottom − margin − height
-      const noticeTop = window.innerHeight - gap - notice.offsetHeight;
-      const need = Math.max(0, Math.ceil(actions.getBoundingClientRect().bottom + current + gap - noticeTop));
-      root.style.setProperty("--notice-room", `${need}px`);
-    };
-    // on phones the picture is width-bound, so the room comes from the centring (half per pass): settle in a few passes
-    const settle = () => {
-      for (let i = 0; i < 6; i++) fit();
-    };
-    settle();
-    window.addEventListener("resize", settle);
-    return () => {
-      window.removeEventListener("resize", settle);
-      root.style.removeProperty("--notice-room");
-    };
-  }, []);
-  return (
-    <div ref={ref} className={s.notice} data-testid="mic-blocked">
-      {children}
-    </div>
-  );
+  }, [st.playing, recording, volume, st.index]);
+  return video;
 }

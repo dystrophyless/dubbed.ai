@@ -4,17 +4,12 @@ import { useNavigate, useSearchParams } from "react-router";
 import { AppShell } from "@/app/shells/Shells";
 import { StateSwitcher } from "@/components/dev/StateSwitcher";
 import { useViewState } from "@/components/dev/view-state";
-import { Icon } from "@/components/icons";
-import { Container, Stack } from "@/components/layout";
-import {
-  PlayerControls, PlayerScreen, VideoStage, formatTime, togglePlay, useFullscreen, usePlayback, usePlayerKeys,
-} from "@/components/media";
-import {
-  Button, Card, CardBody, CardFooter, Dialog, IconTile, PageHeader, RadioGroup, Spinner, StepProgress, Text, toast,
-} from "@/components/ui";
-import { NotifyControl } from "../processing/processing";
+import { togglePlay } from "@/components/media";
+import { toast } from "@/components/ui";
+import type { ClipShape } from "@/features/recording-flow-mock/views/NewDubView";
+import { ResultView, turnAt, type NewVersion, type ResultPhase, type ResultTurn } from "@/features/recording-flow-mock/views/ResultView";
+import { useDemoNotify } from "../processing/processing";
 import { cancelResultElsewhere, scheduleResultElsewhere, sendResultNotification } from "./ready-elsewhere";
-import s from "./result.module.css";
 
 /*
  * Phase 4 — RESULT, HIGH-FI prototype (concept C "watch, then fix", with the video as large as the page allows and full
@@ -38,14 +33,11 @@ export const RESULT_STATES = [
   "live", "assembling", "ready", "chooser", "new-version-assembling", "new-version-ready", "new-version-failed", "failed",
 ] as const;
 type Preview = (typeof RESULT_STATES)[number];
-type Phase = "assembling" | "ready" | "failed";
-type NewStatus = "assembling" | "ready" | "failed";
-type Newer = { n: number; turns: number[]; status: NewStatus } | null;
-type ClipShape = "scope" | "16x9" | "portrait";
+type Phase = ResultPhase;
+type Newer = NewVersion | null;
 
 const CLIP = "/media/scene.mp4";
 const CLIP_SECONDS = 13.4;
-const STAGE_RATIO = 960 / 408; // always 2.35:1, as in the studio, New dub and processing
 const PROJECTS = "/styleguide/templates/projects";
 const CREDITS = "/styleguide/templates/credits";
 const NEW_DUB = "/prototypes/new-dub/page";
@@ -74,7 +66,9 @@ const int = (v: string | null) => {
 };
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
-export function ResultPrototype() {
+/** `format`: the real file format of the download. Approved prototype = "mp4" (backend); feature 001 demo = "webm" (MP4 on Safari). */
+export type DownloadFormat = "mp4" | "webm";
+export function ResultPrototype({ format = "mp4", showFormat = false }: { format?: DownloadFormat; showFormat?: boolean } = {}) {
   const preview = useViewState(RESULT_STATES);
   const [params] = useSearchParams();
   const total = clamp(int(params.get("turns")) ?? SIX.length, 1, 60);
@@ -92,6 +86,8 @@ export function ResultPrototype() {
         rerecorded={rerecorded}
         total={total}
         shape={shape}
+        showFormat={showFormat}
+        format={params.get("format") === "mp4" || params.get("format") === "webm" ? (params.get("format") as DownloadFormat) : format}
       />
       <StateSwitcher states={RESULT_STATES} />
     </>
@@ -100,7 +96,7 @@ export function ResultPrototype() {
 
 /* ---------------- Demo state (the real page polls the version status with TanStack Query) ---------------- */
 
-function useResultDemo(preview: Preview, back: boolean, rerecorded: number[], total: number) {
+function useResultDemo(preview: Preview, back: boolean, rerecorded: number[], total: number, format: DownloadFormat) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [params] = useSearchParams();
@@ -191,11 +187,7 @@ function useResultDemo(preview: Preview, back: boolean, rerecorded: number[], to
     setPick,
     openChooser: (at: number) => {
       // the turn under the playhead (or the last one before it) is selected
-      let idx = 0;
-      turns.forEach((tn, i) => {
-        if (at >= tn.start - 0.05) idx = i;
-      });
-      setPick(idx);
+      setPick(turnAt(turns, at));
       setChooser(true);
     },
     closeChooser: () => setChooser(false),
@@ -204,7 +196,7 @@ function useResultDemo(preview: Preview, back: boolean, rerecorded: number[], to
     download: () => {
       const a = document.createElement("a");
       a.href = CLIP;
-      a.download = `${name}.mp4`;
+      a.download = `${name}.${format}`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -230,34 +222,14 @@ function useResultDemo(preview: Preview, back: boolean, rerecorded: number[], to
   };
 }
 
-type Demo = ReturnType<typeof useResultDemo>;
-
-/** { count, list: "3 and 5" } for the plural "turn 3" / "turns 3 and 5" keys (count is 1 or 2: one / several). */
-function useTurnList() {
-  const { i18n } = useTranslation();
-  return (list: number[]) => ({
-    count: Math.min(2, Math.max(1, list.length)),
-    list: new Intl.ListFormat(i18n.resolvedLanguage, { type: "conjunction" }).format(list.map(String)),
-  });
-}
-
-/** "About a minute left" · "Almost done" — rounded, never a countdown (as in processing). */
-function useLeft(remaining: number) {
-  const { t } = useTranslation();
-  return remaining >= 30 ? t("result.left.minute") : t("result.left.less");
-}
-
 /* ---------------- The page ---------------- */
 
-function Result({ preview, back, rerecorded, total, shape }: { preview: Preview; back: boolean; rerecorded: number[]; total: number; shape: ClipShape }) {
+function Result({ preview, back, rerecorded, total, shape, format, showFormat }: { preview: Preview; back: boolean; rerecorded: number[]; total: number; shape: ClipShape; format: DownloadFormat; showFormat: boolean }) {
   const { t } = useTranslation();
-  const r = useResultDemo(preview, back, rerecorded, total);
-  const ready = r.phase === "ready";
+  const r = useResultDemo(preview, back, rerecorded, total, format);
+  const notify = useDemoNotify();
   const videoRef = useRef<HTMLVideoElement>(null);
-  const screenRef = useRef<HTMLDivElement>(null);
-  const fullscreen = useFullscreen(screenRef, videoRef);
-  const { playing } = usePlayback(videoRef);
-  usePlayerKeys(videoRef, fullscreen, ready && !r.chooser);
+  const ready = r.phase === "ready";
 
   // the chooser preview: the playhead sits in the selected turn, as if paused there
   useEffect(() => {
@@ -273,23 +245,7 @@ function Result({ preview, back, rerecorded, total, shape }: { preview: Preview;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [preview]);
 
-  const openChooser = () => {
-    const v = videoRef.current;
-    v?.pause();
-    r.openChooser(v?.currentTime ?? 0);
-  };
-  const switchToNew = () => {
-    r.switchToNew();
-    // owner answer 4: the new version plays from the start
-    const v = videoRef.current;
-    if (v) {
-      v.currentTime = 0;
-      togglePlay(v.paused ? v : null);
-    }
-    // the button that was pressed disappears: focus goes to Play
-    window.setTimeout(() => screenRef.current?.querySelector<HTMLElement>('[data-testid="player-controls"] button')?.focus(), 0);
-  };
-
+  const turns: ResultTurn[] = r.turns.map((tn, k) => ({ ...tn, text: t(`studio.lines.${LINES[k % LINES.length]}`) }));
   return (
     <AppShell
       credits={BALANCE}
@@ -301,224 +257,41 @@ function Result({ preview, back, rerecorded, total, shape }: { preview: Preview;
         { to: NEW_DUB, label: t("tpl.nav.newDub"), icon: "add" },
       ]}
     >
-      <Container className={s.page}>
-        <div
-          className={s.column}
-          data-testid="result"
-          data-phase={r.phase}
-          data-shown={r.shown}
-          data-newer={r.newer?.status ?? "none"}
-        >
-          <Stack gap={24}>
-            <PageHeader
-              title={<span className={s.name}>{r.name}</span>}
-              description={<Status r={r} />}
-              actions={<HeaderAction r={r} onSwitch={switchToNew} />}
-            />
-            <Card padding="none" className={s.card} data-testid="result-card">
-              <PlayerScreen
-                screenRef={screenRef}
-                videoRef={videoRef}
-                fullscreen={fullscreen}
-                playing={playing}
-                disabled={!ready}
-                className={s.screen}
-                data-testid="result-screen"
-                controls={ready ? <PlayerControls videoRef={videoRef} fullscreen={fullscreen} className={s.controls} /> : undefined}
-              >
-                <div className={s.stage} data-clip={shape} data-lit={ready || undefined} data-testid="result-stage">
-                  <VideoStage
-                    src={CLIP}
-                    ratio={STAGE_RATIO}
-                    maxHeight="var(--video-h)"
-                    videoRef={videoRef}
-                    label={ready ? t("result.video", { n: r.shown }) : t("result.videoWaiting")}
-                  >
-                    <span className={s.dim} aria-hidden="true" />
-                  </VideoStage>
-                </div>
-              </PlayerScreen>
-
-              {!ready && (
-                <CardBody className={s.middle}>
-                  {r.phase === "assembling" ? <Assembling r={r} /> : <Failed />}
-                </CardBody>
-              )}
-
-              <CardFooter className={s.footer}>
-                {r.phase === "assembling" ? (
-                  <>
-                    <RerecordButton reason={t("result.rerecordLater")} />
-                    <NotifyControl />
-                  </>
-                ) : r.phase === "failed" ? (
-                  <>
-                    <span aria-hidden="true" />
-                    <Button size="lg" icon={<Icon name="retry" />} onClick={r.retry} data-testid="result-retry">
-                      {t("result.retry")}
-                    </Button>
-                  </>
-                ) : (
-                  <>
-                    <RerecordButton
-                      onClick={openChooser}
-                      reason={r.newer?.status === "assembling" ? t("result.rerecordLaterVersion", { n: r.newer.n }) : undefined}
-                    />
-                    <Button size="lg" icon={<Icon name="download" />} onClick={r.download} data-testid="result-download">
-                      {r.newer?.status === "ready" ? t("result.downloadVersion", { n: r.shown }) : t("result.download")}
-                    </Button>
-                  </>
-                )}
-              </CardFooter>
-            </Card>
-            {r.phase === "assembling" && (
-              <Text size="sm" tone="muted" className={s.leave}>{t("result.leave")}</Text>
-            )}
-          </Stack>
-        </div>
-        <span className="sr-only" role="status">{ready && !r.newer && r.shown === 1 && preview === "live" ? t("result.readyNow") : ""}</span>
-      </Container>
-      <Chooser r={r} />
+      <ResultView
+        phase={r.phase}
+        progress={r.phase === "assembling" ? r.progress : 0}
+        remainingSeconds={r.remaining}
+        shown={r.shown}
+        shownTurns={r.shownTurns}
+        newer={r.newer}
+        name={r.name}
+        total={r.total}
+        turns={turns}
+        videoSrc={CLIP}
+        videoRef={videoRef}
+        shape={shape}
+        downloadFormat={showFormat ? format : null}
+        chooser={r.chooser}
+        pick={r.pick}
+        notify={notify}
+        announceReady={ready && preview === "live"}
+        onPick={r.setPick}
+        onOpenChooser={r.openChooser}
+        onCloseChooser={r.closeChooser}
+        onRerecord={r.rerecord}
+        onDownload={r.download}
+        onSwitch={() => {
+          r.switchToNew();
+          // owner answer 4: the new version plays from the start
+          const v = videoRef.current;
+          if (v) {
+            v.currentTime = 0;
+            togglePlay(v.paused ? v : null);
+          }
+        }}
+        onRetry={r.retry}
+        onRetryNew={r.retryNew}
+      />
     </AppShell>
-  );
-}
-
-/**
- * The status line under the title — the one place that talks about versions (concept C): what is on screen, what is
- * being assembled, what is ready, what failed. Spoken politely when it changes.
- */
-function Status({ r }: { r: Demo }) {
-  const { t } = useTranslation();
-  const turnList = useTurnList();
-  const nv = r.newer;
-  const ready = r.phase === "ready";
-  const text = !ready ? t("result.turnsRecorded", { count: r.total })
-    : nv?.status === "assembling" ? t("result.newVersion.assembling", { n: nv.n, ...turnList(nv.turns) })
-      : nv?.status === "ready" ? t("result.newVersion.ready", { n: nv.n, ...turnList(nv.turns) })
-        : nv?.status === "failed" ? t("result.newVersion.failed", { n: nv.n, old: r.shown })
-          : r.shown > 1 ? t("result.metaVersion", { n: r.shown, ...turnList(r.shownTurns) })
-            : t("result.meta", { count: r.total });
-  return (
-    <span className={s.status} role="status" aria-live="polite" data-testid="result-status" data-status={ready ? nv?.status ?? "current" : r.phase}>
-      {ready && nv?.status === "assembling" && <Spinner size={14} />}
-      {ready && nv?.status === "ready" && <span className={s.ok}><Icon name="success" size={14} /></span>}
-      {ready && nv?.status === "failed" && <span className={s.warn}><Icon name="warning" size={14} /></span>}
-      <span>{text}</span>
-    </span>
-  );
-}
-
-/**
- * "Re-record a turn" — disabled while a version is assembling (owner answer 5), with the reason written next to it
- * (not only in a tooltip) and linked as its description.
- */
-function RerecordButton({ onClick, reason }: { onClick?: () => void; reason?: string }) {
-  const { t } = useTranslation();
-  return (
-    <div className={s.rerecord}>
-      <Button
-        variant="secondary"
-        size="lg"
-        icon={<Icon name="record" />}
-        onClick={onClick}
-        disabled={Boolean(reason)}
-        aria-describedby={reason ? "result-rerecord-reason" : undefined}
-        data-testid="result-choose"
-      >
-        {t("result.chooser.open")}
-      </Button>
-      {reason && (
-        <Text size="sm" tone="text" id="result-rerecord-reason" className={s.reason}>
-          <span data-testid="result-rerecord-reason">{reason}</span>
-        </Text>
-      )}
-    </div>
-  );
-}
-
-/** Beside the title: "Watch version 2" when it is ready, "Try again" when it failed (both free); nothing otherwise. */
-function HeaderAction({ r, onSwitch }: { r: Demo; onSwitch: () => void }) {
-  const { t } = useTranslation();
-  const nv = r.newer;
-  if (r.phase !== "ready" || !nv || nv.status === "assembling") return null;
-  return nv.status === "ready" ? (
-    <Button variant="secondary" size="lg" icon={<Icon name="play" />} onClick={onSwitch} data-testid="result-switch" className={s.headerAction}>
-      {t("result.newVersion.watch", { n: nv.n })}
-    </Button>
-  ) : (
-    <Button variant="secondary" size="lg" icon={<Icon name="retry" />} onClick={r.retryNew} data-testid="result-retry-new" className={s.headerAction}>
-      {t("result.retry")}
-    </Button>
-  );
-}
-
-/** Assembling: the processing language — the waiting pill names the one step, one segment fills, a rough estimate. */
-function Assembling({ r }: { r: Demo }) {
-  const { t } = useTranslation();
-  const left = useLeft(r.remaining);
-  return (
-    <StepProgress
-      data-testid="result-assembling"
-      label={t("result.assembling.label")}
-      steps={[t("result.assembling.step")]}
-      current={1}
-      fraction={r.progress}
-      waitingLabel={t("result.assembling.step")}
-      doneLabel={t("result.assembling.done")}
-      meta={left}
-      valueText={t("result.assembling.step")}
-    />
-  );
-}
-
-/** The first assembly failed (after the server's own retry): a service problem — the takes are safe, Try again is free. */
-function Failed() {
-  const { t } = useTranslation();
-  return (
-    <div className={s.ending} role="alert" data-testid="result-failed">
-      <IconTile icon="error" tone="danger" size={40} />
-      <div className={s.endingText}>
-        <h2 className={s.endingTitle}>{t("result.failed.title")}</h2>
-        <Text tone="text">{t("result.failed.text")}</Text>
-      </div>
-    </div>
-  );
-}
-
-/** "Which turn do you want to re-record?" — the turn under the playhead is selected; change it by its text. */
-function Chooser({ r }: { r: Demo }) {
-  const { t } = useTranslation();
-  return (
-    <Dialog
-      open={r.chooser}
-      onClose={r.closeChooser}
-      title={t("result.chooser.title")}
-      data-testid="result-chooser"
-      footer={
-        <>
-          <Button variant="secondary" onClick={r.closeChooser}>{t("result.chooser.cancel")}</Button>
-          <Button icon={<Icon name="record" />} onClick={r.rerecord} data-testid="result-chooser-go">
-            {t("result.chooser.go", { n: r.pick + 1 })}
-          </Button>
-        </>
-      }
-    >
-      <Stack gap={12}>
-        <Text size="sm" tone="text">
-          {t("result.chooser.hint")}
-        </Text>
-        <RadioGroup
-          className={s.turnList}
-          legend={<span className="sr-only">{t("result.chooser.legend")}</span>}
-          value={String(r.pick)}
-          onChange={(v) => r.setPick(Number(v))}
-          options={r.turns.map((tn, k) => ({
-            value: String(k),
-            label: `${k + 1}. ${t(`studio.lines.${LINES[k % LINES.length]}`)}`,
-            description: `${formatTime(tn.start)} – ${formatTime(tn.end)}`,
-          }))}
-        />
-      </Stack>
-    </Dialog>
   );
 }

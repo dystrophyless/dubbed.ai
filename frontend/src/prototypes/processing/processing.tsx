@@ -4,16 +4,13 @@ import { useNavigate, useSearchParams } from "react-router";
 import { AppShell } from "@/app/shells/Shells";
 import { StateSwitcher } from "@/components/dev/StateSwitcher";
 import { useViewState } from "@/components/dev/view-state";
-import { Icon } from "@/components/icons";
-import { Container, Stack } from "@/components/layout";
-import { VideoStage, formatTime } from "@/components/media";
-import {
-  Button, Card, CardBody, CardFooter, Dialog, IconTile, PageHeader, StepProgress, Text, TextLink, toast,
-} from "@/components/ui";
+import { toast } from "@/components/ui";
+import type { ClipShape } from "@/features/recording-flow-mock/views/NewDubView";
+import { PROCESSING_STEPS, ProcessingView, type ProcessingPhase } from "@/features/recording-flow-mock/views/ProcessingView";
+import type { NotifyProps, NotifyState } from "@/features/recording-flow-mock/views/NotifyControl";
 import {
   STUDIO, cancelReadyElsewhere, isNotifyOn, scheduleReadyElsewhere, sendReadyNotification, setNotifyOn,
 } from "./ready-elsewhere";
-import s from "./processing.module.css";
 
 /*
  * Phase 4 — PROCESSING, HIGH-FI prototype (concept B "the scene, waiting" with concept C's progress: the waiting pill
@@ -37,13 +34,11 @@ export const PROCESSING_STATES = [
   "live", "queued", "running", "cancel-confirm", "cancel-queued", "no-dialogue", "failed", "ready",
 ] as const;
 type Preview = (typeof PROCESSING_STATES)[number];
-type Phase = "queued" | "running" | "ready" | "no-dialogue" | "failed";
+type Phase = ProcessingPhase;
 type End = "ready" | "no-dialogue" | "failed";
-type ClipShape = "scope" | "16x9" | "portrait";
 
 const CLIP = "/media/scene.mp4";
 const CLIP_SECONDS = 13.4; // the demo clip loops to stand in for the uploaded video
-const STAGE_RATIO = 960 / 408; // the stage is always 2.35:1, as in New dub and the studio
 const PROJECTS = "/styleguide/templates/projects";
 const CREDITS = "/styleguide/templates/credits";
 const NEW_DUB = "/prototypes/new-dub/page";
@@ -60,7 +55,7 @@ const READY_MS = 1500; // owner answer 8: "Ready — opening the studio", then t
  * for the server's numbers (72 → 18 after step 1, 51 after step 2) — not a rule.
  */
 const CHARGED_AFTER = [0, 18 / 72, 51 / 72] as const;
-const STEPS = 3;
+const STEPS = PROCESSING_STEPS;
 const TURNS = 12; // demo: turns found by the end of step 2
 const FAIL_AT = PLAN[0] + PLAN[1] + 30; // &end=failed: inside step 2
 const sumTo = (i: number) => PLAN.slice(0, i).reduce((a, b) => a + b, 0);
@@ -224,180 +219,8 @@ function useProcessingDemo(preview: Preview, end: End, background: boolean) {
   };
 }
 
-type Demo = ReturnType<typeof useProcessingDemo>;
-
-/** "About 2 min left" · "About a minute left" · "Almost done" — rounded to minutes, never a countdown (owner answer 4). */
-function useLeft(remaining: number) {
-  const { t } = useTranslation();
-  if (remaining >= 90) return t("processing.left.min", { count: Math.round(remaining / 60) });
-  if (remaining >= 40) return t("processing.left.minute");
-  return t("processing.left.less");
-}
-
-/* ---------------- The page ---------------- */
-
-function Processing({ preview, end, shape, background }: { preview: Preview; end: End; shape: ClipShape; background: boolean }) {
-  const { t } = useTranslation();
-  const pr = useProcessingDemo(preview, end, background);
-  const seconds = Math.max(1, Math.round(pr.to - pr.from));
-  return (
-    <AppShell
-      credits={pr.balance}
-      user={{ name: "Alex Morgan", email: "alex@example.com" }}
-      links={{ home: PROJECTS, credits: CREDITS, settings: "/styleguide/templates/settings" }}
-      onSignOut={() => toast({ tone: "info", title: t("tpl.common.signedOut") })}
-      nav={[
-        { to: PROJECTS, label: t("tpl.nav.projects"), icon: "projects" },
-        { to: NEW_DUB, label: t("tpl.nav.newDub"), icon: "add" },
-      ]}
-    >
-      <Container className={s.page}>
-        <div className={s.column} data-testid="processing" data-phase={pr.phase}>
-          <Stack gap={24}>
-            <PageHeader
-              title={<span className={s.name}>{pr.name}</span>}
-              description={t("processing.section", { from: formatTime(pr.from), to: formatTime(pr.to), seconds })}
-            />
-            <ProcessingCard pr={pr} shape={shape} />
-            <LeaveNote pr={pr} />
-          </Stack>
-        </div>
-      </Container>
-      <Dialogs pr={pr} />
-    </AppShell>
-  );
-}
-
-/*
- * One card that keeps its shape in every state: the stage (2.35:1, the section's first frame, dimmed until ready) ·
- * the status (StepProgress + "N turns found so far", or the ending's message) · the footer (the reserve + Cancel, or the
- * one primary action of the state).
- */
-function ProcessingCard({ pr, shape }: { pr: Demo; shape: ClipShape }) {
-  const { t } = useTranslation();
-  const left = useLeft(pr.remaining);
-  const steps = [t("processing.steps.s1"), t("processing.steps.s2"), t("processing.steps.s3")];
-  const isEnd = pr.phase === "no-dialogue" || pr.phase === "failed";
-  const ready = pr.phase === "ready";
-  // the first frame of the section (the demo clip loops to stand in for the uploaded video)
-  const [src] = useState(() => `${CLIP}#t=${Math.round((pr.from % CLIP_SECONDS) * 100) / 100}`);
-  // waiting in the queue: no time at all (owner answer 4) — the meta line stays reserved so nothing moves
-  const meta = ready
-    ? t("processing.status.allDone")
-    : pr.phase === "queued" ? undefined : `${t("processing.status.step", { n: pr.current })} · ${left}`;
-  const found = ready
-    ? t("processing.found.ready", { count: pr.turnsFound })
-    : pr.current >= 3 ? t("processing.found.total", { count: pr.turnsFound })
-      : pr.turnsFound > 0 ? t("processing.found.soFar", { count: pr.turnsFound }) : "";
-  return (
-    <Card padding="none" className={s.card} data-testid="processing-card">
-      <div className={s.stage} data-clip={shape} data-lit={ready || undefined} data-testid="processing-stage">
-        <VideoStage src={src} ratio={STAGE_RATIO} maxHeight="var(--video-h)" muted label={t("processing.video")}>
-          <span className={s.dim} aria-hidden="true" />
-        </VideoStage>
-      </div>
-
-      <CardBody className={s.body}>
-        {isEnd ? (
-          <Ending pr={pr} />
-        ) : (
-          <Stack gap={8}>
-            <StepProgress
-              data-testid="processing-progress"
-              label={t("processing.progress")}
-              steps={steps}
-              current={pr.current}
-              fraction={pr.fraction}
-              waitingLabel={t("processing.status.queued")}
-              done={ready}
-              doneLabel={pr.opening ? t("processing.status.opening") : t("processing.status.ready")}
-              meta={meta}
-              valueText={
-                ready ? t("processing.status.ready")
-                  : pr.phase === "queued" ? t("processing.status.queued")
-                    : t("processing.status.stepText", { n: pr.current, name: steps[pr.current - 1] })
-              }
-            />
-            {/* the line is always there (empty until step 2), so nothing below it moves */}
-            <Text tone="muted" tabular className={s.found} as="p">
-              <span data-testid="processing-found">{found}</span>
-            </Text>
-          </Stack>
-        )}
-      </CardBody>
-
-      <CardFooter className={s.footer}>
-        {pr.phase === "no-dialogue" ? (
-          <>
-            <Button variant="secondary" size="lg" icon={<Icon name="delete" />} onClick={pr.openDelete}>{t("processing.delete")}</Button>
-            <Button size="lg" icon={<Icon name="upload" />} onClick={pr.tryAnother} data-testid="processing-primary">{t("processing.none.another")}</Button>
-          </>
-        ) : pr.phase === "failed" ? (
-          <>
-            <Button variant="secondary" size="lg" icon={<Icon name="delete" />} onClick={pr.openDelete}>{t("processing.delete")}</Button>
-            <Button size="lg" icon={<Icon name="retry" />} onClick={pr.retry} data-testid="processing-primary">{t("processing.failed.retry")}</Button>
-          </>
-        ) : ready ? (
-          <>
-            <Text tone="muted" tabular className={s.money}>{t("processing.money.charged", { count: pr.cost })}</Text>
-            <Button size="lg" icon={<Icon name="record" />} onClick={pr.openStudio} data-testid="processing-primary">{t("processing.openStudio")}</Button>
-          </>
-        ) : (
-          <>
-            <Text tone="muted" tabular className={s.money}>{t("processing.money.reserved", { count: pr.cost })}</Text>
-            <Button variant="secondary" size="lg" icon={<Icon name="close" />} onClick={pr.openCancel} data-testid="processing-cancel">
-              {t("processing.cancel")}
-            </Button>
-          </>
-        )}
-      </CardFooter>
-    </Card>
-  );
-}
-
-/** The two endings that are not ready — in the status area, under the same stage. */
-function Ending({ pr }: { pr: Demo }) {
-  const { t } = useTranslation();
-  const none = pr.phase === "no-dialogue";
-  return (
-    <div className={s.ending} role={none ? "status" : "alert"} data-testid={none ? "processing-no-dialogue" : "processing-failed"}>
-      <IconTile icon={none ? "scene" : "error"} tone={none ? "neutral" : "danger"} size={40} />
-      <div className={s.endingText}>
-        <h2 className={s.endingTitle}>{none ? t("processing.none.title") : t("processing.failed.title")}</h2>
-        <Text tone="text">{none ? t("processing.none.text", { count: pr.cost }) : t("processing.failed.text", { count: pr.cost })}</Text>
-      </div>
-    </div>
-  );
-}
-
-/**
- * Under the card, only while there is a wait: "You can leave this page — …" and the opt-in "Notify me when it's ready"
- * (owner answer 7). The browser is asked for permission only when the button is pressed; granted → "We'll notify you…"
- * with Turn off; denied → how to allow it. Without the Notification API the control is not shown (the in-app toast
- * still works).
- */
-function LeaveNote({ pr }: { pr: Demo }) {
-  const { t } = useTranslation();
-  const waiting = pr.phase === "queued" || pr.phase === "running";
-  return (
-    <div className={s.leave} data-testid="processing-leave">
-      {waiting && (
-        <>
-          <Text size="sm" tone="muted">
-            {t("processing.leave")} <TextLink to={PROJECTS}>{t("processing.leaveLink")}</TextLink>
-            {t("processing.leaveEnd")}
-          </Text>
-          <NotifyControl />
-        </>
-      )}
-    </div>
-  );
-}
-
-type NotifyState = "off" | "on" | "denied";
-
-export function NotifyControl() {
-  const { t } = useTranslation();
+/** "Notify me when it's ready" with the prototype's module-level opt-in (the real page stores it on the project). */
+export function useDemoNotify(): NotifyProps | null {
   const [params] = useSearchParams();
   const forced = params.get("notify");
   const supported = typeof window !== "undefined" && "Notification" in window;
@@ -421,81 +244,56 @@ export function NotifyControl() {
     set(answer === "granted" ? "on" : answer === "denied" ? "denied" : "off");
   };
   if (!supported && !forced) return null;
-  return (
-    <div className={s.notify} data-testid="processing-notify" data-state={state} aria-live="polite">
-      {state === "off" && (
-        <Button variant="secondary" icon={<Icon name="notify" />} onClick={() => void ask()}>{t("processing.notify.button")}</Button>
-      )}
-      {state === "on" && (
-        <>
-          <span className={s.notifyOn}>
-            <Icon name="success" />
-            {t("processing.notify.on")}
-          </span>
-          <Button variant="ghost" size="sm" onClick={() => set("off")}>{t("processing.notify.off")}</Button>
-        </>
-      )}
-      {state === "denied" && (
-        <span className={s.notifyDenied}>
-          <Icon name="notifyOff" />
-          {t("processing.notify.denied")}
-        </span>
-      )}
-    </div>
-  );
+  return { state, onAsk: () => void ask(), onTurnOff: () => set("off") };
 }
 
-function Dialogs({ pr }: { pr: Demo }) {
-  const { t } = useTranslation();
-  return (
-    <>
-      <Dialog
-        open={pr.cancelOpen}
-        onClose={pr.closeCancel}
-        role="alertdialog"
-        data-testid="processing-cancel-dialog"
-        title={t("processing.dialog.title", { name: pr.name })}
-        footer={
-          <>
-            <Button variant="secondary" onClick={pr.closeCancel} disabled={pr.busy}>{t("processing.dialog.keep")}</Button>
-            <Button variant="destructive" onClick={pr.confirmCancel} loading={pr.busy}>{t("processing.cancel")}</Button>
-          </>
-        }
-      >
-        <Stack gap={8}>
-          {pr.charge > 0 ? (
-            <>
-              <Text tone="strong" medium tabular>
-                {`${t("processing.dialog.done", { count: pr.stepsDone })} — ${t("processing.dialog.charged", { count: pr.charge })}`}
-              </Text>
-              <Text tabular>{`${t("processing.dialog.back", { count: pr.back })} ${t("processing.dialog.removed")}`}</Text>
-            </>
-          ) : (
-            <>
-              <Text tone="strong" medium>
-                {pr.phase === "queued" ? t("processing.dialog.notStarted") : t("processing.dialog.noneDone")}
-              </Text>
-              <Text tabular>{`${t("processing.dialog.allBack", { count: pr.cost })} ${t("processing.dialog.removed")}`}</Text>
-            </>
-          )}
-        </Stack>
-      </Dialog>
+/* ---------------- The page ---------------- */
 
-      <Dialog
-        open={pr.deleteOpen}
-        onClose={pr.closeDelete}
-        role="alertdialog"
-        data-testid="processing-delete-dialog"
-        title={t("processing.deleteDialog.title", { name: pr.name })}
-        footer={
-          <>
-            <Button variant="secondary" onClick={pr.closeDelete} disabled={pr.busy}>{t("processing.deleteDialog.keep")}</Button>
-            <Button variant="destructive" onClick={pr.confirmDelete} loading={pr.busy}>{t("processing.delete")}</Button>
-          </>
-        }
-      >
-        <Text>{pr.phase === "failed" ? t("processing.deleteDialog.failed") : t("processing.deleteDialog.none")}</Text>
-      </Dialog>
-    </>
+function Processing({ preview, end, shape, background }: { preview: Preview; end: End; shape: ClipShape; background: boolean }) {
+  const { t } = useTranslation();
+  const pr = useProcessingDemo(preview, end, background);
+  const notify = useDemoNotify();
+  return (
+    <AppShell
+      credits={pr.balance}
+      user={{ name: "Alex Morgan", email: "alex@example.com" }}
+      links={{ home: PROJECTS, credits: CREDITS, settings: "/styleguide/templates/settings" }}
+      onSignOut={() => toast({ tone: "info", title: t("tpl.common.signedOut") })}
+      nav={[
+        { to: PROJECTS, label: t("tpl.nav.projects"), icon: "projects" },
+        { to: NEW_DUB, label: t("tpl.nav.newDub"), icon: "add" },
+      ]}
+    >
+      <ProcessingView
+        phase={pr.phase}
+        current={pr.current}
+        fraction={pr.fraction}
+        remainingSeconds={pr.remaining}
+        turnsFound={pr.turnsFound}
+        cost={pr.cost}
+        name={pr.name}
+        from={pr.from}
+        to={pr.to}
+        videoSrc={CLIP}
+        // the demo clip loops to stand in for the uploaded video
+        firstFrameAt={Math.round((pr.from % CLIP_SECONDS) * 100) / 100}
+        shape={shape}
+        opening={pr.opening}
+        cancel={{ open: pr.cancelOpen, stepsDone: pr.stepsDone, charge: pr.charge, back: pr.back }}
+        deleteOpen={pr.deleteOpen}
+        busy={pr.busy}
+        notify={notify}
+        projectsHref={PROJECTS}
+        onOpenCancel={pr.openCancel}
+        onCloseCancel={pr.closeCancel}
+        onConfirmCancel={pr.confirmCancel}
+        onOpenDelete={pr.openDelete}
+        onCloseDelete={pr.closeDelete}
+        onConfirmDelete={pr.confirmDelete}
+        onRetry={pr.retry}
+        onOpenStudio={pr.openStudio}
+        onTryAnother={pr.tryAnother}
+      />
+    </AppShell>
   );
 }

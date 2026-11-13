@@ -102,9 +102,7 @@
 }
 
 /* ---------- RecordButton: the stop ring fills smoothly between clock ticks ---------- */
-.ring {
-  transition: stroke-dashoffset 120ms linear;
-}
+/* the ring has no CSS transition: it is fed every animation frame, and a transition restarted each frame stalled it */
 
 /* ---------- VolumeButton popover ---------- */
 .volumePanel {
@@ -113,11 +111,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .dot,
-  .ring {
-    transition: none;
-  }
-
   .countNum {
     animation: none !important;
+    transition: none !important;
   }
 }

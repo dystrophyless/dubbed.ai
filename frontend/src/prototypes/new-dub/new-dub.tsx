@@ -1,16 +1,12 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router";
 import { AppShell } from "@/app/shells/Shells";
 import { StateSwitcher } from "@/components/dev/StateSwitcher";
 import { useViewState } from "@/components/dev/view-state";
-import { Icon } from "@/components/icons";
-import { Container, Stack } from "@/components/layout";
-import {
-  CostButton, PlaySectionButton, RangeSelector, UploadDropzone, VideoStage, creditsFor, useSectionPlayback,
-} from "@/components/media";
-import { Button, Card, CardBody, CardFooter, CardHeader, EmptyState, PageHeader, toast } from "@/components/ui";
-import s from "./new-dub.module.css";
+import { creditsFor } from "@/components/media";
+import { toast } from "@/components/ui";
+import { NewDubView, type ClipShape, type NewDubPhase as Phase, type NewDubReason as Reason } from "@/features/recording-flow-mock/views/NewDubView";
 
 /*
  * Phase 4 — NEW DUB, HIGH-FI prototype (concept A "one card"; owner answers in design-system/new-dub-brief.md).
@@ -26,17 +22,10 @@ export const NEW_DUB_STATES = [
   "empty", "no-slot", "uploading", "checking", "ready", "limit", "error", "short", "starting",
 ] as const;
 type Preview = (typeof NEW_DUB_STATES)[number];
-type Phase = "empty" | "no-slot" | "uploading" | "checking" | "error" | "ready";
-type Reason = "type" | "size" | "length" | "no-audio" | "broken";
-type ClipShape = "scope" | "16x9" | "portrait";
 const REASONS: readonly Reason[] = ["type", "size", "length", "no-audio", "broken"];
-const ERROR_KEY: Record<Reason, "type" | "size" | "length" | "noAudio" | "broken"> = {
-  type: "type", size: "size", length: "length", "no-audio": "noAudio", broken: "broken",
-};
 
 const CLIP = "/media/scene.mp4";
 const CLIP_SECONDS = 13.4; // the demo clip (960 × 408)
-const STAGE_RATIO = 960 / 408; // owner 2026-11-03: the stage is always 2.35:1, as wide as the card
 const LONG_SECONDS = 252; // the demo "long video": 4:12 (the clip loops to stand in for it)
 const MAX = 120;
 const MAX_MB = 250;
@@ -174,15 +163,16 @@ function useNewDubDemo(preview: Preview, reason: Reason, shortVideo: boolean) {
   };
 }
 
-type Demo = ReturnType<typeof useNewDubDemo>;
 
-/* ---------------- Shell ---------------- */
+/* ---------------- Shell + page ---------------- */
 
-function NewDubShell({ credits, children }: { credits: number; children: ReactNode }) {
+function NewDub({ preview, reason, shape, shortVideo }: { preview: Preview; reason: Reason; shape: ClipShape; shortVideo: boolean }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const nd = useNewDubDemo(preview, reason, shortVideo);
   return (
     <AppShell
-      credits={credits}
+      credits={nd.balance}
       user={{ name: "Alex Morgan", email: "alex@example.com" }}
       links={{ home: PROJECTS, credits: CREDITS, settings: "/styleguide/templates/settings" }}
       onSignOut={() => toast({ tone: "info", title: t("tpl.common.signedOut") })}
@@ -191,117 +181,28 @@ function NewDubShell({ credits, children }: { credits: number; children: ReactNo
         { to: PAGE, label: t("tpl.nav.newDub"), icon: "add" },
       ]}
     >
-      {children}
-    </AppShell>
-  );
-}
-
-/* ---------------- The page ---------------- */
-
-function NewDub({ preview, reason, shape, shortVideo }: { preview: Preview; reason: Reason; shape: ClipShape; shortVideo: boolean }) {
-  const { t } = useTranslation();
-  const navigate = useNavigate();
-  const nd = useNewDubDemo(preview, reason, shortVideo);
-  return (
-    <NewDubShell credits={nd.balance}>
-      <Container className={s.page}>
-        <div className={s.column} data-testid="new-dub" data-state={nd.phase}>
-          <Stack gap={24}>
-            <PageHeader title={t("newDub.title")} description={t("newDub.description")} />
-            {nd.phase === "no-slot" ? (
-              <Card padding="none" className={s.box} data-testid="new-dub-no-slot">
-                <EmptyState
-                  icon="warning"
-                  tone="warning"
-                  title={t("newDub.noSlot.title")}
-                  description={t("newDub.noSlot.text")}
-                  actions={
-                    <>
-                      <Button size="lg" icon={<Icon name="projects" />} onClick={() => navigate(PROJECTS)}>{t("newDub.noSlot.projects")}</Button>
-                      <Button variant="secondary" size="lg" icon={<Icon name="purchase" />} onClick={() => navigate(CREDITS)}>{t("newDub.noSlot.buy")}</Button>
-                    </>
-                  }
-                />
-              </Card>
-            ) : nd.phase === "ready" ? (
-              <Ready nd={nd} shape={shape} />
-            ) : (
-              <UploadDropzone
-                className={s.box}
-                state={nd.phase === "empty" ? "idle" : nd.phase}
-                progress={nd.progress}
-                fileName={nd.file}
-                error={t(`newDub.errors.${ERROR_KEY[nd.error]}`)}
-                onFile={nd.choose}
-                onCancel={nd.cancel}
-              />
-            )}
-          </Stack>
-        </div>
-      </Container>
-    </NewDubShell>
-  );
-}
-
-/*
- * Ready: one card — the project name (from the file) + Replace video · the video edge to edge at 2.35:1 · the section ·
- * the footer: Play section | Start dubbing · N credits (the only place with the price). Short of credits: Start disabled
- * with the shortfall, Buy credits beside it.
- */
-function Ready({ nd, shape }: { nd: Demo; shape: ClipShape }) {
-  const { t } = useTranslation();
-  const video = useRef<HTMLVideoElement>(null);
-  const [a, b] = nd.range;
-  // prototype: the 13 s demo clip loops to stand in for the 4:12 video
-  const play = useSectionPlayback(video, a, b, loopClip);
-  const replace = useRef<HTMLInputElement>(null);
-  // the src stays fixed (the first frame of the opening section); section changes seek instead of reloading
-  const [src] = useState(() => `${CLIP}#t=${loopClip(a)}`);
-  return (
-    <Card padding="none" className={s.card} data-testid="new-dub-card" aria-busy={nd.starting || undefined}>
-      <CardHeader
-        title={<span className={s.name}>{nd.name}</span>}
-        actions={
-          <>
-            <input
-              ref={replace}
-              type="file"
-              accept="video/mp4,video/quicktime,video/webm"
-              className="sr-only"
-              tabIndex={-1}
-              aria-hidden="true"
-              onChange={(e) => {
-                const f = e.target.files?.[0];
-                if (f) nd.choose(f);
-                e.target.value = "";
-              }}
-            />
-            <Button variant="ghost" icon={<Icon name="refresh" />} disabled={nd.starting} onClick={() => replace.current?.click()}>
-              {t("newDub.replace")}
-            </Button>
-          </>
-        }
+      <NewDubView
+        phase={nd.phase}
+        error={nd.error}
+        progress={nd.progress}
+        fileName={nd.file}
+        name={nd.name}
+        videoSrc={CLIP}
+        duration={nd.duration}
+        range={nd.range}
+        balance={nd.balance}
+        starting={nd.starting}
+        shape={shape}
+        // the 13 s demo clip loops to stand in for the 4:12 video
+        toMedia={loopClip}
+        onFile={nd.choose}
+        onCancelUpload={nd.cancel}
+        onRange={nd.setRange}
+        onStart={nd.start}
+        onBuyCredits={nd.buy}
+        onOpenProjects={() => navigate(PROJECTS)}
       />
-      <div className={s.stage} data-clip={shape} data-testid="new-dub-stage">
-        <VideoStage src={src} ratio={STAGE_RATIO} maxHeight="var(--video-h)" videoRef={video} label={t("newDub.video", { name: nd.name })}>
-          {!play.playing && !nd.starting && (
-            // pointer-only shortcut for Play section; assistive tech uses the button in the footer
-            <button type="button" className={s.playOverlay} tabIndex={-1} aria-hidden="true" onClick={play.toggle}>
-              <Icon name="play" size={20} />
-            </button>
-          )}
-        </VideoStage>
-      </div>
-      <CardBody className={s.body}>
-        <RangeSelector duration={nd.duration} start={a} end={b} max={MAX} onChange={nd.setRange} playhead={play.pos} disabled={nd.starting} />
-      </CardBody>
-      <CardFooter className={s.footer}>
-        <PlaySectionButton className={s.play} playing={play.playing} onToggle={play.toggle} disabled={nd.starting} />
-        <div className={s.cost}>
-          <CostButton seconds={b - a} balance={nd.balance} onStart={nd.start} onBuy={nd.buy} loading={nd.starting} />
-        </div>
-      </CardFooter>
-    </Card>
+    </AppShell>
   );
 }
 

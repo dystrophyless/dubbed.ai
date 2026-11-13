@@ -21,6 +21,9 @@ export function Dialog({
   const { t } = useTranslation();
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
+  /* Callers pass a fresh onClose every render; keep it in a ref so the focus effect runs only on open/close */
+  const onCloseRef = useRef(onClose);
+  useEffect(() => { onCloseRef.current = onClose; });
   useEffect(() => {
     if (!open) return;
     const opener = document.activeElement as HTMLElement | null;
@@ -28,7 +31,7 @@ export function Dialog({
     const focusables = () => Array.from(el?.querySelectorAll<HTMLElement>("button, [href], input, textarea, [tabindex]:not([tabindex='-1'])") ?? []).filter((n) => !n.hasAttribute("disabled"));
     (focusables()[0] ?? el)?.focus();
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") { e.stopPropagation(); onClose(); }
+      if (e.key === "Escape") { e.stopPropagation(); onCloseRef.current(); }
       if (e.key === "Tab") {
         const f = focusables();
         if (!f.length) return;
@@ -45,7 +48,7 @@ export function Dialog({
       document.body.style.overflow = overflow;
       opener?.focus?.();
     };
-  }, [open, onClose]);
+  }, [open]);
   if (!open) return null;
   return createPortal(
     <div className={s.backdrop} onPointerDown={(e) => e.target === e.currentTarget && onClose()}>

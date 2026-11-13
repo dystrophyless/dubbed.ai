@@ -7,6 +7,21 @@ import { formatTime } from "./time";
 import { Slider } from "./Slider";
 import s from "./media.module.css";
 
+/** The frame on screen as a small image, or undefined when there is none yet. */
+function captureFrame(v: HTMLVideoElement | null): string | undefined {
+  if (!v || v.readyState < 2 || !v.videoWidth) return undefined;
+  try {
+    const k = Math.min(1, 960 / v.videoWidth);
+    const c = document.createElement("canvas");
+    c.width = Math.round(v.videoWidth * k);
+    c.height = Math.round(v.videoHeight * k);
+    c.getContext("2d")?.drawImage(v, 0, 0, c.width, c.height);
+    return c.toDataURL("image/jpeg", 0.85);
+  } catch {
+    return undefined;
+  }
+}
+
 export type StageState = "ready" | "loading" | "error";
 
 /*
@@ -28,6 +43,35 @@ export function VideoStage({
   const [natural, setNatural] = useState<number | null>(null);
   const r = ratio ?? natural ?? 16 / 9;
   const style = { "--ratio": r, "--max-h": maxHeight } as CSSProperties;
+
+  /*
+   * Same file, another "#t=" fragment (the studio moving between turns) must not reload the element: a new `src`
+   * drops the picture to black until the first frame decodes (it blinked). The element keeps its first src and is
+   * seeked instead, so the last frame stays on screen until the new one is painted.
+   */
+  const wanted = poster || !src || src.includes("#") ? (src ?? "") : `${src}#t=0.001`;
+  const [base, frag = ""] = wanted.split("#");
+  const [pinned, setPinned] = useState({ base, wanted });
+  // A different file (Result: "Watch version 2"): the last painted frame is the poster, so the picture never drops to a
+  // blank frame while the new file decodes. It is refreshed when the picture rests (pause / seek / loaded) and about
+  // every 2 s of playback; the poster itself only shows while no frame of the current file is available.
+  const [held, setHeld] = useState<string | undefined>(undefined);
+  const lastShot = useRef(0);
+  const shoot = (v: HTMLVideoElement, throttled = false) => {
+    const now = performance.now();
+    if (throttled && now - lastShot.current < 2000) return;
+    lastShot.current = now;
+    setHeld(captureFrame(v) ?? undefined);
+  };
+  if (pinned.base !== base) setPinned({ base, wanted });
+  const shownSrc = pinned.base === base ? pinned.wanted : wanted;
+  const at = /(?:^|&)t=([\d.]+)/.exec(frag)?.[1];
+  useEffect(() => {
+    const v = ref.current;
+    if (!v || at === undefined || !v.currentSrc || v.readyState < 1) return;
+    const target = Number(at);
+    if (Math.abs(v.currentTime - target) > 0.01) v.currentTime = target;
+  }, [at, ref]);
   return (
     <figure className={s.stage} style={style} data-state={state} aria-label={label}>
       {state !== "error" && src && (
@@ -35,11 +79,15 @@ export function VideoStage({
           ref={ref}
           className={s.video}
           // "#t=0.001" makes browsers paint the first frame when there is no poster
-          src={poster || src.includes("#") ? src : `${src}#t=0.001`}
-          poster={poster}
+          src={shownSrc}
+          poster={poster ?? held}
           playsInline
           preload="metadata"
           muted={muted}
+          onLoadedData={(e) => shoot(e.currentTarget)}
+          onPause={(e) => shoot(e.currentTarget)}
+          onSeeked={(e) => shoot(e.currentTarget)}
+          onTimeUpdate={(e) => shoot(e.currentTarget, true)}
           onLoadedMetadata={(e) => {
             const v = e.currentTarget;
             if (v.videoWidth && v.videoHeight) {

@@ -1,0 +1,40 @@
+/* My projects rows: the Gate-3 template row language (small 16:9 frame, name, state tags). Tokens only. */
+.frame {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-control);
+  background: var(--color-track);
+  box-shadow: var(--shadow-hairline-inset);
+  color: var(--color-icon);
+}
+
+.frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dialogText {
+  margin: 0;
+}
+
+/* the frame shows a kit Skeleton over the video until its first frame is ready */
+.frame {
+  position: relative;
+}
+
+.shimmer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1023.98px) {
+  .frame {
+    width: 64px;
+  }
+}

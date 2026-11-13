@@ -13,6 +13,7 @@ import { PROCESSING_STATES, ProcessingPrototype } from "./processing/processing"
 import { ReadyElsewherePrototype } from "./processing/ready-elsewhere";
 import { RESULT_STATES, ResultPrototype } from "./result/result";
 import { ResultReadyElsewherePrototype } from "./result/ready-elsewhere";
+import { PROJECTS_STATES, ProjectsDeltaPrototype, ResultFormatPrototype } from "./001-recording-flow-mock";
 
 /*
  * Feature prototypes, added by the ui-designer during /speckit-design.
@@ -29,6 +30,16 @@ export type PrototypeEntry = { id: string; title: string; screens: Record<string
 const CONCEPT_STATES = ["no-take", "recording", "saved"] as const;
 
 export const PROTOTYPES: PrototypeEntry[] = [
+  /* Feature 001 — recording flow on mock services: ONLY the deltas to the Gate-4 prototypes (see 001-recording-flow-mock.tsx) */
+  {
+    id: "001-recording-flow-mock",
+    title: "001 · Recording flow on mock services (deltas)",
+    screens: {
+      projects: { title: "My projects · every lifecycle state, empty, redirect toast", states: PROJECTS_STATES, Component: ProjectsDeltaPrototype },
+      result: { title: "Result · download names the real format (WebM)", states: RESULT_STATES, Component: ResultFormatPrototype },
+      studio: { title: "Studio · recording in another tab (state=recording-elsewhere)", states: STUDIO_STATES, Component: StudioPrototype },
+    },
+  },
   /* Phase 4 — result, high-fi (concept C "watch, then fix", the video as large as possible + full screen). No state = live
      assembling → ready (the studio's last-turn "Build the result" opens this). Also &rerecorded=3,5 (no state: back from the
      studio's re-record mode, version 2 assembles live), &turns=N, &ratio=portrait|16x9, &notify=granted|denied, &name= */

@@ -75,13 +75,14 @@ function StopRing({ progress }: { progress: number }) {
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <circle cx="8" cy="8" r="6.75" stroke="currentColor" strokeOpacity={0.4} strokeWidth={1.5} />
       <circle
-        className={s.ring}
         cx="8"
         cy="8"
         r="6.75"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
+        // empty means empty: a round cap would leave a dot at 12 o'clock at 0
+        strokeOpacity={p > 0 ? 1 : 0}
         pathLength={1}
         strokeDasharray={1}
         strokeDashoffset={1 - p}

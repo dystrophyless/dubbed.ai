@@ -107,7 +107,7 @@ export function togglePlay(video: HTMLVideoElement | null) {
 }
 
 /** playing / time / duration of a <video>, kept in sync with its events. */
-export function usePlayback(videoRef: RefObject<HTMLVideoElement | null>) {
+export function usePlayback(videoRef: RefObject<HTMLVideoElement | null>, knownDuration = 0) {
   const [playing, setPlaying] = useState(false);
   const [time, setTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -117,13 +117,14 @@ export function usePlayback(videoRef: RefObject<HTMLVideoElement | null>) {
     const sync = () => {
       setPlaying(!v.paused && !v.ended);
       setTime(v.currentTime);
-      setDuration(Number.isFinite(v.duration) ? v.duration : 0);
+      // a recorded file can report Infinity: show the known length until the real duration is finite
+      setDuration(Number.isFinite(v.duration) && v.duration > 0 ? v.duration : knownDuration);
     };
     sync();
     const evs = ["play", "pause", "timeupdate", "loadedmetadata", "durationchange", "ended", "seeked", "emptied"];
     evs.forEach((ev) => v.addEventListener(ev, sync));
     return () => evs.forEach((ev) => v.removeEventListener(ev, sync));
-  }, [videoRef]);
+  }, [videoRef, knownDuration]);
   return { playing, time, duration, setTime };
 }
 
@@ -179,16 +180,18 @@ export function PlayerScreen({
 
 /** [▷] 0:04 / 0:13 [scrubber] [⛶] — bound to a <video>; one 32px row (36 on touch). */
 export function PlayerControls({
-  videoRef, fullscreen, disabled, className,
+  videoRef, fullscreen, disabled, className, knownDuration,
 }: {
   videoRef: RefObject<HTMLVideoElement | null>;
   /** from useFullscreen; the button is left out when the browser has no way to go full screen */
   fullscreen?: Fullscreen;
   disabled?: boolean;
   className?: string;
+  /** seconds shown until the file reports a finite duration (a recorded file may report Infinity) */
+  knownDuration?: number;
 }) {
   const { t } = useTranslation();
-  const { playing, time, duration, setTime } = usePlayback(videoRef);
+  const { playing, time, duration, setTime } = usePlayback(videoRef, knownDuration);
   return (
     <div className={cx(s.playerControls, className)} data-testid="player-controls">
       <Tooltip content={playing ? t("media.tip.pause") : t("media.tip.play")}>

@@ -1,0 +1,41 @@
+# Changelog
+
+All notable changes to Dubbed. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the
+project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
+fixes raise the patch.
+
+## [0.1.0] — 2026-11-13
+
+First working version: the whole recording flow in the browser on mock services (feature
+`specs/001-recording-flow-mock`).
+
+### Added
+
+- **My projects** — project list with lifecycle states, rename, delete (with the cancel quote for a running
+  preparation), sort by recency or name, two project slots.
+- **New dub** — video upload with type, length and size checks, section preview and its price in credits; low-balance
+  and no-slot states.
+- **Processing** — queue and three preparation steps, live cancel quote (charge for finished steps, refund for the rest),
+  refund on failure, retry, "no dialogue" outcome, notification when ready while away.
+- **Studio** — record each turn against the muted scene with a countdown and a progress ring, play the take, re-record;
+  moving on needs a take; one recording tab at a time; waveforms normalised for display.
+- **Result** — in-browser mix of the scene and your takes, player with fullscreen (button, double-click, F), download as
+  WebM; re-record a turn and build version 2 while version 1 keeps playing.
+- Reload keeps the user's place; unknown projects return to My projects with a notice.
+- Typed `services` layer with an IndexedDB mock and `?demo=` controls (`reset`, `balance`, `slots`, `outcome`, `turns`,
+  `turnms`, `speed`).
+- English and Russian throughout.
+- Tests: Vitest for money rules, turn planning and the mock adapter (39); Playwright business flows, route smoke with
+  axe and mobile layout (85, about 8 minutes).
+
+### Design system and setup (bootstrap phases 0–4)
+
+- SpecKit workflow, agent roles and skills; React 19 + Vite scaffold.
+- affect-ui Clean / Light kit with Inter, tokens only; `/styleguide` (Gate 1).
+- Design-system documents and information architecture (Gate 2).
+- Reference page templates (Gate 3).
+- Approved high-fidelity designs for studio, new dub, processing and result (Gate 4).
+- Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
+  red record buttons.
+
+[0.1.0]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.0

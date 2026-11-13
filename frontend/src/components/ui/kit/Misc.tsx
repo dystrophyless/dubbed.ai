@@ -8,9 +8,9 @@ import s from "./Misc.module.css";
 export type TagTone = "neutral" | "accent" | "success" | "warning" | "danger" | "outline";
 
 /** Status tag / badge (filter-menu chip shape). Tone is a small signal; the text always says the status. */
-export function Tag({ tone = "neutral", size = "md", overline, dot, icon, children }: { tone?: TagTone; size?: "sm" | "md"; overline?: boolean; dot?: boolean; icon?: ReactNode; children: ReactNode }) {
+export function Tag({ tone = "neutral", size = "md", overline, dot, icon, children, "data-testid": testId }: { tone?: TagTone; size?: "sm" | "md"; overline?: boolean; dot?: boolean; icon?: ReactNode; children: ReactNode; "data-testid"?: string }) {
   return (
-    <span className={cx(s.tag, s[`tag-${tone}`])} data-size={size} data-overline={overline ? "" : undefined}>
+    <span className={cx(s.tag, s[`tag-${tone}`])} data-size={size} data-overline={overline ? "" : undefined} data-testid={testId}>
       {dot && <span className={s.dot} aria-hidden="true" />}
       {icon}
       {children}
