@@ -49,11 +49,19 @@ export function NewDubPage() {
   }
   const pending = useRef<{ id: ProjectId; start: number; end: number } | null>(null);
   const timer = useRef(0);
-  const flush = useCallback(async () => {
+  const saving = useRef(Promise.resolve(true));
+  const flush = useCallback(() => {
     window.clearTimeout(timer.current);
     const p = pending.current;
     pending.current = null;
-    if (p) await services.projects.setSection(p.id, { startMs: toMs(p.start), endMs: toMs(p.end) });
+    if (p) {
+      // Keep debounced writes ordered; Start must wait for its own selected range, not an older save.
+      saving.current = saving.current.then(async () => {
+        const outcome = await services.projects.setSection(p.id, { startMs: toMs(p.start), endMs: toMs(p.end) });
+        return outcome.ok;
+      }).catch(() => false);
+    }
+    return saving.current;
   }, [services]);
   useEffect(() => () => void flush(), [flush]);
 
@@ -104,7 +112,11 @@ export function NewDubPage() {
     if (!draft || !range || starting) return;
     setStarting(true);
     pending.current = { id: draft.id, start: range[0], end: range[1] };
-    await flush();
+    if (!await flush()) {
+      setStarting(false);
+      toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
+      return;
+    }
     const outcome = await services.projects.start(draft.id);
     if (outcome.ok) {
       void qc.invalidateQueries({ queryKey: qk.project(draft.id) });

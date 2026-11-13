@@ -28,6 +28,57 @@ async function startDubbing(page: Page) {
 }
 
 test.describe("US2 — New dub tells the truth", () => {
+  test("fractional video end keeps a one-second section and reserves exactly its displayed price", async ({ page }) => {
+    await openScreen(page, "new");
+    await page.evaluate(async () => {
+      const db = await new Promise<IDBDatabase>((resolve) => {
+        const request = indexedDB.open("dubbed-mock"); request.onsuccess = () => resolve(request.result);
+      });
+      const tx = db.transaction("projects", "readwrite");
+      const store = tx.objectStore("projects");
+      const request = store.get("layout");
+      request.onsuccess = () => store.put({ ...request.result, video: { ...request.result.video, durationMs: 13060 }, section: { startMs: 0, endMs: 13060 } });
+      await new Promise<void>((resolve) => { tx.oncomplete = () => resolve(); });
+      db.close();
+    });
+    await page.reload();
+    await expect(newDub(page)).toHaveAttribute("data-state", "ready");
+    // The end handle must not round 13.060 up past the source's end either.
+    await page.getByRole("slider", { name: /end/i }).focus();
+    await page.keyboard.press("ArrowRight");
+    const handle = page.getByRole("slider", { name: /start/i });
+    await handle.focus();
+    for (let i = 0; i < 15; i++) await page.keyboard.press("ArrowRight");
+    await expect(start(page)).toHaveText("Start dubbing · 1 credit");
+    await startDubbing(page); // flush before the debounce, then reserve that exact section
+    await expect(balanceLink(page)).toContainText("119");
+    await expect(processing(page)).toContainText("1 credit in reserve");
+  });
+
+  test("Start does not reserve an old section when saving the selected section is rejected", async ({ page }) => {
+    await resetDemo(page, "speed:0.1");
+    await uploadAndWaitReady(page);
+    // Simulate a changed server-side range constraint, without changing the cached view.
+    await page.evaluate(async () => {
+      const db = await new Promise<IDBDatabase>((resolve) => {
+        const request = indexedDB.open("dubbed-mock"); request.onsuccess = () => resolve(request.result);
+      });
+      const tx = db.transaction("projects", "readwrite");
+      const store = tx.objectStore("projects");
+      const request = store.getAll();
+      request.onsuccess = () => {
+        const draft = request.result[0];
+        store.put({ ...draft, video: { ...draft.video, durationMs: 1000 } });
+      };
+      await new Promise<void>((resolve) => { tx.oncomplete = () => resolve(); });
+      db.close();
+    });
+    await start(page).click();
+    await expect(page).toHaveURL(/\/new(?:\?|$)/);
+    await expect(start(page)).toBeEnabled();
+    await expect(balanceLink(page)).toContainText("120");
+  });
+
   test("no free slot: told before choosing a file", async ({ page }) => {
     await resetDemo(page, "slots:full");
     await expect(newDub(page)).toHaveAttribute("data-state", "no-slot");

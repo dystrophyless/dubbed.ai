@@ -4,6 +4,22 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.2] — 2026-11-13
+
+Fixes from the second Codex review of PR #83.
+
+### Fixed
+
+- The price on Start always matches what is reserved: section handles are rounded before the bounds are applied, and
+  Start stays on New dub if the chosen section could not be saved.
+- Project edits (rename, notifications, section, builds, version switch and retry) read and write in one transaction,
+  so a parallel status update can no longer be rolled back or refund credits twice.
+
+### Changed
+
+- "Try again" on a failed new version builds it from the current takes; a turn re-recorded after the failure is
+  included and listed in the version's description (owner decision).
+
 ## [0.1.1] — 2026-11-13
 
 Fixes from the Codex review of PR #83.
@@ -51,5 +67,6 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.2]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.2
 [0.1.1]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.1
 [0.1.0]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.0

@@ -66,6 +66,35 @@ describe("mock upload validation", () => {
     }
   });
 
+  it("does not restore removed turns when background peak decoding finishes", async () => {
+    vi.mocked(probeVideo).mockResolvedValue({ durationMs: 13_000, width: 1280, height: 544 });
+    vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);
+    const uploaded = await upload();
+    expect(uploaded.ok).toBe(true);
+    if (!uploaded.ok) return;
+    const id = uploaded.value.id;
+    let finish!: (buffer: AudioBuffer | null) => void;
+    vi.mocked(decodeAudio).mockImplementation(() => new Promise((resolve) => { finish = resolve; }));
+    vi.stubGlobal("window", { AudioContext: function () {} });
+    const decoded = new Promise<void>((resolve) => {
+      const unsubscribe = services.subscribe((event) => {
+        if (event.kind === "turns") { unsubscribe(); resolve(); }
+      });
+    });
+    try {
+      await services.projects.start(id);
+      vi.setSystemTime(Date.now() + 20_000);
+      await services.projects.get(id);
+      await vi.waitFor(() => expect(finish).toBeTypeOf("function"));
+      await services.projects.remove(id);
+      finish(null);
+      await decoded;
+      expect(await db.getAll("turns")).toEqual([]);
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
+
   it("rejects a file over 250 MB at precheck, before probing or decoding", async () => {
     const oversized = file();
     Object.defineProperty(oversized, "size", { value: MAX_FILE_BYTES + 1 });

@@ -54,6 +54,35 @@ describe("list resumes persisted assemblies", () => {
     }
   });
 
+  it("retry rebuilds a failed pending version from current takes and updates its metadata before rendering", async () => {
+    await seed(true);
+    await db.write(["results", "turns", "takes"], async (s) => {
+      const v = (await db.req(s.results.get([id, 2]))) as Record<string, unknown>;
+      s.results.put({ ...v, state: "failed", takes: { 1: 10, 2: 20, 3: 30 }, rerecorded: [2] });
+      for (let n = 1; n <= 3; n++) {
+        s.turns.put({ projectId: id, n, startMs: (n - 1) * 1000, windowMs: 1000 });
+        s.takes.put({ projectId: id, n, audio: new Blob([`take-${n}`]), savedAt: n === 3 ? 31 : n * 10, inVersion: n === 3 ? null : n === 2 ? 2 : 1 });
+      }
+    });
+    let finish!: (value: ReturnType<typeof output>) => void;
+    vi.mocked(renderMix).mockImplementation(() => new Promise((resolve) => { finish = resolve; }));
+    const services = createMockServices();
+    await services.result.retry(id, 2);
+    try {
+      await vi.waitFor(() => expect(renderMix).toHaveBeenCalledTimes(1));
+      expect(await db.get("results", [id, 2])).toMatchObject({ state: "assembling", takes: { 1: 10, 2: 20, 3: 31 }, rerecorded: [2, 3] });
+      expect(await services.studio.take(id, 3)).toMatchObject({ savedAt: 31, inVersion: 2 });
+      expect(await services.studio.take(id, 1)).toMatchObject({ inVersion: 1 });
+      const inputs = vi.mocked(renderMix).mock.calls[0]![0].turns;
+      expect(await Promise.all(inputs.map((turn) => turn.take!.text()))).toEqual(["take-1", "take-2", "take-3"]);
+    } finally {
+      finish(output());
+      await vi.waitFor(async () => expect(await db.get("results", [id, 2])).toMatchObject({ state: "ready" }));
+    }
+    expect(await db.get("results", [id, 1])).toMatchObject({ state: "ready", blob: new Blob(["old"]) });
+    expect(await services.studio.buildNewVersion(id)).toEqual({ ok: false, error: "nothing-new" });
+  });
+
   it("leaves a render locked by another tab alone and resumes once the lock is available", async () => {
     await seed(false);
     let available = false;

@@ -126,14 +126,14 @@ export function RangeSelector({
   const apply = (mode: "start" | "end" | "move", s0: number, e0: number, delta: number) => {
     if (mode === "move") {
       const len = e0 - s0;
-      const ns = Math.min(Math.max(0, s0 + delta), duration - len);
-      onChange(round(ns), round(ns + len));
+      const ns = Math.min(Math.max(0, round(s0 + delta)), duration - len);
+      onChange(ns, ns + len);
     } else if (mode === "start") {
-      const ns = Math.min(Math.max(0, s0 + delta, e0 - max), e0 - 1);
-      onChange(round(ns), e0);
+      const ns = Math.min(Math.max(0, round(s0 + delta), e0 - max), e0 - 1);
+      onChange(ns, e0);
     } else {
-      const ne = Math.max(Math.min(duration, e0 + delta, s0 + max), s0 + 1);
-      onChange(s0, round(ne));
+      const ne = Math.max(Math.min(duration, round(e0 + delta), s0 + max), s0 + 1);
+      onChange(s0, ne);
     }
   };
   const down = (mode: "start" | "end" | "move") => (e: PointerEvent<HTMLElement>) => {

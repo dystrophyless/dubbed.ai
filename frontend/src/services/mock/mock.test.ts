@@ -46,6 +46,49 @@ describe("mock adapter", () => {
   });
   afterEach(() => vi.useRealTimers());
 
+  it.each(["notify", "rename"] as const)("%s merges with a polling failure without restoring refundable credits", async (field) => {
+    await services.demo!.set({ outcome: "failed@2" });
+    await services.projects.start(id);
+    at(9_000);
+    const write = db.write;
+    const spy = vi.spyOn(db, "write");
+    let intercepted = false;
+    spy.mockImplementation(async (stores, fn) => {
+      if (!intercepted && stores.length === 1 && stores[0] === "projects") {
+        intercepted = true;
+        await services.projects.get(id); // poll wins between the old read and the write transaction
+      }
+      return write(stores, fn);
+    });
+    try {
+      if (field === "notify") await services.projects.setNotify(id, true);
+      else await services.projects.rename(id, "Renamed");
+    } finally {
+      spy.mockRestore();
+    }
+    expect(await services.projects.get(id)).toMatchObject({ state: "failed", reserved: 0, ...(field === "notify" ? { notify: true } : { name: "Renamed" }) });
+    expect(await services.account.get()).toMatchObject({ balance: 120, reserved: 0 });
+  });
+
+  it("setSection checks the latest state inside its write transaction", async () => {
+    const write = db.write;
+    const spy = vi.spyOn(db, "write");
+    let intercepted = false;
+    spy.mockImplementation(async (stores, fn) => {
+      if (!intercepted && stores.length === 1 && stores[0] === "projects") {
+        intercepted = true;
+        await services.projects.start(id);
+      }
+      return write(stores, fn);
+    });
+    try {
+      expect(await services.projects.setSection(id, { startMs: 0, endMs: 1000 })).toEqual({ ok: false, error: "state" });
+    } finally {
+      spy.mockRestore();
+    }
+    expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 13 });
+  });
+
   it("reserves on start, prepares through steps 1–3 and settles on ready", async () => {
     const started = await services.projects.start(id);
     expect(started.ok).toBe(true);
@@ -161,6 +204,48 @@ describe("mock adapter", () => {
       db.write(["takes"], (s) => s.takes.put({ projectId: "p1", n, mime: "audio/webm", peaks: [0.2], durationMs: 2000, savedAt: T0 + 1, inVersion: null, audio: new Blob(["b"]) }));
 
     beforeEach(seedDone);
+
+    it.each(["buildResult", "buildNewVersion", "switchTo", "retry"] as const)("%s preserves a concurrent project edit", async (action) => {
+      const request = vi.fn(async (_name: string, _opts: unknown, callback: (lock: null) => Promise<void>) => callback(null));
+      vi.stubGlobal("navigator", { locks: { request } });
+      await newTake(3);
+      await db.write(["projects", "results"], async (s) => {
+        const p = (await db.req(s.projects.get(id))) as Record<string, unknown>;
+        if (action === "buildResult" || action === "retry") s.projects.put({ ...p, state: action === "retry" ? "assembly_failed" : "recording", currentVersion: null });
+        if (action === "retry") {
+          const v = (await db.req(s.results.get([id, 1]))) as Record<string, unknown>;
+          s.results.put({ ...v, state: "failed" });
+        }
+        if (action === "switchTo") {
+          s.projects.put({ ...p, pendingVersion: 2 });
+          s.results.put({ projectId: id, number: 2, state: "ready" });
+        }
+      });
+      const write = db.write;
+      const spy = vi.spyOn(db, "write");
+      let intercepted = false;
+      spy.mockImplementation(async (stores, fn) => {
+        if (!intercepted && stores.includes("projects")) {
+          intercepted = true;
+          await write(["projects"], async (s) => {
+            const p = (await db.req(s.projects.get(id))) as Record<string, unknown>;
+            s.projects.put({ ...p, notify: true, name: "Concurrent name" });
+          });
+        }
+        return write(stores, fn);
+      });
+      try {
+        if (action === "buildResult") expect((await services.studio.buildResult(id)).ok).toBe(true);
+        if (action === "buildNewVersion") expect((await services.studio.buildNewVersion(id)).ok).toBe(true);
+        if (action === "switchTo") await services.result.switchTo(id, 2);
+        if (action === "retry") await services.result.retry(id, 1);
+        expect(await db.get("projects", id)).toMatchObject({ notify: true, name: "Concurrent name" });
+        if (action !== "switchTo") await vi.waitFor(() => expect(request).toHaveBeenCalled());
+      } finally {
+        spy.mockRestore();
+        vi.unstubAllGlobals();
+      }
+    });
 
     it("refuses a new version without a new take", async () => {
       expect(await services.studio.buildNewVersion(id)).toEqual({ ok: false, error: "nothing-new" });

@@ -288,3 +288,4 @@ loop works without it via direct routes.
 - Q: What does the demo result contain without a backend? → A: The user's section with their takes mixed over the muted
   scene in the browser, downloaded as WebM (option B); MP4 comes with the backend.
 - Q: Mock services or the real backend first? → A: Mock services first (owner); the backend is a later feature.
+- Owner decision (2026-11-13): Try again on a failed pending version builds from the current takes, updates its take timestamps and re-recorded-turn list to match those inputs, and marks newly included takes with that version's `inVersion`; no historical audio is stored.

@@ -165,8 +165,9 @@ async function decodeTurnPeaks(id: ProjectId): Promise<void> {
     const turns = await db.getAll<TurnRecord>("turns", db.byProject(id));
     if (!video || turns.every((t) => t.originalPeaks.length > 0)) return;
     const buffer = await decodeAudio(video.blob);
-    await db.write(["turns"], (s) => {
-      for (const t of turns) s.turns.put({ ...t, originalPeaks: buffer ? waveformRange(buffer, t.startMs, t.startMs + t.windowMs) : t.originalPeaks.length ? t.originalPeaks : Array(64).fill(0.05) });
+    await db.write(["turns"], async (s) => {
+      const current = (await db.req(s.turns.getAll(db.byProject(id)))) as TurnRecord[];
+      for (const t of current) s.turns.put({ ...t, originalPeaks: buffer ? waveformRange(buffer, t.startMs, t.startMs + t.windowMs) : t.originalPeaks.length ? t.originalPeaks : Array(64).fill(0.05) });
     });
     db.emit({ projectId: id, kind: "turns" });
   } finally {
@@ -260,8 +261,7 @@ function toVersion(r: ResultRecord): ResultVersion {
   return { ...v, progress: r.state === "assembling" ? (progressMem.get(renderKey(r.projectId, r.number)) ?? r.progress) : r.progress };
 }
 
-async function startVersion(p: ProjectRecord, number: number, rerecorded: number[]): Promise<ResultRecord> {
-  const takes = await takesOf(p.id);
+function startVersion(p: ProjectRecord, takes: TakeRecord[], number: number, rerecorded: number[]): ResultRecord {
   const record: ResultRecord = {
     projectId: p.id,
     number,
@@ -429,13 +429,16 @@ export function createMockServices(): Services {
       },
 
       async setSection(id, section) {
-        const p = await db.get<ProjectRecord>("projects", id);
-        if (!p || p.state !== "draft") return fail("state");
-        if (!isValidSection(section, p.video.durationMs)) return fail("range");
-        const next = { ...p, section, changedAt: now() };
-        await db.write(["projects"], (s) => s.projects.put(next));
-        db.emit({ projectId: id, kind: "project" });
-        return ok(toProject(next, []));
+        const result = await db.write(["projects"], async (s) => {
+          const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+          if (!p || p.state !== "draft") return fail("state" as const);
+          if (!isValidSection(section, p.video.durationMs)) return fail("range" as const);
+          const next = { ...p, section, changedAt: now() };
+          s.projects.put(next);
+          return ok(toProject(next, []));
+        });
+        if (result.ok) db.emit({ projectId: id, kind: "project" });
+        return result;
       },
 
       async start(id) {
@@ -521,17 +524,20 @@ export function createMockServices(): Services {
       },
 
       async setNotify(id, on) {
-        const p = await db.get<ProjectRecord>("projects", id);
-        if (!p) return;
-        await db.write(["projects"], (s) => s.projects.put({ ...p, notify: on }));
+        await db.write(["projects"], async (s) => {
+          const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+          if (p) s.projects.put({ ...p, notify: on });
+        });
         db.emit({ projectId: id, kind: "project" });
       },
 
       async rename(id, name) {
-        const p = await db.get<ProjectRecord>("projects", id);
         const clean = name.trim();
-        if (!p || !clean) return;
-        await db.write(["projects"], (s) => s.projects.put({ ...p, name: clean, changedAt: now() }));
+        if (!clean) return;
+        await db.write(["projects"], async (s) => {
+          const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+          if (p) s.projects.put({ ...p, name: clean, changedAt: now() });
+        });
         db.emit({ projectId: id, kind: "project" });
       },
 
@@ -626,44 +632,49 @@ export function createMockServices(): Services {
       },
 
       async buildResult(id) {
-        const p = await db.get<ProjectRecord>("projects", id);
-        if (!p || (p.state !== "recording" && p.state !== "assembly_failed")) return fail("state");
-        const takes = await takesOf(id);
-        const turns = await db.getAll<TurnRecord>("turns", db.byProject(id));
-        if (turns.some((t) => !takes.find((k) => k.n === t.n))) return fail("missing-takes");
-        const version = await startVersion(p, 1, []);
-        await db.write(["results", "projects", "takes"], (s) => {
+        const result = await db.write(["results", "projects", "takes", "turns"], async (s) => {
+          const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+          if (!p || (p.state !== "recording" && p.state !== "assembly_failed")) return fail("state" as const);
+          const takes = (await db.req(s.takes.getAll(db.byProject(id)))) as TakeRecord[];
+          const turns = (await db.req(s.turns.getAll(db.byProject(id)))) as TurnRecord[];
+          if (turns.some((t) => !takes.find((k) => k.n === t.n))) return fail("missing-takes" as const);
+          const version = startVersion(p, takes, 1, []);
           s.results.put(version);
           s.projects.put({ ...p, state: "assembling", changedAt: now() });
           for (const t of takes) s.takes.put({ ...t, inVersion: 1 });
+          return ok(toVersion(version));
         });
-        db.emit({ projectId: id, kind: "result" });
-        void ensureRendering(id);
-        return ok(toVersion(version));
+        if (result.ok) {
+          db.emit({ projectId: id, kind: "result" });
+          void ensureRendering(id);
+        }
+        return result;
       },
 
       async buildNewVersion(id) {
-        const p = await db.get<ProjectRecord>("projects", id);
-        if (!p || p.state !== "done" || p.currentVersion === null) return fail("state");
-        const versions = await db.getAll<ResultRecord>("results", db.byProject(id));
-        if (versions.some((v) => v.state === "assembling")) return fail("assembling");
-        const takes = await takesOf(id);
-        const fresh = takes.filter((t) => t.inVersion === null);
-        if (fresh.length === 0) return fail("nothing-new");
-        // a pending version that was never switched to is replaced: the new one also carries its re-recorded turns
-        const carried = takes.filter((t) => t.inVersion !== null && t.inVersion === p.pendingVersion);
-        const number = Math.max(...versions.map((v) => v.number)) + 1;
-        const version = await startVersion(p, number, [...fresh, ...carried].map((t) => t.n).sort((a, b) => a - b));
-        await db.write(["results", "projects", "takes"], (s) => {
-          // a previous pending version (ready or failed, never switched to) is replaced
+        const result = await db.write(["results", "projects", "takes"], async (s) => {
+          const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+          if (!p || p.state !== "done" || p.currentVersion === null) return fail("state" as const);
+          const versions = (await db.req(s.results.getAll(db.byProject(id)))) as ResultRecord[];
+          if (versions.some((v) => v.state === "assembling")) return fail("assembling" as const);
+          const takes = (await db.req(s.takes.getAll(db.byProject(id)))) as TakeRecord[];
+          const fresh = takes.filter((t) => t.inVersion === null);
+          if (fresh.length === 0) return fail("nothing-new" as const);
+          // a pending version that was never switched to is replaced: the new one also carries its re-recorded turns
+          const carried = takes.filter((t) => t.inVersion !== null && t.inVersion === p.pendingVersion);
+          const number = Math.max(...versions.map((v) => v.number)) + 1;
+          const version = startVersion(p, takes, number, [...fresh, ...carried].map((t) => t.n).sort((a, b) => a - b));
           if (p.pendingVersion !== null) s.results.delete([id, p.pendingVersion]);
           s.results.put(version);
           s.projects.put({ ...p, pendingVersion: number, changedAt: now() });
           for (const t of [...fresh, ...carried]) s.takes.put({ ...t, inVersion: number });
+          return ok(toVersion(version));
         });
-        db.emit({ projectId: id, kind: "result" });
-        void ensureRendering(id);
-        return ok(toVersion(version));
+        if (result.ok) {
+          db.emit({ projectId: id, kind: "result" });
+          void ensureRendering(id);
+        }
+        return result;
       },
     },
 
@@ -692,29 +703,33 @@ export function createMockServices(): Services {
         return { blob: v.blob, fileName: v.fileName, mime: v.mime ?? v.blob.type };
       },
       async switchTo(id, number) {
-        const p = await db.get<ProjectRecord>("projects", id);
-        if (!p || p.pendingVersion !== number) return;
-        const v = await db.get<ResultRecord>("results", [id, number]);
-        if (v?.state !== "ready") return;
-        await db.write(["results", "projects"], (s) => {
+        await db.write(["results", "projects"], async (s) => {
+          const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+          const v = (await db.req(s.results.get([id, number]))) as ResultRecord | undefined;
+          if (!p || p.pendingVersion !== number || v?.state !== "ready") return;
           if (p.currentVersion !== null) s.results.delete([id, p.currentVersion]); // the old version is gone
           s.projects.put({ ...p, currentVersion: number, pendingVersion: null, changedAt: now() });
         });
         db.emit({ projectId: id, kind: "result" });
       },
       async retry(id, number) {
-        const v = await db.get<ResultRecord>("results", [id, number]);
-        const p = await db.get<ProjectRecord>("projects", id);
-        if (!v || !p || v.state !== "failed") return;
-        await db.write(["results", "projects"], (s) => {
-          s.results.put({ ...v, state: "assembling", progress: 0, startedAt: now(), failing: false });
+        const retried = await db.write(["results", "projects", "takes", "kv"], async (s) => {
+          const v = (await db.req(s.results.get([id, number]))) as ResultRecord | undefined;
+          const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+          if (!v || !p || v.state !== "failed") return false;
+          // Owner decision (2026-11-13): Try again builds from the takes as they are now, not historical audio.
+          const takes = (await db.req(s.takes.getAll(db.byProject(id)))) as TakeRecord[];
+          const fresh = takes.filter((t) => t.inVersion === null);
+          const rerecorded = [...new Set([...v.rerecorded, ...fresh.map((t) => t.n)])].sort((a, b) => a - b);
+          s.results.put({ ...v, takes: Object.fromEntries(takes.map((t) => [t.n, t.savedAt])), rerecorded, state: "assembling", progress: 0, startedAt: now(), failing: false });
+          for (const t of p.currentVersion === null ? takes : fresh) s.takes.put({ ...t, inVersion: number });
           if (p.state === "assembly_failed") s.projects.put({ ...p, state: "assembling", changedAt: now() });
-        });
-        // the demo failure happens once per Try again
-        await db.write(["kv"], async (s) => {
+          // Clear the demo failure in the same transaction, before any poll can start the renderer.
           const cur = ((await db.req(s.kv.get("settings"))) as Partial<DemoSettings> | undefined) ?? {};
           s.kv.put({ ...cur, assemblyFails: false }, "settings");
+          return true;
         });
+        if (!retried) return;
         db.emit({ projectId: id, kind: "result" });
         void ensureRendering(id);
       },
