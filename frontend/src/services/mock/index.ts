@@ -128,6 +128,8 @@ async function advance(id: ProjectId): Promise<ProjectRecord | undefined> {
   const after = await db.write(["projects", "kv", "turns"], async (s) => {
     const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
     if (!p || p.state !== "preparing" || !p.run) return p; // another tab got here first
+    const status = prepStatus(p.run, now());
+    if (status.phase !== "failed" && status.phase !== "ready" && status.phase !== "no_dialogue") return p;
     const all = (await db.req(s.projects.getAll())) as ProjectRecord[];
     const acc = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? DEFAULT_ACCOUNT;
     const ledger = { balance: acc.balance, reserved: reservedTotal(all) };
@@ -233,7 +235,7 @@ async function runRender(id: ProjectId, number: number): Promise<void> {
     await db.write(["results", "projects"], async (s) => {
       const cur = (await db.req(s.results.get([id, number]))) as ResultRecord | undefined;
       const proj = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
-      if (!cur || !proj || cur.state !== "assembling") return;
+      if (!cur || !proj || cur.state !== "assembling" || cur.startedAt !== v.startedAt) return;
       if (blob && !failed) {
         s.results.put({ ...cur, state: "ready", progress: 1, blob, mime, format, fileName: `${proj.name}.${format}` });
         if (proj.state === "assembling") s.projects.put({ ...proj, state: "done", currentVersion: number, pendingVersion: null, changedAt: now() });
@@ -372,9 +374,12 @@ export function createMockServices(): Services {
           createdAt: replacing?.createdAt ?? t,
           changedAt: t,
         };
-        const outcome = await db.write(["projects", "videos"], async (s) => {
+        const outcome = await db.write(["projects", "videos", "kv"], async (s) => {
+          const current = replacing ? (await db.req(s.projects.get(id))) as ProjectRecord | undefined : undefined;
+          if (opts.replace && (!current || !canReplaceVideo(current.state))) return false;
           const count = ((await db.req(s.projects.getAll())) as ProjectRecord[]).length;
-          if (!replacing && count >= acc.slotLimit) return false;
+          const latestAccount = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? DEFAULT_ACCOUNT;
+          if (!replacing && count >= latestAccount.slotLimit) return false;
           s.projects.put(record);
           s.videos.put({ projectId: id, blob: file, stamp: globalThis.crypto.randomUUID() } satisfies VideoRecord);
           return true;
@@ -479,13 +484,16 @@ export function createMockServices(): Services {
       },
 
       async cancel(id) {
-        const quote = await services.projects.cancelQuote(id);
+        await advance(id);
         const result = await db.write(["projects", "kv", "videos"], async (s) => {
           const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
-          if (!p || p.state !== "preparing") return fail("state" as const);
+          if (!p || p.state !== "preparing" || !p.run) return fail("state" as const);
+          const status = prepStatus(p.run, now());
+          if (status.phase !== "queued" && status.phase !== "preparing") return fail("state" as const);
+          const charge = cancelCharge(priceOf(p.section), status.phase === "preparing" ? status.stepsDone : 0);
           const all = (await db.req(s.projects.getAll())) as ProjectRecord[];
           const acc = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? DEFAULT_ACCOUNT;
-          const [a, m] = cancelMoney({ balance: acc.balance, reserved: reservedTotal(all) }, { reserved: p.reserved, charged: p.charged }, quote.charge);
+          const [a, m] = cancelMoney({ balance: acc.balance, reserved: reservedTotal(all) }, { reserved: p.reserved, charged: p.charged }, charge);
           s.kv.put({ ...acc, balance: a.balance }, "account");
           s.projects.delete(id); // cancelled = removed, slot freed
           s.videos.delete(id);
@@ -542,19 +550,20 @@ export function createMockServices(): Services {
       },
 
       async remove(id) {
-        const p = await db.get<ProjectRecord>("projects", id);
-        if (!p) return;
-        if (p.state === "preparing") {
-          await services.projects.cancel(id);
-          return;
-        }
-        await db.write(["projects", "videos", "turns", "takes", "results"], (s) => {
+        const removed = await db.write(["projects", "videos", "turns", "takes", "results"], async (s) => {
+          const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+          if (p?.state === "preparing") return false;
           s.projects.delete(id);
           s.videos.delete(id);
           s.turns.delete(db.byProject(id));
           s.takes.delete(db.byProject(id));
           s.results.delete(db.byProject(id));
+          return true;
         });
+        if (!removed) {
+          await services.projects.cancel(id);
+          return;
+        }
         revokeUrls(id);
         db.emit({ projectId: id, kind: "removed" });
       },
@@ -604,27 +613,29 @@ export function createMockServices(): Services {
             onStarted: opts.onStarted,
             onProgress: opts.onProgress,
           });
-          const p = await db.get<ProjectRecord>("projects", id);
-          const take: TakeRecord = {
-            projectId: id,
-            n,
-            mime: capture.mimeType,
-            peaks: capture.peaks,
-            durationMs: capture.elapsedMs,
-            savedAt: now(),
-            // after the first version exists, a new take is "not built yet" until a new version is built
-            inVersion: p && p.currentVersion !== null ? null : 0,
-            audio: capture.blob,
-          };
-          // saved = durably written (research R5): resolve only after the transaction commits
-          await db.write(["takes", "projects"], async (s) => {
+          const saved = await db.write(["takes", "projects", "results"], async (s) => {
+            const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
+            if (!p) return fail("interrupted" as const);
+            const versions = (await db.req(s.results.getAll(db.byProject(id)))) as ResultRecord[];
+            if (p.state === "assembling" || versions.some((v) => v.state === "assembling")) return fail("assembling" as const);
+            const take: TakeRecord = {
+              projectId: id,
+              n,
+              mime: capture.mimeType,
+              peaks: capture.peaks,
+              durationMs: capture.elapsedMs,
+              savedAt: now(),
+              // after the first version exists, a new take is "not built yet" until a new version is built
+              inVersion: p.currentVersion !== null ? null : 0,
+              audio: capture.blob,
+            };
             s.takes.put(take);
-            const cur = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
-            if (cur) s.projects.put({ ...cur, changedAt: now() });
-          });
-          db.emit({ projectId: id, kind: "take" });
-          const { audio: _a, ...saved } = take;
-          return ok(saved);
+            s.projects.put({ ...p, changedAt: now() });
+            const { audio: _a, ...saved } = take;
+            return ok(saved);
+          }); // saved = durable only after commit (research R5)
+          if (saved.ok) db.emit({ projectId: id, kind: "take" });
+          return saved;
         } catch (error) {
           if (error instanceof MicrophoneError) return fail(error.kind);
           return fail("interrupted");
@@ -638,7 +649,9 @@ export function createMockServices(): Services {
           const takes = (await db.req(s.takes.getAll(db.byProject(id)))) as TakeRecord[];
           const turns = (await db.req(s.turns.getAll(db.byProject(id)))) as TurnRecord[];
           if (turns.some((t) => !takes.find((k) => k.n === t.n))) return fail("missing-takes" as const);
+          const previous = (await db.req(s.results.get([id, 1]))) as ResultRecord | undefined;
           const version = startVersion(p, takes, 1, []);
+          version.startedAt = Math.max(version.startedAt, (previous?.startedAt ?? -1) + 1);
           s.results.put(version);
           s.projects.put({ ...p, state: "assembling", changedAt: now() });
           for (const t of takes) s.takes.put({ ...t, inVersion: 1 });
@@ -721,7 +734,7 @@ export function createMockServices(): Services {
           const takes = (await db.req(s.takes.getAll(db.byProject(id)))) as TakeRecord[];
           const fresh = takes.filter((t) => t.inVersion === null);
           const rerecorded = [...new Set([...v.rerecorded, ...fresh.map((t) => t.n)])].sort((a, b) => a - b);
-          s.results.put({ ...v, takes: Object.fromEntries(takes.map((t) => [t.n, t.savedAt])), rerecorded, state: "assembling", progress: 0, startedAt: now(), failing: false });
+          s.results.put({ ...v, takes: Object.fromEntries(takes.map((t) => [t.n, t.savedAt])), rerecorded, state: "assembling", progress: 0, startedAt: Math.max(now(), v.startedAt + 1), failing: false });
           for (const t of p.currentVersion === null ? takes : fresh) s.takes.put({ ...t, inVersion: number });
           if (p.state === "assembly_failed") s.projects.put({ ...p, state: "assembling", changedAt: now() });
           // Clear the demo failure in the same transaction, before any poll can start the renderer.

@@ -66,6 +66,43 @@ describe("mock upload validation", () => {
     }
   });
 
+  it.each(["start", "remove"] as const)("rejects replacement if another tab performs %s during checking", async (action) => {
+    vi.mocked(probeVideo).mockResolvedValue({ durationMs: 13_000, width: 1280, height: 544 });
+    vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);
+    const first = await upload();
+    expect(first.ok).toBe(true);
+    if (!first.ok) return;
+    const otherTab = createMockServices();
+    vi.mocked(probeVideo).mockImplementationOnce(async () => {
+      await otherTab.projects[action](first.value.id);
+      return { durationMs: 13_000, width: 1280, height: 544 };
+    });
+    expect(await services.upload.upload(file(), {
+      replace: first.value.id,
+      signal: new AbortController().signal,
+      onProgress: () => vi.setSystemTime(Date.now() + 2_000),
+    })).toEqual({ ok: false, error: "no-slot" });
+    if (action === "start") {
+      expect(await services.projects.get(first.value.id)).toMatchObject({ state: "queued", reserved: 13 });
+      expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 13 });
+    } else {
+      expect(await services.projects.get(first.value.id)).toBeNull();
+    }
+  });
+
+  it("checks the current slot limit after checking instead of the pre-upload account", async () => {
+    await services.demo!.set({ slotLimit: 10 });
+    vi.mocked(probeVideo).mockImplementation(async () => {
+      const otherTab = createMockServices();
+      await otherTab.demo!.set({ slotLimit: 2 });
+      await otherTab.demo!.set({ fillSlots: true });
+      return { durationMs: 13_000, width: 1280, height: 544 };
+    });
+    vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);
+    expect(await upload()).toEqual({ ok: false, error: "no-slot" });
+    expect(await services.account.get()).toMatchObject({ slotLimit: 2, slotsUsed: 2 });
+  });
+
   it("does not restore removed turns when background peak decoding finishes", async () => {
     vi.mocked(probeVideo).mockResolvedValue({ durationMs: 13_000, width: 1280, height: 544 });
     vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);

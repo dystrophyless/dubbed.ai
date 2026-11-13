@@ -29,7 +29,7 @@ describe("list resumes persisted assemblies", () => {
     vi.stubGlobal("navigator", {});
     await createMockServices().demo!.reset();
   });
-  afterEach(() => vi.unstubAllGlobals());
+  afterEach(() => { vi.unstubAllGlobals(); vi.useRealTimers(); });
 
   it.each([false, true])("resumes a persisted assembly (pending new version: %s) only once and emits readiness", async (pending) => {
     await seed(pending);
@@ -81,6 +81,36 @@ describe("list resumes persisted assemblies", () => {
     }
     expect(await db.get("results", [id, 1])).toMatchObject({ state: "ready", blob: new Blob(["old"]) });
     expect(await services.studio.buildNewVersion(id)).toEqual({ ok: false, error: "nothing-new" });
+  });
+
+  it.each(["retry", "buildResult"] as const)("does not publish an old render over %s without Web Locks, even in the same clock tick", async (action) => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(0);
+    await seed(false);
+    let finish!: (value: ReturnType<typeof output>) => void;
+    vi.mocked(renderMix).mockImplementationOnce(() => new Promise((resolve) => { finish = resolve; }));
+    const services = createMockServices();
+    await services.projects.list();
+    await vi.waitFor(() => expect(renderMix).toHaveBeenCalledTimes(1));
+    // A second tab without Web Locks can finish its failed render before this one.
+    await db.write(["results", "projects"], async (s) => {
+      const v = await db.req(s.results.get([id, 1]));
+      const p = await db.req(s.projects.get(id));
+      s.results.put({ ...v, state: "failed" });
+      s.projects.put({ ...p, state: "assembly_failed" });
+    });
+    const otherTab = createMockServices();
+    if (action === "retry") await otherTab.result.retry(id, 1);
+    else expect((await otherTab.studio.buildResult(id)).ok).toBe(true);
+    const completed = new Promise<void>((resolve) => {
+      const unsubscribe = services.subscribe((e) => {
+        if (e.kind === "result") { unsubscribe(); resolve(); }
+      });
+    });
+    finish(output());
+    await completed;
+    expect(await db.get("results", [id, 1])).toMatchObject({ state: "assembling", blob: null });
+    expect(await db.get("projects", id)).toMatchObject({ state: "assembling" });
   });
 
   it("leaves a render locked by another tab alone and resumes once the lock is available", async () => {

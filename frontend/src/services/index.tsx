@@ -35,7 +35,7 @@ export const POLL_MS = 500;
 export const isActive = (p: Project | null | undefined) =>
   Boolean(p && (p.state === "queued" || p.state === "preparing" || p.state === "assembling" || p.pendingVersion !== null));
 
-function invalidateFor(client: QueryClient, e: ChangeEvent) {
+export function invalidateFor(client: QueryClient, e: ChangeEvent) {
   if (e.kind === "result-progress" && e.projectId) {
     void client.invalidateQueries({ queryKey: qk.result(e.projectId) });
     return;
@@ -44,7 +44,7 @@ function invalidateFor(client: QueryClient, e: ChangeEvent) {
   void client.invalidateQueries({ queryKey: qk.projects });
   void client.invalidateQueries({ queryKey: qk.draft });
   if (e.projectId) {
-    for (const key of [qk.project(e.projectId), qk.turns(e.projectId), qk.takes(e.projectId), qk.result(e.projectId), ["take-url", e.projectId], ["player", e.projectId]]) {
+    for (const key of [qk.project(e.projectId), qk.turns(e.projectId), qk.takes(e.projectId), qk.videoUrl(e.projectId), qk.result(e.projectId), ["take-url", e.projectId], ["player", e.projectId]]) {
       void client.invalidateQueries({ queryKey: key });
     }
   } else {

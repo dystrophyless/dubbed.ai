@@ -4,6 +4,22 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.3] — 2026-11-13
+
+Fixes from the third Codex review of PR #83 and a sweep for the same kinds of bugs.
+
+### Fixed
+
+- Replacing a draft's video no longer overwrites a project another tab has just started or removed, so its reserved
+  credits are not lost.
+- Other tabs drop their cached source video and thumbnails when a project changes, so the studio never pairs new turns
+  with the old picture and sound.
+- Money and state are decided inside one transaction everywhere: an old preparation poll can no longer refund a retry
+  started in another tab, cancel charges the live step, removing a project another tab started refunds its reserve,
+  and the slot limit is checked at write time.
+- A take is not saved once assembly has started or the project was removed, and an older render can no longer publish
+  over a newer build of the same version.
+
 ## [0.1.2] — 2026-11-13
 
 Fixes from the second Codex review of PR #83.
@@ -67,6 +83,7 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.3]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.3
 [0.1.2]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.2
 [0.1.1]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.1
 [0.1.0]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.0

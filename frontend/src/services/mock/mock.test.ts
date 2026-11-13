@@ -33,6 +33,20 @@ async function seedDraft(id: string, seconds: number) {
 
 const at = (ms: number) => vi.setSystemTime(T0 + ms);
 
+async function beforeNextWrite(action: () => Promise<void>, operation: () => Promise<unknown>) {
+  const write = db.write;
+  const spy = vi.spyOn(db, "write");
+  let intercepted = false;
+  spy.mockImplementation(async (stores, fn) => {
+    if (!intercepted) {
+      intercepted = true;
+      await action();
+    }
+    return write(stores, fn);
+  });
+  try { return await operation(); } finally { spy.mockRestore(); }
+}
+
 describe("mock adapter", () => {
   let services = createMockServices();
   let id: ProjectId;
@@ -87,6 +101,32 @@ describe("mock adapter", () => {
       spy.mockRestore();
     }
     expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 13 });
+  });
+
+  it("does not apply an old preparation outcome to a retry started by another tab", async () => {
+    await services.demo!.set({ outcome: "failed@2" });
+    await services.projects.start(id);
+    at(9_000);
+    const otherTab = createMockServices();
+    await beforeNextWrite(async () => {
+      await otherTab.projects.get(id);
+      await otherTab.projects.retry(id);
+    }, () => services.projects.get(id));
+    expect(await services.projects.get(id)).toMatchObject({ state: "preparing", reserved: 13 });
+    expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 13 });
+  });
+
+  it("remove rechecks preparation and refunds a start that won the transaction race", async () => {
+    await beforeNextWrite(async () => { await createMockServices().projects.start(id); }, () => services.projects.remove(id));
+    expect(await services.projects.get(id)).toBeNull();
+    expect(await services.account.get()).toMatchObject({ balance: 120, reserved: 0, slotsUsed: 0 });
+  });
+
+  it("cancel charges the live step at its write transaction rather than an old quote", async () => {
+    await services.projects.start(id);
+    const result = await beforeNextWrite(async () => { at(8_000); }, () => services.projects.cancel(id));
+    expect(result).toEqual({ ok: true, value: { charged: 4 } });
+    expect(await services.account.get()).toMatchObject({ balance: 116, reserved: 0 });
   });
 
   it("reserves on start, prepares through steps 1–3 and settles on ready", async () => {
