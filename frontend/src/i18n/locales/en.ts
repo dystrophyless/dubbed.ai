@@ -784,6 +784,7 @@ export const en = {
       type: "This file type isn't supported. Use MP4, MOV or WebM.",
       size: "It's larger than 250 MB. Choose a smaller video.",
       length: "It's longer than 10 minutes. Choose a shorter video.",
+      short: "It's shorter than 1 second. Choose a longer video.",
       noAudio: "This video has no sound, so there is nothing to dub. Choose a video with voices.",
       broken: "We couldn't read this file — it may be damaged. Export it again or choose another video.",
     },

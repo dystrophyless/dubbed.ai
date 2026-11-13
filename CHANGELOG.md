@@ -4,6 +4,17 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.5] — 2026-11-14
+
+Fixes from the fifth Codex review of PR #83.
+
+### Fixed
+
+- Moving to another turn while a recording is still starting cancels it: the take is no longer recorded into the turn
+  just left, and Record works on the new turn.
+- A video shorter than 1 second is rejected at the check ("It's shorter than 1 second") instead of becoming a draft
+  that can never start.
+
 ## [0.1.4] — 2026-11-13
 
 Fix from the fourth Codex review of PR #83, and one found by the test run.
@@ -94,6 +105,7 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.5]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.5
 [0.1.4]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.4
 [0.1.3]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.3
 [0.1.2]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.2

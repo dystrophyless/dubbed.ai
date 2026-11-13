@@ -3,7 +3,7 @@
 Dub short video scenes with your own voice. Upload a clip, the service prepares its dialogue as timed turns, you record
 every line in a studio, and get the whole scene back with your voices in it.
 
-**Version 0.1.4** — the full recording flow runs in the browser on mock services; there is no backend yet.
+**Version 0.1.5** — the full recording flow runs in the browser on mock services; there is no backend yet.
 See [CHANGELOG.md](CHANGELOG.md).
 
 ## What works today

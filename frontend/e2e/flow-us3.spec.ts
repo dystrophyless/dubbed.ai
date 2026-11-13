@@ -175,7 +175,27 @@ test.describe("US3 — re-record a turn", () => {
     await expect(result(page)).toHaveAttribute("data-newer", "none");
 
     await openRerecord(page, 2);
-    await recordCurrentTurn(page);
+
+    // Record pressed (permission check pending), then Next to another turn: the pending start belongs to turn 2 and
+    // is cancelled — it must not record into turn 2 (a saved take) and Record on turn 3 must still work
+    const takesBeforeNext = await takes();
+    await page.evaluate(() => {
+      const w = window as Window & { __releaseMic?: () => void; __micAsks?: number };
+      const hung = new Promise<void>((res) => { w.__releaseMic = res; });
+      navigator.permissions.query = () => hung.then(() => ({ state: "granted" }) as PermissionStatus);
+      w.__micAsks = 0;
+    });
+    await page.locator('button[aria-keyshortcuts="R"]').click();
+    await page.getByTestId("studio-forward").click();
+    await expect(page).toHaveURL(/\/turns\/3\?mode=rerecord$/);
+    await page.evaluate(() => (window as Window & { __releaseMic?: () => void }).__releaseMic?.());
+    await page.waitForTimeout(500);
+    expect(await page.evaluate(() => (window as Window & { __micAsks?: number }).__micAsks)).toBe(0);
+    expect(await takes()).toEqual(takesBeforeNext);
+    await expect(actions(page)).toHaveAttribute("data-state", "saved");
+    await expect(page.locator('button[aria-keyshortcuts="R"]')).toBeEnabled();
+    await recordCurrentTurn(page); // Record works on the new turn
+
     await page.getByTestId("studio-exit").click();
     const dialog = page.getByTestId("leave-build-dialog");
     await expect(dialog).toBeVisible();
@@ -185,7 +205,7 @@ test.describe("US3 — re-record a turn", () => {
 
     await dialog.getByRole("button", { name: "Stay" }).click();
     await expect(dialog).toBeHidden();
-    await expect(page).toHaveURL(/\/turns\/2\?mode=rerecord$/);
+    await expect(page).toHaveURL(/\/turns\/3\?mode=rerecord$/);
 
     await page.getByTestId("studio-exit").click();
     await dialog.getByRole("button", { name: "Leave without building" }).click();

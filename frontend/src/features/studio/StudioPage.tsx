@@ -192,7 +192,8 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
     return () => controller.abort();
   }, [block, services, project.id]);
 
-  useEffect(() => () => abortRec.current?.abort(), []);
+  // also runs when the turn changes: a start still pending must not record into the old turn
+  useEffect(() => () => abortRec.current?.abort(), [turn.n]);
 
   /* ---- actions ---- */
   const goTo = (to: number, direction: TurnDir) => navigate(`/projects/${project.id}/turns/${to}${rerecord ? "?mode=rerecord" : ""}`, { state: { dir: direction } });
@@ -213,7 +214,10 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
     setClip("none");
     // a blocked microphone is the more useful thing to tell: it wins over the lock notice (D2)
     const mic = await navigator.permissions?.query({ name: "microphone" as PermissionName }).catch(() => null);
-    if (abort.signal.aborted) return;
+    if (abort.signal.aborted) {
+      if (abortRec.current === abort) abortRec.current = null;
+      return;
+    }
     if (mic?.state === "denied") {
       abortRec.current = null;
       setBlock("microphone");
@@ -226,6 +230,7 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
       return;
     }
     if (abort.signal.aborted) {
+      if (abortRec.current === abort) abortRec.current = null;
       await lease.value.release(); // the studio was closed: let go of the lock, don't record
       return;
     }

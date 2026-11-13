@@ -155,6 +155,14 @@ describe("mock upload validation", () => {
     await expectNoDraftOrSlot();
   });
 
+  it("rejects a video shorter than one second without creating a draft or taking a slot", async () => {
+    vi.mocked(probeVideo).mockResolvedValue({ durationMs: 500, width: 1280, height: 544 });
+    expect(await upload()).toEqual({ ok: false, error: "short" });
+    expect(probeVideo).toHaveBeenCalledOnce();
+    expect(decodeAudio).not.toHaveBeenCalled();
+    await expectNoDraftOrSlot();
+  });
+
   it("maps a rejected video probe to broken without creating a draft or taking a slot", async () => {
     vi.mocked(probeVideo).mockRejectedValue(new Error("unreadable"));
     expect(await upload()).toEqual({ ok: false, error: "broken" });

@@ -11,11 +11,11 @@ import s from "./new-dub.module.css";
  * the prototype supplies a demo clock. See ui-spec.md S1 and design-system/new-dub-brief.md.
  */
 export type NewDubPhase = "empty" | "no-slot" | "uploading" | "checking" | "error" | "ready";
-export type NewDubReason = "type" | "size" | "length" | "no-audio" | "broken";
+export type NewDubReason = "type" | "size" | "length" | "short" | "no-audio" | "broken";
 export type ClipShape = "scope" | "16x9" | "portrait";
 
-const ERROR_KEY: Record<NewDubReason, "type" | "size" | "length" | "noAudio" | "broken"> = {
-  type: "type", size: "size", length: "length", "no-audio": "noAudio", broken: "broken",
+const ERROR_KEY: Record<NewDubReason, "type" | "size" | "length" | "short" | "noAudio" | "broken"> = {
+  type: "type", size: "size", length: "length", short: "short", "no-audio": "noAudio", broken: "broken",
 };
 
 /** The stage is always 2.35:1, as wide as the card (owner 2026-11-03). */

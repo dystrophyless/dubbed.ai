@@ -25,7 +25,7 @@ import {
 } from "../contracts";
 import { cancel as cancelMoney, cancelCharge, refund, reserve, settle } from "../rules/money";
 import { prepStatus, turnsFoundAt, type PrepRun } from "../rules/lifecycle";
-import { defaultSection, isAcceptedFile, isValidSection, MAX_FILE_BYTES, MAX_VIDEO_MS, nameFromFile, priceOf } from "../rules/pricing";
+import { defaultSection, isAcceptedFile, isValidSection, MAX_FILE_BYTES, MAX_VIDEO_MS, MIN_SECTION_MS, nameFromFile, priceOf } from "../rules/pricing";
 import { canReplaceVideo, FREE_SLOT_LIMIT, PAID_SLOT_LIMIT } from "../rules/slots";
 import { planTurns, turnCount } from "../rules/turns";
 import { captureFixedWindow, decodeAudio, MicrophoneError, probeVideo, waveformRange } from "../media/browser-media";
@@ -351,6 +351,7 @@ export function createMockServices(): Services {
         }
         if (opts.signal.aborted) return fail("aborted");
         if (probe.durationMs > MAX_VIDEO_MS) return fail("length");
+        if (probe.durationMs < MIN_SECTION_MS) return fail("short");
         const audio = await decodeAudio(file);
         if (!audio) return fail("no-audio");
         if (opts.signal.aborted) return fail("aborted");

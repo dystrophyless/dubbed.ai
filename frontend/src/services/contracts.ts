@@ -135,7 +135,7 @@ export type ResultPlayer = { url: string; durationMs: number; format: FileFormat
 
 /* ---------- Ports ---------- */
 
-export type UploadError = "no-slot" | "length" | "no-audio" | "broken" | "aborted";
+export type UploadError = "no-slot" | "length" | "short" | "no-audio" | "broken" | "aborted";
 
 export interface AccountPort {
   get(): Promise<Account>;
