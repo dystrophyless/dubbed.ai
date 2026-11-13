@@ -392,6 +392,7 @@ export function createMockServices(): Services {
         const results = await db.getAll<ResultRecord>("results");
         const out = await Promise.all(
           fresh.map(async (p) => {
+            if (p.state === "assembling" || p.pendingVersion !== null) void ensureRendering(p.id);
             const proj = toProject(p, await takesOf(p.id));
             const pending = results.find((r) => r.projectId === p.id && r.number === p.pendingVersion);
             return {
@@ -447,12 +448,12 @@ export function createMockServices(): Services {
           const price = priceOf(p.section);
           if (acc.balance < price) return fail("credits" as const);
           const [a, m] = reserve({ balance: acc.balance, reserved: reservedTotal(all) }, { reserved: p.reserved, charged: p.charged }, price);
-          const total = cfg.outcome === "no-dialogue" ? 0 : Math.max(1, turnCount(p.section, cfg.turns));
+          const total = cfg.outcome === "no-dialogue" ? 0 : turnCount(p.section, cfg.turns);
           const next: ProjectRecord = {
             ...p,
             ...m,
             state: "preparing",
-            run: { startedAt: now(), fromStep: 1, queued: true, outcome: cfg.outcome, speed: cfg.speed },
+            run: { startedAt: now(), fromStep: 1, queued: true, outcome: cfg.outcome === "ready" && total === 0 ? "no-dialogue" : cfg.outcome, speed: cfg.speed },
             turnsTotal: total,
             changedAt: now(),
           };
@@ -502,7 +503,7 @@ export function createMockServices(): Services {
           if (acc.balance < price) return fail("credits" as const);
           const [a, m] = reserve({ balance: acc.balance, reserved: reservedTotal(all) }, { reserved: p.reserved, charged: p.charged }, price);
           // the demo failure happens once: Try again succeeds (unless a new outcome was chosen)
-          const outcome = cfg.outcome.startsWith("failed@") ? "ready" : cfg.outcome;
+          const outcome = cfg.outcome.startsWith("failed@") || cfg.outcome === "ready" ? (p.turnsTotal === 0 ? "no-dialogue" : "ready") : cfg.outcome;
           const next: ProjectRecord = {
             ...p,
             ...m,

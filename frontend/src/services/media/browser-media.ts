@@ -170,6 +170,7 @@ export async function captureFixedWindow(input: {
     recorder.start(250);
     startedAt = Date.now();
     input.onStarted?.();
+    if (input.stop?.aborted) onStop();
     stopTimer = window.setTimeout(() => stopWith("fixed-window"), input.durationMs);
     if (input.onProgress && window.AudioContext) {
       audioContext = new AudioContext();

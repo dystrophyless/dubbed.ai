@@ -4,6 +4,19 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.1] — 2026-11-13
+
+Fixes from the Codex review of PR #83.
+
+### Fixed
+
+- A section of 1–2 seconds has no turns: it now ends as "no dialogue" (charged as the spec says) instead of opening a
+  studio that never loads.
+- An assembly left running is resumed from My projects too, so results and new versions no longer stay "assembling"
+  after a reload there, and the ready notification arrives.
+- Stop pressed while the microphone is still starting is honoured: the capture stops at once instead of recording the
+  whole turn.
+
 ## [0.1.0] — 2026-11-13
 
 First working version: the whole recording flow in the browser on mock services (feature
@@ -38,4 +51,5 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.1]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.1
 [0.1.0]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.0

@@ -3,7 +3,7 @@
 Dub short video scenes with your own voice. Upload a clip, the service prepares its dialogue as timed turns, you record
 every line in a studio, and get the whole scene back with your voices in it.
 
-**Version 0.1.0** — the full recording flow runs in the browser on mock services; there is no backend yet.
+**Version 0.1.1** — the full recording flow runs in the browser on mock services; there is no backend yet.
 See [CHANGELOG.md](CHANGELOG.md).
 
 ## What works today
@@ -52,7 +52,7 @@ cd frontend
 npm run build          # TypeScript + Vite
 npm run lint           # oxlint
 npm run lint:css       # stylelint, design tokens only
-npm run test:unit      # Vitest: money rules, turn planning, mock adapter
+npm run test:unit      # Vitest: money rules, turn planning, mock adapter, capture
 npm run test:e2e:quick # Playwright, desktop business flows (~7 min) — after each change
 npm run test:e2e       # everything: flows, one smoke per route, mobile layout (~8 min) — before a commit
 ```

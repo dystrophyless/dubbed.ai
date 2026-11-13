@@ -116,6 +116,28 @@ describe("mock adapter", () => {
     expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 0 });
   });
 
+  it.each([1000, 1500, 1999, 2000])("settles a %i ms section according to its actual turn count", async (durationMs) => {
+    await services.projects.setSection(id, { startMs: 1000, endMs: 1000 + durationMs });
+    await services.projects.start(id);
+    at(20_000);
+    const short = durationMs < 2000;
+    expect(await services.projects.get(id)).toMatchObject({ state: short ? "no_dialogue" : "recording", turnsTotal: short ? 0 : 1, charged: Math.ceil(durationMs / 1000), reserved: 0 });
+    expect(await services.studio.turns(id)).toHaveLength(short ? 0 : 1);
+    expect(await services.account.get()).toMatchObject({ balance: 120 - Math.ceil(durationMs / 1000), reserved: 0 });
+  });
+
+  it("finishes a short section as no dialogue after retrying a failure", async () => {
+    await services.projects.setSection(id, { startMs: 0, endMs: 1500 });
+    await services.demo!.set({ outcome: "failed@2" });
+    await services.projects.start(id);
+    at(9000);
+    expect((await services.projects.get(id))?.state).toBe("failed");
+    await services.projects.retry(id);
+    at(20_000);
+    expect(await services.projects.get(id)).toMatchObject({ state: "no_dialogue", charged: 2, reserved: 0, turnsTotal: 0 });
+    expect(await services.account.get()).toMatchObject({ balance: 118, reserved: 0 });
+  });
+
   describe("new versions (US3)", () => {
     const lease = (pid: ProjectId) => ({ projectId: pid, release: async () => undefined });
 
