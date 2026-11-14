@@ -22,6 +22,23 @@ describe("waveform display gain", () => {
   });
 });
 
+describe("dense turn planning", () => {
+  it.each([0, 4500])("keeps 40 windows inside a 2000 ms section with turnMs=%s", (turnMs) => {
+    const section = { startMs: 1000, endMs: 3000 };
+    const turns = planTurns(section, 40, turnMs);
+    expect(turns).toHaveLength(40);
+    turns.forEach((turn, i) => {
+      expect(turn.windowMs).toBeLessThanOrEqual(50);
+      expect(turn.startMs).toBeGreaterThanOrEqual(section.startMs);
+      expect(turn.startMs + turn.windowMs).toBeLessThanOrEqual(section.endMs);
+      if (i > 0) expect(turn.startMs).toBeGreaterThanOrEqual(turns[i - 1]!.startMs + turns[i - 1]!.windowMs);
+    });
+  });
+  it.each([-1, 1.5, NaN, Infinity])("rejects invalid forced count %s", (count) => {
+    expect(() => planTurns({ startMs: 0, endMs: 2000 }, count)).toThrow(RangeError);
+  });
+});
+
 describe("pricing", () => {
   it("charges 1 credit per started second", () => {
     expect(priceOf({ startMs: 0, endMs: 72_300 })).toBe(73);

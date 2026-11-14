@@ -279,7 +279,7 @@ function Processing({ preview, end, shape, background }: { preview: Preview; end
         firstFrameAt={Math.round((pr.from % CLIP_SECONDS) * 100) / 100}
         shape={shape}
         opening={pr.opening}
-        cancel={{ open: pr.cancelOpen, stepsDone: pr.stepsDone, charge: pr.charge, back: pr.back }}
+        cancel={{ open: pr.cancelOpen, pending: false, stepsDone: pr.stepsDone, charge: pr.charge, back: pr.back }}
         deleteOpen={pr.deleteOpen}
         busy={pr.busy}
         notify={notify}

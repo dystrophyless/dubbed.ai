@@ -21,6 +21,7 @@ export const DEMO_LINES: { en: string; ru: string }[] = [
 export type TurnPlan = { n: number; startMs: number; windowMs: number; text: { en: string; ru: string } };
 
 export function turnCount(section: Section, forced = 0): number {
+  if (!Number.isInteger(forced) || forced < 0) throw new RangeError("turn count must be a positive integer (0 = automatic)");
   const len = section.endMs - section.startMs;
   if (len < 2_000) return 0;
   if (forced > 0) return Math.min(MAX_TURNS, forced);
@@ -34,7 +35,7 @@ export function planTurns(section: Section, forced = 0, turnMs = 0): TurnPlan[] 
   return Array.from({ length: n }, (_, i) => {
     // deterministic window length per turn: 2.5–4.5 s, never longer than its share of the section
     const wanted = 2_500 + ((i * 7) % 5) * 500;
-    const windowMs = turnMs > 0 ? Math.min(turnMs, Math.floor(slot)) : Math.max(500, Math.min(wanted, Math.floor(slot)));
+    const windowMs = Math.min(turnMs > 0 ? turnMs : wanted, Math.floor(slot));
     const startMs = Math.round(section.startMs + i * slot + (slot - windowMs) / 2);
     return { n: i + 1, startMs, windowMs, text: DEMO_LINES[i % DEMO_LINES.length]! };
   });

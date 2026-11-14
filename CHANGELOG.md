@@ -4,6 +4,33 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.6] — 2026-11-14
+
+The sixth Codex finding plus a sweep of the whole feature for the same kinds of bugs: an action still waiting while
+other buttons work, an error shown as success, and races between tabs.
+
+### Fixed
+
+- Cancel preparation never misleads about money: while the cost is being calculated the dialog says so and Confirm
+  waits; if the project changes while the dialog is open (preparation finished, removed, another project opened from
+  history) the dialog closes with a notice instead of acting on the old state; a cancel never turns into a delete
+  without refund, and "credits returned" is shown only when they were.
+- My projects shows the exact reserve and refund for sections with fractional seconds (72.3 s → 73 credits).
+- The balance is read from one consistent snapshot.
+- "Leave without saving" while a take is saving keeps the previous take; a cancelled upload, even at the last moment,
+  creates no draft and takes no slot.
+- "Save and leave" leaves only when the take really saved, and works if the take finished while the dialog was open.
+- Starting, building and uploading no longer pull you back to a page you already left; a build locks the studio
+  controls while it runs; storage failures show an error instead of freezing the page; the recording lock is always
+  released.
+- Pause right after Play no longer restarts the result or a studio clip without sound.
+- Demo `turns:N` on a very short section keeps every turn inside the section (turns get shorter).
+
+### Tests
+
+- The blocked-microphone flow records with a 4 s window: a 1 s window could end before its checks on a busy machine
+  (the flake seen in earlier full runs).
+
 ## [0.1.5] — 2026-11-14
 
 Fixes from the fifth Codex review of PR #83.
@@ -105,6 +132,7 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.6]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.6
 [0.1.5]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.5
 [0.1.4]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.4
 [0.1.3]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.3

@@ -42,6 +42,52 @@ describe("recording commit races", () => {
     expect(await db.getAll("takes")).toMatchObject(action === "assemble" ? [{ savedAt: 1 }] : []);
   });
 
+  it.each(["captured", "transaction"] as const)("discards a stopped take aborted at %s instead of replacing the old take", async (stage) => {
+    const controller = new AbortController();
+    vi.mocked(captureFixedWindow).mockImplementationOnce(async () => {
+      if (stage === "captured") controller.abort();
+      return { ...capture, endReason: "stopped" };
+    });
+    if (stage === "transaction") {
+      const req = db.req;
+      let reads = 0;
+      vi.spyOn(db, "req").mockImplementation(async (request) => {
+        const result = await req(request);
+        if (++reads === 2) controller.abort(); // after the transaction's project and version reads
+        return result;
+      });
+    }
+    expect(await services.studio.record({ projectId: id, async release() {} }, 1, {
+      windowMs: 1000, signal: controller.signal, onStarted() {}, onProgress() {},
+    })).toEqual({ ok: false, error: "interrupted" });
+    expect(await db.getAll("takes")).toMatchObject([{ savedAt: 1 }]);
+  });
+
+  it("discards an abort after the take put succeeds but before commit", async () => {
+    vi.mocked(captureFixedWindow).mockResolvedValueOnce(capture);
+    const controller = new AbortController();
+    const put = IDBObjectStore.prototype.put;
+    vi.spyOn(IDBObjectStore.prototype, "put").mockImplementation(function (this: IDBObjectStore, ...args) {
+      const request = put.apply(this, args);
+      if (this.name === "takes") request.addEventListener("success", () => controller.abort(), { once: true });
+      return request;
+    });
+    expect(await services.studio.record({ projectId: id, async release() {} }, 1, {
+      windowMs: 1000, signal: controller.signal, onStarted() {}, onProgress() {},
+    })).toEqual({ ok: false, error: "interrupted" });
+    expect(await db.getAll("takes")).toMatchObject([{ savedAt: 1 }]);
+  });
+
+  it.each(["getAll", "get"] as const)("returns interrupted when preflight %s rejects", async (method) => {
+    const spy = vi.spyOn(db, method).mockRejectedValueOnce(new DOMException("read failed", "UnknownError"));
+    try {
+      expect(await services.studio.record({ projectId: id, async release() {} }, 1, {
+        windowMs: 1000, signal: new AbortController().signal, onStarted() {}, onProgress() {},
+      })).toEqual({ ok: false, error: "interrupted" });
+    } finally { spy.mockRestore(); }
+    expect(await db.getAll("takes")).toMatchObject([{ savedAt: 1 }]);
+  });
+
   it("derives the saved take's version marker inside its write transaction", async () => {
     vi.mocked(captureFixedWindow).mockResolvedValueOnce(capture);
     const write = db.write;

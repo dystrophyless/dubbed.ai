@@ -155,6 +155,7 @@ export async function captureFixedWindow(input: {
   });
 
   const stopWith = (reason: CaptureResult["endReason"]) => {
+    if (reason === "interrupted") endReason = reason;
     if (recorder.state === "inactive") return;
     endReason = reason;
     recorder.stop();
@@ -190,7 +191,7 @@ export async function captureFixedWindow(input: {
       void audioContext.resume().then(tick).catch(() => undefined);
     }
     const result = await done;
-    if (result.endReason === "interrupted") throw new MicrophoneError("interrupted");
+    if (input.signal?.aborted || result.endReason === "interrupted") throw new MicrophoneError("interrupted");
     return result;
   } finally {
     window.clearTimeout(stopTimer);

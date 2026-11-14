@@ -1,11 +1,12 @@
-import { useQueries, useQueryClient } from "@tanstack/react-query";
+import { useQueries, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router";
 import { toast } from "@/components/ui";
 import { ProjectsView, type ProjectItem, type ProjectState as ItemState } from "@/features/recording-flow-mock/views/ProjectsView";
 import { POLL_MS, projectId, qk, useAccount, useProjects, useServices, type ProjectSummary } from "@/services";
-import { cancelCharge } from "@/services/rules/money";
+import { priceOf } from "@/services/rules/pricing";
+import { refusalFor, refusalOf, toastRefusal } from "@/features/processing/cancelFailure";
 import { redirectTarget } from "@/services/rules/lifecycle";
 
 /*
@@ -63,17 +64,29 @@ export function ProjectsPage() {
     newVersion: p.state === "done" && p.pendingAssembling,
     changedMinutes: Math.max(0, Math.round((now - p.changedAt) / 60_000)),
   }));
-  // live cancel quotes for the running rows (polled, so the dialog's charge follows the preparation steps)
-  const running = list.filter((p) => p.state === "queued" || p.state === "preparing");
-  const quotes = useQueries({
-    queries: running.map((p) => ({
-      queryKey: ["cancel-quote", p.id],
-      queryFn: () => services.projects.cancelQuote(p.id),
-      refetchInterval: POLL_MS,
-    })),
+  // the open dialog: which action, for which project, from which state (the quote cache is emptied on open: no quote of an earlier opening)
+  const [dialog, setDialog] = useState<{ id: string; kind: "cancel" | "delete"; from: ProjectSummary["state"] | undefined } | null>(null);
+  const [closeToken, setCloseToken] = useState(0);
+  const quote = useQuery({
+    queryKey: ["cancel-quote", dialog?.id],
+    queryFn: () => services.projects.cancelQuote(projectId(dialog?.id ?? "")),
+    enabled: dialog?.kind === "cancel",
+    refetchInterval: POLL_MS,
   });
-  const quoteOf = new Map(running.map((p, i) => [p.id as string, quotes[i]?.data]));
   const byId = new Map(list.map((p) => [p.id as string, p]));
+  const dialogState = byId.get(dialog?.id ?? "")?.state;
+  const settled = projects.data !== undefined;
+  useEffect(() => {
+    if (!dialog || !settled) return;
+    const same = dialog.kind === "cancel" ? dialogState === "queued" || dialogState === "preparing" : dialogState === dialog.from;
+    if (same) return;
+    // server state moved on (an external change): close the dialog and say so
+    // oxlint-disable-next-line react/set-state-in-effect
+    setDialog(null);
+    setCloseToken((n) => n + 1);
+    toastRefusal(t, dialog.kind === "cancel" && dialogState === "recording" ? "finished" : "changed");
+    void qc.invalidateQueries();
+  }, [dialog, dialogState, settled, t, qc]);
   const slotsTotal = account.data?.slotLimit ?? 2;
   const state = projects.isPending ? "loading" : projects.isError ? "error" : items.length === 0 ? "empty" : items.length >= slotsTotal ? "slots-full" : "default";
 
@@ -92,31 +105,44 @@ export function ProjectsPage() {
           toast({ title: t("features.recordingFlowMock.projects.renamed") });
         });
       }}
+      onDialogChange={(d) => {
+        if (d?.kind === "cancel") qc.removeQueries({ queryKey: ["cancel-quote", d.id] });
+        setDialog(d ? { ...d, from: byId.get(d.id)?.state } : null);
+      }}
+      closeDialogToken={closeToken}
       onDelete={(id) => {
         const p = byId.get(id);
-        const isRunning = p?.state === "queued" || p?.state === "preparing";
-        const price = p ? Math.round((p.section.endMs - p.section.startMs) / 1000) : 0;
+        if (!p) return;
+        const isRunning = p.state === "queued" || p.state === "preparing";
         void (async () => {
-          if (isRunning) {
-            const result = await services.projects.cancel(projectId(id));
-            const charged = result.ok ? result.value.charged : 0;
-            toast({
-              tone: "success",
-              title: t("processing.toast.cancelled"),
-              description: charged ? t("processing.toast.charged", { count: charged }) : t("processing.toast.free", { count: price }),
-            });
-          } else {
-            await services.projects.remove(projectId(id));
-            toast({ title: t("features.recordingFlowMock.projects.deleted") });
+          try {
+            if (isRunning) {
+              const result = await services.projects.cancel(projectId(id));
+              if (!result.ok) {
+                toastRefusal(t, await refusalFor(services, projectId(id), result.error));
+              } else {
+                const charged = result.value.charged;
+                toast({
+                  tone: "success",
+                  title: t("processing.toast.cancelled"),
+                  description: charged ? t("processing.toast.charged", { count: charged }) : t("processing.toast.free", { count: priceOf(p.section) }),
+                });
+              }
+            } else {
+              const result = await services.projects.remove(projectId(id));
+              if (result.ok) toast({ title: t("features.recordingFlowMock.projects.deleted") });
+              else toastRefusal(t, refusalOf(result.error) === "generic" ? "generic" : "changed");
+            }
+          } catch {
+            toastRefusal(t, "generic");
           }
           void qc.invalidateQueries();
         })();
       }}
       cancelInfo={(p) => {
-        const q = quoteOf.get(p.id);
-        if (q) return { stepsDone: q.stepsDone, charge: q.charge, reserved: p.seconds };
-        const stepsDone = p.stage ? p.stage.n - 1 : 0;
-        return { stepsDone, charge: p.state === "preparing" ? cancelCharge(p.seconds, stepsDone) : 0, reserved: p.seconds };
+        const q = dialog?.id === p.id && dialog.kind === "cancel" && quote.data ? quote.data : null;
+        // the quote is the source of truth: reserved = what is charged now + what goes back (never the rounded display seconds)
+        return q ? { stepsDone: q.stepsDone, charge: q.charge, reserved: q.charge + q.refund } : null;
       }}
       onNewDub={() => navigate("/new")}
       onBuyCredits={() => navigate("/credits")}

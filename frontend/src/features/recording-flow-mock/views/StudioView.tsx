@@ -45,6 +45,8 @@ export type StudioViewProps = {
   freshCount: number;
   canPrev: boolean;
   canNext: boolean;
+  /** the page is busy with something else (a build in flight): controls are disabled like while saving, `rec` and the hints stay as they are */
+  locked?: boolean;
   originalPeaks: number[];
   takePeaks: number[];
   /** the turn's fragment of the source video, with its #t= fragment; the owner of the clock drives playback through videoRef */
@@ -260,6 +262,7 @@ function Actions({ v }: { v: StudioViewProps }) {
   const recording = v.rec === "recording";
   const saving = v.rec === "saving";
   const busy = isBusy(v);
+  const locked = busy || Boolean(v.locked);
   const last = isLast(v);
   const saved = v.hasTake && !busy;
   const status = recording ? t("studio.status.recording") : saving ? t("media.record.saving") : saved && v.live ? t("studio.status.saved") : "";
@@ -274,20 +277,20 @@ function Actions({ v }: { v: StudioViewProps }) {
         {v.index > 0 && (
           <span className={cx(s.cell, s.backCell)}>
             <Tooltip content={t("studio.tip.prev")}>
-              <Button variant="secondary" size="lg" icon={<Icon name="prev" />} aria-label={t("studio.prev")} aria-keyshortcuts="ArrowLeft" disabled={busy} onClick={v.onPrev} data-testid="studio-prev" />
+              <Button variant="secondary" size="lg" icon={<Icon name="prev" />} aria-label={t("studio.prev")} aria-keyshortcuts="ArrowLeft" disabled={locked} onClick={v.onPrev} data-testid="studio-prev" />
             </Tooltip>
           </span>
         )}
         {v.rerecord && !last && (
           <span className={cx(s.cell, s.backCell)}>
             <Tooltip content={t("studio.rerecord.tipNext")}>
-              <Button variant="secondary" size="lg" icon={<Icon name="next" />} aria-label={t("studio.rerecord.next")} aria-keyshortcuts="ArrowRight" disabled={busy} onClick={v.onNext} data-testid="studio-forward" />
+              <Button variant="secondary" size="lg" icon={<Icon name="next" />} aria-label={t("studio.rerecord.next")} aria-keyshortcuts="ArrowRight" disabled={locked} onClick={v.onNext} data-testid="studio-forward" />
             </Tooltip>
           </span>
         )}
         <span className={cx(s.cell, s.origCell)}>
           <Tooltip content={origOn ? t("studio.tip.pause") : t("studio.tip.original")}>
-            <Button variant="secondary" size="lg" icon={<Icon name={origOn ? "pause" : "play"} />} aria-pressed={origOn} aria-keyshortcuts="Space" disabled={busy} onClick={() => v.onPlay("original")}>
+            <Button variant="secondary" size="lg" icon={<Icon name={origOn ? "pause" : "play"} />} aria-pressed={origOn} aria-keyshortcuts="Space" disabled={locked} onClick={() => v.onPlay("original")}>
               {t("studio.original")}
             </Button>
           </Tooltip>
@@ -295,7 +298,7 @@ function Actions({ v }: { v: StudioViewProps }) {
         {v.hasTake && (
           <span className={cx(s.cell, s.takeCell)}>
             <Tooltip content={t("studio.tip.myTake")}>
-              <Button variant="secondary" size="lg" icon={<Icon name={takeOn ? "pause" : "waveform"} />} aria-pressed={takeOn} disabled={busy} onClick={() => v.onPlay("take")}>
+              <Button variant="secondary" size="lg" icon={<Icon name={takeOn ? "pause" : "waveform"} />} aria-pressed={takeOn} disabled={locked} onClick={() => v.onPlay("take")}>
                 {t("studio.myTake")}
               </Button>
             </Tooltip>
@@ -314,6 +317,7 @@ function Actions({ v }: { v: StudioViewProps }) {
                 progress={recording ? v.elapsed / v.windowSeconds : 1}
                 loading={saving}
                 aria-keyshortcuts="R"
+                disabled={!busy && v.locked}
                 onClick={busy ? v.onStop : v.onRecord}
               />
             </Tooltip>
@@ -324,7 +328,7 @@ function Actions({ v }: { v: StudioViewProps }) {
           v.freshCount > 0 && (
             <span className={cx(s.cell, s.nextCell)}>
               <Tooltip content={t("studio.rerecord.tipBuild")}>
-                <Button variant="primary" size="lg" disabled={busy} onClick={v.onBuild} data-testid="studio-build">
+                <Button variant="primary" size="lg" disabled={locked} onClick={v.onBuild} data-testid="studio-build">
                   {t("studio.buildNew")}
                 </Button>
               </Tooltip>
@@ -339,7 +343,7 @@ function Actions({ v }: { v: StudioViewProps }) {
                 // "Build the result" has no arrow: it ends the studio (and fits the phone cell in RU)
                 iconRight={last ? undefined : <Icon name="forward" />}
                 aria-keyshortcuts={last ? undefined : "ArrowRight"}
-                disabled={busy}
+                disabled={locked}
                 onClick={v.onNext}
                 data-testid="studio-next"
               >
@@ -403,7 +407,7 @@ function useStudioKeys(v: StudioViewProps) {
       if (d.askLeave || d.askBuild || document.querySelector("[role=dialog], [role=menu]")) return;
       const el = e.target instanceof HTMLElement ? e.target : null;
       if (el?.closest("input, textarea, select, [contenteditable=true], [role=slider]")) return;
-      const busy = isBusy(d);
+      const busy = isBusy(d) || Boolean(d.locked);
       if (e.key === " ") {
         if (el?.closest("button, a")) return;
         e.preventDefault();
@@ -412,10 +416,10 @@ function useStudioKeys(v: StudioViewProps) {
         e.preventDefault();
         if (d.rec === "recording") d.onStop();
         else if (!busy) d.onRecord();
-      } else if (e.key === "ArrowLeft" && d.canPrev) {
+      } else if (e.key === "ArrowLeft" && d.canPrev && !d.locked) {
         e.preventDefault();
         d.onPrev();
-      } else if (e.key === "ArrowRight" && d.canNext && !isLast(d)) {
+      } else if (e.key === "ArrowRight" && d.canNext && !isLast(d) && !d.locked) {
         e.preventDefault();
         d.onNext();
       }

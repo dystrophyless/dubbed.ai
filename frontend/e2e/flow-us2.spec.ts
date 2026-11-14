@@ -1,6 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 import { expectNoA11yViolations } from "./support/a11y";
 import { balanceLink, noHorizontalScroll, resetDemo, uploadScene } from "./support/flow";
+import { holdStore } from "./support/persistence";
 import { sceneVariant } from "./support/media-fixtures";
 import { openScreen } from "./support/screens";
 
@@ -233,6 +234,57 @@ test.describe("US2 — Processing money states", () => {
     await expect(balanceLink(page)).toContainText("120");
     await page.goto("/new");
     await expect(newDub(page)).toHaveAttribute("data-state", "empty"); // the project is gone, the slot is free
+  });
+
+  test("cancel dialog says it is calculating until this opening's quote is here, and Cancel preparing waits for it", async ({ page }) => {
+    await resetDemo(page, "speed:0.1");
+    await uploadAndWaitReady(page);
+    await page.clock.setFixedTime(Date.now());
+    await startDubbing(page);
+    const dialog = page.getByTestId("processing-cancel-dialog");
+    const confirm = dialog.getByRole("button", { name: "Cancel preparing" });
+
+    // the quote cannot be read yet: no invented "all credits go back", and nothing to confirm
+    let release = await holdStore(page, "projects");
+    await page.getByTestId("processing-cancel").click();
+    await expect(dialog).toContainText("Calculating the cost…");
+    await expect(dialog).not.toContainText("go back");
+    await expect(confirm).toBeDisabled();
+    await release();
+    await expect(dialog).toContainText("All 14 credits go back to your balance.");
+    await expect(confirm).toBeEnabled();
+
+    // a quote cached from this opening is not fresh for the next one
+    await dialog.getByRole("button", { name: "Keep preparing" }).click();
+    await expect(dialog).toBeHidden();
+    release = await holdStore(page, "projects");
+    await page.getByTestId("processing-cancel").click();
+    await expect(dialog).toContainText("Calculating the cost…");
+    await expect(confirm).toBeDisabled();
+    await release();
+    await expect(confirm).toBeEnabled();
+  });
+
+  test("preparation finishing behind the open cancel dialog closes it with a notice; the project stays and nothing is refunded", async ({ page }) => {
+    await resetDemo(page, "");
+    await uploadAndWaitReady(page);
+    const startedAt = Date.now();
+    await page.clock.setFixedTime(startedAt);
+    await startDubbing(page);
+    await page.clock.setFixedTime(startedAt + 7_000);
+    await expect(processing(page)).toHaveAttribute("data-phase", "running", { timeout: 20_000 });
+    await page.getByTestId("processing-cancel").click();
+    const dialog = page.getByTestId("processing-cancel-dialog");
+    await expect(dialog).toContainText(/\d of 3 steps? (is|are) done/);
+
+    await page.clock.setFixedTime(startedAt + 600_000); // preparation finishes while the dialog is open
+    await expect(page.getByText("Preparation has already finished — the project is ready.")).toBeVisible();
+    await expect(dialog).toBeHidden();
+    await expect(page.getByText("Preparing cancelled")).toHaveCount(0);
+    await page.goto("/projects");
+    await expect(page.getByTestId("project-card")).toHaveCount(1);
+    await expect(page.getByTestId("project-state")).not.toHaveText("Preparing");
+    await expect(balanceLink(page)).toContainText("106"); // the 14 credits stay charged
   });
 
   test("cancel during step 2 charges the quoted amount", async ({ page }) => {

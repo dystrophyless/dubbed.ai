@@ -60,6 +60,71 @@ describe("mock adapter", () => {
   });
   afterEach(() => vi.useRealTimers());
 
+  it.each([0, 7000])("remove rejects active preparation at %s ms without cancelling or charging", async (ms) => {
+    await services.projects.start(id);
+    at(ms);
+    expect(await services.projects.remove(id)).toEqual({ ok: false, error: "state" });
+    expect(await services.projects.get(id)).toMatchObject({ reserved: 13, charged: 0 });
+    expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 13, slotsUsed: 1 });
+  });
+
+  it("cancel distinguishes a gone project without any money effects", async () => {
+    await services.projects.remove(id);
+    expect(await services.projects.cancel(id)).toEqual({ ok: false, error: "not-found" });
+    expect(await services.account.get()).toMatchObject({ balance: 120, reserved: 0, slotsUsed: 0 });
+  });
+
+  it("cancel settles a just-finished preparation only once and returns state", async () => {
+    await services.projects.start(id);
+    at(20_000);
+    expect(await services.projects.cancel(id)).toEqual({ ok: false, error: "state" });
+    expect(await services.projects.get(id)).toMatchObject({ state: "recording", charged: 13, reserved: 0 });
+    expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 0, slotsUsed: 1 });
+  });
+
+  it.each(["start", "buildResult", "buildNewVersion"] as const)("returns storage instead of rejecting on %s write failure", async (method) => {
+    const spy = vi.spyOn(db, "write").mockRejectedValueOnce(new DOMException("full", "QuotaExceededError"));
+    try {
+      const operation = method === "start" ? services.projects.start(id) : services.studio[method](id);
+      expect(await operation).toEqual({ ok: false, error: "storage" });
+    } finally { spy.mockRestore(); }
+    expect(await services.projects.get(id)).toMatchObject({ state: "draft", reserved: 0 });
+    expect(await services.account.get()).toMatchObject({ balance: 120, reserved: 0 });
+  });
+
+  it.each(["start", "buildResult", "buildNewVersion"] as const)("rolls back an aborted %s commit and returns storage", async (method) => {
+    if (method !== "start") {
+      await db.write(["projects", "takes", "turns"], async (s) => {
+        const p = await db.req(s.projects.get(id));
+        s.projects.put({ ...p, state: method === "buildResult" ? "recording" : "done", currentVersion: method === "buildResult" ? null : 1 });
+        s.turns.put({ projectId: id, n: 1 });
+        s.takes.put({ projectId: id, n: 1, savedAt: 1, inVersion: null });
+      });
+    }
+    const before = await db.get("projects", id);
+    const write = db.write;
+    const spy = vi.spyOn(db, "write").mockImplementationOnce((stores, fn) => write(stores, async (s) => {
+      const value = await fn(s);
+      s.projects.transaction.abort();
+      return value;
+    }));
+    try {
+      expect(await (method === "start" ? services.projects.start(id) : services.studio[method](id)))
+        .toEqual({ ok: false, error: "storage" });
+    } finally { spy.mockRestore(); }
+    expect(await db.get("projects", id)).toEqual(before);
+    expect(await db.getAll("results")).toEqual([]);
+    expect(await services.account.get()).toMatchObject({ balance: 120, reserved: 0 });
+  });
+
+  it("reads account and projects from one readonly snapshot", async () => {
+    const read = vi.spyOn(db, "read");
+    try {
+      expect(await services.account.get()).toMatchObject({ balance: 120, reserved: 0, slotsUsed: 1 });
+      expect(read).toHaveBeenCalledWith(["kv", "projects"], expect.any(Function));
+    } finally { read.mockRestore(); }
+  });
+
   it.each(["notify", "rename"] as const)("%s merges with a polling failure without restoring refundable credits", async (field) => {
     await services.demo!.set({ outcome: "failed@2" });
     await services.projects.start(id);
@@ -116,10 +181,11 @@ describe("mock adapter", () => {
     expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 13 });
   });
 
-  it("remove rechecks preparation and refunds a start that won the transaction race", async () => {
-    await beforeNextWrite(async () => { await createMockServices().projects.start(id); }, () => services.projects.remove(id));
-    expect(await services.projects.get(id)).toBeNull();
-    expect(await services.account.get()).toMatchObject({ balance: 120, reserved: 0, slotsUsed: 0 });
+  it("remove rejects a start that won the transaction race without cancelling", async () => {
+    expect(await beforeNextWrite(async () => { await createMockServices().projects.start(id); }, () => services.projects.remove(id)))
+      .toEqual({ ok: false, error: "state" });
+    expect(await services.projects.get(id)).toMatchObject({ state: "queued", reserved: 13 });
+    expect(await services.account.get()).toMatchObject({ balance: 107, reserved: 13, slotsUsed: 1 });
   });
 
   it("cancel charges the live step at its write transaction rather than an old quote", async () => {

@@ -99,7 +99,9 @@ export function useFullscreen(
 export function togglePlay(video: HTMLVideoElement | null) {
   if (!video) return;
   if (video.paused || video.ended) {
-    video.play().catch(() => {
+    video.play().catch((e: unknown) => {
+      // pausing before playback starts rejects play() with AbortError — that is not a refusal of sound
+      if (!(e instanceof DOMException && e.name === "NotAllowedError")) return;
       video.muted = true;
       return video.play().catch(() => undefined);
     });

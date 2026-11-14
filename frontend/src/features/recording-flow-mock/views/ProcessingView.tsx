@@ -37,8 +37,8 @@ export type ProcessingViewProps = {
   shape?: ClipShape;
   /** "Ready — opening the studio" only when the studio opens by itself */
   opening: boolean;
-  /** cancel dialog: finished steps, the credits charged now, credits that go back */
-  cancel: { open: boolean; stepsDone: number; charge: number; back: number };
+  /** cancel dialog: finished steps, the credits charged now, credits that go back; `pending` = this opening's quote is not here yet */
+  cancel: { open: boolean; pending: boolean; stepsDone: number; charge: number; back: number };
   deleteOpen: boolean;
   busy: boolean;
   notify: NotifyProps | null;
@@ -221,12 +221,14 @@ function Dialogs({ pr }: { pr: ProcessingViewProps }) {
         footer={
           <>
             <Button variant="secondary" onClick={pr.onCloseCancel} disabled={pr.busy}>{t("processing.dialog.keep")}</Button>
-            <Button variant="destructive" onClick={pr.onConfirmCancel} loading={pr.busy}>{t("processing.cancel")}</Button>
+            <Button variant="destructive" onClick={pr.onConfirmCancel} loading={pr.busy} disabled={cancel.pending}>{t("processing.cancel")}</Button>
           </>
         }
       >
         <Stack gap={8}>
-          {cancel.charge > 0 ? (
+          {cancel.pending ? (
+            <Text tone="strong" medium>{t("features.recordingFlowMock.page.calculating")}</Text>
+          ) : cancel.charge > 0 ? (
             <>
               <Text tone="strong" medium tabular>
                 {`${t("processing.dialog.done", { count: cancel.stepsDone })} — ${t("processing.dialog.charged", { count: cancel.charge })}`}

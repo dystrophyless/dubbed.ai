@@ -342,7 +342,8 @@ test.describe("US1 — studio states", () => {
       (window as Window & { restoreTestMic?: () => void }).restoreTestMic = () => { navigator.mediaDevices.getUserMedia = native; };
     });
     await blockMicrophone(page);
-    await openStudio(page);
+    // recordTurn checks the recording-only UI one by one: a 1 s window can end before it gets there on a busy machine
+    await openStudio(page, 4000);
     await recordButton(page).click();
     await expect(page.getByTestId("mic-blocked")).toBeVisible();
     // Record stays in its slot, disabled; the notice is its description
@@ -399,6 +400,80 @@ test.describe("US1 — studio states", () => {
     await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "saved", { timeout: 15_000 });
     // nothing unsaved → Exit leaves at once
     await page.getByTestId("studio-exit").click();
+    await expect(page).toHaveURL(/\/projects$/);
+  });
+
+  /** savedAt of the saved take of turn 1 of the demo project, straight from the mock database */
+  const takeSavedAt = (page: Page) =>
+    page.evaluate(async () => {
+      const db = await new Promise<IDBDatabase>((resolve) => { const r = indexedDB.open("dubbed-mock"); r.onsuccess = () => resolve(r.result); });
+      const take = await new Promise<{ savedAt: number } | undefined>((resolve) => {
+        const r = db.transaction("takes").objectStore("takes").get(["layout", 1]); r.onsuccess = () => resolve(r.result);
+      });
+      db.close();
+      return take?.savedAt ?? 0;
+    });
+
+  test("Stop, then Leave without saving while it is saving keeps the earlier take", async ({ page }) => {
+    await openStudio(page, 10000);
+    await recordButton(page).click();
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "recording");
+    await recordButton(page).click(); // Stop
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "saved", { timeout: 15_000 });
+    const before = await takeSavedAt(page);
+    expect(before).toBeGreaterThan(0);
+
+    await recordButton(page).click();
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "recording");
+    const release = await holdStore(page, "takes");
+    try {
+      await recordButton(page).click(); // Stop: the write waits on the held store
+      await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "saving");
+      await page.getByTestId("studio-exit").click();
+      await page.getByTestId("leave-dialog").getByRole("button", { name: "Leave without saving" }).click();
+      await expect(page).toHaveURL(/\/projects$/);
+    } finally { await release(); }
+    await page.waitForTimeout(750); // a late write would land right after the release
+    expect(await takeSavedAt(page)).toBe(before);
+  });
+
+  test("Save and leave stays in the studio when the take cannot be saved; a later take does not navigate", async ({ page }) => {
+    await page.addInitScript(() => {
+      const put = IDBObjectStore.prototype.put;
+      IDBObjectStore.prototype.put = function (this: IDBObjectStore, value: unknown, key?: IDBValidKey) {
+        if (this.name === "takes" && (window as Window & { failTakes?: boolean }).failTakes) throw new DOMException("full", "QuotaExceededError");
+        return put.call(this, value, key);
+      };
+    });
+    await openStudio(page, 10000);
+    const turnUrl = page.url();
+    await recordButton(page).click();
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "recording");
+    await page.getByTestId("studio-exit").click();
+    await page.evaluate(() => { (window as Window & { failTakes?: boolean }).failTakes = true; });
+    await page.getByTestId("leave-dialog").getByRole("button", { name: "Save and leave" }).click();
+    await expect(page.getByText("The recording was interrupted and not kept.")).toBeVisible();
+    await expect(page).toHaveURL(turnUrl);
+    await expect(page.getByTestId("leave-dialog")).toBeHidden();
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "idle");
+
+    await page.evaluate(() => { (window as Window & { failTakes?: boolean }).failTakes = false; });
+    await recordButton(page).click();
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "recording");
+    await recordButton(page).click(); // Stop
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "saved", { timeout: 15_000 });
+    await expect(page).toHaveURL(turnUrl); // the old leave request is gone
+  });
+
+  test("Save and leave leaves at once when the take finished while the dialog was open", async ({ page }) => {
+    await openStudio(page, 2500);
+    await recordButton(page).click();
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "recording");
+    await page.getByTestId("studio-exit").click();
+    const dialog = page.getByTestId("leave-dialog");
+    await expect(dialog).toBeVisible();
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "saved", { timeout: 15_000 });
+    await dialog.getByRole("button", { name: "Save and leave" }).click();
     await expect(page).toHaveURL(/\/projects$/);
   });
 });

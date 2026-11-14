@@ -38,6 +38,16 @@ export function NewDubPage() {
   const [noSlot, setNoSlot] = useState(false);
   const [starting, setStarting] = useState(false);
   const abort = useRef<AbortController | null>(null);
+  const mounted = useRef(true);
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      // leaving the page drops the upload in flight (no late draft, no slot)
+      mounted.current = false;
+      abort.current?.abort();
+      abort.current = null;
+    };
+  }, []);
 
   // the section: local while the user drags, saved to the draft shortly after
   const [range, setRange] = useState<[number, number] | null>(null);
@@ -75,12 +85,17 @@ export function NewDubPage() {
       const controller = new AbortController();
       abort.current = controller;
       setUpload({ phase: "uploading", progress: 0, fileName: file.name, error: "length" });
-      const outcome = await services.upload.upload(file, {
-        signal: controller.signal,
-        replace: (draftId ?? reusable) as ProjectId | undefined,
-        onProgress: (p) => setUpload((u) => (u && u.phase === "uploading" ? { ...u, progress: Math.round(p * 100) } : u)),
-        onChecking: () => setUpload((u) => (u ? { ...u, phase: "checking", progress: 100 } : u)),
-      });
+      let outcome: Awaited<ReturnType<typeof services.upload.upload>>;
+      try {
+        outcome = await services.upload.upload(file, {
+          signal: controller.signal,
+          replace: (draftId ?? reusable) as ProjectId | undefined,
+          onProgress: (p) => setUpload((u) => (u && u.phase === "uploading" ? { ...u, progress: Math.round(p * 100) } : u)),
+          onChecking: () => setUpload((u) => (u ? { ...u, phase: "checking", progress: 100 } : u)),
+        });
+      } catch {
+        outcome = { ok: false, error: "broken" };
+      }
       if (abort.current !== controller) return;
       abort.current = null;
       if (outcome.ok) {
@@ -95,11 +110,14 @@ export function NewDubPage() {
         setNoSlot(true);
       } else if (outcome.error === "aborted") {
         setUpload(null);
+      } else if (outcome.error === "storage") {
+        setUpload(null);
+        toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
       } else {
         setUpload({ phase: "error", progress: 0, fileName: file.name, error: outcome.error });
       }
     },
-    [services, draftId, reusable, qc],
+    [services, draftId, reusable, qc, t],
   );
 
   const cancelUpload = () => {
@@ -111,20 +129,26 @@ export function NewDubPage() {
   const start = async () => {
     if (!draft || !range || starting) return;
     setStarting(true);
-    pending.current = { id: draft.id, start: range[0], end: range[1] };
-    if (!await flush()) {
-      setStarting(false);
-      toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
-      return;
-    }
-    const outcome = await services.projects.start(draft.id);
-    if (outcome.ok) {
+    const failed = () => toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
+    try {
+      pending.current = { id: draft.id, start: range[0], end: range[1] };
+      if (!await flush()) {
+        failed();
+        return;
+      }
+      const outcome = await services.projects.start(draft.id);
+      if (!outcome.ok) {
+        failed();
+        return;
+      }
       void qc.invalidateQueries({ queryKey: qk.project(draft.id) });
-      navigate(`/projects/${draft.id}/processing`);
-      return;
+      // the paid start has happened either way; only a page that is still here navigates on
+      if (mounted.current) navigate(`/projects/${draft.id}/processing`);
+    } catch {
+      failed();
+    } finally {
+      if (mounted.current) setStarting(false);
     }
-    setStarting(false);
-    toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
   };
 
   if (draftQuery.isError || account.isError) {

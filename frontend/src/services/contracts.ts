@@ -135,7 +135,7 @@ export type ResultPlayer = { url: string; durationMs: number; format: FileFormat
 
 /* ---------- Ports ---------- */
 
-export type UploadError = "no-slot" | "length" | "short" | "no-audio" | "broken" | "aborted";
+export type UploadError = "no-slot" | "length" | "short" | "no-audio" | "broken" | "aborted" | "storage";
 
 export interface AccountPort {
   get(): Promise<Account>;
@@ -157,13 +157,15 @@ export interface ProjectPort {
   /** the draft that is open on New dub, if any */
   currentDraft(): Promise<Project | null>;
   setSection(id: ProjectId, s: Section): Promise<Outcome<Project, "range" | "state">>;
-  start(id: ProjectId): Promise<Outcome<Project, "credits" | "state">>;
+  start(id: ProjectId): Promise<Outcome<Project, "credits" | "state" | "storage">>;
   cancelQuote(id: ProjectId): Promise<{ stepsDone: number; charge: number; refund: number }>;
-  cancel(id: ProjectId): Promise<Outcome<{ charged: number }, "state">>;
+  /** state = no longer cancellable; not-found = already removed. No cancel charge/refund on either error; time advancement may first settle/refund preparation. */
+  cancel(id: ProjectId): Promise<Outcome<{ charged: number }, "state" | "not-found">>;
   retry(id: ProjectId): Promise<Outcome<Project, "credits" | "state">>;
   setNotify(id: ProjectId, on: boolean): Promise<void>;
   rename(id: ProjectId, name: string): Promise<void>;
-  remove(id: ProjectId): Promise<void>;
+  /** Active preparation requires explicit cancel confirmation; remove returns state without charging. */
+  remove(id: ProjectId): Promise<Outcome<void, "state">>;
   /** object URL of the source video */
   videoUrl(id: ProjectId): Promise<string | null>;
 }
@@ -185,8 +187,8 @@ export interface StudioPort {
     opts: { windowMs: number; signal: AbortSignal; stop?: AbortSignal; onStarted(): void; onProgress(p: { elapsedMs: number; peaks: number[] }): void },
   ): Promise<Outcome<Take, RecordError>>;
   /** first version (recording → assembling) */
-  buildResult(id: ProjectId): Promise<Outcome<ResultVersion, "missing-takes" | "state">>;
-  buildNewVersion(id: ProjectId): Promise<Outcome<ResultVersion, "nothing-new" | "assembling" | "state">>;
+  buildResult(id: ProjectId): Promise<Outcome<ResultVersion, "missing-takes" | "state" | "storage">>;
+  buildNewVersion(id: ProjectId): Promise<Outcome<ResultVersion, "nothing-new" | "assembling" | "state" | "storage">>;
 }
 
 export interface ResultPort {

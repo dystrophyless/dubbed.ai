@@ -115,7 +115,16 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
   const resultPath = `/projects/${project.id}/result`;
   const takeUrl = useQuery({ queryKey: qk.takeUrl(project.id, turn.n), queryFn: () => services.studio.takeUrl(project.id, turn.n), enabled: hasTake });
 
-  const busy = session !== "idle";
+  // a build in flight keeps the studio as busy as saving does (set before the first await, reset in finally)
+  const [buildPending, setBuildPending] = useState(false);
+  const busy = session !== "idle" || buildPending;
+  const mounted = useRef(true);
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+    };
+  }, []);
   const abortRec = useRef<AbortController | null>(null);
   const stopRec = useRef<AbortController | null>(null);
   const leaving = useRef<"none" | "after-save" | "discard">("none");
@@ -143,7 +152,9 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
       if (clip === "take" && takeUrl.data) audio = new Audio(takeUrl.data);
       try {
         await v.play();
-      } catch {
+      } catch (e) {
+        // paused or switched before playback started: the browser aborts play() — that is not a refusal of sound
+        if (cancelled || !(e instanceof DOMException && e.name === "NotAllowedError")) return;
         // the browser refused sound: play the picture silently instead
         v.muted = true;
         await v.play().catch(() => undefined);
@@ -240,7 +251,9 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
     setSession("recording");
     setElapsed(0);
     setLivePeaks([]);
-    const outcome = await services.studio.record(lease.value, turn.n, {
+    let outcome: Awaited<ReturnType<typeof services.studio.record>>;
+    try {
+      outcome = await services.studio.record(lease.value, turn.n, {
       windowMs: turn.windowMs,
       signal: abort.signal,
       stop: stop.signal,
@@ -251,22 +264,29 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
         if (elapsedMs >= turn.windowMs - 60) setSession("saving");
       },
     });
-    await lease.value.release();
+    } catch {
+      outcome = { ok: false, error: "interrupted" }; // an unexpected reject is an interrupted take
+    } finally {
+      await lease.value.release().catch(() => undefined); // the lock is never left held
+    }
     abortRec.current = null;
     stopRec.current = null;
     setSession("saving");
     setClip("none");
     if (outcome.ok) {
       // the same turn recorded again has a new file: the cached URL of the old take must go
-      await Promise.all([qc.refetchQueries({ queryKey: qk.takes(project.id) }), qc.invalidateQueries({ queryKey: qk.takeUrl(project.id, turn.n) })]);
+      await Promise.all([qc.refetchQueries({ queryKey: qk.takes(project.id) }), qc.invalidateQueries({ queryKey: qk.takeUrl(project.id, turn.n) })]).catch(() => undefined);
     } else if (outcome.error === "assembling") navigate(resultPath, { replace: true });
     else if (outcome.error === "mic-blocked" || outcome.error === "mic-missing") setBlock("microphone");
-    else if (leaving.current === "none") toast({ tone: "danger", title: t("features.recordingFlowMock.studio.interrupted") });
+    else if (leaving.current !== "discard") toast({ tone: "danger", title: t("features.recordingFlowMock.studio.interrupted") });
     setSession("idle");
     setFirstTake(false);
     setElapsed(0);
-    if (leaving.current === "after-save") {
-      leaving.current = "none";
+    const wasLeaving = leaving.current === "after-save";
+    // a take that was not saved ends the leave request: the user stays, with the message above, and nothing navigates later
+    if (wasLeaving) leaving.current = "none";
+    if (!outcome.ok) setAskLeave(false);
+    if (wasLeaving && outcome.ok) {
       if (rerecord) setAskBuild(true);
       else navigate("/projects");
     }
@@ -290,33 +310,48 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
   const build = async () => {
     if (building.current) return;
     building.current = true;
-    const outcome = await services.studio.buildResult(project.id);
-    if (!outcome.ok) {
-      building.current = false;
+    setBuildPending(true); // synchronously, before the first await
+    try {
+      const outcome = await services.studio.buildResult(project.id);
+      if (!outcome.ok) {
+        toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
+        return;
+      }
+      // the Result page must not trust a project read from before the build
+      await Promise.all([qc.refetchQueries({ queryKey: qk.project(project.id) }), qc.refetchQueries({ queryKey: qk.result(project.id) })]);
+      if (mounted.current) navigate(`/projects/${project.id}/result`); // the user may have left meanwhile
+    } catch {
       toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
-      return;
+    } finally {
+      building.current = false;
+      if (mounted.current) setBuildPending(false);
     }
-    // the Result page must not trust a project read from before the build
-    await Promise.all([qc.refetchQueries({ queryKey: qk.project(project.id) }), qc.refetchQueries({ queryKey: qk.result(project.id) })]);
-    navigate(`/projects/${project.id}/result`);
   };
 
   const buildNew = async () => {
     if (building.current) return;
     building.current = true;
-    const outcome = await services.studio.buildNewVersion(project.id);
-    if (!outcome.ok && outcome.error !== "assembling") {
-      building.current = false;
+    setBuildPending(true);
+    try {
+      const outcome = await services.studio.buildNewVersion(project.id);
+      if (!outcome.ok && outcome.error !== "assembling") {
+        setAskBuild(false);
+        toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
+        return;
+      }
+      await Promise.all([
+        qc.refetchQueries({ queryKey: qk.project(project.id) }),
+        qc.refetchQueries({ queryKey: qk.result(project.id) }),
+        qc.refetchQueries({ queryKey: qk.takes(project.id) }),
+      ]);
+      if (mounted.current) navigate(resultPath);
+    } catch {
       setAskBuild(false);
       toast({ tone: "danger", title: t("features.recordingFlowMock.page.genericError") });
-      return;
+    } finally {
+      building.current = false;
+      if (mounted.current) setBuildPending(false);
     }
-    await Promise.all([
-      qc.refetchQueries({ queryKey: qk.project(project.id) }),
-      qc.refetchQueries({ queryKey: qk.result(project.id) }),
-      qc.refetchQueries({ queryKey: qk.takes(project.id) }),
-    ]);
-    navigate(resultPath);
   };
 
   const next = () => {
@@ -331,7 +366,8 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
   };
 
   const exit = () => {
-    if (busy) setAskLeave(true);
+    if (buildPending) return;
+    if (session !== "idle") setAskLeave(true);
     else if (rerecord && freshCount > 0) setAskBuild(true);
     else navigate(rerecord ? resultPath : "/projects");
   };
@@ -351,15 +387,16 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
     elapsed,
     windowSeconds: windowS,
     playing,
-    hasTake: hasTake && !(busy && firstTake),
+    hasTake: hasTake && !(session !== "idle" && firstTake),
     live: acted,
     rerecord,
     freshCount,
     canPrev: index > 0 && !busy,
+    locked: buildPending,
     canNext: rerecord ? !last && !busy : hasTake && !busy,
     // display only (owner 2026-11-12): the whole clip shares one gain, so quiet audio stays readable and turns stay comparable
     originalPeaks: applyDisplayGain(turn.originalPeaks, displayGain(turns.map((x) => x.originalPeaks))),
-    takePeaks: busy ? livePeaks : (take?.peaks ?? []),
+    takePeaks: session !== "idle" ? livePeaks : (take?.peaks ?? []),
     videoSrc: `${sourceUrl}#t=${startS}`,
     videoRef,
     volume,
@@ -372,6 +409,7 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
     onExit: exit,
     onStay: () => {
       // "Stay" keeps what was recorded: the running take is stopped and saved
+      leaving.current = "none";
       setAskLeave(false);
       stop();
     },
@@ -381,8 +419,15 @@ function StudioTurn({ project, turns, takes, sourceUrl, index, rerecord }: TurnP
       navigate(rerecord ? resultPath : "/projects");
     },
     onLeaveSave: () => {
-      leaving.current = "after-save";
       setAskLeave(false);
+      if (session === "idle") {
+        // the take finished while the dialog was open: it is saved already — leave at once, nothing stays pending
+        leaving.current = "none";
+        if (rerecord) setAskBuild(true);
+        else navigate("/projects");
+        return;
+      }
+      leaving.current = "after-save";
       stop();
     },
     onCloseAskBuild: () => setAskBuild(false),

@@ -157,6 +157,25 @@ test.describe("US5 - My projects", () => {
     await expect(page.getByText("1 of 10 project slots used")).toBeVisible();
   });
 
+  test("a cancel dialog opened for one project does not follow browser history to another", async ({ page }) => {
+    await openSeeded(page, ["queued", "preparing"]);
+    await page.goto("/projects/seed-queued/processing");
+    await expect(page.getByTestId("processing")).toContainText("queued seed");
+    await page.getByRole("link", { name: "My projects" }).first().click();
+    await page.getByRole("link", { name: /preparing seed/ }).click();
+    await expect(page.getByTestId("processing")).toContainText("preparing seed");
+    await page.getByTestId("processing-cancel").click();
+    const dialog = page.getByTestId("processing-cancel-dialog");
+    await expect(dialog).toContainText(/\d of 3 steps? (is|are) done/);
+
+    await page.evaluate(() => history.go(-2)); // straight back to the other project's Processing
+    await expect(page).toHaveURL(/\/projects\/seed-queued\/processing$/);
+    await expect(page.getByTestId("processing")).toContainText("queued seed");
+    await expect(dialog).toBeHidden(); // the old action cannot be confirmed here
+    await page.goto("/projects");
+    await expect(page.getByTestId("project-card")).toHaveCount(2);
+  });
+
   test("empty state offers New dub; slots-full offers Buy credits", async ({ page }) => {
     await resetDemo(page, "slots:10", "/projects");
     await expect(page.getByText("No projects yet")).toBeVisible();

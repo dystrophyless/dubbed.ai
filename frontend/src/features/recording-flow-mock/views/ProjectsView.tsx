@@ -36,7 +36,11 @@ export type ProjectsViewProps = {
   onRename: (id: string, name: string) => void;
   onDelete: (id: string) => void;
   /** what cancelling a queued/preparing project costs right now (reported by the service; the dialog shows it live) */
-  cancelInfo: (p: ProjectItem) => { stepsDone: number; charge: number; reserved: number };
+  cancelInfo: (p: ProjectItem) => { stepsDone: number; charge: number; reserved: number } | null;
+  /** the page asks the dialog to open / close (it remembers which action it was, to react to lifecycle changes) */
+  onDialogChange?: (d: { id: string; kind: "cancel" | "delete" } | null) => void;
+  /** change the number to close an open delete / cancel dialog from the page */
+  closeDialogToken?: number;
   /** prototype/review aid: open the delete dialog of this project on arrival */
   initialDeleteId?: string;
   onNewDub: () => void;
@@ -59,6 +63,15 @@ export function ProjectsView(props: ProjectsViewProps) {
   const [renaming, setRenaming] = useState<ProjectItem | null>(null);
   const [deleting, setDeleting] = useState<ProjectItem | null>(() => projects.find((p) => p.id === props.initialDeleteId) ?? null);
   const [name, setName] = useState("");
+  const [seenToken, setSeenToken] = useState(props.closeDialogToken);
+  if (seenToken !== props.closeDialogToken) {
+    setSeenToken(props.closeDialogToken);
+    setDeleting(null);
+  }
+  const askDelete = (p: ProjectItem | null) => {
+    setDeleting(p);
+    props.onDialogChange?.(p ? { id: p.id, kind: isRunning(p) ? "cancel" : "delete" } : null);
+  };
   const ready = state !== "loading" && state !== "error";
   const list = state === "empty" ? [] : [...projects].sort((a, b) => (sort === "recent" ? a.changedMinutes - b.changedMinutes : a.name.localeCompare(b.name)));
 
@@ -108,7 +121,7 @@ export function ProjectsView(props: ProjectsViewProps) {
           ) : (
             <List label={t(`${P}.title`)} data-testid="projects-list">
               {list.map((p) => (
-                <Row key={p.id} p={p} to={props.hrefOf(p)} onRename={() => { setName(p.name); setRenaming(p); }} onDelete={() => setDeleting(p)} />
+                <Row key={p.id} p={p} to={props.hrefOf(p)} onRename={() => { setName(p.name); setRenaming(p); }} onDelete={() => askDelete(p)} />
               ))}
             </List>
           )}
@@ -138,21 +151,21 @@ export function ProjectsView(props: ProjectsViewProps) {
       </Dialog>
 
       {/* Queued / Preparing: Delete is the Processing cancel dialog with the live charge (owner, round 1) */}
-      <CancelDialog p={deleting && isRunning(deleting) ? deleting : null} info={props.cancelInfo} onClose={() => setDeleting(null)} onConfirm={(id) => { props.onDelete(id); setDeleting(null); }} />
+      <CancelDialog p={deleting && isRunning(deleting) ? deleting : null} info={props.cancelInfo} onClose={() => askDelete(null)} onConfirm={(id) => { props.onDelete(id); askDelete(null); }} />
 
       <Dialog
         open={deleting !== null && !isRunning(deleting)}
         role="alertdialog"
-        onClose={() => setDeleting(null)}
+        onClose={() => askDelete(null)}
         title={t(`${P}.deleteTitle`, { name: deleting?.name ?? "" })}
         footer={
           <>
-            <Button variant="secondary" onClick={() => setDeleting(null)}>{t(`${P}.cancel`)}</Button>
+            <Button variant="secondary" onClick={() => askDelete(null)}>{t(`${P}.cancel`)}</Button>
             <Button
               variant="destructive"
               onClick={() => {
                 if (deleting) props.onDelete(deleting.id);
-                setDeleting(null);
+                askDelete(null);
               }}
             >
               {t(`${P}.delete`)}
@@ -170,7 +183,7 @@ const isRunning = (p: ProjectItem) => p.state === "queued" || p.state === "prepa
 
 function CancelDialog({ p, info, onClose, onConfirm }: { p: ProjectItem | null; info: ProjectsViewProps["cancelInfo"]; onClose: () => void; onConfirm: (id: string) => void }) {
   const { t } = useTranslation();
-  const c = p ? info(p) : { stepsDone: 0, charge: 0, reserved: 0 };
+  const c = p ? info(p) : null;
   return (
     <Dialog
       open={p !== null}
@@ -181,12 +194,14 @@ function CancelDialog({ p, info, onClose, onConfirm }: { p: ProjectItem | null; 
       footer={
         <>
           <Button variant="secondary" onClick={onClose}>{t("processing.dialog.keep")}</Button>
-          <Button variant="destructive" onClick={() => p && onConfirm(p.id)}>{t("processing.cancel")}</Button>
+          <Button variant="destructive" disabled={!c} onClick={() => p && c && onConfirm(p.id)}>{t("processing.cancel")}</Button>
         </>
       }
     >
       <Stack gap={8}>
-        {c.charge > 0 ? (
+        {!c ? (
+          <Text tone="strong" medium>{t("features.recordingFlowMock.page.calculating")}</Text>
+        ) : c.charge > 0 ? (
           <>
             <Text tone="strong" medium tabular>{`${t("processing.dialog.done", { count: c.stepsDone })} — ${t("processing.dialog.charged", { count: c.charge })}`}</Text>
             <Text tabular>{`${t("processing.dialog.back", { count: c.reserved - c.charge })} ${t("processing.dialog.removed")}`}</Text>

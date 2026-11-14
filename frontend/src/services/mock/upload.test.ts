@@ -39,6 +39,90 @@ describe("mock upload validation", () => {
     expect(await services.account.get()).toMatchObject({ balance: 120, reserved: 0, slotsUsed: 0 });
   }
 
+  it.each([false, true])("aborts inside the write transaction without changing video or slots (replace=%s)", async (replace) => {
+    vi.mocked(probeVideo).mockResolvedValue({ durationMs: 13_000, width: 1280, height: 544 });
+    vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);
+    const first = replace ? await upload() : null;
+    const id = first?.ok ? first.value.id : undefined;
+    const before = await db.getAll("videos");
+    const controller = new AbortController();
+    const req = db.req;
+    const spy = vi.spyOn(db, "req").mockImplementation(async (request) => {
+      const value = await req(request);
+      controller.abort();
+      return value;
+    });
+    try {
+      expect(await services.upload.upload(file(), {
+        replace: id, signal: controller.signal, onProgress: () => vi.setSystemTime(Date.now() + 2000),
+      })).toEqual({ ok: false, error: "aborted" });
+    } finally { spy.mockRestore(); }
+    expect(await db.getAll("videos")).toEqual(before);
+    expect(await services.account.get()).toMatchObject({ slotsUsed: replace ? 1 : 0 });
+  });
+
+  it.each([false, true])("aborts after video put succeeds but before commit (replace=%s)", async (replace) => {
+    vi.mocked(probeVideo).mockResolvedValue({ durationMs: 13_000, width: 1280, height: 544 });
+    vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);
+    const first = replace ? await upload() : null;
+    const id = first?.ok ? first.value.id : undefined;
+    const before = await db.getAll("videos");
+    const controller = new AbortController();
+    const put = IDBObjectStore.prototype.put;
+    const spy = vi.spyOn(IDBObjectStore.prototype, "put").mockImplementation(function (this: IDBObjectStore, ...args) {
+      const request = put.apply(this, args);
+      if (this.name === "videos") request.addEventListener("success", () => controller.abort(), { once: true });
+      return request;
+    });
+    try {
+      expect(await services.upload.upload(file(), {
+        replace: id, signal: controller.signal, onProgress: () => vi.setSystemTime(Date.now() + 2000),
+      })).toEqual({ ok: false, error: "aborted" });
+    } finally { spy.mockRestore(); }
+    expect(await db.getAll("videos")).toEqual(before);
+    expect(await services.account.get()).toMatchObject({ slotsUsed: replace ? 1 : 0 });
+  });
+
+  it.each(["commit", "throw", "already-aborted"] as const)("removes the transaction abort listener after %s", async (end) => {
+    const controller = new AbortController();
+    if (end === "already-aborted") controller.abort();
+    const add = vi.spyOn(controller.signal, "addEventListener");
+    const remove = vi.spyOn(controller.signal, "removeEventListener");
+    try {
+      const operation = db.write(["kv"], (s) => {
+        s.kv.put("new", "listener-test");
+        if (end === "throw") throw new DOMException("full", "QuotaExceededError");
+      }, controller.signal);
+      if (end === "commit") await operation;
+      else await expect(operation).rejects.toBeInstanceOf(DOMException);
+      expect(add).toHaveBeenCalledWith("abort", expect.any(Function), { once: true });
+      expect(remove).toHaveBeenCalledWith("abort", add.mock.calls[0]![1]);
+      expect(await db.get("kv", "listener-test")).toBe(end === "commit" ? "new" : undefined);
+    } finally { add.mockRestore(); remove.mockRestore(); }
+  });
+
+  it("returns storage when the upload commit fails and leaves the slot free", async () => {
+    vi.mocked(probeVideo).mockResolvedValue({ durationMs: 13_000, width: 1280, height: 544 });
+    vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);
+    const spy = vi.spyOn(db, "write").mockRejectedValueOnce(new DOMException("full", "QuotaExceededError"));
+    try { expect(await upload()).toEqual({ ok: false, error: "storage" }); }
+    finally { spy.mockRestore(); }
+    await expectNoDraftOrSlot();
+  });
+
+  it("rolls back the draft when storing the video throws after the project put", async () => {
+    vi.mocked(probeVideo).mockResolvedValue({ durationMs: 13_000, width: 1280, height: 544 });
+    vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);
+    const put = IDBObjectStore.prototype.put;
+    const spy = vi.spyOn(IDBObjectStore.prototype, "put").mockImplementation(function (this: IDBObjectStore, ...args) {
+      if (this.name === "videos") throw new DOMException("full", "QuotaExceededError");
+      return put.apply(this, args);
+    });
+    try { expect(await upload()).toEqual({ ok: false, error: "storage" }); }
+    finally { spy.mockRestore(); }
+    await expectNoDraftOrSlot();
+  });
+
   it("refreshes the URL for a different replacement of equal size", async () => {
     vi.mocked(probeVideo).mockResolvedValue({ durationMs: 13_000, width: 1280, height: 544 });
     vi.mocked(decodeAudio).mockResolvedValue({} as AudioBuffer);

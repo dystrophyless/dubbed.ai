@@ -54,6 +54,14 @@ export async function getAll<T>(store: StoreName, range?: IDBKeyRange): Promise<
   return done(db.transaction(store).objectStore(store).getAll(range)) as Promise<T[]>;
 }
 
+/** Read related records from a single consistent IndexedDB snapshot. */
+export async function read<T>(stores: StoreName[], fn: (s: Record<StoreName, IDBObjectStore>) => Promise<T> | T): Promise<T> {
+  const db = await open();
+  const tx = db.transaction(stores, "readonly");
+  const map = Object.fromEntries(stores.map((name) => [name, tx.objectStore(name)])) as Record<StoreName, IDBObjectStore>;
+  return fn(map);
+}
+
 /** All records of a project in a store keyed by [projectId, n]. */
 export const byProject = (projectId: string) => IDBKeyRange.bound([projectId, -Infinity], [projectId, Infinity]);
 
@@ -61,14 +69,30 @@ export const byProject = (projectId: string) => IDBKeyRange.bound([projectId, -I
  * One atomic write across stores. `fn` receives the stores and may read/write; resolves after commit — so a value
  * written here is durable when the promise resolves (takes are "saved" only then, research R5).
  */
-export async function write<T>(stores: StoreName[], fn: (s: Record<StoreName, IDBObjectStore>) => Promise<T> | T): Promise<T> {
+export async function write<T>(stores: StoreName[], fn: (s: Record<StoreName, IDBObjectStore>) => Promise<T> | T, signal?: AbortSignal): Promise<T> {
   const db = await open();
   const tx = db.transaction(stores, "readwrite");
   const map = Object.fromEntries(stores.map((name) => [name, tx.objectStore(name)])) as Record<StoreName, IDBObjectStore>;
   const committed = txDone(tx);
-  const result = await fn(map);
-  await committed;
-  return result;
+  // Observe commit failures immediately, including when a request/callback fails before we await the commit.
+  void committed.catch(() => undefined);
+  const onAbort = () => {
+    try { tx.abort(); } catch { /* already completed or aborted */ }
+  };
+  signal?.addEventListener("abort", onAbort, { once: true });
+  try {
+    if (signal?.aborted) throw new DOMException("Write cancelled.", "AbortError");
+    const result = await fn(map);
+    await committed;
+    return result;
+  } catch (error) {
+    // A synchronous put failure must roll back earlier puts in this transaction too.
+    try { tx.abort(); } catch { /* already completed or aborted */ }
+    await committed.catch(() => undefined);
+    throw error;
+  } finally {
+    signal?.removeEventListener("abort", onAbort);
+  }
 }
 
 export const req = done;

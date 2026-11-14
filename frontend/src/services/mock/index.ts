@@ -316,9 +316,11 @@ export function createMockServices(): Services {
       async get(): Promise<Account> {
         const all = await db.getAll<ProjectRecord>("projects");
         await Promise.all(all.filter((p) => p.state === "preparing").map((p) => advance(p.id)));
-        const fresh = await db.getAll<ProjectRecord>("projects");
-        const acc = await account();
-        return { balance: acc.balance, reserved: reservedTotal(fresh), slotLimit: acc.slotLimit, slotsUsed: fresh.length };
+        return db.read(["kv", "projects"], async (s) => {
+          const fresh = (await db.req(s.projects.getAll())) as ProjectRecord[];
+          const acc = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? DEFAULT_ACCOUNT;
+          return { balance: acc.balance, reserved: reservedTotal(fresh), slotLimit: acc.slotLimit, slotsUsed: fresh.length };
+        });
       },
     },
 
@@ -377,15 +379,16 @@ export function createMockServices(): Services {
         };
         const outcome = await db.write(["projects", "videos", "kv"], async (s) => {
           const current = replacing ? (await db.req(s.projects.get(id))) as ProjectRecord | undefined : undefined;
-          if (opts.replace && (!current || !canReplaceVideo(current.state))) return false;
+          if (opts.replace && (!current || !canReplaceVideo(current.state))) return fail("no-slot" as const);
           const count = ((await db.req(s.projects.getAll())) as ProjectRecord[]).length;
           const latestAccount = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? DEFAULT_ACCOUNT;
-          if (!replacing && count >= latestAccount.slotLimit) return false;
+          if (opts.signal.aborted) return fail("aborted" as const);
+          if (!replacing && count >= latestAccount.slotLimit) return fail("no-slot" as const);
           s.projects.put(record);
           s.videos.put({ projectId: id, blob: file, stamp: globalThis.crypto.randomUUID() } satisfies VideoRecord);
-          return true;
-        });
-        if (!outcome) return fail("no-slot");
+          return ok(undefined);
+        }, opts.signal).catch(() => opts.signal.aborted ? fail("aborted" as const) : fail("storage" as const));
+        if (!outcome.ok) return outcome;
         db.emit({ projectId: id, kind: "project" });
         return ok(toProject(record, []));
       },
@@ -469,7 +472,7 @@ export function createMockServices(): Services {
           s.kv.put({ ...acc, balance: a.balance }, "account");
           s.projects.put(next);
           return ok(next);
-        });
+        }).catch(() => fail("storage" as const));
         if (!result.ok) return result;
         db.emit({ projectId: id, kind: "project" });
         return ok(toProject(result.value, []));
@@ -488,7 +491,8 @@ export function createMockServices(): Services {
         await advance(id);
         const result = await db.write(["projects", "kv", "videos"], async (s) => {
           const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
-          if (!p || p.state !== "preparing" || !p.run) return fail("state" as const);
+          if (!p) return fail("not-found" as const);
+          if (p.state !== "preparing" || !p.run) return fail("state" as const);
           const status = prepStatus(p.run, now());
           if (status.phase !== "queued" && status.phase !== "preparing") return fail("state" as const);
           const charge = cancelCharge(priceOf(p.section), status.phase === "preparing" ? status.stepsDone : 0);
@@ -500,7 +504,7 @@ export function createMockServices(): Services {
           s.videos.delete(id);
           return ok({ charged: m.charged });
         });
-        db.emit({ projectId: id, kind: "removed" });
+        if (result.ok) db.emit({ projectId: id, kind: "removed" });
         return result;
       },
 
@@ -561,12 +565,10 @@ export function createMockServices(): Services {
           s.results.delete(db.byProject(id));
           return true;
         });
-        if (!removed) {
-          await services.projects.cancel(id);
-          return;
-        }
+        if (!removed) return fail("state");
         revokeUrls(id);
         db.emit({ projectId: id, kind: "removed" });
+        return ok(undefined);
       },
 
       async videoUrl(id) {
@@ -603,10 +605,10 @@ export function createMockServices(): Services {
 
       async record(lease, n, opts) {
         const id = lease.projectId;
-        // re-record is blocked while any version assembles: the takes being mixed must not change under the renderer
-        const assembling = (await db.getAll<ResultRecord>("results", db.byProject(id))).some((v) => v.state === "assembling");
-        if (assembling || (await db.get<ProjectRecord>("projects", id))?.state === "assembling") return fail("assembling");
         try {
+          // re-record is blocked while any version assembles: the takes being mixed must not change under the renderer
+          const assembling = (await db.getAll<ResultRecord>("results", db.byProject(id))).some((v) => v.state === "assembling");
+          if (assembling || (await db.get<ProjectRecord>("projects", id))?.state === "assembling") return fail("assembling");
           const capture = await captureFixedWindow({
             durationMs: opts.windowMs,
             signal: opts.signal,
@@ -614,6 +616,7 @@ export function createMockServices(): Services {
             onStarted: opts.onStarted,
             onProgress: opts.onProgress,
           });
+          if (opts.signal.aborted) return fail("interrupted");
           const saved = await db.write(["takes", "projects", "results"], async (s) => {
             const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
             if (!p) return fail("interrupted" as const);
@@ -630,11 +633,12 @@ export function createMockServices(): Services {
               inVersion: p.currentVersion !== null ? null : 0,
               audio: capture.blob,
             };
+            if (opts.signal.aborted) return fail("interrupted" as const);
             s.takes.put(take);
             s.projects.put({ ...p, changedAt: now() });
             const { audio: _a, ...saved } = take;
             return ok(saved);
-          }); // saved = durable only after commit (research R5)
+          }, opts.signal); // saved = durable only after commit (research R5)
           if (saved.ok) db.emit({ projectId: id, kind: "take" });
           return saved;
         } catch (error) {
@@ -657,7 +661,7 @@ export function createMockServices(): Services {
           s.projects.put({ ...p, state: "assembling", changedAt: now() });
           for (const t of takes) s.takes.put({ ...t, inVersion: 1 });
           return ok(toVersion(version));
-        });
+        }).catch(() => fail("storage" as const));
         if (result.ok) {
           db.emit({ projectId: id, kind: "result" });
           void ensureRendering(id);
@@ -683,7 +687,7 @@ export function createMockServices(): Services {
           s.projects.put({ ...p, pendingVersion: number, changedAt: now() });
           for (const t of [...fresh, ...carried]) s.takes.put({ ...t, inVersion: number });
           return ok(toVersion(version));
-        });
+        }).catch(() => fail("storage" as const));
         if (result.ok) {
           db.emit({ projectId: id, kind: "result" });
           void ensureRendering(id);

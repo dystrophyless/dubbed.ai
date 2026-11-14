@@ -1440,7 +1440,10 @@ export const en = {
         loadErrorTitle: "Couldn’t load this page",
         loadErrorText: "Check your connection and try again.",
         retry: "Try again",
-        genericError: "Something went wrong. Please try again."
+        genericError: "Something went wrong. Please try again.",
+        calculating: "Calculating the cost…",
+        changed: "The project has changed — check it and try again.",
+        alreadyFinished: "Preparation has already finished — the project is ready."
       },
       projects: {
         title: "My projects",

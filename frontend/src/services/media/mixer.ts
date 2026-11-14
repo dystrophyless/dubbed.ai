@@ -106,7 +106,7 @@ export async function renderMix(input: {
       const src = ctx.createBufferSource();
       src.buffer = buffer;
       src.connect(dest);
-      src.start(t0 + (turn.startMs - input.section.startMs) / 1000, 0, Math.min(buffer.duration, turn.windowMs / 1000));
+      src.start(Math.max(0, t0 + (turn.startMs - input.section.startMs) / 1000), 0, Math.min(buffer.duration, turn.windowMs / 1000));
     });
 
     const started = performance.now();

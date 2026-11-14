@@ -8,7 +8,9 @@ import { PageSkeleton } from "@/features/recording-flow-mock/PageSkeleton";
 import { GuardNavigate } from "@/features/recording-flow-mock/GuardNavigate";
 import { guardTarget } from "@/features/recording-flow-mock/guard";
 import { ProcessingView, type ProcessingPhase } from "@/features/recording-flow-mock/views/ProcessingView";
+import { priceOf } from "@/services/rules/pricing";
 import { POLL_MS, useProject, useServices, useVideoUrl, type Project, type ProjectId } from "@/services";
+import { refusalFor, refusalOf, toastRefusal } from "./cancelFailure";
 import { useNotify } from "./useNotify";
 
 /*
@@ -40,8 +42,12 @@ export function ProcessingPage() {
   const video = useVideoUrl(id);
   const notify = useNotify(project);
 
-  const [cancelOpen, setCancelOpen] = useState(false);
-  const [deleteOpen, setDeleteOpen] = useState(false);
+  // the dialog remembers which action it is, for which project, from which state, and when it was opened
+  const [dialog, setDialog] = useState<{ kind: "cancel" | "delete"; id: ProjectId; from: Project["state"] } | null>(null);
+  // the route reuses this page for another project: a dialog opened for the previous one is not this page's action
+  const active = dialog && dialog.id === id ? dialog : null;
+  const cancelOpen = active?.kind === "cancel";
+  const deleteOpen = active?.kind === "delete";
   const [busy, setBusy] = useState(false);
   const [waiting, setWaiting] = useState(false); // ready while the tab was hidden → wait for the user
 
@@ -51,6 +57,28 @@ export function ProcessingPage() {
     enabled: cancelOpen && Boolean(id),
     refetchInterval: POLL_MS,
   });
+  // the cache is emptied when the dialog opens, so any quote seen here belongs to this opening
+  const quoteFresh = Boolean(active && quote.data);
+
+  // the project moved on while the dialog was open: close it and say what happened (never turn cancel into delete)
+  const state = project?.state;
+  useEffect(() => {
+    if (!dialog || busy) return;
+    if (dialog.id !== id) {
+      // another project's dialog: drop it quietly
+      // oxlint-disable-next-line react/set-state-in-effect
+      setDialog(null);
+      return;
+    }
+    if (!state) return;
+    const same = dialog.kind === "cancel" ? state === "queued" || state === "preparing" : state === dialog.from;
+    if (same) return;
+    // server state moved on (an external change): close the dialog and say so
+    // oxlint-disable-next-line react/set-state-in-effect
+    setDialog(null);
+    toastRefusal(t, dialog.kind === "cancel" && state === "recording" ? "finished" : "changed");
+    void qc.invalidateQueries();
+  }, [dialog, id, state, busy, t, qc]);
 
   // ready (preparing finished): a visible tab opens the studio by itself after a moment; a hidden one waits
   const ready = project?.state === "recording";
@@ -74,28 +102,52 @@ export function ProcessingPage() {
   const current = phase === "queued" ? 0 : phase === "ready" ? 3 : project.step ?? 0;
   const settled = phase === "ready" || phase === "no-dialogue";
   const cost = settled ? project.charged || project.price : project.price;
-  const q = quote.data;
+  const q = quoteFresh ? quote.data : undefined;
   const from = project.section.startMs / 1000;
   const to = project.section.endMs / 1000;
 
+  const refused = async (kind: "finished" | "changed" | "generic") => {
+    setDialog(null);
+    setBusy(false);
+    toastRefusal(t, kind);
+    await qc.invalidateQueries();
+  };
   const confirmCancel = async () => {
+    if (active?.kind !== "cancel" || !quoteFresh || busy) return;
     setBusy(true);
-    const result = await services.projects.cancel(project.id);
-    const charged = result.ok ? result.value.charged : 0;
-    void qc.invalidateQueries();
-    toast({
-      tone: "success",
-      title: t("processing.toast.cancelled"),
-      description: charged ? t("processing.toast.charged", { count: charged }) : t("processing.toast.free", { count: project.price }),
-    });
-    navigate("/projects");
+    try {
+      const result = await services.projects.cancel(active.id);
+      if (!result.ok) {
+        await refused(await refusalFor(services, active.id, result.error));
+        return;
+      }
+      const charged = result.value.charged;
+      void qc.invalidateQueries();
+      toast({
+        tone: "success",
+        title: t("processing.toast.cancelled"),
+        description: charged ? t("processing.toast.charged", { count: charged }) : t("processing.toast.free", { count: priceOf(project.section) }),
+      });
+      navigate("/projects");
+    } catch {
+      await refused("generic");
+    }
   };
   const confirmDelete = async () => {
+    if (active?.kind !== "delete" || busy) return;
     setBusy(true);
-    await services.projects.remove(project.id);
-    void qc.invalidateQueries();
-    toast({ tone: "success", title: t("processing.toast.deleted") });
-    navigate("/projects");
+    try {
+      const result = await services.projects.remove(active.id);
+      if (!result.ok) {
+        await refused(refusalOf(result.error) === "generic" ? "generic" : "changed");
+        return;
+      }
+      void qc.invalidateQueries();
+      toast({ tone: "success", title: t("processing.toast.deleted") });
+      navigate("/projects");
+    } catch {
+      await refused("generic");
+    }
   };
   // "Try another video": the project keeps its slot (credits already charged stay charged); New dub swaps the video in it
   const tryAnother = () => navigate("/new", { state: { replace: project.id } });
@@ -118,16 +170,19 @@ export function ProcessingPage() {
       to={to}
       videoSrc={video.data}
       opening={!waiting}
-      cancel={{ open: cancelOpen, stepsDone: q?.stepsDone ?? 0, charge: q?.charge ?? 0, back: q?.refund ?? project.price }}
+      cancel={{ open: cancelOpen, pending: !q, stepsDone: q?.stepsDone ?? 0, charge: q?.charge ?? 0, back: q?.refund ?? 0 }}
       deleteOpen={deleteOpen}
       busy={busy}
       notify={notify}
       projectsHref="/projects"
-      onOpenCancel={() => setCancelOpen(true)}
-      onCloseCancel={() => setCancelOpen(false)}
+      onOpenCancel={() => {
+        qc.removeQueries({ queryKey: ["cancel-quote", project.id] });
+        setDialog({ kind: "cancel", id: project.id, from: project.state });
+      }}
+      onCloseCancel={() => setDialog(null)}
       onConfirmCancel={() => void confirmCancel()}
-      onOpenDelete={() => setDeleteOpen(true)}
-      onCloseDelete={() => setDeleteOpen(false)}
+      onOpenDelete={() => setDialog({ kind: "delete", id: project.id, from: project.state })}
+      onCloseDelete={() => setDialog(null)}
       onConfirmDelete={() => void confirmDelete()}
       onRetry={() => void retry()}
       onOpenStudio={() => navigate(`/projects/${project.id}/turns/1`)}
