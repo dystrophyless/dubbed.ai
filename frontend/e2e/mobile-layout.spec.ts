@@ -8,8 +8,9 @@ async function layoutState(page: Page, kind: "last-take" | "pending") {
     const db = await new Promise<IDBDatabase>((resolve) => { const r = indexedDB.open("dubbed-mock"); r.onsuccess = () => resolve(r.result); });
     const tx = db.transaction(["projects", "takes", "results"], "readwrite");
     if (kind === "last-take") {
+      // every turn recorded (a first recording can only reach turn 40 that way): copy the turn-1 take to 2…40
       const r = tx.objectStore("takes").get(["layout", 1]);
-      r.onsuccess = () => tx.objectStore("takes").put({ ...r.result, n: 40 });
+      r.onsuccess = () => { for (let n = 2; n <= 40; n++) tx.objectStore("takes").put({ ...r.result, n }); };
     } else {
       const r = tx.objectStore("projects").get("layout");
       r.onsuccess = () => tx.objectStore("projects").put({ ...r.result, pendingVersion: 2 });

@@ -97,7 +97,7 @@ export function ProjectsPage() {
       slotsTotal={slotsTotal}
       hrefOf={(p) => {
         const s = byId.get(p.id);
-        return s ? redirectTarget(s.id, s.state, Math.min(s.takesDone + 1, Math.max(1, s.turnsTotal))) : "/projects";
+        return s ? redirectTarget(s.id, s.state, s.nextTurn) : "/projects";
       }}
       onRename={(id, name) => {
         void services.projects.rename(id as never, name).then(() => {

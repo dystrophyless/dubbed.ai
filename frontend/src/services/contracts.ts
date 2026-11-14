@@ -73,13 +73,15 @@ export type Project = {
   /** turns with a saved take / total turns (recording progress) */
   takesDone: number;
   turnsTotal: number;
+  /** lowest turn (1..turnsTotal) without a saved take; turnsTotal when all are taken */
+  nextTurn: number;
   createdAt: number;
   changedAt: number;
 };
 
 export type ProjectSummary = Pick<
   Project,
-  "id" | "name" | "state" | "step" | "takesDone" | "turnsTotal" | "currentVersion" | "pendingVersion" | "changedAt" | "video" | "section"
+  "id" | "name" | "state" | "step" | "takesDone" | "turnsTotal" | "nextTurn" | "currentVersion" | "pendingVersion" | "changedAt" | "video" | "section"
 > & { pendingAssembling: boolean };
 
 /* ---------- Studio ---------- */

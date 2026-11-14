@@ -49,6 +49,14 @@ export function StudioPage() {
   if (list && list.length > 0 && n !== String(index + 1)) {
     return <Navigate to={`/projects/${id}/turns/${index + 1}${wantsRerecord ? "?mode=rerecord" : ""}`} replace />;
   }
+  // First recording: a turn beyond the first one without a take is not reachable (a take is required to move on). Only judged
+  // once the project and the takes are fresh; computed from the takes themselves, so a take saved a moment ago counts at once.
+  if (!rerecord && list && list.length > 0 && project.data && project.isFetchedAfterMount && takes.data && takes.isFetchedAfterMount) {
+    const have = new Set(takes.data.map((k) => k.n));
+    const firstOpen = list.findIndex((x) => !have.has(x.n));
+    const reachable = firstOpen === -1 ? list.length - 1 : firstOpen;
+    if (index > reachable) return <Navigate to={`/projects/${id}/turns/${list[reachable]!.n}`} replace />;
+  }
   if (!project.data || !project.isFetchedAfterMount || !list || list.length === 0 || !takes.data || !video.data) {
     return <StudioLoading />;
   }

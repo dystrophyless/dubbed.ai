@@ -4,6 +4,18 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.8] — 2026-11-15
+
+Fix from the eighth Codex review of PR #83.
+
+### Fixed
+
+- Resuming a project (opening it, its row in My projects, any redirect) leads to the first turn without a take, found
+  by turn number rather than by the number of takes, so an earlier unrecorded turn is never skipped.
+- On a first recording a direct link can't jump ahead past unrecorded turns: it opens the first turn without a take
+  (the rule "move on only after recording the current turn"), so Build is reached only with every turn recorded.
+  Re-record mode still moves freely.
+
 ## [0.1.7] — 2026-11-14
 
 Fix from the seventh Codex review of PR #83.
@@ -144,6 +156,7 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.8]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.8
 [0.1.7]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.7
 [0.1.6]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.6
 [0.1.5]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.5

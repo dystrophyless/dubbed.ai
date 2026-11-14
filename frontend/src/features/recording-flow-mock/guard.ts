@@ -17,6 +17,6 @@ export function guardTarget(
   if (!project) return "/projects";
   if (allowed.includes(project.state)) return null;
   // a recording project opens on its first turn without a take
-  const first = firstTurnWithoutTake ?? Math.min(project.takesDone + 1, Math.max(1, project.turnsTotal));
+  const first = firstTurnWithoutTake ?? project.nextTurn;
   return redirectTarget(project.id, project.state, first);
 }

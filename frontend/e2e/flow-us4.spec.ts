@@ -134,6 +134,43 @@ test.describe("US4 - reload and come back", () => {
     await goes(`/projects/${id}/processing`, /\/result$/);
   });
 
+  test("a take on turn 3 alone does not move the resume point: it stays on the first turn without a take", async ({ page }) => {
+    await startProject(page, "speed:3,turns:3,turnms:700", "en", true);
+    await waitForStudio(page, 1);
+    const id = projectIdOf(page);
+    await page.evaluate(async (projectId) => {
+      const db = await new Promise<IDBDatabase>((resolve, reject) => {
+        const r = indexedDB.open("dubbed-mock");
+        r.onsuccess = () => resolve(r.result);
+        r.onerror = () => reject(r.error);
+      });
+      const tx = db.transaction(["takes"], "readwrite");
+      tx.objectStore("takes").put({ projectId, n: 3, mime: "audio/webm", peaks: [0.2], durationMs: 500, savedAt: Date.now(), inVersion: null, audio: new Blob(["x"]) });
+      await new Promise<void>((resolve, reject) => {
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      });
+      db.close();
+    }, id);
+    const goes = async (from: string, to: RegExp) => {
+      await page.goto(from);
+      await expect(page).toHaveURL(to);
+      await expect(studio(page)).toBeVisible();
+    };
+    await goes(`/projects/${id}`, /\/turns\/1$/); // not turn 2 (the take count + 1)
+    await goes(`/projects/${id}/turns/3`, /\/turns\/1$/); // forward past the first open turn: back to it
+    await goes(`/projects/${id}/turns/2`, /\/turns\/1$/);
+    await goes(`/projects/${id}/turns/foo`, /\/turns\/1$/); // malformed number: canonical first, then the clamp
+    await page.goto("/projects");
+    await expect(page.locator(`a[href="/projects/${id}/turns/1"]`).first()).toBeVisible();
+    /* going forward turn by turn still works, and a recorded turn behind stays open */
+    await page.goto(`/projects/${id}/turns/1`);
+    await recordAndNext(page);
+    await expect(page).toHaveURL(/\/turns\/2$/);
+    await goes(`/projects/${id}/turns/3`, /\/turns\/2$/);
+    await goes(`/projects/${id}/turns/1`, /\/turns\/1$/);
+  });
+
   test("Leave without saving discards a running take on return", async ({ page }) => {
     await openScreen(page, "studio");
     await page.evaluate(async () => {

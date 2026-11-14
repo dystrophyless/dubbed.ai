@@ -413,6 +413,23 @@ describe("mock adapter", () => {
     });
   });
 
+  it("nextTurn is the lowest turn without a take, not the take count", async () => {
+    await db.write(["projects"], async (s) => {
+      const p = (await db.req(s.projects.get("p1"))) as Record<string, unknown>;
+      s.projects.put({ ...p, state: "recording", run: null, turnsTotal: 3 });
+    });
+    const take = (n: number) =>
+      db.write(["takes"], (s) => s.takes.put({ projectId: "p1", n, mime: "audio/webm", peaks: [0.2], durationMs: 2000, savedAt: T0, inVersion: null, audio: new Blob(["b"]) }));
+    expect(await services.projects.get(id)).toMatchObject({ takesDone: 0, nextTurn: 1 });
+    await take(3);
+    expect(await services.projects.get(id)).toMatchObject({ takesDone: 1, nextTurn: 1 });
+    expect((await services.projects.list())[0]).toMatchObject({ nextTurn: 1 });
+    await take(1);
+    expect(await services.projects.get(id)).toMatchObject({ takesDone: 2, nextTurn: 2 });
+    await take(2);
+    expect(await services.projects.get(id)).toMatchObject({ takesDone: 3, nextTurn: 3 });
+  });
+
   it("frees the slot on delete and keeps state across a new adapter (reload)", async () => {
     await services.projects.start(id);
     at(16_000);

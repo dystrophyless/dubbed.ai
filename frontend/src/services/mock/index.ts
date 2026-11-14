@@ -89,6 +89,12 @@ async function takesOf(id: ProjectId): Promise<TakeRecord[]> {
   return db.getAll<TakeRecord>("takes", db.byProject(id));
 }
 
+function nextTurnOf(takes: { n: number }[], turnsTotal: number): number {
+  const have = new Set(takes.map((k) => k.n));
+  for (let n = 1; n <= turnsTotal; n++) if (!have.has(n)) return n;
+  return Math.max(1, turnsTotal);
+}
+
 function toProject(p: ProjectRecord, takes: TakeRecord[], t = now()): Project {
   const d = stateOf(p, t);
   return {
@@ -110,6 +116,7 @@ function toProject(p: ProjectRecord, takes: TakeRecord[], t = now()): Project {
     pendingVersion: p.pendingVersion,
     takesDone: takes.length,
     turnsTotal: p.turnsTotal,
+    nextTurn: nextTurnOf(takes, p.turnsTotal),
     createdAt: p.createdAt,
     changedAt: p.changedAt,
   };
@@ -412,6 +419,7 @@ export function createMockServices(): Services {
               step: proj.step,
               takesDone: proj.takesDone,
               turnsTotal: proj.turnsTotal,
+              nextTurn: proj.nextTurn,
               currentVersion: proj.currentVersion,
               pendingVersion: proj.pendingVersion,
               changedAt: proj.changedAt,
