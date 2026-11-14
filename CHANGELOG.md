@@ -4,6 +4,18 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.7] — 2026-11-14
+
+Fix from the seventh Codex review of PR #83.
+
+### Fixed
+
+- A malformed turn address (`/turns/foo`, `/turns/0`, `/turns/2abc`) opens the nearest real turn instead of a broken
+  page, and keeps re-record mode when the address had it.
+- Demo settings accept only sensible numbers: balance and turns are whole and finite, speed stays between 0.1 and 100.
+- After "Try again" on a failed assembly the Result follows the version's own state, so it can no longer keep showing
+  "failed" while the new attempt is already assembling; render failures are now logged for diagnosis.
+
 ## [0.1.6] — 2026-11-14
 
 The sixth Codex finding plus a sweep of the whole feature for the same kinds of bugs: an action still waiting while
@@ -132,6 +144,7 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.7]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.7
 [0.1.6]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.6
 [0.1.5]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.5
 [0.1.4]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.4

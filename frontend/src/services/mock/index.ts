@@ -227,7 +227,8 @@ async function runRender(id: ProjectId, number: number): Promise<void> {
         blob = out.blob;
         mime = out.mime;
         format = out.format;
-      } catch {
+      } catch (err) {
+        console.warn("[mock] render attempt failed", attempt, err);
         failed = attempt === 2;
       }
     }
@@ -734,7 +735,10 @@ export function createMockServices(): Services {
         const retried = await db.write(["results", "projects", "takes", "kv"], async (s) => {
           const v = (await db.req(s.results.get([id, number]))) as ResultRecord | undefined;
           const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
-          if (!v || !p || v.state !== "failed") return false;
+          if (!v || !p || v.state !== "failed") {
+            console.warn("[mock] retry ignored: version missing or not failed", { id, number, version: v?.state ?? null, project: p?.state ?? null });
+            return false;
+          }
           // Owner decision (2026-11-13): Try again builds from the takes as they are now, not historical audio.
           const takes = (await db.req(s.takes.getAll(db.byProject(id)))) as TakeRecord[];
           const fresh = takes.filter((t) => t.inVersion === null);
@@ -747,7 +751,10 @@ export function createMockServices(): Services {
           s.kv.put({ ...cur, assemblyFails: false }, "settings");
           return true;
         });
-        if (!retried) return;
+        if (!retried) {
+          console.warn("[mock] retry did nothing", id, number);
+          return;
+        }
         db.emit({ projectId: id, kind: "result" });
         void ensureRendering(id);
       },

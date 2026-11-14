@@ -87,6 +87,10 @@ test.describe("US4 - reload and come back", () => {
       await noHorizontalScroll(page);
       await expectNoA11yViolations(page);
       const id = projectIdOf(page);
+      /* a malformed turn number lands on a real turn, keeping the mode */
+      await page.goto(`/projects/${id}/turns/foo?mode=rerecord`);
+      await expect(page).toHaveURL(/\/turns\/1\?mode=rerecord$/);
+      await expect(studio(page)).toBeVisible();
       await page.goto(`/projects/${id}/turns/2?mode=rerecord`);
       await expect(actions(page)).toHaveAttribute("data-state", "saved");
       await page.goto(`/projects/${id}/turns/1?mode=rerecord`);

@@ -53,7 +53,17 @@ export function ResultPage() {
   const [lastUrl, setLastUrl] = useState<string | null>(null);
   if (player.data?.url && player.data.url !== lastUrl) setLastUrl(player.data.url);
   const url = player.data?.url ?? lastUrl;
-  const phase: ResultPhase | null = currentReady ? "ready" : pending?.state === "failed" || project.data?.state === "assembly_failed" ? "failed" : pending ? "assembling" : null;
+  // The result query is authoritative when it has a pending version; the project cache (fetched separately, may be stale)
+  // only decides when there is none.
+  const phase: ResultPhase | null = currentReady
+    ? "ready"
+    : pending
+      ? pending.state === "failed"
+        ? "failed"
+        : "assembling"
+      : project.data?.state === "assembly_failed"
+        ? "failed"
+        : null;
   if (phase === "assembling" && !sawAssembling) setSawAssembling(true);
 
   // true once the page renders the player (not the skeleton): only then does the <video> element exist
@@ -114,6 +124,11 @@ export function ResultPage() {
     window.setTimeout(() => URL.revokeObjectURL(href), 10_000);
   };
 
+  const retry = () => {
+    if (!pending) return;
+    void services.result.retry(p.id, pending.number).then(() => Promise.all([result.refetch(), qc.invalidateQueries({ queryKey: qk.project(p.id) })]));
+  };
+
   return (
     <ResultView
       phase={phase}
@@ -146,12 +161,8 @@ export function ResultPage() {
         playNext.current = true;
         void services.result.switchTo(p.id, pending.number).then(() => qc.invalidateQueries({ queryKey: qk.result(p.id) }));
       }}
-      onRetry={() => {
-        if (pending) void services.result.retry(p.id, pending.number).then(() => result.refetch());
-      }}
-      onRetryNew={() => {
-        if (pending) void services.result.retry(p.id, pending.number).then(() => result.refetch());
-      }}
+      onRetry={retry}
+      onRetryNew={retry}
     />
   );
 }

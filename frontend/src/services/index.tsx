@@ -54,6 +54,26 @@ export function invalidateFor(client: QueryClient, e: ChangeEvent) {
 
 /* ---------- demo presets: ?demo=reset|balance:40|slots:full|slots:10|outcome:…|assembly-failed|turns:6|speed:4 ---------- */
 
+const wholeNumber = (arg: string | undefined) => {
+  const v = Number(arg);
+  return Number.isFinite(v) ? Math.max(0, Math.floor(v)) : 0;
+};
+
+/** One `?demo=` value as a demo patch; null when it is not a known preset. Numbers are finite and sane. */
+export function parseDemo(key: string | undefined, arg: string | undefined): Parameters<NonNullable<Services["demo"]>["set"]>[0] | null {
+  const num = Number(arg);
+  if (key === "balance") return { balance: wholeNumber(arg) };
+  if (key === "slots" && arg === "full") return { fillSlots: true };
+  if (key === "slots" && (arg === "2" || arg === "10")) return { slotLimit: Number(arg) as 2 | 10 };
+  if (key === "outcome" && arg === "assembly-failed") return { assemblyFails: true };
+  if (key === "outcome" && arg) return { outcome: arg as DemoOutcome };
+  if (key === "assembly-failed") return { assemblyFails: true };
+  if (key === "turns") return { turns: wholeNumber(arg) };
+  if (key === "turnms" && Number.isFinite(num) && Math.floor(num) > 0) return { turnMs: Math.floor(num) };
+  if (key === "speed") return { speed: Number.isFinite(num) && arg !== "" && arg !== undefined ? Math.min(100, Math.max(0.1, num)) : 1 };
+  return null;
+}
+
 export async function applyDemoParams(services: Services, search = window.location.search): Promise<boolean> {
   const params = new URLSearchParams(search);
   const values = params.getAll("demo").flatMap((v) => v.split(","));
@@ -61,15 +81,10 @@ export async function applyDemoParams(services: Services, search = window.locati
   for (const v of values) {
     const [key, arg] = v.split(":");
     if (key === "reset") await services.demo.reset();
-    else if (key === "balance") await services.demo.set({ balance: Math.max(0, Number(arg) || 0) });
-    else if (key === "slots" && arg === "full") await services.demo.set({ fillSlots: true });
-    else if (key === "slots" && (arg === "2" || arg === "10")) await services.demo.set({ slotLimit: Number(arg) as 2 | 10 });
-    else if (key === "outcome" && arg === "assembly-failed") await services.demo.set({ assemblyFails: true });
-    else if (key === "outcome" && arg) await services.demo.set({ outcome: arg as DemoOutcome });
-    else if (key === "assembly-failed") await services.demo.set({ assemblyFails: true });
-    else if (key === "turns") await services.demo.set({ turns: Math.max(0, Number(arg) || 0) });
-    else if (key === "turnms" && Number.isFinite(Number(arg)) && Number(arg) > 0) await services.demo.set({ turnMs: Number(arg) });
-    else if (key === "speed") await services.demo.set({ speed: Math.max(0.1, Number(arg) || 1) });
+    else {
+      const patch = parseDemo(key, arg);
+      if (patch) await services.demo.set(patch);
+    }
   }
   params.delete("demo");
   const rest = params.toString();

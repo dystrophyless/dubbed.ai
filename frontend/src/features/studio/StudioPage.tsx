@@ -41,9 +41,13 @@ export function StudioPage() {
   if (rerecord && result.data?.pending?.state === "assembling") return <Navigate to={`/projects/${id}/result`} replace />;
 
   const list = turns.data ? [...turns.data].sort((a, b) => a.n - b.n) : null;
-  const index = Number.parseInt(n ?? "", 10) - 1;
-  if (list && list.length > 0 && !(index >= 0 && index < list.length)) {
-    return <Navigate to={`/projects/${id}/turns/${Math.min(Math.max(index + 1, 1), list.length)}${rerecord ? "?mode=rerecord" : ""}`} replace />;
+  // Canonical turn number: the leading integer of the param, 1 when there is none, clamped to the list. Anything that is not
+  // exactly that number ("foo", "0", "2abc", "1.5", "999") is redirected to /turns/<canonical>.
+  const parsed = Number.parseInt(n ?? "", 10);
+  const wanted = Number.isFinite(parsed) ? parsed : 1;
+  const index = list ? Math.min(Math.max(wanted, 1), Math.max(list.length, 1)) - 1 : 0;
+  if (list && list.length > 0 && n !== String(index + 1)) {
+    return <Navigate to={`/projects/${id}/turns/${index + 1}${wantsRerecord ? "?mode=rerecord" : ""}`} replace />;
   }
   if (!project.data || !project.isFetchedAfterMount || !list || list.length === 0 || !takes.data || !video.data) {
     return <StudioLoading />;
