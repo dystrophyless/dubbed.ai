@@ -1,0 +1,29 @@
+/* The skeleton takes the column of the page that replaces it (same formulas as new-dub / processing / result), so nothing jumps. */
+.stage {
+  --video-h: max(160px, calc(100dvh - 446px));
+}
+
+.result {
+  --video-h: max(160px, calc(100dvh - 344px));
+}
+
+.column {
+  width: min(100%, max(640px, calc(var(--video-h) * 2.35)));
+  margin-inline: auto;
+}
+
+.narrow {
+  width: 100%;
+}
+
+.picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2.35;
+}
+
+@media (max-width: 1023.98px) {
+  .column {
+    width: 100%;
+  }
+}

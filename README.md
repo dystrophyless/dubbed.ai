@@ -1,39 +1,90 @@
 # Dubbed
 
-Dubbed is a planned browser application for recording your own dialogue over short video scenes.
+Dub short video scenes with your own voice. Upload a clip, the service prepares its dialogue as timed turns, you record
+every line in a studio, and get the whole scene back with your voices in it.
 
-The frontend implementation has been removed at the owner's request. No runnable frontend remains; the specifications and development workflow are retained.
+**Version 0.1.6** — the full recording flow runs in the browser on mock services; there is no backend yet.
+See [CHANGELOG.md](CHANGELOG.md).
 
-## Start here
+## What works today
 
-Read [AGENTS.md](AGENTS.md), [HANDOFF](_docs/HANDOFF.md), the [SDD workflow](_docs/sdd/README.md), [orchestration](_docs/orchestration.md), and the [frontend design-first workflow](_docs/frontend-design-workflow.md).
+| Screen | Route | What it does |
+|---|---|---|
+| My projects | `/projects` | Every project with its state, rename, delete, sort; two project slots |
+| New dub | `/new` | Pick a video (MP4 / MOV / WebM, up to 10 min and 250 MB), check it, see the section and its price in credits |
+| Processing | `/projects/:id/processing` | Queue and three preparation steps; cancel with an exact charge / refund quote; failures refund |
+| Studio | `/projects/:id/turns/:n` | Record each turn against the muted scene, play your take, re-record; one recording tab at a time |
+| Result | `/projects/:id/result` | Your dubbed scene in a player, fullscreen, download (WebM); re-record a turn and build version 2 |
 
-`Backend/technical: requirements -> optional BR -> SPEC/review -> task drafts/grooming -> package review -> authorized publication -> implementation -> verification/acceptance -> integration gate -> handoff`
+The interface is in English and Russian, light theme only, WCAG AA contrast.
 
-`Meaningful frontend: user purpose/invariants -> brief + runnable low-fi -> independent UX review/revision -> owner checkpoint 1 -> high-fi/review/revision -> owner checkpoint 2 -> synchronize affected specs/tasks -> independent contract/package review -> production integration -> verification/acceptance -> integration gate -> handoff`
+### Mock services
 
-1. Record actual product decisions in the [brief](_docs/PROJECT_BRAINSTORM.md). Write a [BR](_docs/sdd/templates/business-requirements.md) only when needed. Meaningful frontend work may begin with design before exhaustive specification; backend and other non-frontend work retain specification-first planning.
-2. For meaningful frontend work, complete the design workflow's two explicit owner checkpoints, then synchronize and review the affected [specification](_docs/sdd/templates/specification.md) before decomposition. For other work, create the specification under `_docs/specifications/` and use `$spec-task-review` before decomposition.
-3. Create one [task draft](_docs/sdd/templates/task-issue.md) per task under `_docs/task-drafts/<spec-id>/`. Groom each with `$spec-task-review`.
-4. Use `$task-package-review-loop` on the spec and individual drafts. Resolve blocking contracts and establish dependencies, ownership and final proof.
-5. Once the intended repository and publication authority are established, publish reviewed tasks. Reconcile issue bodies/dependencies before replacing drafts with issue-link stubs.
-6. Execute ready work using the [orchestration policy](_docs/orchestration.md). Use `$ponytail` full mode. The Orchestrator verifies raw evidence and acceptance criteria directly; meaningful frontend work also uses the design workflow's independent reviews.
-7. Record [verification and acceptance evidence](_docs/sdd/templates/issue-evidence.md), complete delivery conditions, and update HANDOFF.
+All server work is simulated in the browser behind a typed `services` layer, so a real backend can replace it without
+touching the screens:
 
-## Useful prompts
+- data (projects, takes, balance, charges) lives in IndexedDB;
+- preparation runs on timers; turns are cut on a fixed plan;
+- recording is real (your microphone); the result is mixed in the browser with MediaRecorder;
+- credits follow the spec's money rules but no payment exists;
+- the recording lock between tabs uses Web Locks.
 
-- `Plan this Dubbed feature using the local workflow: <outcome>. Review the spec and task package. Keep publication and implementation pending.`
-- `Use $spec-task-review to audit <spec or task path>. Return findings only.`
-- `Use $task-package-review-loop on <spec path> and its individual task drafts. Fix document inconsistencies within the approved behavior; do not publish or implement.`
-- `Implement <outcome> using the full orchestration workflow. For meaningful frontend work, follow the design-first guide with a GPT-6.1 Sol High design lead/reviewer and GPT-6 Luna Max production executor; wait for the owner's explicit checkpoints. For other work, use the default role/effort policy. Use GPT-6 Luna Low Publisher only for authorized mechanical lifecycle updates. Publish reviewed in-scope issues, verify the result and record delegated acceptance. Only after acceptance, commit the accepted in-scope changes, then push and verify remote delivery before closing completed issues. An explicit review/no-commit hold blocks commit, push and closure until lifted. Do not open PRs, merge or deploy without authorization.`
-- `Execute <ready task path or issue> directly, without delegation. Preserve its contracts and supply verification evidence.`
+Demo controls go in the URL: `?demo=reset` (fresh account: 120 credits, 2 slots), `balance:N`, `slots:full`,
+`outcome:no-dialogue|failed@2|assembly-failed`, `turns:N`, `turnms:N`, `speed:N`; combine them with commas,
+e.g. `/new?demo=reset,speed:4`.
 
-## Installed setup
+## Run it
 
-- Three local skills: [Ponytail](.agents/skills/ponytail/SKILL.md), [spec/task review](.agents/skills/spec-task-review/SKILL.md), [package review](.agents/skills/task-package-review-loop/SKILL.md).
-- BR/spec/task/evidence templates and six writing/lifecycle guides under [_docs/sdd/](_docs/sdd/README.md).
-- Four GitHub issue forms plus a PR template under `.github/`; they become available remotely only after authorized publication to the intended default branch.
-- Project-local `.codex/config.toml` disables Superpowers, matching the source workflow. Shared installations are unchanged.
+Requires Node 22 and a local Chrome (used by Playwright).
 
-Local skill definitions are under `.agents/skills/`. A new project session may be needed for skill discovery. Their definitions can also be read by the links above. Current repository and application entry points are recorded in HANDOFF.
+```bash
+cd frontend
+npm install
+npm run dev            # http://localhost:5174 (when 5173 is taken)
+```
 
+Then open `/new?demo=reset` and choose `frontend/public/media/scene.mp4`.
+
+## Checks
+
+```bash
+cd frontend
+npm run build          # TypeScript + Vite
+npm run lint           # oxlint
+npm run lint:css       # stylelint, design tokens only
+npm run test:unit      # Vitest: money rules, turn planning, mock adapter, capture
+npm run test:e2e:quick # Playwright, desktop business flows (~7 min) — after each change
+npm run test:e2e       # everything: flows, one smoke per route, mobile layout (~8 min) — before a commit
+```
+
+E2E tests are business cases (`e2e/flow-us1…5`), one smoke per route with axe (`e2e/smoke.spec.ts`) and mobile layout
+at 390 × 844 in EN and RU (`e2e/mobile-layout.spec.ts`). Playwright runs with one worker: the flows record and render
+in real time.
+
+## Stack
+
+React 19, TypeScript (strict), Vite, React Router, TanStack Query, Zustand (client state only), CSS Modules with design
+tokens, Lucide icons, react-i18next. Playwright + axe, Vitest, oxlint, stylelint. Planned backend: FastAPI and
+PostgreSQL.
+
+The UI is built on affect-ui **Clean / Light** with the Inter font: tokens only, kit components only, page archetypes
+from the design system. Living styleguide: `/styleguide`; approved prototypes: `/prototypes`.
+
+## Repository layout
+
+| Path | Contents |
+|---|---|
+| `frontend/` | The SPA: `src/features` (pages), `src/components` (kit and media), `src/services` (contracts, rules, mock), `e2e/` |
+| `design-system/` | Foundations, components, patterns, templates, studio and screen briefs, quality checklist |
+| `specs/001-recording-flow-mock/` | Feature spec, UI spec, plan, data model, contracts, tasks, quickstart, design QA |
+| `.specify/`, `.claude/` | SpecKit workflow, agent roles and skills |
+| `PRODUCT_BRIEF.md` | What the product is and why |
+| `BOOTSTRAP.md` | How the project was set up, phase by phase |
+| `CLAUDE.md` | Working rules and owner decisions |
+
+## How work is done
+
+Features go through SpecKit: specify → plan → design (UI spec and prototype, approved by the owner on localhost) →
+tasks → implement → design QA. Releases follow [Semantic Versioning](https://semver.org/) (0.x while the product is
+in development): each feature raises the minor version, fixes raise the patch; every release is a `vX.Y.Z` tag with a
+GitHub release whose notes come from the changelog.
