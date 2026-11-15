@@ -64,7 +64,7 @@ export function turnsFoundAt(status: PrepStatus, total: number): number {
 export function redirectTarget(id: string, state: ProjectState, firstTurnWithoutTake: number | null): string {
   switch (state) {
     case "draft":
-      return "/new";
+      return `/new?project=${encodeURIComponent(id)}`;
     case "queued":
     case "preparing":
     case "failed":

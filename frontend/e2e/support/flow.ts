@@ -53,10 +53,11 @@ export async function recordCurrentTurn(page: Page) {
 
 /* ---------- seeding My projects (feature 001, US5) ---------- */
 
-export type SeedKind = "draft" | "queued" | "preparing" | "recording" | "assembling" | "done" | "done-new-version" | "no-dialogue" | "failed";
+export type SeedKind = "draft" | "draft-old" | "queued" | "preparing" | "recording" | "assembling" | "done" | "done-new-version" | "no-dialogue" | "failed";
 
 const SEED_STATE: Record<SeedKind, { state: string; run?: "queued" | "preparing"; turnsTotal?: number; pendingVersion?: number; currentVersion?: number }> = {
   draft: { state: "draft" },
+  "draft-old": { state: "draft" },
   queued: { state: "preparing", run: "queued" },
   preparing: { state: "preparing", run: "preparing" },
   recording: { state: "recording", turnsTotal: 12 },

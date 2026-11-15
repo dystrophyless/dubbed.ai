@@ -4,6 +4,17 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.9] — 2026-11-15
+
+Fixes from the ninth Codex review of PR #83 (two tabs on New dub).
+
+### Fixed
+
+- When another tab replaces a draft's video, this tab's section follows the new video instead of keeping a range from
+  the old one, so Start works; ordinary refreshes still keep the range you chose.
+- Each draft in My projects opens its own draft (`/new?project=<id>`), so an older draft created from another tab is
+  no longer hidden behind the newest one; the address survives a reload.
+
 ## [0.1.8] — 2026-11-15
 
 Fix from the eighth Codex review of PR #83.
@@ -156,6 +167,7 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.9]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.9
 [0.1.8]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.8
 [0.1.7]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.7
 [0.1.6]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.6

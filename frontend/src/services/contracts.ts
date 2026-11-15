@@ -41,7 +41,15 @@ export type Section = { startMs: number; endMs: number };
 export type PrepStep = 1 | 2 | 3;
 export type FileFormat = "webm" | "mp4";
 
-export type VideoInfo = { durationMs: number; width: number; height: number; fileName: string; mime: string };
+export type VideoInfo = {
+  durationMs: number;
+  width: number;
+  height: number;
+  fileName: string;
+  mime: string;
+  /** identity of the uploaded source: a replacement gets a new one even when the project id is kept */
+  sourceId?: string;
+};
 
 export type Project = {
   id: ProjectId;
@@ -156,8 +164,8 @@ export interface UploadPort {
 export interface ProjectPort {
   list(): Promise<ProjectSummary[]>;
   get(id: ProjectId): Promise<Project | null>;
-  /** the draft that is open on New dub, if any */
-  currentDraft(): Promise<Project | null>;
+  /** the draft that is open on New dub, if any; with `id`, that draft (null when it is not a draft any more) */
+  currentDraft(id?: ProjectId): Promise<Project | null>;
   setSection(id: ProjectId, s: Section): Promise<Outcome<Project, "range" | "state">>;
   start(id: ProjectId): Promise<Outcome<Project, "credits" | "state" | "storage">>;
   cancelQuote(id: ProjectId): Promise<{ stepsDone: number; charge: number; refund: number }>;

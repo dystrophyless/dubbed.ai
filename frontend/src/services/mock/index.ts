@@ -368,10 +368,11 @@ export function createMockServices(): Services {
 
         const t = now();
         const id = replacing?.id ?? newId();
+        const sourceId = globalThis.crypto.randomUUID();
         const record: ProjectRecord = {
           id,
           name: nameFromFile(file.name),
-          video: { durationMs: probe.durationMs, width: probe.width, height: probe.height, fileName: file.name, mime: file.type },
+          video: { durationMs: probe.durationMs, width: probe.width, height: probe.height, fileName: file.name, mime: file.type, sourceId },
           section: defaultSection(probe.durationMs),
           state: "draft",
           run: null,
@@ -393,7 +394,7 @@ export function createMockServices(): Services {
           if (opts.signal.aborted) return fail("aborted" as const);
           if (!replacing && count >= latestAccount.slotLimit) return fail("no-slot" as const);
           s.projects.put(record);
-          s.videos.put({ projectId: id, blob: file, stamp: globalThis.crypto.randomUUID() } satisfies VideoRecord);
+          s.videos.put({ projectId: id, blob: file, stamp: sourceId } satisfies VideoRecord);
           return ok(undefined);
         }, opts.signal).catch(() => opts.signal.aborted ? fail("aborted" as const) : fail("storage" as const));
         if (!outcome.ok) return outcome;
@@ -440,8 +441,8 @@ export function createMockServices(): Services {
         return toProject(p, await takesOf(id));
       },
 
-      async currentDraft() {
-        const drafts = (await db.getAll<ProjectRecord>("projects")).filter((p) => p.state === "draft");
+      async currentDraft(id) {
+        const drafts = (await db.getAll<ProjectRecord>("projects")).filter((p) => p.state === "draft" && (!id || p.id === id));
         drafts.sort((a, b) => b.changedAt - a.changedAt);
         return drafts[0] ? toProject(drafts[0], []) : null;
       },

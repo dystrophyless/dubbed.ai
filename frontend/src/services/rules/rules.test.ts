@@ -135,7 +135,7 @@ describe("lifecycle", () => {
     expect(redirectTarget("p1", "preparing", null)).toBe("/projects/p1/processing");
     expect(redirectTarget("p1", "recording", 3)).toBe("/projects/p1/turns/3");
     expect(redirectTarget("p1", "done", null)).toBe("/projects/p1/result");
-    expect(redirectTarget("p1", "draft", null)).toBe("/new");
+    expect(redirectTarget("p1", "draft", null)).toBe("/new?project=p1");
   });
 });
 

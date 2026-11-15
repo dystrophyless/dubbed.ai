@@ -11,9 +11,10 @@ import { noHorizontalScroll, resetDemo, seedProjects, type Lang, type SeedKind }
  */
 test.describe.configure({ timeout: 120_000 });
 
-const ALL: SeedKind[] = ["draft", "queued", "preparing", "recording", "assembling", "done", "done-new-version", "no-dialogue", "failed"];
+type MainKind = Exclude<SeedKind, "draft-old">;
+const ALL: MainKind[] = ["draft", "queued", "preparing", "recording", "assembling", "done", "done-new-version", "no-dialogue", "failed"];
 
-const COPY: Record<Lang, { tag: Record<SeedKind, string>; newVersion: string; slots: (used: number, total: number) => string; step: string }> = {
+const COPY: Record<Lang, { tag: Record<MainKind, string>; newVersion: string; slots: (used: number, total: number) => string; step: string }> = {
   en: {
     tag: {
       draft: "Not started", queued: "Waiting to start", preparing: "Preparing", recording: "Recording", assembling: "Assembling your video", done: "Ready",
@@ -35,8 +36,8 @@ const COPY: Record<Lang, { tag: Record<SeedKind, string>; newVersion: string; sl
 };
 
 /** Where each row opens (the S5 table). The seeded recording project has no takes, so its first turn without one is 1. */
-const HREF: Record<SeedKind, string> = {
-  draft: "/new",
+const HREF: Record<MainKind, string> = {
+  draft: "/new?project=seed-draft",
   queued: "/projects/seed-queued/processing",
   preparing: "/projects/seed-preparing/processing",
   recording: "/projects/seed-recording/turns/1",
@@ -85,7 +86,7 @@ test.describe("US5 - My projects", () => {
 
       /* rows really open: the draft continues on New dub, a queued project opens Processing, a failed one too */
       await card(page, "draft").click();
-      await expect(page).toHaveURL(/\/new$/);
+      await expect(page).toHaveURL(/\/new\?project=seed-draft$/);
       await page.goBack();
       await expect(page.getByTestId("project-card")).toHaveCount(ALL.length);
       await card(page, "queued").click();
@@ -98,6 +99,27 @@ test.describe("US5 - My projects", () => {
       expect(errors).toEqual([]);
     });
   }
+
+  test("two drafts: each row opens its own draft on /new?project=<id>, and the URL survives a reload", async ({ page }) => {
+    await openSeeded(page, ["draft", "draft-old"]);
+    await card(page, "draft-old").click();
+    await expect(page).toHaveURL(/\/new\?project=seed-draft-old$/);
+    await expect(page.getByTestId("new-dub")).toHaveAttribute("data-state", "ready", { timeout: 15_000 });
+    await expect(page.getByTestId("new-dub-card")).toContainText("draft-old seed");
+    await page.reload();
+    await expect(page).toHaveURL(/\/new\?project=seed-draft-old$/);
+    await expect(page.getByTestId("new-dub")).toHaveAttribute("data-state", "ready", { timeout: 15_000 });
+    await expect(page.getByTestId("new-dub-card")).toContainText("draft-old seed");
+    await page.goBack();
+    await card(page, "draft").click();
+    await expect(page.getByTestId("new-dub-card")).toContainText("draft seed");
+    await expect(page.getByTestId("new-dub-card")).not.toContainText("draft-old");
+    /* plain /new keeps continuing the most recently changed draft; an unknown id goes to My projects */
+    await page.goto("/new");
+    await expect(page.getByTestId("new-dub-card")).toContainText("draft seed");
+    await page.goto("/new?project=nope");
+    await expect(page).toHaveURL(/\/projects/);
+  });
 
   test("sort menu orders by recency and by name", async ({ page }) => {
     await openSeeded(page, ["draft", "failed", "done"]);

@@ -1,11 +1,12 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router";
+import { Navigate, useLocation, useNavigate, useSearchParams } from "react-router";
 import { toast } from "@/components/ui";
 import { LoadError } from "@/features/recording-flow-mock/LoadError";
 import { PageSkeleton } from "@/features/recording-flow-mock/PageSkeleton";
 import { NewDubView, type NewDubReason } from "@/features/recording-flow-mock/views/NewDubView";
+import { draftSourceKey } from "@/services/rules/draft";
 import { qk, useAccount, useProject, useServices, useVideoUrl, type ProjectId } from "@/services";
 
 /*
@@ -26,7 +27,11 @@ export function NewDubPage() {
   const navigate = useNavigate();
   const qc = useQueryClient();
   const account = useAccount();
-  const draftQuery = useQuery({ queryKey: qk.draft, queryFn: () => services.projects.currentDraft() });
+  // /new?project=<id> opens that draft explicitly; plain /new continues the most recently changed one
+  const [params] = useSearchParams();
+  const wanted = (params.get("project") || undefined) as ProjectId | undefined;
+  const draftKey = [...qk.draft, wanted ?? "latest"] as const;
+  const draftQuery = useQuery({ queryKey: draftKey, queryFn: () => services.projects.currentDraft(wanted) });
   const draft = draftQuery.data ?? null;
   const video = useVideoUrl(draft?.id);
   // "Try another video" on a no-dialogue project: no draft yet, but that project's slot is reused by the next upload
@@ -52,9 +57,10 @@ export function NewDubPage() {
   // the section: local while the user drags, saved to the draft shortly after
   const [range, setRange] = useState<[number, number] | null>(null);
   const draftId = draft?.id;
-  const [syncedId, setSyncedId] = useState<string | undefined>();
-  if (draft && syncedId !== draft.id) {
-    setSyncedId(draft.id);
+  // reset only when the project or its uploaded source changes (another tab may have replaced the video)
+  const [syncedKey, setSyncedKey] = useState<string | undefined>();
+  if (draft && syncedKey !== draftSourceKey(draft)) {
+    setSyncedKey(draftSourceKey(draft));
     setRange([toSeconds(draft.section.startMs), toSeconds(draft.section.endMs)]);
   }
   const pending = useRef<{ id: ProjectId; start: number; end: number } | null>(null);
@@ -100,9 +106,9 @@ export function NewDubPage() {
       abort.current = null;
       if (outcome.ok) {
         // a replaced video keeps the draft (and its slot) but starts with its own default section
-        setSyncedId(outcome.value.id);
+        setSyncedKey(draftSourceKey(outcome.value));
         setRange([toSeconds(outcome.value.section.startMs), toSeconds(outcome.value.section.endMs)]);
-        qc.setQueryData(qk.draft, outcome.value);
+        qc.setQueryData([...qk.draft, wanted ?? "latest"], outcome.value);
         await qc.refetchQueries({ queryKey: qk.videoUrl(outcome.value.id) });
         setUpload(null);
       } else if (outcome.error === "no-slot") {
@@ -117,7 +123,7 @@ export function NewDubPage() {
         setUpload({ phase: "error", progress: 0, fileName: file.name, error: outcome.error });
       }
     },
-    [services, draftId, reusable, qc, t],
+    [services, draftId, reusable, wanted, qc, t],
   );
 
   const cancelUpload = () => {
@@ -155,6 +161,11 @@ export function NewDubPage() {
     return <LoadError width="stage" onRetry={() => { void draftQuery.refetch(); void account.refetch(); }} />;
   }
   if (draftQuery.isPending || account.isPending || (replaceId && replaceTarget.isPending)) return <PageSkeleton width="stage" label={t("features.recordingFlowMock.page.loading")} />;
+  if (wanted && !draft) {
+    // the requested project is not a draft (any more): the normal redirect decides (its state's page, or My projects)
+    if (!draftQuery.isFetchedAfterMount) return <PageSkeleton width="stage" label={t("features.recordingFlowMock.page.loading")} />;
+    return <Navigate to={`/projects/${encodeURIComponent(wanted)}`} replace />;
+  }
 
   const slotsFull = !draft && !reusable && account.data.slotsUsed >= account.data.slotLimit;
   const ready = !upload && draft && range && video.data;

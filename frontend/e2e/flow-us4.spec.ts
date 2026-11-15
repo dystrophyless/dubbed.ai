@@ -2,6 +2,7 @@ import { expect, test, type Page } from "@playwright/test";
 import { expectNoA11yViolations, trackConsoleErrors } from "./support/a11y";
 import { noHorizontalScroll, recordCurrentTurn, resetDemo, uploadScene, type Lang } from "./support/flow";
 import { openScreen } from "./support/screens";
+import { sceneVariant } from "./support/media-fixtures";
 
 /*
  * Feature 001, US4 — leave and come back at any point, on mock services. Reload on Processing / in the studio / on the
@@ -233,6 +234,26 @@ test.describe("US4 - reload and come back", () => {
 });
 
 test.describe("US4 - one recording tab at a time (D2)", () => {
+  test("a second tab on the same draft follows a replaced video: its range fits the new duration and Start works", async ({ page, context }) => {
+    await resetDemo(page, "speed:8");
+    await page.locator('input[type="file"]').first().setInputFiles(sceneVariant("long"));
+    await expect(page.getByTestId("new-dub")).toHaveAttribute("data-state", "ready", { timeout: 20_000 });
+    await expect(page.getByTestId("range-limit")).toHaveText("That's the limit — 120 s");
+    const second = await context.newPage();
+    await second.goto(page.url());
+    await expect(second.getByTestId("new-dub")).toHaveAttribute("data-state", "ready", { timeout: 20_000 });
+    await expect(second.getByTestId("cost-button")).toContainText("120");
+
+    await page.getByTestId("new-dub-replace-input").setInputFiles(`${process.cwd()}/public/media/scene.mp4`);
+    await expect(page.getByTestId("new-dub")).toHaveAttribute("data-state", "ready", { timeout: 20_000 });
+    await expect(page.getByTestId("cost-button")).toContainText("14");
+
+    await expect(second.getByTestId("cost-button")).toContainText("14", { timeout: 15_000 }); // the old 120 s range is gone
+    await second.getByTestId("cost-button").click();
+    await expect(second).toHaveURL(/\/projects\/[^/]+\/processing$/);
+    await second.close();
+  });
+
   test("a second tab sees the notice and a disabled Record; it clears when the first tab stops", async ({ page, context }) => {
     await startProject(page, "speed:8,turns:1,turnms:30000"); // the window is clamped to the clip length
     await waitForStudio(page, 1);
