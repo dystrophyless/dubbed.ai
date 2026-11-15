@@ -79,6 +79,12 @@ runs. Screenshots: `npm run snap` (1440 × 900 and 390 × 844).
 - Never mark a design approved without the owner's explicit "утверждаю" after localhost review; passing checks is not approval.
 - Report real command output; say plainly what was not run.
 - Never print or commit secrets (`.env`); demo data never contains the owner's real email or IDs.
+- Reviews (Codex on PRs, `code-reviewer`): `AGENTS.md` sets the review scope (owner, 2026-11-15). A finding that lives
+  only inside the mock backend (`services/mock/**` internals: IndexedDB transactions, multi-tab consistency, write
+  timing, demo presets) is not fixed now: reply on the PR "out of scope — mock backend, the server will own it" and
+  add it to `specs/backend-backlog.md`. Fix at once what the user sees: money and state shown wrongly, data loss,
+  being stuck, UI races, contract handling. Fix a finding's whole class, not just the reported line; run a
+  `code-reviewer` sweep before opening a PR, and keep PRs to one user story where possible.
 - Commit only when asked; push only when asked. Releases: SemVer 0.x — a feature raises the minor, fixes the patch;
   update `CHANGELOG.md` and `frontend/package.json`, tag `vX.Y.Z`, GitHub release from the changelog.
 - Repository documents in English; chat with the owner in Russian; product UI in English and Russian.
