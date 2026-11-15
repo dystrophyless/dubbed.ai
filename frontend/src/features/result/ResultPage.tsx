@@ -97,7 +97,8 @@ export function ResultPage() {
 
   const redirect = guardTarget(project, null, ALLOWED);
   if (redirect) return <GuardNavigate to={redirect} />;
-  if (project.isError || result.isError) return <LoadError width="result" onRetry={() => { void project.refetch(); void result.refetch(); }} />;
+  const failedQueries = [project, result, turnsQuery, source, player].filter((q) => q.isError);
+  if (failedQueries.length > 0) return <LoadError width="result" onRetry={() => failedQueries.forEach((q) => void q.refetch())} />;
   if (!project.data || !project.isFetchedAfterMount || !result.data || !source.data || !phase || (phase === "ready" && !url)) {
     return <PageSkeleton width="result" label={t("features.recordingFlowMock.page.loading")} />;
   }

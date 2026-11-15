@@ -4,6 +4,21 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.1.10] — 2026-11-15
+
+Fixes from the tenth Codex review of PR #83 — the first under the review rules in `AGENTS.md`.
+
+### Fixed
+
+- "Try another video" on a no-dialogue project opens a fresh upload for that project, even when another draft
+  exists; the new video can no longer replace a different project's video.
+- The studio, Result and New dub show "Couldn't load this page" with Retry when their data can't be read, instead of
+  loading forever.
+
+### Changed
+
+- `AGENTS.md` review rules rewritten as three short rules, following the Codex docs.
+
 ## [0.1.9] — 2026-11-15
 
 Fixes from the ninth Codex review of PR #83 (two tabs on New dub).
@@ -167,6 +182,7 @@ First working version: the whole recording flow in the browser on mock services 
 - Owner decisions recorded as patches: WCAG AA text contrast, indigo accent, touch sizes, localised kit copy,
   red record buttons.
 
+[0.1.10]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.10
 [0.1.9]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.9
 [0.1.8]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.8
 [0.1.7]: https://github.com/dystrophyless/dubbed.ai/releases/tag/v0.1.7

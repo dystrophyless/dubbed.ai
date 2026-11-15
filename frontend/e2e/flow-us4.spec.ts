@@ -172,6 +172,27 @@ test.describe("US4 - reload and come back", () => {
     await goes(`/projects/${id}/turns/1`, /\/turns\/1$/);
   });
 
+  test("a failed studio read shows the load error with a retry; retry recovers to the studio", async ({ page }) => {
+    await openScreen(page, "studio");
+    await expect(studio(page)).toBeVisible();
+    // the turns read of the mock database fails while the flag is set (the app's own retry is exhausted)
+    await page.addInitScript(() => {
+      const original = IDBObjectStore.prototype.getAll;
+      IDBObjectStore.prototype.getAll = function (this: IDBObjectStore, ...args: Parameters<IDBObjectStore["getAll"]>) {
+        if (this.name === "turns" && sessionStorage.getItem("fail-turns") === "1") throw new DOMException("read failed", "UnknownError");
+        return original.apply(this, args);
+      };
+    });
+    await page.evaluate(() => sessionStorage.setItem("fail-turns", "1"));
+    await page.reload();
+    await expect(page.getByTestId("page-retry")).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByText("Couldn’t load this page")).toBeVisible();
+    await page.evaluate(() => sessionStorage.removeItem("fail-turns"));
+    await page.getByTestId("page-retry").click();
+    await expect(studio(page)).toBeVisible();
+    await expect(page.getByTestId("page-retry")).toHaveCount(0);
+  });
+
   test("Leave without saving discards a running take on return", async ({ page }) => {
     await openScreen(page, "studio");
     await page.evaluate(async () => {

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Navigate, useLocation, useNavigate, useParams } from "react-router";
 import type { TurnDir } from "@/components/media";
 import { toast } from "@/components/ui";
+import { LoadError } from "@/features/recording-flow-mock/LoadError";
 import { GuardNavigate } from "@/features/recording-flow-mock/GuardNavigate";
 import { guardTarget } from "@/features/recording-flow-mock/guard";
 import { StudioView, type Playing, type RecordBlock, type StudioViewProps } from "@/features/recording-flow-mock/views/StudioView";
@@ -56,6 +57,10 @@ export function StudioPage() {
     const firstOpen = list.findIndex((x) => !have.has(x.n));
     const reachable = firstOpen === -1 ? list.length - 1 : firstOpen;
     if (index > reachable) return <Navigate to={`/projects/${id}/turns/${list[reachable]!.n}`} replace />;
+  }
+  const failed = [project, turns, takes, video].filter((q) => q.isError);
+  if (failed.length > 0) {
+    return <LoadError onRetry={() => failed.forEach((q) => void q.refetch())} />;
   }
   if (!project.data || !project.isFetchedAfterMount || !list || list.length === 0 || !takes.data || !video.data) {
     return <StudioLoading />;

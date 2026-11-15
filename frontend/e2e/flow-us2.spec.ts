@@ -1,6 +1,6 @@
 import { expect, test, type Page } from "@playwright/test";
 import { expectNoA11yViolations } from "./support/a11y";
-import { balanceLink, noHorizontalScroll, resetDemo, uploadScene } from "./support/flow";
+import { balanceLink, noHorizontalScroll, resetDemo, seedProjects, uploadScene } from "./support/flow";
 import { holdStore } from "./support/persistence";
 import { sceneVariant } from "./support/media-fixtures";
 import { openScreen } from "./support/screens";
@@ -359,6 +359,29 @@ test.describe("US2 — Processing money states", () => {
     await startDubbing(page);
     expect(page.url()).toContain(`/projects/${id}/processing`); // the same project, so the same slot
     await expect(balanceLink(page)).toContainText("92");
+  });
+
+  test("no dialogue + an unrelated draft: Try another video replaces the no-dialogue project, never the draft", async ({ page }) => {
+    await resetDemo(page, "slots:10", "/projects");
+    await seedProjects(page, ["draft", "no-dialogue"]);
+    const rows = () => page.evaluate(async () => {
+      const db = await new Promise<IDBDatabase>((resolve) => { const r = indexedDB.open("dubbed-mock"); r.onsuccess = () => resolve(r.result); });
+      const all = await new Promise<{ id: string; state: string; changedAt: number }[]>((resolve) => {
+        const r = db.transaction("projects").objectStore("projects").getAll(); r.onsuccess = () => resolve(r.result);
+      });
+      db.close();
+      return Object.fromEntries(all.map((p) => [p.id, { state: p.state, changedAt: p.changedAt }]));
+    });
+    const before = await rows();
+    await page.goto("/projects/seed-no-dialogue/processing");
+    await page.getByRole("button", { name: "Try another video" }).click();
+    await expect(page).toHaveURL(/\/new$/);
+    await expect(newDub(page)).toHaveAttribute("data-state", "empty"); // not the draft's video
+    await uploadAndWaitReady(page);
+    await expect(page).toHaveURL(/\/new\?project=seed-no-dialogue$/);
+    const after = await rows();
+    expect(after["seed-no-dialogue"]!.state).toBe("draft");
+    expect(after["seed-draft"]).toEqual(before["seed-draft"]); // the unrelated draft is untouched
   });
 
   test("no dialogue: Delete project frees the slot", async ({ page }) => {

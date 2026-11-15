@@ -32,12 +32,13 @@ export function NewDubPage() {
   const wanted = (params.get("project") || undefined) as ProjectId | undefined;
   const draftKey = [...qk.draft, wanted ?? "latest"] as const;
   const draftQuery = useQuery({ queryKey: draftKey, queryFn: () => services.projects.currentDraft(wanted) });
-  const draft = draftQuery.data ?? null;
-  const video = useVideoUrl(draft?.id);
-  // "Try another video" on a no-dialogue project: no draft yet, but that project's slot is reused by the next upload
+  // "Try another video" on a no-dialogue project: that project's slot is reused by the next upload. An explicit replacement
+  // intent wins over any draft: replace target > ?project draft > latest draft.
   const replaceId = (useLocation().state as { replace?: ProjectId } | null)?.replace;
   const replaceTarget = useProject(replaceId);
-  const reusable = !draft && replaceTarget.data?.state === "no_dialogue" ? replaceTarget.data.id : undefined;
+  const reusable = replaceTarget.data?.state === "no_dialogue" ? replaceTarget.data.id : undefined;
+  const draft = reusable ? null : (draftQuery.data ?? null);
+  const video = useVideoUrl(draft?.id);
 
   const [upload, setUpload] = useState<Upload | null>(null);
   const [noSlot, setNoSlot] = useState(false);
@@ -108,9 +109,12 @@ export function NewDubPage() {
         // a replaced video keeps the draft (and its slot) but starts with its own default section
         setSyncedKey(draftSourceKey(outcome.value));
         setRange([toSeconds(outcome.value.section.startMs), toSeconds(outcome.value.section.endMs)]);
-        qc.setQueryData([...qk.draft, wanted ?? "latest"], outcome.value);
+        const key = reusable ? [...qk.draft, outcome.value.id] : [...qk.draft, wanted ?? "latest"];
+        qc.setQueryData(key, outcome.value);
         await qc.refetchQueries({ queryKey: qk.videoUrl(outcome.value.id) });
         setUpload(null);
+        // the no-dialogue project is a draft now: continue it explicitly (the replacement intent is spent)
+        if (reusable && mounted.current) navigate(`/new?project=${encodeURIComponent(outcome.value.id)}`, { replace: true });
       } else if (outcome.error === "no-slot") {
         setUpload(null);
         setNoSlot(true);
@@ -123,7 +127,7 @@ export function NewDubPage() {
         setUpload({ phase: "error", progress: 0, fileName: file.name, error: outcome.error });
       }
     },
-    [services, draftId, reusable, wanted, qc, t],
+    [services, draftId, reusable, wanted, qc, t, navigate],
   );
 
   const cancelUpload = () => {
@@ -157,11 +161,11 @@ export function NewDubPage() {
     }
   };
 
-  if (draftQuery.isError || account.isError) {
-    return <LoadError width="stage" onRetry={() => { void draftQuery.refetch(); void account.refetch(); }} />;
+  if ((draftQuery.isError && !reusable) || account.isError || (draft && video.isError) || (replaceId && replaceTarget.isError)) {
+    return <LoadError width="stage" onRetry={() => { void draftQuery.refetch(); void account.refetch(); if (draft && video.isError) void video.refetch(); if (replaceId) void replaceTarget.refetch(); }} />;
   }
-  if (draftQuery.isPending || account.isPending || (replaceId && replaceTarget.isPending)) return <PageSkeleton width="stage" label={t("features.recordingFlowMock.page.loading")} />;
-  if (wanted && !draft) {
+  if ((draftQuery.isPending && !reusable) || account.isPending || (replaceId && replaceTarget.isPending)) return <PageSkeleton width="stage" label={t("features.recordingFlowMock.page.loading")} />;
+  if (wanted && !draft && !reusable) {
     // the requested project is not a draft (any more): the normal redirect decides (its state's page, or My projects)
     if (!draftQuery.isFetchedAfterMount) return <PageSkeleton width="stage" label={t("features.recordingFlowMock.page.loading")} />;
     return <Navigate to={`/projects/${encodeURIComponent(wanted)}`} replace />;
