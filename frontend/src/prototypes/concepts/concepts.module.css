@@ -1,0 +1,346 @@
+/*
+ * Studio concepts (Phase 4, low-fi). Only the placement of the controls differs between concepts; the centre column is
+ * the owner's fixed SceneColumn. --video-h is each concept's height budget: the viewport minus everything that must stay
+ * above the fold (top bar, line, audio track, controls), so Record never falls below 900 / 844 px.
+ * Grids here are concept sketches; the picked concept gets proper layout primitives in high-fi.
+ */
+.page {
+  --video-h: max(160px, calc(100dvh - 400px));
+
+  width: 100%;
+  max-width: calc(var(--container-content) + 2 * var(--space-8));
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-inline: var(--space-8);
+  }
+}
+
+.videoLabel {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* controls under the column: as wide as the video, but never narrower than the controls need (portrait clips) */
+.controls {
+  width: min(100%, max(440px, calc(var(--video-h) * var(--ratio))));
+  margin-inline: auto;
+}
+
+.full > :global(.ui-buttonc) {
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.dialogText {
+  margin: 0;
+}
+
+/* ---------- A · Under the track ---------- */
+.page[data-concept="under-track"] {
+  --video-h: max(160px, calc(100dvh - 380px));
+}
+
+.aRow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.aRow > :first-child {
+  justify-self: end;
+}
+
+.aRow > :last-child {
+  justify-self: start;
+}
+
+/* ---------- B · Side panels ---------- */
+.page[data-concept="side-panels"] {
+  --video-h: max(160px, calc(100dvh - 250px));
+
+  max-width: none;
+}
+
+.bGrid {
+  display: grid;
+  grid-template-areas: "listen scene act";
+  grid-template-columns: minmax(200px, 240px) minmax(0, calc(var(--video-h) * var(--ratio))) minmax(200px, 240px);
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+.bScene {
+  grid-area: scene;
+  min-width: 0;
+}
+
+.bPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bPanel[data-side="listen"] {
+  grid-area: listen;
+}
+
+.bPanel[data-side="act"] {
+  grid-area: act;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-muted);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.hint {
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* ---------- C · Thumb dock ---------- */
+.page[data-concept="thumb-dock"] {
+  --video-h: max(160px, calc(100dvh - 420px));
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-height: calc(100dvh - var(--topbar-height) - var(--space-2) - var(--space-8));
+}
+
+.dock {
+  position: sticky;
+  bottom: var(--space-3);
+  z-index: var(--z-sticky);
+  width: min(100%, var(--container-narrow));
+  margin: auto auto 0;
+}
+
+.dockInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.dockListen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.dockMain {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.dockMain > :first-child {
+  justify-self: start;
+}
+
+.dockMain > :last-child {
+  justify-self: end;
+}
+
+/* ---------- D · Next step ---------- */
+.page[data-concept="next-step"] {
+  --video-h: max(160px, calc(100dvh - 390px));
+}
+
+.dEqual {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.dEqual > :global(.ui-buttonc) {
+  width: 100%;
+}
+
+.dNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+}
+
+.dNext {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ---------- Note card ---------- */
+.noteWrap {
+  width: 100%;
+  max-width: calc(var(--container-narrow) + 2 * var(--space-8));
+  margin: var(--space-12) auto 0;
+  padding-inline: var(--space-4);
+}
+
+.tradeoffs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.tradeoff {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+}
+
+.tradeoff dt {
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.tradeoff dd {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.pickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+}
+
+.others {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-4);
+}
+
+@media (max-width: 1023.98px) {
+  .page[data-concept="under-track"],
+  .page[data-concept="next-step"],
+  .page[data-concept="side-panels"] {
+    --video-h: max(160px, calc(100dvh - 470px));
+  }
+
+  .page[data-concept="thumb-dock"] {
+    --video-h: max(160px, calc(100dvh - 430px));
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  /* A: Record gets its own row right under the track; Original and My take share the next row */
+  .aRow {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .aRow > :nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .aRow > :first-child,
+  .aRow > :last-child {
+    justify-self: stretch;
+  }
+
+  .aRow > :first-child > :global(.ui-buttonc),
+  .aRow > :last-child > :global(.ui-buttonc) {
+    width: 100%;
+  }
+
+  /* B: the panels dissolve into the column — listen row, record, act row, navigation */
+  .bGrid {
+    grid-template-areas:
+      "scene scene"
+      "rec rec"
+      "orig take"
+      "prev next"
+      "vol vol";
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .bScene {
+    margin-bottom: var(--space-1);
+  }
+
+  .bPanel {
+    display: contents;
+  }
+
+  .panelTitle,
+  .spacer {
+    display: none;
+  }
+
+  .bOrig { grid-area: orig; }
+  .bVol { grid-area: vol; }
+  .bPrev { grid-area: prev; }
+  .bRec { grid-area: rec; justify-self: center; }
+  .bTake { grid-area: take; }
+  .bNext { grid-area: next; }
+
+  .dock {
+    bottom: var(--space-2);
+  }
+
+  /* D: three labels do not fit in thirds of 358px (RU "Записать заново") — two up, Record again full width */
+  .dEqual {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dEqual > :last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* D: keep Previous and Next on one row; the reason goes under Next */
+  .dNav {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .dNext {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: var(--space-1);
+  }
+
+  .tradeoff {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}

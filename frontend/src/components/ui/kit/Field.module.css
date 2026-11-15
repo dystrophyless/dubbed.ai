@@ -1,0 +1,155 @@
+/*
+ * Text inputs in the Clean language: white box with the field hairline + lift (otp-input box, audit §6),
+ * 6px radius, 13px text; 32px tall (36px and 16px text on touch so iOS does not zoom — audit §10).
+ */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1_5);
+  min-width: 0;
+}
+
+.label {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.optional {
+  margin-left: var(--space-1);
+  font-weight: var(--weight-regular);
+  color: var(--color-muted);
+}
+
+.hint {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1_5);
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-danger);
+}
+
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: var(--control-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-field);
+  transition: box-shadow var(--duration-fast) ease;
+}
+
+.box:hover:not([data-disabled]) {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.box:focus-within {
+  box-shadow: var(--shadow-focus);
+}
+
+.box[data-invalid] {
+  box-shadow: var(--shadow-invalid);
+}
+
+.box[data-disabled] {
+  opacity: 0.4;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: var(--control-lg);
+  padding: 0 var(--space-2_5);
+  margin: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font: inherit;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-ink);
+}
+
+.input::placeholder {
+  color: var(--color-faint);
+}
+
+.textarea {
+  height: auto;
+  min-height: calc(var(--leading-md) * 3 + var(--space-2) * 2);
+  padding: var(--space-2) var(--space-2_5);
+  resize: vertical;
+}
+
+.adornment {
+  display: grid;
+  flex: none;
+  place-items: center;
+  padding-left: var(--space-2_5);
+  color: var(--color-icon);
+}
+
+.reveal {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: var(--control-md);
+  height: var(--control-md);
+  margin-right: var(--space-0_5);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-icon);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) ease, color var(--duration-fast) ease;
+}
+
+.reveal:hover {
+  background: var(--color-wash);
+  color: var(--color-ink);
+}
+
+.reveal:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.counter {
+  align-self: flex-end;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted);
+}
+
+@media (pointer: coarse) {
+  .box {
+    min-height: var(--control-touch);
+  }
+
+  .input {
+    height: var(--control-touch);
+    font-size: var(--text-input);
+  }
+
+  .textarea {
+    height: auto;
+  }
+
+  .reveal {
+    width: var(--control-lg);
+    height: var(--control-lg);
+  }
+}

@@ -1,0 +1,124 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, minmax(min(var(--min), 100%), 1fr));
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--space-8);
+  }
+}
+
+.content {
+  max-width: calc(var(--container-content) + 2 * var(--space-8));
+}
+
+.narrow {
+  max-width: calc(var(--container-narrow) + 2 * var(--space-8));
+}
+
+.form {
+  max-width: calc(var(--container-form) + 2 * var(--space-8));
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: var(--control-md);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+}
+
+.sectionDescription {
+  margin: 0;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+}
+
+.twoColumn {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 1024px) {
+  .twoColumn[data-side="end"] {
+    grid-template-columns: minmax(0, 1fr) var(--aside);
+  }
+
+  .twoColumn[data-side="start"] {
+    grid-template-columns: var(--aside) minmax(0, 1fr);
+  }
+
+  .sticky {
+    position: sticky;
+    top: calc(var(--topbar-height) + var(--space-4));
+    align-self: start;
+  }
+}
+
+.stickyBar {
+  position: sticky;
+  bottom: 0;
+  z-index: var(--z-sticky);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-card);
+}
+
+@media (max-width: 1023.98px) {
+  .hideBelow {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hideAbove {
+    display: none !important;
+  }
+}

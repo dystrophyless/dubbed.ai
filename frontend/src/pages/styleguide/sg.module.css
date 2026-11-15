@@ -1,0 +1,240 @@
+/* Styleguide page chrome (not part of the kit). */
+.page {
+  min-height: 100dvh;
+  padding-block: var(--space-8) var(--space-16);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.toc {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  display: flex;
+  gap: var(--space-1);
+  margin: 0 calc(-1 * var(--space-4)) var(--space-8);
+  padding: var(--space-2) var(--space-4);
+  overflow-x: auto;
+  background: var(--color-canvas);
+  border-bottom: var(--hairline);
+  scrollbar-width: none;
+}
+
+.tocLink {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  height: var(--control-md);
+  padding: 0 var(--space-2_5);
+  border-radius: var(--radius-control);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tocLink:hover {
+  background: var(--color-wash);
+  color: var(--color-ink);
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  scroll-margin-top: var(--space-16);
+}
+
+.sectionHead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--hairline);
+}
+
+.specimens {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.specimen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.specimenPlain {
+  background: transparent;
+  box-shadow: var(--shadow-hairline-inset);
+}
+
+.specimenTitle {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-muted);
+}
+
+.specimenNote {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.label {
+  min-width: 72px;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+/* Foundations */
+.swatches {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.swatch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.chip {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-hairline-inset);
+}
+
+.swatchName {
+  overflow: hidden;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-ink);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.swatchValue {
+  font-size: var(--text-sm2);
+  line-height: var(--leading-sm2);
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+}
+
+.typeRow {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-block: var(--space-1);
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.box {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 64px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.spaceBar {
+  height: 8px;
+  border-radius: var(--radius-xs);
+  background: var(--color-accent);
+}
+
+.icons {
+  display: grid;
+  gap: var(--space-1);
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+}
+
+.iconCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-1);
+  border-radius: var(--radius-control);
+  font-size: var(--text-sm2);
+  line-height: var(--leading-sm2);
+  color: var(--color-muted);
+}
+
+.iconCell svg {
+  color: var(--color-ink);
+}
+
+.grey {
+  min-height: 48px;
+  padding: var(--space-2);
+  border-radius: var(--radius-control);
+  background: var(--color-track);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+.frame {
+  height: 420px;
+  overflow: auto;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.studioDemo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}

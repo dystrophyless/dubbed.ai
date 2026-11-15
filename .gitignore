@@ -1,0 +1,12 @@
+# Reinstallable dependencies, generated builds and package-manager caches.
+node_modules/
+dist/
+npm-cache/
+ctx7-cache/
+
+# Local environment secrets; keep documented examples versioned.
+.env
+.env.*.local
+
+# Trial design-QA runs (model comparison evidence, kept locally only).
+specs/*/design/qa-gpt*/

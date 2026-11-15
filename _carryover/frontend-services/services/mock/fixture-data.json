@@ -1,0 +1,80 @@
+{
+  "project": {
+    "id": "sintel-prepared",
+    "accountId": "seeded-local-account",
+    "revision": 1,
+    "preparationRevision": "sintel-scene-v1",
+    "title": "Sintel · The search",
+    "source": {
+      "url": "/media/scene.mp4",
+      "bytes": 886403,
+      "sha256": "c99eada0a03cb9f4a2ab41641a81ce6b74f628bc15ded4b3319a43c3fc9d766c",
+      "durationSeconds": 13.416667,
+      "width": 960,
+      "height": 408,
+      "rotationDegrees": 0,
+      "attribution": "Sintel · Blender Foundation",
+      "license": "CC BY 3.0"
+    },
+    "windows": [
+      {
+        "id": "sintel-turn-1",
+        "revision": 1,
+        "startMs": 0,
+        "endMs": 5100,
+        "text": {
+          "en": "What brings you to the land of the gatekeepers?",
+          "ru": "Что привело тебя в страну хранителей?"
+        }
+      },
+      {
+        "id": "sintel-turn-2",
+        "revision": 1,
+        "startMs": 5100,
+        "endMs": 8500,
+        "text": {
+          "en": "I’m searching for someone.",
+          "ru": "Я ищу одного человека."
+        }
+      },
+      {
+        "id": "sintel-turn-3",
+        "revision": 1,
+        "startMs": 8500,
+        "endMs": 13400,
+        "text": {
+          "en": "Someone very dear? A kindred spirit?",
+          "ru": "Кого-то очень близкого? Родственную душу?"
+        }
+      }
+    ]
+  },
+  "resultFixtures": [
+    {
+      "id": "illustrative-generation-001",
+      "url": "/media/example-dub.mp4",
+      "bytes": 749601,
+      "sha256": "fe7cb91ebdd2a2e208de6935942d585fced88b734726d19e565958ad3b1bacc9",
+      "durationSeconds": 13.416667,
+      "width": 960,
+      "height": 408,
+      "rotationDegrees": 0,
+      "provenance": "Prototype example-dub sample made from the supplied synthetic takes; not a user recording or product render.",
+      "productRendered": false,
+      "assembledFromAcceptedTakes": false
+    },
+    {
+      "id": "illustrative-generation-002",
+      "url": "/media/result-generation-002.webm",
+      "bytes": 2514724,
+      "sha256": "f3802515a6738409226b8c9c705d31671e7768f81043ada452302240bb146d93",
+      "durationSeconds": 13.4,
+      "width": 960,
+      "height": 408,
+      "rotationDegrees": 0,
+      "provenance": "Synthetic alternate mix fixture created from the supplied Sintel source and synthetic takes; not a user recording or product render.",
+      "productRendered": false,
+      "assembledFromAcceptedTakes": false
+    }
+  ]
+}

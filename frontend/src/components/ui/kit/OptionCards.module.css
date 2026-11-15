@@ -1,0 +1,186 @@
+/* OptionCards — Clean card tiles as a radio group; the chosen one carries the accent. */
+.group {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0_5);
+  min-width: 0;
+  padding: var(--space-3) var(--space-3) var(--space-3_5) var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: box-shadow var(--duration-fast) ease, background-color var(--duration-fast) ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card:hover:not([data-disabled]) {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card[data-checked] {
+  background: var(--color-accent-wash);
+  box-shadow: var(--shadow-accent-inset-strong);
+}
+
+.card[data-disabled] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.native {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.card:has(.native:focus-visible) {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: 20px;
+  margin-bottom: var(--space-1);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 var(--space-1_5);
+  border-radius: var(--radius-chip);
+  background: var(--color-accent-soft);
+  font-size: var(--text-sm2);
+  line-height: var(--leading-sm2);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent-strong);
+  white-space: nowrap;
+}
+
+.check {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-box);
+  color: var(--color-on-solid);
+  transition: background-color var(--duration-base) ease, box-shadow var(--duration-base) ease;
+}
+
+.check svg {
+  width: 11px;
+  height: 11px;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity var(--duration-base) ease, transform var(--duration-medium) var(--ease-spring);
+}
+
+.card[data-checked] .check {
+  background: var(--color-accent);
+  box-shadow: none;
+}
+
+.card[data-checked] .check svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.title {
+  font-size: var(--text-h1);
+  line-height: var(--leading-h1);
+  letter-spacing: var(--tracking-h1);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-strong);
+}
+
+.subtitle {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+}
+
+.meta {
+  margin-top: var(--space-2);
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+}
+
+.card[data-checked] .meta {
+  color: var(--color-accent-strong);
+}
+
+/* phones: one column of compact rows — number + line on the left, price under the check on the right */
+@media (max-width: 1023.98px) {
+  .group {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: var(--space-3);
+    padding: var(--space-3) var(--space-3) var(--space-3) var(--space-4);
+  }
+
+  .top {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .subtitle {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .meta {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    text-align: right;
+  }
+
+  .badge {
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .check,
+  .check svg {
+    transition-duration: 1ms;
+  }
+}

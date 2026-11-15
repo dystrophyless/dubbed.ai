@@ -1,0 +1,179 @@
+"""Deterministic port of affect-ui Clean / Light components (design-system/components.md → Ports).
+
+Takes the TSX from the `## Code` block of each source .md and replaces, in light-mode declarations only,
+exact colour / shadow / easing / font-family values with the matching token from src/styles/tokens.css.
+Sizes, spacing, radii and markup are never touched. Dark-mode blocks are kept verbatim (never active: light only).
+Run: python scripts/port-affect.py   (from frontend/). Re-running overwrites the ports — they are never hand-edited.
+"""
+import re, pathlib, sys
+
+PACK = pathlib.Path(r"D:\Program\frontend\affect-ui\affectui-free")
+OUT = pathlib.Path(__file__).resolve().parent.parent / "src" / "components" / "ui" / "affect"
+TOKENS = pathlib.Path(__file__).resolve().parent.parent / "src" / "styles" / "tokens.css"
+
+SOURCES = {
+    "button": "components/button/Clean/button-clean.md",
+    "otp-input": "components/otp-input/Clean/otp-input-clean.md",
+    "segmented-control": "components/segmented-control/Clean/segmented-control-clean.md",
+    "progress-tracker": "components/progress-tracker/Clean/progress-tracker-clean.md",
+    "notification-stack": "components/notification-stack/Clean/notification-stack-clean.md",
+    "filter-menu": "components/filter-menu/Clean/filter-menu-clean.md",
+    "profile-menu": "components/profile-menu/Clean/profile-menu-clean.md",
+    "thinking-loader": "components/thinking-loader/Clean/thinking-loader-clean.md",
+    "tips-panel": "components/tips-panel/Clean/tips-panel-clean.md",
+    "shimmer-loader": "motion/shimmer-loader/shimmer-loader.md",
+    "number-ticker": "motion/number-ticker/number-ticker.md",
+}
+
+def norm(v: str) -> str:
+    v = v.strip().rstrip(";").strip().lower()
+    v = re.sub(r"\s+", " ", v)
+    v = re.sub(r"\s*,\s*", ", ", v)
+    v = re.sub(r"\(\s*", "(", v); v = re.sub(r"\s*\)", ")", v)
+    if v in ("#000", "#000000"): v = "#000000"
+    if v in ("#fff", "#ffffff"): v = "#ffffff"
+    return v
+
+# token value -> name (colours, shadows, easing); first definition wins
+tokmap = {}
+for m in re.finditer(r"(--(?:color|shadow|ease)-[\w-]+)\s*:\s*([^;]+);", TOKENS.read_text(encoding="utf-8")):
+    name, val = m.group(1), norm(m.group(2))
+    if "var(" in val: continue
+    tokmap.setdefault(val, name)
+# prefer semantic names for values shared by several tokens
+PREFER = {norm("rgba(0, 0, 0, 0.88)"): None}  # resolved per property below
+
+def pick(prop: str, val: str):
+    n = norm(val)
+    if n == norm("rgba(0, 0, 0, 0.88)"):
+        return "--color-solid" if re.search(r"solid|primary|key", prop) else "--color-ink"
+    if n == "#ffffff":
+        return "--color-surface" if re.search(r"card|surface|bg|check|on-accent", prop) else ("--color-shine-solid" if "shine" in prop else "--color-surface")
+    if n == norm("rgba(0, 0, 0, 0.8)"):
+        return "--color-solid-hover"
+    return tokmap.get(n)
+
+DECL = re.compile(r"^(\s*)(--ui-[\w-]+)(\s*:\s*)([^;]+)(;.*)$")
+FONT = re.compile(r'^(\s*font-family\s*:\s*)"Inter"[^;]*(;.*)$')
+EASE = re.compile(r"cubic-bezier\([^)]*\)")
+DARK = re.compile(r'\.dark|data-theme="dark"|prefers-color-scheme:\s*dark')
+
+def port(name: str, rel: str):
+    src = (PACK / rel).read_text(encoding="utf-8").splitlines()
+    start = next(i for i, l in enumerate(src) if l.startswith("## Code"))
+    lo = next(i for i in range(start, len(src)) if src[i].startswith("```")) + 1
+    hi = next(i for i in range(lo, len(src)) if src[i].startswith("```"))
+    code = src[lo:hi]
+    out, report, dark, depth = [], {"mapped": 0, "unmapped": []}, False, 0
+    for idx, line in enumerate(code):
+        if not dark and DARK.search(line) and "{" in line:
+            dark, depth = True, 0
+        if dark:
+            depth += line.count("{") - line.count("}")
+            out.append(line)
+            if depth <= 0 and "}" in line: dark = False
+            continue
+        m = DECL.match(line)
+        if m:
+            val = m.group(4)
+            tok = pick(m.group(2), val)
+            if tok:
+                line = f"{m.group(1)}{m.group(2)}{m.group(3)}var({tok}){m.group(5)}"; report["mapped"] += 1
+            elif re.search(r"#[0-9a-f]{3,8}\b|rgba?\(|cubic-bezier|0\.5px", val, re.I):
+                report["unmapped"].append(f"{m.group(2)}: {val.strip()}")
+        f = FONT.match(line)
+        if f:
+            line = f"{f.group(1)}var(--font-sans){f.group(2)}"; report["mapped"] += 1
+        def ease(mm):
+            t = tokmap.get(norm(mm.group(0)))
+            if t: report["mapped"] += 1; return f"var({t})"
+            report["unmapped"].append(mm.group(0)); return mm.group(0)
+        # easing tokens only inside CSS — a JS easing string (el.animate) cannot take var()
+        if "cubic-bezier" in line and "var(--ease" not in line and not re.search(r"easing\s*:", line):
+            line = EASE.sub(ease, line)
+        out.append(line)
+    header = (f"// affect-ui Clean / Light port — source: affectui-free/{rel} (## Code)\n"
+              f"// Generated by scripts/port-affect.py: colours, shadows, easing and fonts → tokens; nothing else changed.\n"
+              f"// NEVER edit by hand. A necessary deviation is a documented DUBBED PATCH (design-system/components.md).\n")
+    body = "\n".join(l for l in out if l.strip() != '"use client";')
+    (OUT / f"{name}.tsx").write_text(header + body.lstrip("\n") + "\n", encoding="utf-8")
+    return report
+
+# DUBBED PATCH 2 (approved by the owner 2026-11-02) — localisable copy. Four ports print fixed English text that no prop can change.
+# Each fixed string becomes a field of an optional `labels` prop whose defaults are the original English, so the
+# port renders exactly as before unless labels are passed. Exact (old → new) replacements; each must match once.
+LABELS = {
+    "otp-input": {
+        "defaults": 'const OTP_LABELS = { didntGet: "Didn\'t get a code?", resendIn: "Resend in", resend: "Resend code", verifying: "Verifying code", failed: "That code didn\'t work", canResend: "You can resend the code now", sent: "A new code is on its way" };',
+        "type_anchor": ("export type OtpInputProps = {", "export type OtpInputProps = {\n  /** DUBBED PATCH 2: localisable fixed copy */\n  labels?: Partial<typeof OTP_LABELS>;"),
+        "sig": ("  className,\n}: OtpInputProps) {", "  className,\n  labels,\n}: OtpInputProps) {\n  const L = { ...OTP_LABELS, ...labels };"),
+        "swaps": [
+            ('<span className="ui-otpc__resend-q">Didn\'t get a code?</span>', '<span className="ui-otpc__resend-q">{L.didntGet}</span>'),
+            ('              Resend in{"\\u00a0"}', '              {L.resendIn}{"\\u00a0"}'),
+            ('              Resend code\n', '              {L.resend}\n'),
+            ('setAnnounce("Verifying code")', 'setAnnounce(L.verifying)'),
+            (': "That code didn\'t work");', ': L.failed);'),
+            ('setAnnounce("You can resend the code now")', 'setAnnounce(L.canResend)'),
+            ('setAnnounce("A new code is on its way")', 'setAnnounce(L.sent)'),
+        ],
+    },
+    "filter-menu": {
+        "defaults": 'const FMC_LABELS = { clearAll: "Clear all", navigate: "to navigate", select: "to select", remove: (label: string) => `Remove ${label}`, more: (n: number, list: string) => `${n} more: ${list}`, filters: (n: number) => `${n} filter${n === 1 ? "" : "s"}` };',
+        "type_anchor": ("export type FilterMenuProps = {", "export type FilterMenuProps = {\n  /** DUBBED PATCH 2: localisable fixed copy */\n  labels?: Partial<typeof FMC_LABELS>;"),
+        "sig": ("}: FilterMenuProps) {", "  labels,\n}: FilterMenuProps) {\n  const L = { ...FMC_LABELS, ...labels };"),
+        "swaps": [
+            ("          Clear all\n", "          {L.clearAll}\n"),
+            ("<span>to navigate</span>", "<span>{L.navigate}</span>"),
+            ("<span>to select</span>", "<span>{L.select}</span>"),
+            ("aria-label={`Remove ${c.label}`}", "aria-label={L.remove(c.label)}"),
+            ('aria-label={`${hidden.length} more: ${hidden.map((c) => c.label).join(", ")}`}', 'aria-label={L.more(hidden.length, hidden.map((c) => c.label).join(", "))}'),
+            ('{`${count} filter${count === 1 ? "" : "s"}`}', "{L.filters(count)}"),
+        ],
+    },
+    "profile-menu": {
+        "defaults": 'const PMC_LABELS = { account: "Account", setup: "Profile setup", next: "Next:" };',
+        "type_anchor": ("export type ProfileMenuProps = {", "export type ProfileMenuProps = {\n  /** DUBBED PATCH 2: localisable fixed copy */\n  labels?: Partial<typeof PMC_LABELS>;"),
+        "sig": ("  className,\n}: ProfileMenuProps) {", "  className,\n  labels,\n}: ProfileMenuProps) {\n  const L = { ...PMC_LABELS, ...labels };"),
+        "swaps": [
+            ('role="menu" aria-label="Account"', 'role="menu" aria-label={L.account}'),
+            ("{setup && <SetupProgress {...setup} />}", "{setup && <SetupProgress {...setup} L={L} />}"),
+            ("function SetupProgress({ done, total, next, onContinue }: ProfileSetup) {", "function SetupProgress({ done, total, next, onContinue, L }: ProfileSetup & { L: typeof PMC_LABELS }) {"),
+            ('<span className="ui-pmc__setup-title">Profile setup</span>', '<span className="ui-pmc__setup-title">{L.setup}</span>'),
+            ('aria-label="Profile setup"', "aria-label={L.setup}"),
+            ('<span className="ui-pmc__next-hint">Next:</span>', '<span className="ui-pmc__next-hint">{L.next}</span>'),
+        ],
+    },
+    "notification-stack": {
+        "defaults": 'const NSC_LABELS = { region: "Notifications", dismiss: (title: string) => `Dismiss ${title}` };',
+        "type_anchor": ("export type NotificationStackProps = {", "export type NotificationStackProps = {\n  /** DUBBED PATCH 2: localisable fixed copy */\n  labels?: Partial<typeof NSC_LABELS>;"),
+        "sig": ("export function NotificationStack({ notices, onDismiss, className }: NotificationStackProps) {", "export function NotificationStack({ notices, onDismiss, className, labels }: NotificationStackProps) {\n  const L = { ...NSC_LABELS, ...labels };"),
+        "swaps": [
+            ('aria-label="Notifications"', "aria-label={L.region}"),
+            ("aria-label={`Dismiss ${notice.title}`}", "aria-label={L.dismiss(notice.title)}"),
+        ],
+    },
+}
+
+def patch_labels(name: str):
+    spec = LABELS.get(name)
+    if not spec: return 0
+    p = OUT / f"{name}.tsx"
+    s = p.read_text(encoding="utf-8")
+    pairs = [spec["type_anchor"], spec["sig"], *spec["swaps"]]
+    for old, new in pairs:
+        n = s.count(old)
+        if n != 1: sys.exit(f"PATCH 2 {name}: expected 1 match, found {n}: {old[:70]!r}")
+        s = s.replace(old, new)
+    # defaults go right after the import block
+    lines = s.split("\n")
+    last_import = max(i for i, l in enumerate(lines) if l.startswith("import ") or l.startswith('} from "react";'))
+    lines.insert(last_import + 1, "\n// DUBBED PATCH 2 (approved): default copy = the original English of the source\n" + spec["defaults"])
+    p.write_text("\n".join(lines), encoding="utf-8")
+    return len(spec["swaps"])
+
+OUT.mkdir(parents=True, exist_ok=True)
+for name, rel in SOURCES.items():
+    r = port(name, rel)
+    patched = patch_labels(name)
+    print(f"{name:20s} mapped={r['mapped']:3d} unmapped={len(r['unmapped'])}" + (f"  patch2={patched} strings" if patched else ""))
+    for u in r["unmapped"]: print(f"    · {u}")

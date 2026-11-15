@@ -1,0 +1,855 @@
+/*
+ * Media components — Dubbed-specific, designed in the Clean language (design-system/components.md → Media):
+ * white card surfaces with hairline shadows, 4px line tracks with accent fill, 13px tabular clocks,
+ * red reserved for recording, every control 32px on desktop and 36px+ on touch.
+ */
+
+/* ---------- Video stage ---------- */
+.player {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.stage {
+  position: relative;
+  width: min(100%, calc(var(--max-h) * var(--ratio)));
+  aspect-ratio: var(--ratio);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--color-skeleton);
+  box-shadow: var(--shadow-card);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--color-skeleton);
+}
+
+.stageOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.stageOverlay[data-kind="loading"] {
+  background-color: var(--color-skeleton);
+  background-image: linear-gradient(100deg, transparent 30%, var(--color-skeleton-glow) 50%, transparent 70%);
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  animation: sweep var(--duration-shimmer) linear infinite;
+}
+
+.stageOverlay[data-kind="error"] {
+  background: var(--color-surface-code);
+  color: var(--color-text);
+}
+
+.stageOverlay[data-kind="error"] svg {
+  color: var(--color-icon);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: min(100%, calc(var(--max-h) * var(--ratio)));
+  margin: 0 auto;
+}
+
+.column > .stage {
+  width: 100%;
+}
+
+.line {
+  margin: 0;
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  letter-spacing: var(--tracking-h2);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.lineCaption {
+  font-weight: var(--weight-regular);
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+/* ---------- Transport & slider ---------- */
+.transport {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.clock {
+  flex: none;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.grow {
+  flex: 1;
+}
+
+/* ---------- Player (result): the screen that goes full screen + the controls row ---------- */
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.screenStage {
+  position: relative;
+}
+
+.screenHit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* a quiet play badge in the middle while paused (the studio's idle ▷) */
+.screenPlay {
+  display: grid;
+  place-items: center;
+  width: var(--space-12);
+  height: var(--space-12);
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-pop);
+  transition: transform var(--duration-base) var(--ease-out), background-color var(--duration-fast) ease;
+  backdrop-filter: blur(6px);
+}
+
+.screenHit:hover .screenPlay {
+  background: var(--color-surface);
+  transform: scale(1.06);
+}
+
+.playerControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+/* full screen: black, the picture as large as it fits at its own shape, the white controls row at the bottom */
+.screen:fullscreen {
+  width: 100%;
+  height: 100%;
+  background: var(--color-strong);
+}
+
+.screen:fullscreen .screenStage {
+  flex: 1;
+  min-height: 0;
+}
+
+.screen:fullscreen .screenStage figure {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: var(--color-strong);
+  box-shadow: none;
+}
+
+.screen:fullscreen .screenStage video {
+  background: var(--color-strong);
+}
+
+.screen:fullscreen > .playerControls {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 80px;
+  height: var(--control-lg);
+  cursor: pointer;
+  touch-action: none;
+}
+
+.slider[data-disabled] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.sliderTrack {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--color-line);
+}
+
+.sliderBuffered,
+.sliderFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+}
+
+.sliderBuffered {
+  background: var(--color-fill-strong);
+}
+
+.sliderFill {
+  background: var(--color-accent);
+}
+
+.sliderThumb {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card-hover);
+  transform: translate(-50%, -50%);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.sliderThumb::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+}
+
+.slider:hover .sliderThumb {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.sliderThumb:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+/* ---------- Audio track (owner decision 2026-11-02): outlined box, as wide as the video ---------- */
+.track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 72px;
+  padding: 0 var(--space-3);
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-outline);
+}
+
+.track[data-mode="recording"] {
+  box-shadow: var(--shadow-outline-danger);
+}
+
+.trackSvg {
+  display: block;
+  max-width: 100%;
+}
+
+.trackOriginal {
+  fill: var(--color-fill-strong);
+}
+
+.trackTake {
+  fill: var(--color-accent);
+}
+
+.trackLive {
+  fill: var(--color-danger);
+}
+
+.trackHead {
+  position: absolute;
+  top: var(--space-2);
+  bottom: var(--space-2);
+  width: 2px;
+  margin-left: -1px;
+  border-radius: var(--radius-full);
+  background: var(--color-ink);
+  pointer-events: none;
+}
+
+.track[data-mode="recording"] .trackHead {
+  background: var(--color-danger);
+}
+
+.timelineScale {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted);
+}
+
+/* ---------- Record control ---------- */
+.record {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.recordDisc {
+  position: relative;
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-danger);
+  color: var(--color-on-solid);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease, transform var(--duration-base) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.recordDisc:hover:not(:disabled) {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.recordDisc:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.recordDisc:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.recordDisc:disabled {
+  cursor: default;
+}
+
+.recordDisc[data-state="recording"] {
+  background: var(--color-surface);
+  color: var(--color-danger);
+}
+
+.recordDisc[data-state="saving"] {
+  background: var(--color-surface);
+  color: var(--color-icon);
+}
+
+.recordDisc:disabled:not([data-state="saving"]) {
+  opacity: 0.4;
+}
+
+.recordRing {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.recordRing circle {
+  fill: none;
+  stroke: var(--color-danger);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: calc(1 - var(--progress));
+  transition: stroke-dashoffset 120ms linear;
+}
+
+.stopSquare {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-sm);
+  background: currentColor;
+}
+
+.recordText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.recordLabel {
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+}
+
+.recordMeta {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.record[data-state="recording"] .recordMeta {
+  color: var(--color-danger);
+}
+
+.saved {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-success);
+}
+
+/* ---------- Level meter: one thin bar ---------- */
+.meter {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--color-line);
+}
+
+.meterFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+  background: var(--color-success);
+  transition: width 80ms linear, background-color var(--duration-fast) ease;
+}
+
+.meterFill[data-zone="hot"] { background: var(--color-warning); }
+.meterFill[data-zone="clip"] { background: var(--color-danger); }
+
+/* ---------- Volume ---------- */
+.volume {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.volumeSlider {
+  width: 120px;
+}
+
+/* ---------- Turn navigation ---------- */
+.turnNav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.turnCount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.turnCountMain {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+}
+
+.turnHint {
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+/* ---------- Upload ---------- */
+.drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: background-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.drop[data-over] {
+  background: var(--color-accent-wash);
+  box-shadow: var(--shadow-focus);
+}
+
+.dropIcon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  color: var(--color-icon);
+}
+
+.dropIcon[data-tone="accent"] {
+  background: var(--color-accent-soft);
+  box-shadow: none;
+  color: var(--color-accent-strong);
+}
+
+.dropIcon[data-tone="danger"] {
+  background: var(--color-danger-soft);
+  box-shadow: none;
+  color: var(--color-danger);
+}
+
+.dropBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  width: min(100%, 360px);
+}
+
+.dropTitle {
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropHint {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+}
+
+.dropHint[data-tone="danger"] {
+  color: var(--color-danger);
+}
+
+.dropHint[data-quiet] {
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+.drop[data-state="uploading"] .dropBody,
+.drop[data-state="checking"] .dropBody {
+  align-items: stretch;
+  gap: var(--space-3);
+}
+
+.drop[data-state="uploading"] .dropActions,
+.drop[data-state="checking"] .dropActions {
+  align-self: center;
+  margin-top: 0;
+}
+
+/* desktop says "Drop a video here"; touch and narrow screens (no drag and drop) say "Choose a video to dub" */
+.pointerCoarse {
+  display: none;
+}
+
+@media (pointer: coarse), (max-width: 1023.98px) {
+  .pointerFine {
+    display: none;
+  }
+
+  .pointerCoarse {
+    display: inline;
+  }
+}
+
+.dropActions {
+  margin-top: var(--space-3);
+}
+
+/* ---------- Range selector ---------- */
+.range {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.rangeHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+}
+
+.rangeTitle {
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.rangeValue {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.rangeTrack {
+  position: relative;
+  height: 40px;
+  border-radius: var(--radius-control);
+  background: var(--color-wash);
+  box-shadow: var(--shadow-hairline-inset);
+  touch-action: none;
+}
+
+.rangeWindow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--radius-control);
+  background: var(--color-accent-soft);
+  box-shadow: var(--shadow-accent-inset-strong);
+  cursor: grab;
+}
+
+.rangeWindow:active {
+  cursor: grabbing;
+}
+
+.rangeHandle {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card-hover);
+  cursor: ew-resize;
+  transform: translate(-50%, -50%);
+}
+
+.rangeHandle::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 5px;
+  width: 2px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+}
+
+.rangeHandle::before {
+  content: "";
+  position: absolute;
+  inset: -6px -12px;
+}
+
+.rangeHandle[data-side="start"] {
+  left: 0;
+}
+
+.rangeHandle[data-side="end"] {
+  left: 100%;
+}
+
+.rangeHandle:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+/* where "Play section" is — a thin ink line inside the window */
+.rangePlayhead {
+  position: absolute;
+  top: var(--space-1);
+  bottom: var(--space-1);
+  width: 2px;
+  margin-left: -1px;
+  border-radius: var(--radius-full);
+  background: var(--color-ink);
+  pointer-events: none;
+}
+
+/* the scale's middle label: "up to 120 s", or the reason when the window reached the limit */
+.rangeLimit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.range[data-limit] .rangeLimit {
+  color: var(--color-warning-text);
+  font-weight: var(--weight-medium);
+}
+
+.range[data-limit] .rangeHandle::after {
+  background: var(--color-warning-text);
+}
+
+.range[data-disabled] .rangeWindow,
+.range[data-disabled] .rangeHandle {
+  cursor: default;
+}
+
+.range[data-disabled] .rangeTrack {
+  opacity: 0.6;
+}
+
+/* ---------- Cost button ---------- */
+.cost {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1_5);
+}
+
+.costActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.costNote {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+@keyframes sweep {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: 0% 0;
+  }
+}
+
+@media (pointer: coarse) {
+  .slider {
+    height: var(--control-touch);
+  }
+
+  .sliderThumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  .recordDisc {
+    width: 64px;
+    height: 64px;
+  }
+
+  .rangeTrack {
+    height: 48px;
+  }
+
+  .rangeHandle {
+    width: 16px;
+    height: 36px;
+  }
+
+  .rangeHandle::after {
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .track {
+    height: 64px;
+  }
+
+  .turnNav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .turnCount {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .turnNav > :global(.ui-buttonc) {
+    width: 100%;
+  }
+
+  /* phone: Start, the shortfall right under it, then Buy credits — all full width */
+  .cost {
+    align-items: stretch;
+  }
+
+  .costActions {
+    display: contents;
+  }
+
+  .costActions > :global(.ui-buttonc) {
+    width: 100%;
+  }
+
+  .costStart {
+    order: 1;
+  }
+
+  .costNote {
+    order: 2;
+    text-align: center;
+  }
+
+  .costBuy {
+    order: 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stageOverlay[data-kind="loading"] {
+    animation: none;
+  }
+
+  .recordRing circle,
+  .sliderThumb,
+  .drop {
+    transition-duration: 1ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screenPlay {
+    transition: none;
+  }
+}

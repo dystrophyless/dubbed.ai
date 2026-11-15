@@ -1,0 +1,128 @@
+/*
+ * New dub — high-fi (concept A "one card"). The column is as wide as the stage can be while Start stays above the fold:
+ * --video-h = the viewport minus everything else on the page (top bar, title, card header, section selector, footer);
+ * the column = that height × 2.35 (the stage's shape), never wider than the content container, never narrower than 640px.
+ */
+.page {
+  --video-h: max(160px, calc(100dvh - 446px));
+}
+
+.column {
+  width: min(100%, max(640px, calc(var(--video-h) * 2.35)));
+  margin-inline: auto;
+}
+
+/* the upload box keeps one size across empty · uploading · checking · error · no slot: nothing jumps */
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 320px;
+  aspect-ratio: 2.35;
+}
+
+.name {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- The stage: edge to edge inside the card, always 2.35:1; narrower clips get black bars ---------- */
+.stage {
+  position: relative;
+}
+
+.stage figure {
+  border-radius: 0;
+  background: var(--color-strong);
+  box-shadow: none;
+}
+
+.stage video {
+  background: var(--color-strong);
+}
+
+/* prototype only: a 16:9 / 9:16 clip is simulated by cropping the scope demo to that shape (as in the studio) */
+.stage[data-clip="16x9"] video,
+.stage[data-clip="portrait"] video {
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+  object-fit: cover;
+}
+
+.stage[data-clip="16x9"] video {
+  aspect-ratio: 16 / 9;
+}
+
+.stage[data-clip="portrait"] video {
+  aspect-ratio: 9 / 16;
+}
+
+.playOverlay {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: var(--space-12);
+  height: var(--space-12);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-pop);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform var(--duration-base) var(--ease-out), background-color var(--duration-fast) ease;
+  backdrop-filter: blur(6px);
+}
+
+.playOverlay:hover {
+  background: var(--color-surface);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.body {
+  padding-top: var(--space-4);
+}
+
+.footer {
+  align-items: flex-start;
+  padding-block: var(--space-3);
+}
+
+.cost {
+  margin-left: auto;
+}
+
+@media (max-width: 1023.98px) {
+  .box {
+    min-height: 300px;
+    aspect-ratio: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .play,
+  .cost {
+    width: 100%;
+  }
+
+  .cost {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playOverlay {
+    transition-duration: 1ms;
+  }
+}

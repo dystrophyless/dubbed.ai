@@ -1,0 +1,315 @@
+/*
+ * New-dub concepts (Phase 4, low-fi). --video-h is each concept's height budget: the viewport minus everything that must
+ * stay above the fold (top bar, title, play row, section selector, the action), so Start never falls below 900 / 844 px.
+ * Grids here are concept sketches; the picked concept gets proper layout primitives in high-fi.
+ */
+
+/* ---------- Shared: picker ---------- */
+.picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-4);
+  border-radius: var(--radius-card);
+  text-align: center;
+  transition: background-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.picker[data-tall] {
+  min-height: min(436px, calc(100dvh - 300px));
+}
+
+.picker[data-bare] {
+  height: 100%;
+  padding: var(--space-6) var(--space-4);
+}
+
+.picker[data-over] {
+  background: var(--color-accent-wash);
+  box-shadow: var(--shadow-focus);
+}
+
+.pickerBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  width: min(100%, 400px);
+}
+
+.pickerBody[data-wide] {
+  align-items: stretch;
+  gap: var(--space-3);
+  text-align: left;
+}
+
+.pickerTitle {
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+}
+
+.pickerAction {
+  margin-top: var(--space-3);
+}
+
+/* desktop says "Drop a video here", touch screens "Choose a video" */
+.pointerCoarse {
+  display: none;
+}
+
+@media (pointer: coarse), (max-width: 1023.98px) {
+  .pointerFine {
+    display: none;
+  }
+
+  .pointerCoarse {
+    display: inline;
+  }
+}
+
+/* ---------- Shared: video box, limit hint, buttons ---------- */
+.videoLabel {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.limit {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1_5);
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-warning-text);
+}
+
+.fullButton {
+  width: 100%;
+}
+
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+
+.ellipsis {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.footer {
+  padding-block: var(--space-3);
+}
+
+.footerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ---------- A · One card ---------- */
+.a {
+  --video-h: max(160px, calc(100dvh - 480px));
+}
+
+/* ---------- B · Video and receipt ---------- */
+.b {
+  --video-h: max(160px, calc(100dvh - 470px));
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0_5);
+  min-width: 0;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+}
+
+.row dt {
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+.row dd {
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.receiptFoot {
+  padding-block: var(--space-3);
+}
+
+.bBar {
+  justify-content: stretch;
+}
+
+/* ---------- C · Two steps ---------- */
+.c {
+  --video-h: max(160px, calc(100dvh - 590px));
+}
+
+.cStep1 {
+  padding-top: var(--space-8);
+}
+
+.cFields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+/* ---------- D · Price on the selection ---------- */
+.d {
+  --video-h: max(160px, calc(100dvh - 470px));
+}
+
+.dCol {
+  width: min(100%, max(560px, calc(var(--video-h) * 16 / 9)));
+  margin-inline: auto;
+}
+
+.dFrame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-inline: auto;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.dTagRow {
+  position: relative;
+  height: var(--control-lg);
+}
+
+.dTag {
+  position: absolute;
+  bottom: 0;
+  left: clamp(56px, var(--mid), calc(100% - 56px));
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.dBar {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.dBarActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ---------- Note card ---------- */
+.noteWrap {
+  width: 100%;
+  max-width: calc(var(--container-narrow) + 2 * var(--space-8));
+  margin: var(--space-16) auto 0;
+  padding-inline: var(--space-4);
+}
+
+.tradeoffs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.tradeoff {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+}
+
+.tradeoff dt {
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.tradeoff dd {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.statePicker {
+  width: min(100%, 280px);
+}
+
+.others {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-4);
+}
+
+@media (max-width: 1023.98px) {
+  .a,
+  .b,
+  .c,
+  .d {
+    --video-h: 60vh;
+  }
+
+  .cStep1 {
+    padding-top: 0;
+  }
+
+  .footerActions {
+    width: 100%;
+  }
+
+  .footerActions > :global(.ui-buttonc) {
+    flex: 1;
+  }
+
+  .dBar {
+    position: sticky;
+    bottom: var(--space-2);
+  }
+
+  .dBarActions {
+    width: 100%;
+  }
+
+  .dBarActions > :global(.ui-buttonc) {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .tradeoff {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}

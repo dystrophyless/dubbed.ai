@@ -1,0 +1,373 @@
+/*
+ * App shells (design-system/templates.md → Shells). Canvas #fafafa; the top bar is a white strip with a hairline
+ * bottom edge; 56px tall. Ordinary shell = brand + navigation + credits + language + account. Focused shell = Exit,
+ * the page's own title and an optional right slot — no global navigation (used by the recording studio).
+ */
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: var(--color-canvas);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background: var(--color-canvas);
+  border-bottom: var(--hairline);
+}
+
+.topbarInner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  height: var(--topbar-height);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-control);
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+  text-decoration: none;
+}
+
+.brand:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-control);
+  background: var(--color-solid);
+  color: var(--color-on-solid);
+}
+
+.brandDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-danger);
+}
+
+/* Navigation: the segmented "tray" language — grey track, the active item is the white raised pill. */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-0_5);
+  padding: var(--space-0_5);
+  border-radius: var(--radius-segment);
+  background: var(--color-track);
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1_5);
+  height: var(--control-md);
+  padding: 0 var(--space-2_5);
+  border-radius: var(--radius-control);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease, background-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+.navLink:hover {
+  color: var(--color-hover-text);
+}
+
+.navLink[aria-current="page"] {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  color: var(--color-strong);
+}
+
+.navLink:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.credits {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1_5);
+  height: var(--control-md);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-control);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: background-color var(--duration-fast) ease;
+}
+
+.credits:hover {
+  background: var(--color-wash);
+}
+
+.credits:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.credits svg {
+  color: var(--color-icon);
+}
+
+.avatarButton {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  cursor: pointer;
+}
+
+.avatarButton:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.accountPopover {
+  position: fixed;
+  z-index: var(--z-popover);
+  /* the profile-menu card fills its parent: a fixed box has no width of its own, so give it the reference width */
+  width: min(296px, calc(100vw - 2 * var(--space-2)));
+}
+
+.main {
+  flex: 1;
+  padding-block: var(--space-8) var(--space-16);
+}
+
+/* Phone navigation: a sheet under the top bar. */
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0_5);
+  padding: var(--space-2) var(--space-4) var(--space-4);
+  border-top: var(--hairline);
+  background: var(--color-surface);
+}
+
+.sheetLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2_5);
+  min-height: var(--row-touch);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-control);
+  font-size: var(--text-input);
+  line-height: var(--leading-lg);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.sheetLink:is(button) {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: var(--text-input);
+  text-align: left;
+  cursor: pointer;
+}
+
+.sheetUser {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sheetLink[aria-current="page"] {
+  background: var(--color-wash);
+  font-weight: var(--weight-medium);
+}
+
+.sheetLink svg {
+  color: var(--color-icon);
+}
+
+.sheetFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: var(--hairline);
+}
+
+/* ---------- Focused shell ---------- */
+.focused {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: var(--color-canvas);
+}
+
+.focusedBar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-3);
+  height: var(--topbar-height);
+}
+
+.focusedTitle {
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.focusedRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.focusedMain {
+  flex: 1;
+  padding-block: var(--space-2) var(--space-8);
+}
+
+@media (max-width: 1023.98px) {
+  .desktopOnly {
+    display: none !important;
+  }
+
+  .main {
+    padding-block: var(--space-6) var(--space-12);
+  }
+}
+
+@media (min-width: 1024px) {
+  .phoneOnly {
+    display: none !important;
+  }
+}
+
+/* ---------- Studio shell (studio-brief.md 11–12) ---------- */
+/*
+ * --studio-chrome = everything above the fold except the video: page padding, header, the line (up to two lines),
+ * the audio track, the action row and the gaps between them. --video-h is what is left for the picture.
+ */
+.studio {
+  --studio-chrome: 330px;
+  --studio-min: 480px; /* the one-row action bar needs this much; a narrower (portrait) picture is centred inside */
+  --notice-room: 0px; /* set by the page while a bottom notice is shown: the picture gives up exactly this much, its top stays put */
+  --video-h: max(140px, calc(100dvh - var(--studio-chrome) - var(--notice-room)));
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: var(--space-4) var(--space-4) calc(var(--space-6) + var(--notice-room));
+  background: var(--color-canvas);
+}
+
+.studio[data-notice] {
+  --studio-chrome: 450px;
+}
+
+@media (min-width: 768px) {
+  .studio {
+    padding-inline: var(--space-8);
+  }
+}
+
+/* phone: the action bar takes two rows; the column starts at the top (centring left a dead band above the header) */
+@media (max-width: 480px) {
+  .studio .studioColumn {
+    margin: 0 auto; /* beats the later base rule (margin: auto) */
+  }
+
+  .studio {
+    --studio-chrome: 380px;
+    --studio-min: 100%;
+  }
+
+  .studio[data-notice] {
+    --studio-chrome: 560px;
+  }
+}
+
+.studioColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: min(100%, var(--container-content), max(var(--studio-min), calc(var(--video-h) * var(--ratio))));
+  margin: auto; /* centred both ways in the viewport */
+}
+
+/* the two icon buttons are the same size, so the middle is truly centred over the video */
+.studioHead {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.studioTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+  text-align: center;
+}
+
+.studioH1 {
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.studioRight {
+  display: flex;
+  justify-content: flex-end;
+  min-width: var(--control-lg);
+}
+
+.studioMain {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}

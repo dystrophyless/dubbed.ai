@@ -1,0 +1,182 @@
+/*
+ * Processing concepts (Phase 4, low-fi). Grey boxes stand in for the picture; the picked concept gets proper parts in
+ * high-fi. Motion (the bar filling, the spinner, the ready mark) is off under prefers-reduced-motion — the clock and the
+ * words still move, only the animation goes.
+ */
+.page {
+  padding-bottom: var(--space-4);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-4);
+}
+
+.leave {
+  text-align: center;
+}
+
+/* ---------- A · Checklist: the step mark ---------- */
+.mark {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-control);
+  background: var(--color-wash);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.mark[data-state="now"] {
+  background: var(--color-accent-wash);
+  color: var(--color-accent);
+}
+
+/* ---------- B · The scene, waiting ---------- */
+
+/* the column is as wide as a 2.35:1 stage can be while the footer stays above the fold */
+.bColumn {
+  --stage-h: max(140px, calc(100dvh - 470px));
+
+  width: min(100%, max(560px, calc(var(--stage-h) * 2.35)));
+  margin-inline: auto;
+}
+
+.bCard {
+  overflow: hidden;
+}
+
+.bStage {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 2.35;
+  background: var(--color-wash);
+  transition: background-color var(--duration-medium) var(--ease-out);
+}
+
+.bStage[data-phase="ready"] {
+  background: var(--color-success-soft);
+}
+
+.bLabel {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-muted);
+}
+
+.bReady {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-success);
+}
+
+.bStatus {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.bHeadline {
+  margin: 0;
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  letter-spacing: var(--tracking-h2);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bReady {
+    animation: rise var(--duration-slow) var(--ease-out) both;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-2));
+  }
+}
+
+/* ---------- C · Get ready while you wait: one segment per step ---------- */
+.segments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-1);
+}
+
+/* ---------- Note card (same shape as the other concepts) ---------- */
+.noteWrap {
+  width: 100%;
+  max-width: calc(var(--container-narrow) + 2 * var(--space-8));
+  margin: var(--space-16) auto 0;
+  padding-inline: var(--space-4);
+}
+
+.tradeoffs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.tradeoff {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: var(--space-3);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+}
+
+.tradeoff dt {
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.tradeoff dd {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.statePicker {
+  width: min(100%, 280px);
+}
+
+.others {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bStage {
+    transition: none;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .bColumn {
+    width: 100%;
+  }
+
+  .footer > :global(.ui-buttonc) {
+    width: 100%;
+  }
+
+  .tradeoff {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}

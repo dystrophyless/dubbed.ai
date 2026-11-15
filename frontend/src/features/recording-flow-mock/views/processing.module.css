@@ -1,0 +1,186 @@
+/*
+ * Processing — high-fi (concept B "the scene, waiting" + concept C's step progress).
+ * The column follows New dub exactly: --video-h = the viewport minus everything else on the page, the column = that
+ * height × 2.35 (the stage's shape), never wider than the container, never narrower than 640px; phones: full width.
+ * One card keeps its shape in every state — the stage, the status, the footer — so nothing jumps while it moves.
+ */
+.page {
+  --video-h: max(160px, calc(100dvh - 446px));
+}
+
+.column {
+  width: min(100%, max(640px, calc(var(--video-h) * 2.35)));
+  margin-inline: auto;
+}
+
+.name {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card {
+  overflow: hidden;
+}
+
+/* ---------- The stage: edge to edge, always 2.35:1, the section's first frame; dimmed until ready ---------- */
+.stage {
+  position: relative;
+}
+
+.stage figure {
+  border-radius: 0;
+  background: var(--color-strong);
+  box-shadow: none;
+}
+
+.stage video {
+  background: var(--color-strong);
+  filter: saturate(0.5);
+  transition: filter var(--duration-morph) var(--ease-out);
+}
+
+.dim {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--color-strong) 40%, transparent);
+  pointer-events: none;
+  transition: opacity var(--duration-morph) var(--ease-out);
+}
+
+.stage[data-lit] video {
+  filter: none;
+}
+
+.stage[data-lit] .dim {
+  opacity: 0;
+}
+
+/* prototype only: a 16:9 / 9:16 clip is simulated by cropping the scope demo to that shape (as in New dub) */
+.stage[data-clip="16x9"] video,
+.stage[data-clip="portrait"] video {
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+  object-fit: cover;
+}
+
+.stage[data-clip="16x9"] video {
+  aspect-ratio: 16 / 9;
+}
+
+.stage[data-clip="portrait"] video {
+  aspect-ratio: 9 / 16;
+}
+
+/* ---------- Status ---------- */
+.body {
+  min-height: calc(var(--control-lg) + var(--leading-md) + 6px + var(--space-3) + var(--space-2) + 2 * var(--space-4));
+}
+
+.found {
+  min-height: var(--leading-md);
+}
+
+.ending {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.endingText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.endingTitle {
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+/* ---------- Footer: the reserve + Cancel, or the state's one primary action on the right ---------- */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-4);
+  padding-block: var(--space-3);
+}
+
+.money {
+  min-width: 0;
+}
+
+.leave {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+/* "Notify me when it's ready" — a button, then what the browser answered */
+.notify {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1) var(--space-2);
+  min-height: var(--control-lg);
+}
+
+.notifyOn,
+.notifyDenied {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-1_5);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  text-align: left;
+}
+
+.notifyOn {
+  align-items: center;
+  color: var(--color-ink);
+}
+
+.notifyOn > svg {
+  color: var(--color-success);
+}
+
+.notifyDenied {
+  max-width: 56ch;
+  color: var(--color-text);
+}
+
+.notifyDenied > svg {
+  flex: none;
+  margin-top: var(--space-0_5);
+  color: var(--color-muted);
+}
+
+@media (max-width: 1023.98px) {
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer > :global(.ui-buttonc) {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage video,
+  .dim {
+    transition: none;
+  }
+}

@@ -1,3 +1,0 @@
-Checked UTC: 2026-10-23T21:48:30.0690837Z
-Ports checked: 4174 (real-unavailable test), 4287 (mock landing smoke)
-Listening sockets after test teardown: 0
