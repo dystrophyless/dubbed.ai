@@ -85,6 +85,11 @@ runs. Screenshots: `npm run snap` (1440 × 900 and 390 × 844).
   add it to `specs/backend-backlog.md`. Fix at once what the user sees: money and state shown wrongly, data loss,
   being stuck, UI races, contract handling. Fix a finding's whole class, not just the reported line; run a
   `code-reviewer` sweep before opening a PR, and keep PRs to one user story where possible.
+- Codex review loop (owner, 2026-11-15): on an open PR the main session may run a `/loop` that waits for the Codex
+  review of the latest commit, triages it by the rule above, fixes in-scope findings through the agents, runs the full
+  check, then commits, pushes, releases (patch) and comments `@codex review`, without asking each round. It stops and
+  asks the owner when a fix changes on-screen copy, money rules or user-visible behaviour, when the full check fails
+  twice, or when a review has no in-scope findings. It never merges into `main`.
 - Commit only when asked; push only when asked. Releases: SemVer 0.x — a feature raises the minor, fixes the patch;
   update `CHANGELOG.md` and `frontend/package.json`, tag `vX.Y.Z`, GitHub release from the changelog.
 - Repository documents in English; chat with the owner in Russian; product UI in English and Russian.
