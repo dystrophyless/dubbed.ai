@@ -7,7 +7,7 @@ The current stage is a **frontend on mock services**. There is no backend yet: `
 for a future FastAPI + PostgreSQL server and will be replaced by it. The `services` contracts
 (`frontend/src/services/contracts.ts`) are what the real server will implement.
 
-## Review guidelines
+## Code Review Rules
 
 - Review the frontend: what the user sees and does. Priorities:
   - the screen tells the truth, above all about money (charges, refunds, reserves) and project state;
