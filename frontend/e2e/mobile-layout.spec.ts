@@ -132,3 +132,34 @@ for (const lang of ["en", "ru"] as const) {
     });
   }
 }
+
+// Feature 003: the slots notices and the Credits slots line at 390×844.
+for (const lang of ["en", "ru"] as const) {
+  test(`slots · ${lang} · New dub notices (more, max) keep the primary above the fold`, async ({ page }) => {
+    await resetDemo(page, "slots:10,slots:full", "/new", lang);
+    await expect(page.getByTestId("new-dub-no-slot")).toHaveAttribute("data-offer", "more");
+    await fitsViewport(page, page.getByTestId("new-dub-no-slot").getByRole("button").first());
+    await noHorizontalScroll(page);
+    await resetDemo(page, "slots:50,slots:full", "/new", lang);
+    await expect(page.getByTestId("new-dub-no-slot")).toHaveAttribute("data-offer", "max");
+    await fitsViewport(page, page.getByTestId("new-dub-no-slot").getByRole("button").first());
+    await noHorizontalScroll(page);
+  });
+
+  test(`slots · ${lang} · My projects alert (more) and Credits line / success at 50`, async ({ page }) => {
+    await resetDemo(page, "slots:10,slots:full", "/projects", lang);
+    await expect(page.getByTestId("projects-slots-full")).toHaveAttribute("data-offer", "more");
+    await fitsViewport(page, page.getByTestId("projects-slots-full"));
+    await noHorizontalScroll(page);
+    await resetDemo(page, "slots:20,paydelay:100", "/credits", lang);
+    await expect(page.getByTestId("credits-slots")).toBeVisible();
+    await fitsViewport(page, page.getByTestId("credits-buy"));
+    await noHorizontalScroll(page);
+    await resetDemo(page, "slots:45,paydelay:100", "/credits", lang);
+    await page.getByTestId("credits-buy").click();
+    await page.getByTestId("checkout-pay").click();
+    await expect(page.getByTestId("credits-notice")).toHaveAttribute("data-kind", "success");
+    await fitsViewport(page, page.getByTestId("credits-notice"));
+    await noHorizontalScroll(page);
+  });
+}

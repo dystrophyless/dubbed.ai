@@ -17,6 +17,15 @@ describe("parseDemo", () => {
     expect(parseDemo("paydelay", "0")).toEqual({ paymentDelayMs: 0 });
     for (const value of [undefined, "", "Infinity", "NaN", "-1"]) expect(parseDemo("paydelay", value)).toBeNull();
   });
+  it("accepts every valid slot limit and the full preset, rejecting invalid limits", () => {
+    for (const slotLimit of [2, 10, 15, 20, 25, 30, 35, 40, 45, 50]) {
+      expect(parseDemo("slots", String(slotLimit))).toEqual({ slotLimit });
+    }
+    expect(parseDemo("slots", "full")).toEqual({ fillSlots: true });
+    for (const arg of [undefined, "", "0", "3", "5", "12", "15.5", "55", "Infinity", "NaN"]) {
+      expect(parseDemo("slots", arg)).toBeNull();
+    }
+  });
   it("clamps speed and checks turnms", () => {
     expect(parseDemo("speed", "Infinity")).toEqual({ speed: 1 });
     expect(parseDemo("speed", "1000")).toEqual({ speed: 100 });

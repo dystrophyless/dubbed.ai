@@ -21,4 +21,8 @@ The mock already handles many of these (0.1.1–0.1.9); they are listed so the s
 
 ## Open
 
-_None yet._
+- **Slot limit for purchases made before feature 003** (code review of 003, 2026-11-16). The mock raises the stored
+  limit by one step per completed purchase from 0.3.0 on; an account that already had several completed purchases in
+  0.2.x keeps 10 instead of the FR-001 value (e.g. 3 purchases → 20). The server must set each account's limit from its
+  completed purchases once at migration (`min(50, 10 + 5 × (n − 1))`, 2 with none) and then apply one step per
+  completion in the purchase transaction, never above 50. Demo presets are not part of that backfill.

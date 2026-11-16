@@ -7,6 +7,7 @@ import {
   PageHeader, Pagination, SkeletonText, Text, TextLink,
 } from "@/components/ui";
 import { formatMoney, minutesOf, timeFormatter } from "../format";
+import type { SlotsOffer } from "../slots";
 import s from "./credits.module.css";
 
 export type CreditsViewState = "default" | "loading" | "empty-history" | "error" | "purchasing";
@@ -29,11 +30,13 @@ export type HistoryItem =
 
 /** The message above the panels. One at a time; success beats the others. */
 export type CreditsNotice =
-  | { kind: "success"; credits: number; balance: number; firstPurchase: boolean; slotLimit: number }
+  /** `slotLimit` = the limit this purchase produced; null when it did not raise it (already 50, or an old purchase) */
+  | { kind: "success"; credits: number; balance: number; slotLimit: number | null }
   | { kind: "declined" }
   | { kind: "buy-error" }
   | { kind: "shortfall"; need: number; projectName: string }
-  | { kind: "slots"; slotLimit: number };
+  /** arrived from a slots notice: `limit` is the current limit, `next` what a purchase leads to (2 → 10, else +5) */
+  | { kind: "slots"; limit: number; next: number };
 
 export type CreditsViewProps = {
   state: CreditsViewState;
@@ -48,6 +51,10 @@ export type CreditsViewProps = {
   notice: CreditsNotice | null;
   /** "Back to New dub" — present only when the user came from New dub or a slot-full notice */
   onBack?: () => void;
+  /** where "Back" leads — the label names it (default "new") */
+  backTo?: "new" | "projects";
+  /** the slots line near the packs; omit to hide it. The view also hides it while a notice already says it. */
+  slots?: { limit: number; offer: SlotsOffer };
   history: HistoryItem[];
   page: number;
   pages: number;
@@ -69,6 +76,8 @@ const KIND: Record<string, { icon: IconName; tone: "neutral" | "accent" | "succe
 };
 
 const C = "features.credits" as const;
+const FREE_SLOTS = 2;
+const MAX_SLOTS = 50;
 
 function dayKey(ms: number): number {
   const d = new Date(ms);
@@ -92,6 +101,8 @@ export function CreditsView(p: CreditsViewProps) {
   };
   const n = (v: number) => fmt.format(v);
   const backAvailable = Boolean(p.onBack && p.notice?.kind === "success");
+  const noticeSaysSlots = p.notice?.kind === "slots" || (p.notice?.kind === "success" && p.notice.slotLimit !== null);
+  const showSlotsLine = !loading && !noticeSaysSlots && p.slots !== undefined && p.slots.offer !== "max";
 
   return (
     <Container width="narrow">
@@ -112,7 +123,7 @@ export function CreditsView(p: CreditsViewProps) {
           </Card>
         ) : (
           <>
-            {!loading && p.notice && <Notice notice={p.notice} n={n} onBack={backAvailable ? p.onBack : undefined} />}
+            {!loading && p.notice && <Notice notice={p.notice} n={n} onBack={backAvailable ? p.onBack : undefined} backTo={p.backTo ?? "new"} />}
 
             <Card padding="lg" aria-busy={loading || undefined} data-testid="credits-balance">
               <div className={s.balance}>
@@ -166,6 +177,7 @@ export function CreditsView(p: CreditsViewProps) {
                     }))}
                   />
                 )}
+                {showSlotsLine && p.slots && <SlotsLine slots={p.slots} />}
                 {buying && <Alert tone="info" title={t(`${C}.checkoutTitle`)}>{t(`${C}.checkoutText`)}</Alert>}
               </div>
               <CardFooter>
@@ -220,7 +232,19 @@ export function CreditsView(p: CreditsViewProps) {
   );
 }
 
-function Notice({ notice, n, onBack }: { notice: CreditsNotice; n: (v: number) => string; onBack?: () => void }) {
+/* Near the packs: what the next purchase does to the slot limit. Not shown at 50 (nothing more to promise). */
+function SlotsLine({ slots }: { slots: { limit: number; offer: SlotsOffer } }) {
+  const { t } = useTranslation();
+  return (
+    <span data-testid="credits-slots">
+      <Text size="sm" tone="muted">
+        {slots.offer === "first" ? t(`${C}.slots.first`) : t(`${C}.slots.more`, { count: slots.limit })}
+      </Text>
+    </span>
+  );
+}
+
+function Notice({ notice, n, onBack, backTo }: { notice: CreditsNotice; n: (v: number) => string; onBack?: () => void; backTo: "new" | "projects" }) {
   const { t } = useTranslation();
   switch (notice.kind) {
     case "success":
@@ -229,10 +253,12 @@ function Notice({ notice, n, onBack }: { notice: CreditsNotice; n: (v: number) =
           <Alert
             tone="success"
             title={t(`${C}.notice.successTitle`, { count: notice.credits, n: n(notice.credits) })}
-            action={onBack && <Button icon={<Icon name="back" />} onClick={onBack}>{t(`${C}.notice.back`)}</Button>}
+            action={onBack && <Button icon={<Icon name="back" />} onClick={onBack}>{t(backTo === "projects" ? `${C}.notice.backProjects` : `${C}.notice.back`)}</Button>}
           >
             {t(`${C}.notice.successText`, { balance: n(notice.balance) })}
-            {notice.firstPurchase && <> {t(`${C}.notice.firstPurchase`, { slots: notice.slotLimit })}</>}
+            {notice.slotLimit !== null && (
+              <> {notice.slotLimit >= MAX_SLOTS ? t(`${C}.notice.slotsMax`, { count: notice.slotLimit }) : t(`${C}.notice.slotsNow`, { count: notice.slotLimit })}</>
+            )}
           </Alert>
         </div>
       );
@@ -259,9 +285,15 @@ function Notice({ notice, n, onBack }: { notice: CreditsNotice; n: (v: number) =
     case "slots":
       return (
         <div data-testid="credits-notice" data-kind="slots">
-          <Alert tone="info" title={t(`${C}.notice.slotsTitle`, { slots: notice.slotLimit })}>
-            {t(`${C}.notice.slotsText`, { slots: notice.slotLimit })}
-          </Alert>
+          {notice.limit <= FREE_SLOTS ? (
+            <Alert tone="info" title={t(`${C}.notice.slotsTitle`, { slots: notice.next })}>
+              {t(`${C}.notice.slotsText`, { slots: notice.next })}
+            </Alert>
+          ) : (
+            <Alert tone="info" title={t(`${C}.notice.slotsMoreTitle`, { count: notice.next })}>
+              {t(`${C}.notice.slotsMoreText`, { count: notice.limit })}
+            </Alert>
+          )}
         </div>
       );
   }

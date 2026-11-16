@@ -1,9 +1,15 @@
 import { fail, ok, purchaseId, type CreditsPort, type DemoSettings, type HistoryRow, type Purchase, type PurchaseId } from "../contracts";
 import { PACKS } from "../rules/credits";
+import { slotLimitAfterPurchase } from "../rules/slots";
 import * as db from "./db";
 
-type AccountRecord = { balance: number; slotLimit: 2 | 10 };
+type AccountRecord = { balance: number; slotLimit: number };
 const DEFAULT_ACCOUNT: AccountRecord = { balance: 120, slotLimit: 2 };
+
+// Older purchases have no slot snapshot; reading them never infers a slot change.
+function withSlots(purchase: Purchase): Purchase {
+  return { ...purchase, slotsBefore: purchase.slotsBefore ?? null, slotsAfter: purchase.slotsAfter ?? null };
+}
 
 function emitPurchase(id: PurchaseId): void {
   db.emit({ kind: "purchase", purchaseId: id });
@@ -26,7 +32,7 @@ export const credits: CreditsPort = {
     if (delay > 0) await new Promise<void>((resolve) => setTimeout(resolve, delay));
     const id = purchaseId(crypto.randomUUID());
     const purchase: Purchase = { id, pack: structuredClone(pack), returnTo: structuredClone(returnTo),
-      state: "awaiting", checkoutUrl: `/checkout/${id}`, firstPurchase: false, createdAt: Date.now(), finishedAt: null };
+      state: "awaiting", checkoutUrl: `/checkout/${id}`, firstPurchase: false, slotsBefore: null, slotsAfter: null, createdAt: Date.now(), finishedAt: null };
     try {
       await db.write(["purchases"], (s) => { s.purchases.put(purchase); });
     } catch { return fail("storage"); }
@@ -35,13 +41,13 @@ export const credits: CreditsPort = {
   },
   async getPurchase(id) {
     const purchase = await db.get<Purchase>("purchases", id);
-    return purchase ? ok(purchase) : fail("not-found");
+    return purchase ? ok(withSlots(purchase)) : fail("not-found");
   },
   async pay(id) {
     try {
       const initial = await db.get<Purchase>("purchases", id);
       if (!initial) return fail("not-found");
-      if (initial.state !== "awaiting") return ok(initial);
+      if (initial.state !== "awaiting") return ok(withSlots(initial));
       const cfg = await db.get<Partial<DemoSettings>>("kv", "settings");
       if (cfg?.failPay) return fail("storage");
       // Never keep a transaction open over the simulated provider delay.
@@ -56,8 +62,10 @@ export const credits: CreditsPort = {
         } else {
           const account = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? { ...DEFAULT_ACCOUNT };
           purchase.state = "completed";
-          purchase.firstPurchase = account.slotLimit === 2;
-          if (purchase.firstPurchase) account.slotLimit = 10;
+          purchase.slotsBefore = account.slotLimit;
+          purchase.slotsAfter = slotLimitAfterPurchase(purchase.slotsBefore);
+          purchase.firstPurchase = purchase.slotsBefore === 2;
+          account.slotLimit = purchase.slotsAfter;
           account.balance += purchase.pack.credits;
           const row: HistoryRow = { id: crypto.randomUUID(), kind: "purchase", at: purchase.finishedAt,
             amount: purchase.pack.credits, pack: purchase.pack };
@@ -68,7 +76,7 @@ export const credits: CreditsPort = {
         return { purchase, changed: true };
       });
       if (result.changed) emitPurchase(id);
-      return result.purchase ? ok(result.purchase) : fail("not-found");
+      return result.purchase ? ok(withSlots(result.purchase)) : fail("not-found");
     } catch { return fail("storage"); }
   },
   async cancelPurchase(id) {
@@ -81,7 +89,7 @@ export const credits: CreditsPort = {
       return { purchase, changed: true };
     });
     if (result.changed) emitPurchase(id);
-    return result.purchase ? ok(result.purchase) : fail("not-found");
+    return result.purchase ? ok(withSlots(result.purchase)) : fail("not-found");
   },
   async sweep(keep) {
     const cancelled = await db.write(["purchases"], async (s) => {

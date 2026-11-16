@@ -7,6 +7,7 @@ import { keepPreviousData, useQuery, useQueryClient, type QueryClient } from "@t
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import type { ChangeEvent, DemoOutcome, Project, ProjectId, PurchaseId, Services } from "./contracts";
 import { createMockServices } from "./mock";
+import { isSlotLimit } from "./rules/slots";
 
 export * from "./contracts";
 
@@ -81,7 +82,7 @@ export function parseDemo(key: string | undefined, arg: string | undefined): Par
   if (key === "fail" && arg === "projects") return { failProjects: true };
   if (key === "fail" && arg === "none") return { failStart: false, failPay: false, failProjects: false };
   if (key === "slots" && arg === "full") return { fillSlots: true };
-  if (key === "slots" && (arg === "2" || arg === "10")) return { slotLimit: Number(arg) as 2 | 10 };
+  if (key === "slots" && isSlotLimit(num)) return { slotLimit: num };
   if (key === "outcome" && arg === "assembly-failed") return { assemblyFails: true };
   if (key === "outcome" && arg) return { outcome: arg as DemoOutcome };
   if (key === "assembly-failed") return { assemblyFails: true };

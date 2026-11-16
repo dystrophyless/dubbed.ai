@@ -56,14 +56,14 @@ export function scenario(name: string, now: number): CreditsScenario {
       return { ...base, notice: { kind: "buy-error" } };
     case "success": {
       const bought: HistoryItem = { id: "h9", kind: "purchase", at: now - 4 * MIN, amount: 1000, credits: 1000, priceCents: 900 };
-      return { ...base, balance: 1983, history: [bought, ...full], notice: { kind: "success", credits: 1000, balance: 1983, firstPurchase: false, slotLimit: 10 } };
+      return { ...base, balance: 1983, history: [bought, ...full], notice: { kind: "success", credits: 1000, balance: 1983, slotLimit: 15 } };
     }
     case "success-first": {
       const bought: HistoryItem = { id: "h9", kind: "purchase", at: now - 4 * MIN, amount: 300, credits: 300, priceCents: 300 };
       const welcome: HistoryItem = { id: "w1", kind: "welcome", at: now - 2 * DAY, amount: 120 };
       return {
         ...base, balance: 420, packId: "s", reserved: { credits: 0, projects: [] }, history: [bought, welcome], pages: 1,
-        notice: { kind: "success", credits: 300, balance: 420, firstPurchase: true, slotLimit: 10 },
+        notice: { kind: "success", credits: 300, balance: 420, slotLimit: 10 },
       };
     }
     case "success-return": {
@@ -75,7 +75,7 @@ export function scenario(name: string, now: number): CreditsScenario {
       ];
       return {
         ...base, balance: 340, packId: "s", reserved: { credits: 0, projects: [] }, history: hist, pages: 1, canGoBack: true,
-        notice: { kind: "success", credits: 300, balance: 340, firstPurchase: false, slotLimit: 10 },
+        notice: { kind: "success", credits: 300, balance: 340, slotLimit: 15 },
       };
     }
     case "shortfall":
@@ -95,7 +95,7 @@ export function scenario(name: string, now: number): CreditsScenario {
           { id: "r3", kind: "run", at: now - DAY, amount: -42, projectName: "Train station", runState: "charged", reserved: 0, charged: 42, returned: 0 },
           { id: "w1", kind: "welcome", at: now - 2 * DAY, amount: 120 },
         ],
-        notice: { kind: "slots", slotLimit: 10 },
+        notice: { kind: "slots", limit: 2, next: 10 },
       };
     case "zero-balance":
       return {
