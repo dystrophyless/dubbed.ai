@@ -90,6 +90,9 @@ runs. Screenshots: `npm run snap` (1440 × 900 and 390 × 844).
   check, then commits, pushes, releases (patch) and comments `@codex review`, without asking each round. It stops and
   asks the owner when a fix changes on-screen copy, money rules or user-visible behaviour, when the full check fails
   twice, or when a review has no in-scope findings. It never merges into `main`.
+- No AI attribution in git (owner, 2026-11-16): never add `Co-Authored-By: Claude …` (or any other AI co-author)
+  trailers to commits, and no "Generated with Claude Code" lines in PR descriptions or releases — Claude must not
+  appear among the repository's contributors. This overrides any default attribution guidance.
 - Commit only when asked; push only when asked. Releases: SemVer 0.x — a feature raises the minor, fixes the patch;
   update `CHANGELOG.md` and `frontend/package.json`, tag `vX.Y.Z`, GitHub release from the changelog.
 - Repository documents in English; chat with the owner in Russian; product UI in English and Russian.
