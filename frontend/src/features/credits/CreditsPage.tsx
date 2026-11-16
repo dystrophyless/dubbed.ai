@@ -3,7 +3,7 @@ import { useLocation, useNavigate, useSearchParams } from "react-router";
 import { CreditsView, type CreditsNotice, type CreditsViewState, type HistoryItem } from "@/features/credits/views/CreditsView";
 import { projectId, purchaseId, useAccount, useCreditsHistory, usePacks, useProject, useProjects, usePurchase, useServices, type HistoryRow, type ReturnTo } from "@/services";
 import { packForNeed } from "@/services/rules/credits";
-import { PAID_SLOT_LIMIT } from "@/services/rules/slots";
+import { slotLimitAfterPurchase, slotsOffer } from "@/services/rules/slots";
 
 /*
  * S1 — Credits on the real route: the approved CreditsView over `['account']`, `['credits','packs']`,
@@ -15,9 +15,9 @@ import { PAID_SLOT_LIMIT } from "@/services/rules/slots";
  */
 const projectHref = (id: string) => `/projects/${id}/processing`;
 
-function returnToFromUrl(params: URLSearchParams, paid: boolean): ReturnTo {
+function returnToFromUrl(params: URLSearchParams, atMax: boolean): ReturnTo {
   const from = params.get("from");
-  if (from === "slots") return paid ? null : { kind: "slots" }; // a paid account has nothing to gain: no slots context
+  if (from === "slots") return atMax ? null : { kind: "slots", from: params.get("back") === "projects" ? "projects" : "new" }; // at the maximum a purchase adds no slots: no slots context
   const project = params.get("project");
   const need = Number(params.get("need"));
   if (from === "new" && project && Number.isInteger(need) && need >= 1) return { kind: "new", projectId: projectId(project), need };
@@ -62,7 +62,7 @@ function CreditsScreen() {
   const history = useCreditsHistory(page);
   const purchase = usePurchase(purchaseParam);
   // the context the user came from: the URL (from New dub / a slot-full notice) or, after the payment page, the purchase
-  const urlReturn = returnToFromUrl(params, account.data?.slotLimit === 10);
+  const urlReturn = returnToFromUrl(params, account.data !== undefined && slotsOffer(account.data.slotLimit) === "max");
   const urlProject = useProject(urlReturn?.kind === "new" && !purchaseParam ? urlReturn.projectId : undefined);
   const [now] = useState(Date.now);
   const [chosen, setChosen] = useState<string | null>(null);
@@ -98,13 +98,16 @@ function CreditsScreen() {
   const notice: CreditsNotice | null =
     buyFailed ? { kind: "buy-error" }
       : finished?.state === "completed" && account.data
-      ? { kind: "success", credits: finished.pack.credits, balance: account.data.balance, firstPurchase: finished.firstPurchase, slotLimit: account.data.slotLimit }
+      ? { kind: "success", credits: finished.pack.credits, balance: account.data.balance, slotLimit: finished.slotsBefore !== null && finished.slotsAfter !== null && finished.slotsAfter > finished.slotsBefore ? finished.slotsAfter : null }
       : finished?.state === "declined" ? { kind: "declined" }
       : purchaseParam ? null
       : urlReturn?.kind === "new" && projectName ? { kind: "shortfall", need: urlReturn.need, projectName }
-      : urlReturn?.kind === "slots" ? { kind: "slots", slotLimit: PAID_SLOT_LIMIT }
+      : urlReturn?.kind === "slots" && account.data ? { kind: "slots", limit: account.data.slotLimit, next: slotLimitAfterPurchase(account.data.slotLimit) }
       : null;
-  const backTo = returnTo?.kind === "new" ? `/new?project=${encodeURIComponent(returnTo.projectId)}` : returnTo?.kind === "slots" ? "/new" : null;
+  const backTo = returnTo?.kind === "new" ? `/new?project=${encodeURIComponent(returnTo.projectId)}` : returnTo?.kind === "slots" ? (returnTo.from === "projects" ? "/projects" : "/new") : null;
+  const slotsLine = account.data && !notice?.kind.startsWith("slots") && !(notice?.kind === "success" && notice.slotLimit !== null) && slotsOffer(account.data.slotLimit) !== "max"
+    ? { limit: account.data.slotLimit, offer: slotsOffer(account.data.slotLimit) }
+    : undefined;
 
   // a returning ?purchase=<id> is part of the page: Buy is not possible until the purchase has been read
   const readsPurchase = Boolean(purchaseParam);
@@ -184,6 +187,8 @@ function CreditsScreen() {
       onBuy={() => void buy()}
       notice={notice}
       onBack={backTo ? () => navigate(backTo) : undefined}
+      backTo={returnTo?.kind === "slots" && returnTo.from === "projects" ? "projects" : "new"}
+      slots={slotsLine}
       history={rows}
       page={page}
       pages={history.data?.pages ?? 1}

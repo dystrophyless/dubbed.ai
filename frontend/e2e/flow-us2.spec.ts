@@ -89,7 +89,7 @@ test.describe("US2 — New dub tells the truth", () => {
     await expectNoA11yViolations(page);
 
     await page.getByRole("button", { name: "Buy credits" }).click();
-    await expect(page).toHaveURL(/\/credits\?from=slots$/);
+    await expect(page).toHaveURL(/\/credits\?from=slots&back=new$/);
     await page.goBack();
     await expect(newDub(page)).toHaveAttribute("data-state", "no-slot");
     await page.getByRole("button", { name: "Open My projects" }).click();

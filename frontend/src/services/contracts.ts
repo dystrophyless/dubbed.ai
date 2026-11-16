@@ -21,8 +21,8 @@ export type Account = {
   balance: number;
   /** credits held by queued / preparing projects (int ≥ 0) */
   reserved: number;
-  /** 2, or 10 after the first purchase */
-  slotLimit: 2 | 10;
+  /** 2, 10, 15 … 50 — rules/slots.ts */
+  slotLimit: number;
   /** projects in any state except cancelled */
   slotsUsed: number;
 };
@@ -150,11 +150,15 @@ export type ResultPlayer = { url: string; durationMs: number; format: FileFormat
 
 export type Money = { cents: number; currency: "USD" };
 export type CreditPack = { id: string; credits: number; price: Money; best: boolean };
-export type ReturnTo = { kind: "new"; projectId: ProjectId; need: number } | { kind: "slots" } | null;
+export type ReturnTo = { kind: "new"; projectId: ProjectId; need: number } | { kind: "slots"; from: "new" | "projects" } | null;
 export type PurchaseState = "awaiting" | "completed" | "declined" | "cancelled";
 export type Purchase = {
   id: PurchaseId; pack: CreditPack; state: PurchaseState; returnTo: ReturnTo; checkoutUrl: string;
-  firstPurchase: boolean; createdAt: number; finishedAt: number | null;
+  /** slotsBefore === 2 */
+  firstPurchase: boolean;
+  /** null unless completed */
+  slotsBefore: number | null; slotsAfter: number | null;
+  createdAt: number; finishedAt: number | null;
 };
 export type RunState = "reserved" | "charged" | "returned" | "partly_charged" | "failed_returned";
 export type HistoryRow =
@@ -280,6 +284,7 @@ export interface Services {
   /** mock only — demo presets; absent on the real adapter */
   demo?: {
     reset(): Promise<void>;
-    set(p: Partial<DemoSettings> & { balance?: number; slotLimit?: 2 | 10; fillSlots?: boolean }): Promise<void>;
+    /** slotLimit must satisfy isSlotLimit. */
+    set(p: Partial<DemoSettings> & { balance?: number; slotLimit?: number; fillSlots?: boolean }): Promise<void>;
   };
 }

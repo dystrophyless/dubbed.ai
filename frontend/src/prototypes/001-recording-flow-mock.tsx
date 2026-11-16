@@ -57,7 +57,7 @@ export function ProjectsDeltaPrototype() {
         cancelInfo={demoCancelInfo}
         projects={items}
         slotsTotal={state === "slots-full" ? 2 : 10}
-        paidFull={paidFull}
+        slotsOffer={paidFull ? "max" : "first"}
         hrefOf={prototypeHref}
         onRename={(id, name) => {
           setItems((l) => l.map((x) => (x.id === id ? { ...x, name } : x)));

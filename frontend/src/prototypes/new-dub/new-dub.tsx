@@ -182,7 +182,7 @@ function NewDub({ preview, reason, shape, shortVideo }: { preview: Preview; reas
       ]}
     >
       <NewDubView
-        paidFull={preview === "no-slot-paid"}
+        slotsOffer={preview === "no-slot-paid" ? "max" : "first"}
         phase={nd.phase}
         error={nd.error}
         progress={nd.progress}

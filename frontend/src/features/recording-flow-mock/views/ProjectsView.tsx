@@ -6,6 +6,7 @@ import { formatTime } from "@/components/media";
 import {
   Alert, Button, Card, Dialog, EmptyState, List, ListItem, Menu, PageHeader, Skeleton, SkeletonText, Tag, Text, TextField, type TagTone,
 } from "@/components/ui";
+import type { SlotsOffer } from "@/features/credits/slots";
 import s from "./projects.module.css";
 
 export type ProjectState = "draft" | "queued" | "preparing" | "recording" | "assembling" | "done" | "no-dialogue" | "failed";
@@ -45,8 +46,8 @@ export type ProjectsViewProps = {
   initialDeleteId?: string;
   onNewDub: () => void;
   onBuyCredits: () => void;
-  /** paid account (10 slots), all used: no purchase is offered until feature 003; the alert says to delete a project */
-  paidFull?: boolean;
+  /** state "slots-full": what a purchase would do — first (free, 2 slots) · more (10…45: +5) · max (50: delete only). Default first. */
+  slotsOffer?: SlotsOffer;
   onRetry: () => void;
 };
 
@@ -75,6 +76,7 @@ export function ProjectsView(props: ProjectsViewProps) {
     props.onDialogChange?.(p ? { id: p.id, kind: isRunning(p) ? "cancel" : "delete" } : null);
   };
   const ready = state !== "loading" && state !== "error";
+  const offer: SlotsOffer = props.slotsOffer ?? "first";
   const list = state === "empty" ? [] : [...projects].sort((a, b) => (sort === "recent" ? a.changedMinutes - b.changedMinutes : a.name.localeCompare(b.name)));
 
   return (
@@ -99,13 +101,15 @@ export function ProjectsView(props: ProjectsViewProps) {
           ) : undefined}
         />
         {state === "slots-full" && (
-          <Alert
-            tone="warning"
-            title={t(`${P}.fullTitle`)}
-            action={props.paidFull ? undefined : <Button size="sm" variant="secondary" onClick={props.onBuyCredits}>{t(`${P}.buy`)}</Button>}
-          >
-            {props.paidFull ? t(`${P}.fullPaidText`) : t(`${P}.fullText`)}
-          </Alert>
+          <div data-testid="projects-slots-full" data-offer={offer}>
+            <Alert
+              tone="warning"
+              title={t(`${P}.fullTitle`)}
+              action={offer === "max" ? undefined : <Button size="sm" variant="secondary" onClick={props.onBuyCredits}>{t(`${P}.buy`)}</Button>}
+            >
+              {offer === "first" ? t(`${P}.fullText`) : offer === "more" ? t(`${P}.moreText`) : t(`${P}.maxText`, { limit: slotsTotal })}
+            </Alert>
+          </div>
         )}
         <Card padding="none" aria-busy={state === "loading" || undefined}>
           {state === "loading" ? (

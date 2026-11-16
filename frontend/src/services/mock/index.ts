@@ -28,7 +28,7 @@ import { runAfter, runAmount } from "../rules/credits";
 import { cancel as cancelMoney, cancelCharge, refund, reserve, settle } from "../rules/money";
 import { prepStatus, turnsFoundAt, type PrepRun } from "../rules/lifecycle";
 import { defaultSection, isAcceptedFile, isValidSection, MAX_FILE_BYTES, MAX_VIDEO_MS, MIN_SECTION_MS, nameFromFile, priceOf } from "../rules/pricing";
-import { canReplaceVideo, FREE_SLOT_LIMIT, PAID_SLOT_LIMIT } from "../rules/slots";
+import { canReplaceVideo, FREE_SLOT_LIMIT, isSlotLimit } from "../rules/slots";
 import { planTurns, turnCount } from "../rules/turns";
 import { captureFixedWindow, decodeAudio, MicrophoneError, probeVideo, waveformRange } from "../media/browser-media";
 import { tryAcquire, whenFree } from "../media/capture-lock";
@@ -57,7 +57,7 @@ type ProjectRecord = {
   createdAt: number;
   changedAt: number;
 };
-type AccountRecord = { balance: number; slotLimit: 2 | 10 };
+type AccountRecord = { balance: number; slotLimit: number };
 type TurnRecord = Turn;
 type TakeRecord = Take & { audio: Blob };
 type VideoRecord = { projectId: ProjectId; blob: Blob; stamp?: string };
@@ -822,11 +822,12 @@ export function createMockServices(): Services {
             s.history.put({ id: crypto.randomUUID(), kind: "adjustment", at: now(), amount: balance - acc.balance } satisfies HistoryRow);
           }
           const cur = ((await db.req(s.kv.get("settings"))) as Partial<DemoSettings> | undefined) ?? {};
-          s.kv.put({ ...acc, ...(balance !== undefined ? { balance } : {}), ...(slotLimit ? { slotLimit } : {}) }, "account");
+          const nextLimit = slotLimit !== undefined && isSlotLimit(slotLimit) ? slotLimit : acc.slotLimit;
+          s.kv.put({ ...acc, ...(balance !== undefined ? { balance } : {}), slotLimit: nextLimit }, "account");
           s.kv.put({ ...DEFAULT_SETTINGS, ...cur, ...rest }, "settings");
           if (fillSlots) {
             const all = (await db.req(s.projects.getAll())) as ProjectRecord[];
-            for (let i = all.length; i < acc.slotLimit; i += 1) s.projects.put(demoDoneProject(i));
+            for (let i = all.length; i < nextLimit; i += 1) s.projects.put(demoDoneProject(i));
           }
         });
         db.emit({ kind: "demo" });
@@ -860,4 +861,3 @@ function demoDoneProject(i: number): ProjectRecord {
   };
 }
 
-export { PAID_SLOT_LIMIT };

@@ -4,6 +4,27 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.3.0] — 2026-11-16
+
+Feature 003 — more project slots with every purchase (`specs/003-slots-per-purchase/`).
+
+### Added
+
+- Every completed purchase after the first adds 5 project slots, up to 50 (the first purchase still raises 2 → 10);
+  any pack counts. The success message names the new limit and says when it is the maximum; at 50 a purchase adds
+  credits only.
+- When all slots are used below 50, New dub and My projects offer "Buy credits" (a pack adds 5 more) next to deleting
+  a project; Credits opens with "Best value" preselected and a line naming the new limit, and after paying the user
+  goes back to New dub or My projects, wherever they came from.
+- Credits shows the current number of project slots and what the next purchase adds, under the packs.
+- Demo preset `slots:<n>` accepts every valid limit (2, 10, 15 … 50).
+
+### Changed
+
+- At 50 of 50 the slots notices say "Delete a project to free a slot" without a purchase offer; the 0.2.x interim text
+  at 10 of 10 is gone.
+- `PRODUCT_BRIEF.md` §3 states the rule as in force.
+
 ## [0.2.1] — 2026-11-16
 
 Fix from the first Codex review of PR #84.

@@ -7,6 +7,7 @@ import { LoadError } from "@/features/recording-flow-mock/LoadError";
 import { PageSkeleton } from "@/features/recording-flow-mock/PageSkeleton";
 import { NewDubView, type NewDubReason } from "@/features/recording-flow-mock/views/NewDubView";
 import { draftSourceKey } from "@/services/rules/draft";
+import { slotsOffer } from "@/services/rules/slots";
 import { priceOf } from "@/services/rules/pricing";
 import { qk, useAccount, useProject, useServices, useVideoUrl, type ProjectId } from "@/services";
 
@@ -209,10 +210,11 @@ export function NewDubPage() {
             return;
           }
         }
-        navigate("/credits?from=slots");
+        navigate("/credits?from=slots&back=new");
       }}
       onOpenProjects={() => navigate("/projects")}
-      paidFull={account.data.slotLimit === 10}
+      slotsOffer={slotsOffer(account.data.slotLimit)}
+      slotLimit={account.data.slotLimit}
     />
   );
 }

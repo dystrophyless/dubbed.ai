@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router";
 import { toast } from "@/components/ui";
 import { ProjectsView, type ProjectItem, type ProjectState as ItemState } from "@/features/recording-flow-mock/views/ProjectsView";
 import { POLL_MS, projectId, qk, useAccount, useProjects, useServices, type ProjectSummary } from "@/services";
+import { slotsOffer } from "@/services/rules/slots";
 import { priceOf } from "@/services/rules/pricing";
 import { refusalFor, refusalOf, toastRefusal } from "@/features/processing/cancelFailure";
 import { redirectTarget } from "@/services/rules/lifecycle";
@@ -145,8 +146,8 @@ export function ProjectsPage() {
         return q ? { stepsDone: q.stepsDone, charge: q.charge, reserved: q.charge + q.refund } : null;
       }}
       onNewDub={() => navigate("/new")}
-      onBuyCredits={() => navigate("/credits?from=slots")}
-      paidFull={slotsTotal === 10}
+      onBuyCredits={() => navigate("/credits?from=slots&back=projects")}
+      slotsOffer={slotsOffer(slotsTotal)}
       onRetry={() => void projects.refetch()}
     />
   );

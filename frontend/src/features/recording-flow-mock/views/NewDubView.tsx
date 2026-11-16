@@ -4,6 +4,7 @@ import { Icon } from "@/components/icons";
 import { Container, Stack } from "@/components/layout";
 import { CostButton, PlaySectionButton, RangeSelector, UploadDropzone, VideoStage, useSectionPlayback } from "@/components/media";
 import { Button, Card, CardBody, CardFooter, CardHeader, EmptyState, PageHeader } from "@/components/ui";
+import type { SlotsOffer } from "@/features/credits/slots";
 import s from "./new-dub.module.css";
 
 /*
@@ -50,8 +51,10 @@ export type NewDubViewProps = {
   onStart: () => void;
   onBuyCredits: () => void;
   onOpenProjects: () => void;
-  /** paid account (10 slots), all used: no purchase is offered until feature 003; the notice says to delete a project */
-  paidFull?: boolean;
+  /** phase "no-slot": what a purchase would do — first (free, 2 slots) · more (10…45: +5) · max (50: delete only). Default first. */
+  slotsOffer?: SlotsOffer;
+  /** the account's slot limit, named in the "more" / "max" notice */
+  slotLimit?: number;
 };
 
 const identity = (t: number) => t;
@@ -64,20 +67,7 @@ export function NewDubView(p: NewDubViewProps) {
         <Stack gap={24}>
           <PageHeader title={t("newDub.title")} description={t("newDub.description")} />
           {p.phase === "no-slot" ? (
-            <Card padding="none" className={s.box} data-testid="new-dub-no-slot">
-              <EmptyState
-                icon="warning"
-                tone="warning"
-                title={t("newDub.noSlot.title")}
-                description={p.paidFull ? t("newDub.noSlot.paidText") : t("newDub.noSlot.text")}
-                actions={
-                  <>
-                    <Button size="lg" icon={<Icon name="projects" />} onClick={p.onOpenProjects}>{t("newDub.noSlot.projects")}</Button>
-                    {!p.paidFull && <Button variant="secondary" size="lg" icon={<Icon name="purchase" />} onClick={p.onBuyCredits}>{t("newDub.noSlot.buy")}</Button>}
-                  </>
-                }
-              />
-            </Card>
+            <NoSlot {...p} offer={p.slotsOffer ?? "first"} />
           ) : p.phase === "ready" ? (
             <Ready {...p} />
           ) : (
@@ -94,6 +84,34 @@ export function NewDubView(p: NewDubViewProps) {
         </Stack>
       </div>
     </Container>
+  );
+}
+
+/* No free project slot — three variants by the slot limit (feature 003). One primary: Open My projects. */
+function NoSlot(p: NewDubViewProps & { offer: SlotsOffer }) {
+  const { t } = useTranslation();
+  const limit = p.slotLimit ?? 10;
+  return (
+    <Card padding="none" className={s.box} data-testid="new-dub-no-slot" data-offer={p.offer}>
+      <EmptyState
+        icon="warning"
+        tone="warning"
+        title={t("newDub.noSlot.title")}
+        description={
+          p.offer === "first" ? t("newDub.noSlot.text")
+          : p.offer === "more" ? t("newDub.noSlot.moreText", { limit })
+          : t("newDub.noSlot.maxText", { limit })
+        }
+        actions={
+          <>
+            <Button size="lg" icon={<Icon name="projects" />} onClick={p.onOpenProjects}>{t("newDub.noSlot.projects")}</Button>
+            {p.offer !== "max" && (
+              <Button variant="secondary" size="lg" icon={<Icon name="purchase" />} onClick={p.onBuyCredits}>{t("newDub.noSlot.buy")}</Button>
+            )}
+          </>
+        }
+      />
+    </Card>
   );
 }
 

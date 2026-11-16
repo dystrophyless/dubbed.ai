@@ -91,7 +91,7 @@ test.describe("US3 — buy credits and return to New dub", () => {
     await expect(newDub(page)).toHaveAttribute("data-state", "no-slot");
     await page.getByRole("button", { name: "Buy credits" }).click();
 
-    await expect(page).toHaveURL(/\/credits\?from=slots$/);
+    await expect(page).toHaveURL(/\/credits\?from=slots&back=new$/);
     await expect(notice(page)).toHaveAttribute("data-kind", "slots");
     await expect(notice(page)).toContainText("Buy your first pack to get 10 project slots");
     await expect(page.getByRole("radio", { name: /1,000/ })).toBeChecked(); // no need: Best value
@@ -113,7 +113,7 @@ test.describe("US3 — buy credits and return to New dub", () => {
   test("My projects: slots-full Buy credits opens Credits with the slots notice", async ({ page }) => {
     await resetDemo(page, "slots:full", "/projects");
     await page.getByRole("button", { name: "Buy credits" }).click();
-    await expect(page).toHaveURL(/\/credits\?from=slots$/);
+    await expect(page).toHaveURL(/\/credits\?from=slots&back=projects$/);
     await expect(notice(page)).toHaveAttribute("data-kind", "slots");
   });
 

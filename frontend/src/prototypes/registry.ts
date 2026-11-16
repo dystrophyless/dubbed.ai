@@ -14,6 +14,7 @@ import { ReadyElsewherePrototype } from "./processing/ready-elsewhere";
 import { RESULT_STATES, ResultPrototype } from "./result/result";
 import { ResultReadyElsewherePrototype } from "./result/ready-elsewhere";
 import { CHECKOUT_STATES, CREDITS_STATES, CheckoutPrototype, CreditsPrototype } from "./002-credits-flow-mock";
+import * as Slots from "./003-slots-per-purchase";
 import { PROJECTS_STATES, ProjectsDeltaPrototype, ResultFormatPrototype } from "./001-recording-flow-mock";
 
 /*
@@ -31,6 +32,16 @@ export type PrototypeEntry = { id: string; title: string; screens: Record<string
 const CONCEPT_STATES = ["no-take", "recording", "saved"] as const;
 
 export const PROTOTYPES: PrototypeEntry[] = [
+  /* Feature 003 - more project slots with every purchase: only the changed notices and lines of New dub, My projects and Credits */
+  {
+    id: "003-slots-per-purchase",
+    title: "003 - More project slots with every purchase (deltas)",
+    screens: {
+      "new-dub": { title: "New dub - No free project slot by limit (10 / 2 / 45 / 50)", states: Slots.NEW_DUB_STATES, Component: Slots.NewDubSlotsPrototype },
+      projects: { title: "My projects - All project slots are used by limit", states: Slots.PROJECTS_STATES, Component: Slots.ProjectsSlotsPrototype },
+      credits: { title: "Credits - slots notice, slots line, success by limit", states: Slots.CREDITS_STATES, Component: Slots.CreditsSlotsPrototype },
+    },
+  },
   /* Feature 002 — credits flow on mock services: the Gate-3 Credits template with the new rows and messages, and the
      simulated payment page (outside the shell). &outcome=declined on the checkout makes Pay return the declined message. */
   {
