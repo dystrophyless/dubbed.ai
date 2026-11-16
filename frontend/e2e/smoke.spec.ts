@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { expectNoA11yViolations, trackConsoleErrors } from "./support/a11y";
-import { noHorizontalScroll } from "./support/flow";
+import { noHorizontalScroll, resetDemo } from "./support/flow";
 import { openScreen, screenRoot, type Screen } from "./support/screens";
 
 for (const screen of ["projects", "new", "processing", "studio", "result"] as const) {
@@ -12,6 +12,25 @@ for (const screen of ["projects", "new", "processing", "studio", "result"] as co
     expect(errors).toEqual([]);
   });
 }
+test("product route: credits", async ({ page }) => {
+  const errors = trackConsoleErrors(page);
+  await resetDemo(page, "", "/credits");
+  await expect(page.getByTestId("credits-balance")).toBeVisible();
+  await noHorizontalScroll(page);
+  await expectNoA11yViolations(page);
+  expect(errors).toEqual([]);
+});
+test("product route: checkout", async ({ page }) => {
+  const errors = trackConsoleErrors(page);
+  await resetDemo(page, "", "/credits");
+  await page.getByRole("button", { name: "Buy 1,000 credits · $9" }).click();
+  await expect(page).toHaveURL(/\/checkout\/[^/]+$/);
+  await expect(page.getByTestId("checkout-page")).toHaveAttribute("data-state", "default");
+  await expect(page.getByTestId("checkout-pay")).toBeVisible();
+  await noHorizontalScroll(page);
+  await expectNoA11yViolations(page);
+  expect(errors).toEqual([]);
+});
 for (const route of ["/", "/projects/layout"]) {
   test(`product redirect: ${route}`, async ({ page }) => {
     const errors = trackConsoleErrors(page);

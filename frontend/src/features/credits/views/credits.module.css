@@ -1,0 +1,106 @@
+/* Credits — page-level layout only; every visual value is a token (copied from the approved Credits template). */
+.balance {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.balanceValue {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-strong);
+}
+
+.balanceUnit {
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  letter-spacing: 0;
+  color: var(--color-text);
+}
+
+.balanceLines {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--space-1_5);
+}
+
+.headerMeta {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-muted);
+}
+
+.packBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-1) var(--space-4) var(--space-4);
+}
+
+.packSkeleton {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.packSkeleton > span {
+  height: 112px;
+  border-radius: var(--radius-card);
+  background: var(--color-skeleton);
+}
+
+.tilePlaceholder {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-segment);
+  background: var(--color-skeleton);
+}
+
+.amount {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+  text-align: right;
+}
+
+.amount[data-sign="plus"] {
+  color: var(--color-success);
+}
+
+.amount[data-sign="zero"] {
+  color: var(--color-muted);
+}
+
+.historyFoot {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2_5) var(--space-4);
+  border-top: var(--hairline);
+}
+
+/* the notice's action sits under the text on phones */
+.noticeAction {
+  display: flex;
+}
+
+@media (max-width: 1023.98px) {
+  .packSkeleton {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* the one-line meta would squeeze the title on narrow phones (RU "Купить кредиты") */
+@media (max-width: 479.98px) {
+  .headerMeta {
+    display: none;
+  }
+}

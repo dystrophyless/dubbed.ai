@@ -209,6 +209,6 @@ test.describe("US5 - My projects", () => {
     await resetDemo(page, "slots:full", "/projects");
     await expect(page.getByText("All project slots are used")).toBeVisible();
     await page.getByRole("button", { name: "Buy credits" }).click();
-    await expect(page).toHaveURL(/\/credits$/);
+    await expect(page).toHaveURL(/\/credits\?from=slots$/);
   });
 });

@@ -1,5 +1,6 @@
 import { expect, type Page, type Locator } from "@playwright/test";
 import { resetDemo, type Lang } from "./flow";
+import { seedHistory } from "./history";
 
 export type Screen = "projects" | "new" | "processing" | "studio" | "result";
 export const screenPaths: Record<Screen, string> = {
@@ -13,12 +14,15 @@ export async function openScreen(page: Page, screen: Screen, lang: Lang = "en", 
   const windowMs = options.windowMs ?? Math.floor(13000 / turns);
   await resetDemo(page, `speed:0.05,turns:${turns}`, "/projects", lang);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  await page.evaluate(async ({ screen, turns, windowMs, name }) => {
+  const now = Date.now();
+  const name = options.name ?? "A scene with a deliberately long project name";
+  const money = { id: "layout", name, reserved: screen === "processing" ? 13 : 0, charged: screen === "new" || screen === "processing" ? 0 : 13, createdAt: now, changedAt: now };
+  const history = seedHistory([money]);
+  await page.evaluate(async ({ screen, turns, windowMs, name, now, history }) => {
     const blob = await (await fetch("/media/scene.mp4")).blob();
     const db = await new Promise<IDBDatabase>((resolve, reject) => {
       const r = indexedDB.open("dubbed-mock"); r.onsuccess = () => resolve(r.result); r.onerror = () => reject(r.error);
     });
-    const now = Date.now();
     const state = screen === "new" ? "draft" : screen === "processing" ? "preparing" : screen === "studio" ? "recording" : "done";
     // A valid mono PCM take per turn keeps the ready fixture internally consistent, including re-record entry.
     const pcm = new ArrayBuffer(44 + Math.round(windowMs * 16) * 2);
@@ -29,9 +33,10 @@ export async function openScreen(page: Page, screen: Screen, lang: Lang = "en", 
     wav.setUint32(24, 16000, true); wav.setUint32(28, 32000, true); wav.setUint16(32, 2, true); wav.setUint16(34, 16, true);
     ascii(36, "data"); wav.setUint32(40, pcm.byteLength - 44, true);
     const audio = new Blob([pcm], { type: "audio/wav" });
-    const tx = db.transaction(["projects", "videos", "turns", "takes", "results"], "readwrite");
+    const tx = db.transaction(["projects", "videos", "turns", "takes", "results", "history"], "readwrite");
+    history.forEach((row) => tx.objectStore("history").put(row));
     tx.objectStore("projects").put({
-      id: "layout", name, state,
+      id: "layout", name, state, runId: state === "draft" ? null : "run-layout",
       video: { durationMs: 13000, width: 1280, height: 544, fileName: "scene.mp4", mime: "video/mp4" },
       section: { startMs: 0, endMs: 13000 },
       run: state === "preparing" ? { startedAt: now, fromStep: 1, queued: true, outcome: "ready", speed: 0.05 } : null,
@@ -58,7 +63,7 @@ export async function openScreen(page: Page, screen: Screen, lang: Lang = "en", 
     });
     await new Promise<void>((resolve, reject) => { tx.oncomplete = () => resolve(); tx.onerror = () => reject(tx.error); });
     db.close();
-  }, { screen, turns, windowMs, name: options.name ?? "A scene with a deliberately long project name" });
+  }, { screen, turns, windowMs, name, now, history });
   await page.goto(screenPaths[screen]);
   await expect(screenRoot(page, screen)).toBeVisible();
 }

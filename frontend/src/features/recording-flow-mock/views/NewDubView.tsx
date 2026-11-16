@@ -50,6 +50,8 @@ export type NewDubViewProps = {
   onStart: () => void;
   onBuyCredits: () => void;
   onOpenProjects: () => void;
+  /** paid account (10 slots), all used: no purchase is offered until feature 003; the notice says to delete a project */
+  paidFull?: boolean;
 };
 
 const identity = (t: number) => t;
@@ -67,11 +69,11 @@ export function NewDubView(p: NewDubViewProps) {
                 icon="warning"
                 tone="warning"
                 title={t("newDub.noSlot.title")}
-                description={t("newDub.noSlot.text")}
+                description={p.paidFull ? t("newDub.noSlot.paidText") : t("newDub.noSlot.text")}
                 actions={
                   <>
                     <Button size="lg" icon={<Icon name="projects" />} onClick={p.onOpenProjects}>{t("newDub.noSlot.projects")}</Button>
-                    <Button variant="secondary" size="lg" icon={<Icon name="purchase" />} onClick={p.onBuyCredits}>{t("newDub.noSlot.buy")}</Button>
+                    {!p.paidFull && <Button variant="secondary" size="lg" icon={<Icon name="purchase" />} onClick={p.onBuyCredits}>{t("newDub.noSlot.buy")}</Button>}
                   </>
                 }
               />

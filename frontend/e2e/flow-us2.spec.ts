@@ -89,7 +89,7 @@ test.describe("US2 — New dub tells the truth", () => {
     await expectNoA11yViolations(page);
 
     await page.getByRole("button", { name: "Buy credits" }).click();
-    await expect(page).toHaveURL(/\/credits$/);
+    await expect(page).toHaveURL(/\/credits\?from=slots$/);
     await page.goBack();
     await expect(newDub(page)).toHaveAttribute("data-state", "no-slot");
     await page.getByRole("button", { name: "Open My projects" }).click();
@@ -165,7 +165,7 @@ test.describe("US2 — New dub tells the truth", () => {
     await expect(newDub(page)).toHaveAttribute("data-state", "ready", { timeout: 20_000 });
     await expect(page.getByTestId("range-limit")).toHaveText("That's the limit — 120 s");
     await expect(start(page)).toHaveText("Start dubbing · 120 credits");
-    expect(await page.locator("video").first().evaluate((v: HTMLVideoElement) => v.duration)).toBeGreaterThan(120);
+    await expect.poll(() => page.locator("video").first().evaluate((v: HTMLVideoElement) => v.duration)).toBeGreaterThan(120);
   });
 
   test("too few credits: Start disabled with the shortfall; coming back from Buy credits restores video and section", async ({ page }) => {
@@ -188,7 +188,7 @@ test.describe("US2 — New dub tells the truth", () => {
     await page.waitForTimeout(600); // the section is saved shortly after the change
 
     await page.getByRole("button", { name: "Buy credits" }).click();
-    await expect(page).toHaveURL(/\/credits$/);
+    await expect(page).toHaveURL(/\/credits\?from=new&project=[^&]+&need=\d+$/);
     await page.goBack();
     await expect(newDub(page)).toHaveAttribute("data-state", "ready", { timeout: 15_000 });
     await expect(page.getByTestId("new-dub-card")).toContainText("Scene");

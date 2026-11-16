@@ -93,5 +93,6 @@ runs. Screenshots: `npm run snap` (1440 × 900 and 390 × 844).
 - Commit only when asked; push only when asked. Releases: SemVer 0.x — a feature raises the minor, fixes the patch;
   update `CHANGELOG.md` and `frontend/package.json`, tag `vX.Y.Z`, GitHub release from the changelog.
 - Repository documents in English; chat with the owner in Russian; product UI in English and Russian.
-- This folder is a git worktree of `D:\Program\python\Dubbed` on branch `restart-claude`; do not switch branches here and
+- This folder is a git worktree of `D:\Program\python\Dubbed` on the current feature branch (`002-credits-flow-mock`,
+  renamed from `restart-claude` by the owner on 2026-11-16); do not switch branches here and
   do not touch the main `Dubbed` folder. Use port **5174** for the dev server (5173 may be used by the other run).

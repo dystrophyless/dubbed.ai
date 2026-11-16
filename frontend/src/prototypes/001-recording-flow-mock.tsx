@@ -10,7 +10,7 @@ import { ResultPrototype } from "./result/result";
 
 /*
  * Feature 001 — recording flow on mock services. ONLY the deltas to the Gate-4 prototypes live here:
- *   /prototypes/001-recording-flow-mock/projects?state=default|loading|empty|error|slots-full|not-found
+ *   /prototypes/001-recording-flow-mock/projects?state=default|loading|empty|error|slots-full|slots-full-paid|not-found
  *       My projects with a row for every lifecycle state; each row opens the approved prototype of its page.
  *       not-found = the redirect target of an unknown/deleted project (toast).
  *   /prototypes/001-recording-flow-mock/result?state=ready|new-version-ready|...   the approved Result, the download
@@ -19,14 +19,22 @@ import { ResultPrototype } from "./result/result";
  *       (the state itself lives in /prototypes/studio/turn, the approved prototype, as one extra preview).
  * Everything else is "as approved": new-dub/page, processing/page, studio/turn, result/page.
  */
-export const PROJECTS_STATES = ["default", "loading", "empty", "error", "slots-full", "not-found", "delete-preparing", "delete-queued"] as const;
+export const PROJECTS_STATES = ["default", "loading", "empty", "error", "slots-full", "slots-full-paid", "not-found", "delete-preparing", "delete-queued"] as const;
+
+/** Ten projects (every slot of a paid account) from the lifecycle fixtures. */
+const tenProjects = (): ProjectItem[] =>
+  Array.from({ length: 10 }, (_, i) => {
+    const src = LIFECYCLE_PROJECTS[i % LIFECYCLE_PROJECTS.length]!;
+    return i < LIFECYCLE_PROJECTS.length ? src : { ...src, id: `${src.id}-${i}`, name: `${src.name} ${i + 1}` };
+  });
 
 export function ProjectsDeltaPrototype() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const state = useViewState(PROJECTS_STATES);
-  const full = state === "slots-full";
-  const [items, setItems] = useState<ProjectItem[]>(full ? LIFECYCLE_PROJECTS.slice(0, 2) : LIFECYCLE_PROJECTS);
+  const paidFull = state === "slots-full-paid";
+  const full = state === "slots-full" || paidFull;
+  const [items, setItems] = useState<ProjectItem[]>(paidFull ? tenProjects() : full ? LIFECYCLE_PROJECTS.slice(0, 2) : LIFECYCLE_PROJECTS);
 
   // unknown or deleted project: the real /projects/:id redirect lands here with a toast
   const shown = useRef(false); // React StrictMode runs effects twice in dev
@@ -44,11 +52,12 @@ export function ProjectsDeltaPrototype() {
     <InAppShell states={PROJECTS_STATES} credits={full ? 14 : 48}>
       <ProjectsView
         key={state}
-        state={state === "not-found" || state === "delete-preparing" || state === "delete-queued" ? "default" : state}
+        state={paidFull ? "slots-full" : state === "not-found" || state === "delete-preparing" || state === "delete-queued" ? "default" : state}
         initialDeleteId={state === "delete-preparing" ? "p-preparing" : state === "delete-queued" ? "p-queued" : undefined}
         cancelInfo={demoCancelInfo}
         projects={items}
-        slotsTotal={full ? 2 : 10}
+        slotsTotal={state === "slots-full" ? 2 : 10}
+        paidFull={paidFull}
         hrefOf={prototypeHref}
         onRename={(id, name) => {
           setItems((l) => l.map((x) => (x.id === id ? { ...x, name } : x)));

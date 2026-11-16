@@ -32,7 +32,7 @@ async function recordTurn(page: Page, how: "window" | "stop" | "key") {
   await expect(page.getByTestId("stage-muted")).toBeVisible();
   await expect(page.getByTestId("audio-track")).toHaveAttribute("data-mode", "recording");
   await expect(page.getByTestId("record-hint")).not.toBeEmpty();
-  expect(await page.locator("video").first().evaluate((v: HTMLVideoElement) => v.muted)).toBe(true);
+  await expect(page.locator("video").first()).toHaveJSProperty("muted", true);
   const turnUrl = page.url();
   await page.keyboard.press("ArrowLeft");
   await page.keyboard.press("ArrowRight");

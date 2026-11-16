@@ -24,6 +24,20 @@ describe("service change feed query invalidation", () => {
     }
   });
 
+  it.each(["credits", "purchase", "project", "removed"])("invalidates history for %s", (kind) => {
+    const client = new QueryClient();
+    const keys = [qk.credits.packs, qk.credits.history(1), qk.credits.history(2), qk.account, qk.purchase("p"), qk.purchase("other")];
+    for (const key of keys) client.setQueryData(key, "cached");
+    invalidateFor(client, { kind, projectId: id, purchaseId: "p" as import("./contracts").PurchaseId });
+    expect(client.getQueryState(keys[0])?.isInvalidated).toBe(false);
+    expect(client.getQueryState(keys[1])?.isInvalidated).toBe(true);
+    expect(client.getQueryState(keys[2])?.isInvalidated).toBe(true);
+    expect(client.getQueryState(keys[3])?.isInvalidated).toBe(true);
+    expect(client.getQueryState(keys[4])?.isInvalidated).toBe(kind === "purchase");
+    expect(client.getQueryState(keys[5])?.isInvalidated).toBe(false);
+    client.clear();
+  });
+
   it("invalidates every mutable project cache but keeps result progress scoped", () => {
     const client = new QueryClient();
     const keys = [qk.account, qk.projects, qk.draft, qk.project(id), qk.turns(id), qk.takes(id), qk.takeUrl(id, 1), qk.videoUrl(id), qk.result(id), qk.player(id, 1)];

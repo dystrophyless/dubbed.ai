@@ -1,0 +1,149 @@
+/* Simulated payment page — the auth archetype's centred panel (otp-input reference); tokens only. */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: var(--space-4);
+  background: var(--color-canvas);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--container-form);
+  margin: 0 auto;
+  padding-block: var(--space-8) var(--space-12);
+}
+
+.card {
+  width: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-8) var(--space-6) var(--space-6);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.icon {
+  display: grid;
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  letter-spacing: var(--tracking-h2);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+}
+
+/* the pack: a divided block, not a second card */
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-block: var(--hairline);
+}
+
+.summaryText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0_5);
+  min-width: 0;
+}
+
+.summaryName {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.summaryMeta {
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+.price {
+  font-size: var(--text-h1);
+  line-height: var(--leading-h1);
+  letter-spacing: var(--tracking-h1);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-strong);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.actions > :global(.ui-buttonc) {
+  width: 100%;
+}
+
+.note {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-3) var(--space-4);
+  border-top: var(--hairline);
+}
+
+/* spinner tile while returning */
+.spinTile {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-segment);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+}
+
+.skeletonBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+}

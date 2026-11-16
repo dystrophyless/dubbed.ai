@@ -70,6 +70,9 @@ microphone, and gets the full video back with their voices replacing the origina
 - Credits are reserved at start and settled on delivery; service failures are free; internal retries never double-charge.
 - **2 saved projects** on a free account, **10** after the first purchase. A slot is taken after upload validation and
   freed on deletion (no refund for completed processing). Projects never expire while the account exists.
+  *Owner, 2026-11-15 (to be built as feature 003, not yet in force):* every purchase after the first adds **+5 slots**,
+  up to **50**. Until then, a paid account with all 10 slots used is told to delete a project and is not offered a
+  purchase.
 - Account deletion removes access, projects and recordings.
 
 **Interface**

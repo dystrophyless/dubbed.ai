@@ -14,6 +14,10 @@ The mock already handles many of these (0.1.1–0.1.9); they are listed so the s
 - An aborted take or upload writes nothing, even if the abort arrives just before commit.
 - An older render can't publish over a newer build of the same version.
 - Account balance, reserve and slots come from one consistent snapshot.
+- A purchase completes at most once: provider confirmation / webhook is idempotent and re-reads purchase state in the transaction.
+- The credit history row and balance change are written in one transaction; each project run has one row, updated in place.
+- Abandoned checkout expiry is owned by the provider session; the mock cancels awaiting purchases when Credits opens
+  (research R5, `specs/002-credits-flow-mock/research.md`).
 
 ## Open
 

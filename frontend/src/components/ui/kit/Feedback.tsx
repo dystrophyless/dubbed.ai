@@ -137,12 +137,13 @@ export function Alert({ tone = "info", title, children, action }: { tone?: Tone;
 
 /** Empty / error / no-result block: icon tile (otp-input's mail tile), title, one sentence, one or two actions. */
 export function EmptyState({
-  icon = "info", tone = "neutral", title, description, actions, "data-testid": testId,
-}: { icon?: IconName; tone?: Tone; title: ReactNode; description?: ReactNode; actions?: ReactNode; "data-testid"?: string }) {
+  icon = "info", tone = "neutral", title, description, actions, "data-testid": testId, level = 3,
+}: { icon?: IconName; tone?: Tone; level?: 2 | 3 | 4; title: ReactNode; description?: ReactNode; actions?: ReactNode; "data-testid"?: string }) {
+  const H = `h${level}` as const; // semantic level only; the look comes from the class
   return (
     <div className={cx(s.empty, s[`tone-${tone}`])} data-testid={testId} role={tone === "danger" ? "alert" : undefined}>
       <span className={s.emptyIcon} aria-hidden="true"><Icon name={icon} /></span>
-      <h3 className={s.emptyTitle}>{title}</h3>
+      <H className={s.emptyTitle}>{title}</H>
       {description && <p className={s.emptyText}>{description}</p>}
       {actions && <div className={s.emptyActions}>{actions}</div>}
     </div>

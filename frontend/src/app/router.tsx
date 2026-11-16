@@ -4,6 +4,8 @@ import { StyleguidePage } from "@/pages/styleguide/StyleguidePage";
 import { TemplatesRoute } from "@/pages/styleguide/TemplatesRoute";
 import { PrototypeRoute } from "@/prototypes/prototype-route";
 import { ProductShell } from "@/app/ProductShell";
+import { CheckoutPage } from "@/features/checkout/CheckoutPage";
+import { CreditsPage } from "@/features/credits/CreditsPage";
 import { NewDubPage } from "@/features/new-dub/NewDubPage";
 import { ProcessingPage } from "@/features/processing/ProcessingPage";
 import { ProjectRedirect } from "@/features/projects/ProjectRedirect";
@@ -28,11 +30,14 @@ const router = createBrowserRouter([
     children: [
       { path: "/projects", element: <ProjectsPage /> },
       { path: "/new", element: <NewDubPage /> },
+      { path: "/credits", element: <CreditsPage /> },
       { path: "/projects/:id", element: <ProjectRedirect /> },
       { path: "/projects/:id/processing", element: <ProcessingPage /> },
       { path: "/projects/:id/result", element: <ResultPage /> },
     ],
   },
+  // the simulated payment page stands in for a provider's hosted checkout: no product shell (brand + language only)
+  { path: "/checkout/:purchaseId", element: <CheckoutPage /> },
   {
     // the studio's focused shell brings its own chrome; the watcher is mounted here as well
     element: <StudioRoot />,

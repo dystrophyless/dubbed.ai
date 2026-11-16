@@ -11,6 +11,7 @@ import {
   type Account,
   type DemoSettings,
   type FileFormat,
+  type HistoryRow,
   type PrepStep,
   type Project,
   type ProjectId,
@@ -23,6 +24,7 @@ import {
   type Turn,
   type VideoInfo,
 } from "../contracts";
+import { runAfter, runAmount } from "../rules/credits";
 import { cancel as cancelMoney, cancelCharge, refund, reserve, settle } from "../rules/money";
 import { prepStatus, turnsFoundAt, type PrepRun } from "../rules/lifecycle";
 import { defaultSection, isAcceptedFile, isValidSection, MAX_FILE_BYTES, MAX_VIDEO_MS, MIN_SECTION_MS, nameFromFile, priceOf } from "../rules/pricing";
@@ -32,6 +34,7 @@ import { captureFixedWindow, decodeAudio, MicrophoneError, probeVideo, waveformR
 import { tryAcquire, whenFree } from "../media/capture-lock";
 import { recordableFormat, renderMix } from "../media/mixer";
 import * as db from "./db";
+import { credits } from "./credits";
 
 /* ---------- stored shapes ---------- */
 
@@ -43,6 +46,7 @@ type ProjectRecord = {
   section: Section;
   state: StoredState;
   run: PrepRun | null;
+  runId: string | null;
   failedAtStep: PrepStep | null;
   charged: number;
   reserved: number;
@@ -60,7 +64,7 @@ type VideoRecord = { projectId: ProjectId; blob: Blob; stamp?: string };
 type ResultRecord = ResultVersion & { attempts: number; startedAt: number; blob: Blob | null; mime: string | null; failing: boolean };
 
 const DEFAULT_ACCOUNT: AccountRecord = { balance: 120, slotLimit: FREE_SLOT_LIMIT };
-const DEFAULT_SETTINGS: DemoSettings = { outcome: "ready", assemblyFails: false, turns: 0, turnMs: 0, speed: 1 };
+const DEFAULT_SETTINGS: DemoSettings = { outcome: "ready", assemblyFails: false, turns: 0, turnMs: 0, speed: 1, payment: "success", paymentDelayMs: 1200 };
 
 const now = () => Date.now();
 const newId = () => projectId(globalThis.crypto.randomUUID().slice(0, 8));
@@ -75,6 +79,23 @@ async function settings(): Promise<DemoSettings> {
 }
 
 const reservedTotal = (projects: ProjectRecord[]) => projects.reduce((sum, p) => sum + p.reserved, 0);
+
+function startRun(store: IDBObjectStore, p: ProjectRecord): string {
+  const at = now();
+  const money = runAfter("start", priceOf(p.section));
+  const id = crypto.randomUUID();
+  store.put({ id, kind: "run", at, updatedAt: at, projectId: p.id, projectName: p.name,
+    ...money, amount: runAmount(money) } satisfies HistoryRow);
+  return id;
+}
+
+async function finishRun(store: IDBObjectStore, p: ProjectRecord, event: Parameters<typeof runAfter>[0], charge = 0): Promise<void> {
+  const row = p.runId ? await db.req(store.get(p.runId)) as HistoryRow | undefined : undefined;
+  // Never commit money without its row, including when storage has been damaged.
+  if (!row || row.kind !== "run") throw new Error("Missing run history");
+  const money = runAfter(event, priceOf(p.section), charge);
+  store.put({ ...row, ...money, amount: runAmount(money), updatedAt: now() } satisfies HistoryRow);
+}
 
 function stateOf(p: ProjectRecord, t: number): { state: ProjectState; step: PrepStep | null; stepProgress: number; secondsLeft: number | null; turnsFound: number } {
   if (p.state === "preparing" && p.run) {
@@ -132,7 +153,7 @@ async function advance(id: ProjectId): Promise<ProjectRecord | undefined> {
   const status = prepStatus(before.run, now());
   if (status.phase !== "failed" && status.phase !== "ready" && status.phase !== "no_dialogue") return before;
 
-  const after = await db.write(["projects", "kv", "turns"], async (s) => {
+  const after = await db.write(["projects", "kv", "turns", "history"], async (s) => {
     const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
     if (!p || p.state !== "preparing" || !p.run) return p; // another tab got here first
     const status = prepStatus(p.run, now());
@@ -157,9 +178,11 @@ async function advance(id: ProjectId): Promise<ProjectRecord | undefined> {
         }
       }
     }
+    await finishRun(s.history, p, status.phase === "failed" ? "failure" : "settle");
     s.projects.put(next);
     return next;
   });
+  db.emit({ kind: "credits" });
   db.emit({ projectId: id, kind: "project" });
   if (after?.state === "recording") void decodeTurnPeaks(id);
   return after;
@@ -320,6 +343,8 @@ export function createMockServices(): Services {
     adapter: "mock",
     subscribe: db.subscribe,
 
+    credits,
+
     account: {
       async get(): Promise<Account> {
         const all = await db.getAll<ProjectRecord>("projects");
@@ -376,6 +401,7 @@ export function createMockServices(): Services {
           section: defaultSection(probe.durationMs),
           state: "draft",
           run: null,
+          runId: null,
           failedAtStep: null,
           charged: 0,
           reserved: 0,
@@ -462,7 +488,7 @@ export function createMockServices(): Services {
 
       async start(id) {
         const cfg = await settings();
-        const result = await db.write(["projects", "kv"], async (s) => {
+        const result = await db.write(["projects", "kv", "history"], async (s) => {
           const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
           if (!p || p.state !== "draft") return fail("state" as const);
           const all = (await db.req(s.projects.getAll())) as ProjectRecord[];
@@ -475,6 +501,7 @@ export function createMockServices(): Services {
             ...p,
             ...m,
             state: "preparing",
+            runId: startRun(s.history, p),
             run: { startedAt: now(), fromStep: 1, queued: true, outcome: cfg.outcome === "ready" && total === 0 ? "no-dialogue" : cfg.outcome, speed: cfg.speed },
             turnsTotal: total,
             changedAt: now(),
@@ -485,6 +512,7 @@ export function createMockServices(): Services {
         }).catch(() => fail("storage" as const));
         if (!result.ok) return result;
         db.emit({ projectId: id, kind: "project" });
+        db.emit({ kind: "credits" });
         return ok(toProject(result.value, []));
       },
 
@@ -499,7 +527,7 @@ export function createMockServices(): Services {
 
       async cancel(id) {
         await advance(id);
-        const result = await db.write(["projects", "kv", "videos"], async (s) => {
+        const result = await db.write(["projects", "kv", "videos", "history"], async (s) => {
           const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
           if (!p) return fail("not-found" as const);
           if (p.state !== "preparing" || !p.run) return fail("state" as const);
@@ -510,17 +538,21 @@ export function createMockServices(): Services {
           const acc = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? DEFAULT_ACCOUNT;
           const [a, m] = cancelMoney({ balance: acc.balance, reserved: reservedTotal(all) }, { reserved: p.reserved, charged: p.charged }, charge);
           s.kv.put({ ...acc, balance: a.balance }, "account");
+          await finishRun(s.history, p, charge === 0 ? "cancel-waiting" : "cancel-after-steps", charge);
           s.projects.delete(id); // cancelled = removed, slot freed
           s.videos.delete(id);
           return ok({ charged: m.charged });
         });
-        if (result.ok) db.emit({ projectId: id, kind: "removed" });
+        if (result.ok) {
+          db.emit({ projectId: id, kind: "removed" });
+          db.emit({ kind: "credits" });
+        }
         return result;
       },
 
       async retry(id) {
         const cfg = await settings();
-        const result = await db.write(["projects", "kv"], async (s) => {
+        const result = await db.write(["projects", "kv", "history"], async (s) => {
           const p = (await db.req(s.projects.get(id))) as ProjectRecord | undefined;
           if (!p || p.state !== "failed") return fail("state" as const);
           const all = (await db.req(s.projects.getAll())) as ProjectRecord[];
@@ -534,6 +566,7 @@ export function createMockServices(): Services {
             ...p,
             ...m,
             state: "preparing",
+            runId: startRun(s.history, p),
             run: { startedAt: now(), fromStep: p.failedAtStep ?? 1, queued: false, outcome, speed: cfg.speed },
             changedAt: now(),
           };
@@ -543,6 +576,7 @@ export function createMockServices(): Services {
         });
         if (!result.ok) return result;
         db.emit({ projectId: id, kind: "project" });
+        db.emit({ kind: "credits" });
         return ok(toProject(result.value, []));
       },
 
@@ -771,17 +805,21 @@ export function createMockServices(): Services {
 
     demo: {
       async reset() {
-        await db.clearAll();
-        await db.write(["kv"], (s) => {
+        await db.write([...db.STORES], (s) => {
+          for (const name of db.STORES) s[name].clear();
           s.kv.put(DEFAULT_ACCOUNT, "account");
           s.kv.put(DEFAULT_SETTINGS, "settings");
+          s.history.put(db.welcomeRow(now()));
         });
         db.emit({ kind: "reset" });
       },
       async set(p) {
         const { balance, slotLimit, fillSlots, ...rest } = p;
-        await db.write(["kv", "projects"], async (s) => {
+        await db.write(["kv", "projects", "history"], async (s) => {
           const acc = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? DEFAULT_ACCOUNT;
+          if (balance !== undefined && balance !== acc.balance) {
+            s.history.put({ id: crypto.randomUUID(), kind: "adjustment", at: now(), amount: balance - acc.balance } satisfies HistoryRow);
+          }
           const cur = ((await db.req(s.kv.get("settings"))) as Partial<DemoSettings> | undefined) ?? {};
           s.kv.put({ ...acc, ...(balance !== undefined ? { balance } : {}), ...(slotLimit ? { slotLimit } : {}) }, "account");
           s.kv.put({ ...DEFAULT_SETTINGS, ...cur, ...rest }, "settings");
@@ -791,6 +829,7 @@ export function createMockServices(): Services {
           }
         });
         db.emit({ kind: "demo" });
+        if (balance !== undefined) db.emit({ kind: "credits" });
       },
     },
   };
@@ -807,6 +846,7 @@ function demoDoneProject(i: number): ProjectRecord {
     section: { startMs: 0, endMs: 13_000 },
     state: "no_dialogue",
     run: null,
+    runId: null,
     failedAtStep: null,
     charged: 13,
     reserved: 0,

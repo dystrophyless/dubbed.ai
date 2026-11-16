@@ -45,6 +45,8 @@ export type ProjectsViewProps = {
   initialDeleteId?: string;
   onNewDub: () => void;
   onBuyCredits: () => void;
+  /** paid account (10 slots), all used: no purchase is offered until feature 003; the alert says to delete a project */
+  paidFull?: boolean;
   onRetry: () => void;
 };
 
@@ -100,9 +102,9 @@ export function ProjectsView(props: ProjectsViewProps) {
           <Alert
             tone="warning"
             title={t(`${P}.fullTitle`)}
-            action={<Button size="sm" variant="secondary" onClick={props.onBuyCredits}>{t(`${P}.buy`)}</Button>}
+            action={props.paidFull ? undefined : <Button size="sm" variant="secondary" onClick={props.onBuyCredits}>{t(`${P}.buy`)}</Button>}
           >
-            {t(`${P}.fullText`)}
+            {props.paidFull ? t(`${P}.fullPaidText`) : t(`${P}.fullText`)}
           </Alert>
         )}
         <Card padding="none" aria-busy={state === "loading" || undefined}>

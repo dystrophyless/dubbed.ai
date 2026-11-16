@@ -3,9 +3,9 @@
  * hooks. Screens talk to the server only through these hooks + contracts.ts, so a real adapter can replace mock/ later.
  */
 
-import { useQuery, useQueryClient, type QueryClient } from "@tanstack/react-query";
+import { keepPreviousData, useQuery, useQueryClient, type QueryClient } from "@tanstack/react-query";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import type { ChangeEvent, DemoOutcome, Project, ProjectId, Services } from "./contracts";
+import type { ChangeEvent, DemoOutcome, Project, ProjectId, PurchaseId, Services } from "./contracts";
 import { createMockServices } from "./mock";
 
 export * from "./contracts";
@@ -19,6 +19,8 @@ export function createServices(adapter: "mock" = "mock"): Services {
 
 export const qk = {
   account: ["account"] as const,
+  credits: { packs: ["credits", "packs"] as const, history: (page: number) => ["credits", "history", page] as const },
+  purchase: (id: string) => ["purchase", id] as const,
   projects: ["projects"] as const,
   draft: ["draft"] as const,
   project: (id: string) => ["project", id] as const,
@@ -40,6 +42,14 @@ export function invalidateFor(client: QueryClient, e: ChangeEvent) {
     void client.invalidateQueries({ queryKey: qk.result(e.projectId) });
     return;
   }
+  if (["credits", "purchase", "project", "removed"].includes(e.kind)) {
+    void client.invalidateQueries({ queryKey: ["credits", "history"] });
+  }
+  if (e.kind === "purchase" && e.purchaseId) void client.invalidateQueries({ queryKey: qk.purchase(e.purchaseId) });
+  if (e.kind === "credits" || e.kind === "purchase") {
+    void client.invalidateQueries({ queryKey: qk.account });
+    return;
+  }
   void client.invalidateQueries({ queryKey: qk.account });
   void client.invalidateQueries({ queryKey: qk.projects });
   void client.invalidateQueries({ queryKey: qk.draft });
@@ -48,7 +58,7 @@ export function invalidateFor(client: QueryClient, e: ChangeEvent) {
       void client.invalidateQueries({ queryKey: key });
     }
   } else {
-    void client.invalidateQueries();
+    void client.invalidateQueries({ predicate: (query) => query.queryKey[0] !== "credits" || query.queryKey[1] !== "packs" });
   }
 }
 
@@ -63,6 +73,12 @@ const wholeNumber = (arg: string | undefined) => {
 export function parseDemo(key: string | undefined, arg: string | undefined): Parameters<NonNullable<Services["demo"]>["set"]>[0] | null {
   const num = Number(arg);
   if (key === "balance") return { balance: wholeNumber(arg) };
+  if (key === "payment" && (arg === "success" || arg === "declined")) return { payment: arg };
+  if (key === "paydelay" && arg !== undefined && arg !== "" && Number.isFinite(num) && num >= 0) return { paymentDelayMs: Math.floor(num) };
+  if (key === "startdelay" && arg !== undefined && arg !== "" && Number.isFinite(num) && num >= 0) return { startDelayMs: Math.floor(num) };
+  if (key === "fail" && arg === "start") return { failStart: true };
+  if (key === "fail" && arg === "pay") return { failPay: true };
+  if (key === "fail" && arg === "none") return { failStart: false, failPay: false };
   if (key === "slots" && arg === "full") return { fillSlots: true };
   if (key === "slots" && (arg === "2" || arg === "10")) return { slotLimit: Number(arg) as 2 | 10 };
   if (key === "outcome" && arg === "assembly-failed") return { assemblyFails: true };
@@ -121,6 +137,22 @@ export function useServices(): Services {
 }
 
 /* ---------- read hooks ---------- */
+
+export function usePacks() {
+  const s = useServices();
+  return useQuery({ queryKey: qk.credits.packs, queryFn: () => s.credits.packs(), staleTime: Infinity });
+}
+
+export function useCreditsHistory(page: number) {
+  const s = useServices();
+  // the previous page stays on screen while the next one loads (no skeleton flash when paging)
+  return useQuery({ queryKey: qk.credits.history(page), queryFn: () => s.credits.history(page), placeholderData: keepPreviousData });
+}
+
+export function usePurchase(id: PurchaseId | string | undefined) {
+  const s = useServices();
+  return useQuery({ queryKey: qk.purchase(id ?? ""), queryFn: () => s.credits.getPurchase(id as PurchaseId), enabled: Boolean(id) });
+}
 
 export function useAccount() {
   const s = useServices();
