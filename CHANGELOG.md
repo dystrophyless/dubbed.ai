@@ -4,6 +4,20 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.2.1] — 2026-11-16
+
+Fix from the first Codex review of PR #84.
+
+### Fixed
+
+- Credits shows "Couldn’t load your credits" with Try again when the projects behind a reserve, or the project of a "You need N
+  more credits" notice, can't be read, instead of a reserve without its projects or a silently missing notice; Try
+  again reloads them too.
+
+### Added
+
+- Demo preset `fail:projects` (mock only) to force that read to fail.
+
 ## [0.2.0] — 2026-11-16
 
 Feature 002 — the credits flow on mock services (`specs/002-credits-flow-mock/`).

@@ -17,7 +17,7 @@ npm run dev            # http://localhost:5174
 Demo controls (mock only, as in 001; parameters combine with commas): `?demo=reset`, `?demo=balance:40`
 (records a "Demo adjustment" row), `?demo=slots:full`, `?demo=outcome:failed@2`, `?demo=speed:4`, and new:
 `?demo=payment:success|declined`, `?demo=paydelay:3000` (ms Pay stays busy), `?demo=startdelay:3000` (ms before a purchase is created),
-`?demo=fail:start|pay|none` (forces Buy / Pay to fail), and `?demo=slots:10` (paid limit).
+`?demo=fail:start|pay|projects|none` (forces Buy / Pay / the projects list read to fail; with a reserve, `fail:projects` shows the Credits error state with Try again), and `?demo=slots:10` (paid limit).
 
 ## Manual end-to-end check (≈ 5 min)
 

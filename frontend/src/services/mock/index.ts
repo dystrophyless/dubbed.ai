@@ -431,6 +431,7 @@ export function createMockServices(): Services {
 
     projects: {
       async list(): Promise<ProjectSummary[]> {
+        if ((await settings()).failProjects) throw new Error("projects read failed (demo)");
         const ids = (await db.getAll<ProjectRecord>("projects")).map((p) => p.id);
         const fresh = (await Promise.all(ids.map(advance))).filter((p): p is ProjectRecord => Boolean(p));
         const results = await db.getAll<ResultRecord>("results");

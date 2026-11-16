@@ -78,7 +78,8 @@ export function parseDemo(key: string | undefined, arg: string | undefined): Par
   if (key === "startdelay" && arg !== undefined && arg !== "" && Number.isFinite(num) && num >= 0) return { startDelayMs: Math.floor(num) };
   if (key === "fail" && arg === "start") return { failStart: true };
   if (key === "fail" && arg === "pay") return { failPay: true };
-  if (key === "fail" && arg === "none") return { failStart: false, failPay: false };
+  if (key === "fail" && arg === "projects") return { failProjects: true };
+  if (key === "fail" && arg === "none") return { failStart: false, failPay: false, failProjects: false };
   if (key === "slots" && arg === "full") return { fillSlots: true };
   if (key === "slots" && (arg === "2" || arg === "10")) return { slotLimit: Number(arg) as 2 | 10 };
   if (key === "outcome" && arg === "assembly-failed") return { assemblyFails: true };

@@ -108,10 +108,15 @@ function CreditsScreen() {
 
   // a returning ?purchase=<id> is part of the page: Buy is not possible until the purchase has been read
   const readsPurchase = Boolean(purchaseParam);
-  const failed = account.isError || packs.isError || history.isError || (readsPurchase && purchase.isError);
+  // every read the page shows takes part: the project names behind a reserve, and the project of a shortfall notice
+  const needsProjects = (account.data?.reserved ?? 0) > 0;
+  const readsProject = urlReturn?.kind === "new" && !purchaseParam;
+  const failed = account.isError || packs.isError || history.isError || (readsPurchase && purchase.isError)
+    || (needsProjects && projects.isError) || (readsProject && urlProject.isError);
   // after a completed purchase nothing is shown from an account that may predate it: wait for a read made on this page
   const awaitingAccount = finished?.state === "completed" && !account.isError && account.dataUpdatedAt < now; // polling refetches never put it back
-  const pending = account.isPending || packs.isPending || history.isPending || (readsPurchase && purchase.isPending) || awaitingAccount;
+  const pending = account.isPending || packs.isPending || history.isPending || (readsPurchase && purchase.isPending) || awaitingAccount
+    || (needsProjects && projects.isPending) || (readsProject && urlProject.isPending);
   const state: CreditsViewState = failed ? "error" : pending ? "loading" : buying ? "purchasing" : rows.length === 0 ? "empty-history" : "default";
 
   // a queued or preparing project is exactly one that holds a reserve
@@ -188,6 +193,8 @@ function CreditsScreen() {
         void packs.refetch();
         void history.refetch();
         if (readsPurchase) void purchase.refetch();
+        if (needsProjects) void projects.refetch();
+        if (readsProject) void urlProject.refetch();
       }}
       now={now}
     />

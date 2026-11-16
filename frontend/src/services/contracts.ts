@@ -261,6 +261,8 @@ export type DemoSettings = {
   /** demo/e2e only: startPurchase / pay fail with "storage" (nothing is created or charged) until cleared */
   failStart?: boolean;
   failPay?: boolean;
+  /** demo/e2e only: the projects list read fails until cleared */
+  failProjects?: boolean;
 };
 
 export type ChangeEvent = { projectId?: ProjectId; purchaseId?: PurchaseId; kind: string };

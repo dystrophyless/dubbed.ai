@@ -1,6 +1,6 @@
 import { expect, test, type Page } from "@playwright/test";
 import { expectNoA11yViolations } from "./support/a11y";
-import { resetDemo } from "./support/flow";
+import { resetDemo, seedProjects } from "./support/flow";
 
 /*
  * Feature 002 robustness — a slow Buy never drags the user back to a payment page they left, and a failed read of the
@@ -64,7 +64,7 @@ test.describe("credits robustness", () => {
   });
 
   /** Sets the mock failure switches in place (no reload: the chosen pack and the page state stay). */
-  async function setFailures(page: Page, patch: { failStart?: boolean; failPay?: boolean }) {
+  async function setFailures(page: Page, patch: { failStart?: boolean; failPay?: boolean; failProjects?: boolean }) {
     await page.evaluate(async (p) => {
       const db = await new Promise<IDBDatabase>((resolve, reject) => {
         const req = indexedDB.open("dubbed-mock");
@@ -200,6 +200,22 @@ test.describe("credits robustness", () => {
     await expect(page.getByTestId("credits-buy")).toBeVisible();
     await expect(page.getByTestId("credits-notice")).toHaveCount(0);
     await expect.poll(async () => (await purchaseStates(page)).sort()).toEqual(["cancelled", "declined"]);
+  });
+
+  test("J — a failed projects read while a reserve exists is the error state; Try again recovers with the project name", async ({ page }) => {
+    await resetDemo(page, "slots:10", "/projects");
+    await seedProjects(page, ["queued"]);
+    await setFailures(page, { failProjects: true });
+    await page.goto("/credits");
+    await expect(page.getByTestId("credits-error")).toBeVisible();
+    await expect(page.getByTestId("credits-reserved")).toHaveCount(0);
+    await expect(page.getByRole("button", { name: /^Buy / })).toHaveCount(0);
+    await expectNoA11yViolations(page);
+
+    await setFailures(page, { failProjects: false });
+    await page.getByRole("button", { name: "Try again" }).click();
+    await expect(page.getByTestId("credits-error")).toHaveCount(0);
+    await expect(page.getByTestId("credits-reserved")).toContainText("in reserve for queued seed");
   });
 
   test("I — Back from a new payment page after a success: no old 'credits added' notice", async ({ page }) => {
