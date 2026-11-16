@@ -7,6 +7,7 @@ import { LoadError } from "@/features/recording-flow-mock/LoadError";
 import { PageSkeleton } from "@/features/recording-flow-mock/PageSkeleton";
 import { NewDubView, type NewDubReason } from "@/features/recording-flow-mock/views/NewDubView";
 import { draftSourceKey } from "@/services/rules/draft";
+import { priceOf } from "@/services/rules/pricing";
 import { qk, useAccount, useProject, useServices, useVideoUrl, type ProjectId } from "@/services";
 
 /*
@@ -199,8 +200,19 @@ export function NewDubPage() {
         timer.current = window.setTimeout(() => void flush(), 300);
       }}
       onStart={() => void start()}
-      onBuyCredits={() => navigate("/credits")}
+      onBuyCredits={() => {
+        // too few credits for the draft's scene: say how many are missing; no draft (slot-full notice): the slots context
+        if (draft && range) {
+          const need = priceOf({ startMs: toMs(range[0]), endMs: toMs(range[1]) }) - account.data.balance;
+          if (need >= 1) {
+            navigate(`/credits?from=new&project=${encodeURIComponent(draft.id)}&need=${need}`);
+            return;
+          }
+        }
+        navigate("/credits?from=slots");
+      }}
       onOpenProjects={() => navigate("/projects")}
+      paidFull={account.data.slotLimit === 10}
     />
   );
 }

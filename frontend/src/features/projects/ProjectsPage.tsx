@@ -145,7 +145,8 @@ export function ProjectsPage() {
         return q ? { stepsDone: q.stepsDone, charge: q.charge, reserved: q.charge + q.refund } : null;
       }}
       onNewDub={() => navigate("/new")}
-      onBuyCredits={() => navigate("/credits")}
+      onBuyCredits={() => navigate("/credits?from=slots")}
+      paidFull={slotsTotal === 10}
       onRetry={() => void projects.refetch()}
     />
   );

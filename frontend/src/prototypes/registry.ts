@@ -13,6 +13,7 @@ import { PROCESSING_STATES, ProcessingPrototype } from "./processing/processing"
 import { ReadyElsewherePrototype } from "./processing/ready-elsewhere";
 import { RESULT_STATES, ResultPrototype } from "./result/result";
 import { ResultReadyElsewherePrototype } from "./result/ready-elsewhere";
+import { CHECKOUT_STATES, CREDITS_STATES, CheckoutPrototype, CreditsPrototype } from "./002-credits-flow-mock";
 import { PROJECTS_STATES, ProjectsDeltaPrototype, ResultFormatPrototype } from "./001-recording-flow-mock";
 
 /*
@@ -30,6 +31,16 @@ export type PrototypeEntry = { id: string; title: string; screens: Record<string
 const CONCEPT_STATES = ["no-take", "recording", "saved"] as const;
 
 export const PROTOTYPES: PrototypeEntry[] = [
+  /* Feature 002 — credits flow on mock services: the Gate-3 Credits template with the new rows and messages, and the
+     simulated payment page (outside the shell). &outcome=declined on the checkout makes Pay return the declined message. */
+  {
+    id: "002-credits-flow-mock",
+    title: "002 · Credits flow on mock services",
+    screens: {
+      credits: { title: "Credits · balance, packs, history, success / declined / shortfall / slots", states: CREDITS_STATES, Component: CreditsPrototype },
+      checkout: { title: "Simulated payment page (outside the product shell)", states: CHECKOUT_STATES, Component: CheckoutPrototype },
+    },
+  },
   /* Feature 001 — recording flow on mock services: ONLY the deltas to the Gate-4 prototypes (see 001-recording-flow-mock.tsx) */
   {
     id: "001-recording-flow-mock",

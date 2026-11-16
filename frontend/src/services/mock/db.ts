@@ -3,11 +3,14 @@
  * live here so they survive reloads. A BroadcastChannel tells other tabs what changed.
  */
 
-import type { ChangeEvent } from "../contracts";
+import type { ChangeEvent, HistoryRow, ProjectId } from "../contracts";
+import { balanceFromHistory, runAmount } from "../rules/credits";
+
+export const welcomeRow = (at: number): HistoryRow => ({ id: "welcome", kind: "welcome", at, amount: 120 });
 
 const DB_NAME = "dubbed-mock";
-const DB_VERSION = 1;
-export const STORES = ["kv", "projects", "turns", "takes", "videos", "results"] as const;
+const DB_VERSION = 2;
+export const STORES = ["kv", "projects", "turns", "takes", "videos", "results", "history", "purchases"] as const;
 export type StoreName = (typeof STORES)[number];
 
 let dbPromise: Promise<IDBDatabase> | null = null;
@@ -24,6 +27,32 @@ function open(): Promise<IDBDatabase> {
       if (!db.objectStoreNames.contains("takes")) db.createObjectStore("takes", { keyPath: ["projectId", "n"] });
       if (!db.objectStoreNames.contains("videos")) db.createObjectStore("videos", { keyPath: "projectId" });
       if (!db.objectStoreNames.contains("results")) db.createObjectStore("results", { keyPath: ["projectId", "number"] });
+      db.createObjectStore("purchases", { keyPath: "id" });
+      const history = db.createObjectStore("history", { keyPath: "id" });
+      history.createIndex("at", "at");
+      const tx = req.transaction!;
+      const projects = tx.objectStore("projects");
+      // Both reads and all seeds belong to the version-change transaction: an upgrade is all or nothing.
+      const all = projects.getAll();
+      all.onsuccess = () => {
+        const records = all.result as { id: ProjectId; name: string; createdAt: number; changedAt: number; reserved: number; charged: number }[];
+        const at = records.length ? Math.min(...records.map((p) => p.createdAt)) : Date.now();
+        const rows: HistoryRow[] = [welcomeRow(at)];
+        for (const p of records) {
+          if (p.reserved <= 0 && p.charged <= 0) continue;
+          const runId = crypto.randomUUID();
+          rows.push({ id: runId, kind: "run", at: p.createdAt, updatedAt: p.changedAt,
+            projectId: p.id, projectName: p.name, reserved: p.reserved, charged: p.charged, returned: 0,
+            state: p.reserved > 0 ? "reserved" : "charged", amount: runAmount(p) });
+          projects.put({ ...p, runId });
+        }
+        const account = tx.objectStore("kv").get("account");
+        account.onsuccess = () => {
+          const difference = (account.result?.balance ?? 120) - balanceFromHistory(rows);
+          if (difference !== 0) rows.push({ id: crypto.randomUUID(), kind: "adjustment", at: Date.now(), amount: difference });
+          for (const row of rows) history.put(row);
+        };
+      };
     };
     req.onsuccess = () => resolve(req.result);
     req.onerror = () => reject(req.error);

@@ -9,6 +9,14 @@ describe("parseDemo", () => {
     expect(parseDemo("turns", "abc")).toEqual({ turns: 0 });
     expect(parseDemo("turns", "6.9")).toEqual({ turns: 6 });
   });
+  it("parses payment outcomes and finite non-negative payment delays", () => {
+    expect(parseDemo("payment", "success")).toEqual({ payment: "success" });
+    expect(parseDemo("payment", "declined")).toEqual({ payment: "declined" });
+    expect(parseDemo("payment", "other")).toBeNull();
+    expect(parseDemo("paydelay", "1200.9")).toEqual({ paymentDelayMs: 1200 });
+    expect(parseDemo("paydelay", "0")).toEqual({ paymentDelayMs: 0 });
+    for (const value of [undefined, "", "Infinity", "NaN", "-1"]) expect(parseDemo("paydelay", value)).toBeNull();
+  });
   it("clamps speed and checks turnms", () => {
     expect(parseDemo("speed", "Infinity")).toEqual({ speed: 1 });
     expect(parseDemo("speed", "1000")).toEqual({ speed: 100 });

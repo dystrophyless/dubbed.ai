@@ -1,5 +1,6 @@
 import { expect, type Page } from "@playwright/test";
 import path from "node:path";
+import { seedHistory } from "./history";
 
 /* Helpers for the recording-flow e2e (feature 001). The services run in the browser on mocks (?demo= presets). */
 
@@ -44,11 +45,34 @@ export async function noHorizontalScroll(page: Page) {
 /** The balance shown in the top bar (the credits link). */
 export const balanceLink = (page: Page) => page.locator('a[href="/credits"]').first();
 
-/** Presses Record in the studio and waits until the take is saved (the window ends by itself). */
+/** Presses Record and waits for a new take; returns whether recording controls fit the viewport. */
 export async function recordCurrentTurn(page: Page) {
-  await page.locator('button[aria-keyshortcuts="R"]').click();
-  await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", /recording|saving/);
-  await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "saved", { timeout: 15_000 });
+  const watch = await page.getByTestId("studio-actions").evaluateHandle((row) => {
+    const state = { transitioned: false, recordingFit: false, observer: null as MutationObserver | null };
+    state.observer = new MutationObserver((records) => {
+      const current = row.getAttribute("data-state");
+      if (current === "recording" || current === "saving" || records.some((record) => record.oldValue === "recording" || record.oldValue === "saving")) {
+        state.transitioned = true;
+      }
+      if (current === "recording") {
+        state.recordingFit = [...row.querySelectorAll("button")].every((el) => {
+          const r = el.getBoundingClientRect();
+          return r.x >= 0 && r.y >= 0 && r.right <= innerWidth && r.bottom <= innerHeight && el.scrollWidth <= el.clientWidth && el.scrollHeight <= el.clientHeight;
+        });
+      }
+    });
+    state.observer.observe(row, { attributes: true, attributeFilter: ["data-state"], attributeOldValue: true });
+    return state;
+  });
+  try {
+    await page.locator('button[aria-keyshortcuts="R"]').click();
+    await expect.poll(() => watch.evaluate((state) => state.transitioned), { timeout: 15_000 }).toBe(true);
+    await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "saved", { timeout: 15_000 });
+    return await watch.evaluate((state) => state.recordingFit);
+  } finally {
+    await watch.evaluate((state) => state.observer?.disconnect());
+    await watch.dispose();
+  }
 }
 
 /* ---------- seeding My projects (feature 001, US5) ---------- */
@@ -74,22 +98,28 @@ const SEED_STATE: Record<SeedKind, { state: string; run?: "queued" | "preparing"
  * is inside step 2 (1 of 3 steps done), "queued" is still in the queue. Call after `resetDemo(page, "slots:10", "/projects")`.
  */
 export async function seedProjects(page: Page, kinds: SeedKind[]) {
+  const now = Date.now();
+  const history = seedHistory(kinds.map((kind, i) => ({
+    id: `seed-${kind}`, name: `${kind} seed`, reserved: SEED_STATE[kind].run ? 13 : 0,
+    charged: SEED_STATE[kind].run ? 0 : 13, createdAt: now - (i + 1) * 120_000, changedAt: now - (i + 1) * 120_000,
+  })));
   await page.evaluate(
-    async ({ kinds, table }) => {
+    async ({ kinds, table, now, history }) => {
       const db = await new Promise<IDBDatabase>((resolve, reject) => {
         const req = indexedDB.open("dubbed-mock");
         req.onsuccess = () => resolve(req.result);
         req.onerror = () => reject(req.error);
       });
-      const now = Date.now();
       const blob = await (await fetch("/media/scene.mp4")).blob(); // Processing needs the source video to render
-      const tx = db.transaction(["projects", "results", "videos"], "readwrite");
+      const tx = db.transaction(["projects", "results", "videos", "history"], "readwrite");
+      history.forEach((row) => tx.objectStore("history").put(row));
       kinds.forEach((kind, i) => {
         const def = table[kind]!;
         const changedAt = now - (i + 1) * 120_000;
         const running = def.run !== undefined;
         tx.objectStore("projects").put({
           id: `seed-${kind}`,
+          runId: `run-seed-${kind}`,
           name: `${kind} seed`,
           video: { durationMs: 13_000, width: 1280, height: 544, fileName: "scene.mp4", mime: "video/mp4" },
           section: { startMs: 0, endMs: 13_000 },
@@ -121,7 +151,7 @@ export async function seedProjects(page: Page, kinds: SeedKind[]) {
       });
       db.close();
     },
-    { kinds, table: SEED_STATE },
+    { kinds, table: SEED_STATE, now, history },
   );
   await page.reload();
 }

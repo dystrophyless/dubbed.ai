@@ -21,6 +21,29 @@ async function layoutState(page: Page, kind: "last-take" | "pending") {
   }, kind);
 }
 
+for (const lang of ["en", "ru"] as const) {
+  test(`credits · ${lang} · balance and Buy fit 390×844`, async ({ page }) => {
+    await resetDemo(page, "", "/credits", lang);
+    await expect(page.locator("html")).toHaveAttribute("lang", lang);
+    await fitsViewport(page, page.getByTestId("credits-balance"));
+    await fitsViewport(page, page.getByTestId("credits-buy"));
+    await noHorizontalScroll(page);
+  });
+}
+
+for (const lang of ["en", "ru"] as const) {
+  test(`checkout · ${lang} · the whole panel and Pay fit 390×844`, async ({ page }) => {
+    await resetDemo(page, "", "/credits", lang);
+    await page.getByTestId("credits-buy").click();
+    await expect(page).toHaveURL(/\/checkout\/[^/]+$/);
+    await expect(page.getByTestId("checkout-page")).toHaveAttribute("data-state", "default");
+    await fitsViewport(page, page.locator("main > div").first());
+    await fitsViewport(page, page.getByTestId("checkout-pay"));
+    await fitsViewport(page, page.getByRole("button", { name: lang === "en" ? "Back to Dubbed" : "Назад в Dubbed" }));
+    await noHorizontalScroll(page);
+  });
+}
+
 // Mobile checks reachable long-label substates, not a second desktop upload→record→render chain.
 for (const lang of ["en", "ru"] as const) {
   for (const screen of ["projects", "new", "processing", "studio", "result"] as const) {
@@ -70,22 +93,8 @@ for (const lang of ["en", "ru"] as const) {
       if (screen === "studio") {
         await expect(page.getByTestId("turn-dots").locator("[data-s]")).toHaveCount(40);
         await fitsViewport(page, page.getByTestId("turn-dots"));
-        // The 40-turn fixture's real window is 325ms: snapshot layout synchronously on its recording DOM transition.
-        const recordingFit = page.evaluate(() => new Promise<boolean>((resolve) => {
-          const row = document.querySelector('[data-testid="studio-actions"]')!;
-          const observer = new MutationObserver(() => {
-            if (row.getAttribute("data-state") !== "recording") return;
-            const fits = [...row.querySelectorAll("button")].every((el) => {
-              const r = el.getBoundingClientRect();
-              return r.x >= 0 && r.y >= 0 && r.right <= innerWidth && r.bottom <= innerHeight && el.scrollWidth <= el.clientWidth && el.scrollHeight <= el.clientHeight;
-            });
-            observer.disconnect(); resolve(fits);
-          });
-          observer.observe(row, { attributes: true, subtree: true });
-        }));
-        await primary.click();
-        expect(await recordingFit).toBe(true);
-        await expect(page.getByTestId("studio-actions")).toHaveAttribute("data-state", "saved");
+        // The 40-turn fixture's real window is 325ms; the helper snapshots the recording layout on transition.
+        expect(await recordCurrentTurn(page)).toBe(true);
         await fitsViewport(page, primary);
         await fitsViewport(page, page.getByTestId("studio-next"));
         await layoutState(page, "last-take");

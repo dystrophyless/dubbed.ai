@@ -7,6 +7,9 @@
 export type ProjectId = string & { readonly __brand: "ProjectId" };
 export const projectId = (value: string) => value as ProjectId;
 
+export type PurchaseId = string & { readonly __brand: "PurchaseId" };
+export const purchaseId = (value: string) => value as PurchaseId;
+
 export type Outcome<T, E extends string> = { ok: true; value: T } | { ok: false; error: E };
 export const ok = <T>(value: T): { ok: true; value: T } => ({ ok: true, value });
 export const fail = <E extends string>(error: E): { ok: false; error: E } => ({ ok: false, error });
@@ -143,6 +146,35 @@ export type ResultVersion = {
  */
 export type ResultPlayer = { url: string; durationMs: number; format: FileFormat };
 
+/* ---------- Credits ---------- */
+
+export type Money = { cents: number; currency: "USD" };
+export type CreditPack = { id: string; credits: number; price: Money; best: boolean };
+export type ReturnTo = { kind: "new"; projectId: ProjectId; need: number } | { kind: "slots" } | null;
+export type PurchaseState = "awaiting" | "completed" | "declined" | "cancelled";
+export type Purchase = {
+  id: PurchaseId; pack: CreditPack; state: PurchaseState; returnTo: ReturnTo; checkoutUrl: string;
+  firstPurchase: boolean; createdAt: number; finishedAt: number | null;
+};
+export type RunState = "reserved" | "charged" | "returned" | "partly_charged" | "failed_returned";
+export type HistoryRow =
+  | { id: string; kind: "welcome"; at: number; amount: number }
+  | { id: string; kind: "purchase"; at: number; amount: number; pack: CreditPack }
+  | { id: string; kind: "adjustment"; at: number; amount: number }
+  | { id: string; kind: "run"; at: number; updatedAt: number; amount: number; projectId: ProjectId; projectName: string;
+      reserved: number; charged: number; returned: number; state: RunState };
+export type HistoryPage = { rows: HistoryRow[]; page: number; pages: number };
+export interface CreditsPort {
+  packs(): Promise<CreditPack[]>;
+  /** Newest first; page ≥ 1; page size 20. */
+  history(page: number): Promise<HistoryPage>;
+  startPurchase(packId: string, returnTo: ReturnTo): Promise<Outcome<Purchase, "pack" | "storage">>;
+  getPurchase(id: PurchaseId): Promise<Outcome<Purchase, "not-found">>;
+  pay(id: PurchaseId): Promise<Outcome<Purchase, "not-found" | "storage">>;
+  cancelPurchase(id: PurchaseId): Promise<Outcome<Purchase, "not-found">>;
+  sweep(keep?: PurchaseId): Promise<void>;
+}
+
 /* ---------- Ports ---------- */
 
 export type UploadError = "no-slot" | "length" | "short" | "no-audio" | "broken" | "aborted" | "storage";
@@ -222,13 +254,23 @@ export type DemoSettings = {
   turnMs: number;
   /** time scale for the simulated server (1 = default demo timings) */
   speed: number;
+  payment: "success" | "declined";
+  paymentDelayMs: number;
+  /** demo/e2e only: how long Buy takes to create the purchase (0 = immediately) */
+  startDelayMs?: number;
+  /** demo/e2e only: startPurchase / pay fail with "storage" (nothing is created or charged) until cleared */
+  failStart?: boolean;
+  failPay?: boolean;
+  /** demo/e2e only: the projects list read fails until cleared */
+  failProjects?: boolean;
 };
 
-export type ChangeEvent = { projectId?: ProjectId; kind: string };
+export type ChangeEvent = { projectId?: ProjectId; purchaseId?: PurchaseId; kind: string };
 
 export interface Services {
   readonly adapter: "mock" | "real";
   account: AccountPort;
+  credits: CreditsPort;
   upload: UploadPort;
   projects: ProjectPort;
   studio: StudioPort;

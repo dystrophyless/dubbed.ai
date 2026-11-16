@@ -100,7 +100,7 @@ test.describe("US3 — re-record a turn", () => {
     /* ---- version 2 ready, not switched to: Download still names version 1 ---- */
     await expect(result(page)).toHaveAttribute("data-newer", "ready", { timeout: 60_000 });
     await expect(video).toHaveAttribute("src", source!);
-    expect(await video.evaluate((v: HTMLVideoElement) => !v.paused && v.currentTime > 1)).toBe(true);
+    await expect.poll(() => video.evaluate((v: HTMLVideoElement) => !v.paused && v.currentTime > 1)).toBe(true);
     await expect(result(page)).toHaveAttribute("data-shown", "1");
     await expect(status(page)).toContainText("Version 2 is ready — turn 3 re-recorded.");
     await expect(page.getByTestId("result-download")).toHaveText("Download version 1");
@@ -246,7 +246,7 @@ test.describe("US3 — re-record a turn", () => {
     await expect(result(page)).toHaveAttribute("data-newer", "ready", { timeout: 60_000 });
     await expect(result(page)).toHaveAttribute("data-shown", "1");
     await expect(video).toHaveAttribute("src", source!);
-    expect(await video.evaluate((v: HTMLVideoElement) => !v.paused && v.currentTime > 0)).toBe(true);
+    await expect.poll(() => video.evaluate((v: HTMLVideoElement) => !v.paused && v.currentTime > 0)).toBe(true);
     await expect(page.getByTestId("result-switch")).toBeEnabled();
   });
 

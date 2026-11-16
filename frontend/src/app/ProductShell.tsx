@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { AppShell } from "@/app/shells/Shells";
 import { ReadyWatcher } from "@/features/processing/ReadyWatcher";
 import { toast } from "@/components/ui";
@@ -12,10 +12,11 @@ import { useAccount } from "@/services";
 export function ProductShell() {
   const { t } = useTranslation();
   const account = useAccount();
+  const { pathname } = useLocation();
   return (
     <AppShell
       credits={account.data?.balance ?? 0}
-      hideCredits={!account.data}
+      hideCredits={!account.data || pathname === "/credits"}
       user={{ name: "Alex Morgan", email: "alex@example.com" }}
       onSignOut={() => toast({ tone: "info", title: t("tpl.common.signedOut") })}
       nav={[

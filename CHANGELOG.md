@@ -4,6 +4,45 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.2.1] — 2026-11-16
+
+Fix from the first Codex review of PR #84.
+
+### Fixed
+
+- Credits shows "Couldn’t load your credits" with Try again when the projects behind a reserve, or the project of a "You need N
+  more credits" notice, can't be read, instead of a reserve without its projects or a silently missing notice; Try
+  again reloads them too.
+
+### Added
+
+- Demo preset `fail:projects` (mock only) to force that read to fail.
+
+## [0.2.0] — 2026-11-16
+
+Feature 002 — the credits flow on mock services (`specs/002-credits-flow-mock/`).
+
+### Added
+
+- Credits page (`/credits`): balance with "about N min of dubbing", credits in reserve, one-time packs (300 · $3,
+  1,000 · $9 "Best value", 3,000 · $24) and a paged history with one row per project run (reserved → charged,
+  returned or partly charged), purchases and demo adjustments. History times follow the browser's 12/24-hour cycle.
+- Simulated payment page (`/checkout/:id`) outside the app shell: "Demo payment — no real money", Pay, Back to Dubbed;
+  declined, cancelled, completed and not-found states. Leaving or abandoning a payment never charges.
+- Buy credits from New dub (shortfall, smallest covering pack preselected, "Back to New dub" keeps the video and
+  section) and from a full slots notice; the first purchase raises project slots from 2 to 10.
+- Inline errors when a purchase can't start or a payment fails; the pack stays chosen and the button retries.
+- At 10 of 10 paid slots, New dub and My projects say "Delete a project to free a slot" instead of offering a
+  purchase (more slots per purchase is planned as feature 003).
+- Balance, history and the top-bar pill stay in step across tabs; EN and RU with Russian plural forms.
+- Demo presets: `payment:success|declined`, `paydelay`, `startdelay`, `fail:start|pay|none`, `slots:10`.
+
+### Fixed
+
+- After a purchase the success notice no longer flashes the balance from before the purchase.
+- Browser Back from a new payment page lands on a clean Credits page, not on the previous payment's outcome.
+- Heading order on Credits and a landmark for the payment page header (design QA).
+
 ## [0.1.10] — 2026-11-15
 
 Fixes from the tenth Codex review of PR #83 — the first under the review rules in `AGENTS.md`.

@@ -19,10 +19,11 @@ export function Card({ as: As = "div", padding = "md", interactive, className, c
 }
 
 /** Header row of a card with padding="none": title left, actions right (filter-menu head, audit §9). */
-export function CardHeader({ title, actions, id }: { title: ReactNode; actions?: ReactNode; id?: string }) {
+export function CardHeader({ title, actions, id, level = 3 }: { title: ReactNode; actions?: ReactNode; id?: string; level?: 2 | 3 | 4 }) {
+  const H = `h${level}` as const; // semantic level only; the look comes from the class
   return (
     <div className={s.header}>
-      <h3 className={s.title} id={id}>{title}</h3>
+      <H className={s.title} id={id}>{title}</H>
       {actions}
     </div>
   );

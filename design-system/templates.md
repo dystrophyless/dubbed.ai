@@ -87,12 +87,15 @@ confirm). **Microphone** — "Test microphone" in the panel header, device Selec
 The interface language is not here (it is in the top bar).
 
 ### Credits — `/styleguide/templates/credits` (Phase 3)
-States: `default` `loading` `empty-history` `error` `purchasing`
+States: `default` `loading` `empty-history` `error` `purchasing`; real page additions approved 2026-11-15:
+`success` `success-first` `success-return` `declined` `shortfall` `slots` `zero-balance`.
 Three panels (narrow 720): **Balance** (accent tile, big number, "about N min of dubbing · N in reserve"; the top-bar
 pill is hidden here) · **Buy credits** (`OptionCards`: credits · minutes · price, "Best value"; footer: demo-price note +
 ONE primary "Buy 1 000 credits · $9"; `purchasing` = cards locked, button loading, a note about the secure checkout) ·
 **History** (grouped by day with `ListGroup`; each kind its own `IconTile`; top-ups in green; Pagination). Prices are
-placeholders (brief §5).
+placeholders (brief §5). History has one row per project run, changing in place, and a demo-only adjustment row.
+The simulated payment page `/checkout/:purchaseId` uses the Auth archetype outside the product shell. Details:
+`specs/002-credits-flow-mock/ui-spec.md`.
 
 ### Status — `/styleguide/templates/status` (Phase 3)
 States: `not-found` `error` `offline`

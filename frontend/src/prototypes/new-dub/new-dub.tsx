@@ -19,7 +19,7 @@ import { NewDubView, type ClipShape, type NewDubPhase as Phase, type NewDubReaso
  * Real page: /new in AppShell; slots, the draft upload and the start call become TanStack Query hooks.
  */
 export const NEW_DUB_STATES = [
-  "empty", "no-slot", "uploading", "checking", "ready", "limit", "error", "short", "starting",
+  "empty", "no-slot", "no-slot-paid", "uploading", "checking", "ready", "limit", "error", "short", "starting",
 ] as const;
 type Preview = (typeof NEW_DUB_STATES)[number];
 const REASONS: readonly Reason[] = ["type", "size", "length", "no-audio", "broken"];
@@ -65,7 +65,7 @@ function useNewDubDemo(preview: Preview, reason: Reason, shortVideo: boolean) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const phaseOf = (p: Preview): Phase =>
-    p === "empty" || p === "no-slot" || p === "uploading" || p === "checking" || p === "error" ? p : "ready";
+    p === "no-slot-paid" ? "no-slot" : p === "empty" || p === "no-slot" || p === "uploading" || p === "checking" || p === "error" ? p : "ready";
   const duration = shortVideo ? CLIP_SECONDS : LONG_SECONDS;
   const whole: [number, number] = [0, Math.min(duration, MAX)]; // default: the whole video if ≤ 120 s, else the first 120 s
   const seeded: [number, number] =
@@ -182,6 +182,7 @@ function NewDub({ preview, reason, shape, shortVideo }: { preview: Preview; reas
       ]}
     >
       <NewDubView
+        paidFull={preview === "no-slot-paid"}
         phase={nd.phase}
         error={nd.error}
         progress={nd.progress}
