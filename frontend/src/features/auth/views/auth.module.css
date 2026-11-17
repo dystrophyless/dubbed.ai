@@ -1,0 +1,252 @@
+/* Auth pages — the Auth archetype's centred panel (otp-input reference); tokens only. */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: var(--space-4);
+  background: var(--color-canvas);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: var(--container-form);
+  margin: 0 auto;
+  padding-block: var(--space-8) var(--space-12);
+}
+
+.card {
+  width: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-8) var(--space-6) var(--space-6);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.icon {
+  display: grid;
+  margin-bottom: var(--space-3);
+}
+
+/* sign-up progress: three short bars, done ones in the accent */
+.stepBar {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-1);
+}
+
+.stepSeg {
+  width: 20px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--color-line);
+}
+
+.stepSeg[data-done] {
+  background: var(--color-accent);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  letter-spacing: var(--tracking-h2);
+  font-weight: var(--weight-medium);
+  color: var(--color-strong);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+.strong {
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  border-top: var(--hairline);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.footHint {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1_5);
+  color: var(--color-muted);
+}
+
+.center {
+  text-align: center;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--color-muted);
+}
+
+.or::before,
+.or::after {
+  content: "";
+  flex: 1;
+  border-top: var(--hairline);
+}
+
+.full > :global(.ui-buttonc) {
+  width: 100%;
+}
+
+.googleMark {
+  width: 16px;
+  height: 16px;
+}
+
+.rowEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+}
+
+/* the demo code, big enough to read and type */
+.code {
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--tracking-h2);
+  color: var(--color-ink);
+}
+
+.steps {
+  margin: 0;
+  padding-left: var(--space-5);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-text);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  color: var(--color-muted);
+}
+
+.heard {
+  color: var(--color-success);
+}
+
+.deviceRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--control-touch);
+  padding-inline: var(--space-3);
+  border-radius: var(--radius-control);
+  background: var(--color-canvas);
+  font-size: var(--text-md);
+  color: var(--color-ink);
+}
+
+.deviceLabel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1_5);
+}
+
+.fieldLabel {
+  font-size: var(--text-md);
+  line-height: var(--leading-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+@media (max-width: 1023.98px) {
+  .body {
+    padding: var(--space-6) var(--space-4) var(--space-5);
+  }
+}
+
+/* a footer action that is not a route: looks like TextLink, behaves like a button */
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--control-sm);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: none;
+  font: inherit;
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-soft);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.linkButton:hover:not(:disabled) {
+  text-decoration-color: currentColor;
+}
+
+.linkButton:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.linkButton:disabled {
+  color: var(--color-muted);
+  cursor: default;
+}

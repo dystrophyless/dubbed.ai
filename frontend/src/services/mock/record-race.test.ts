@@ -1,6 +1,8 @@
+import { signInTestDemo } from "./test-auth";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { projectId } from "../contracts";
 import { captureFixedWindow } from "../media/browser-media";
+import { saveMicrophone } from "../media/mic-preference";
 import { createMockServices } from "./index";
 import * as db from "./db";
 
@@ -14,14 +16,33 @@ describe("recording commit races", () => {
   const services = createMockServices();
   const capture = { blob: new Blob(["new"]), mimeType: "audio/webm", peaks: [0.5], elapsedMs: 1000, endReason: "fixed-window" as const };
   beforeEach(async () => {
+    await signInTestDemo();
     await services.demo!.reset();
+    await signInTestDemo();
     await db.write(["projects", "takes", "turns"], (s) => {
       s.projects.put({ id, name: "Scene", state: "recording", run: null, currentVersion: null, pendingVersion: null, section: { startMs: 0, endMs: 1000 }, turnsTotal: 1, charged: 1, reserved: 0 });
       s.turns.put({ projectId: id, n: 1, startMs: 0, windowMs: 1000 });
       s.takes.put({ projectId: id, n: 1, savedAt: 1, inVersion: 0, audio: new Blob(["old"]) });
     });
   });
-  afterEach(() => vi.restoreAllMocks());
+  afterEach(() => { vi.restoreAllMocks(); vi.unstubAllGlobals(); });
+
+  it("passes the signed-in account's saved microphone to capture", async () => {
+    const values = new Map<string, string>();
+    vi.stubGlobal("localStorage", {
+      setItem: (key: string, value: string) => values.set(key, value),
+      getItem: (key: string) => values.get(key) ?? null,
+    });
+    const session = await services.auth.session();
+    expect(session).not.toBeNull();
+    saveMicrophone(session!.accountId, "chosen-mic");
+    saveMicrophone("another-account", "other-mic");
+    vi.mocked(captureFixedWindow).mockResolvedValueOnce(capture);
+    await services.studio.record({ projectId: id, async release() {} }, 1, {
+      windowMs: 1000, signal: new AbortController().signal, onStarted() {}, onProgress() {},
+    });
+    expect(captureFixedWindow).toHaveBeenLastCalledWith(expect.objectContaining({ deviceId: "chosen-mic" }));
+  });
 
   it.each(["assemble", "remove"] as const)("does not save captured audio after another tab performs %s", async (action) => {
     vi.mocked(captureFixedWindow).mockImplementationOnce(async () => {

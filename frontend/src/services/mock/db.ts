@@ -5,21 +5,40 @@
 
 import type { ChangeEvent, HistoryRow, ProjectId } from "../contracts";
 import { balanceFromHistory, runAmount } from "../rules/credits";
+import { currentAccount } from "./auth-db";
 
 export const welcomeRow = (at: number): HistoryRow => ({ id: "welcome", kind: "welcome", at, amount: 120 });
 
-const DB_NAME = "dubbed-mock";
 const DB_VERSION = 2;
 export const STORES = ["kv", "projects", "turns", "takes", "videos", "results", "history", "purchases"] as const;
 export type StoreName = (typeof STORES)[number];
 
 let dbPromise: Promise<IDBDatabase> | null = null;
+let openedAccountId: string | null = null;
 
-function open(): Promise<IDBDatabase> {
+export class DataAccessError extends Error {
+  readonly reason: "guest" | "inactive" | "account-changed";
+  constructor(reason: "guest" | "inactive" | "account-changed") {
+    super("Active account required; reload after an account change.");
+    this.name = "DataAccessError";
+    this.reason = reason;
+  }
+}
+
+/** The account whose data this tab has opened (R3); null until its first data access. */
+export function currentAccountId(): string | null { return openedAccountId; }
+
+async function open(): Promise<IDBDatabase> {
+  const account = await currentAccount();
+  if (!account) throw new DataAccessError("guest");
+  if (account.stage !== "active") throw new DataAccessError("inactive");
+  // Never retarget an in-flight adapter to another account: R3 requires a full page reload.
+  if (openedAccountId !== null && openedAccountId !== account.id) throw new DataAccessError("account-changed");
   if (dbPromise) return dbPromise;
-  dbPromise = new Promise((resolve, reject) => {
-    const req = indexedDB.open(DB_NAME, DB_VERSION);
-    req.onupgradeneeded = () => {
+  openedAccountId = account.id;
+  dbPromise = new Promise<IDBDatabase>((resolve, reject) => {
+    const req = indexedDB.open(account.dataDb, DB_VERSION);
+    req.onupgradeneeded = (event) => {
       const db = req.result;
       if (!db.objectStoreNames.contains("kv")) db.createObjectStore("kv");
       if (!db.objectStoreNames.contains("projects")) db.createObjectStore("projects", { keyPath: "id" });
@@ -31,6 +50,7 @@ function open(): Promise<IDBDatabase> {
       const history = db.createObjectStore("history", { keyPath: "id" });
       history.createIndex("at", "at");
       const tx = req.transaction!;
+      if (event.oldVersion === 0) tx.objectStore("kv").put({ balance: 120, slotLimit: 2 }, "account");
       const projects = tx.objectStore("projects");
       // Both reads and all seeds belong to the version-change transaction: an upgrade is all or nothing.
       const all = projects.getAll();
@@ -56,6 +76,10 @@ function open(): Promise<IDBDatabase> {
     };
     req.onsuccess = () => resolve(req.result);
     req.onerror = () => reject(req.error);
+  }).catch((error: unknown) => {
+    dbPromise = null;
+    openedAccountId = null;
+    throw error;
   });
   return dbPromise;
 }
@@ -130,6 +154,27 @@ export async function clearAll(): Promise<void> {
   await write([...STORES], (s) => {
     for (const name of STORES) s[name].clear();
   });
+}
+
+/** Release this tab's connection, e.g. when simulating a full reload in unit tests. */
+export async function closeDataDb(): Promise<void> {
+  const pending = dbPromise;
+  if (pending) (await pending).close();
+  dbPromise = null;
+  openedAccountId = null;
+}
+
+/** Delete an account's data without opening it (demo reset). */
+export async function deleteDataDb(name: string): Promise<void> {
+  if (dbPromise) {
+    const db = await dbPromise;
+    if (db.name === name) {
+      db.close();
+      dbPromise = null;
+      openedAccountId = null;
+    }
+  }
+  await done(indexedDB.deleteDatabase(name));
 }
 
 /* ---------- change feed ---------- */

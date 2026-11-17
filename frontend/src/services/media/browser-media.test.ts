@@ -79,6 +79,53 @@ describe("microphone acquisition stop requests", () => {
     vi.unstubAllGlobals();
   });
 
+  it.each(["NotFoundError", "OverconstrainedError"])("retries with the default microphone on %s", async (name) => {
+    const getUserMedia = vi.fn().mockRejectedValueOnce(Object.assign(new Error(), { name })).mockResolvedValueOnce(stream);
+    vi.stubGlobal("navigator", { mediaDevices: { getUserMedia } });
+    const stop = new AbortController();
+    stop.abort();
+    const capture = captureFixedWindow({ durationMs: 4000, deviceId: "chosen", stop: stop.signal });
+    await vi.advanceTimersByTimeAsync(0);
+    await capture;
+    expect(getUserMedia.mock.calls).toEqual([
+      [{ audio: { deviceId: { ideal: "chosen" } }, video: false }],
+      [{ audio: true, video: false }],
+    ]);
+  });
+
+  it("retries at most once and maps a missing default microphone", async () => {
+    const getUserMedia = vi.fn().mockRejectedValue(new DOMException("", "NotFoundError"));
+    vi.stubGlobal("navigator", { mediaDevices: { getUserMedia } });
+    await expect(captureFixedWindow({ durationMs: 4000, deviceId: "chosen" })).rejects.toMatchObject({ kind: "mic-missing" });
+    expect(getUserMedia).toHaveBeenCalledTimes(2);
+  });
+
+  it("does not retry after acquisition is interrupted", async () => {
+    const signal = new AbortController();
+    const getUserMedia = vi.fn().mockImplementation(() => {
+      signal.abort();
+      return Promise.reject(new DOMException("", "NotFoundError"));
+    });
+    vi.stubGlobal("navigator", { mediaDevices: { getUserMedia } });
+    await expect(captureFixedWindow({ durationMs: 4000, deviceId: "chosen", signal: signal.signal })).rejects.toMatchObject({ kind: "interrupted" });
+    expect(getUserMedia).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not retry a blocked microphone", async () => {
+    const getUserMedia = vi.fn().mockRejectedValue(new DOMException("", "NotAllowedError"));
+    vi.stubGlobal("navigator", { mediaDevices: { getUserMedia } });
+    await expect(captureFixedWindow({ durationMs: 4000, deviceId: "chosen" })).rejects.toMatchObject({ kind: "mic-blocked" });
+    expect(getUserMedia).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not retry a missing default microphone", async () => {
+    const getUserMedia = vi.fn().mockRejectedValue(new DOMException("", "NotFoundError"));
+    vi.stubGlobal("navigator", { mediaDevices: { getUserMedia } });
+    await expect(captureFixedWindow({ durationMs: 4000 })).rejects.toMatchObject({ kind: "mic-missing" });
+    expect(getUserMedia).toHaveBeenCalledTimes(1);
+    expect(getUserMedia).toHaveBeenCalledWith({ audio: true, video: false });
+  });
+
   it.each([false, true])("honors Stop before acquisition completes (already stopped: %s)", async (alreadyStopped) => {
     const stop = new AbortController();
     if (alreadyStopped) stop.abort();

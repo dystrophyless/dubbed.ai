@@ -315,8 +315,8 @@ test.describe("US2 — Processing money states", () => {
     await dialog.getByRole("button", { name: "Cancel preparing" }).click();
     await expect(page).toHaveURL(/\/projects$/);
     await expect(page.getByText("Preparing cancelled")).toBeVisible();
-    const balance = Number((await balanceLink(page).innerText()).match(/\d+/)![0]);
-    expect(120 - balance).toBe(shown);
+    // The refund reaches the balance cache a moment after the redirect: wait for the settled value, same expected amount.
+    await expect.poll(async () => 120 - Number((await balanceLink(page).innerText()).match(/\d+/)![0])).toBe(shown);
     await page.goto("/new");
     await expect(newDub(page)).toHaveAttribute("data-state", "empty");
   });

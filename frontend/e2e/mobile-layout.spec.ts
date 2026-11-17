@@ -1,5 +1,6 @@
 import { expect, test, type Page } from "@playwright/test";
-import { noHorizontalScroll, recordCurrentTurn, resetDemo } from "./support/flow";
+import { readDemoCode, submitSignUp, typeCode } from "./support/auth";
+import { gotoGuest, noHorizontalScroll, recordCurrentTurn, resetDemo } from "./support/flow";
 import { fitsViewport, openScreen } from "./support/screens";
 import { sceneVariant } from "./support/media-fixtures";
 
@@ -132,6 +133,47 @@ for (const lang of ["en", "ru"] as const) {
     });
   }
 }
+
+// Feature 004: S1–S6 at 390×844 — no horizontal scroll, the primary action visible; Sign out through the phone menu sheet.
+for (const lang of ["en", "ru"] as const) {
+  test(`auth · ${lang} · S1, S2, S5, S6 fit 390×844 with the primary action visible`, async ({ page }) => {
+    for (const [route, id, primary] of [
+      ["/sign-in", "signin-page", "auth-submit"],
+      ["/sign-up", "signup-page", "auth-submit"],
+      ["/reset-password", "reset-page", "auth-submit"],
+      ["/auth/google", "google-page", "auth-submit"],
+    ] as const) {
+      await gotoGuest(page, route, lang);
+      await expect(page.getByTestId(id)).toBeVisible();
+      await expect(page.locator("html")).toHaveAttribute("lang", lang);
+      await fitsViewport(page, page.getByTestId(primary));
+      await noHorizontalScroll(page);
+    }
+  });
+
+  test(`auth · ${lang} · S3 code page and S4 microphone page fit 390×844`, async ({ page }) => {
+    await gotoGuest(page, "/sign-up", lang);
+    await submitSignUp(page, `mobile-${lang}@dubbed.test`, undefined, lang);
+    await expect(page).toHaveURL(/\/sign-up\/verify$/);
+    await expect(page.getByTestId("verify-page")).toBeVisible();
+    await fitsViewport(page, page.getByTestId("auth-code"));
+    await noHorizontalScroll(page);
+    await typeCode(page, await readDemoCode(page), lang);
+    await expect(page).toHaveURL(/\/sign-up\/microphone$/);
+    await expect(page.getByTestId("microphone-page")).toBeVisible();
+    await fitsViewport(page, page.getByTestId("mic-finish"));
+    await noHorizontalScroll(page);
+  });
+}
+
+test("auth · Sign out through the phone menu sheet → sign-in (FR-015)", async ({ page }) => {
+  await resetDemo(page, "", "/projects");
+  await page.getByRole("button", { name: "Open menu" }).click();
+  await page.getByRole("navigation", { name: "Main" }).getByRole("button", { name: "Sign out" }).click();
+  await expect(page).toHaveURL(/\/sign-in/);
+  await expect(page.getByTestId("signin-page")).toBeVisible();
+  await noHorizontalScroll(page);
+});
 
 // Feature 003: the slots notices and the Credits slots line at 390×844.
 for (const lang of ["en", "ru"] as const) {

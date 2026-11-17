@@ -1,10 +1,27 @@
 import { QueryClient } from "@tanstack/react-query";
 import { describe, expect, it, vi } from "vitest";
-import { invalidateFor, qk } from "./index";
+import { accountChangeTarget, invalidateFor, qk } from "./index";
 import { projectId } from "./contracts";
 import { createMockServices } from "./mock";
 
 describe("service change feed query invalidation", () => {
+  it("invalidates only the session on session events", () => {
+    const client = new QueryClient();
+    client.setQueryData(qk.session, null);
+    client.setQueryData(qk.account, "cached");
+    invalidateFor(client, { kind: "session" });
+    expect(client.getQueryState(qk.session)?.isInvalidated).toBe(true);
+    expect(client.getQueryState(qk.account)?.isInvalidated).toBe(false);
+    client.clear();
+  });
+
+  it("reloads only when an opened account changes", () => {
+    const session = { accountId: "a", email: "a@example.com", stage: "active" as const, hasPassword: true, googleName: null };
+    expect(accountChangeTarget(null, session, "/credits")).toBeNull();
+    expect(accountChangeTarget("a", session, "/credits")).toBeNull();
+    expect(accountChangeTarget("b", session, "/credits")).toBe("/projects");
+    expect(accountChangeTarget("a", null, "/projects/x?y=1")).toBe("/sign-in?next=%2Fprojects%2Fx%3Fy%3D1");
+  });
   const id = projectId("cross-tab");
   it.each(["project", "removed"])("invalidates cached source video and thumbnail on %s", async (kind) => {
     const client = new QueryClient({ defaultOptions: { queries: { staleTime: Infinity } } });

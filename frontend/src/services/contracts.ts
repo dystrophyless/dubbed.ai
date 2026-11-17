@@ -14,6 +14,31 @@ export type Outcome<T, E extends string> = { ok: true; value: T } | { ok: false;
 export const ok = <T>(value: T): { ok: true; value: T } => ({ ok: true, value });
 export const fail = <E extends string>(error: E): { ok: false; error: E } => ({ ok: false, error });
 
+/* ---------- Authentication ---------- */
+
+export type AuthStage = "verify" | "microphone" | "active";
+export type Session = { accountId: string; email: string; stage: AuthStage; hasPassword: boolean; googleName: string | null };
+export type CodePurpose = "verify" | "reset";
+export type CodeSent = { email: string; resendAt: number; expiresAt: number };
+export type CodeError = "wrong-code" | "expired" | "attempts" | "storage";
+export type CodeOutcome<T> = Outcome<T, Exclude<CodeError, "wrong-code">> | { ok: false; error: "wrong-code"; attemptsLeft: number };
+export type TooSoon = { ok: false; error: "too-soon"; until: number };
+
+export interface AuthPort {
+  session(): Promise<Session | null>;
+  signUp(input: { email: string; password: string }): Promise<Outcome<CodeSent, "email-taken" | "invalid-email" | "weak-password" | "storage">>;
+  changeEmail(email: string): Promise<Outcome<CodeSent, "email-taken" | "invalid-email" | "storage">>;
+  resendCode(purpose: CodePurpose, email?: string): Promise<Outcome<CodeSent, "storage"> | TooSoon>;
+  verifyEmail(code: string): Promise<CodeOutcome<Session>>;
+  completeMicrophone(): Promise<Outcome<Session, "storage">>;
+  signIn(input: { email: string; password: string }): Promise<Outcome<Session, "wrong-credentials" | "google-only" | "storage"> | { ok: false; error: "locked"; until: number }>;
+  google(identity: { email: string; name: string }): Promise<Outcome<Session, "failed" | "storage">>;
+  signOut(): Promise<void>;
+  startReset(email: string): Promise<Outcome<CodeSent, "invalid-email" | "storage"> | TooSoon>;
+  checkResetCode(input: { email: string; code: string }): Promise<CodeOutcome<{ ticket: string; expiresAt: number }>>;
+  finishReset(input: { ticket: string; password: string }): Promise<Outcome<Session, "expired" | "weak-password" | "storage">>;
+}
+
 /* ---------- Account ---------- */
 
 export type Account = {
@@ -269,10 +294,12 @@ export type DemoSettings = {
   failProjects?: boolean;
 };
 
+/** Auth session changes use kind "session". */
 export type ChangeEvent = { projectId?: ProjectId; purchaseId?: PurchaseId; kind: string };
 
 export interface Services {
   readonly adapter: "mock" | "real";
+  auth: AuthPort;
   account: AccountPort;
   credits: CreditsPort;
   upload: UploadPort;
@@ -285,6 +312,7 @@ export interface Services {
   demo?: {
     reset(): Promise<void>;
     /** slotLimit must satisfy isSlotLimit. */
-    set(p: Partial<DemoSettings> & { balance?: number; slotLimit?: number; fillSlots?: boolean }): Promise<void>;
+    set(p: Partial<DemoSettings> & { balance?: number; slotLimit?: number; fillSlots?: boolean; signin?: boolean; signout?: boolean; codeExpire?: boolean; failAuth?: boolean; googleFail?: boolean }): Promise<void>;
+    lastCode(email: string, purpose: CodePurpose): Promise<string | null>;
   };
 }

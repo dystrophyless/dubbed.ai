@@ -1,3 +1,4 @@
+import { signInTestDemo } from "./test-auth";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { projectId, purchaseId, type ChangeEvent, type HistoryRow, type Outcome, type Purchase, type ReturnTo } from "../contracts";
 import { balanceFromHistory, PACKS } from "../rules/credits";
@@ -27,9 +28,11 @@ async function finish<T>(pending: Promise<T>, timers = 1): Promise<T> {
 describe("mock purchases", () => {
   let services = createMockServices();
   beforeEach(async () => {
+    await signInTestDemo();
     vi.useFakeTimers({ toFake: ["setTimeout", "clearTimeout", "Date"] });
     services = createMockServices();
     await services.demo!.reset();
+    await signInTestDemo();
   });
   afterEach(() => { vi.restoreAllMocks(); vi.useRealTimers(); });
 
@@ -208,6 +211,7 @@ describe("mock purchases", () => {
     await services.demo!.set({ slotLimit: 12 });
     expect((await services.account.get()).slotLimit).toBe(35);
     await services.demo!.reset();
+    await signInTestDemo();
     expect((await services.account.get()).slotLimit).toBe(2);
   });
 

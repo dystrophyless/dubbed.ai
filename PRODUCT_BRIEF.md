@@ -19,7 +19,8 @@ microphone, and gets the full video back with their voices replacing the origina
 
 1. **Landing** explains the product (EN/RU) and the 120-credit welcome offer → start dubbing.
 2. **Sign up / sign in**: email + password with email verification, or Google. A one-time **microphone check** happens
-   during onboarding, before registration completes; afterwards microphone settings live only in Settings.
+   during onboarding, before registration completes; afterwards microphone settings live only in Settings. The landing `/`
+   is a later feature; for now `/` redirects by session (owner, 2026-11-16).
 3. **New dub**: choose a video, preview it, pick the section to dub, see the exact credit cost, start processing with one
    deliberate action that names the cost (no second confirmation).
 4. **Processing**: progress; queued cancel is free, running cancel charges only completed stages (shown before confirming).

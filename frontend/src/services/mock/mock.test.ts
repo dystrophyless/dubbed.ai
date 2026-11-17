@@ -1,3 +1,4 @@
+import { signInTestDemo } from "./test-auth";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { projectId, type ProjectId } from "../contracts";
 import { createMockServices } from "./index";
@@ -52,10 +53,12 @@ describe("mock adapter", () => {
   let id: ProjectId;
 
   beforeEach(async () => {
+    await signInTestDemo();
     vi.useFakeTimers({ toFake: ["Date"] });
     at(0);
     services = createMockServices();
     await services.demo!.reset();
+    await signInTestDemo();
     id = await seedDraft("p1", 13);
   });
   afterEach(() => vi.useRealTimers());

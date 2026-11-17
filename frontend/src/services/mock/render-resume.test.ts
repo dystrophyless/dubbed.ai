@@ -1,3 +1,4 @@
+import { signInTestDemo } from "./test-auth";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { projectId } from "../contracts";
 import { renderMix } from "../media/mixer";
@@ -25,9 +26,11 @@ async function seed(pending: boolean) {
 
 describe("list resumes persisted assemblies", () => {
   beforeEach(async () => {
+    await signInTestDemo();
     vi.mocked(renderMix).mockReset();
     vi.stubGlobal("navigator", {});
     await createMockServices().demo!.reset();
+    await signInTestDemo();
   });
   afterEach(() => { vi.unstubAllGlobals(); vi.useRealTimers(); });
 

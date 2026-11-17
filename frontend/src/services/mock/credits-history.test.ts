@@ -1,3 +1,4 @@
+import { signInTestDemo } from "./test-auth";
 import { IDBFactory } from "fake-indexeddb";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { projectId, type HistoryRow } from "../contracts";
@@ -28,10 +29,12 @@ async function invariant(services: ReturnType<typeof createMockServices>) {
 describe("atomic per-run credits history", () => {
   let services = createMockServices();
   beforeEach(async () => {
+    await signInTestDemo();
     vi.useFakeTimers({ toFake: ["Date"] });
     at(0);
     services = createMockServices();
     await services.demo!.reset();
+    await signInTestDemo();
     await db.write(["projects"], (s) => { s.projects.put(draft); });
   });
   afterEach(() => { vi.restoreAllMocks(); vi.useRealTimers(); });
@@ -97,6 +100,7 @@ describe("atomic per-run credits history", () => {
     await invariant(services);
     await db.write(["purchases"], (s) => { s.purchases.put({ id: "pending" }); });
     await services.demo!.reset();
+    await signInTestDemo();
     expect(await rows()).toEqual([db.welcomeRow(T0)]);
     expect(await db.getAll("purchases")).toEqual([]);
     await invariant(services);
@@ -187,6 +191,7 @@ describe("history database upgrade", () => {
       old.close();
     }
     vi.resetModules();
+    await signInTestDemo();
     const upgraded = await import("./db");
     const history = await upgraded.getAll<HistoryRow>("history");
     expect(balanceFromHistory(history)).toBe(existing ? 88 : 120);

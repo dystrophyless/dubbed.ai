@@ -1,6 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { expectNoA11yViolations, trackConsoleErrors } from "./support/a11y";
-import { noHorizontalScroll, resetDemo } from "./support/flow";
+import { readDemoCode, submitSignUp, typeCode } from "./support/auth";
+import { gotoGuest, noHorizontalScroll, resetDemo } from "./support/flow";
 import { openScreen, screenRoot, type Screen } from "./support/screens";
 
 for (const screen of ["projects", "new", "processing", "studio", "result"] as const) {
@@ -44,6 +45,49 @@ for (const route of ["/", "/projects/layout"]) {
     expect(errors).toEqual([]);
   });
 }
+
+// Feature 004: one smoke per auth route.
+for (const [route, id] of [["/sign-in", "signin-page"], ["/sign-up", "signup-page"], ["/reset-password", "reset-page"], ["/auth/google", "google-page"]] as const) {
+  test(`auth route (guest): ${route}`, async ({ page }) => {
+    const errors = trackConsoleErrors(page);
+    await gotoGuest(page, route);
+    await expect(page.getByTestId(id)).toBeVisible();
+    await noHorizontalScroll(page);
+    await expectNoA11yViolations(page);
+    expect(errors).toEqual([]);
+  });
+}
+for (const [step, id] of [["verify", "verify-page"], ["microphone", "microphone-page"]] as const) {
+  test(`auth route after sign-up: /sign-up/${step}`, async ({ page }) => {
+    const errors = trackConsoleErrors(page);
+    await gotoGuest(page, "/sign-up");
+    await submitSignUp(page, `smoke-${step}@dubbed.test`);
+    await expect(page).toHaveURL(/\/sign-up\/verify$/);
+    if (step === "microphone") {
+      await typeCode(page, await readDemoCode(page));
+      await expect(page).toHaveURL(/\/sign-up\/microphone$/);
+    }
+    await expect(page.getByTestId(id)).toBeVisible();
+    await noHorizontalScroll(page);
+    await expectNoA11yViolations(page);
+    expect(errors).toEqual([]);
+  });
+}
+test("auth redirect: / for a guest → /sign-in", async ({ page }) => {
+  const errors = trackConsoleErrors(page);
+  await gotoGuest(page, "/");
+  await expect(page).toHaveURL(/\/sign-in/);
+  await expect(page.getByTestId("signin-page")).toBeVisible();
+  await expectNoA11yViolations(page);
+  expect(errors).toEqual([]);
+});
+test("auth redirect: / for a signed-in user → /projects", async ({ page }) => {
+  const errors = trackConsoleErrors(page);
+  await resetDemo(page, "", "/");
+  await expect(page).toHaveURL(/\/projects$/);
+  await expect(page.getByTestId("signin-page")).toHaveCount(0);
+  expect(errors).toEqual([]);
+});
 
 // One concrete route, not a state matrix. Historical concept screens/index are intentionally excluded.
 const routes: [string, string][] = [

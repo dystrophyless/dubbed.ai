@@ -101,6 +101,7 @@ export class MicrophoneError extends Error {
  */
 export async function captureFixedWindow(input: {
   durationMs: number;
+  deviceId?: string;
   signal?: AbortSignal;
   stop?: AbortSignal;
   onStarted?: () => void;
@@ -112,9 +113,19 @@ export async function captureFixedWindow(input: {
 
   let stream: MediaStream;
   try {
-    stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({
+        audio: input.deviceId ? { deviceId: { ideal: input.deviceId } } : true, video: false,
+      });
+    } catch (error) {
+      const name = error instanceof Error ? error.name : "";
+      if (!input.deviceId || (name !== "NotFoundError" && name !== "OverconstrainedError")) throw error;
+      if (input.signal?.aborted) throw new MicrophoneError("interrupted");
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+    }
   } catch (error) {
-    const name = error instanceof DOMException ? error.name : "";
+    if (error instanceof MicrophoneError) throw error;
+    const name = error instanceof Error ? error.name : "";
     if (name === "NotFoundError" || name === "OverconstrainedError") throw new MicrophoneError("mic-missing");
     throw new MicrophoneError("mic-blocked");
   }
