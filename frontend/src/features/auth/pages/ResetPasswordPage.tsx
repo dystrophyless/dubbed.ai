@@ -6,15 +6,14 @@ import { toast } from "@/components/ui";
 import type { EmailIssue } from "@/features/auth/views/AuthFrame";
 import { ResetPasswordView, type ResetPasswordViewProps, type ResetViewState } from "@/features/auth/views/ResetPasswordView";
 import { qk, useCheckResetCode, useFinishReset, useResendCode, useServices, useStartReset } from "@/services";
-import { isEmail, isPassword, normaliseEmail, routeForStage, safeNext } from "@/services/rules/auth";
+import { useAlive } from "@/features/auth/use-alive";
+import { isEmail, isPassword, normaliseEmail, routeForStage, safeNext, signInUrl } from "@/services/rules/auth";
 
 /*
  * S5 Reset password (feature 004, ui-spec S5 revision 2): email -> code only -> new password twice. The email and the reset
  * ticket live in page state only (never the URL, never storage); the repeat field is compared here and never sent.
  * Countdowns are counted by the page from the deadlines the service returns (`resendAt`, `until`).
  */
-const HREFS = { home: "/sign-in", signIn: "/sign-in" };
-
 type Step = "email" | "code" | "password";
 type PasswordErrors = NonNullable<ResetPasswordViewProps["passwordErrors"]>;
 
@@ -41,6 +40,9 @@ export function ResetPasswordPage() {
   const checkCode = useCheckResetCode();
   const finishReset = useFinishReset();
   const busy = useRef(false);
+  const alive = useAlive();
+  const next = safeNext(params.get("next"));
+  const signInHref = next ? signInUrl(next) : "/sign-in";
 
   const [step, setStep] = useState<Step>("email");
   const [state, setState] = useState<ResetViewState>("email");
@@ -73,7 +75,7 @@ export function ResetPasswordPage() {
   const guard = async (fn: () => Promise<void>, onFail: () => void) => {
     if (busy.current) return;
     busy.current = true;
-    try { await fn(); } catch { onFail(); } finally { busy.current = false; }
+    try { await fn(); } catch { if (alive.current) onFail(); } finally { busy.current = false; }
   };
 
   const onSendCode = (value: string) => guard(async () => {
@@ -82,6 +84,7 @@ export function ResetPasswordPage() {
     setEmailError(undefined);
     setState("email-submitting");
     const res = await startReset.mutateAsync(typed);
+    if (!alive.current) return;
     if (res.ok) {
       setEmail(normaliseEmail(res.value.email));
       setResendAt(res.value.resendAt);
@@ -100,6 +103,7 @@ export function ResetPasswordPage() {
   const onCheckCode = (code: string) => guard(async () => {
     setState("code-verifying");
     const res = await checkCode.mutateAsync({ email, code });
+    if (!alive.current) return;
     if (res.ok) {
       setTicket(res.value.ticket);
       setStep("password");
@@ -116,6 +120,7 @@ export function ResetPasswordPage() {
     setResending(true);
     try {
       const res = await resend.mutateAsync({ purpose: "reset", email });
+      if (!alive.current) return;
       if (res.ok) {
         setResendAt(res.value.resendAt);
         setVersion((n) => n + 1);
@@ -124,7 +129,7 @@ export function ResetPasswordPage() {
         toast({ title: t("features.auth.code.resent") });
       } else if (res.error === "too-soon") { setResendAt(res.until); setVersion((n) => n + 1); }
       else setResendError(true);
-    } finally { setResending(false); }
+    } finally { if (alive.current) setResending(false); }
   }, () => setResendError(true));
 
   const onFinish = (v: { password: string; repeat: string }) => guard(async () => {
@@ -139,8 +144,9 @@ export function ResetPasswordPage() {
 
     setState("password-submitting");
     const res = await finishReset.mutateAsync({ ticket, password: v.password });
+    if (!alive.current) return;
     if (res.ok) {
-      navigate(routeForStage(res.value.stage) ?? safeNext(params.get("next")) ?? "/projects", { replace: true });
+      navigate(routeForStage(res.value.stage) ?? next ?? "/projects", { replace: true });
       client.setQueryData(qk.session, res.value);
     } else if (res.error === "expired") { setTicket(null); setState("password-expired"); }
     else if (res.error === "weak-password") { setPasswordErrors({ password: "short" }); setState("password"); }
@@ -173,7 +179,7 @@ export function ResetPasswordPage() {
       newCodeIn={newCodeIn}
       demoCode={demoCode.data ?? undefined}
       demoUnknown={!!services.demo && lookedUp && demoCode.data === null && !dead}
-      hrefs={HREFS}
+      hrefs={{ home: "/sign-in", signIn: signInHref }}
       onSendCode={onSendCode}
       onResend={onResend}
       onCheckCode={onCheckCode}

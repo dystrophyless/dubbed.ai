@@ -5,6 +5,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "@/components/ui";
 import { MicrophoneView, type MicPhase } from "@/features/auth/views/MicrophoneView";
 import { qk, useCompleteMicrophone } from "@/services";
+import { useAlive } from "@/features/auth/use-alive";
 import { MicrophoneError } from "@/services/media/browser-media";
 import { openMicCheck } from "@/services/media/mic-check";
 import { saveMicrophone } from "@/services/media/mic-preference";
@@ -22,6 +23,7 @@ export function MicrophonePage() {
   const client = useQueryClient();
   const complete = useCompleteMicrophone();
   const busy = useRef(false);
+  const alive = useAlive();
 
   const [phase, setPhase] = useState<MicPhase>("asking");
   const [level, setLevel] = useState(0);
@@ -69,6 +71,7 @@ export function MicrophonePage() {
     setFinishing(true);
     try {
       const res = await complete.mutateAsync();
+      if (!alive.current) return;
       if (res.ok) {
         if (res.value.stage === "active" && deviceId) saveMicrophone(res.value.accountId, deviceId);
         toast({ title: t("features.auth.mic.welcome") });
@@ -78,10 +81,10 @@ export function MicrophonePage() {
       }
       setServiceError(true);
     } catch {
-      setServiceError(true);
+      if (alive.current) setServiceError(true);
     } finally {
       busy.current = false;
-      setFinishing(false);
+      if (alive.current) setFinishing(false);
     }
   };
 

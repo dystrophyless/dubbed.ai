@@ -4,6 +4,19 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.4.1] — 2026-11-17
+
+Fixes from the first Codex review of PR #86.
+
+### Fixed
+
+- A sign-in, sign-up, code, microphone, reset or Google request that finishes after the user has left the page no
+  longer navigates them away or changes the page.
+- "Forgot password?" and the other links between the sign-in, sign-up and reset pages keep the page the user asked for,
+  so a reset ends there instead of on My projects.
+- A failed sign-out shows "Couldn't reach Dubbed" with Try again instead of silently leaving the user signed in.
+- Signing out from the account menu reloads the tab once (it reloaded twice).
+
 ## [0.4.0] — 2026-11-17
 
 Feature 004 — sign-up and sign-in on mock services (`specs/004-auth-mock/`).

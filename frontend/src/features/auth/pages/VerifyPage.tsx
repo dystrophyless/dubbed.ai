@@ -7,6 +7,7 @@ import type { EmailIssue } from "@/features/auth/views/AuthFrame";
 import { readResendDeadline, saveResendDeadline } from "@/features/auth/resend-deadline";
 import { VerifyView, type VerifyViewState } from "@/features/auth/views/VerifyView";
 import { qk, useChangeEmail, useResendCode, useServices, useSession, useVerifyEmail } from "@/services";
+import { useAlive } from "@/features/auth/use-alive";
 import { isEmail } from "@/services/rules/auth";
 
 /*
@@ -38,6 +39,7 @@ export function VerifyPage() {
   const resend = useResendCode();
   const changeEmail = useChangeEmail();
   const busy = useRef(false);
+  const alive = useAlive();
 
   const [state, setState] = useState<VerifyViewState>("default");
   const [attemptsLeft, setAttemptsLeft] = useState(0);
@@ -64,7 +66,7 @@ export function VerifyPage() {
   const guard = async (fn: () => Promise<void>, onFail: () => void) => {
     if (busy.current) return;
     busy.current = true;
-    try { await fn(); } catch { onFail(); } finally { busy.current = false; }
+    try { await fn(); } catch { if (alive.current) onFail(); } finally { busy.current = false; }
   };
 
   const sent = (value: { email: string; resendAt: number }) => {
@@ -79,6 +81,7 @@ export function VerifyPage() {
   const onVerify = (code: string) => guard(async () => {
     setState("verifying");
     const res = await verify.mutateAsync(code);
+    if (!alive.current) return;
     if (res.ok) {
       setState("verified");
       navigate("/sign-up/microphone", { replace: true });
@@ -95,10 +98,11 @@ export function VerifyPage() {
     setResending(true);
     try {
       const res = await resend.mutateAsync({ purpose: "verify" });
+      if (!alive.current) return;
       if (res.ok) sent(res.value);
       else if (res.error === "too-soon") { setResendAt(res.until); setVersion((n) => n + 1); }
       else setResendError(true);
-    } finally { setResending(false); }
+    } finally { if (alive.current) setResending(false); }
   }, () => setResendError(true));
 
   const onChangeEmail = (value: string) => guard(async () => {
@@ -107,6 +111,7 @@ export function VerifyPage() {
     setFieldError(undefined);
     setState("change-email-submitting");
     const res = await changeEmail.mutateAsync(next);
+    if (!alive.current) return;
     if (res.ok) sent(res.value);
     else if (res.error === "email-taken") setState("change-email-taken");
     else if (res.error === "invalid-email") { setFieldError("invalid"); setState("change-email"); }

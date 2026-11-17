@@ -43,6 +43,11 @@ export function signInUrl(location: string): string {
   return destination ? `/sign-in?next=${encodeURIComponent(destination)}` : "/sign-in";
 }
 
+/** An auth route that keeps the (already validated) return destination: `/reset-password?next=%2Fcredits`. */
+export function authUrl(route: string, next: string | null): string {
+  return next ? `${route}?next=${encodeURIComponent(next)}` : route;
+}
+
 export function routeForStage(stage: AuthStage): string | null {
   if (stage === "verify") return "/sign-up/verify";
   if (stage === "microphone") return "/sign-up/microphone";

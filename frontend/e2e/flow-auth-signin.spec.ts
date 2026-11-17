@@ -1,7 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 import { expectNoA11yViolations } from "./support/a11y";
 import {
-  DEMO_EMAIL, DEMO_PASSWORD, GOOD_PASSWORD, LABEL, createAccount, emailField, passwordField, readDemoCode, signInWith,
+  DEMO_EMAIL, DEMO_PASSWORD, GOOD_PASSWORD, LABEL, createAccount, emailField, failNextServiceCall, holdServiceStores, passwordField, readDemoCode, signInWith,
   signOutFromMenu, submit, submitSignUp, typeCode,
 } from "./support/auth";
 import { gotoGuest, noHorizontalScroll, resetDemo, uploadScene } from "./support/flow";
@@ -126,6 +126,21 @@ test.describe("US2 — sign in and out", () => {
     await expect(page).toHaveURL(/\/sign-in\?next=%2Fcredits$/);
   });
 
+  test("a failed sign-out keeps the user on the page with a danger toast; Try again signs out", async ({ page }) => {
+    await resetDemo(page, "", "/projects");
+    await expect(page.getByRole("heading", { name: "My projects" })).toBeVisible();
+    const failure = await failNextServiceCall(page, ["kv", "sessions"]);
+    await page.getByRole("button", { name: LABEL.en.account }).click();
+    await page.getByText(LABEL.en.signOut, { exact: true }).click();
+    await expect.poll(() => failure.fired()).toBe(true);
+    await expect(page.getByText("Couldn’t reach Dubbed")).toBeVisible();
+    await expect(page.getByText(/Nothing was changed/)).toBeVisible();
+    await expect(page).toHaveURL(/\/projects$/);
+    await page.getByRole("button", { name: "Try again" }).click();
+    await expect(page).toHaveURL(/\/sign-in/);
+    await expect(page.getByTestId("signin-page")).toBeVisible();
+  });
+
   test("two tabs: sign out in tab A → tab B shows sign-in within a second and /projects stays closed", async ({ page, context }) => {
     await resetDemo(page, "", "/projects");
     await expect(page.getByRole("heading", { name: "My projects" })).toBeVisible();
@@ -224,6 +239,27 @@ test.describe("US2 — sign in and out", () => {
 
     await alert.getByRole("button", { name: "Try again" }).click();
     await expect(page).toHaveURL(/\/projects$/);
+  });
+
+  test("leaving the page while sign-in is pending: the late answer does not replace the page the user went to", async ({ page }) => {
+    await gotoGuest(page, "/styleguide");
+    await expect(page.getByRole("heading", { level: 1 }).first()).toBeVisible();
+    // client-side navigation to sign-in (the page must stay mounted-then-unmounted, not reload)
+    await page.evaluate(() => { history.pushState({}, "", "/sign-in?next=%2Fcredits"); dispatchEvent(new PopStateEvent("popstate")); });
+    await expect(page.getByTestId("signin-page")).toBeVisible();
+    await emailField(page).fill(DEMO_EMAIL);
+    await passwordField(page).fill(DEMO_PASSWORD);
+    const hold = await holdServiceStores(page, ["accounts", "throttle", "sessions", "kv"]);
+    await submit(page).click();
+    await expect(page.getByTestId("signin-page")).toHaveAttribute("data-state", "submitting");
+
+    await page.evaluate(() => history.back());
+    await expect(page).toHaveURL(/\/styleguide/);
+    await expect(page.getByTestId("signin-page")).toHaveCount(0);
+    await hold.release();
+    await page.waitForTimeout(1_000);
+    await expect(page).toHaveURL(/\/styleguide/);
+    await expect(page.getByTestId("signin-page")).toHaveCount(0);
   });
 
   test("RU: sign in with the demo account", async ({ page }) => {

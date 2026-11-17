@@ -70,6 +70,20 @@ test.describe("US5 — reset password", () => {
     await expectNoA11yViolations(page);
   });
 
+  test("guest opens /credits → sign in → Forgot password → reset → lands on /credits; the way back to sign in keeps the destination", async ({ page }) => {
+    await gotoGuest(page, "/credits");
+    await expect(page).toHaveURL(/\/sign-in\?next=%2Fcredits$/);
+    await page.getByRole("link", { name: "Forgot password?" }).click();
+    await expect(page).toHaveURL(/\/reset-password\?next=%2Fcredits$/);
+    await expect(page.getByRole("link", { name: "Back to sign in" })).toHaveAttribute("href", "/sign-in?next=%2Fcredits");
+    await toPasswordStep(page);
+    await newPassword(page).fill(NEW_PASSWORD);
+    await repeatPassword(page).fill(NEW_PASSWORD);
+    await submit(page).click();
+    await expect(page).toHaveURL(/\/credits$/);
+    await expect(page.getByTestId("credits-buy")).toBeVisible();
+  });
+
   test("a failed resend shows the service alert; the code stays, no countdown starts, Try again resends", async ({ page }) => {
     await page.clock.install(); // the 60 s cooldown is run through with the page clock
     await gotoGuest(page, "/reset-password");

@@ -3,14 +3,14 @@ import { useLocation, useNavigate, useSearchParams } from "react-router";
 import { useQueryClient } from "@tanstack/react-query";
 import { SignInView, type SignInViewProps } from "@/features/auth/views/SignInView";
 import { qk, useServices, useSignIn } from "@/services";
-import { isEmail, routeForStage, safeNext } from "@/services/rules/auth";
+import { useAlive } from "@/features/auth/use-alive";
+import { authUrl, isEmail, routeForStage, safeNext } from "@/services/rules/auth";
 
 /*
  * S1 Sign in (feature 004, ui-spec S1). Validates before sending; one request per press. Wrong credentials keep the email,
  * clear and focus the password (the view is remounted with `initial`); a lock counts down from the service's `until`.
  * The password never reaches the URL; `next` is read through `safeNext`.
  */
-const HREFS = { home: "/sign-in", signUp: "/sign-up", reset: "/reset-password" };
 const DEMO = { email: "demo@dubbed.test", password: "dubbed-demo" };
 
 type FieldErrors = NonNullable<SignInViewProps["fieldErrors"]>;
@@ -23,6 +23,9 @@ export function SignInPage() {
   const services = useServices();
   const signIn = useSignIn();
   const busy = useRef(false);
+  const alive = useAlive();
+  const next = safeNext(params.get("next"));
+  const hrefs = { home: "/sign-in", signUp: authUrl("/sign-up", next), reset: authUrl("/reset-password", next) };
   const [state, setState] = useState<SignInViewProps["state"]>("default");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [lockedUntil, setLockedUntil] = useState(0);
@@ -62,9 +65,10 @@ export function SignInPage() {
     setState("submitting");
     try {
       const res = await signIn.mutateAsync({ email, password: v.password });
+      if (!alive.current) return;
       if (res.ok) {
         client.setQueryData(qk.session, res.value);
-        navigate(routeForStage(res.value.stage) ?? safeNext(params.get("next")) ?? "/projects", { replace: true });
+        navigate(routeForStage(res.value.stage) ?? next ?? "/projects", { replace: true });
         return;
       }
       if (res.error === "wrong-credentials") {
@@ -82,7 +86,7 @@ export function SignInPage() {
         setState("google-only");
       } else setState("service-error");
     } catch {
-      setState("service-error");
+      if (alive.current) setState("service-error");
     } finally {
       busy.current = false;
     }
@@ -97,10 +101,9 @@ export function SignInPage() {
       fieldErrors={fieldErrors}
       lockedSeconds={lockedSeconds}
       demo={services.demo ? DEMO : undefined}
-      hrefs={HREFS}
+      hrefs={hrefs}
       onSubmit={onSubmit}
       onGoogle={() => {
-        const next = safeNext(params.get("next"));
         navigate(`/auth/google?from=sign-in${next ? `&next=${encodeURIComponent(next)}` : ""}`);
       }}
     />

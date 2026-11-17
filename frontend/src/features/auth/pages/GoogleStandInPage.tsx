@@ -4,7 +4,8 @@ import { useQueryClient } from "@tanstack/react-query";
 import type { EmailIssue } from "@/features/auth/views/AuthFrame";
 import { GoogleStandInView, type DemoIdentity, type GoogleStandInState } from "@/features/auth/views/GoogleStandInView";
 import { qk, useGoogle } from "@/services";
-import { isEmail, routeForStage, safeNext, signInUrl } from "@/services/rules/auth";
+import { useAlive } from "@/features/auth/use-alive";
+import { authUrl, isEmail, routeForStage, safeNext, signInUrl } from "@/services/rules/auth";
 
 /*
  * S6 Google stand-in (feature 004, ui-spec S6; mock only — a real adapter would redirect to Google). Two demo identities and
@@ -23,6 +24,7 @@ export function GoogleStandInPage() {
   const client = useQueryClient();
   const google = useGoogle();
   const busy = useRef(false);
+  const alive = useAlive();
   const last = useRef<{ email: string; name: string } | null>(null);
   const [state, setState] = useState<GoogleStandInState>("default");
   const [fieldError, setFieldError] = useState<EmailIssue | undefined>();
@@ -31,7 +33,7 @@ export function GoogleStandInPage() {
   const next = safeNext(params.get("next"));
 
   const leave = (notice: "google-cancelled" | "google-failed") => {
-    navigate(from === "sign-in" ? (next ? signInUrl(next) : "/sign-in") : "/sign-up", { state: { notice }, replace: true });
+    navigate(from === "sign-in" ? (next ? signInUrl(next) : "/sign-in") : authUrl("/sign-up", next), { state: { notice }, replace: true });
   };
 
   const run = async (identity: { email: string; name: string }) => {
@@ -41,6 +43,7 @@ export function GoogleStandInPage() {
     setState("submitting");
     try {
       const res = await google.mutateAsync(identity);
+      if (!alive.current) return;
       if (res.ok) {
         navigate(routeForStage(res.value.stage) ?? next ?? "/projects", { replace: true });
         client.setQueryData(qk.session, res.value);
@@ -48,7 +51,7 @@ export function GoogleStandInPage() {
       }
       setState("failed");
     } catch {
-      setState("failed");
+      if (alive.current) setState("failed");
     } finally {
       busy.current = false;
     }

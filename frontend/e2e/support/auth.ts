@@ -65,7 +65,9 @@ export async function signInWith(page: Page, email: string, password: string, la
 export async function signOutFromMenu(page: Page, lang: Lang = "en") {
   await page.getByRole("button", { name: LABEL[lang].account }).click();
   await page.getByText(LABEL[lang].signOut, { exact: true }).click();
-  await expect(page).toHaveURL(/\/sign-in/);
+  // the tab navigates once, to plain /sign-in; wait for it to settle so the next step cannot race a reload
+  await expect(page).toHaveURL(/\/sign-in$/);
+  await page.waitForLoadState("networkidle");
 }
 
 /** How many accounts the mock auth database holds. */

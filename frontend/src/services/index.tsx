@@ -132,8 +132,13 @@ export function accountChangeTarget(opened: string | null, session: Session | nu
   return session ? "/projects" : signInUrl(next);
 }
 
+/** Set while this tab's own Sign out runs: the one account-switch reload then goes to a plain /sign-in (the user chose to leave). */
+let ownSignOut = false;
+export const markOwnSignOut = (on: boolean) => { ownSignOut = on; };
+
 function reloadIfAccountChanged(opened: string | null, session: Session | null) {
   const target = accountChangeTarget(opened, session, `${window.location.pathname}${window.location.search}`);
+  if (target && ownSignOut && !session) { window.location.replace("/sign-in"); return; }
   if (target) window.location.replace(target);
 }
 
