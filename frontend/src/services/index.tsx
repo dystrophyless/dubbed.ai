@@ -3,11 +3,14 @@
  * hooks. Screens talk to the server only through these hooks + contracts.ts, so a real adapter can replace mock/ later.
  */
 
-import { keepPreviousData, useQuery, useQueryClient, type QueryClient } from "@tanstack/react-query";
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { keepPreviousData, useMutation, useQuery, useQueryClient, type QueryClient } from "@tanstack/react-query";
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import type { ChangeEvent, DemoOutcome, Project, ProjectId, PurchaseId, Services } from "./contracts";
 import { createMockServices } from "./mock";
+import { currentAccountId } from "./mock/db";
+import type { AuthPort, Session } from "./contracts";
 import { isSlotLimit } from "./rules/slots";
+import { signInUrl } from "./rules/auth";
 
 export * from "./contracts";
 
@@ -19,6 +22,7 @@ export function createServices(adapter: "mock" = "mock"): Services {
 /* ---------- query keys ---------- */
 
 export const qk = {
+  session: ["session"] as const,
   account: ["account"] as const,
   credits: { packs: ["credits", "packs"] as const, history: (page: number) => ["credits", "history", page] as const },
   purchase: (id: string) => ["purchase", id] as const,
@@ -39,6 +43,10 @@ export const isActive = (p: Project | null | undefined) =>
   Boolean(p && (p.state === "queued" || p.state === "preparing" || p.state === "assembling" || p.pendingVersion !== null));
 
 export function invalidateFor(client: QueryClient, e: ChangeEvent) {
+  if (e.kind === "session") {
+    void client.invalidateQueries({ queryKey: qk.session });
+    return;
+  }
   if (e.kind === "result-progress" && e.projectId) {
     void client.invalidateQueries({ queryKey: qk.result(e.projectId) });
     return;
@@ -73,6 +81,11 @@ const wholeNumber = (arg: string | undefined) => {
 /** One `?demo=` value as a demo patch; null when it is not a known preset. Numbers are finite and sane. */
 export function parseDemo(key: string | undefined, arg: string | undefined): Parameters<NonNullable<Services["demo"]>["set"]>[0] | null {
   const num = Number(arg);
+  if (key === "signin" && arg === undefined) return { signin: true };
+  if (key === "signout" && arg === undefined) return { signout: true };
+  if (key === "code" && arg === "expire") return { codeExpire: true };
+  if (key === "fail" && arg === "auth") return { failAuth: true };
+  if (key === "google" && arg === "fail") return { googleFail: true };
   if (key === "balance") return { balance: wholeNumber(arg) };
   if (key === "payment" && (arg === "success" || arg === "declined")) return { payment: arg };
   if (key === "paydelay" && arg !== undefined && arg !== "" && Number.isFinite(num) && num >= 0) return { paymentDelayMs: Math.floor(num) };
@@ -114,12 +127,36 @@ export async function applyDemoParams(services: Services, search = window.locati
 
 const ServicesContext = createContext<Services | null>(null);
 
+export function accountChangeTarget(opened: string | null, session: Session | null, next: string): string | null {
+  if (!opened || opened === session?.accountId) return null;
+  return session ? "/projects" : signInUrl(next);
+}
+
+/** Set while this tab's own Sign out runs: the one account-switch reload then goes to a plain /sign-in (the user chose to leave). */
+let ownSignOut = false;
+export const markOwnSignOut = (on: boolean) => { ownSignOut = on; };
+
+function reloadIfAccountChanged(opened: string | null, session: Session | null) {
+  const target = accountChangeTarget(opened, session, `${window.location.pathname}${window.location.search}`);
+  if (target && ownSignOut && !session) { window.location.replace("/sign-in"); return; }
+  if (target) window.location.replace(target);
+}
+
 export function ServicesProvider({ services, children }: { services?: Services; children: ReactNode }) {
   const [value] = useState(() => services ?? createServices("mock"));
   const client = useQueryClient();
   const [ready, setReady] = useState(() => !new URLSearchParams(window.location.search).has("demo"));
+  const readyRef = useRef(ready);
+  useEffect(() => { readyRef.current = ready; }, [ready]);
 
-  useEffect(() => value.subscribe((e) => invalidateFor(client, e)), [value, client]);
+  useEffect(() => value.subscribe((e) => {
+    // `?demo=reset,signin` signs out and in while the app is still starting: no page is open yet, so nothing to reload
+    if (e.kind === "session" && readyRef.current) {
+      const opened = value.adapter === "mock" ? currentAccountId() : null;
+      void value.auth.session().then((session) => reloadIfAccountChanged(opened, session));
+    }
+    invalidateFor(client, e);
+  }), [value, client]);
   useEffect(() => {
     if (ready) return;
     void applyDemoParams(value).finally(() => {
@@ -137,6 +174,37 @@ export function useServices(): Services {
   if (!s) throw new Error("useServices() outside <ServicesProvider>");
   return s;
 }
+
+/* ---------- auth hooks ---------- */
+
+export function useSession() {
+  const s = useServices();
+  return useQuery({ queryKey: qk.session, queryFn: async () => {
+    const session = await s.auth.session();
+    reloadIfAccountChanged(s.adapter === "mock" ? currentAccountId() : null, session);
+    return session;
+  }, refetchOnWindowFocus: true });
+}
+
+function useAuthMutation<K extends Exclude<keyof AuthPort, "session">>(method: K) {
+  const s = useServices();
+  const mutationFn = s.auth[method] as (arg: Parameters<AuthPort[K]>[0]) => Promise<Awaited<ReturnType<AuthPort[K]>>>;
+  return useMutation<Awaited<ReturnType<AuthPort[K]>>, Error, Parameters<AuthPort[K]>[0]>({ mutationFn });
+}
+export const useSignUp = () => useAuthMutation("signUp");
+export const useChangeEmail = () => useAuthMutation("changeEmail");
+export function useResendCode() {
+  const s = useServices();
+  return useMutation({ mutationFn: (input: { purpose: Parameters<AuthPort["resendCode"]>[0]; email?: string }) => s.auth.resendCode(input.purpose, input.email) });
+}
+export const useVerifyEmail = () => useAuthMutation("verifyEmail");
+export const useCompleteMicrophone = () => useAuthMutation("completeMicrophone");
+export const useSignIn = () => useAuthMutation("signIn");
+export const useGoogle = () => useAuthMutation("google");
+export const useSignOut = () => useAuthMutation("signOut");
+export const useStartReset = () => useAuthMutation("startReset");
+export const useCheckResetCode = () => useAuthMutation("checkResetCode");
+export const useFinishReset = () => useAuthMutation("finishReset");
 
 /* ---------- read hooks ---------- */
 

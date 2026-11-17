@@ -32,9 +32,13 @@ import { canReplaceVideo, FREE_SLOT_LIMIT, isSlotLimit } from "../rules/slots";
 import { planTurns, turnCount } from "../rules/turns";
 import { captureFixedWindow, decodeAudio, MicrophoneError, probeVideo, waveformRange } from "../media/browser-media";
 import { tryAcquire, whenFree } from "../media/capture-lock";
+import { loadMicrophone } from "../media/mic-preference";
 import { recordableFormat, renderMix } from "../media/mixer";
 import * as db from "./db";
 import { credits } from "./credits";
+import { createMockAuth } from "./auth";
+import * as authDb from "./auth-db";
+import { normaliseEmail } from "../rules/auth";
 
 /* ---------- stored shapes ---------- */
 
@@ -219,7 +223,9 @@ async function ensureRendering(id: ProjectId): Promise<void> {
     if (v.state !== "assembling") continue;
     const key = renderKey(id, v.number);
     if (rendering.has(key)) continue;
-    const task = runRender(id, v.number).finally(() => rendering.delete(key));
+    const task = runRender(id, v.number).catch((error: unknown) => {
+      if (!(error instanceof db.DataAccessError)) console.warn("[mock] render failed", error);
+    }).finally(() => rendering.delete(key));
     rendering.set(key, task);
   }
 }
@@ -339,8 +345,10 @@ function revokeUrls(projectId: string) {
 /* ---------- the adapter ---------- */
 
 export function createMockServices(): Services {
+  const authFlags = { failAuth: false, googleFail: false };
   const services: Services = {
     adapter: "mock",
+    auth: createMockAuth(authFlags),
     subscribe: db.subscribe,
 
     credits,
@@ -654,8 +662,10 @@ export function createMockServices(): Services {
           // re-record is blocked while any version assembles: the takes being mixed must not change under the renderer
           const assembling = (await db.getAll<ResultRecord>("results", db.byProject(id))).some((v) => v.state === "assembling");
           if (assembling || (await db.get<ProjectRecord>("projects", id))?.state === "assembling") return fail("assembling");
+          const session = await services.auth.session();
           const capture = await captureFixedWindow({
             durationMs: opts.windowMs,
+            deviceId: session ? loadMicrophone(session.accountId) ?? undefined : undefined,
             signal: opts.signal,
             stop: opts.stop,
             onStarted: opts.onStarted,
@@ -805,17 +815,57 @@ export function createMockServices(): Services {
     },
 
     demo: {
-      async reset() {
-        await db.write([...db.STORES], (s) => {
-          for (const name of db.STORES) s[name].clear();
-          s.kv.put(DEFAULT_ACCOUNT, "account");
-          s.kv.put(DEFAULT_SETTINGS, "settings");
-          s.history.put(db.welcomeRow(now()));
+      async lastCode(email, purpose) {
+        return authDb.read(["accounts", "codes"], async (s) => {
+          const account = await authDb.req(s.accounts.index("email").get(normaliseEmail(email))) as authDb.AuthAccount | undefined;
+          if (!account) return null;
+          const code = await authDb.req(s.codes.get([account.id, purpose])) as authDb.EmailCode | undefined;
+          return code && code.expiresAt > now() && code.wrongAttempts < 5 ? code.code : null;
         });
+      },
+      async reset() {
+        const passwordHash = await authDb.hashPassword("dubbed-demo");
+        const accounts = await authDb.read(["accounts"], (s) => authDb.req(s.accounts.getAll())) as authDb.AuthAccount[];
+        const current = await authDb.currentAccount();
+        if (current?.id === "demo" && current.stage === "active") {
+          await db.write([...db.STORES], (s) => {
+            for (const name of db.STORES) s[name].clear();
+            s.kv.put(DEFAULT_ACCOUNT, "account");
+            s.kv.put(DEFAULT_SETTINGS, "settings");
+            s.history.put(db.welcomeRow(now()));
+          });
+        } else {
+          await db.deleteDataDb("dubbed-mock");
+        }
+        await services.auth.signOut();
+        for (const account of accounts) if (account.id !== "demo") await db.deleteDataDb(account.dataDb);
+        await authDb.write([...authDb.STORES], (s) => {
+          for (const name of authDb.STORES) s[name].clear();
+          const at = now();
+          s.accounts.put({ id: "demo", email: "demo@dubbed.test", passwordHash, google: null, stage: "active",
+            createdAt: at, activatedAt: at, dataDb: "dubbed-mock" } satisfies authDb.AuthAccount);
+        });
+        authFlags.failAuth = false;
+        authFlags.googleFail = false;
         db.emit({ kind: "reset" });
       },
       async set(p) {
-        const { balance, slotLimit, fillSlots, ...rest } = p;
+        if (p.signin) {
+          await authDb.signInDemo();
+          db.emit({ kind: "session" });
+        }
+        if (p.signout) await services.auth.signOut();
+        if (p.codeExpire) await authDb.write(["codes"], async (s) => {
+          const codes = await authDb.req(s.codes.getAll()) as (authDb.EmailCode | authDb.ResetTicket)[];
+          for (const code of codes) s.codes.put({ ...code, expiresAt: 0 });
+        });
+        if (p.failAuth) authFlags.failAuth = true;
+        if (p.googleFail) authFlags.googleFail = true;
+        const { balance, slotLimit, fillSlots, signin: _signin, signout: _signout, codeExpire: _expire,
+          failAuth: _failAuth, googleFail: _googleFail, ...rest } = p;
+        if (Object.keys(rest).length === 0 && balance === undefined && slotLimit === undefined && !fillSlots) return;
+        const signedIn = await authDb.currentAccount();
+        if (!signedIn || signedIn.stage !== "active") return;
         await db.write(["kv", "projects", "history"], async (s) => {
           const acc = ((await db.req(s.kv.get("account"))) as AccountRecord | undefined) ?? DEFAULT_ACCOUNT;
           if (balance !== undefined && balance !== acc.balance) {

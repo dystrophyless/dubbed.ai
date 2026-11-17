@@ -4,6 +4,39 @@ All notable changes to Dubbed. The format follows [Keep a Changelog](https://kee
 project uses [Semantic Versioning](https://semver.org/) — 0.x while in development: a feature raises the minor version,
 fixes raise the patch.
 
+## [0.4.1] — 2026-11-17
+
+Fixes from the first Codex review of PR #86.
+
+### Fixed
+
+- A sign-in, sign-up, code, microphone, reset or Google request that finishes after the user has left the page no
+  longer navigates them away or changes the page.
+- "Forgot password?" and the other links between the sign-in, sign-up and reset pages keep the page the user asked for,
+  so a reset ends there instead of on My projects.
+- A failed sign-out shows "Couldn't reach Dubbed" with Try again instead of silently leaving the user signed in.
+- Signing out from the account menu reloads the tab once (it reloaded twice).
+
+## [0.4.0] — 2026-11-17
+
+Feature 004 — sign-up and sign-in on mock services (`specs/004-auth-mock/`).
+
+### Added
+
+- Sign-up with email and password, a 6-digit emailed code shown in a demo notice, and a mandatory microphone check;
+  activation grants 120 welcome credits once and opens New dub.
+- Sign-in returns to the requested page; five wrong passwords pause sign-in for one minute, and Google-only accounts
+  get a hint. Sign-out ends the session in every tab.
+- Password reset in three steps, with the new password entered twice. Continue with Google uses a mock stand-in;
+  an existing email signs in to the same account and an unverified email is confirmed.
+- Each account sees only its own projects, credits and slots; the microphone chosen at sign-up is used for recording.
+- Demo account `demo@dubbed.test` and presets `reset`, `signin`, `signout`, `code:expire`, `fail:auth` and `google:fail`.
+
+### Changed
+
+- App pages require an active account; `/` redirects by session until the landing page is built.
+- `?demo=reset` now signs out; e2e flows use `reset,signin`. The account menu shows the session's email.
+
 ## [0.3.0] — 2026-11-16
 
 Feature 003 — more project slots with every purchase (`specs/003-slots-per-purchase/`).

@@ -45,7 +45,7 @@ function Account({ user, links, onSignOut }: { user: ShellUser; links: ShellLink
           <div ref={pop} className={s.accountPopover} role="dialog" aria-label={t("shell.account")} style={pos ? { top: pos.top, left: pos.left } : { top: 0, left: 0, visibility: "hidden" }}>
             <ProfileMenu
               name={user.name}
-              email={user.email}
+              email={user.name === user.email ? "" : user.email}
               avatar={<Avatar name={user.name} size={32} />}
               items={[
                 { id: "settings", label: t("shell.settings"), icon: <Icon name="settings" />, onSelect: () => { close(); navigate(links.settings); } },

@@ -15,6 +15,7 @@ import { RESULT_STATES, ResultPrototype } from "./result/result";
 import { ResultReadyElsewherePrototype } from "./result/ready-elsewhere";
 import { CHECKOUT_STATES, CREDITS_STATES, CheckoutPrototype, CreditsPrototype } from "./002-credits-flow-mock";
 import * as Slots from "./003-slots-per-purchase";
+import * as Auth from "./004-auth-mock";
 import { PROJECTS_STATES, ProjectsDeltaPrototype, ResultFormatPrototype } from "./001-recording-flow-mock";
 
 /*
@@ -32,6 +33,22 @@ export type PrototypeEntry = { id: string; title: string; screens: Record<string
 const CONCEPT_STATES = ["no-take", "recording", "saved"] as const;
 
 export const PROTOTYPES: PrototypeEntry[] = [
+  /* Feature 004 - sign-up and sign-in on mock services: the Auth archetype, one prototype per page, the mock Google
+     stand-in and the shell's account menu. Submits are simulated; see 004-auth-mock.tsx for the walk-through. */
+  {
+    id: "004-auth-mock",
+    title: "004 - Sign-up and sign-in on mock services",
+    screens: {
+      "sign-in": { title: "Sign in", states: Auth.SIGN_IN_STATES, Component: Auth.SignInPrototype },
+      "sign-up": { title: "Sign up", states: Auth.SIGN_UP_STATES, Component: Auth.SignUpPrototype },
+      verify: { title: "Sign-up - email code", states: Auth.VERIFY_STATES, Component: Auth.VerifyPrototype },
+      microphone: { title: "Sign-up - microphone check", states: Auth.MIC_STATES, Component: Auth.MicrophonePrototype },
+      reset: { title: "Reset password", states: Auth.RESET_STATES, Component: Auth.ResetPrototype },
+      google: { title: "Google stand-in (mock only)", states: Auth.GOOGLE_STATES, Component: Auth.GooglePrototype },
+      shell: { title: "Shell - account menu shows the session", states: Auth.SHELL_STATES, Component: Auth.ShellPrototype },
+      loading: { title: "Route guard - reading the session", states: Auth.LOADING_STATES, Component: Auth.LoadingPrototype },
+    },
+  },
   /* Feature 003 - more project slots with every purchase: only the changed notices and lines of New dub, My projects and Credits */
   {
     id: "003-slots-per-purchase",

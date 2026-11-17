@@ -9,15 +9,24 @@ export type Lang = "en" | "ru";
 const SCENE = path.join(process.cwd(), "public", "media", "scene.mp4");
 
 /**
- * Opens `route` with `?demo=reset,<preset>` — a clean mock backend (balance 120, 2 slots, no projects) — in `lang`.
+ * Opens `route` with `?demo=reset,signin,<preset>` — a clean mock backend signed in as the demo account (balance 120,
+ * 2 slots, no projects) — in `lang`.
  * `preset` is any other demo parameters, e.g. "speed:4", "balance:40", "outcome:failed@2".
  */
 export async function resetDemo(page: Page, preset = "", route = "/new", lang: Lang = "en") {
   await page.addInitScript((l) => {
     if (!localStorage.getItem("dubbed.language")) localStorage.setItem("dubbed.language", l);
   }, lang);
-  const demo = ["reset", ...preset.split(",").filter(Boolean)].join(",");
+  const demo = ["reset", "signin", ...preset.split(",").filter(Boolean)].join(",");
   await page.goto(`${route}${route.includes("?") ? "&" : "?"}demo=${demo}`);
+}
+
+/** Opens `route` as a guest: `?demo=reset` (no session, only the demo account exists) in `lang`. */
+export async function gotoGuest(page: Page, route = "/sign-in", lang: Lang = "en") {
+  await page.addInitScript((l) => {
+    if (!localStorage.getItem("dubbed.language")) localStorage.setItem("dubbed.language", l);
+  }, lang);
+  await page.goto(`${route}${route.includes("?") ? "&" : "?"}demo=reset`);
 }
 
 /** Chooses the 13 s demo clip in the New dub dropzone (the real file input, as a user's picker would). */
@@ -99,6 +108,8 @@ const SEED_STATE: Record<SeedKind, { state: string; run?: "queued" | "preparing"
  */
 export async function seedProjects(page: Page, kinds: SeedKind[]) {
   const now = Date.now();
+  // the data database belongs to the signed-in account and is created once the app has read the session: opening it here first would create it empty
+  await page.waitForFunction(async () => (await indexedDB.databases()).some((d) => d.name === "dubbed-mock"));
   const history = seedHistory(kinds.map((kind, i) => ({
     id: `seed-${kind}`, name: `${kind} seed`, reserved: SEED_STATE[kind].run ? 13 : 0,
     charged: SEED_STATE[kind].run ? 0 : 13, createdAt: now - (i + 1) * 120_000, changedAt: now - (i + 1) * 120_000,

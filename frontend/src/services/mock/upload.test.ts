@@ -1,3 +1,4 @@
+import { signInTestDemo } from "./test-auth";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { decodeAudio, probeVideo } from "../media/browser-media";
 import { MAX_FILE_BYTES, MAX_VIDEO_MS } from "../rules/pricing";
@@ -16,12 +17,14 @@ describe("mock upload validation", () => {
   const file = () => new File(["video"], "scene.mp4", { type: "video/mp4" });
 
   beforeEach(async () => {
+    await signInTestDemo();
     vi.useFakeTimers({ toFake: ["Date"] });
     vi.setSystemTime(new Date("2026-11-04T10:00:00Z"));
     vi.mocked(probeVideo).mockReset();
     vi.mocked(decodeAudio).mockReset();
     services = createMockServices();
     await services.demo!.reset();
+    await signInTestDemo();
   });
   afterEach(() => vi.useRealTimers());
 

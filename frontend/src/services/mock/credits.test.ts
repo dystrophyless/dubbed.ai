@@ -1,3 +1,4 @@
+import { signInTestDemo } from "./test-auth";
 import { beforeEach, describe, expect, it } from "vitest";
 import type { HistoryRow } from "../contracts";
 import { PACKS } from "../rules/credits";
@@ -7,6 +8,7 @@ import { createMockServices } from "./index";
 describe("mock credits catalog and history", () => {
   const services = createMockServices();
   beforeEach(async () => {
+    await signInTestDemo();
     await db.write(["history"], (s) => { s.history.clear(); });
   });
 

@@ -2,6 +2,16 @@ import { describe, expect, it } from "vitest";
 import { parseDemo } from "./index";
 
 describe("parseDemo", () => {
+  it("parses auth presets and rejects unrelated arguments", () => {
+    expect(parseDemo("signin", undefined)).toEqual({ signin: true });
+    expect(parseDemo("signout", undefined)).toEqual({ signout: true });
+    expect(parseDemo("code", "expire")).toEqual({ codeExpire: true });
+    expect(parseDemo("fail", "auth")).toEqual({ failAuth: true });
+    expect(parseDemo("google", "fail")).toEqual({ googleFail: true });
+    expect(parseDemo("signin", "other")).toBeNull();
+    expect(parseDemo("code", "other")).toBeNull();
+    expect(parseDemo("google", "other")).toBeNull();
+  });
   it("keeps balance and turns finite whole numbers", () => {
     expect(parseDemo("balance", "Infinity")).toEqual({ balance: 0 });
     expect(parseDemo("balance", "40.5")).toEqual({ balance: 40 });
